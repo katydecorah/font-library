@@ -57,11 +57,6 @@
   &[disabled] { display: none; }
 }
 
-.btn-github {
-  margin-bottom: .5em;
-}
-
-
 .pagination {
   margin: 2em 0 4em;
   text-align: center;
@@ -71,6 +66,16 @@
     font-size: 1.25em;
   }
 
+}
+
+.search-status {
+  @extend %clearfix;
+
+  margin-top: 1em;
+}
+
+.btn-github {
+  margin-bottom: 1em;
 }
 
 .number-of-pages {

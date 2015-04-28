@@ -29,10 +29,6 @@
   padding: .5em 2em;
 }
 
-.tag-count {
-  display: none;
-}
-
 .family-tag {
 
   @extend %small;
@@ -64,9 +60,4 @@
     color: $selected-tag;
   }
 
-}
-
-.family-btn {
-  color: $tag-bg;
-  float: right;
 }

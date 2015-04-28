@@ -9,29 +9,9 @@ body {
   line-height: 1.45;
 }
 
-h1,
-h2,
-h3 {
-  font-weight: inherit;
-  line-height: 1.2;
-  margin: 1.414em 0 .5em;
-}
-
-h1 {
-  font-size: 3.157em;
-  margin-top: 0;
-}
-
-h2 { font-size: 2.369em; }
-
-h3 { font-size: 1.777em; }
-
 small,
 .small,
 %small { font-size: .7em; }
-
-em,
-strong { font-style: normal; }
 
 %lighten { color: lighten($text-color, 20%); }
 
@@ -44,8 +24,6 @@ a {
   }
 
 }
-
-p { margin-bottom: 1.3em; }
 
 ::selection {
   background: $accent;
