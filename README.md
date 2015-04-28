@@ -3,13 +3,13 @@ Font Library
 
 ## Contributing
 
-It's difficult to find Google fonts that are *futuristic* or *typewriter* when you don't know the exact name. I started tagging all the Google fonts to make it easier to find that special font.
-
 The are nearly 700 [Google Fonts](http://www.google.com/fonts), let's organize them!
 
 ### Background
 
 Font Library is built with Jekyll and AngularJS, but you don't need to know either to add or edit the tags. Each font family is stored as an object in `families.json`. Each family has an array of tags. The first tag is from Google's classification of the font.
+
+Changes are welcome to editing the current tags and adding new ones.
 
 ### Adding/editing `families.json` guidelines
 
