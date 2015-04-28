@@ -1,65 +1,73 @@
-.families {
-  //@extend .clearfix;
-  //min-height: 376px;
-}
+
 .family {
   margin-bottom: .5em;
-  //border: 1px solid #ddd;
 }
+
 .family-link {
+  background: $white;
   border-radius: .5em .5em 0 0;
+  color: $text-color;
   display: block;
   padding: 1em 2em .5em;
-  background: white;
-  color: $text-color;
   position: relative;
 
   &:hover {
     color: $accent;
   }
+
 }
+
 .family-title {
+  color: inherit;
   font-size: 2em;
   line-height: 1.4;
-  color: inherit;
 }
+
 .family-tags {
+  background: rgba($white, .5);
   border-radius: 0 0 .5em .5em;
   padding: .5em 2em;
-  background: rgba(#fff, .5);
 }
+
 .tag-count {
   display: none;
 }
-.family-tag {
-  @extend small;
-  @extend .lighten;
 
+.family-tag {
+
+  @extend %small;
+
+  @extend %lighten;
+
+  border: 1px solid;
   border-radius: 1em;
-  padding: .2em .5em .3em;
+  cursor: pointer;
   display: inline-block;
   line-height: 1;
-  border: 1px solid;
-  margin-right: 0.25em;
-  cursor: pointer;
+  margin-right: .25em;
+  padding: .2em .5em .3em;
 
   .sidebar & {
     background: linear-gradient(to right, rgba($text-color, .25) 50%, transparent 50%) no-repeat 0 0/200% 100%;
-    margin-bottom: 0.3em;
+    margin-bottom: .3em;
   }
+
   &.active {
+    background: $white;
+    border-color: $selected-tag;
+    color: $selected-tag;
     cursor: default;
-    border-color: $selected-tag;
-    color:  $selected-tag;
-    background: #fff;
   }
+
   &:hover {
+    background: $white;
     border-color: $selected-tag;
-    color:  $selected-tag;
-    background: #fff;
+    color: $selected-tag;
   }
+
 }
+
 .family-btn {
-  float: right;
   color: $tag-bg;
+  float: right;
 }

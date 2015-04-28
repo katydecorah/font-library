@@ -1,21 +1,23 @@
 .search-status {
-  @extend .lighten;
-  @extend .clearfix;
-  
-  margin-bottom: 0.5em;
-}
-.family-search {
-  font-size: 1.25em;
-  display: block;
-  margin-bottom: 1em;
-  padding: 0.2em;
-  width: 100%;
-  //background: none;
-  border: 1px solid rgba(black,0.1);
+  @extend %lighten;
 
-  border-radius: 0.2em;
+  @extend %clearfix;
+
+  margin-bottom: .5em;
+}
+
+.family-search {
+  border: 1px solid rgba($black, .1);
+  border-radius: .2em;
+  display: block;
+  font-size: 1.25em;
+  margin-bottom: 1em;
+  padding: .2em;
+  width: 100%;
+
   &:focus {
+    color: rgba($text-color, .7);
     outline: none;
-    color: rgba($text-color,0.7);
   }
+
 }

@@ -1,8 +1,12 @@
 .container {
-  max-width: $container-width;
+
+  @extend %clearfix;
+
+
   margin: 0 auto;
+  max-width: $container-width;
   position: relative;
-  @extend .clearfix;
+
   @include breakpoint(medium) {
     padding: 0 1em;
   }
@@ -10,51 +14,47 @@
 
 
 .content {
-  padding-top: 1em;
-  padding-bottom: 5em;
   max-width: 40em;
-  @include breakpoint(medium-up){
+  padding-bottom: 5em;
+  padding-top: 1em;
+
+  @include breakpoint(medium-up) {
     float: right;
     width: 65%;
   }
 
 }
+
 .sidebar {
-  //margin-top: 2.5em;
-  background: rgba(white,0.25);
+  background: rgba($white, .25);
 
-
-  @include breakpoint(medium-up){
+  @include breakpoint(medium-up) {
     float: left;
-    width: 30%;
-    //border-left: 1px solid #ddd;
-
-    padding: 2em;
-
-    position: fixed;
-    top: 0; left: 0;
-    overflow-y: scroll;
     height: 100%;
+    left: 0;
+    overflow-y: scroll;
+    padding: 2em;
+    position: fixed;
+    top: 0;
+    width: 30%;
   }
+
 }
 
-
-
 .btn {
-  display: inline-block;
-  color: $accent;
+  background: none;
   border: 1px solid;
   border-radius: 1em;
+  color: $accent;
+  display: inline-block;
   padding: .25em 1em;
-  background: none;
 
   &:hover {
+    background: $white;
     color: lighten($accent, 10%);
-    background: #fff;
   }
-  &[disabled] {
-    display: none;
-  }
+
+  &[disabled] { display: none; }
 }
 
 .btn-github {
@@ -63,12 +63,14 @@
 
 
 .pagination {
-  text-align: center;
   margin: 2em 0 4em;
+  text-align: center;
+
   .btn {
     cursor: pointer;
     font-size: 1.25em;
   }
+
 }
 
 .number-of-pages {
@@ -77,4 +79,3 @@
   padding-left: 1em;
   padding-right: 1em;
 }
-
