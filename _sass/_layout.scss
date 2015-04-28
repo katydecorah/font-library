@@ -26,7 +26,6 @@
 }
 
 .sidebar {
-  background: rgba($white, .25);
 
   @include breakpoint(medium-up) {
     float: left;
@@ -45,13 +44,22 @@
   background: none;
   border: 1px solid;
   border-radius: 1em;
+  box-shadow: 0 .1em;
   color: $accent;
   display: inline-block;
   padding: .25em 1em;
+  transition: background .2s;
 
   &:hover {
     background: $white;
     color: lighten($accent, 10%);
+    transition: background .2s;
+  }
+
+  &:active {
+    box-shadow: none;
+    position: relative;
+    top: .1em;
   }
 
   &[disabled] { display: none; }
