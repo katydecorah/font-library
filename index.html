@@ -4,7 +4,14 @@ tag: cursive
 ---
 
 <aside class="sidebar">
-	{% include sidebar.html %}
+	<!--<input type="text" ng-model="search" class="family-search" ng-change="resetPagination()" placeholder="Search the taxonomy">-->
+	<!-- tag index -->
+	<div class="tags">
+		<label ng-repeat="(key,value) in uniqueTags() | orderBy: tag" class="family-tag" ng-class="{active: key == search}" title="[[value]] fonts">
+			[[key]]
+			<input class="hide" type="checkbox" name="tag" ng-model="search" value="[[key]]" ng-change="selectTag('[[key]]')">
+		</label>
+	</div>
 </aside>
 
 <main class="content">
@@ -13,20 +20,36 @@ tag: cursive
 	<a href="https://github.com/katydecorah/font-library#contributing" class="btn float-right btn-github">Contribute</a>
 
 	<!-- search indicator-->
-	<div class="search-status">Found [[numberOfResults() == 1 && numberOfResults() + " font" || numberOfResults() + " fonts"]]<span ng-hide="!search"> for <span class="family-tag active">[[search]]</span></span>.</div>
+	<div class="search-status">Found [[numberOfResults() == 1 && numberOfResults() + " font" || numberOfResults() + " fonts"]]
+		<span ng-hide="!search">for <span class="family-tag active">[[search]]</span></span>.
+	</div>
 
 	<div class="families">
 		<!-- individual font -->
 		<div class="family" ng-repeat="font in data | filter:search:true | startFrom:currentPage*pageSize | limitTo:pageSize">
+			<!-- gets google font-->
 			<link ng-href="http://fonts.googleapis.com/css?family=[[font.family.replace(' ','+')]][[ font.italic && ':' + font.italic || '' ]][[ font.weight && ':' + font.weight || '' ]]&text=[[font.family.replace(' ','+')]]"  rel="stylesheet">
+			<!-- links to google font page -->
 			<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link">
+				<!-- builds the inline styles & displays font name -->
 				<div class="family-title" style="font-family: '[[font.family]]';[[ font.italic && ' font-style: italic;' || '' ]][[ font.weight && ' font-weight: '+font.weight+';' || '' ]]">[[font.family]]</div>
 			</a>
+			<!-- displays the font's tags -->
 			<div class="family-tags">
-				<label ng-repeat="tag in font.tags" class="family-tag" ng-class="{active: tag == search}">[[tag]]<input class="hide" type="checkbox" name="tag" ng-model="search" value="[[tag]]" ng-change="selectTag('[[tag]]')">
+				<label ng-repeat="tag in font.tags" class="family-tag" ng-class="{active: tag == search}">
+					[[tag]]
+					<input class="hide" type="checkbox" name="tag" ng-model="search" value="[[tag]]" ng-change="selectTag('[[tag]]')">
 				</label>
 			</div>
 		</div>
 	</div>
-	{% include pager.html %}
+
+	<!-- pagination-->
+	<div class="pagination small" ng-hide="numberOfPages() == 1 || numberOfResults() == 0">
+		<button class="btn" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1; updateLocPage()">&larr;</button>
+
+		<span ng-hide="numberOfPages() == 0" class="number-of-pages">[[currentPage+1]]/[[numberOfPages()]]</span>
+
+		<button class="btn" ng-disabled="(currentPage + 1) == numberOfPages() || numberOfPages() == 0" ng-click="currentPage = currentPage+1; updateLocPage()">&rarr;</button>
+	</div>
 </main>

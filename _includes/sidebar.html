@@ -1,4 +1,0 @@
-<input type="text" ng-model="search" class="family-search" ng-change="resetPagination()" placeholder="Search the taxonomy" style="display: none;">
-<div class="tags">
-<label ng-repeat="(key,value) in uniqueTags() | orderBy: tag" class="family-tag" ng-class="{'active': key == search}" style="background-position-x: [[100 - ( value/248 * 100 )]]%">[[key]]<span class="tag-count">[[value]]</span><input class="hide" type="checkbox" name="tag" ng-model="search" value="[[key]]" ng-change="selectTag('[[key]]')"></label>
-</div>
