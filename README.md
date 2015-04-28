@@ -17,6 +17,7 @@ Font Library is built with Jekyll and AngularJS, but you don't need to know eith
 * Do not delete or change the first tag (this is the classification defined by Google)
 * Keep the list alphabetical by family name
 * The family name must match Google's exactly
+* Tags should be lowercase
 
 ### Help wanted
 
