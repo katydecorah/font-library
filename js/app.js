@@ -1,10 +1,8 @@
-
 var app = angular.module('finder', [], function ($interpolateProvider) {
   $interpolateProvider.startSymbol('[[');
   $interpolateProvider.endSymbol(']]');
 });
 
-// then compare the array to families.json
 app.controller('ctrl', function($scope, $filter, $http, $location) {
   $scope.currentPage = 0;
   $scope.pageSize = 5;
