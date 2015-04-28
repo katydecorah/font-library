@@ -1,9 +1,11 @@
-Font Search
+Font Library
 -----------
 
 ## Contributing
 
-The are over 700 Google Fonts, help me organize them!
+It's difficult to find Google fonts that are *futuristic* or *typewriter* when you don't know the exact name. I started tagging all the Google fonts to make it easier to find that special font.
+
+The are nearly 700 [Google Fonts](http://www.google.com/fonts), let's organize them!
 
 ### Background
 
@@ -22,3 +24,6 @@ Want to help, but don't know where to start? Open your browser's Console:
 
 * If Google adds a new font, but we haven't added it to `families.json` yet, then the Console will log it along with the exact entry you can add to `families.json`. Feel free to add additional tags to the entry.
 * If a family has less than 2 tags, then the Console will log it. Open the provided link to the specimen page and read the description to get ideas for tags. Try to use tags that are already established, but create new tags when necessary.
+
+You may create a pull request or create an issue to add/edit tags or to add new Google fonts.
+
