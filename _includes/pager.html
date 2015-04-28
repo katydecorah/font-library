@@ -1,5 +1,5 @@
 <div class="pagination small" ng-hide="numberOfPages() == 1 || numberOfResults() == 0">
-<button class="btn" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1; updateLocPage()"><span class="fa fa-arrow-left"></span></button>
+<button class="btn" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1; updateLocPage()">&larr;</button>
 <span ng-hide="numberOfPages() == 0" class="number-of-pages">[[currentPage+1]]/[[numberOfPages()]]</span>
-<button class="btn" ng-disabled="(currentPage + 1) == numberOfPages() || numberOfPages() == 0" ng-click="currentPage = currentPage+1; updateLocPage()"><span class="fa fa-arrow-right"></span></button>
+<button class="btn" ng-disabled="(currentPage + 1) == numberOfPages() || numberOfPages() == 0" ng-click="currentPage = currentPage+1; updateLocPage()">&rarr;</button>
 </div>
