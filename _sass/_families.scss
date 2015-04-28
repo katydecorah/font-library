@@ -1,0 +1,65 @@
+.families {
+  //@extend .clearfix;
+  //min-height: 376px;
+}
+.family {
+  margin-bottom: .5em;
+  //border: 1px solid #ddd;
+}
+.family-link {
+  border-radius: .5em .5em 0 0;
+  display: block;
+  padding: 1em 2em .5em;
+  background: white;
+  color: $text-color;
+  position: relative;
+
+  &:hover {
+    color: $accent;
+  }
+}
+.family-title {
+  font-size: 2em;
+  line-height: 1.4;
+  color: inherit;
+}
+.family-tags {
+  border-radius: 0 0 .5em .5em;
+  padding: .5em 2em;
+  background: rgba(#fff, .5);
+}
+.tag-count {
+  display: none;
+}
+.family-tag {
+  @extend small;
+  @extend .lighten;
+
+  border-radius: 1em;
+  padding: .2em .5em .3em;
+  display: inline-block;
+  line-height: 1;
+  border: 1px solid;
+  margin-right: 0.25em;
+  cursor: pointer;
+
+  .sidebar & {
+    background: linear-gradient(to right, rgba($text-color, .25) 50%, transparent 50%) no-repeat 0 0/200% 100%;
+    margin-bottom: 0.3em;
+  }
+  &.active {
+    cursor: default;
+    border-color: $selected-tag;
+    color:  $selected-tag;
+    background: #fff;
+  }
+  &:hover {
+    border-color: $selected-tag;
+    color:  $selected-tag;
+    background: #fff;
+  }
+}
+.family-btn {
+  float: right;
+  color: $tag-bg;
+}

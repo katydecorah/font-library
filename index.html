@@ -1,0 +1,24 @@
+---
+layout: default
+tag: cursive
+---
+<aside class="sidebar">
+{% include sidebar.html %}
+</aside>
+<main class="content">
+<a href="https://github.com/katydecorah/font-library" class="btn float-right btn-github"><span class="fa fa-github"></span> Add or edit tags</a>
+<div class="search-status">Found [[numberOfResults() == 1 && numberOfResults() + " font" || numberOfResults() + " fonts"]]<span ng-hide="!search"> for <span class="family-tag active">[[search]]</span></span>.</div>
+<div class="families">
+<div class="family" ng-repeat="font in data | filter:search:true | startFrom:currentPage*pageSize | limitTo:pageSize">
+<link href="http://fonts.googleapis.com/css?family=[[font.family.replace(' ','+')]]&text=[[font.family.replace(' ','+')]]"  rel="stylesheet">
+<a href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link">
+<div class="family-title" style="font-family: '[[font.family]]'">[[font.family]]</div>
+</a>
+<div class="family-tags">
+<label ng-repeat="tag in font.tags" class="family-tag" ng-class="{active: tag == search}">[[tag]]<input class="hide" type="checkbox" name="tag" ng-model="search" value="[[tag]]" ng-change="selectTag('[[tag]]')">
+</label>
+</div>
+</div>
+</div>
+{% include pager.html %}
+</main>

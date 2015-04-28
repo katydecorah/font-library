@@ -1,0 +1,21 @@
+.search-status {
+  @extend .lighten;
+  @extend .clearfix;
+  
+  margin-bottom: 0.5em;
+}
+.family-search {
+  font-size: 1.25em;
+  display: block;
+  margin-bottom: 1em;
+  padding: 0.2em;
+  width: 100%;
+  //background: none;
+  border: 1px solid rgba(black,0.1);
+
+  border-radius: 0.2em;
+  &:focus {
+    outline: none;
+    color: rgba($text-color,0.7);
+  }
+}

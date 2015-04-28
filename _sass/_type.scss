@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $sans;
+  font-weight: 400;
+  line-height: 1.45;
+  font-size: $font-size;
+  color: $text-color;
+  background: $body-bg;
+
+}
+
+h1, h2, h3 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+h2 {font-size: 2.369em;}
+
+h3 {font-size: 1.777em;}
+
+small, .small {font-size: 0.7em;}
+
+em, strong { font-style: normal}
+
+.lighten {
+  color: lighten($text-color, 20%);
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+  &:hover {
+    color: lighten($link-color,5%);
+  }
+}
+
+p { margin-bottom: 1.3em;}
+
+::selection {
+  background: $accent;
+  color: white;
+  text-shadow: none;
+}

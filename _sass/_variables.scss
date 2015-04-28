@@ -1,0 +1,48 @@
+$text-color:      #3A382C;
+$body-bg:         #F0EEE7;
+$header-bg:       #2c3e50;
+$sidebar-bg:      #C5BFA0;
+$search-bg:       #34495e;
+$accent:          #DB4053;
+$red:             #c0392b;
+$link-color:      #8e44ad;
+$sans:            "Helvetica Neue","Arial", sans-serif;
+$container-width: 950px;
+
+$font-size: 16px;
+
+$selected-tag:   #E5A52B;
+$tag-bg:         #bdc3c7;
+
+
+.clearfix {
+  clear: both;
+
+  &:before,
+  &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.hide { display: none; }
+
+.float-right { float: right;}
+.float-left {float: left;}
+
+
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (min-width: $container-width) { @content; }
+  }
+  @else if $point == medium {
+    @media (max-width: $container-width + 30px) { @content; }
+  }
+  @else if $point == medium-up {
+    @media (min-width: 800px ) { @content; }
+  }
+
+}

@@ -1,0 +1,80 @@
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  position: relative;
+  @extend .clearfix;
+  @include breakpoint(medium) {
+    padding: 0 1em;
+  }
+}
+
+
+.content {
+  padding-top: 1em;
+  padding-bottom: 5em;
+  max-width: 40em;
+  @include breakpoint(medium-up){
+    float: right;
+    width: 65%;
+  }
+
+}
+.sidebar {
+  //margin-top: 2.5em;
+  background: rgba(white,0.25);
+
+
+  @include breakpoint(medium-up){
+    float: left;
+    width: 30%;
+    //border-left: 1px solid #ddd;
+
+    padding: 2em;
+
+    position: fixed;
+    top: 0; left: 0;
+    overflow-y: scroll;
+    height: 100%;
+  }
+}
+
+
+
+.btn {
+  display: inline-block;
+  color: $accent;
+  border: 1px solid;
+  border-radius: 1em;
+  padding: .25em 1em;
+  background: none;
+  font-size: 1em;
+  &:hover {
+    color: lighten($accent, 10%);
+    background: #fff;
+  }
+  &[disabled] {
+    display: none;
+  }
+}
+
+.btn-github {
+  margin-bottom: .5em;
+}
+
+
+.pagination {
+  text-align: center;
+  margin: 2em 0 4em;
+  .btn {
+    cursor: pointer;
+    font-size: 1.25em;
+  }
+}
+
+.number-of-pages {
+  color: $accent;
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
