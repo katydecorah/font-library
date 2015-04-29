@@ -29,7 +29,7 @@ You're welcome to start editing the `families.json` file to add or edit tags. Is
 
 Want to help, but don't know where to start? Open your browser's Console:
 
-![image](https://cloud.githubusercontent.com/assets/2180540/7383722/5d37c0b6-edf2-11e4-8b51-d271c7529385.png)
+![image](https://cloud.githubusercontent.com/assets/2180540/7384122/3632875a-edfa-11e4-8e91-37c9c017e8df.png)
 
 * **Help wanted! These fonts need to be added to families.json** &mdash; if Google adds a new font, but we haven't added it to `families.json` yet, then the Console will log it along with the exact entry you can copy and paste into `families.json`. Feel free to add additional tags to the entry.
 * **Help wanted! These fonts need more tags in families.json** &mdash; if a family has less than 2 tags, then the Console will log it. Open the provided link to the specimen page and read the description to get ideas for tags. Try to use tags that are already established, but create new tags when necessary.
