@@ -37,7 +37,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location) {
   /* log fonts that only have less than 1 tag */
   $scope.helpWantedTags = function() {
     console.groupCollapsed("Help wanted! These fonts need more tags in families.json");
-    console.info("Using the provided link to the font's specimen, add tags to families.json for these font families.");
+    console.info("These fonts need more tags, add them to families.json. Learn more about the font by following the provided link to the font's specimen.");
     angular.forEach($scope.data, function(key) {
       if (key.tags.length < 2) {
         console.log(key.family + "\thttps://www.google.com/fonts/specimen/"+key.family.split(" ").join("+"));
@@ -74,7 +74,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location) {
     var needToAdd = _.difference(apiFamilies,storedFamilies);
     if (needToAdd.length) {
       console.groupCollapsed("Help wanted! These fonts need to be added to families.json");
-      console.info("Copy and paste the following into families.json, be sure to keep the families names in alphabetical order.");
+      console.info("Copy and paste the following into families.json. Be sure to keep the font family names in alphabetical order.");
       angular.forEach(needToAdd, function(key) {
         var found = $filter('filter')($scope.api, {family: key}, true);
         if (found.length) {
