@@ -7,15 +7,16 @@ The are nearly 700 [Google Fonts](http://www.google.com/fonts), let's organize t
 
 ### Background
 
-Font Library is built with Jekyll and AngularJS, but you don't need to know either to add or edit the tags. To add or edit tags, you only need to know how to edit a file.
+Font Library is built with Jekyll and AngularJS, but you don't need to know either to add or edit the tags &mdsah; you only need to know how to edit a file.
 
-Each font family is stored as an object in `families.json`. Each family has an array of tags. The first tag is from Google's classification of the font. A few font's have the tag `greek` or `khmer` this is to denote the subset of this font, please do not delete these tags. Some families have additional keys such as `weight` or `italic`, that's because this font does not have a `regular` weight and these keys provide flags to output the family correctly.
+Each font family is stored as an object in `families.json`. Each family has an array of tags. The first tag is from Google's classification of the font. Some font's have the tag `greek` or `khmer`, this is to denote the subset of the font. Some families have additional keys such as `weight` or `italic` to denote that this family doesn't have a `regular` weight.
 
 ### Adding/editing `families.json` guidelines
 
 * Use double quotes `"`
-* Do not delete or change the first tag (this is the classification defined by Google)
-* Do not delete or change the `greek` or `khmer` tag, these denote the subset of the font.
+* Do not delete or change the first tag, this is the classification defined by Google
+* Do not delete or change the `greek` or `khmer` tag, these denote the subset of the font
+* Do not delete the `italic` or `weight` keys or update their values, these are necessary to properly output fonts
 * Keep the list alphabetical by family name
 * The family name must match Google's exactly
 * Tags should be lowercase
