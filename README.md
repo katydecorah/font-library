@@ -11,8 +11,6 @@ Font Library is built with Jekyll and AngularJS, but you don't need to know eith
 
 Each font family is stored as an object in `families.json`. Each family has an array of tags. The first tag is from Google's classification of the font. A few font's have the tag `greek` or `khmer` this is to denote the subset of this font, please do not delete these tags. Some families have additional keys such as `weight` or `italic`, that's because this font does not have a `regular` weight and these keys provide flags to output the family correctly.
 
-Changes are welcome to editing the current tags and adding new ones.
-
 ### Adding/editing `families.json` guidelines
 
 * Use double quotes `"`
