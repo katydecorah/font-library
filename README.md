@@ -7,7 +7,7 @@ The are nearly 700 [Google Fonts](http://www.google.com/fonts), let's organize t
 
 ### Background
 
-Font Library is built with Jekyll and AngularJS, but you don't need to know either to add or edit the tags &mdsah; you only need to know how to edit a file.
+Font Library is built with Jekyll and AngularJS, but you don't need to know either to add or edit the tags &mdash; you only need to know how to edit a file.
 
 Each font family is stored as an object in `families.json`. Each family has an array of tags. The first tag is from Google's classification of the font. Some font's have the tag `greek` or `khmer`, this is to denote the subset of the font. Some families have additional keys such as `weight` or `italic` to denote that this family doesn't have a `regular` weight.
 
