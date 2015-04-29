@@ -1,4 +1,4 @@
-Font Library
+Font Library [![Build Status](https://travis-ci.org/katydecorah/font-library.svg?branch=gh-pages)](https://travis-ci.org/katydecorah/font-library)
 -----------
 
 ## Contributing
