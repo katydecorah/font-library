@@ -22,6 +22,8 @@ Changes are welcome to editing the current tags and adding new ones.
 * The family name must match Google's exactly
 * Tags should be lowercase
 
+[View families.json](https://github.com/katydecorah/font-library/blob/gh-pages/families.json)
+
 ### Help wanted
 
 You're welcome to start editing the `families.json` file to add or edit tags.
