@@ -74,7 +74,7 @@
   { "family": "Basic", "tags": ["sans-serif"] },
   { "family": "Battambang", "tags": ["display", "khmer"] },
   { "family": "Baumans", "tags": ["display", "smooth"] },
-  { "family": "Bayon", "tags": ["display"] },
+  { "family": "Bayon", "tags": ["display", "khmer"] },
   { "family": "Belgrano", "tags": ["serif"] },
   { "family": "Belleza", "tags": ["sans-serif"] },
   { "family": "BenchNine", "tags": ["sans-serif", "condensed"] },
