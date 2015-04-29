@@ -4,7 +4,6 @@ tag: cursive
 ---
 
 <aside class="sidebar">
-	<input type="text" ng-model="search" class="family-search" ng-change="resetPagination()" placeholder="Search the taxonomy">
 	<!-- tag index -->
 	<div class="tags">
 		<button ng-repeat="(key,value) in uniqueTags() | orderBy: tag" class="family-tag" ng-class="{active: key == search}" title="[[value]] fonts" name="tag" ng-model="search" value="[[key]]" ng-click="selectTag(key)">
