@@ -136,7 +136,7 @@ layout: compress
   { "family": "Cherry Swash", "tags": ["display"] },
   { "family": "Chewy", "tags": ["display", "cartoon"] },
   { "family": "Chicle", "tags": ["display", "groovy"] },
-  { "family": "Chivo", "tags": ["sans-serif", "thick"] },
+  { "family": "Chivo", "tags": ["sans-serif"] },
   { "family": "Cinzel", "tags": ["serif", "caps"] },
   { "family": "Cinzel Decorative", "tags": ["display", "caps", "roman", "ancient"] },
   { "family": "Clicker Script", "tags": ["handwriting", "cursive", "1960s", "bouncy"] },
