@@ -1,5 +1,3 @@
-require 'html/proofer'
-
 # rake serve
 desc "serve the site locally"
 task :serve do
