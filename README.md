@@ -3,7 +3,7 @@ Font Library
 
 ## Contributing
 
-The are nearly 700 [Google Fonts](http://www.google.com/fonts), let's organize them!
+The are over 700 [Google Fonts](http://www.google.com/fonts), let's organize them!
 
 ### Background
 
