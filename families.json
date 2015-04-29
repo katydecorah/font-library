@@ -241,7 +241,7 @@ layout: compress
   { "family": "Freehand", "tags": ["display", "khmer"] },
   { "family": "Fresca", "tags": ["sans-serif"] },
   { "family": "Frijole", "tags": ["display", "fun", "spicy"] },
-  { "family": "Fruktur", "tags": ["display", "black letter"] },
+  { "family": "Fruktur", "tags": ["display"] },
   { "family": "Fugaz One", "tags": ["display", "geometric"] },
   { "family": "GFS Didot", "tags": ["serif", "greek"] },
   { "family": "GFS Neohellenic", "tags": ["sans-serif", "greek"] },
