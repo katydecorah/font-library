@@ -466,7 +466,7 @@ layout: compress
   { "family": "Numans", "tags": ["sans-serif"] },
   { "family": "Nunito", "tags": ["sans-serif"] },
   { "family": "Odor Mean Chey", "tags": ["display", "khmer"] },
-  { "family": "Offside", "tags": ["display"] },
+  { "family": "Offside", "tags": ["display", "monoline", "futuristic"] },
   { "family": "Old Standard TT", "tags": ["serif"] },
   { "family": "Oldenburg", "tags": ["display", "german"] },
   { "family": "Oleo Script", "tags": ["display"] },
