@@ -6,9 +6,13 @@ layout: compress
 <html ng-app="finder">
 {% include head.html %}
 <body ng-controller="ctrl">
-<div class="container">
-{{content}}
-</div>
-{% include footer.html %}
+	<header>
+		<a href="{{site.url}}{{site.baseurl}}" class="title">{{site.name}}</a>
+		<a href="{{site.github}}" class="subtitle">{{site.description}}</a>
+	</header>
+	<div class="container">
+		{{content}}
+	</div>
+	{% include footer.html %}
 </body>
 </html>

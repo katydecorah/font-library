@@ -21,6 +21,7 @@
   color: inherit;
   font-size: 2em;
   line-height: 1.4;
+  text-transform: none;
 }
 
 .family-tags {
@@ -29,19 +30,37 @@
   padding: .5em 2em;
 }
 
+.family-search {
+
+  @extend %lighten;
+
+  border: 1px solid;
+  border-radius: 1em;
+  display: none;
+  font-family: $sans;
+  font-size: 1em;
+  margin-bottom: 1em;
+  padding: .2em 1em;
+  text-transform: uppercase;
+  width: 100%;
+}
+
 .family-tag {
 
   @extend %small;
 
   @extend %lighten;
 
+  background: transparent;
   border: 1px solid;
   border-radius: 1em;
   cursor: pointer;
   display: inline-block;
+  font-family: $sans;
   line-height: 1;
   margin-right: .25em;
-  padding: .2em .5em .3em;
+  padding: .2em .5em;
+  text-transform: uppercase;
 
   .sidebar & {
     margin-bottom: .3em;
@@ -60,4 +79,8 @@
     color: $selected-tag;
   }
 
+}
+
+.tag-count {
+  color: lighten($text-color, 50%);
 }

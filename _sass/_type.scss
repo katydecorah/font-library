@@ -7,11 +7,12 @@ body {
   font-size: $font-size;
   font-weight: 400;
   line-height: 1.45;
+  text-transform: uppercase;
 }
 
 small,
 .small,
-%small { font-size: .7em; }
+%small { font-size: .85em; }
 
 %lighten { color: lighten($text-color, 20%); }
 

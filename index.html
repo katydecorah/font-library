@@ -4,13 +4,12 @@ tag: cursive
 ---
 
 <aside class="sidebar">
-	<!--<input type="text" ng-model="search" class="family-search" ng-change="resetPagination()" placeholder="Search the taxonomy">-->
+	<input type="text" ng-model="search" class="family-search" ng-change="resetPagination()" placeholder="Search the taxonomy">
 	<!-- tag index -->
 	<div class="tags">
-		<label ng-repeat="(key,value) in uniqueTags() | orderBy: tag" class="family-tag" ng-class="{active: key == search}" title="[[value]] fonts">
-			[[key]]
-			<input class="hide" type="checkbox" name="tag" ng-model="search" value="[[key]]" ng-change="selectTag('[[key]]')">
-		</label>
+		<button ng-repeat="(key,value) in uniqueTags() | orderBy: tag" class="family-tag" ng-class="{active: key == search}" title="[[value]] fonts" name="tag" ng-model="search" value="[[key]]" ng-click="selectTag(key)">
+			[[key]] <span class="tag-count">[[value]]</span>
+		</button>
 	</div>
 </aside>
 
@@ -21,7 +20,7 @@ tag: cursive
 		Found [[numberOfResults() == 1 && numberOfResults() + " font" || numberOfResults() + " fonts"]]
 		<span ng-hide="!search">for <span class="family-tag active">[[search]]</span></span>.
 		<!-- github link -->
-		<a href="https://github.com/katydecorah/font-library#contributing" class="btn float-right btn-github">Contribute</a>
+		<a href="{{site.github}}#contributing" class="btn float-right btn-github">Contribute</a>
 	</div>
 
 	<div class="families">

@@ -12,11 +12,47 @@
   }
 }
 
+header {
+  background: $accent;
+  line-height: 1;
+  margin-bottom: 1em;
+  padding: .25em;
+
+  @include breakpoint(medium-up) {
+    height: 25px;
+    margin-bottom: 0;
+    padding-left: 2em;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .title {
+    color: $white;
+
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+
+  }
+
+  .subtitle {
+    color: rgba($white, .55);
+
+    &:hover {
+      color: rgba($white, .55);
+      text-decoration: underline;
+    }
+
+  }
+
+}
 
 .content {
   max-width: 40em;
   padding-bottom: 5em;
-  padding-top: 1em;
+  padding-top: 2em;
 
   @include breakpoint(medium-up) {
     float: right;
@@ -32,22 +68,23 @@
     height: 100%;
     left: 0;
     overflow-y: scroll;
-    padding: 2em;
+    padding: 2em 2em 3em;
     position: fixed;
-    top: 0;
+    top: 25px;
     width: 30%;
   }
 
 }
 
 .btn {
-  background: none;
+  background: rgba($white, .5);
   border: 1px solid;
   border-radius: 1em;
-  box-shadow: 0 .1em;
+  box-shadow: 0 .1em darken($accent, 5%);
   color: $accent;
   display: inline-block;
   padding: .25em 1em;
+  text-transform: uppercase;
   transition: background .2s;
 
   &:hover {
