@@ -88,6 +88,8 @@ header {
 
   @extend %round;
 
+  @extend %tight;
+
   background: rgba($white, .5);
   border: 1px solid;
   box-shadow: 0 .1em darken($accent, 5%);
@@ -95,6 +97,15 @@ header {
   display: inline-block;
   padding: .25em 1em;
   transition: background .2s;
+
+  &.small {
+    padding: .25em .5em;
+  }
+
+  &.quiet {
+    border: 1px solid rgba($accent, .25);
+    box-shadow: none;
+  }
 
   &:hover {
 
