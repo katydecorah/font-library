@@ -24,9 +24,11 @@ header {
 
   @include breakpoint(medium-up) {
     font-size: $font-size;
-    height: 25px;
+    height: 35px;
+    line-height: 1.6;
     margin-bottom: 0;
     padding-left: 2em;
+    padding-right: 2em;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -60,7 +62,7 @@ header {
   @include breakpoint(medium-up) {
     float: right;
     padding-bottom: 5em;
-    padding-top: 2em;
+    padding-top: 3em;
     width: 65%;
   }
 
@@ -76,7 +78,7 @@ header {
     overflow-y: scroll;
     padding: 1em 2em 3em;
     position: fixed;
-    top: 25px;
+    top: 35px;
     width: 30%;
   }
 
@@ -90,7 +92,7 @@ header {
 
   @extend %tight;
 
-  background: rgba($white, .5);
+  background: lighten($body-bg, 2%);
   border: 1px solid;
   box-shadow: 0 .1em darken($accent, 5%);
   color: $accent;
@@ -138,11 +140,17 @@ header {
 .search-status {
   @extend %clearfix;
 
+  margin-bottom: .5em;
   margin-top: 1em;
 }
 
 .btn-github {
-  margin-bottom: 1em;
+  margin: .5em 0;
+
+  @include breakpoint(medium-up) {
+    margin: 0 0 1em 1em;
+  }
+
 }
 
 .number-of-pages {
