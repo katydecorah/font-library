@@ -14,11 +14,14 @@
 
 header {
   background: $accent;
+  border-bottom: 1px solid $body-bg;
+  font-size: $font-size * 1.25;
   line-height: 1;
   margin-bottom: 1em;
-  padding: .25em;
+  padding: .25em 1em;
 
   @include breakpoint(medium-up) {
+    font-size: $font-size;
     height: 25px;
     margin-bottom: 0;
     padding-left: 2em;
@@ -51,11 +54,11 @@ header {
 
 .content {
   max-width: 40em;
-  padding-bottom: 5em;
-  padding-top: 2em;
 
   @include breakpoint(medium-up) {
     float: right;
+    padding-bottom: 5em;
+    padding-top: 2em;
     width: 65%;
   }
 
@@ -64,11 +67,12 @@ header {
 .sidebar {
 
   @include breakpoint(medium-up) {
+    border-right: 1px dashed rgba($text-color, .2);
     float: left;
     height: 100%;
     left: 0;
     overflow-y: scroll;
-    padding: 2em 2em 3em;
+    padding: 1em 2em 3em;
     position: fixed;
     top: 25px;
     width: 30%;
