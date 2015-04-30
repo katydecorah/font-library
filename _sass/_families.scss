@@ -30,21 +30,6 @@
   padding: .5em 2em;
 }
 
-.family-search {
-
-  @extend %lighten;
-
-  border: 1px solid;
-  border-radius: 1em;
-  display: none;
-  font-family: $sans;
-  font-size: 1em;
-  margin-bottom: 1em;
-  padding: .2em 1em;
-  text-transform: uppercase;
-  width: 100%;
-}
-
 .family-tag {
 
   @extend %small;
