@@ -4,7 +4,9 @@
 }
 
 .family-link {
-  background: $white;
+
+  @extend %flat-bg;
+
   border-radius: .5em .5em 0 0;
   color: $text-color;
   display: block;
@@ -53,17 +55,18 @@
     margin-bottom: .5em;
   }
 
-  &.active {
-    background: $white;
+  &.active,
+  &:hover {
+
+    @extend %flat-bg;
+
     border-color: $selected-tag;
     color: $selected-tag;
-    cursor: default;
+
   }
 
-  &:hover {
-    background: $white;
-    border-color: $selected-tag;
-    color: $selected-tag;
+  &.active {
+    cursor: default;
   }
 
 }

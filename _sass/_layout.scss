@@ -97,7 +97,9 @@ header {
   transition: background .2s;
 
   &:hover {
-    background: $white;
+
+    @extend %flat-bg;
+
     color: lighten($accent, 10%);
     transition: background .2s;
   }

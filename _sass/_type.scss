@@ -25,6 +25,8 @@ small,
 
 %round { border-radius: 1em; }
 
+%flat-bg { background: $white; }
+
 %lighten { color: lighten($text-color, 20%); }
 
 a {
