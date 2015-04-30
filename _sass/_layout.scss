@@ -13,10 +13,12 @@
 }
 
 header {
+
+  @extend %tight;
+
   background: $accent;
   border-bottom: 1px solid $body-bg;
   font-size: 1.25em;
-  line-height: 1;
   margin-bottom: 1em;
   padding: .25em 1em;
 
@@ -81,14 +83,17 @@ header {
 }
 
 .btn {
+
+  @extend %upper;
+
+  @extend %round;
+
   background: rgba($white, .5);
   border: 1px solid;
-  border-radius: 1em;
   box-shadow: 0 .1em darken($accent, 5%);
   color: $accent;
   display: inline-block;
   padding: .25em 1em;
-  text-transform: uppercase;
   transition: background .2s;
 
   &:hover {

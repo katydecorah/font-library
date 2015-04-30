@@ -20,7 +20,7 @@
 .family-title {
   color: inherit;
   font-size: 2em;
-  line-height: 1.4;
+  line-height: 1.45;
   text-transform: none;
 }
 
@@ -36,19 +36,21 @@
 
   @extend %lighten;
 
+  @extend %upper;
+
+  @extend %tight;
+
+  @extend %round;
+
   background: transparent;
   border: 1px solid;
-  border-radius: 1em;
   cursor: pointer;
   display: inline-block;
-  font-family: $sans;
-  line-height: 1;
   margin-right: .25em;
   padding: .2em .5em;
-  text-transform: uppercase;
 
   .sidebar & {
-    margin-bottom: .3em;
+    margin-bottom: .5em;
   }
 
   &.active {

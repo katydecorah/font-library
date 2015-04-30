@@ -1,18 +1,29 @@
 * { box-sizing: border-box; }
 
 body {
+
+  @extend %upper;
+
   background: $body-bg;
   color: $text-color;
   font-family: $sans;
   font-size: $font-size;
   font-weight: 400;
   line-height: 1.45;
-  text-transform: uppercase;
 }
 
 small,
 .small,
 %small { font-size: .85em; }
+
+%upper { text-transform: uppercase; }
+
+%tight {
+  font-family: $sans;
+  line-height: 1;
+}
+
+%round { border-radius: 1em; }
 
 %lighten { color: lighten($text-color, 20%); }
 
