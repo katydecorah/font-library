@@ -20,12 +20,13 @@ Each font family is stored as an object in `families.json`. Each family has an a
 * Keep the list alphabetical by family name
 * The family name must match Google's exactly
 * Tags should be lowercase
+* Each found should have no more than 5 tags
 
 [View families.json](https://github.com/katydecorah/font-library/blob/gh-pages/families.json)
 
 ### Help wanted
 
-You're welcome to start editing the `families.json` file to add or edit tags. Is there a specifc type of font that you're always looking for -- then please be the curator by tagging the fonts!
+You're welcome to edit `families.json` to add, edit, or improve tags. I recommend starting by tagging fonts that you often want to find for yourself -- curate your own tag! It's likely that someone else will dig your collection.
 
 Want to help, but don't know where to start? Open your browser's Console:
 
