@@ -20,7 +20,7 @@ Each font family is stored as an object in `families.json`. Each family has an a
 * Keep the list alphabetical by family name
 * The family name must match Google's exactly
 * Tags should be lowercase
-* Each found should have no more than 5 tags
+* Each font should have no more than 5 tags
 
 [View families.json](https://github.com/katydecorah/font-library/blob/gh-pages/families.json)
 
