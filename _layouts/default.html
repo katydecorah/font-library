@@ -5,11 +5,9 @@ layout: compress
 <!DOCTYPE html>
 <html ng-app="finder">
 {% include head.html %}
-<body ng-controller="ctrl">
+<body ng-controller="ctrl" ng-cloak>
 	<header>
-		<a href="{{site.url}}{{site.baseurl}}" class="title">{{site.name}}</a>
-		<a href="{{site.github}}" class="subtitle">{{site.description}}</a>
-		<a href="{{site.github}}#contributing" class="btn btn-github">Contribute &rarr;</a>
+		{% include header.html %}
 	</header>
 	<div class="container">
 		{{content}}

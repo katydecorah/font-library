@@ -6,7 +6,7 @@ tag: cursive
 <aside class="sidebar">
 	<!-- tag index -->
 	<div class="tags">
-		<button ng-repeat="(key,value) in uniqueTags() | orderBy: tag" class="family-tag" ng-class="{active: key == search}" title="[[value]] fonts" name="tag" ng-model="search" value="[[key]]" ng-click="selectTag(key)">
+		<button ng-repeat="(key,value) in uniqueTags()" class="family-tag" ng-class="{active: key == search}" title="[[value]] fonts" name="tag" ng-model="search" value="[[key]]" ng-click="selectTag(key)">
 			[[key]] <span class="tag-count">[[value]]</span>
 		</button>
 	</div>
