@@ -36,3 +36,24 @@ Want to help, but don't know where to start? Open your browser's Console:
 * **Help wanted! These fonts need more tags in families.json** &mdash; if a family has less than 2 tags, then the Console will log it. Open the provided link to the specimen page and read the description to get ideas for tags. Try to use tags that are already established, but create new tags when necessary.
 
 Please **create a pull request** or **create an issue** to add/edit tags or to add new Google fonts. If you're new to Github, I'm happy to walk you through it. I recommend reading [Creating an issue](https://help.github.com/articles/creating-an-issue/) and [Creating a pull request](https://help.github.com/articles/creating-a-pull-request/). If you need help with your pull request, create an issue and tag me in it `@katydecorah` and I'll help.
+
+## Building
+
+Font Library is built with [Jekyll](http://jekyllrb.com/). If you're just updating tags in `families.json`, you don't need to build the site locally. But you can if you prefer to see your changes before you submit a pull request.
+
+To build it locally, you will need to:
+
+* [Install Jekyll](https://help.github.com/articles/using-jekyll-with-pages/#installing-jekyll)
+* Install Bundler: `bundle install`
+
+To build the site:
+
+`rake serve`
+
+or
+
+`bundle exec jekyll serve --watch`
+
+To test the site run:
+
+`rake test`
