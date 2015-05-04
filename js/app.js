@@ -5,7 +5,7 @@ var app = angular.module('finder', [], function ($interpolateProvider) {
 
 app.controller('ctrl', function($scope, $filter, $http, $location) {
   $scope.currentPage = 0;
-  $scope.pageSize = 5;
+  $scope.pageSize = 10;
   $scope.data = [];
 
   var path = $location.path().split('/');
