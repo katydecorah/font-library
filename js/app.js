@@ -35,6 +35,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location) {
   });
 
   /* log fonts that only have less than 1 tag */
+  // This should be take out of the flow, perhaps on its own page
   $scope.helpWantedTags = function() {
     console.groupCollapsed("Help wanted! These fonts need more tags in families.json");
     console.info("These fonts need more tags, add them to https://github.com/katydecorah/font-library/blob/gh-pages/families.json. Learn more about the font by following the provided link to the font's specimen.");
@@ -47,6 +48,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location) {
   };
 
   /* log new fonts - fonts that needs to be added to families.json */
+  // This should be take out of the flow, perhaps on its own page
   $scope.helpWantedNewFont = function() {
     var storedFamilies = [];
     var apiFamilies = [];
