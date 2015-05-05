@@ -3,7 +3,7 @@ var app = angular.module('finder', [], function ($interpolateProvider) {
   $interpolateProvider.endSymbol(']]');
 });
 
-app.controller('ctrl', function($scope, $filter, $http, $location) {
+app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.currentPage = 0;
   $scope.pageSize = 10;
   $scope.data = [];
@@ -108,8 +108,13 @@ app.controller('ctrl', function($scope, $filter, $http, $location) {
 };
 
 
+$scope.sendAnalytics = function() {
+  $window.ga('send', 'pageview', { page: $location.url() });
+}
+
 $scope.updateLocation = function() {
   $location.path("/"+$scope.search);
+  $scope.sendAnalytics();
 };
 $scope.reset = function() {
   $location.path("");
@@ -119,6 +124,7 @@ $scope.reset = function() {
 $scope.updateLocPage = function() {
   $location.path("/"+$scope.search+"/"+ ($scope.currentPage + 1 ) );
   window.scrollTo(0, 0);
+  $scope.sendAnalytics();
 };
 
 $scope.resetPagination = function() {
