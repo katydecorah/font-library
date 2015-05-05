@@ -109,7 +109,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
 
 
 $scope.sendAnalytics = function() {
-  $window.ga('send', 'pageview', { page: $location.url() });
+  $window.ga('send', 'pageview', { page: '/#'+$location.url() });
 }
 
 $scope.updateLocation = function() {
