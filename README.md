@@ -18,9 +18,11 @@ Each font family is stored as an object in `families.json`. Each family has an a
 * Do not delete or change the `greek` or `khmer` tag, these denote the subset of the font
 * Do not delete the `italic` or `weight` keys or update their values, these are necessary to properly output fonts
 * Keep the list alphabetical by family name
-* The family name must match Google's exactly
 * Tags should be lowercase
 * Each font should have no more than 5 tags
+* Avoid creating new tags that are similar to already established tags, consolidate or rename all similiar tags if a different tag name is more intuitive
+* Avoid ambigious names for tags; make the tag name intuitive (Would you use this tag to find font X?)
+* The family name must match Google's exactly
 
 [View families.json](https://github.com/katydecorah/font-library/blob/gh-pages/families.json)
 
