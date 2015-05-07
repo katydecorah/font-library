@@ -36,14 +36,15 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     $scope.helpWantedNewFont();
   });
 
-
-
   // merges families.json and Google Fonts API
-  $http.get($scope.url)
-  .then(function(res){
-    $scope.api = res.data.items;
+  $http.get($scope.url).success(function(res){
+    $scope.api = res.items;
     $scope.data = merge($scope.dataTemp,$scope.api);
+  }).error(function(){
+    // if the Google Font API is down, then just use families.json
+    $scope.data = $scope.dataTemp;
   });
+
 
   function merge(obj1,obj2){
     var result = [];
@@ -55,10 +56,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
           'variants': obj2[i].variants,
           'subsets': obj2[i].subsets
         });
-      } else {
-
       }
-
     }
     return result;
   }
