@@ -36,6 +36,7 @@ tag: cursive
 					[[tag]]
 					<input class="hide" type="checkbox" name="tag" ng-model="search" value="[[tag]]" ng-change="selectTag('[[tag]]')">
 				</label>
+				<div class="family-variants">[[font.variants.length == 1 && font.variants.length + " variant" || font.variants.length + " variants"]]</div>
 				<a ng-href="https://www.google.com/fonts/specimen/[[font.family.replace(' ','+')]]" class="btn small quiet float-right" target="_blank">&#8505;</a>
 			</div>
 		</div>
