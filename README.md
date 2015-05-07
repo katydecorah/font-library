@@ -9,19 +9,17 @@ The are over 700 [Google Fonts](http://www.google.com/fonts), let's organize the
 
 Font Library is built with [Jekyll](http://jekyllrb.com/) and [AngularJS](https://angularjs.org/), but you don't need to know either to add or edit the tags &mdash; you only need to know how to edit a file.
 
-Each font family is stored as an object in `families.json`. Each family has an array of tags. The first tag is from Google's classification of the font. Some font's have the tag `greek` or `khmer`, this is to denote the subset of the font. Some families have additional keys such as `weight` or `italic` to denote that this family doesn't have a `regular` weight.
+Each font family is stored as an object in `families.json`. Each family has an array of tags. The first tag is from Google's classification of the font.
 
 ### Adding/editing `families.json` guidelines
 
 * Use double quotes `"`
 * Do not delete or change the first tag, this is the classification defined by Google
-* Do not delete or change the `greek` or `khmer` tag, these denote the subset of the font
-* Do not delete the `italic` or `weight` keys or update their values, these are necessary to properly output fonts
 * Keep the list alphabetical by family name
 * Tags should be lowercase
 * Each font should have no more than 5 tags
-* Avoid creating new tags that are similar to already established tags, consolidate or rename all similiar tags if a different tag name is more intuitive
-* Avoid ambigious names for tags; make the tag name intuitive (Would you use this tag to find font X?)
+* Avoid creating new tags that are similar to already established tags, consolidate or rename all similar tags if a different tag name is more intuitive
+* Avoid ambiguous names for tags; make the tag name intuitive (Would you use this tag to find font X?)
 * The family name must match Google's exactly
 
 [View families.json](https://github.com/katydecorah/font-library/blob/gh-pages/families.json)
@@ -40,7 +38,7 @@ Want to help, but don't know where to start? Open your browser's Console:
 
 ### Creating a pull request or issue
 
-Please **create a pull request** or **create an issue** to add/edit tags or to add newly added Google fonts. 
+Please **create a pull request** or **create an issue** to add/edit tags or to add newly added Google fonts.
 
 When creating a pull request, it's helpful to:
 * Double check your tags and ask yourself if it's something that you would use to find fonts

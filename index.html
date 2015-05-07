@@ -24,11 +24,11 @@ tag: cursive
 		<!-- individual font -->
 		<div class="family" ng-repeat="font in data | filter:search:true | startFrom:currentPage*pageSize | limitTo:pageSize">
 			<!-- gets google font-->
-			<link ng-href="http://fonts.googleapis.com/css?family=[[font.family.replace(' ','+')]][[ font.italic && ':' + font.italic || '' ]][[ font.weight && ':' + font.weight || '' ]]&text=[[font.family.replace(' ','+')]]"  rel="stylesheet">
+			<link ng-href="http://fonts.googleapis.com/css?family=[[font.family.replace(' ','+')]][[ font.variants[0] != 'regular' && font.variants[0] == 'italic' && ':' + font.variants || '']][[ font.variants[0] != 'regular' && font.variants[0] != 'italic' && ':' + font.variants[0] || '' ]]&text=[[font.family.replace(' ','+')]]"  rel="stylesheet">
 			<!-- links to google font page -->
 			<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link">
 				<!-- builds the inline styles & displays font name -->
-				<div class="family-title" style="font-family: '[[font.family]]';[[ font.italic && ' font-style: italic;' || '' ]][[ font.weight && ' font-weight: '+font.weight+';' || '' ]]">[[font.family]]</div>
+				<div class="family-title" style="font-family: '[[font.family]]';[[ font.variants[0] != 'regular' && font.variants[0] == 'italic' && ' font-style: italic;' || '' ]][[ font.variants[0] != 'regular' && font.variants[0] != 'italic' && ' font-weight: '+font.variants[0]+';' || '' ]]">[[font.family]]</div>
 			</a>
 			<!-- displays the font's tags -->
 			<div class="family-tags">
@@ -36,7 +36,13 @@ tag: cursive
 					[[tag]]
 					<input class="hide" type="checkbox" name="tag" ng-model="search" value="[[tag]]" ng-change="selectTag('[[tag]]')">
 				</label>
-				<div class="family-variants">[[font.variants.length == 1 && font.variants.length + " variant" || font.variants.length + " variants"]]</div>
+				<!-- displays the font's variants and subsets -->
+				<div class="family-meta">
+					<span class="meta" data-title="[[font.variants.join(', ')]]">[[font.variants.length == 1 && font.variants.length + " variant" || font.variants.length + " variants"]]</span>
+					|
+					<span class="meta" data-title="[[font.subsets.join(', ')]]">[[font.subsets.length == 1 && font.subsets.length + " subset" || font.subsets.length + " subsets"]]</span>
+				</div>
+				<!-- link to the font's spec -->
 				<a ng-href="https://www.google.com/fonts/specimen/[[font.family.replace(' ','+')]]" class="btn small quiet float-right" target="_blank">&#8505;</a>
 			</div>
 		</div>

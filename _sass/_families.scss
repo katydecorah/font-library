@@ -33,7 +33,7 @@
   position: relative;
 }
 
-.family-variants {
+.family-meta {
 
   @extend %small;
 
@@ -46,6 +46,42 @@
   right: 2.25em;
   text-align: right;
   top: -1.5em;
+}
+
+.meta {
+  cursor: help;
+  position: relative;
+
+  &:hover {
+    color: rgba($text-color, .25);
+
+    &:before {
+      border-color: transparent transparent $accent;
+      border-style: solid;
+      border-width: 5px;
+      content: '';
+      display: block;
+      left: 48%;
+      position: absolute;
+      top: 77%;
+    }
+
+    &:after {
+      background: $accent;
+      border-radius: 5px;
+      color: $white;
+      content: attr(data-title);
+      display: block;
+      left: 0;
+      padding: .5em;
+      position: absolute;
+      text-align: left;
+      top: 140%;
+      width: 200%;
+      z-index: 100;
+    }
+
+  }
 }
 
 .family-tag {

@@ -66,7 +66,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.helpWantedTags = function() {
     console.groupCollapsed("Help wanted! These fonts need more tags in families.json");
     console.info("These fonts need more tags, add them to https://github.com/katydecorah/font-library/blob/gh-pages/families.json. Learn more about the font by following the provided link to the font's specimen.");
-    angular.forEach($scope.data, function(key) {
+    angular.forEach($scope.dataTemp, function(key) {
       if (key.tags.length < 2) {
         console.log(key.family + "\thttps://www.google.com/fonts/specimen/"+key.family.split(" ").join("+"));
       }
@@ -79,7 +79,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.helpWantedNewFont = function() {
     var storedFamilies = [];
     var apiFamilies = [];
-    angular.forEach($scope.data, function(key) {
+    angular.forEach($scope.dataTemp, function(key) {
       storedFamilies.push(key.family);
     });
     $http.get($scope.url)
