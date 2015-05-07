@@ -7,6 +7,8 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.currentPage = 0;
   $scope.pageSize = 10;
   $scope.data = [];
+  $scope.dataTemp = [];
+  $scope.url = "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE";
 
   var path = $location.path().split('/');
   var locationSearch = path[1];
@@ -28,14 +30,41 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
 
   $http.get('families.json')
   .then(function(res){
-    $scope.data = res.data;
+    $scope.dataTemp = res.data;
 
     $scope.helpWantedTags();
     $scope.helpWantedNewFont();
   });
 
+
+
+  // merges families.json and Google Fonts API
+  $http.get($scope.url)
+  .then(function(res){
+    $scope.api = res.data.items;
+    $scope.data = merge($scope.dataTemp,$scope.api);
+  });
+
+  function merge(obj1,obj2){
+    var result = [];
+    for(i in obj1){
+      if ( obj1[i].family == obj2[i].family) {
+        result.push({
+          'family' : obj1[i].family,
+          'tags' : obj1[i].tags,
+          'variants': obj2[i].variants,
+          'subsets': obj2[i].subsets
+        });
+      } else {
+
+      }
+
+    }
+    return result;
+  }
+
+  // reiterate this
   /* log fonts that only have less than 1 tag */
-  // This should be take out of the flow, perhaps on its own page
   $scope.helpWantedTags = function() {
     console.groupCollapsed("Help wanted! These fonts need more tags in families.json");
     console.info("These fonts need more tags, add them to https://github.com/katydecorah/font-library/blob/gh-pages/families.json. Learn more about the font by following the provided link to the font's specimen.");
@@ -47,16 +76,15 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     console.groupEnd();
   };
 
+  // reiterate this
   /* log new fonts - fonts that needs to be added to families.json */
-  // This should be take out of the flow, perhaps on its own page
   $scope.helpWantedNewFont = function() {
     var storedFamilies = [];
     var apiFamilies = [];
-    var url = "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE";
     angular.forEach($scope.data, function(key) {
       storedFamilies.push(key.family);
     });
-    $http.get(url)
+    $http.get($scope.url)
     .then(function(res){
       $scope.api = res.data.items;
 
@@ -103,9 +131,12 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       });
       console.groupEnd();
     }
+
   });
 
 };
+
+
 
 
 $scope.sendAnalytics = function() {
