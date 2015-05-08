@@ -70,7 +70,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     console.info("These fonts need more tags, add them to https://github.com/katydecorah/font-library/blob/gh-pages/families.json. Learn more about the font by following the provided link to the font's specimen.");
     angular.forEach($scope.dataTemp, function(key) {
       if (key.tags.length < 2) {
-        console.log(key.family + "\n\tEntry: http://katydecorah.com/font-library/#/" + key.family + "\n\tDescription: https://www.google.com/fonts/specimen/"+key.family.split(" ").join("+"));
+        console.log(key.family + "\n\tEntry: http://katydecorah.com/font-library/#/" + key.family.split(' ').join('%20') + "\n\tDescription: https://www.google.com/fonts/specimen/"+key.family.split(" ").join("+"));
       }
     });
     console.groupEnd();
