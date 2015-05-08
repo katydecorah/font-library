@@ -37,7 +37,7 @@ tag: cursive
 					<input class="hide" type="checkbox" name="tag" ng-model="search" value="[[tag]]" ng-change="selectTag('[[tag]]')">
 				</label>
 				<!-- displays the font's variants and subsets -->
-				<div class="family-meta">
+				<div class="family-meta" ng-show="font.variants">
 					<span class="meta" data-title="[[font.variants.join(', ')]]">[[font.variants.length == 1 && font.variants.length + " variant" || font.variants.length + " variants"]]</span>
 					|
 					<span class="meta" data-title="[[font.subsets.join(', ')]]">[[font.subsets.length == 1 && font.subsets.length + " subset" || font.subsets.length + " subsets"]]</span>
