@@ -14,7 +14,7 @@ tag: cursive
 
 
 <main class="content">
-
+	<!-- additional filter selects -->
 	<div class="controls">
 		<select ng-model="selectedCategory" ng-show="uniqueCategory" ng-change="resetPagination()">
 			<option value="" selected disabled>category</option>
@@ -36,20 +36,15 @@ tag: cursive
 
 
 	<!-- search indicator-->
-
 	<div class="search-status">
 		<span ng-show="searchCount.length == 0">Dang! Nothing</span>
 		<span ng-hide="searchCount.length == 0">Found [[searchCount.length == 1 && searchCount.length + " font" || searchCount.length + " fonts"]]</span><span ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets"> for </span><span class="family-tag active" ng-show="selectedTags" ng-click="removeTag()"> [[selectedTags]]</span><span class="family-tag active" ng-show="selectedCategory" ng-click=removeCategory()> [[selectedCategory]]</span><span class="family-tag active" ng-show="selectedVariants" ng-click="removeVariant()"> [[selectedVariants]]</span><span class="family-tag active" ng-show="selectedSubsets" ng-click="removeSubset()"> [[selectedSubsets]]</span>.
 	</div>
 
-
-
 	<div class="families">
 		<!-- individual font -->
 		<div class="family" ng-repeat="font in searchCount=( data |
 		filter:{ tags: selectedTags, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory }:true ) | startFrom: (currentPage - 1) * pageSize | limitTo:pageSize">
-		<!-- gets google font-->
-		<link ng-href="http://fonts.googleapis.com/css?family=[[font.family.replace(' ','+')]][[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') >= 0 && ':' + font.variants[0] || '' ]][[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') < 0 && ':'+font.variants[0] || '' ]]&text=[[font.family.replace(' ','+')]]"  rel="stylesheet">
 		<!-- links to google font page -->
 		<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link">
 			<!-- builds the inline styles & displays font name -->
