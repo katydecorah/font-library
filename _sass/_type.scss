@@ -31,6 +31,13 @@ small,
 
 %lighten { color: lighten($text-color, 20%); }
 
+h2 {
+  background: $white;
+  //color: $white;
+  font-size: 1em;
+  padding: 0 .5em;
+}
+
 a {
   color: $link-color;
   text-decoration: none;

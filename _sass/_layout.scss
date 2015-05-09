@@ -84,6 +84,12 @@ header {
 
 }
 
+.sidebar-group {
+
+  margin-bottom: 1em;
+
+}
+
 .btn {
 
   @extend %upper;
@@ -126,6 +132,27 @@ header {
   &[disabled] { display: none; }
 }
 
+select {
+
+  @extend %upper;
+
+  @extend %round;
+
+  @extend %tight;
+
+  background: lighten($body-bg, 2%);
+  border: 1px solid;
+  color: $selected-tag;
+  display: inline-block;
+  font-size: .9em;
+  padding: .25em 1em;
+}
+
+.btn-clear {
+  cursor: pointer;
+  font-size: .9em;
+}
+
 .pagination {
   margin: 2em 0 4em;
   text-align: center;
@@ -142,6 +169,27 @@ header {
 
   margin-bottom: .5em;
   margin-top: 1em;
+
+  .family-tag {
+    position: relative;
+  }
+
+  .family-tag:hover {
+    color: $accent;
+    cursor: pointer;
+  }
+
+  .family-tag:hover:before {
+    content: '\00D7';
+    font-size: 5em;
+    left: 0;
+    line-height: 1;
+    position: absolute;
+    text-align: center;
+    top: -.35em;
+    width: 100%;
+  }
+
 }
 
 .btn-github {
@@ -151,6 +199,13 @@ header {
     margin: 0 0 1em 1em;
   }
 
+}
+
+.controls {
+  //background: rgba($white, .3);
+  border-radius: .5em;
+  padding: 1em;
+  text-align: right;
 }
 
 .number-of-pages {
