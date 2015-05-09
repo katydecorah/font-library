@@ -204,16 +204,24 @@ select {
 }
 
 .controls {
-  //background: rgba($white, .3);
   border-radius: .5em;
-  //padding: 1em;
   position: relative;
-
   text-align: right;
-  transform: translateY(-1.5em);
-  transition: .25s;
+
+  @include breakpoint(medium-up) {
+    -ms-transform: translateY(-2.5em);
+    -webkit-transform: translateY(-2.5em);
+    transform: translateY(-2.5em);
+    transition: .25s;
+  }
+
+  @include breakpoint(medium) {
+    margin-top: 1em;
+  }
 
   &.active {
+    -ms-transform: translateY(.25em);
+    -webkit-transform: translateY(.25em);
     transform: translateY(.25em);
     transition: .25s;
   }
@@ -236,10 +244,14 @@ select {
   top: 2px;
   width: 19px;
 
+  @include breakpoint(medium) {
+    display: none;
+  }
+
   path {
 
     @extend %fade;
-    
+
     fill: $text-color;
   }
 
