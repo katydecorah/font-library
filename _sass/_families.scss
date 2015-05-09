@@ -27,8 +27,12 @@
 }
 
 .family-tags {
+
+  @extend %clearfix;
+
   background: rgba($white, .5);
   border-radius: 0 0 .5em .5em;
+  min-height: 30px;
   padding: .5em 2em;
   position: relative;
 }
@@ -45,15 +49,15 @@
   position: absolute;
   right: 2.25em;
   text-align: right;
-  top: -1.5em;
+  top: -1.25em;
 }
 
 .meta {
-  cursor: help;
   position: relative;
 
-  &:hover {
+  &[data-title]:hover {
     color: rgba($text-color, .25);
+    cursor: help;
 
     &:before {
       border-color: transparent transparent $accent;

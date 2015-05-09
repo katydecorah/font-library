@@ -6,54 +6,82 @@ tag: cursive
 <aside class="sidebar">
 	<!-- tag index -->
 	<div class="tags">
-		<button ng-repeat="(key,value) in uniqueTags()" class="family-tag" ng-class="{active: key == search}" title="[[value]] fonts" name="tag" ng-model="search" value="[[key]]" ng-click="selectTag(key)">
+		<button ng-repeat="(key,value) in uniqueTags()" class="family-tag" ng-class="{active: key == selectedTags}" title="[[value]] fonts" name="tag" ng-model="selectedTags" value="[[key]]" ng-click="selectTag(key)">
 			[[key]] <span class="tag-count">[[value]]</span>
 		</button>
 	</div>
 </aside>
 
+
 <main class="content">
 
-	<!-- search indicator-->
-	<div class="search-status">
-		Found [[numberOfResults() == 1 && numberOfResults() + " font" || numberOfResults() + " fonts"]]
-		<span ng-hide="!search">for <span class="family-tag active">[[search]]</span></span>.
+	<div class="controls">
+		<select ng-model="selectedCategory" ng-show="uniqueCategory" ng-change="resetPagination()">
+			<option value="" selected disabled>category</option>
+			<option ng-selected="[[ key == selectedCategory ]]" ng-repeat="(key,value) in uniqueCategory()" value="[[key]]">[[key]]</option>
+		</select>
+
+		<select ng-model="selectedSubsets" ng-show="uniqueSubsets" ng-change="resetPagination()">
+			<option value="" selected disabled>subset</option>
+			<option ng-selected="[[ key == selectedSubsets ]]" ng-repeat="(key,value) in uniqueSubsets()" value="[[key]]">[[key]]</option>
+		</select>
+
+		<select ng-model="selectedVariants" ng-show="uniqueVariants" ng-change="resetPagination()">
+			<option value="" selected disabled>variant</option>
+			<option ng-selected="[[ key == selectedVariants ]]" ng-repeat="(key,value) in uniqueVariants()" value="[[key]]">[[key]]</option>
+		</select>
+
+		<button ng-click="clearFilters()" class="btn btn-clear" ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets">Clear</button>
 	</div>
+
+
+	<!-- search indicator-->
+
+	<div class="search-status">
+		<span ng-show="searchCount.length == 0">Dang! We've got nothing</span>
+		<span ng-hide="searchCount.length == 0">Found [[searchCount.length == 1 && searchCount.length + " font" || searchCount.length + " fonts"]]</span><span ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets"> for </span><span class="family-tag active" ng-show="selectedTags" ng-click="removeTag()"> [[selectedTags]]</span><span class="family-tag active" ng-show="selectedCategory" ng-click=removeCategory()> [[selectedCategory]]</span><span class="family-tag active" ng-show="selectedVariants" ng-click="removeVariant()"> [[selectedVariants]]</span><span class="family-tag active" ng-show="selectedSubsets" ng-click="removeSubset()"> [[selectedSubsets]]</span>.
+	</div>
+
+
 
 	<div class="families">
 		<!-- individual font -->
-		<div class="family" ng-repeat="font in data | filter:search:true | startFrom:currentPage*pageSize | limitTo:pageSize">
-			<!-- gets google font-->
-			<link ng-href="http://fonts.googleapis.com/css?family=[[font.family.replace(' ','+')]][[ font.variants[0] != 'regular' && font.variants[0] == 'italic' && ':' + font.variants || '']][[ font.variants[0] != 'regular' && font.variants[0] != 'italic' && ':' + font.variants[0] || '' ]]&text=[[font.family.replace(' ','+')]]"  rel="stylesheet">
-			<!-- links to google font page -->
-			<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link">
-				<!-- builds the inline styles & displays font name -->
-				<div class="family-title" style="font-family: '[[font.family]]';[[ font.variants[0] != 'regular' && font.variants[0] == 'italic' && ' font-style: italic;' || '' ]][[ font.variants[0] != 'regular' && font.variants[0] != 'italic' && ' font-weight: '+font.variants[0]+';' || '' ]]">[[font.family]]</div>
-			</a>
-			<!-- displays the font's tags -->
-			<div class="family-tags">
-				<label ng-repeat="tag in font.tags" class="family-tag" ng-class="{active: tag == search}">
-					[[tag]]
-					<input class="hide" type="checkbox" name="tag" ng-model="search" value="[[tag]]" ng-change="selectTag('[[tag]]')">
-				</label>
-				<!-- displays the font's variants and subsets -->
-				<div class="family-meta" ng-show="font.variants">
-					<span class="meta" data-title="[[font.variants.join(', ')]]">[[font.variants.length == 1 && font.variants.length + " variant" || font.variants.length + " variants"]]</span>
-					|
-					<span class="meta" data-title="[[font.subsets.join(', ')]]">[[font.subsets.length == 1 && font.subsets.length + " subset" || font.subsets.length + " subsets"]]</span>
-				</div>
-				<!-- link to the font's spec -->
-				<a ng-href="https://www.google.com/fonts/specimen/[[font.family.replace(' ','+')]]" class="btn small quiet float-right" target="_blank">&#8505;</a>
+		<div class="family" ng-repeat="font in searchCount=( data |
+		filter:{ tags: selectedTags, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory }:true ) | startFrom: (currentPage - 1) * pageSize | limitTo:pageSize">
+		<!-- gets google font-->
+		<link ng-href="http://fonts.googleapis.com/css?family=[[font.family.replace(' ','+')]][[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') >= 0 && ':' + font.variants[0] || '' ]][[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') < 0 && ':'+font.variants[0] || '' ]]&text=[[font.family.replace(' ','+')]]"  rel="stylesheet">
+		<!-- links to google font page -->
+		<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link">
+			<!-- builds the inline styles & displays font name -->
+			<div class="family-title" style="font-family: '[[font.family]]';[[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') >= 0 && ' font-style: italic;' || '' ]][[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') < 0 && ' font-weight: '+font.variants[0]+';' || '' ]]">[[font.family]]</div>
+		</a>
+		<!-- displays the font's tags -->
+		<div class="family-tags">
+			<label ng-repeat="tag in font.tags" class="family-tag" ng-class="{active: tag == selectedTags}">
+				[[tag]]
+				<input class="hide" type="checkbox" name="tag" ng-model="selectedTags" value="[[tag]]" ng-change="selectTag('[[tag]]')">
+			</label>
+			<!-- displays the font's variants and subsets -->
+			<div class="family-meta" ng-show="font.variants">
+				<span class="meta">[[font.category]]</span>
+				|
+				<span class="meta" data-title="[[font.variants.join(', ')]]">[[font.variants.length == 1 && font.variants.length + " variant" || font.variants.length + " variants"]]</span>
+				|
+				<span class="meta" data-title="[[font.subsets.join(', ')]]">[[font.subsets.length == 1 && font.subsets.length + " subset" || font.subsets.length + " subsets"]]</span>
 			</div>
+			<!-- link to the font's spec -->
+			<a ng-href="https://www.google.com/fonts/specimen/[[font.family.replace(' ','+')]]" class="btn small quiet float-right" target="_blank">&#8505;</a>
 		</div>
 	</div>
+</div>
 
-	<!-- pagination-->
-	<div class="pagination small" ng-hide="numberOfPages() == 1 || numberOfResults() == 0">
-		<button class="btn" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1; updateLocPage()">&larr;</button>
+<!-- pagination-->
+<div class="pagination small" ng-show="(searchCount.length / pageSize) > 1">
 
-		<span ng-hide="numberOfPages() == 0" class="number-of-pages">[[currentPage+1]]/[[numberOfPages()]]</span>
+	<button class="btn" ng-click="currentPage=currentPage-1; updateLocPage()" ng-hide="(currentPage + 1) == 1">&larr;</button>
 
-		<button class="btn" ng-disabled="(currentPage + 1) == numberOfPages() || numberOfPages() == 0" ng-click="currentPage = currentPage+1; updateLocPage()">&rarr;</button>
-	</div>
+	<span  class="number-of-pages">[[currentPage]]/[[ searchCount.length / pageSize | ceil]]</span>
+
+	<button class="btn" ng-click="currentPage = currentPage+1; updateLocPage()" ng-hide="currentPage == (searchCount.length / pageSize | ceil)">&rarr;</button>
+</div>
 </main>
