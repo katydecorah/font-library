@@ -625,7 +625,7 @@
   { "family": "Sofadi One", "tags": [] },
   { "family": "Sofia", "tags": [ "friendly"] },
   { "family": "Sonsie One", "tags": [ "wide"] },
-  { "family": "Sorts Mill Goudy", "tags": [] },
+  { "family": "Sorts Mill Goudy", "tags": [ "old style" ] },
   { "family": "Source Code Pro", "tags": [] },
   { "family": "Source Sans Pro", "tags": [] },
   { "family": "Source Serif Pro", "tags": [] },
