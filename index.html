@@ -15,7 +15,8 @@ tag: cursive
 
 <main class="content">
 	<!-- additional filter selects -->
-	<div class="controls">
+
+	<div class="controls" ng-class="{ active: showDetails}">
 		<select ng-model="selectedCategory" ng-show="uniqueCategory" ng-change="resetPagination()">
 			<option value="" selected disabled>category</option>
 			<option ng-selected="[[ key == selectedCategory ]]" ng-repeat="(key,value) in uniqueCategory()" value="[[key]]">[[key]]</option>
@@ -39,6 +40,7 @@ tag: cursive
 	<div class="search-status">
 		<span ng-show="searchCount.length == 0">Dang! Nothing</span>
 		<span ng-hide="searchCount.length == 0">Found [[searchCount.length == 1 && searchCount.length + " font" || searchCount.length + " fonts"]]</span><span ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets"> for </span><span class="family-tag active" ng-show="selectedTags" ng-click="removeTag()"> [[selectedTags]]</span><span class="family-tag active" ng-show="selectedCategory" ng-click=removeCategory()> [[selectedCategory]]</span><span class="family-tag active" ng-show="selectedVariants" ng-click="removeVariant()"> [[selectedVariants]]</span><span class="family-tag active" ng-show="selectedSubsets" ng-click="removeSubset()"> [[selectedSubsets]]</span>.
+		<div ng-model="settings" ng-class="{active:settings}" ng-click="showDetails =! showDetails; settings =! settings" class="btn-settings float-right">{% include settings.svg %}</div>
 	</div>
 
 	<div class="families">
@@ -73,7 +75,7 @@ tag: cursive
 <!-- pagination-->
 <div class="pagination small" ng-show="(searchCount.length / pageSize) > 1">
 
-	<button class="btn" ng-click="currentPage=currentPage-1; updateLocPage()" ng-hide="(currentPage + 1) == 1">&larr;</button>
+	<button class="btn" ng-click="currentPage=currentPage-1; updateLocPage()" ng-hide="currentPage == 1">&larr;</button>
 
 	<span  class="number-of-pages">[[currentPage]]/[[ searchCount.length / pageSize | ceil]]</span>
 

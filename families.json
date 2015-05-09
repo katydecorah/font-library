@@ -43,7 +43,7 @@
   { "family": "Antic Didone", "tags": [ "didone"] },
   { "family": "Antic Slab", "tags": [ "slab"] },
   { "family": "Anton", "tags": [  "heavy"] },
-  { "family": "Arapey", "tags": [] },
+  { "family": "Arapey", "tags": [ "didone" ] },
   { "family": "Arbutus", "tags": [ "heavy", "western"] },
   { "family": "Arbutus Slab", "tags": [ "slab"] },
   { "family": "Architects Daughter", "tags": [ "comic"] },

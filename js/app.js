@@ -139,7 +139,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     $scope.sendAnalytics();
   };
 
-
   $scope.resetPagination = function() {
     $scope.currentPage = 1;
     if ($scope.selectedTags) {
@@ -164,29 +163,14 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     $scope.sendAnalytics();
   };
 
-  $scope.selectCategory = function(i) {
-    $scope.selectedCategory = i;
-    $scope.resetPagination();
-  };
-
   $scope.removeCategory = function() {
     $scope.selectedCategory = undefined;
     $scope.resetPagination();
 
   };
 
-  $scope.selectVariants = function(i) {
-    $scope.selectedVariants = i;
-    $scope.resetPagination();
-  };
-
   $scope.removeVariant = function() {
     $scope.selectedVariants = undefined;
-    $scope.resetPagination();
-  };
-
-  $scope.selectSubsets = function(i) {
-    $scope.selectedSubsets = i;
     $scope.resetPagination();
   };
 
@@ -247,6 +231,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     $scope.selectedSubsets = undefined;
     $scope.selectedVariants = undefined;
     $scope.selectedCategory = undefined;
+    $scope.currentPage = 1;
     $location.path("");
     $scope.sendAnalytics();
   };

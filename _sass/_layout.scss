@@ -58,11 +58,12 @@ header {
 
 .content {
   max-width: 40em;
+  position: relative;
 
   @include breakpoint(medium-up) {
     float: right;
     padding-bottom: 5em;
-    padding-top: 3em;
+    padding-top: 2em;
     width: 65%;
   }
 
@@ -89,6 +90,7 @@ header {
   margin-bottom: 1em;
 
 }
+
 
 .btn {
 
@@ -204,8 +206,17 @@ select {
 .controls {
   //background: rgba($white, .3);
   border-radius: .5em;
-  padding: 1em;
+  //padding: 1em;
+  position: relative;
+
   text-align: right;
+  transform: translateY(-1.5em);
+  transition: .25s;
+
+  &.active {
+    transform: translateY(.25em);
+    transition: .25s;
+  }
 }
 
 .number-of-pages {
@@ -213,4 +224,30 @@ select {
   display: inline-block;
   padding-left: 1em;
   padding-right: 1em;
+}
+
+.btn-settings {
+
+  @extend %fade;
+
+  cursor: pointer;
+  font-size: .8em;
+  position: relative;
+  top: 2px;
+  width: 19px;
+
+  path {
+
+    @extend %fade;
+    
+    fill: $text-color;
+  }
+
+  &:hover path,
+  &.active path {
+
+    @extend %fade;
+
+    fill: $accent;
+  }
 }
