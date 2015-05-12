@@ -14,17 +14,27 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   locationSearch = path[1],
   locationPage = path[2];
 
-  if (locationPage){
-    $scope.currentPage = locationPage - 1;
-  } else {
-    $scope.currentPage = 0;
-  }
+  if ($.isNumeric(locationSearch)) {
+    // if it's a number
+    $scope.currentPage = parseInt(locationSearch);
 
-  if (locationSearch) {
-    $scope.selectedTags = locationSearch.replace('+',' ');
-  } else {
+  } else if (locationSearch == undefined ) {
+    // if it's undefined
     $scope.selectedTags = 'tattoo';
     $location.path("/tattoo");
+  }
+  else {
+    // query the URL
+    if (locationPage) {
+      // if it has a page number
+      $location.path("/"+locationSearch + "/" +locationPage);
+      $scope.currentPage = parseInt(locationPage);
+    }
+    else {
+      // if it's just a tag
+      $location.path("/"+locationSearch);
+    }
+    $scope.selectedTags = locationSearch;
   }
 
 
@@ -132,7 +142,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       $location.path("/"+$scope.selectedTags.replace(' ','+')+"/"+ ($scope.currentPage ) );
     }
     else {
-      $location.path("//"+ ($scope.currentPage) );
+      $location.path("/"+ ($scope.currentPage) );
     }
 
     window.scrollTo(0, 0);
