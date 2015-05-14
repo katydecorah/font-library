@@ -18,7 +18,7 @@ header {
 
   background: $accent;
   border-bottom: 1px solid $body-bg;
-  font-size: 1.25em;
+  font-size: 1.2em;
   margin-bottom: 1em;
   padding: .25em 1em;
 
@@ -214,6 +214,14 @@ select {
 
 }
 
+.btn-github-container {
+
+  @include breakpoint(medium) {
+    display: block;
+  }
+
+}
+
 .controls {
   border-radius: .5em;
   position: relative;
@@ -231,6 +239,7 @@ select {
     margin-bottom: 2em;
 
     select {
+      border-radius: 0;
       margin-bottom: .5em;
     }
   }
