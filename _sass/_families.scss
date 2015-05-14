@@ -20,6 +20,9 @@
 }
 
 .family-title {
+
+  @extend %fade;
+
   color: inherit;
   font-size: 2em;
   line-height: 1.45;
@@ -101,6 +104,8 @@
 
   @extend %round;
 
+  @extend %fade;
+
   background: transparent;
   border: 1px solid;
   cursor: pointer;
@@ -116,6 +121,8 @@
   &:hover {
 
     @extend %flat-bg;
+
+    @extend %fade;
 
     border-color: $selected-tag;
     color: $selected-tag;

@@ -106,7 +106,7 @@ header {
   color: $accent;
   display: inline-block;
   padding: .25em 1em;
-  transition: background .2s;
+  transition: background $transition;
 
   &.small {
     padding: .25em .5em;
@@ -122,7 +122,7 @@ header {
     @extend %flat-bg;
 
     color: lighten($accent, 10%);
-    transition: background .2s;
+    transition: background $transition;
   }
 
   &:active {
@@ -212,7 +212,7 @@ select {
     -ms-transform: translateY(-2.5em);
     -webkit-transform: translateY(-2.5em);
     transform: translateY(-2.5em);
-    transition: .25s;
+    transition: $transition;
   }
 
   @include breakpoint(medium) {
@@ -223,7 +223,7 @@ select {
     -ms-transform: translateY(.25em);
     -webkit-transform: translateY(.25em);
     transform: translateY(.25em);
-    transition: .25s;
+    transition: $transition;
   }
 }
 

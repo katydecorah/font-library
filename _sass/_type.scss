@@ -31,7 +31,7 @@ small,
 
 %lighten { color: lighten($text-color, 20%); }
 
-%fade { transition: .25s; }
+%fade { transition: $transition; }
 
 h2 {
   background: $white;
