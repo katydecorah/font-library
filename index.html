@@ -17,6 +17,12 @@ tag: cursive
 	<!-- additional filter selects -->
 
 	<div class="controls" ng-class="{ active: showDetails}">
+
+		<select class="select-tags" ng-model="selectedTags" ng-change="resetPagination()">
+			<option value="" selected disabled>tag</option>
+			<option ng-selected="[[ key == selectedTags ]]" ng-repeat="(key,value) in uniqueTags()" value="[[key]]">[[key]]</option>
+		</select>
+
 		<select ng-model="selectedCategory" ng-show="uniqueCategory" ng-change="resetPagination()">
 			<option value="" selected disabled>category</option>
 			<option ng-selected="[[ key == selectedCategory ]]" ng-repeat="(key,value) in uniqueCategory()" value="[[key]]">[[key]]</option>

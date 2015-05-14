@@ -71,8 +71,11 @@ header {
 
 .sidebar {
 
+  display: none;
+
   @include breakpoint(medium-up) {
     border-right: 1px dashed rgba($text-color, .2);
+    display: block;
     float: left;
     height: 100%;
     left: 0;
@@ -81,6 +84,14 @@ header {
     position: fixed;
     top: 35px;
     width: 30%;
+  }
+
+}
+
+.select-tags {
+
+  @include breakpoint(medium-up) {
+    display: none;
   }
 
 }
@@ -206,9 +217,9 @@ select {
 .controls {
   border-radius: .5em;
   position: relative;
-  text-align: right;
 
   @include breakpoint(medium-up) {
+    text-align: right;
     -ms-transform: translateY(-2.5em);
     -webkit-transform: translateY(-2.5em);
     transform: translateY(-2.5em);
@@ -216,7 +227,12 @@ select {
   }
 
   @include breakpoint(medium) {
-    margin-top: 1em;
+
+    margin-bottom: 2em;
+
+    select {
+      margin-bottom: .5em;
+    }
   }
 
   &.active {
