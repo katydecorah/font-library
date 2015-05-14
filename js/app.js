@@ -10,32 +10,40 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.dataTemp = [];
   $scope.url = "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE";
 
-  var path = $location.path().split('/'),
-  locationSearch = path[1],
-  locationPage = path[2];
+  $scope.$watch(function () { return $location.url(); }, function () {
 
-  if ($.isNumeric(locationSearch)) {
-    // if it's a number
-    $scope.currentPage = parseInt(locationSearch);
+    var path = $location.path().split('/'),
+    locationSearch = path[1],
+    locationPage = path[2];
 
-  } else if (locationSearch == undefined ) {
-    // if it's undefined
-    $scope.selectedTags = 'tattoo';
-    $location.path("/tattoo");
-  }
-  else {
-    // query the URL
-    if (locationPage) {
-      // if it has a page number
-      $location.path("/"+locationSearch + "/" +locationPage);
-      $scope.currentPage = parseInt(locationPage);
+    if ($.isNumeric(locationSearch)) {
+      // if it's a number
+      $scope.currentPage = parseInt(locationSearch);
+
+    } else if (locationSearch == undefined || locationSearch == '' ) {
+      // if it's undefined or doesn't exist
+      $scope.selectedTags = undefined;
+      $scope.currentPage = 1;
+
+    } else { // query the URL
+
+      if (locationPage) {
+        // if it has a page number
+        $location.path("/"+locationSearch + "/" +locationPage);
+        $scope.currentPage = parseInt(locationPage);
+
+      } else if (locationSearch == undefined ) {
+        // if it's undefined
+        $scope.selectedTags = undefined;
+
+      } else {
+        // if it's just a tag
+        $location.path("/"+locationSearch);
+
+      }
+      $scope.selectedTags = locationSearch.split('+').join(' ');
     }
-    else {
-      // if it's just a tag
-      $location.path("/"+locationSearch);
-    }
-    $scope.selectedTags = locationSearch;
-  }
+  });
 
 
   $http.get('families.json')
