@@ -702,9 +702,9 @@
   { "family": "Wellfleet", "tags": [ "fun", "slab"] },
   { "family": "Wendy One", "tags": [ "heavy"] },
   { "family": "Wire One", "tags": [ "thin", "art nouveau", "condensed"] },
-  { "family": "Yanone Kaffeesatz", "tags": [] },
+  { "family": "Yanone Kaffeesatz", "tags": ["1920s"] },
   { "family": "Yellowtail", "tags": [ "cursive", "1930s", "brush"] },
-  { "family": "Yeseva One", "tags": [] },
+  { "family": "Yeseva One", "tags": ["didone"] },
   { "family": "Yesteryear", "tags": [ "cursive", "1940s"] },
   { "family": "Zeyada", "tags": [ "scrawl"] }
 ]
