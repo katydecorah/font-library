@@ -55,7 +55,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     $scope.data = $scope.dataTemp;
   });
 
-
+  // reiterate: this breaks when the APIs aren't 1:1
   function merge(obj1,obj2) {
     var result = [];
     for (i in obj1) {
@@ -114,7 +114,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
           if (found.length) {
             var cat = found[0].category;
           }
-          console.log('{ "family": "'+key+'", "tags": ["'+cat+'"] },');
+          console.log('{ "family": "'+key+'", "tags": [] },');
         });
         console.groupEnd();
       }
