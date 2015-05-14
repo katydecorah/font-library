@@ -1,6 +1,25 @@
 
 .family {
+
+  @extend %fade;
+
+  -webkit-animation: fade $transition * 4 forwards;
+  animation: fade $transition * 4 forwards;
   margin-bottom: 1em;
+
+  .cssanimations & { opacity: 0; }
+}
+
+@-webkit-keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
 }
 
 .family-link {
