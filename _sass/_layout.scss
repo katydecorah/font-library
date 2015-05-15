@@ -168,6 +168,11 @@ select {
 .btn-clear {
   cursor: pointer;
   font-size: .9em;
+
+  @include breakpoint(medium-down) {
+    display: block;
+  }
+
 }
 
 .pagination {
@@ -273,7 +278,7 @@ select {
   top: 2px;
   width: 19px;
 
-  @include breakpoint(medium) {
+  @include breakpoint(medium-down) {
     display: none;
   }
 
