@@ -34,6 +34,10 @@ header {
     z-index: 1;
   }
 
+  @include breakpoint(medium) {
+    padding: .25em .75em;
+  }
+
   .title {
     color: $white;
 
@@ -216,7 +220,7 @@ select {
 
 .btn-github-container {
 
-  @include breakpoint(medium) {
+  @include breakpoint(medium-down) {
     display: block;
   }
 

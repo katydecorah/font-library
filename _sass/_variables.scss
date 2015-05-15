@@ -47,5 +47,7 @@ $transition: .2s;
     @media (max-width: $container-width + 30px) { @content; }
   } @else if $point == medium-up {
     @media (min-width: 800px) { @content; }
+  } @else if $point == medium-down {
+    @media (max-width: 800px) { @content; }
   }
 }

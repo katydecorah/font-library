@@ -32,6 +32,10 @@
   padding: 1em 2em .5em;
   position: relative;
 
+  @include breakpoint(medium) {
+    padding: .5em 1em 0;
+  }
+
   &:hover {
     color: $accent;
   }
@@ -46,6 +50,12 @@
   font-size: 2em;
   line-height: 1.45;
   text-transform: none;
+
+  @include breakpoint(medium) {
+    font-size: 1.75em;
+    height: 40px;
+    overflow: hidden;
+  }
 }
 
 .family-tags {
@@ -57,6 +67,15 @@
   min-height: 30px;
   padding: .5em 2em;
   position: relative;
+
+  @include breakpoint(medium) {
+    padding: .5em 1em;
+
+    .btn {
+      display: none;
+    }
+  }
+
 }
 
 .family-meta {
@@ -73,6 +92,11 @@
   text-align: right;
   top: -1.25em;
   z-index: 200;
+
+  @include breakpoint(medium) {
+    display: none;
+  }
+
 }
 
 .meta {
