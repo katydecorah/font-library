@@ -56,7 +56,13 @@ tag: cursive
 		<!-- links to google font page -->
 		<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link">
 			<!-- builds the inline styles & displays font name -->
-			<div class="family-title" style="font-family: '[[font.family]]';[[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') >= 0 && ' font-style: italic;' || '' ]][[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') < 0 && ' font-weight: '+font.variants[0]+';' || '' ]]">[[font.subsets.indexOf('latin') <= 0 && font.subsets.indexOf('khmer') >= 0  && "ជំរាបសួរពិភពលោក " + font.family || font.family]]</div>
+			<div class="family-title" style="font-family: '[[font.family]]';[[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') >= 0 && ' font-style: italic;' || '' ]][[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') < 0 && ' font-weight: '+font.variants[0]+';' || '' ]]">
+				<!-- khmer sample text -->
+				[[font.subsets.indexOf('latin') < 0 && font.subsets.indexOf('khmer') >= 0  && "ជំរាបសួរពិភពលោក " || '']]
+				<!-- greek sample text -->
+				[[font.subsets.indexOf('latin') < 0 && font.subsets.indexOf('greek') >= 0  && "γειά σου Κόσμε" || '']]
+				<span class="family-name[[font.subsets.indexOf('latin') < 0 && ' family-no-latin'|| '']]">[[font.family]]</span>
+			</div>
 		</a>
 		<!-- displays the font's tags -->
 		<div class="family-tags">

@@ -58,6 +58,14 @@
   }
 }
 
+.family-no-latin {
+  @extend %xsmall;
+
+  @extend %lighten;
+
+  font-family: Helvetica, Arial, sans-serif;
+}
+
 .family-tags {
 
   @extend %clearfix;
