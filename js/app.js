@@ -16,6 +16,10 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     locationSearch = path[1],
     locationPage = path[2];
 
+    $scope.selectedCategory = $location.search().category;
+    $scope.selectedSubsets = $location.search().subset;
+    $scope.selectedVariants = $location.search().variant;
+
     if ($.isNumeric(locationSearch)) {
       // if it's a number
       $scope.currentPage = parseInt(locationSearch);
@@ -160,12 +164,16 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.resetPagination = function() {
     $scope.currentPage = 1;
     if ($scope.selectedTags) {
-      $location.path("/"+$scope.selectedTags.split(' ').join('+') +"/");
+      $location.path("/"+$scope.selectedTags.split(' ').join('+') +"/")
     } else {
       $location.path("");
     }
     window.scrollTo(0, 0);
   };
+
+  $scope.setSearch = function(x,y) {
+    $location.search(x, y);
+  }
 
   $scope.selectTag = function(i) {
     $scope.selectedTags = i;
@@ -184,17 +192,19 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.removeCategory = function() {
     $scope.selectedCategory = undefined;
     $scope.resetPagination();
-
+    $location.search('category', null);
   };
 
   $scope.removeVariant = function() {
     $scope.selectedVariants = undefined;
     $scope.resetPagination();
+    $location.search('variant', null);
   };
 
   $scope.removeSubset = function() {
     $scope.selectedSubsets = undefined;
     $scope.resetPagination();
+    $location.search('subset', null);
   };
 
 
@@ -250,7 +260,8 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     $scope.selectedVariants = undefined;
     $scope.selectedCategory = undefined;
     $scope.currentPage = 1;
-    $location.path("");
+    $location.url($location.path());
+    $location.path('');
     $scope.sendAnalytics();
   };
 
