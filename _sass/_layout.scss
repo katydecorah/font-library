@@ -214,6 +214,17 @@ select {
 
 }
 
+.no-results {
+
+  @extend %fade;
+
+  -webkit-animation: fade $transition * 2 forwards 1s;
+  animation: fade $transition * 2 forwards 1s;
+  font-size: 1.25em;
+  margin-top: 2em;
+
+}
+
 .btn-github {
   margin: .5em 0;
 
@@ -275,7 +286,7 @@ select {
   cursor: pointer;
   font-size: .8em;
   position: relative;
-  top: 2px;
+  top: 25px;
   width: 19px;
 
   @include breakpoint(medium-down) {

@@ -41,12 +41,13 @@ tag: cursive
 		<button ng-click="clearFilters()" class="btn btn-clear" ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets">Clear</button>
 	</div>
 
+	<!-- advanced search -->
+	<div ng-model="settings" ng-class="{active:settings}" ng-click="showDetails =! showDetails; settings =! settings" class="btn-settings float-right">{% include settings.svg %}</div>
 
 	<!-- search indicator-->
-	<div class="search-status">
-		<span ng-show="searchCount.length == 0">Dang! Nothing</span>
-		<span ng-hide="searchCount.length == 0">Found [[searchCount.length == 1 && searchCount.length + " font" || searchCount.length + " fonts"]]</span><span ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets"> for </span><span class="family-tag active" ng-show="selectedTags" ng-click="removeTag()"> [[selectedTags]]</span><span class="family-tag active" ng-show="selectedCategory" ng-click=removeCategory()> [[selectedCategory]]</span><span class="family-tag active" ng-show="selectedVariants" ng-click="removeVariant()"> [[selectedVariants]]</span><span class="family-tag active" ng-show="selectedSubsets" ng-click="removeSubset()"> [[selectedSubsets]]</span>.
-		<div ng-model="settings" ng-class="{active:settings}" ng-click="showDetails =! showDetails; settings =! settings" class="btn-settings float-right">{% include settings.svg %}</div>
+	<div class="search-status" ng-class="{'no-results':!searchCount.length}">
+		<span ng-show="searchCount.length == 0" class="ng-hide">Dang! Nothing</span>
+		<span ng-hide="searchCount.length == 0">Found [[searchCount.length == 1 && searchCount.length + " font" || searchCount.length + " fonts"]]</span><span ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets"> for </span><span class="family-tag active" ng-show="selectedTags" ng-click="removeTag()"> [[selectedTags]]</span><span class="family-tag active" ng-show="selectedCategory" ng-click=removeCategory()> [[selectedCategory]]</span><span class="family-tag active" ng-show="selectedVariants" ng-click="removeVariant()"> [[selectedVariants]]</span><span class="family-tag active" ng-show="selectedSubsets" ng-click="removeSubset()"> [[selectedSubsets]]</span>.<span class="ng-hide" ng-show="searchCount.length == 0"><br>Click to remove a term to make your search less specific.</span>
 	</div>
 
 	<div class="families">
