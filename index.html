@@ -19,7 +19,7 @@ tag: cursive
 	<div class="controls" ng-class="{ active: showDetails}">
 
 		<div class="btn-group">
-			<button ng-class="{'active':selectedOrder === 'recent'}" class="btn" ng-click="selectedOrder = 'recent';order('lastModified',false)" title="Recently updated or added">Recent</button><button ng-class="{'active':selectedOrder === 'older'}" class="btn" ng-click="selectedOrder = 'older';order('-lastModified',false)">Older</button><button ng-class="{'active':selectedOrder === 'alpha'}" class="btn" ng-click="selectedOrder = 'alpha';order('family',false)">Alpha</button>
+			<button ng-class="{'active':selectedOrder === 'recent'}" class="btn" ng-click="selectedOrder = 'recent';order('-lastModified',false)" title="Recently updated or added">Recent</button><button ng-class="{'active':selectedOrder === 'older'}" class="btn" ng-click="selectedOrder = 'older';order('lastModified',false)">Older</button><button ng-class="{'active':selectedOrder === 'alpha'}" class="btn" ng-click="selectedOrder = 'alpha';order('family',false)">Alpha</button>
 		</div>
 
 		<select class="select-tags" ng-model="selectedTags" ng-change="resetPagination()">
