@@ -7,8 +7,11 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.currentPage = 1;
   $scope.pageSize = 10;
   $scope.data = [];
+  $scope.selectedOrder = 'alpha';
   $scope.dataTemp = [];
   $scope.url = "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE";
+
+  var orderBy = $filter('orderBy');
 
   $scope.$watch(function () { return $location.url(); }, function () {
 
@@ -77,7 +80,8 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
           'tags' : obj1[i].tags,
           'variants': obj2[i].variants,
           'subsets': obj2[i].subsets,
-          'category': obj2[i].category
+          'category': obj2[i].category,
+          'lastModified': obj2[i].lastModified
         });
       } else {
         console.log( 'Something is wrong, cc/' + obj1[i].family);
@@ -208,8 +212,10 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     $location.search('subset', null);
   };
 
-
-
+  $scope.order = function(predicate, reverse) {
+    $scope.data = orderBy($scope.data, predicate, reverse);
+  };
+  $scope.order('-lastModified',false);
 
   $scope.numberOfPages=function(){
     var myFilteredData = $filter('filter')($scope.data,$scope.search,true);

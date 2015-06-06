@@ -116,7 +116,7 @@ header {
   @extend %tight;
 
   background: lighten($body-bg, 2%);
-  border: 1px solid;
+  border: 1px solid $accent;
   box-shadow: 0 .1em darken($accent, 5%);
   color: $accent;
   display: inline-block;
@@ -147,6 +147,34 @@ header {
   }
 
   &[disabled] { display: none; }
+}
+
+.btn-group {
+
+  display: inline-block;
+
+  .btn {
+    border-radius: 0;
+    box-shadow: none;
+    cursor: pointer;
+    height: 21px;
+  }
+
+  .btn:first-of-type {
+    border-radius: .5em 0 0 .5em;
+    border-right: 0;
+  }
+
+  .btn:last-of-type {
+    border-left: 0;
+    border-radius: 0 .5em .5em 0;
+  }
+
+  .active {
+    background: $accent;
+    color: $white;
+  }
+
 }
 
 select {
