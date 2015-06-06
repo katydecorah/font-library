@@ -126,7 +126,8 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
           if (found.length) {
             var cat = found[0].category;
           }
-          console.log('{ "family": "'+key+'", "tags": [] },');
+          var lineNumb = parseInt(_.sortedIndex(storedFamilies,key)) + 2;
+          console.log('{ "family": "'+key+'", "tags": [] },\t line ' + lineNumb);
         });
         console.groupEnd();
       }
