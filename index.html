@@ -46,10 +46,10 @@ tag: cursive
 
 	<!-- search indicator-->
 	<div class="search-status" ng-class="{'no-results':!searchCount.length}">
-		<span ng-show="searchCount.length == 0" class="ng-hide">Dang! Nothing</span>
-		<span ng-hide="searchCount.length == 0">Found [[searchCount.length == 1 && searchCount.length + " font" || searchCount.length + " fonts"]]</span><span ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets"> for </span><span class="family-tag active" ng-show="selectedTags" ng-click="removeTag()"> [[selectedTags]]</span><span class="family-tag active" ng-show="selectedCategory" ng-click=removeCategory()> [[selectedCategory]]</span><span class="family-tag active" ng-show="selectedVariants" ng-click="removeVariant()"> [[selectedVariants]]</span><span class="family-tag active" ng-show="selectedSubsets" ng-click="removeSubset()"> [[selectedSubsets]]</span>.<span class="ng-hide" ng-show="searchCount.length == 0"><br>Click to remove a term to make your search less specific.</span>
+		<span ng-show="searchCount.length == 0" class="hide">Dang! Nothing</span>
+		<span ng-hide="searchCount.length == 0">Found [[searchCount.length == 1 && searchCount.length + " font" || searchCount.length + " fonts"]]</span><span ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets"> for </span><span class="family-tag active" ng-show="selectedTags" ng-click="removeTag()"> [[selectedTags]]</span><span class="family-tag active" ng-show="selectedCategory" ng-click=removeCategory()> [[selectedCategory]]</span><span class="family-tag active" ng-show="selectedVariants" ng-click="removeVariant()"> [[selectedVariants]]</span><span class="family-tag active" ng-show="selectedSubsets" ng-click="removeSubset()"> [[selectedSubsets]]</span><span class="hide" ng-show="searchCount.length == 0"><br>Click to remove a term to make your search less specific</span>
 	</div>
-
+	
 	<div class="families">
 		<!-- individual font -->
 		<div class="family" ng-repeat="font in searchCount=( data |
