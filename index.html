@@ -38,7 +38,7 @@ tag: cursive
 			<option ng-selected="[[ key == selectedVariants ]]" ng-repeat="(key,value) in uniqueVariants()" value="[[key]]">[[key]]</option>
 		</select>
 
-		<button ng-click="clearFilters();order('family',false);selectedOrder === 'alpha'" class="btn btn-clear" ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets">Clear</button>
+		<button ng-click="clearFilters();" class="btn btn-clear" ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets">Clear</button>
 	</div>
 
 	<!-- advanced search -->
