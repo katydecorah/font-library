@@ -294,7 +294,7 @@ select {
     -ms-transform: translateY(.25em);
     -webkit-transform: translateY(.25em);
     transform: translateY(.25em);
-    transition: .25s cubic-bezier(.17,.67,.86,1.5);
+    transition: $transition;
   }
 }
 
