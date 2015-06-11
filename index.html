@@ -18,10 +18,6 @@ tag: cursive
 
 	<div class="controls" ng-class="{ active: showDetails}">
 
-		<div class="btn-group">
-			<button ng-class="{'active':selectedOrder === 'recent'}" class="btn" ng-click="selectedOrder = 'recent';order('-lastModified',false)" title="Recently updated or added">Recent</button><button ng-class="{'active':selectedOrder === 'older'}" class="btn" ng-click="selectedOrder = 'older';order('lastModified',false)">Older</button><button ng-class="{'active':selectedOrder === 'alpha'}" class="btn" ng-click="selectedOrder = 'alpha';order('family',false)">Alpha</button>
-		</div>
-
 		<select class="select-tags" ng-model="selectedTags" ng-change="resetPagination()">
 			<option value="" selected disabled>tag</option>
 			<option ng-selected="[[ key == selectedTags ]]" ng-repeat="(key,value) in uniqueTags()" value="[[key]]">[[key]]</option>
@@ -46,12 +42,19 @@ tag: cursive
 	</div>
 
 	<!-- advanced search -->
-	<div ng-model="settings" ng-class="{active:settings}" ng-click="showDetails =! showDetails; settings =! settings" class="btn-settings float-right">{% include settings.svg %}</div>
+	<div class="control-container">
+	<!-- order results -->
+	<div class="btn-group">
+		<button ng-class="{'active':selectedOrder === 'recent'}" class="btn" ng-click="selectedOrder = 'recent';order('-lastModified',false)" title="Recently updated or added">↑</button><button ng-class="{'active':selectedOrder === 'older'}" class="btn" ng-click="selectedOrder = 'older';order('lastModified',false)">↓</button><button ng-class="{'active':selectedOrder === 'alpha'}" class="btn" ng-click="selectedOrder = 'alpha';order('family',false)">A-Z</button>
+	</div>
+
+	<div ng-model="settings" ng-class="{active:settings}" ng-click="showDetails =! showDetails; settings =! settings" class="btn-settings">{% include settings.svg %}</div>
+</div>
 
 	<!-- search indicator-->
 	<div class="search-status" ng-class="{'no-results':!searchCount.length}">
-		<span ng-show="searchCount.length == 0" class="hide">Dang! Nothing</span>
-		<span ng-hide="searchCount.length == 0">Found [[searchCount.length == 1 && searchCount.length + " font" || searchCount.length + " fonts"]]</span><span ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets"> for </span><span class="family-tag active" ng-show="selectedTags" ng-click="removeTag()"> [[selectedTags]]</span><span class="family-tag active" ng-show="selectedCategory" ng-click=removeCategory()> [[selectedCategory]]</span><span class="family-tag active" ng-show="selectedVariants" ng-click="removeVariant()"> [[selectedVariants]]</span><span class="family-tag active" ng-show="selectedSubsets" ng-click="removeSubset()"> [[selectedSubsets]]</span><span class="hide" ng-show="searchCount.length == 0"><br>Click to remove a term to make your search less specific</span>
+		<span ng-show="searchCount.length == 0" class="ng-hide">Dang! Nothing</span>
+		<span ng-hide="searchCount.length == 0">Found [[searchCount.length == 1 && searchCount.length + " font" || searchCount.length + " fonts"]]</span><span ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets"> for </span><span class="family-tag active" ng-show="selectedTags" ng-click="removeTag()"> [[selectedTags]]</span><span class="family-tag active" ng-show="selectedCategory" ng-click=removeCategory()> [[selectedCategory]]</span><span class="family-tag active" ng-show="selectedVariants" ng-click="removeVariant()"> [[selectedVariants]]</span><span class="family-tag active" ng-show="selectedSubsets" ng-click="removeSubset()"> [[selectedSubsets]]</span>
 	</div>
 
 	<div class="families">

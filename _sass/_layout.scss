@@ -284,8 +284,6 @@ select {
 
   @include breakpoint(medium) {
 
-    margin-bottom: 2em;
-
     select {
       border-radius: 0;
       margin-bottom: .5em;
@@ -296,7 +294,7 @@ select {
     -ms-transform: translateY(.25em);
     -webkit-transform: translateY(.25em);
     transform: translateY(.25em);
-    transition: $transition;
+    transition: .25s cubic-bezier(.17,.67,.86,1.5);
   }
 }
 
@@ -307,15 +305,31 @@ select {
   padding-right: 1em;
 }
 
+.control-container {
+  position: relative;
+
+
+  @include breakpoint(medium-up) {
+    float: right;
+    top: 18px;
+  }
+
+  @include breakpoint(medium-down) {
+    margin-bottom: 1em;
+  }
+}
+
 .btn-settings {
 
   @extend %fade;
 
   cursor: pointer;
+  display: inline-block;
   font-size: .8em;
+  margin-left: 2em;
   position: relative;
-  top: 25px;
-  width: 19px;
+  top: 7px;
+  width: 21px;
 
   @include breakpoint(medium-down) {
     display: none;
