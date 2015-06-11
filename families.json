@@ -348,7 +348,7 @@
   { "family": "Kristi", "tags": [ "cursive", "scrawl"] },
   { "family": "Krona One", "tags": [ "wide"] },
   { "family": "Kurale", "tags": [ "curls"] },
-  { "family": "La Belle Aurore", "tags": a[ "cursive", "love"] },
+  { "family": "La Belle Aurore", "tags": [ "cursive", "love"] },
   { "family": "Laila", "tags": [ "friendly"] },
   { "family": "Lakki Reddy", "tags": ["uneven"] },
   { "family": "Lancelot", "tags": [ "swash"] },
