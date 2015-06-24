@@ -80,7 +80,8 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
           'variants': obj2[i].variants,
           'subsets': obj2[i].subsets,
           'category': obj2[i].category,
-          'lastModified': obj2[i].lastModified
+          'lastModified': obj2[i].lastModified,
+          'lineNumber': parseInt(i) + 2
         });
       } else {
         console.log( 'Something is wrong, cc/' + obj1[i].family);

@@ -88,8 +88,12 @@ tag: cursive
 				|
 				<span class="meta" data-title="[[font.subsets.join(', ')]]">[[font.subsets.length == 1 && font.subsets.length + " subset" || font.subsets.length + " subsets"]]</span>
 			</div>
-			<!-- link to the font's spec -->
-			<a ng-href="https://www.google.com/fonts/specimen/[[font.family.replace(' ','+')]]" class="btn small quiet float-right" target="_blank">&#8505;</a>
+			<div class="float-right">
+				<!-- link to the font's spec -->
+				<a ng-href="https://www.google.com/fonts/specimen/[[font.family.replace(' ','+')]]" class="meta btn small quiet" target="_blank">&#8505;</a>
+				<!-- link to line number -->
+				<a ng-href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L[[font.lineNumber]]" class="meta btn small quiet" target="_blank">&#9998;</a>
+			</div>
 		</div>
 	</div>
 </div>
