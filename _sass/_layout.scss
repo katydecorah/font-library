@@ -149,6 +149,21 @@ header {
   &[disabled] { display: none; }
 }
 
+.btn-small {
+  border-radius: .5em;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: .8em;
+  height: 21px;
+  padding-top: 2px;
+
+  &.active {
+    background: $accent;
+    color: $white;
+  }
+
+}
+
 .btn-group {
 
   display: inline-block;

@@ -56,8 +56,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $http.get('families.json')
   .then(function(res){
     $scope.dataTemp = res.data;
-
-    $scope.helpWantedTags();
     $scope.helpWantedNewFont();
   });
 
@@ -78,6 +76,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
         result.push({
           'family' : obj1[i].family,
           'tags' : obj1[i].tags,
+          'count': obj1[i].tags.length,
           'variants': obj2[i].variants,
           'subsets': obj2[i].subsets,
           'category': obj2[i].category,
@@ -89,19 +88,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     }
     return result;
   }
-
-  // reiterate this
-  /* log fonts that only have less than 1 tag */
-  $scope.helpWantedTags = function() {
-    console.groupCollapsed("Help wanted! These fonts need more tags in families.json");
-    console.info("These fonts need more tags, add them to https://github.com/katydecorah/font-library/blob/gh-pages/families.json. Learn more about the font by following the provided link to the font's specimen.");
-    angular.forEach($scope.dataTemp, function(key) {
-      if (key.tags.length < 1) {
-        console.log(key.family + "\n\tDescription: https://www.google.com/fonts/specimen/"+key.family.split(" ").join("+"));
-      }
-    });
-    console.groupEnd();
-  };
 
   // reiterate this
   /* log new fonts - fonts that needs to be added to families.json */
