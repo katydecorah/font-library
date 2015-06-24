@@ -6,16 +6,14 @@ tag: cursive
 <aside class="sidebar">
 	<!-- tag index -->
 	<div class="tags">
-		<button ng-repeat="(key,value) in uniqueTags()" class="family-tag" ng-class="{active: key == selectedTags}" name="tag" ng-model="selectedTags" value="[[key]]" ng-click="selectTag(key)">
+		<button ng-repeat="(key,value) in uniqueTags()" class="family-tag" ng-class="{active: key == selectedTags}" name="tag" ng-model="selectedTags" value="[[key]]" ng-click="selectTag(key);">
 			[[key]] <span class="tag-count">[[value]]</span>
 		</button>
 	</div>
 </aside>
 
-
 <main class="content">
 	<!-- additional filter selects -->
-
 	<div class="controls" ng-class="{ active: showDetails}">
 
 		<select class="select-tags" ng-model="selectedTags" ng-change="resetPagination()">
@@ -48,7 +46,7 @@ tag: cursive
 		<button ng-class="{'active':selectedOrder === 'recent'}" class="btn" ng-click="selectedOrder = 'recent';order('-lastModified',false)" title="Recently updated or added">↑</button><button ng-class="{'active':selectedOrder === 'older'}" class="btn" ng-click="selectedOrder = 'older';order('lastModified',false)">↓</button><button ng-class="{'active':selectedOrder === 'alpha'}" class="btn" ng-click="selectedOrder = 'alpha';order('family',false)">A-Z</button>
 	</div>
 
-	<label class="btn btn-small" ng-class="{active:tagCount === 0 }"><input ng-model="tagCount" type="checkbox" ng-true-value="0" ng-false-value="undefined" class="hide" ng-change="resetPagination()">Needs tags</label>
+	<label class="btn btn-small" ng-class="{active:tagCount === 0 }"><input ng-model="tagCount" type="checkbox" ng-true-value="0" ng-false-value="undefined" class="hide" ng-change="resetPagination(); removeTag()">Needs tags</label>
 
 	<div ng-model="settings" ng-class="{active:settings}" ng-click="showDetails =! showDetails; settings =! settings" class="btn-settings">{% include settings.svg %}</div>
 </div>

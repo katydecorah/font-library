@@ -172,6 +172,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     $scope.resetPagination();
     $location.path("/"+$scope.selectedTags.split(' ').join('+') +"/");
     $scope.sendAnalytics();
+    $scope.tagCount = undefined;
   };
 
   $scope.removeTag = function() {
