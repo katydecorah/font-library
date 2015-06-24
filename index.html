@@ -48,6 +48,8 @@ tag: cursive
 		<button ng-class="{'active':selectedOrder === 'recent'}" class="btn" ng-click="selectedOrder = 'recent';order('-lastModified',false)" title="Recently updated or added">↑</button><button ng-class="{'active':selectedOrder === 'older'}" class="btn" ng-click="selectedOrder = 'older';order('lastModified',false)">↓</button><button ng-class="{'active':selectedOrder === 'alpha'}" class="btn" ng-click="selectedOrder = 'alpha';order('family',false)">A-Z</button>
 	</div>
 
+	<label class="btn btn-small" ng-class="{active:tagCount === 0 }"><input ng-model="tagCount" type="checkbox" ng-true-value="0" ng-false-value="undefined" class="hide" ng-change="resetPagination()">Needs tags</label>
+
 	<div ng-model="settings" ng-class="{active:settings}" ng-click="showDetails =! showDetails; settings =! settings" class="btn-settings">{% include settings.svg %}</div>
 </div>
 
@@ -60,7 +62,7 @@ tag: cursive
 	<div class="families">
 		<!-- individual font -->
 		<div class="family" ng-repeat="font in searchCount=( data |
-		filter:{ tags: selectedTags, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory }:true ) | startFrom: (currentPage - 1) * pageSize | limitTo:pageSize">
+		filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory }:true ) | startFrom: (currentPage - 1) * pageSize | limitTo:pageSize">
 		<!-- links to google font page -->
 		<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link">
 			<!-- builds the inline styles & displays font name -->
@@ -86,8 +88,12 @@ tag: cursive
 				|
 				<span class="meta" data-title="[[font.subsets.join(', ')]]">[[font.subsets.length == 1 && font.subsets.length + " subset" || font.subsets.length + " subsets"]]</span>
 			</div>
-			<!-- link to the font's spec -->
-			<a ng-href="https://www.google.com/fonts/specimen/[[font.family.replace(' ','+')]]" class="btn small quiet float-right" target="_blank">&#8505;</a>
+			<div class="float-right">
+				<!-- link to the font's spec -->
+				<a ng-href="https://www.google.com/fonts/specimen/[[font.family.replace(' ','+')]]" class="meta btn small quiet" target="_blank">&#8505;</a>
+				<!-- link to line number -->
+				<a ng-href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L[[font.lineNumber]]" class="meta btn small quiet" target="_blank">&#9998;</a>
+			</div>
 		</div>
 	</div>
 </div>

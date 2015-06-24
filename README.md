@@ -11,6 +11,16 @@ Font Library is built with [Jekyll](http://jekyllrb.com/) and [AngularJS](https:
 
 Each font family is stored as an object in `families.json`. Each family has an array of tags.
 
+### Help wanted
+
+You're welcome to edit `families.json` to add, edit, or improve tags. I recommend starting by tagging fonts that you often want to find for yourself -- curate your own tag! It's likely that someone else will dig your collection.
+
+Click the **Needs tags** button to show all fonts that haven't been tagged yet:
+
+![image](https://cloud.githubusercontent.com/assets/2180540/8320903/29c5dbc8-19ee-11e5-8489-1f5cf7f32b5e.png)
+
+Add tags to `families.json` as described in the next sections.
+
 ### Adding/editing `families.json` guidelines
 
 * Use double quotes `"`
@@ -23,18 +33,6 @@ Each font family is stored as an object in `families.json`. Each family has an a
 * The family name must match the Google Font family name exactly
 
 [View families.json](https://github.com/katydecorah/font-library/blob/gh-pages/families.json)
-
-### Help wanted
-
-You're welcome to edit `families.json` to add, edit, or improve tags. I recommend starting by tagging fonts that you often want to find for yourself -- curate your own tag! It's likely that someone else will dig your collection.
-
-Want to help, but don't know where to start? Open your browser's Console:
-
-![image](https://cloud.githubusercontent.com/assets/2180540/7384122/3632875a-edfa-11e4-8e91-37c9c017e8df.png)
-
-* **Help wanted! These fonts need to be added to families.json** &mdash; if Google adds a new font, but we haven't added it to `families.json` yet, then the Console will log it along with the exact entry you can copy and paste into `families.json`. Feel free to add additional tags to the entry.
-* **New font alert!** &mdash; if a family has less than 2 tags, then the Console will log it. Open the provided link to the specimen page and read the description to get ideas for tags. Try to use tags that are already established, but create new tags when necessary.
-
 
 ### Creating a pull request or issue
 
