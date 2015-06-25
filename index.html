@@ -6,6 +6,8 @@ tag: cursive
 <aside class="sidebar">
 	<!-- tag index -->
 	<div class="tags">
+		Sort by fonts that <label class="family-tag" ng-class="{active:tagCount === 0 }"><input ng-model="tagCount" type="checkbox" ng-true-value="0" ng-false-value="undefined" class="hide" ng-change="resetPagination(); removeTag()">Need tags</label>
+		<hr>
 		<button ng-repeat="(key,value) in uniqueTags()" class="family-tag" ng-class="{active: key == selectedTags}" name="tag" ng-model="selectedTags" value="[[key]]" ng-click="selectTag(key);">
 			[[key]] <span class="tag-count">[[value]]</span>
 		</button>
@@ -43,10 +45,8 @@ tag: cursive
 	<div class="control-container">
 	<!-- order results -->
 	<div class="btn-group">
-		<button ng-class="{'active':selectedOrder === 'recent'}" class="btn" ng-click="selectedOrder = 'recent';order('-lastModified',false)" title="Recently updated or added">↑</button><button ng-class="{'active':selectedOrder === 'older'}" class="btn" ng-click="selectedOrder = 'older';order('lastModified',false)">↓</button><button ng-class="{'active':selectedOrder === 'alpha'}" class="btn" ng-click="selectedOrder = 'alpha';order('family',false)">A-Z</button>
+		<button ng-class="{'active':selectedOrder === 'recent'}" class="btn" ng-click="selectedOrder = 'recent';order('-lastModified',false)">Recent</button><button data-title="older" ng-class="{'active':selectedOrder === 'older'}" class="btn" ng-click="selectedOrder = 'older';order('lastModified',false)">Older</button><button ng-class="{'active':selectedOrder === 'alpha'}" class="btn" ng-click="selectedOrder = 'alpha';order('family',false)">A-Z</button>
 	</div>
-
-	<label class="btn btn-small" ng-class="{active:tagCount === 0 }"><input ng-model="tagCount" type="checkbox" ng-true-value="0" ng-false-value="undefined" class="hide" ng-change="resetPagination(); removeTag()">Needs tags</label>
 
 	<div ng-model="settings" ng-class="{active:settings}" ng-click="showDetails =! showDetails; settings =! settings" class="btn-settings">{% include settings.svg %}</div>
 </div>
@@ -55,6 +55,7 @@ tag: cursive
 	<div class="search-status" ng-class="{'no-results':!searchCount.length}">
 		<span ng-show="searchCount.length == 0" class="ng-hide">Dang! Nothing</span>
 		<span ng-hide="searchCount.length == 0">Found [[searchCount.length == 1 && searchCount.length + " font" || searchCount.length + " fonts"]]</span><span ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets"> for </span><span class="family-tag active" ng-show="selectedTags" ng-click="removeTag()"> [[selectedTags]]</span><span class="family-tag active" ng-show="selectedCategory" ng-click=removeCategory()> [[selectedCategory]]</span><span class="family-tag active" ng-show="selectedVariants" ng-click="removeVariant()"> [[selectedVariants]]</span><span class="family-tag active" ng-show="selectedSubsets" ng-click="removeSubset()"> [[selectedSubsets]]</span>
+		<span ng-show="tagCount === 0"> that <label class="family-tag active" ng-class="{active:tagCount === 0 }"><input ng-model="tagCount" type="checkbox" ng-true-value="0" ng-false-value="undefined" class="hide" ng-change="resetPagination(); removeTag()">Need tags</label></span>
 	</div>
 
 	<div class="families">
@@ -88,9 +89,9 @@ tag: cursive
 			</div>
 			<div class="float-right">
 				<!-- link to the font's spec -->
-				<a ng-href="https://www.google.com/fonts/specimen/[[font.family.replace(' ','+')]]" class="meta btn small quiet" target="_blank">&#8505;</a>
+				<a ng-href="https://www.google.com/fonts/specimen/[[font.family.replace(' ','+')]]" class="meta btn small quiet" target="_blank">Spec</a>
 				<!-- link to line number -->
-				<a ng-href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L[[font.lineNumber]]" class="meta btn small quiet" target="_blank">&#9998;</a>
+				<a ng-href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L[[font.lineNumber]]" class="meta btn small quiet" target="_blank">Edit</a>
 			</div>
 		</div>
 	</div>
