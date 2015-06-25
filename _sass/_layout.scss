@@ -124,11 +124,12 @@ header {
   transition: background $transition;
 
   &.small {
-    padding: .25em .5em;
+    padding: .2em .5em;
   }
 
   &.quiet {
-    border: 1px solid rgba($accent, .25);
+    border: 1px solid;
+    color: rgba($accent, .25);
     box-shadow: none;
   }
 
@@ -173,6 +174,7 @@ header {
     box-shadow: none;
     cursor: pointer;
     height: 21px;
+    position: relative;
   }
 
   .btn:first-of-type {
@@ -364,4 +366,10 @@ select {
 
     fill: $accent;
   }
+}
+
+hr {
+  border: none;
+  border-top: 1px dashed rgba($text-color, .2);
+  margin: 1em 0 1.25em;
 }
