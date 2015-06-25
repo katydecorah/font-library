@@ -129,8 +129,8 @@ header {
 
   &.quiet {
     border: 1px solid;
-    color: rgba($accent, .25);
     box-shadow: none;
+    color: rgba($accent, .25);
   }
 
   &:hover {
@@ -369,7 +369,7 @@ select {
 }
 
 hr {
-  border: none;
+  border: 0;
   border-top: 1px dashed rgba($text-color, .2);
   margin: 1em 0 1.25em;
 }
