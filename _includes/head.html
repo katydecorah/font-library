@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="{{site.baseurl}}/css/style.css">
 <link href='http://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
 <!-- gets google font-->
-<link ng-href="http://fonts.googleapis.com/css?family=[[font.family.replace(' ','+')]][[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') >= 0 && ':' + font.variants[0] || '' ]][[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') < 0 && ':'+font.variants[0] || '' ]][[ font.subsets.indexOf('latin') >=0 && '&text=' + font.family.replace(' ','+') || '']]"  rel="stylesheet" ng-repeat="font in searchCount=( data |
+<link ng-href="http://fonts.googleapis.com/css?family=[[font.family.replace(' ','+')]][[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') >= 0 && ':' + font.variants[0] || '' ]][[selectedVariants != undefined && ':' + selectedVariants || '' ]][[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') < 0 && ':'+font.variants[0] || '' ]][[ font.subsets.indexOf('latin') >=0 && '&text=' + font.family.replace(' ','+') || '']]"  rel="stylesheet" ng-repeat="font in searchCount=( data |
 filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory }:true ) | startFrom: (currentPage - 1) * pageSize | limitTo:pageSize">
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/{{site.angular}}/angular.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
