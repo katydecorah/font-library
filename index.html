@@ -68,9 +68,22 @@ tag: cursive
 			<div class="family-title" style="font-family: '[[font.family]]';[[ (font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') >= 0) || selectedVariants.indexOf('italic') >= 0 && ' font-style: italic;' || '' ]][[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') < 0 && ' font-weight: '+font.variants[0]+';' || '' ]][[ (selectedVariants.indexOf('italic') < 0 && selectedVariants > 0) && 'font-weight: ' + selectedVariants + ';' || '' ]]">
 				<!-- khmer sample text -->
 				[[font.subsets.indexOf('latin') < 0 && font.subsets.indexOf('khmer') >= 0  && "ជំរាបសួរពិភពលោក " || '']]
+				<!-- arabic sample text -->
+				[[ selectedSubsets == 'arabic' && 'مرحبا بالعالم' || '' ]]
+				<!-- cyrillic (russian) sample text -->
+				[[ ( selectedSubsets == 'cyrillic' || selectedSubsets == 'cyrillic-ext') && 'привет мир' || '' ]]
+				<!-- devanagari (hindi) sample text -->
+				[[ selectedSubsets == 'devanagari' && 'हैलो वर्ल्ड' || '']]
 				<!-- greek sample text -->
-				[[font.subsets.indexOf('latin') < 0 && font.subsets.indexOf('greek') >= 0  && "γειά σου Κόσμε" || '']]
-				<span class="family-name[[font.subsets.indexOf('latin') < 0 && ' family-no-latin'|| '']]">[[font.family]]</span>
+				[[ ((font.subsets.indexOf('latin') < 0 && font.subsets.indexOf('greek') >= 0) || ( selectedSubsets == 'greek' || selectedSubsets == 'greek-ext' ))  && "γειά σου Κόσμε" || '']]
+				<!-- hebrew sample text - ltr? -->
+				[[ selectedSubsets == 'hebrew' && 'שלום עולם' || '' ]]
+				<!-- telugu sample text -->
+				[[ selectedSubsets == 'telugu' && 'హలో వరల్డ్' || '' ]]
+				<!-- vietnamese sample text -->
+				[[ selectedSubsets == 'vietnamese' && 'xin chào' || '' ]]
+
+				<span class="family-name[[ (font.subsets.indexOf('latin') < 0 || selectedSubsets.indexOf('latin') < 0 ) && ' family-no-latin'|| '']]">[[font.family]]</span>
 			</div>
 		</a>
 		<!-- displays the font's tags -->
