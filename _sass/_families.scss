@@ -58,12 +58,15 @@
   }
 }
 
-.family-no-latin {
+.family-title-small {
   @extend %xsmall;
 
   @extend %lighten;
 
-  font-family: Helvetica, Arial, sans-serif;
+}
+
+.language-rtl {
+  direction: rtl;
 }
 
 .family-tags {

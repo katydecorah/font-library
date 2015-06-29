@@ -58,19 +58,33 @@ tag: cursive
 		<span ng-show="tagCount === 0"> that <label class="family-tag active" ng-class="{active:tagCount === 0 }"><input ng-model="tagCount" type="checkbox" ng-true-value="0" ng-false-value="undefined" class="hide" ng-change="resetPagination(); removeTag()">Need tags</label></span>
 	</div>
 
+
+
 	<div class="families">
 		<!-- individual font -->
 		<div class="family" ng-repeat="font in searchCount=( data |
 		filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory }:true ) | startFrom: (currentPage - 1) * pageSize | limitTo:pageSize">
 		<!-- links to google font page -->
-		<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link">
+		<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link[[ (selectedSubsets.indexOf('hebrew') == 0 || selectedSubsets.indexOf('arabic') == 0) && ' language-rtl' || '' ]]">
 			<!-- builds the inline styles & displays font name -->
 			<div class="family-title" style="font-family: '[[font.family]]';[[ (font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') >= 0) || selectedVariants.indexOf('italic') >= 0 && ' font-style: italic;' || '' ]][[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') < 0 && ' font-weight: '+font.variants[0]+';' || '' ]][[ (selectedVariants.indexOf('italic') < 0 && selectedVariants > 0) && 'font-weight: ' + selectedVariants + ';' || '' ]]">
 				<!-- khmer sample text -->
 				[[font.subsets.indexOf('latin') < 0 && font.subsets.indexOf('khmer') >= 0  && "ជំរាបសួរពិភពលោក " || '']]
+				<!-- arabic sample text -->
+				[[ selectedSubsets == 'arabic' && 'مرحبا بالعالم' || '' ]]
+				<!-- cyrillic (russian) sample text -->
+				[[ ( selectedSubsets == 'cyrillic' || selectedSubsets == 'cyrillic-ext') && 'привет мир' || '' ]]
+				<!-- devanagari (hindi) sample text -->
+				[[ selectedSubsets == 'devanagari' && 'हैलो वर्ल्ड' || '']]
 				<!-- greek sample text -->
-				[[font.subsets.indexOf('latin') < 0 && font.subsets.indexOf('greek') >= 0  && "γειά σου Κόσμε" || '']]
-				<span class="family-name[[font.subsets.indexOf('latin') < 0 && ' family-no-latin'|| '']]">[[font.family]]</span>
+				[[ ((font.subsets.indexOf('latin') < 0 && font.subsets.indexOf('greek') >= 0) || ( selectedSubsets == 'greek' || selectedSubsets == 'greek-ext' ))  && "γειά σου Κόσμε" || '']]
+				<!-- hebrew sample text -->
+				[[ selectedSubsets == 'hebrew' && 'שלום עולם' || '' ]]
+				<!-- telugu sample text -->
+				[[ selectedSubsets == 'telugu' && 'హలో వరల్డ్' || '' ]]
+				<!-- vietnamese sample text -->
+				[[ selectedSubsets == 'vietnamese' && 'xin chào' || '' ]]
+				<span class="family-name[[ (font.subsets.indexOf('latin') < 0 || selectedSubsets.indexOf('latin') < 0 ) && ' family-title-small'|| '']]">[[font.family]]</span>
 			</div>
 		</a>
 		<!-- displays the font's tags -->
