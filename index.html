@@ -96,14 +96,14 @@ tag: cursive
 			<!-- displays the font's variants and subsets -->
 			<div class="family-meta" ng-show="font.variants">
 				<span class="meta">[[font.category]]</span>
-				|
+				&bull;
 				<span class="meta" data-title="[[font.variants.join(', ')]]">[[font.variants.length == 1 && font.variants.length + " variant" || font.variants.length + " variants"]]</span>
-				|
+				&bull;
 				<span class="meta" data-title="[[font.subsets.join(', ')]]">[[font.subsets.length == 1 && font.subsets.length + " subset" || font.subsets.length + " subsets"]]</span>
 			</div>
 			<div class="float-right">
 				<!-- link to the font's spec -->
-				<a ng-href="https://www.google.com/fonts/specimen/[[font.family.replace(' ','+')]]" class="meta btn small quiet" target="_blank">Spec</a>
+				<a ng-href="https://www.google.com/fonts/specimen/[[font.family.replace(' ','+')]]" class="meta btn small quiet" target="_blank">Specimen</a>
 				<!-- link to line number -->
 				<a ng-href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L[[font.lineNumber]]" class="meta btn small quiet" target="_blank">Edit</a>
 			</div>
