@@ -58,9 +58,11 @@ tag: cursive
 		<span ng-show="tagCount === 0"> that <label class="family-tag active" ng-class="{active:tagCount === 0 }"><input ng-model="tagCount" type="checkbox" ng-true-value="0" ng-false-value="undefined" class="hide" ng-change="resetPagination(); removeTag()">Need tags</label></span>
 	</div>
 
-
+	<div class="loader-container" ng-hide="searchCount.length"><div class="loader"></div></div>
 
 	<div class="families">
+
+
 		<!-- individual font -->
 		<div class="family" ng-repeat="font in searchCount=( data |
 		filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory }:true ) | startFrom: (currentPage - 1) * pageSize | limitTo:pageSize">
