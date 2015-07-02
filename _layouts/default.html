@@ -10,11 +10,11 @@ layout: compress
 		{% include header.html %}
 	</header>
 
-	<div class="loader-container" ng-hide="searchCount.length">
+	<div class="loader-container" ng-hide="searchCount.length >= 0">
 		<div class="loader"></div>
 	</div>
 
-	<div class="container" ng-show="searchCount.length">
+	<div class="container" ng-show="searchCount.length >= 0">
 		{{content}}
 	</div>
 	{% include footer.html %}
