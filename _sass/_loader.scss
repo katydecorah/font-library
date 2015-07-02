@@ -1,6 +1,7 @@
 .loader-container {
   -webkit-align-items: center;
   align-items: center;
+  bottom: 0;
   -webkit-box-align: center;
   -webkit-box-pack: center;
   display: -webkit-box;
@@ -9,9 +10,13 @@
   display: flex;
   -ms-flex-align: center;
   -ms-flex-pack: center;
+  height: 100%;
   -webkit-justify-content: center;
   justify-content: center;
-  min-height: 400px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 100%;
 }
 
@@ -50,14 +55,14 @@
 }
 
 .loader:after {
-  border-left-color: $accent;
+  border-left-color: rgba($accent, .5);
   left: 0;
 }
 
 .loader:before {
   -webkit-animation-delay: -.1875s;
   animation-delay: -.1875s;
-  border-right-color: $accent;
+  border-right-color: rgba($accent, .5);
   right: 0;
 }
 

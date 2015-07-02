@@ -3,7 +3,7 @@ layout: default
 tag: cursive
 ---
 
-<aside class="sidebar">
+<aside class="sidebar" ng-show="searchCount.length">
 	<!-- tag index -->
 	<div class="tags">
 		Sort by fonts that <label class="family-tag" ng-class="{active:tagCount === 0 }"><input ng-model="tagCount" type="checkbox" ng-true-value="0" ng-false-value="undefined" class="hide" ng-change="resetPagination(); removeTag()">Need tags</label>
@@ -57,8 +57,6 @@ tag: cursive
 		<span ng-hide="searchCount && searchCount.length == 0">Found [[searchCount.length == 1 && searchCount.length + " font" || searchCount.length + " fonts"]]</span><span ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets"> for </span><span class="family-tag active" ng-show="selectedTags" ng-click="removeTag()"> [[selectedTags]]</span><span class="family-tag active" ng-show="selectedCategory" ng-click=removeCategory()> [[selectedCategory]]</span><span class="family-tag active" ng-show="selectedVariants" ng-click="removeVariant()"> [[selectedVariants]]</span><span class="family-tag active" ng-show="selectedSubsets" ng-click="removeSubset()"> [[selectedSubsets]]</span>
 		<span ng-show="tagCount === 0"> that <label class="family-tag active" ng-class="{active:tagCount === 0 }"><input ng-model="tagCount" type="checkbox" ng-true-value="0" ng-false-value="undefined" class="hide" ng-change="resetPagination(); removeTag()">Need tags</label></span>
 	</div>
-
-	<div class="loader-container" ng-hide="searchCount.length"><div class="loader"></div></div>
 
 	<div class="families">
 
