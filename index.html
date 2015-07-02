@@ -42,7 +42,7 @@ tag: cursive
 	</div>
 
 	<!-- advanced search -->
-	<div class="control-container">
+	<div class="control-container" ng-show="searchCount.length">
 	<!-- order results -->
 	<div class="btn-group">
 		<button ng-class="{'active':selectedOrder === 'recent'}" class="btn" ng-click="selectedOrder = 'recent';order('-lastModified',false)">Recent</button><button data-title="older" ng-class="{'active':selectedOrder === 'older'}" class="btn" ng-click="selectedOrder = 'older';order('lastModified',false)">Older</button><button ng-class="{'active':selectedOrder === 'alpha'}" class="btn" ng-click="selectedOrder = 'alpha';order('family',false)">A-Z</button>
