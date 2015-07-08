@@ -58,10 +58,12 @@ tag: cursive
 		<span ng-show="tagCount === 0"> that <label class="family-tag active" ng-class="{active:tagCount === 0 }"><input ng-model="tagCount" type="checkbox" ng-true-value="0" ng-false-value="undefined" class="hide" ng-change="resetPagination(); removeTag()">Need tags</label></span>
 	</div>
 
-	<div class="families">
+
+
+	<div class="families" id="families">
 		<!-- individual font -->
 		<div class="family" ng-repeat="font in searchCount=( data |
-		filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory }:true ) | startFrom: (currentPage - 1) * pageSize | limitTo:pageSize">
+		filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory }:true ) | startFrom: starter | limitTo:pageSize">
 		<!-- links to google font page -->
 		<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link[[ (selectedSubsets.indexOf('hebrew') == 0 || selectedSubsets.indexOf('arabic') == 0) && ' language-rtl' || '' ]]">
 			<!-- builds the inline styles & displays font name -->
@@ -107,15 +109,5 @@ tag: cursive
 			</div>
 		</div>
 	</div>
-</div>
-
-<!-- pagination-->
-<div class="pagination small" ng-show="(searchCount.length / pageSize) > 1">
-
-	<button class="btn" ng-click="currentPage=currentPage-1; updateLocPage()" ng-hide="currentPage == 1">&larr;</button>
-
-	<span  class="number-of-pages">[[currentPage]]/[[ searchCount.length / pageSize | ceil]]</span>
-
-	<button class="btn" ng-click="currentPage = currentPage+1; updateLocPage()" ng-hide="currentPage == (searchCount.length / pageSize | ceil)">&rarr;</button>
 </div>
 </main>

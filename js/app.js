@@ -5,8 +5,10 @@ var app = angular.module('finder', [], function ($interpolateProvider) {
 
 app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.currentPage = 1;
-  $scope.pageSize = 10;
+  $scope.pageSize = 20;
+  $scope.starter = ($scope.currentPage - 1) * $scope.pageSize;
   $scope.data = [];
+  $scope.searchCount = undefined;
   $scope.selectedOrder = 'alpha';
   $scope.dataTemp = [];
   $scope.url = "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE";
@@ -26,6 +28,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     if ($.isNumeric(locationSearch)) {
       // if it's a number
       $scope.currentPage = parseInt(locationSearch);
+      //$scope.starter = ($scope.currentPage - 1) * $scope.pageSize;
 
     } else if (locationSearch == undefined || locationSearch == '' ) {
       // if it's undefined or doesn't exist
@@ -160,6 +163,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     } else {
       $location.path("");
     }
+    $scope.pageSize = 20;
     window.scrollTo(0, 0);
   };
 
@@ -274,4 +278,20 @@ app.filter('ceil', function() {
   return function(input) {
     return Math.ceil(input);
   };
+});
+
+// infinite scroll
+$(window).scroll(function() {
+  if ($(window).scrollTop() == ( $(document).height() - $(window).height()  ) ) {
+    var tempScrollTop = $(window).scrollTop();
+    var scope = angular.element($("#families")).scope();
+    scope.$apply(function(){
+      if (scope.searchCount.length >= scope.pageSize) {
+        scope.pageSize = scope.pageSize + 10;
+        scope.currentPage= scope.currentPage + 1;
+        scope.starter = 0;
+      }
+    });
+    $(window).scrollTop(tempScrollTop);
+  }
 });
