@@ -163,6 +163,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     } else {
       $location.path("");
     }
+    $scope.pageSize = 20;
     window.scrollTo(0, 0);
   };
 
