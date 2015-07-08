@@ -6,10 +6,13 @@ layout: compress
 <html ng-app="finder" ng-controller="ctrl">
 {% include head.html %}
 <body ng-cloak>
-	<header>
-		{% include header.html %}
-	</header>
-	<div class="container">
+	<header>{% include header.html %}</header>
+	
+	<div class="loader-container" ng-hide="data.length > 0">
+		<div class="loader"></div>
+	</div>
+
+	<div class="container" ng-show="data.length > 0">
 		{{content}}
 	</div>
 	{% include footer.html %}
