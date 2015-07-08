@@ -359,7 +359,7 @@
   { "family": "League Script", "tags": ["cursive", "1920s", "love"] },
   { "family": "Leckerli One", "tags": ["cursive"] },
   { "family": "Ledger", "tags": [] },
-  { "family": "Lekton", "tags": ["typewriter"] },
+  { "family": "Lekton", "tags": ["typewriter", "code"] },
   { "family": "Lemon", "tags": ["brush"] },
   { "family": "Libre Baskerville", "tags": [] },
   { "family": "Life Savers", "tags": ["1950s"] },
