@@ -263,7 +263,11 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     $location.path('');
     $scope.sendAnalytics();
   };
-
+  
+  angular.element(document).ready(function () {
+    tinysort('#tags>button',{attr:'value'});
+  });
+  
 });
 
 app.filter('startFrom', function() {
