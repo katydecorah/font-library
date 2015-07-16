@@ -6,11 +6,23 @@ tag: cursive
 <aside class="sidebar">
 	<!-- tag index -->
 	<div class="tags">
-		Sort by fonts that <label class="family-tag" ng-class="{active:tagCount === 0 }"><input ng-model="tagCount" type="checkbox" ng-true-value="0" ng-false-value="undefined" class="hide" ng-change="resetPagination(); removeTag()">Need tags</label>
+		Sort by fonts that <label class="family-tag" ng-class="{active:tagCount === 0 }"><input ng-model="tagCount" type="checkbox" ng-true-value="0" ng-false-value="undefined" class="hide" ng-change="resetPagination(); removeTag()">Need tags</label>		
 		<hr>
-		<div id="tags">
-			<button ng-repeat="(key,value) in uniqueTags()" class="family-tag" ng-class="{active: key == selectedTags}" name="tag" ng-model="selectedTags" value="[[key]]" ng-click="selectTag(key);">
-				[[key]] <span class="tag-count">[[value]]</span>
+		<div class="btn-group-inputs">
+			<div class="btn-group">
+				<div class="btn" ng-class="{'active':sorter == 'tag'|| sorter == '-tag'} ">
+					<label ng-hide="sorter == 'tag'"><input type="radio" name="sorter" ng-model="sorter" value="tag">A-Z <span ng-hide="sorter == 'value' || sorter == '-value'">↑</span></label>
+					<label ng-hide="sorter == '-tag' || sorter == 'value' || sorter == '-value' "><input type="radio" name="sorter" ng-model="sorter" value="-tag">A-Z ↓</label>
+				</div><div class="btn" ng-class="{'active':sorter == 'value' || sorter == '-value'}">
+					<label ng-hide="sorter == 'value'"><input type="radio" name="sorter" ng-model="sorter" value="value">0-9 <span ng-hide="sorter == 'tag' || sorter == '-tag'">↑</span></label>
+					<label ng-hide="sorter == '-value' || sorter == 'tag' || sorter == '-tag'"><input type="radio" name="sorter" ng-model="sorter" value="-value">0-9 ↓</label>
+				</div>
+			</div>
+			<div class="btn" ng-class="{'active':toTable == true}"><label><input type="checkbox" name="table" ng-model="toTable">Table</label></div>
+		</div>
+		<div id="tags" ng-class="{'show-table':toTable == true} ">
+			<button ng-repeat="tag in tags[0] | orderBy: sorter " class="family-tag" ng-class="{active: tag.tag == selectedTags}" name="tag" ng-model="selectedTags" value="[[tag.tag]]" ng-click="selectTag(tag.tag);">
+				[[tag.tag]] <span class="tag-count">[[tag.value]]</span>
 			</button>
 		</div>
 	</div>
@@ -22,7 +34,7 @@ tag: cursive
 		
 		<select class="select-tags" ng-model="selectedTags" ng-change="resetPagination()">
 			<option value="" selected disabled>tag</option>
-			<option ng-selected="[[ key == selectedTags ]]" ng-repeat="(key,value) in uniqueTags()" value="[[key]]">[[key]]</option>
+			<option ng-selected="[[ tag.tag == selectedTags ]]" ng-repeat="tag in tags[0]" value="[[tag.tag]]">[[tag.tag]]</option>
 		</select>
 		
 		<select ng-model="selectedCategory" ng-show="uniqueCategory" ng-change="resetPagination();setSearch('category',selectedCategory)">
