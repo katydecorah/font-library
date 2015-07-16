@@ -1,27 +1,27 @@
 .container {
-
+  
   @extend %clearfix;
-
-
+  
+  
   margin: 0 auto;
   max-width: $container-width;
   position: relative;
-
+  
   @include breakpoint(medium) {
     padding: 0 1em;
   }
 }
 
 header {
-
+  
   @extend %tight;
-
+  
   background: $accent;
   border-bottom: 1px solid $body-bg;
   font-size: 1.2em;
   margin-bottom: 1em;
   padding: .25em 1em;
-
+  
   @include breakpoint(medium-up) {
     font-size: $font-size;
     height: 35px;
@@ -33,50 +33,50 @@ header {
     width: 100%;
     z-index: 1;
   }
-
+  
   @include breakpoint(medium) {
     padding: .25em .75em;
   }
-
+  
   .title {
     color: $white;
-
+    
     &:hover {
       color: $white;
       text-decoration: underline;
     }
-
+    
   }
-
+  
   .subtitle {
     color: rgba($white, .55);
-
+    
     &:hover {
       color: rgba($white, .55);
       text-decoration: underline;
     }
-
+    
   }
-
+  
 }
 
 .content {
   max-width: 40em;
   position: relative;
-
+  
   @include breakpoint(medium-up) {
     float: right;
     padding-bottom: 5em;
     padding-top: 2em;
     width: 65%;
   }
-
+  
 }
 
 .sidebar {
-
+  
   display: none;
-
+  
   @include breakpoint(medium-up) {
     border-right: 1px dashed rgba($text-color, .2);
     display: block;
@@ -89,65 +89,74 @@ header {
     top: 35px;
     width: 30%;
   }
-
+  
 }
 
 .select-tags {
-
+  
   @include breakpoint(medium-up) {
     display: none;
   }
-
+  
 }
 
 .sidebar-group {
-
+  
   margin-bottom: 1em;
-
+  
 }
 
 
 .btn {
-
+  
   @extend %upper;
-
+  
   @extend %round;
-
+  
   @extend %tight;
-
+  
   background: lighten($body-bg, 2%);
   border: 1px solid $accent;
   box-shadow: 0 .1em darken($accent, 5%);
   color: $accent;
+  cursor: pointer;
   display: inline-block;
   padding: .25em 1em;
   transition: background $transition;
-
+  
   &.small {
     padding: .2em .5em;
   }
-
+  
   &.quiet {
     border: 1px solid;
     box-shadow: none;
     color: rgba($accent, .25);
   }
-
+  
   &:hover {
-
+    
     @extend %flat-bg;
-
+    
     color: lighten($accent, 10%);
     transition: background $transition;
   }
-
+  
   &:active {
     box-shadow: none;
     position: relative;
     top: .1em;
   }
-
+  
   &[disabled] { display: none; }
+  
+  &.active {
+    background: $accent;
+    color: $white;
+  }
+  
+  input { display: none;}
+
 }
 
 .btn-small {
@@ -157,51 +166,71 @@ header {
   font-size: .8em;
   height: 21px;
   padding-top: 2px;
-
+  
   &.active {
     background: $accent;
     color: $white;
   }
-
+  
 }
 
 .btn-group {
-
+  
   display: inline-block;
-
+  
   .btn {
     border-radius: 0;
     box-shadow: none;
     cursor: pointer;
+    display: inline-block;
     height: 21px;
     position: relative;
   }
-
+  
   .btn:first-of-type {
     border-radius: .5em 0 0 .5em;
     border-right: 0;
   }
-
+  
   .btn:last-of-type {
     border-left: 0;
     border-radius: 0 .5em .5em 0;
   }
-
-  .active {
-    background: $accent;
-    color: $white;
+  
+  input {
+    display: none;
   }
+  
+  label {
+    cursor: pointer;
+  }
+  
+}
 
+.btn-group-inputs {
+  display: block;
+  margin-bottom: 1em;
+  
+  .btn {
+    font-size: .7em;
+    padding: 0;
+  }
+  
+  label {
+    cursor: pointer;
+    display: inline-block;
+    padding: .35em 1.25em;
+  }
 }
 
 select {
-
+  
   @extend %upper;
-
+  
   @extend %round;
-
+  
   @extend %tight;
-
+  
   background: lighten($body-bg, 2%);
   border: 1px solid;
   color: $selected-tag;
@@ -213,39 +242,39 @@ select {
 .btn-clear {
   cursor: pointer;
   font-size: .9em;
-
+  
   @include breakpoint(medium-down) {
     display: block;
   }
-
+  
 }
 
 .pagination {
   margin: 2em 0 4em;
   text-align: center;
-
+  
   .btn {
     cursor: pointer;
     font-size: 1.25em;
   }
-
+  
 }
 
 .search-status {
   @extend %clearfix;
-
+  
   margin-bottom: .5em;
   margin-top: 1em;
-
+  
   .family-tag {
     position: relative;
   }
-
+  
   .family-tag:hover {
     color: $accent;
     cursor: pointer;
   }
-
+  
   .family-tag:hover:before {
     content: '\00D7';
     font-size: 5em;
@@ -256,41 +285,41 @@ select {
     top: -.35em;
     width: 100%;
   }
-
+  
 }
 
 .no-results {
-
+  
   @extend %fade;
-
+  
   -webkit-animation: fade $transition * 2 forwards 1s;
   animation: fade $transition * 2 forwards 1s;
   font-size: 1.25em;
   margin-top: 2em;
-
+  
 }
 
 .btn-github {
   margin: .5em 0;
-
+  
   @include breakpoint(medium-up) {
     margin: 0 0 1em 1em;
   }
-
+  
 }
 
 .btn-github-container {
-
+  
   @include breakpoint(medium-down) {
     display: block;
   }
-
+  
 }
 
 .controls {
   border-radius: .5em;
   position: relative;
-
+  
   @include breakpoint(medium-up) {
     text-align: right;
     -ms-transform: translateY(-2.5em);
@@ -298,15 +327,15 @@ select {
     transform: translateY(-2.5em);
     transition: $transition;
   }
-
+  
   @include breakpoint(medium) {
-
+    
     select {
       border-radius: 0;
       margin-bottom: .5em;
     }
   }
-
+  
   &.active {
     -ms-transform: translateY(.25em);
     -webkit-transform: translateY(.25em);
@@ -324,22 +353,22 @@ select {
 
 .control-container {
   position: relative;
-
-
+  
+  
   @include breakpoint(medium-up) {
     float: right;
     top: 18px;
   }
-
+  
   @include breakpoint(medium-down) {
     margin-bottom: 1em;
   }
 }
 
 .btn-settings {
-
+  
   @extend %fade;
-
+  
   cursor: pointer;
   display: inline-block;
   font-size: .8em;
@@ -347,23 +376,23 @@ select {
   position: relative;
   top: 7px;
   width: 21px;
-
+  
   @include breakpoint(medium-down) {
     display: none;
   }
-
+  
   path {
-
+    
     @extend %fade;
-
+    
     fill: $text-color;
   }
-
+  
   &:hover path,
   &.active path {
-
+    
     @extend %fade;
-
+    
     fill: $accent;
   }
 }
@@ -372,4 +401,25 @@ hr {
   border: 0;
   border-top: 1px dashed rgba($text-color, .2);
   margin: 1em 0 1.25em;
+}
+
+.show-table {
+  
+  .family-tag {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .tag-count {
+    float: right;
+    width: 2em;
+  }
+  
+}
+
+.btn-table {
+  cursor: pointer;
+  display: inline-block;
+  padding: .3em .5em;
 }
