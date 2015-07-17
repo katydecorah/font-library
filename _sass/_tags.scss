@@ -1,0 +1,47 @@
+.family-tag {
+
+  @extend %small;
+
+  @extend %lighten;
+
+  @extend %upper;
+
+  @extend %tight;
+
+  @extend %round;
+
+  @extend %fade;
+
+  background: transparent;
+  border: 1px solid;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: .25em;
+  padding: .2em .5em;
+
+  .sidebar & {
+    margin-bottom: .25em;
+  }
+
+  &.active,
+  &:hover {
+
+    @extend %flat-bg;
+
+    @extend %fade;
+
+    border-color: $selected-tag;
+    color: $selected-tag;
+
+  }
+
+  &.active {
+    cursor: default;
+  }
+
+}
+
+
+.tag-count {
+  color: lighten($text-color, 50%);
+}

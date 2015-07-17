@@ -1,0 +1,182 @@
+.btn {
+  
+  @extend %upper;
+  
+  @extend %round;
+  
+  @extend %tight;
+  
+  background: lighten($body-bg, 2%);
+  border: 1px solid $accent;
+  box-shadow: 0 .1em darken($accent, 5%);
+  color: $accent;
+  cursor: pointer;
+  display: inline-block;
+  padding: .25em 1em;
+  transition: background $transition;
+  
+  &.small {
+    padding: .2em .5em;
+  }
+  
+  &.quiet {
+    border: 1px solid;
+    box-shadow: none;
+    color: rgba($accent, .25);
+  }
+  
+  &:hover {
+    
+    @extend %flat-bg;
+    
+    color: lighten($accent, 10%);
+    transition: background $transition;
+  }
+  
+  &:active {
+    box-shadow: none;
+    position: relative;
+    top: .1em;
+  }
+  
+  &[disabled] { display: none; }
+  
+  &.active {
+    background: $accent;
+    color: $white;
+  }
+  
+  input { display: none;}
+
+}
+
+.btn-small {
+  border-radius: .5em;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: .8em;
+  height: 21px;
+  padding-top: 2px;
+  
+  &.active {
+    background: $accent;
+    color: $white;
+  }
+  
+}
+
+.btn-group-inputs {
+  display: block;
+  margin-bottom: 1em;
+  
+  .btn {
+    font-size: .7em;
+  }
+  
+}
+
+
+.btn-group {
+  
+  display: inline-block;
+  
+  .btn {
+    border-radius: 0;
+    box-shadow: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: .7em;
+    height: 21px;
+    padding: 0;
+    position: relative;
+  }
+  
+  .btn:first-of-type {
+    border-radius: .5em 0 0 .5em;
+    border-right: 0;
+  }
+  
+  .btn:last-of-type {
+    border-left: 0;
+    border-radius: 0 .5em .5em 0;
+  }
+  
+  input {
+    display: none;
+  }
+  
+  label {    
+    cursor: pointer;
+    display: inline-block;
+    padding: .35em 1.25em;
+  }
+  
+}
+
+
+.btn-clear {
+  cursor: pointer;
+  font-size: .9em;
+  
+  @include breakpoint(medium-down) {
+    display: block;
+  }
+  
+}
+
+.btn-github {
+  margin: .5em 0;
+  
+  @include breakpoint(medium-up) {
+    margin: 0 0 1em 1em;
+  }
+  
+}
+
+.btn-github-container {
+  
+  @include breakpoint(medium-down) {
+    display: block;
+  }
+  
+}
+
+
+.btn-table {
+  cursor: pointer;
+  display: inline-block;
+  padding: .3em .5em;
+}
+
+
+.btn-settings {
+  
+  @extend %fade;
+  
+  cursor: pointer;
+  display: inline-block;
+  font-size: .8em;
+  margin-left: 2em;
+  position: relative;
+  top: 7px;
+  width: 21px;
+  
+  @include breakpoint(medium-down) {
+    display: none;
+  }
+  
+  path {
+    
+    @extend %fade;
+    
+    fill: $text-color;
+  }
+  
+  &:hover path,
+  &.active path {
+    
+    @extend %fade;
+    
+    fill: $accent;
+  }
+}
