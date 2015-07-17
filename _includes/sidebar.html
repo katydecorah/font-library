@@ -1,0 +1,22 @@
+<!-- tag index -->
+<div class="tags">
+  Sort by fonts that <label class="family-tag" ng-class="{active:tagCount === 0 }"><input ng-model="tagCount" type="checkbox" ng-true-value="0" ng-false-value="undefined" class="hide" ng-change="resetPagination(); removeTag()">Need tags</label>		
+  <hr>
+  <div class="btn-group-inputs">
+    <div class="btn-group">
+      <div class="btn" ng-class="{'active':sorter == 'tag'|| sorter == '-tag'} ">
+        <label ng-hide="sorter == 'tag'"><input type="radio" name="sorter" ng-model="sorter" value="tag">A-Z <span ng-hide="sorter == 'value' || sorter == '-value'">↑</span></label>
+        <label ng-hide="sorter == '-tag' || sorter == 'value' || sorter == '-value' "><input type="radio" name="sorter" ng-model="sorter" value="-tag">A-Z ↓</label>
+      </div><div class="btn" ng-class="{'active':sorter == 'value' || sorter == '-value'}">
+        <label ng-hide="sorter == 'value'"><input type="radio" name="sorter" ng-model="sorter" value="value">0-9 <span ng-hide="sorter == 'tag' || sorter == '-tag'">↑</span></label>
+        <label ng-hide="sorter == '-value' || sorter == 'tag' || sorter == '-tag'"><input type="radio" name="sorter" ng-model="sorter" value="-value">0-9 ↓</label>
+      </div>
+    </div>
+    <label class="btn" ng-class="{'active':toTable == true}"><input type="checkbox" name="table" ng-model="toTable">Table</label>
+  </div>
+  <div id="tags" ng-class="{'show-table':toTable == true} ">
+    <button ng-repeat="tag in tags[0] | orderBy: sorter " class="family-tag" ng-class="{active: tag.tag == selectedTags}" name="tag" ng-model="selectedTags" value="[[tag.tag]]" ng-click="selectTag(tag.tag);">
+      [[tag.tag]] <span class="tag-count">[[tag.value]]</span>
+    </button>
+  </div>
+</div>

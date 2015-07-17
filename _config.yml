@@ -10,9 +10,7 @@ angular: 1.4.2
 modernizr: 2.8.3
 jquery: 2.1.4
 underscore: 1.8.3
-tinysort: 2.2.2
-  
-  
+
 port: 4000
 host: 127.0.0.1
 
@@ -22,6 +20,8 @@ exclude:
   - ".scss-lint.yml"
   - "Rakefile"
   - ".travis.yml"
+  - "LICENSE"
+  - "README.md"
 
 sass:
   style: :compressed
