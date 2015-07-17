@@ -174,6 +174,17 @@ header {
   
 }
 
+.btn-group-inputs {
+  display: block;
+  margin-bottom: 1em;
+  
+  .btn {
+    font-size: .7em;
+  }
+  
+}
+
+
 .btn-group {
   
   display: inline-block;
@@ -183,7 +194,9 @@ header {
     box-shadow: none;
     cursor: pointer;
     display: inline-block;
+    font-size: .7em;
     height: 21px;
+    padding: 0;
     position: relative;
   }
   
@@ -201,27 +214,15 @@ header {
     display: none;
   }
   
-  label {
-    cursor: pointer;
-  }
-  
-}
-
-.btn-group-inputs {
-  display: block;
-  margin-bottom: 1em;
-  
-  .btn {
-    font-size: .7em;
-    padding: 0;
-  }
-  
-  label {
+  label {    
     cursor: pointer;
     display: inline-block;
     padding: .35em 1.25em;
   }
+  
 }
+
+
 
 select {
   
@@ -245,17 +246,6 @@ select {
   
   @include breakpoint(medium-down) {
     display: block;
-  }
-  
-}
-
-.pagination {
-  margin: 2em 0 4em;
-  text-align: center;
-  
-  .btn {
-    cursor: pointer;
-    font-size: 1.25em;
   }
   
 }

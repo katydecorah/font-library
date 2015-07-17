@@ -12,10 +12,9 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.selectedOrder = 'alpha';
   $scope.dataTemp = [];
   $scope.sorter = 'tag';
+  $scope.familySorter = 'family';
   $scope.url = "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE";
-  
-  var orderBy = $filter('orderBy');
-  
+    
   $scope.$watch(function () { return $location.url(); }, function () {
     
     var path = $location.path().split('/'),
@@ -217,11 +216,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       $scope.resetPagination();
       $location.search('subset', null);
     };
-    
-    $scope.order = function(predicate, reverse) {
-      $scope.data = orderBy($scope.data, predicate, reverse);
-    };
-    $scope.order('-lastModified',false);
     
     $scope.numberOfPages=function(){
       var myFilteredData = $filter('filter')($scope.data,$scope.search,true);

@@ -18,7 +18,7 @@ tag: cursive
 					<label ng-hide="sorter == '-value' || sorter == 'tag' || sorter == '-tag'"><input type="radio" name="sorter" ng-model="sorter" value="-value">0-9 ↓</label>
 				</div>
 			</div>
-			<div class="btn" ng-class="{'active':toTable == true}"><label><input type="checkbox" name="table" ng-model="toTable">Table</label></div>
+			<label class="btn" ng-class="{'active':toTable == true}"><input type="checkbox" name="table" ng-model="toTable">Table</label>
 		</div>
 		<div id="tags" ng-class="{'show-table':toTable == true} ">
 			<button ng-repeat="tag in tags[0] | orderBy: sorter " class="family-tag" ng-class="{active: tag.tag == selectedTags}" name="tag" ng-model="selectedTags" value="[[tag.tag]]" ng-click="selectTag(tag.tag);">
@@ -56,10 +56,15 @@ tag: cursive
 	</div>
 	
 	<!-- advanced search -->
-	<div class="control-container">
-		<!-- order results -->
+	<div class="control-container">		
 		<div class="btn-group">
-			<button ng-class="{'active':selectedOrder === 'recent'}" class="btn" ng-click="selectedOrder = 'recent';order('-lastModified',false)">Recent</button><button data-title="older" ng-class="{'active':selectedOrder === 'older'}" class="btn" ng-click="selectedOrder = 'older';order('lastModified',false)">Older</button><button ng-class="{'active':selectedOrder === 'alpha'}" class="btn" ng-click="selectedOrder = 'alpha';order('family',false)">A-Z</button>
+			<div class="btn" ng-class="{'active':familySorter == 'family'|| familySorter == '-family'} ">
+				<label ng-hide="familySorter == 'family'"><input type="radio" name="familySorter" ng-model="familySorter" value="family">A-Z <span ng-hide="familySorter == 'lastModified' || familySorter == '-lastModified'">↑</span></label>
+				<label ng-hide="familySorter == '-family' || familySorter == 'lastModified' || familySorter == '-lastModified' "><input type="radio" name="familySorter" ng-model="familySorter" value="-family">A-Z ↓</label>
+			</div><div class="btn" ng-class="{'active':familySorter == 'lastModified' || familySorter == '-lastModified'}">
+				<label ng-hide="familySorter == '-lastModified'"><input type="radio" name="familySorter" ng-model="familySorter" value="-lastModified">Date <span ng-hide="familySorter == 'family' || familySorter == '-family'">↑</span></label>
+				<label ng-hide="familySorter == 'lastModified' || familySorter == 'family' || familySorter == '-family'"><input type="radio" name="familySorter" ng-model="familySorter" value="lastModified">Date ↓</label>
+			</div>
 		</div>
 		
 		<div ng-model="settings" ng-class="{active:settings}" ng-click="showDetails =! showDetails; settings =! settings" class="btn-settings">{% include settings.svg %}</div>
@@ -77,7 +82,7 @@ tag: cursive
 	<div class="families" id="families">
 		<!-- individual font -->
 		<div class="family" ng-repeat="font in searchCount=( data |
-		filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory }:true ) | startFrom: starter | limitTo:pageSize">
+		filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory }:true ) | orderBy: familySorter | startFrom: starter | limitTo:pageSize">
 		<!-- links to google font page -->
 		<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link[[ (selectedSubsets.indexOf('hebrew') == 0 || selectedSubsets.indexOf('arabic') == 0) && ' language-rtl' || '' ]]">
 			<!-- builds the inline styles & displays font name -->
