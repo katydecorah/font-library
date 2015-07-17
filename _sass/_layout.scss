@@ -100,13 +100,6 @@ header {
   
 }
 
-.sidebar-group {
-  
-  margin-bottom: 1em;
-  
-}
-
-
 select {
   
   @extend %upper;
@@ -190,13 +183,6 @@ select {
     transform: translateY(.25em);
     transition: $transition;
   }
-}
-
-.number-of-pages {
-  color: $accent;
-  display: inline-block;
-  padding-left: 1em;
-  padding-right: 1em;
 }
 
 .control-container {
