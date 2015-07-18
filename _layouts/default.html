@@ -11,10 +11,24 @@ layout: compress
 	<div class="loader-container" ng-hide="data.length > 0">
 		<div class="loader"></div>
 	</div>
-
+	
 	<div class="container" ng-show="data.length > 0">
 		{{content}}
 	</div>
+	<section class="preview-container">
+		<div class="container preview" style="font-family: '[[preview]]';">
+
+			
+			Previewing: [[preview]] 
+			<style>
+			[[previewStyles]]
+			</style>
+
+			{% include lorem.html %}
+			
+		
+		</div>
+	</section>
 	{% include footer.html %}
 </body>
 </html>

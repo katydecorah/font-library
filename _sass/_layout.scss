@@ -92,6 +92,22 @@ header {
   
 }
 
+.preview-container {
+  background: #fff;
+  bottom: 0;
+  left: 0;
+  overflow: scroll;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  
+  .container {
+    max-width: 700px;
+    padding: 2em 0;
+    text-transform: none;
+  }
+}
+
 .select-tags {
   
   @include breakpoint(medium-up) {

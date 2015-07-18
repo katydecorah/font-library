@@ -13,6 +13,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.dataTemp = [];
   $scope.sorter = 'tag';
   $scope.familySorter = 'family';
+  $scope.preview = undefined;
   $scope.url = "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE";
     
   $scope.$watch(function () { return $location.url(); }, function () {
@@ -192,6 +193,25 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       $scope.tagCount = undefined;
     };
     
+    $scope.selectPreview = function(i) {
+      $scope.preview = i;
+    };
+    
+    $scope.selectPreviewVariants = function(i) {
+      var styles;
+      if ( i.indexOf('italic') > 0 ){
+        var styles = ".preview em { font-style: italic; }";
+      } else {
+        var styles = ".preview em {font-style: normal; }";
+      }
+      if ( i.indexOf(500) > 0 || i.indexOf(600) > 0 || i.indexOf(700) > 0 || i.indexOf(800) > 0 || i.indexOf(900) > 0 ){
+        styles += ".preview strong { font-weight: bold; }";
+      } else {
+        styles += ".preview strong {font-weight: normal; }";
+      }
+      $scope.previewStyles = styles;
+    };
+    
     $scope.removeTag = function() {
       $scope.selectedTags = undefined;
       $scope.resetPagination();
@@ -250,6 +270,69 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       .flatten()
       .countBy()
       .value();
+    };
+    
+    $scope.fontCall = function(i) {
+      //get font name
+      var font = i.family.replace(' ','+');
+      // if no regular variant
+      if (i.variants.indexOf('regular') < 0 && i.variants.indexOf('italic') >= 0) {
+        font += ':' + i.variants[0];
+      }
+      // get selected variant
+      if ($scope.selectedVariants != undefined) {
+        font += ':' + $scope.selectedVariants;
+      }
+      // if no regular or italic?
+      if (i.variants.indexOf('regular') < 0 && i.variants.indexOf('italic') < 0 ) {
+        font += ':'+i.variants[0];
+      }
+      
+      // text
+      if (i.subsets.indexOf('latin') >=0) {
+        font +='&text=' + i.family.replace(' ','+')
+      }
+      
+      // arabic
+      if ($scope.selectedSubsets == 'arabic') {
+        font += 'مرحبا بالعالم';
+      }
+  
+      // cyrillic
+      if ($scope.selectedSubsets == 'cyrillic' || $scope.selectedSubsets == 'cyrillic-ext') {
+        font += 'привет мир';
+      }
+      
+      // devanagari
+      if ($scope.selectedSubsets == 'devanagari') {
+        font += 'हैलो वर्';
+      }
+      // greek
+      if ( (i.subsets.indexOf('latin') < 0 && i.subsets.indexOf('greek') >= 0) ||  $scope.selectedSubsets == 'greek' || $scope.selectedSubsets == 'greek-ext' ) {
+        font += 'γειά σου Κόσμε्';
+      }
+      
+      // hebrew
+      if ($scope.selectedSubsets == 'hebrew') {
+        font += 'שלום עולם';
+      }
+      
+      // telugu
+      if ($scope.selectedSubsets == 'telugu') {
+        font += 'హలో వరల్డ్';
+      }
+      
+      // vietnamese
+      if ($scope.selectedSubsets == 'vietnamese') {
+        font += 'xin chào';
+      }
+      
+      // set the subset
+      if ( $scope.selectedSubsets != undefined ){
+        font += '&subset=' + $scope.selectedSubsets;
+      }
+      
+      return font;
     };
     
     

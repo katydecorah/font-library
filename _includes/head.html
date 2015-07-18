@@ -1,7 +1,8 @@
 <head ng-cloak>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title ng-bind-template="[[selectedTags && selectedTags + ' | ' || '']] {{site.name}} | {{site.description}}">{{site.name}} | {{site.description}}</title>
+<title ng-bind-template="[[selectedTags && selectedTags + ' | ' || '']]
+ {{site.name}} | {{site.description}}">{{site.name}} | {{site.description}}</title>
 <meta name="description" content="{{site.description}}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="twitter:card" content="summary">
@@ -13,7 +14,7 @@
 <link rel="stylesheet" href="{{site.baseurl}}/css/style.css">
 <link href='http://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
 <!-- gets google font-->
-<link ng-href="http://fonts.googleapis.com/css?family=[[font.family.replace(' ','+')]][[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') >= 0 && ':' + font.variants[0] || '' ]][[selectedVariants != undefined && ':' + selectedVariants || '' ]][[ font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') < 0 && ':'+font.variants[0] || '' ]][[ font.subsets.indexOf('latin') >=0 && '&text=' + font.family.replace(' ','+') || '']][[ selectedSubsets == 'arabic' && 'مرحبا بالعالم' || '' ]][[ ( selectedSubsets == 'cyrillic' || selectedSubsets == 'cyrillic-ext')  && 'привет мир' || '' ]][[ selectedSubsets == 'devanagari' && 'हैलो वर्' || '' ]][[ (( font.subsets.indexOf('latin') < 0 && font.subsets.indexOf('greek') >= 0 ) ||  selectedSubsets.indexOf('greek') >= 0)  && 'γειά σου Κόσμε' || '' ]][[ selectedSubsets == 'hebrew' && 'שלום עולם' || '']][[ selectedSubsets == 'telugu' && 'హలో వరల్డ్' || '' ]][[ selectedSubsets == 'vietnamese' &&  'xin chào' || '']][[ selectedSubsets != undefined && '&subset=' + selectedSubsets || '' ]]" [[ rel="stylesheet" ng-repeat="font in searchCount=( data |
+<link ng-href="http://fonts.googleapis.com/css?family=[[fontCall(font)]]" rel="stylesheet" ng-repeat="font in searchCount=( data |
 filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory }:true ) | orderBy: familySorter | startFrom: starter | limitTo:pageSize">
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/{{site.angular}}/angular.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/{{site.modernizr}}/modernizr.min.js"></script>
