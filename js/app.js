@@ -336,6 +336,138 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     };
     
     
+    // build out the style attr for the font based on the search parameters and what the font supports
+    $scope.familyStyle = function(font) {
+      
+      
+      var style = 'font-family: ' + font.family + ';';
+      
+      if ( font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') >= 0 ) {
+        style += 'font-style: italic;';
+      }
+      
+      if ( font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') < 0 ) {
+        style += 'font-weight: '+font.variants[0] +';';
+      }
+      
+      // when users filters by variant
+      if ($scope.selectedVariants != undefined) {
+        if ($scope.selectedVariants.match('italic') == 'italic') {
+          style += 'font-style: italic;';
+        }
+        if ( $scope.selectedVariants.match('italic') == 'italic' && $scope.selectedVariants > 0 ) {
+          style += 'font-weight: ' + $scope.selectedVariants +';';
+        }
+      }
+      
+      return style
+    };
+    
+    $scope.languageSample = function(font) {
+      
+      var sample;
+      
+      // khmer
+      if ( font.subsets.indexOf('latin') < 0 && font.subsets.indexOf('khmer') >= 0 ) {
+        var sample = 'ជំរាបសួរពិភពលោក';
+      }
+      //arabic 
+      if ($scope.selectedSubsets == 'arabic') {
+        var sample = 'مرحبا بالعالم';
+      }
+      //cyrillic (russian)
+      if ( $scope.selectedSubsets == 'cyrillic' || $scope.selectedSubsets == 'cyrillic-ext' ) {
+        var sample = 'привет мир';  
+      }
+      // devanagari (hindi)
+      if ($scope.selectedSubsets == 'devanagari') {
+        var sample = 'हैलो वर्ल्ड';
+      } 
+      // greek
+      if ((font.subsets.indexOf('latin') < 0 && font.subsets.indexOf('greek') >= 0) || ( $scope.selectedSubsets == 'greek' || $scope.selectedSubsets == 'greek-ext' )) {
+        var sample = 'γειά σου Κόσμε';
+      }
+      // hebrew
+      if ($scope.selectedSubsets == 'hebrew') {
+        var sample = 'שלום עולם';
+      }
+      // telugu
+      if ($scope.selectedSubsets == 'telugu') {
+        var sample = 'హలో వరల్డ్';
+      }
+      // vietnamese
+      if ($scope.selectedSubsets == 'vietnamese') {
+        var sample = 'xin chào';
+      }
+      
+      return sample
+    }
+    
+    // build the api call to retrieve the font
+    $scope.fontCall = function(i) {
+      //get font name
+      var font = i.family.replace(' ','+');
+      // if no regular variant
+      if (i.variants.indexOf('regular') < 0 && i.variants.indexOf('italic') >= 0) {
+        font += ':' + i.variants[0];
+      }
+      // get selected variant
+      if ($scope.selectedVariants != undefined) {
+        font += ':' + $scope.selectedVariants;
+      }
+      // if no regular or italic?
+      if (i.variants.indexOf('regular') < 0 && i.variants.indexOf('italic') < 0 ) {
+        font += ':'+i.variants[0];
+      }
+      
+      // text
+      if (i.subsets.indexOf('latin') >=0) {
+        font +='&text=' + i.family.replace(' ','+')
+      }
+      
+      // arabic
+      if ($scope.selectedSubsets == 'arabic') {
+        font += 'مرحبا بالعالم';
+      }
+  
+      // cyrillic
+      if ($scope.selectedSubsets == 'cyrillic' || $scope.selectedSubsets == 'cyrillic-ext') {
+        font += 'привет мир';
+      }
+      
+      // devanagari
+      if ($scope.selectedSubsets == 'devanagari') {
+        font += 'हैलो वर्';
+      }
+      // greek
+      if ( (i.subsets.indexOf('latin') < 0 && i.subsets.indexOf('greek') >= 0) ||  $scope.selectedSubsets == 'greek' || $scope.selectedSubsets == 'greek-ext' ) {
+        font += 'γειά σου Κόσμε्';
+      }
+      
+      // hebrew
+      if ($scope.selectedSubsets == 'hebrew') {
+        font += 'שלום עולם';
+      }
+      
+      // telugu
+      if ($scope.selectedSubsets == 'telugu') {
+        font += 'హలో వరల్డ్';
+      }
+      
+      // vietnamese
+      if ($scope.selectedSubsets == 'vietnamese') {
+        font += 'xin chào';
+      }
+      
+      // set the subset
+      if ( $scope.selectedSubsets != undefined ){
+        font += '&subset=' + $scope.selectedSubsets;
+      }
+      
+      return font;
+    };
+    
+    
     
     $scope.clearFilters = function(){
       $scope.selectedTags =  undefined;
