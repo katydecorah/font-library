@@ -15,6 +15,16 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.familySorter = 'family';
   $scope.preview = undefined;
   $scope.url = "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE";
+  
+  // simple phrases in variant
+  $scope.khmer =  'ជំរាបសួរពិភពលោក';
+  $scope.arabic =  'مرحبا بالعالم';
+  $scope.cyrillic = 'привет мир';  
+  $scope.devanagari = 'हैलो वर्ल्ड';
+  $scope.greek = 'γειά σου Κόσμε';
+  $scope.hebrew = 'שלום עולם';
+  $scope.telugu = 'హలో వరల్డ్';
+  $scope.vietnamese = 'xin chào';
     
   $scope.$watch(function () { return $location.url(); }, function () {
     
@@ -339,7 +349,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     // build out the style attr for the font based on the search parameters and what the font supports
     $scope.familyStyle = function(font) {
       
-      
       var style = 'font-family: ' + font.family + ';';
       
       if ( font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') >= 0 ) {
@@ -363,41 +372,42 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       return style
     };
     
+    // provide sample in language if subset is filtered or the font doesn't have a latin subset
     $scope.languageSample = function(font) {
       
       var sample;
       
       // khmer
       if ( font.subsets.indexOf('latin') < 0 && font.subsets.indexOf('khmer') >= 0 ) {
-        var sample = 'ជំរាបសួរពិភពលោក';
+        var sample = $scope.khmer;
       }
       //arabic 
       if ($scope.selectedSubsets == 'arabic') {
-        var sample = 'مرحبا بالعالم';
+        var sample = $scope.arabic;
       }
       //cyrillic (russian)
       if ( $scope.selectedSubsets == 'cyrillic' || $scope.selectedSubsets == 'cyrillic-ext' ) {
-        var sample = 'привет мир';  
+        var sample = $scope.cyrillic;
       }
       // devanagari (hindi)
       if ($scope.selectedSubsets == 'devanagari') {
-        var sample = 'हैलो वर्ल्ड';
+        var sample = $scope.devanagari;
       } 
       // greek
       if ((font.subsets.indexOf('latin') < 0 && font.subsets.indexOf('greek') >= 0) || ( $scope.selectedSubsets == 'greek' || $scope.selectedSubsets == 'greek-ext' )) {
-        var sample = 'γειά σου Κόσμε';
+        var sample = $scope.greek;
       }
       // hebrew
       if ($scope.selectedSubsets == 'hebrew') {
-        var sample = 'שלום עולם';
+        var sample = $scope.hebrew;
       }
       // telugu
       if ($scope.selectedSubsets == 'telugu') {
-        var sample = 'హలో వరల్డ్';
+        var sample = $scope.telugu;
       }
       // vietnamese
       if ($scope.selectedSubsets == 'vietnamese') {
-        var sample = 'xin chào';
+        var sample = $scope.vietnamese;
       }
       
       return sample
@@ -427,36 +437,36 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       
       // arabic
       if ($scope.selectedSubsets == 'arabic') {
-        font += 'مرحبا بالعالم';
+        font += $scope.arabic;
       }
   
       // cyrillic
       if ($scope.selectedSubsets == 'cyrillic' || $scope.selectedSubsets == 'cyrillic-ext') {
-        font += 'привет мир';
+        font += $scope.cyrillic;
       }
       
       // devanagari
       if ($scope.selectedSubsets == 'devanagari') {
-        font += 'हैलो वर्';
+        font += $scope.devanagari;
       }
       // greek
       if ( (i.subsets.indexOf('latin') < 0 && i.subsets.indexOf('greek') >= 0) ||  $scope.selectedSubsets == 'greek' || $scope.selectedSubsets == 'greek-ext' ) {
-        font += 'γειά σου Κόσμε्';
+        font += $scope.greek;
       }
       
       // hebrew
       if ($scope.selectedSubsets == 'hebrew') {
-        font += 'שלום עולם';
+        font += $scope.hebrew;
       }
       
       // telugu
       if ($scope.selectedSubsets == 'telugu') {
-        font += 'హలో వరల్డ్';
+        font += $scope.telugu;
       }
       
       // vietnamese
       if ($scope.selectedSubsets == 'vietnamese') {
-        font += 'xin chào';
+        font += $scope.vietnamese;
       }
       
       // set the subset
