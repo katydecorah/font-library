@@ -52,4 +52,13 @@
   
   h4 {font-size: 1.25em;}
   
+  a {
+    color: $accent;
+        
+    &:hover {
+      color: lighten($accent, 10%);
+    }
+    
+  }
+  
 }

@@ -51,7 +51,7 @@ layout: default
 <section class="preview-container" ng-class="{active: preview}">
 	<div class="container preview" style="font-family: '[[preview]]';">		
 		<button class="btn float-right" ng-click="selectPreview(undefined)">&times; close</button>
-		<p>Previewing: [[preview]]</p>
+		<p>Previewing: <a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[preview.replace(' ','+')]]">[[preview]]</a></p>
 		{% include lorem.html %}
 	</div>
 </section>
