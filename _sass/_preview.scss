@@ -13,8 +13,8 @@
   }
 }
 
-.preview-container {
-  
+// scss-lint:disable PropertySortOrder
+.preview-container {  
   background: $white;
   bottom: 0;
   line-height: 1.5;
@@ -23,7 +23,10 @@
   position: fixed;
   right: 0;
   top: 35px;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
   transform: translateX(100%);
+  -webkit-transition: .25s;
   transition: .25s;
   width: 70%;
   
@@ -32,7 +35,10 @@
   }
   
   &.active {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
     transform: translateX(0);
+    -webkit-transition: .5s;
     transition: .5s;
   }
   
