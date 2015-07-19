@@ -188,6 +188,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
         $location.path("");
       }
       $scope.pageSize = 20;
+      $scope.preview = undefined;
       window.scrollTo(0, 0);
     };
     
@@ -201,6 +202,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       $location.path("/"+$scope.selectedTags.split(' ').join('+') +"/");
       $scope.sendAnalytics();
       $scope.tagCount = undefined;
+      $scope.preview = undefined;
     };
     
     $scope.selectPreview = function(i) {
