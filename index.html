@@ -49,20 +49,10 @@ layout: default
 </div>
 
 <section class="preview-container" ng-class="{active: preview}">
-	<div class="container preview" style="font-family: '[[preview]]';">
-		
+	<div class="container preview" style="font-family: '[[preview]]';">		
 		<button class="btn float-right" ng-click="selectPreview(undefined)">&times; close</button>
-
-		
-		Previewing: [[preview]]
-					
-		<style>
-		[[previewStyles]]
-		</style>
-
+		<p>Previewing: [[preview]]</p>
 		{% include lorem.html %}
-		
-	
 	</div>
 </section>
 </main>
