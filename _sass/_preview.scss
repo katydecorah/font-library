@@ -15,7 +15,7 @@
 
 // scss-lint:disable PropertySortOrder
 .preview-container {  
-  background: $white;
+  background: mix($body-bg, $white);
   bottom: 0;
   line-height: 1.5;
   overflow: scroll;
