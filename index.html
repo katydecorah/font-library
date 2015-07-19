@@ -9,7 +9,7 @@ layout: default
 <main class="content">
 	{% include filters.html %}
 	{% include search-status.html %}
-	
+		
 	<div class="families" id="families">
 		<!-- individual font -->
 		<div class="family" ng-repeat="font in searchCount=( data |
@@ -37,6 +37,8 @@ layout: default
 				<span class="meta" data-title="[[font.subsets.join(', ')]]">[[font.subsets.length == 1 && font.subsets.length + " subset" || font.subsets.length + " subsets"]]</span>
 			</div>
 			<div class="float-right">
+				<!-- preview link -->
+				<button class="meta btn small quiet" ng-model="preview" ng-click="selectPreview(font.family);selectPreviewVariants(font.variants)">Preview</button>
 				<!-- link to the font's spec -->
 				<a ng-href="https://www.google.com/fonts/specimen/[[font.family.replace(' ','+')]]" class="meta btn small quiet" target="_blank">Specimen</a>
 				<!-- link to line number -->
@@ -45,4 +47,12 @@ layout: default
 		</div>
 	</div>
 </div>
+
+<section class="preview-container" ng-class="{active: preview}">
+	<div class="container preview" style="font-family: '[[preview]]';">		
+		<button class="btn float-right" ng-click="selectPreview(undefined)">&times; close</button>
+		<p>Previewing: [[preview]]</p>
+		{% include lorem.html %}
+	</div>
+</section>
 </main>

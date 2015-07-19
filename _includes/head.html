@@ -16,6 +16,9 @@
 <!-- gets google font-->
 <link ng-href="http://fonts.googleapis.com/css?family=[[fontCall(font)]]" rel="stylesheet" ng-repeat="font in searchCount=( data |
 filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory }:true ) | orderBy: familySorter | startFrom: starter | limitTo:pageSize">
+<style>
+[[previewStyles]]
+</style>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/{{site.angular}}/angular.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/{{site.modernizr}}/modernizr.min.js"></script>
 </head>

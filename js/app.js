@@ -13,6 +13,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.dataTemp = [];
   $scope.sorter = 'tag';
   $scope.familySorter = 'family';
+  $scope.preview = undefined;
   $scope.url = "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE";
   
   // simple phrases in variant
@@ -24,7 +25,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.hebrew = 'שלום עולם';
   $scope.telugu = 'హలో వరల్డ్';
   $scope.vietnamese = 'xin chào';
-    
+  
   $scope.$watch(function () { return $location.url(); }, function () {
     
     var path = $location.path().split('/'),
@@ -187,6 +188,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
         $location.path("");
       }
       $scope.pageSize = 20;
+      $scope.preview = undefined;
       window.scrollTo(0, 0);
     };
     
@@ -200,6 +202,26 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       $location.path("/"+$scope.selectedTags.split(' ').join('+') +"/");
       $scope.sendAnalytics();
       $scope.tagCount = undefined;
+      $scope.preview = undefined;
+    };
+    
+    $scope.selectPreview = function(i) {
+      $scope.preview = i;
+    };
+    
+    $scope.selectPreviewVariants = function(i) {
+      var styles;
+      if ( i.indexOf('italic') > 0 ){
+        var styles = ".preview em { font-style: italic; }";
+      } else {
+        var styles = ".preview em {font-style: normal; }";
+      }
+      if ( i.indexOf('500') > 0 || i.indexOf('600') > 0 || i.indexOf('700') > 0 || i.indexOf('800') > 0 || i.indexOf('900') > 0 ){
+        styles += ".preview strong { font-weight: bold; }";
+      } else {
+        styles += ".preview strong {font-weight: normal; }";
+      }
+      $scope.previewStyles = styles;
     };
     
     $scope.removeTag = function() {
@@ -332,6 +354,8 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     
     // build the api call to retrieve the font
     $scope.fontCall = function(i) {
+      
+      
       //get font name
       var font = i.family.replace(' ','+');
       // if no regular variant
@@ -347,48 +371,57 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
         font += ':'+i.variants[0];
       }
       
-      // text
-      if (i.subsets.indexOf('latin') >=0) {
-        font +='&text=' + i.family.replace(' ','+')
-      }
       
-      // arabic
-      if ($scope.selectedSubsets == 'arabic') {
-        font += $scope.arabic;
+      // if font is being previewed, get the full char font
+      if ( $scope.preview == i.family ) {
+        // get all variants
+        font += ':'+i.variants;
       }
-  
-      // cyrillic
-      if ($scope.selectedSubsets == 'cyrillic' || $scope.selectedSubsets == 'cyrillic-ext') {
-        font += $scope.cyrillic;
-      }
-      
-      // devanagari
-      if ($scope.selectedSubsets == 'devanagari') {
-        font += $scope.devanagari;
-      }
-      // greek
-      if ( (i.subsets.indexOf('latin') < 0 && i.subsets.indexOf('greek') >= 0) ||  $scope.selectedSubsets == 'greek' || $scope.selectedSubsets == 'greek-ext' ) {
-        font += $scope.greek;
-      }
-      
-      // hebrew
-      if ($scope.selectedSubsets == 'hebrew') {
-        font += $scope.hebrew;
-      }
-      
-      // telugu
-      if ($scope.selectedSubsets == 'telugu') {
-        font += $scope.telugu;
-      }
-      
-      // vietnamese
-      if ($scope.selectedSubsets == 'vietnamese') {
-        font += $scope.vietnamese;
-      }
-      
-      // set the subset
-      if ( $scope.selectedSubsets != undefined ){
-        font += '&subset=' + $scope.selectedSubsets;
+      // otherwise get this text for the font
+      else {
+        
+        if (i.subsets.indexOf('latin') >=0) {
+          font +='&text=' + i.family.replace(' ','+')
+        }
+        
+        // arabic
+        if ($scope.selectedSubsets == 'arabic') {
+          font += $scope.arabic;
+        }
+        
+        // cyrillic
+        if ($scope.selectedSubsets == 'cyrillic' || $scope.selectedSubsets == 'cyrillic-ext') {
+          font += $scope.cyrillic;
+        }
+        
+        // devanagari
+        if ($scope.selectedSubsets == 'devanagari') {
+          font += $scope.devanagari;
+        }
+        // greek
+        if ( (i.subsets.indexOf('latin') < 0 && i.subsets.indexOf('greek') >= 0) ||  $scope.selectedSubsets == 'greek' || $scope.selectedSubsets == 'greek-ext' ) {
+          font += $scope.greek;
+        }
+        
+        // hebrew
+        if ($scope.selectedSubsets == 'hebrew') {
+          font += $scope.hebrew;
+        }
+        
+        // telugu
+        if ($scope.selectedSubsets == 'telugu') {
+          font += $scope.telugu;
+        }
+        
+        // vietnamese
+        if ($scope.selectedSubsets == 'vietnamese') {
+          font += $scope.vietnamese;
+        }
+        
+        // set the subset
+        if ( $scope.selectedSubsets != undefined ){
+          font += '&subset=' + $scope.selectedSubsets;
+        }
       }
       
       return font;

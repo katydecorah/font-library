@@ -1,0 +1,55 @@
+.noscroll { overflow: hidden; }
+
+
+.preview-container {
+  
+  background: $white;
+  bottom: 0;
+  line-height: 1.5;
+  overflow: scroll;
+  padding: 1em;
+  position: fixed;
+  right: 0;
+  top: 35px;
+  transform: translateX(100%);
+  transition: .25s;
+  width: 70%;
+  
+  @include breakpoint(medium) {
+    display: none;
+  }
+  
+  &.active {
+    transform: translateX(0);
+    transition: .5s;
+  }
+  
+  .container {
+    max-width: 700px;
+    padding: 2em 0;
+    text-transform: none;
+  }
+
+  p { margin-bottom: 1.3em; }
+  
+  h1, 
+  h2, 
+  h3, 
+  h4 {
+    font-weight: inherit;
+    line-height: 1.2;
+    margin: 1.414em 0 .5em;
+  }
+  
+  h1 {
+    font-size: 2.441em;
+    margin-top: 0;
+  }
+  
+  h2 {font-size: 1.953em;}
+  
+  h3 {font-size: 1.563em;}
+  
+  h4 {font-size: 1.25em;}
+  
+}
