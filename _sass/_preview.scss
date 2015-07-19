@@ -7,12 +7,17 @@
   bottom: 0;
   line-height: 1.5;
   overflow: scroll;
+  padding: 1em;
   position: fixed;
   right: 0;
   top: 35px;
   transform: translateX(100%);
   transition: .25s;
   width: 70%;
+  
+  @include breakpoint(medium) {
+    display: none;
+  }
   
   &.active {
     transform: translateX(0);
