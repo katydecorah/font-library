@@ -1,5 +1,17 @@
 .noscroll { overflow: hidden; }
 
+.btn-close {
+  color: $accent;
+  cursor: pointer;
+  font-size: 5em;
+  position: fixed;
+  right: 1em;
+  top: 0;
+  
+  &:hover {
+    color: lighten($accent, 10%);
+  }
+}
 
 .preview-container {
   
