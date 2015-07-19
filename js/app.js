@@ -25,7 +25,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.hebrew = 'שלום עולם';
   $scope.telugu = 'హలో వరల్డ్';
   $scope.vietnamese = 'xin chào';
-    
+  
   $scope.$watch(function () { return $location.url(); }, function () {
     
     var path = $location.path().split('/'),
@@ -214,7 +214,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       } else {
         var styles = ".preview em {font-style: normal; }";
       }
-      if ( i.indexOf(500) > 0 || i.indexOf(600) > 0 || i.indexOf(700) > 0 || i.indexOf(800) > 0 || i.indexOf(900) > 0 ){
+      if ( i.indexOf('500') > 0 || i.indexOf('600') > 0 || i.indexOf('700') > 0 || i.indexOf('800') > 0 || i.indexOf('900') > 0 ){
         styles += ".preview strong { font-weight: bold; }";
       } else {
         styles += ".preview strong {font-weight: normal; }";
@@ -280,69 +280,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       .flatten()
       .countBy()
       .value();
-    };
-    
-    $scope.fontCall = function(i) {
-      //get font name
-      var font = i.family.replace(' ','+');
-      // if no regular variant
-      if (i.variants.indexOf('regular') < 0 && i.variants.indexOf('italic') >= 0) {
-        font += ':' + i.variants[0];
-      }
-      // get selected variant
-      if ($scope.selectedVariants != undefined) {
-        font += ':' + $scope.selectedVariants;
-      }
-      // if no regular or italic?
-      if (i.variants.indexOf('regular') < 0 && i.variants.indexOf('italic') < 0 ) {
-        font += ':'+i.variants[0];
-      }
-      
-      // text
-      if (i.subsets.indexOf('latin') >=0) {
-        font +='&text=' + i.family.replace(' ','+')
-      }
-      
-      // arabic
-      if ($scope.selectedSubsets == 'arabic') {
-        font += 'مرحبا بالعالم';
-      }
-  
-      // cyrillic
-      if ($scope.selectedSubsets == 'cyrillic' || $scope.selectedSubsets == 'cyrillic-ext') {
-        font += 'привет мир';
-      }
-      
-      // devanagari
-      if ($scope.selectedSubsets == 'devanagari') {
-        font += 'हैलो वर्';
-      }
-      // greek
-      if ( (i.subsets.indexOf('latin') < 0 && i.subsets.indexOf('greek') >= 0) ||  $scope.selectedSubsets == 'greek' || $scope.selectedSubsets == 'greek-ext' ) {
-        font += 'γειά σου Κόσμε्';
-      }
-      
-      // hebrew
-      if ($scope.selectedSubsets == 'hebrew') {
-        font += 'שלום עולם';
-      }
-      
-      // telugu
-      if ($scope.selectedSubsets == 'telugu') {
-        font += 'హలో వరల్డ్';
-      }
-      
-      // vietnamese
-      if ($scope.selectedSubsets == 'vietnamese') {
-        font += 'xin chào';
-      }
-      
-      // set the subset
-      if ( $scope.selectedSubsets != undefined ){
-        font += '&subset=' + $scope.selectedSubsets;
-      }
-      
-      return font;
     };
     
     
@@ -415,6 +352,8 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     
     // build the api call to retrieve the font
     $scope.fontCall = function(i) {
+      
+      
       //get font name
       var font = i.family.replace(' ','+');
       // if no regular variant
@@ -430,48 +369,57 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
         font += ':'+i.variants[0];
       }
       
-      // text
-      if (i.subsets.indexOf('latin') >=0) {
-        font +='&text=' + i.family.replace(' ','+')
-      }
       
-      // arabic
-      if ($scope.selectedSubsets == 'arabic') {
-        font += $scope.arabic;
+      // if font is being previewed, get the full char font
+      if ( $scope.preview == i.family ) {
+        // get all variants
+        font += ':'+i.variants;
       }
-  
-      // cyrillic
-      if ($scope.selectedSubsets == 'cyrillic' || $scope.selectedSubsets == 'cyrillic-ext') {
-        font += $scope.cyrillic;
-      }
-      
-      // devanagari
-      if ($scope.selectedSubsets == 'devanagari') {
-        font += $scope.devanagari;
-      }
-      // greek
-      if ( (i.subsets.indexOf('latin') < 0 && i.subsets.indexOf('greek') >= 0) ||  $scope.selectedSubsets == 'greek' || $scope.selectedSubsets == 'greek-ext' ) {
-        font += $scope.greek;
-      }
-      
-      // hebrew
-      if ($scope.selectedSubsets == 'hebrew') {
-        font += $scope.hebrew;
-      }
-      
-      // telugu
-      if ($scope.selectedSubsets == 'telugu') {
-        font += $scope.telugu;
-      }
-      
-      // vietnamese
-      if ($scope.selectedSubsets == 'vietnamese') {
-        font += $scope.vietnamese;
-      }
-      
-      // set the subset
-      if ( $scope.selectedSubsets != undefined ){
-        font += '&subset=' + $scope.selectedSubsets;
+      // otherwise get this text for the font
+      else {
+        
+        if (i.subsets.indexOf('latin') >=0) {
+          font +='&text=' + i.family.replace(' ','+')
+        }
+        
+        // arabic
+        if ($scope.selectedSubsets == 'arabic') {
+          font += $scope.arabic;
+        }
+        
+        // cyrillic
+        if ($scope.selectedSubsets == 'cyrillic' || $scope.selectedSubsets == 'cyrillic-ext') {
+          font += $scope.cyrillic;
+        }
+        
+        // devanagari
+        if ($scope.selectedSubsets == 'devanagari') {
+          font += $scope.devanagari;
+        }
+        // greek
+        if ( (i.subsets.indexOf('latin') < 0 && i.subsets.indexOf('greek') >= 0) ||  $scope.selectedSubsets == 'greek' || $scope.selectedSubsets == 'greek-ext' ) {
+          font += $scope.greek;
+        }
+        
+        // hebrew
+        if ($scope.selectedSubsets == 'hebrew') {
+          font += $scope.hebrew;
+        }
+        
+        // telugu
+        if ($scope.selectedSubsets == 'telugu') {
+          font += $scope.telugu;
+        }
+        
+        // vietnamese
+        if ($scope.selectedSubsets == 'vietnamese') {
+          font += $scope.vietnamese;
+        }
+        
+        // set the subset
+        if ( $scope.selectedSubsets != undefined ){
+          font += '&subset=' + $scope.selectedSubsets;
+        }
       }
       
       return font;

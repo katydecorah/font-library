@@ -1,5 +1,31 @@
+.noscroll { overflow: hidden; }
+
 .preview-container {
-  display: none;
+  background: $white;
+  bottom: 0;
+  overflow: scroll;
+  position: fixed;
+  right: 0;
+  top: 35px;
+  width: 70%;
+  
+  transform: translateX(100%);
+  transition: .25s;
+  
+  .container {
+    max-width: 700px;
+    padding: 2em 0;
+    text-transform: none;
+  }
+  
+  &.active {
+    transform: translateX(0);
+    transition: .5s;
+  }
+}
+
+.preview-container {
+  //display: none;
   p { margin-bottom: 1.3em; }
   
   h1, h2, h3, h4 {
