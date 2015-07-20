@@ -288,7 +288,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     // build out the style attr for the font based on the search parameters and what the font supports
     $scope.familyStyle = function(font) {
       
-      var style = 'font-family: ' + font.family + ';';
+      var style = 'font-family: "' + font.family + '";';
       
       if ( font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') >= 0 ) {
         style += 'font-style: italic;';
