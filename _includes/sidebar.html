@@ -24,7 +24,7 @@
 <div class="by-name">
   <hr>
   Find a font by name 
-  <select ng-model="selectedFamily" ng-change="setSearch('family',selectedFamily);removeTag();removeSubset();removeVariant();removeCategory()">
+  <select ng-model="selectedFamily" ng-change="setSearch('family',selectedFamily);removeTag();removeSubset();removeVariant();removeCategory();tagCount = undefined">
   <option value="" selected disabled>Families</option>
   <option ng-repeat="font in data | orderBy: 'family'">[[font.family]]</option>
 </select>
