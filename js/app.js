@@ -88,6 +88,36 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
         return { tag: key, value: num }
       })];
       
+    // create unique variants array
+    $scope.variants = [ _.map(  
+      _.chain($scope.data)
+      .pluck('variants')
+      .flatten()
+      .countBy()
+      .value() , function (num,key) {
+        return { variant: key }
+      })];
+    
+    // create unique subset array
+    $scope.subsets = [ _.map(  
+      _.chain($scope.data)
+      .pluck('subsets')
+      .flatten()
+      .countBy()
+      .value() , function (num,key) {
+        return { subset: key }
+    })];
+    
+    // create unique category array
+    $scope.categories = [ _.map(  
+      _.chain($scope.data)
+      .pluck('category')
+      .flatten()
+      .countBy()
+      .value() , function (num,key) {
+        return { category: key }
+    })];
+      
     }).error(function(){
       // If app can't connect to Google Font API then just use families.json data
       $scope.data = $scope.dataTemp;
@@ -258,32 +288,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       var myFilteredData = $filter('filter')($scope.data,$scope.search,true);
       return Math.ceil(myFilteredData.length);
     };
-    
-    
-    $scope.uniqueVariants = function() {
-      return _.chain($scope.data)
-      .pluck('variants')
-      .flatten()
-      .countBy()
-      .value();
-    };
-    
-    $scope.uniqueSubsets = function() {
-      return _.chain($scope.data)
-      .pluck('subsets')
-      .flatten()
-      .countBy()
-      .value();
-    };
-    
-    $scope.uniqueCategory = function() {
-      return _.chain($scope.data)
-      .pluck('category')
-      .flatten()
-      .countBy()
-      .value();
-    };
-    
     
     // build out the style attr for the font based on the search parameters and what the font supports
     $scope.familyStyle = function(font) {
