@@ -381,41 +381,41 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       else {
         
         if (i.subsets.indexOf('latin') >=0) {
-          font +='&text=' + i.family.replace(' ','+')
+          font +='&text=' + encodeURIComponent(i.family);
         }
         
         // arabic
         if ($scope.selectedSubsets == 'arabic') {
-          font += $scope.arabic;
+          font += encodeURIComponent($scope.arabic);
         }
         
         // cyrillic
         if ($scope.selectedSubsets == 'cyrillic' || $scope.selectedSubsets == 'cyrillic-ext') {
-          font += $scope.cyrillic;
+          font += encodeURIComponent($scope.cyrillic);
         }
         
         // devanagari
         if ($scope.selectedSubsets == 'devanagari') {
-          font += $scope.devanagari;
+          font += encodeURIComponent($scope.devanagari);
         }
         // greek
         if ( (i.subsets.indexOf('latin') < 0 && i.subsets.indexOf('greek') >= 0) ||  $scope.selectedSubsets == 'greek' || $scope.selectedSubsets == 'greek-ext' ) {
-          font += $scope.greek;
+          font += encodeURIComponent($scope.greek);
         }
         
         // hebrew
         if ($scope.selectedSubsets == 'hebrew') {
-          font += $scope.hebrew;
+          font += encodeURIComponent($scope.hebrew);
         }
         
         // telugu
         if ($scope.selectedSubsets == 'telugu') {
-          font += $scope.telugu;
+          font += encodeURIComponent($scope.telugu);
         }
         
         // vietnamese
         if ($scope.selectedSubsets == 'vietnamese') {
-          font += $scope.vietnamese;
+          font += encodeURIComponent($scope.vietnamese);
         }
         
         // set the subset
