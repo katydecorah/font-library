@@ -35,6 +35,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     $scope.selectedCategory = $location.search().category;
     $scope.selectedSubsets = $location.search().subset;
     $scope.selectedVariants = $location.search().variant;
+    $scope.selectedFamily = $location.search().family;
     
     if ($.isNumeric(locationSearch)) {
       // if it's a number
@@ -233,6 +234,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       $scope.sendAnalytics();
       $scope.tagCount = undefined;
       $scope.preview = undefined;
+      $scope.removeFamily();
     };
     
     $scope.selectPreview = function(i) {
@@ -259,6 +261,12 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       $scope.resetPagination();
       $scope.reset();
       $scope.sendAnalytics();
+    };
+    
+    $scope.removeFamily = function() {
+      $scope.selectedFamily = undefined;
+      $scope.resetPagination();
+      $location.search('family', null);
     };
     
     $scope.removeCategory = function() {
@@ -438,6 +446,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       $scope.selectedSubsets = undefined;
       $scope.selectedVariants = undefined;
       $scope.selectedCategory = undefined;
+      $scope.selectedFamily = undefined;
       $scope.currentPage = 1;
       $location.url($location.path());
       $location.path('');
