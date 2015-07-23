@@ -1,3 +1,12 @@
+
+.tag-heading {
+  margin-bottom: 1em;
+}
+
+.tags-container {
+  @extend %clearfix;
+}
+
 .family-tag {
 
   @extend %small;
@@ -47,5 +56,5 @@
 }
 
 .by-name {
-  padding-bottom: 2em;
+  padding-bottom: 5em;
 }

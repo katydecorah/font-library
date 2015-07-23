@@ -36,11 +36,11 @@ small,
 %fade { transition: $transition; }
 
 a {
-  color: $link-color;
+  color: $accent;
   text-decoration: none;
 
   &:hover {
-    color: lighten($link-color, 5%);
+    color: lighten($accent, 10%);
   }
 
 }
