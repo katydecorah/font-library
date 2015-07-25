@@ -2,22 +2,22 @@
   
   <select class="select-tags" ng-model="selectedTags" ng-change="resetPagination();removeFamily()" aria-label="Tag">
     <option value="" selected disabled>tag</option>
-    <option ng-selected="[[ tag.tag == selectedTags ]]" ng-repeat="tag in tags[0]" value="[[tag.tag]]">[[tag.tag]]</option>
+    <option ng-selected="[[ tag.tag == selectedTags ]]" ng-repeat="tag in tags" value="[[tag.tag]]">[[tag.tag]]</option>
   </select>
   
   <select ng-model="selectedCategory" ng-show="categories" ng-change="resetPagination();setSearch('category',selectedCategory);removeFamily()" aria-label="Category">
     <option value="" selected disabled>category</option>
-    <option ng-selected="[[ key.category == selectedCategory ]]" ng-repeat="key in categories[0] | orderBy: 'category' " value="[[key.category]]">[[key.category]]</option>
+    <option ng-selected="[[ key.category == selectedCategory ]]" ng-repeat="key in categories | orderBy: 'category' " value="[[key.category]]">[[key.category]]</option>
   </select>
   
   <select ng-model="selectedSubsets" ng-show="subsets" ng-change="resetPagination();setSearch('subset',selectedSubsets);removeFamily()" aria-label="Subset">
     <option value="" selected disabled>subset</option>
-    <option ng-selected="[[ key.subset == selectedSubsets ]]" ng-repeat="key in subsets[0] | orderBy: 'subset' " value="[[key.subset]]">[[key.subset]]</option>
+    <option ng-selected="[[ key.subset == selectedSubsets ]]" ng-repeat="key in subsets | orderBy: 'subset' " value="[[key.subset]]">[[key.subset]]</option>
   </select>
   
   <select ng-model="selectedVariants" ng-show="variants" ng-change="resetPagination();setSearch('variant',selectedVariants);removeFamily()" aria-label="Variant">
     <option value="" selected disabled>variant</option>
-    <option ng-selected="[[ key.variant == selectedVariants ]]" ng-repeat="key in variants[0] | orderBy: 'variant' " value="[[key.variant]]">[[key.variant]]</option>
+    <option ng-selected="[[ key.variant == selectedVariants ]]" ng-repeat="key in variants | orderBy: 'variant' " value="[[key.variant]]">[[key.variant]]</option>
   </select>
   
   <button ng-click="clearFilters();" class="btn btn-clear" ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets">Clear</button>

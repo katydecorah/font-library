@@ -80,44 +80,44 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     $scope.data = merge($scope.dataTemp,$scope.api);
     
     // create unique tag array
-    $scope.tags = [ _.map(  
+    $scope.tags = _.map(  
       _.chain($scope.data)
       .pluck('tags')
       .flatten()
       .countBy()
       .value() , function (num,key) {
         return { tag: key, value: num }
-      })];
+      });
       
     // create unique variants array
-    $scope.variants = [ _.map(  
+    $scope.variants = _.map(  
       _.chain($scope.data)
       .pluck('variants')
       .flatten()
       .countBy()
       .value() , function (num,key) {
         return { variant: key }
-      })];
+      });
     
     // create unique subset array
-    $scope.subsets = [ _.map(  
+    $scope.subsets = _.map(  
       _.chain($scope.data)
       .pluck('subsets')
       .flatten()
       .countBy()
       .value() , function (num,key) {
         return { subset: key }
-    })];
+    });
     
     // create unique category array
-    $scope.categories = [ _.map(  
+    $scope.categories = _.map(  
       _.chain($scope.data)
       .pluck('category')
       .flatten()
       .countBy()
       .value() , function (num,key) {
         return { category: key }
-    })];
+    });
       
     }).error(function(){
       // If app can't connect to Google Font API then just use families.json data

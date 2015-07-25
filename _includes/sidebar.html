@@ -16,7 +16,7 @@
     </div>
   </div>
   <div id="tags" class="tags-container" ng-class="{'show-table':toTable == true} ">
-    <button ng-repeat="tag in tags[0] | orderBy: sorter " class="family-tag" ng-class="{active: tag.tag == selectedTags}" name="tag" ng-model="selectedTags" value="[[tag.tag]]" ng-click="selectTag(tag.tag);">
+    <button ng-repeat="tag in tags | orderBy: sorter " class="family-tag" ng-class="{active: tag.tag == selectedTags}" name="tag" ng-model="selectedTags" value="[[tag.tag]]" ng-click="selectTag(tag.tag);">
       [[tag.tag]] <span class="tag-count">[[tag.value]]</span>
     </button>
   </div>
