@@ -365,17 +365,18 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             // if no regular or italic?
             if (i.variants.indexOf('regular') < 0 && i.variants.indexOf('italic') < 0 ) {
               font += ':'+i.variants[0];
-            }
-            
+            }            
             // if font is being previewed, get the full char font
             if ( $scope.preview == i.family ) {
               // get all variants
               font += ':'+i.variants;
-            }
-            // otherwise get this text for the font
+            } // otherwise get this text for the font
             else {
-              if (i.subsets.indexOf('latin') >=0) {
-                font +='&text=' + encodeURIComponent(i.family);
+              font +='&text=' + encodeURIComponent(i.family);
+              
+              // khmer
+              if ($scope.selectedSubsets == 'khmer') {
+                font += encodeURIComponent($scope.khmer);
               }
               // arabic
               if ($scope.selectedSubsets == 'arabic') {
