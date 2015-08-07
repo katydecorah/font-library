@@ -15,7 +15,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.familySorter = 'family';
   $scope.preview = undefined;
   $scope.url = "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE";
-  
   // simple phrases in variant
   $scope.khmer =  'ជំរាបសួរពិភពលោក';
   $scope.arabic =  'مرحبا بالعالم';
@@ -29,41 +28,32 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.thai = 'สวัสดีชาวโลก';
   
   $scope.$watch(function () { return $location.url(); }, function () {
-    
     var path = $location.path().split('/'),
     locationSearch = path[1],
     locationPage = path[2];
-    
     $scope.selectedCategory = $location.search().category;
     $scope.selectedSubsets = $location.search().subset;
     $scope.selectedVariants = $location.search().variant;
     $scope.selectedFamily = $location.search().family;
-    
     if ($.isNumeric(locationSearch)) {
       // if it's a number
       $scope.currentPage = parseInt(locationSearch);
       //$scope.starter = ($scope.currentPage - 1) * $scope.pageSize;
-      
     } else if (locationSearch == undefined || locationSearch == '' ) {
       // if it's undefined or doesn't exist
       $scope.selectedTags = undefined;
       $scope.currentPage = 1;
-      
     } else { // query the URL
-      
       if (locationPage) {
         // if it has a page number
         $location.path("/"+locationSearch + "/" +locationPage);
         $scope.currentPage = parseInt(locationPage);
-        
       } else if (locationSearch == undefined ) {
         // if it's undefined
         $scope.selectedTags = undefined;
-        
       } else {
         // if it's just a tag
         $location.path("/"+locationSearch);
-        
       }
       $scope.selectedTags = locationSearch.split('+').join(' ');
     }
@@ -80,7 +70,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $http.get($scope.url).success(function(res){
     $scope.api = res.items;
     $scope.data = merge($scope.dataTemp,$scope.api);
-    
     // create unique tag array
     $scope.tags = _.map(  
       _.chain($scope.data)
@@ -90,7 +79,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       .value() , function (num,key) {
         return { tag: key, value: num }
       });
-      
       // create unique variants array
       $scope.variants = _.map(  
         _.chain($scope.data)
@@ -100,7 +88,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
         .value() , function (num,key) {
           return { variant: key }
         });
-        
         // create unique subset array
         $scope.subsets = _.map(  
           _.chain($scope.data)
@@ -110,7 +97,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
           .value() , function (num,key) {
             return { subset: key }
           });
-          
           // create unique category array
           $scope.categories = _.map(  
             _.chain($scope.data)
@@ -120,7 +106,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             .value() , function (num,key) {
               return { category: key }
             });
-            
           }).error(function(){
             // If app can't connect to Google Font API then just use families.json data
             $scope.data = $scope.dataTemp;
@@ -148,7 +133,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             }
             return result;
           }
-          
           // reiterate this
           /* log new fonts - fonts that needs to be added to families.json */
           $scope.helpWantedNewFont = function() {
@@ -181,11 +165,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
                 });
                 console.groupEnd();
               }
-              
             });
-            
-            
-            
           };
           
           $scope.sendAnalytics = function() {
@@ -204,12 +184,10 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
           $scope.updateLocPage = function(i) {
             
             if( $scope.selectedTags) {
-              $location.path("/"+$scope.selectedTags.replace(' ','+')+"/"+ ($scope.currentPage ) );
-            }
-            else {
+              $location.path("/"+$scope.selectedTags.replace(' ','+')+"/"+ ($scope.currentPage));
+            } else {
               $location.path("/"+ ($scope.currentPage) );
             }
-            
             window.scrollTo(0, 0);
             $scope.sendAnalytics();
           };
@@ -328,9 +306,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
           
           // provide sample in language if subset is filtered or the font doesn't have a latin subset
           $scope.languageSample = function(font) {
-            
             var sample;
-            
             // khmer
             if ( font.subsets.indexOf('latin') < 0 && font.subsets.indexOf('khmer') >= 0 ) {
               var sample = $scope.khmer;
@@ -371,14 +347,11 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             if ($scope.selectedSubsets == 'thai') {
               var sample = $scope.thai;
             }
-            
             return sample
           }
           
           // build the api call to retrieve the font
           $scope.fontCall = function(i) {
-            
-            
             //get font name
             var font = i.family.replace(' ','+');
             // if no regular variant
@@ -394,7 +367,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
               font += ':'+i.variants[0];
             }
             
-            
             // if font is being previewed, get the full char font
             if ( $scope.preview == i.family ) {
               // get all variants
@@ -402,21 +374,17 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             }
             // otherwise get this text for the font
             else {
-              
               if (i.subsets.indexOf('latin') >=0) {
                 font +='&text=' + encodeURIComponent(i.family);
               }
-              
               // arabic
               if ($scope.selectedSubsets == 'arabic') {
                 font += encodeURIComponent($scope.arabic);
               }
-              
               // cyrillic
               if ($scope.selectedSubsets == 'cyrillic' || $scope.selectedSubsets == 'cyrillic-ext') {
                 font += encodeURIComponent($scope.cyrillic);
               }
-              
               // devanagari
               if ($scope.selectedSubsets == 'devanagari') {
                 font += encodeURIComponent($scope.devanagari);
@@ -425,42 +393,33 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
               if ( (i.subsets.indexOf('latin') < 0 && i.subsets.indexOf('greek') >= 0) ||  $scope.selectedSubsets == 'greek' || $scope.selectedSubsets == 'greek-ext' ) {
                 font += encodeURIComponent($scope.greek);
               }
-              
               // hebrew
               if ($scope.selectedSubsets == 'hebrew') {
                 font += encodeURIComponent($scope.hebrew);
               }
-              
               // telugu
               if ($scope.selectedSubsets == 'telugu') {
                 font += encodeURIComponent($scope.telugu);
               }
-              
               // vietnamese
               if ($scope.selectedSubsets == 'vietnamese') {
                 font += encodeURIComponent($scope.vietnamese);
               }
-              
               // tamil
               if ($scope.selectedSubsets == 'tamil') {
                 font += encodeURIComponent($scope.tamil);
               }
-              
               // thai
               if ($scope.selectedSubsets == 'thai') {
                 font += encodeURIComponent($scope.thai);
               }
-              
               // set the subset
               if ( $scope.selectedSubsets != undefined ){
                 font += '&subset=' + $scope.selectedSubsets;
               }
             }
-            
             return font;
           };
-          
-          
           
           $scope.clearFilters = function(){
             $scope.selectedTags =  undefined;
@@ -473,7 +432,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             $location.path('');
             $scope.sendAnalytics();
           };
-          
         });
         
         app.filter('startFrom', function() {
@@ -482,7 +440,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             return input.slice(start);
           };
         });
-        
         
         app.filter('ceil', function() {
           return function(input) {
