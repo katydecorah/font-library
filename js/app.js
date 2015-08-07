@@ -25,6 +25,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.hebrew = 'שלום עולם';
   $scope.telugu = 'హలో వరల్డ్';
   $scope.vietnamese = 'xin chào';
+  $scope.tamil = 'வணக்கம் உலக';
   
   $scope.$watch(function () { return $location.url(); }, function () {
     
@@ -361,6 +362,10 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             if ($scope.selectedSubsets == 'vietnamese') {
               var sample = $scope.vietnamese;
             }
+            // tamil
+            if ($scope.selectedSubsets == 'tamil') {
+              var sample = $scope.tamil;
+            }
             
             return sample
           }
@@ -429,6 +434,11 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
               // vietnamese
               if ($scope.selectedSubsets == 'vietnamese') {
                 font += encodeURIComponent($scope.vietnamese);
+              }
+              
+              // tamil
+              if ($scope.selectedSubsets == 'tamil') {
+                font += encodeURIComponent($scope.tamil);
               }
               
               // set the subset
