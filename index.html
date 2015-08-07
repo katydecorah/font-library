@@ -37,7 +37,7 @@ layout: default
 			</div>
 			<div class="float-right">
 				<!-- preview link -->
-				<button class="meta btn small quiet" ng-model="preview" ng-click="selectPreview(font.family);selectPreviewVariants(font.variants)">Preview</button>
+				<button class="meta btn small quiet" ng-hide="selectedSubsets.indexOf('latin') < 0" ng-model="preview" ng-click="selectPreview(font.family);selectPreviewVariants(font.variants)">Preview</button>
 				<!-- link to the font's spec -->
 				<a ng-href="https://www.google.com/fonts/specimen/[[font.family.replace(' ','+')]]" class="meta btn small quiet" target="_blank">Specimen</a>
 				<!-- link to line number -->
