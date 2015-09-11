@@ -26,6 +26,8 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.vietnamese = 'xin chào';
   $scope.tamil = 'வணக்கம் உலக';
   $scope.thai = 'สวัสดีชาวโลก';
+  $scope.bengali = 'ওহে বিশ্ব';
+  $scope.gujarati = 'હેલો વર્લ્ડ';
   
   $scope.$watch(function () { return $location.url(); }, function () {
     var path = $location.path().split('/'),
@@ -347,6 +349,16 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             if ($scope.selectedSubsets == 'thai') {
               var sample = $scope.thai;
             }
+            
+            // bengali
+            if ($scope.selectedSubsets == 'bengali') {
+              var sample = $scope.bengali;
+            }
+            
+            // gujarati
+            if ($scope.selectedSubsets == 'gujarati') {
+              var sample = $scope.gujarati;
+            }
             return sample
           }
           
@@ -413,6 +425,14 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
               // thai
               if ($scope.selectedSubsets == 'thai') {
                 font += encodeURIComponent($scope.thai);
+              }
+              // bengali
+              if ($scope.selectedSubsets == 'bengali') {
+                font += encodeURIComponent($scope.bengali);
+              }
+              // gujarati
+              if ($scope.selectedSubsets == 'gujarati') {
+                font += encodeURIComponent($scope.gujarati);
               }
               // set the subset
               if ( $scope.selectedSubsets != undefined ){

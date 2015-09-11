@@ -287,6 +287,8 @@
   { "family": "Henny Penny", "tags": ["whimsical", "uneven"] },
   { "family": "Herr Von Muellerhoff", "tags": ["cursive", "formal"] },
   { "family": "Hind", "tags": ["humanist", "monolinear"] },
+  { "family": "Hind Siliguri", "tags": ["monolinear"] },
+  { "family": "Hind Vadodara", "tags": ["monolinear"] },
   { "family": "Holtwood One SC", "tags": ["small caps", "heavy", "block"] },
   { "family": "Homemade Apple", "tags": ["cursive"] },
   { "family": "Homenaje", "tags": ["condensed", "grotesque"] },
