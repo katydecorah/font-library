@@ -16,18 +16,22 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $scope.preview = undefined;
   $scope.url = "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE";
   // simple phrases in variant
-  $scope.khmer =  'ជំរាបសួរពិភពលោក';
-  $scope.arabic =  'مرحبا بالعالم';
-  $scope.cyrillic = 'привет мир';  
-  $scope.devanagari = 'हैलो वर्ल्ड';
-  $scope.greek = 'γειά σου Κόσμε';
-  $scope.hebrew = 'שלום עולם';
-  $scope.telugu = 'హలో వరల్డ్';
-  $scope.vietnamese = 'xin chào';
-  $scope.tamil = 'வணக்கம் உலக';
-  $scope.thai = 'สวัสดีชาวโลก';
-  $scope.bengali = 'ওহে বিশ্ব';
-  $scope.gujarati = 'હેલો વર્લ્ડ';
+  $scope.languages = {
+    'arabic':'مرحبا بالعالم',
+    'bengali':'ওহে বিশ্ব',
+    'cyrillic':'привет мир',
+    'cyrillic-ext':'привет мир',
+    'devanagari':'हैलो वर्ल्ड',
+    'greek':'γειά σου Κόσμε',
+    'greek-ext':'γειά σου Κόσμε',
+    'gujarati':'હેલો વર્લ્ડ',
+    'hebrew':'שלום עולם',
+    'khmer':'ជំរាបសួរពិភពលោក',
+    'tamil':'வணக்கம் உலக',
+    'telugu':'హలో వరల్డ్',
+    'thai':'สวัสดีชาวโลก',
+    'vietnamese':'xin chào'
+  };
   
   $scope.$watch(function () { return $location.url(); }, function () {
     var path = $location.path().split('/'),
@@ -309,56 +313,20 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
           // provide sample in language if subset is filtered or the font doesn't have a latin subset
           $scope.languageSample = function(font) {
             var sample;
-            // khmer
-            if ( font.subsets.indexOf('latin') < 0 && font.subsets.indexOf('khmer') >= 0 ) {
-              var sample = $scope.khmer;
-            }
-            //arabic 
-            if ($scope.selectedSubsets == 'arabic') {
-              var sample = $scope.arabic;
-            }
-            //cyrillic (russian)
-            if ( $scope.selectedSubsets == 'cyrillic' || $scope.selectedSubsets == 'cyrillic-ext' ) {
-              var sample = $scope.cyrillic;
-            }
-            // devanagari (hindi)
-            if ($scope.selectedSubsets == 'devanagari') {
-              var sample = $scope.devanagari;
-            } 
-            // greek
-            if ((font.subsets.indexOf('latin') < 0 && font.subsets.indexOf('greek') >= 0) || ( $scope.selectedSubsets == 'greek' || $scope.selectedSubsets == 'greek-ext' )) {
-              var sample = $scope.greek;
-            }
-            // hebrew
-            if ($scope.selectedSubsets == 'hebrew') {
-              var sample = $scope.hebrew;
-            }
-            // telugu
-            if ($scope.selectedSubsets == 'telugu') {
-              var sample = $scope.telugu;
-            }
-            // vietnamese
-            if ($scope.selectedSubsets == 'vietnamese') {
-              var sample = $scope.vietnamese;
-            }
-            // tamil
-            if ($scope.selectedSubsets == 'tamil') {
-              var sample = $scope.tamil;
-            }
-            // thai
-            if ($scope.selectedSubsets == 'thai') {
-              var sample = $scope.thai;
+            
+            if ( font.subsets.indexOf('latin') < 0 ) {
+              var sample = $scope.languages[font.subsets];
             }
             
-            // bengali
-            if ($scope.selectedSubsets == 'bengali') {
-              var sample = $scope.bengali;
+            else {
+              for (var key in $scope.languages) {
+                if ($scope.selectedSubsets == key) {
+                  var sample = $scope.languages[key];
+                }
+              }
             }
             
-            // gujarati
-            if ($scope.selectedSubsets == 'gujarati') {
-              var sample = $scope.gujarati;
-            }
+            
             return sample
           }
           
@@ -386,53 +354,10 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             else {
               font +='&text=' + encodeURIComponent(i.family);
               
-              // khmer
-              if ($scope.selectedSubsets == 'khmer') {
-                font += encodeURIComponent($scope.khmer);
-              }
-              // arabic
-              if ($scope.selectedSubsets == 'arabic') {
-                font += encodeURIComponent($scope.arabic);
-              }
-              // cyrillic
-              if ($scope.selectedSubsets == 'cyrillic' || $scope.selectedSubsets == 'cyrillic-ext') {
-                font += encodeURIComponent($scope.cyrillic);
-              }
-              // devanagari
-              if ($scope.selectedSubsets == 'devanagari') {
-                font += encodeURIComponent($scope.devanagari);
-              }
-              // greek
-              if ( (i.subsets.indexOf('latin') < 0 && i.subsets.indexOf('greek') >= 0) ||  $scope.selectedSubsets == 'greek' || $scope.selectedSubsets == 'greek-ext' ) {
-                font += encodeURIComponent($scope.greek);
-              }
-              // hebrew
-              if ($scope.selectedSubsets == 'hebrew') {
-                font += encodeURIComponent($scope.hebrew);
-              }
-              // telugu
-              if ($scope.selectedSubsets == 'telugu') {
-                font += encodeURIComponent($scope.telugu);
-              }
-              // vietnamese
-              if ($scope.selectedSubsets == 'vietnamese') {
-                font += encodeURIComponent($scope.vietnamese);
-              }
-              // tamil
-              if ($scope.selectedSubsets == 'tamil') {
-                font += encodeURIComponent($scope.tamil);
-              }
-              // thai
-              if ($scope.selectedSubsets == 'thai') {
-                font += encodeURIComponent($scope.thai);
-              }
-              // bengali
-              if ($scope.selectedSubsets == 'bengali') {
-                font += encodeURIComponent($scope.bengali);
-              }
-              // gujarati
-              if ($scope.selectedSubsets == 'gujarati') {
-                font += encodeURIComponent($scope.gujarati);
+              for (var key in $scope.languages) {
+                if ($scope.selectedSubsets == key || i.subsets.indexOf('latin') < 0) {
+                  font += encodeURIComponent($scope.languages[key]);
+                }
               }
               // set the subset
               if ( $scope.selectedSubsets != undefined ){
