@@ -1,0 +1,4 @@
+---
+---
+family,{% for page in site.data.families %}{% for tag in page.tags %}{% capture tmp %}{{ tmp }}#{{ tag }}{% endcapture %}{% endfor %}{% endfor %}{% assign allprojects = tmp | remove_first: '#' | split: '#' | sort %}{% for project in allprojects %}{% unless tmp2 contains project %}{% capture tmp2 %}{{ tmp2 }}#{{ project | strip }}{% endcapture %}{% endunless %}{% endfor %}{% assign uniqueprojects = tmp2 | remove_first: '#' | split: '#' | sort %}{% capture allTags %}{% for tag in uniqueprojects %}{{tag}}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}{{allTags}}{% assign allTagsArray = allTags | split: "," %}{% for item in site.data.families %}
+{{item.family}},{% for tag in allTagsArray %}{% if item.tags contains tag %}{{tag}}{% endif %}{% unless forloop.last %},{% endunless %}{% endfor %}{% endfor %}
