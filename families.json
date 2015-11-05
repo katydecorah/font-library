@@ -477,7 +477,7 @@
   { "family": "Nunito", "tags": ["rounded"] },
   { "family": "Odor Mean Chey", "tags": [] },
   { "family": "Offside", "tags": ["monolinear", "futuristic", "headlines"] },
-  { "family": "Old Standard TT", "tags": [] },
+  { "family": "Old Standard TT", "tags": ["classic"] },
   { "family": "Oldenburg", "tags": ["german"] },
   { "family": "Oleo Script", "tags": ["script", "headlines"] },
   { "family": "Oleo Script Swash Caps", "tags": ["swash", "script", "headlines"] },
