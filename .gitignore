@@ -2,4 +2,3 @@ node_modules
 _site
 *.lock
 *.sass-cache
-api.json

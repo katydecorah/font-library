@@ -5,3 +5,7 @@ exclude: 'css/style.scss'
 linters:
   VendorPrefix:
     enabled: false
+  TrailingWhitespace:
+    enabled: false
+  PseudoElement:
+    enabled: false

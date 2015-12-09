@@ -1,11 +1,4 @@
-language: ruby
+language: node_js
+node_js: "0.10"
+before_install: gem install scss-lint
 sudo: false
-rvm:
-- 2.1
-script: bundle exec rake test
-branches:
-  only:
-    - gh-pages
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
