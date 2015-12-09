@@ -54,17 +54,9 @@ To build it locally, you will need to:
 * [Install Jekyll](https://help.github.com/articles/using-jekyll-with-pages/#installing-jekyll)
 * Install Bundler: `bundle install`
 
-To build the site:
+To build the site: `bundle exec jekyll serve --watch`
 
-`rake serve`
-
-or
-
-`bundle exec jekyll serve --watch`
-
-To test the site run:
-
-`rake test`
+To test the site run, first run `npm install` and then `npm test`.
 
 ## License
 
