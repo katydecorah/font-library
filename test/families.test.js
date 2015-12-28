@@ -7,7 +7,7 @@ var path = 'families.json';
 
 var families = JSON.parse(fs.readFileSync(path));
 
-families.forEach(function(post) {
+families.reduce(function(prev, post, currentIndex, array) {
   test(post.family, function(t) {
     t.equal( typeof post, 'object', "family must be formatted correctly");
     t.ok(post.family, "must have a family");
@@ -22,6 +22,12 @@ families.forEach(function(post) {
         t.fail(tag + " tag must be lowercase")
       }
     });
+    // make sure families are in alphabetical order
+    var prevFamily = families[currentIndex - 1].family;
+    if ( prevFamily > post.family ) {
+      t.fail("Font families must be in alphabetical order: '" + post.family + "' should appear before '" + prevFamily + "'");
+    }    
+    
     t.end();
   });
 });
