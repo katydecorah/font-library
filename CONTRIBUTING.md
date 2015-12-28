@@ -12,7 +12,7 @@ Click the **Need tags** button to show all fonts that haven't been tagged yet:
 
 Add tags to `families.json` as described in the next sections.
 
-## Editing families.json guidelines
+# Editing families.json guidelines
 
 [View families.json](https://github.com/katydecorah/font-library/blob/gh-pages/families.json)
 
@@ -23,15 +23,15 @@ Add tags to `families.json` as described in the next sections.
 * Avoid ambiguous names for tags; make the tag name intuitive (Would you use this tag to find font X?)
 * The family name must match the Google Font family name exactly
 
-## Contributing
+# Contributing
 
-There are a few different ways to contribute:
+There are a few different ways to contribute, you can:
 
-* You can edit from Github.com directly
-* You can create a pull request
-* You can create an issue
+1. Edit from Github.com directly
+2. Create a pull request
+3. Create an issue
 
-### Edit from Github.com directly
+## 1. Edit from Github.com directly
 
 If you're new to Github, I recommend reading: 
 
@@ -39,7 +39,7 @@ If you're new to Github, I recommend reading:
 
 And then open up [families.json](https://github.com/katydecorah/font-library/blob/gh-pages/families.json) to start editing.
 
-### Create a pull request or issue
+## 2. Create a pull request
 
 Please **create a pull request** or **create an issue** to add/edit tags or to add newly added Google fonts.
 
@@ -53,7 +53,7 @@ If you're new to Github, I recommend reading:
 * [Creating an issue](https://help.github.com/articles/creating-an-issue/) 
 * [Creating a pull request](https://help.github.com/articles/creating-a-pull-request/). 
 
-### Create an issue
+## 3. Create an issue
 
 If you need help with your pull request, create an issue and tag me in it `@katydecorah` and I'll help. Or you can create an issue to recommend changes to the library.
 
