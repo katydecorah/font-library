@@ -16,8 +16,6 @@ Add tags to `families.json` as described in the next sections.
 
 [View families.json](https://github.com/katydecorah/font-library/blob/gh-pages/families.json)
 
-* Use double quotes `"`
-* Do not delete or change the first tag, this is the classification defined by Google
 * Keep the list alphabetical by family name
 * Tags are lowercase
 * Each font should have no more than 5 tags

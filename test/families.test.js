@@ -16,6 +16,12 @@ families.forEach(function(post) {
     if (post.tags) {
       t.equal(post.tags.length < 6, true, 'no more than 5 tags');
     }
+    // tags must be lowercase
+    post.tags.forEach(function(tag){
+      if (isNaN(tag[0]) && tag[0] == tag[0].toUpperCase()) {
+        t.fail(tag + " tag must be lowercase")
+      }
+    });
     t.end();
   });
 });
