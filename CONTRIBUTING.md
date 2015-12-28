@@ -33,7 +33,9 @@ There are a few different ways to contribute:
 
 ### Edit from Github.com directly
 
-Read [Editing files in another user's repository](https://help.github.com/articles/editing-files-in-another-user-s-repository/).
+If you're new to Github, I recommend reading: 
+
+* [Editing files in another user's repository](https://help.github.com/articles/editing-files-in-another-user-s-repository/).
 
 And then open up [families.json](https://github.com/katydecorah/font-library/blob/gh-pages/families.json) to start editing.
 
@@ -47,7 +49,7 @@ When creating a pull request, it's helpful to:
 * Provide a brief description of the tags your added or changed
 * Edit tags in small batches (<20 edits) to make reviewing quicker and easier
 
-If you're new to Github,I recommend reading:
+If you're new to Github, I recommend reading:
 * [Creating an issue](https://help.github.com/articles/creating-an-issue/) 
 * [Creating a pull request](https://help.github.com/articles/creating-a-pull-request/). 
 
