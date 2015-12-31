@@ -22,6 +22,7 @@ exclude:
   - ".travis.yml"
   - "LICENSE"
   - "README.md"
+  - node_modules
 
 sass:
   style: :compressed
