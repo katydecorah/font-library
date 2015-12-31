@@ -10,9 +10,9 @@
     "scsslint": "0.0.3"
   },
   "devDependencies": {
-    "js-yaml": "~2.1.3",
+    "js-yaml": "^2.1.3",
     "request": "^2.67.0",
     "tap-spec": "~4.1.1",
-    "tape": "~4.2.2"
+    "tape": "^4.4.0"
   }
 }
