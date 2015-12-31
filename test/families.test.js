@@ -7,11 +7,19 @@ var request = require('request');
 var path = 'families.json';
 
 var families = JSON.parse(fs.readFileSync(path));
+
+// build list of family names in families.json
+var familiesList = [];
+families.forEach(function(i){
+  familiesList.push(i.family);
+});
+
 var url = 'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE';
 
 request(url, onRequestDone);
 
 function onRequestDone(err, resp, body) {
+  // build list of family names in Google Fonts API
   var googleFamilies = [];
   if (!err && resp.statusCode == 200) {
     var json = JSON.parse(body);
@@ -23,7 +31,7 @@ function onRequestDone(err, resp, body) {
 }
 
 function runTests(googleFamilies) {
-  
+  // test each family in families.json
   families.reduce(function(prev, post, currentIndex, array) {
     test(post.family, function(t) {
       t.equal( typeof post, 'object', "family must be formatted correctly");
@@ -52,4 +60,15 @@ function runTests(googleFamilies) {
       t.end();
     });
   });  
+  
+  // check Google Fonts API for new fonts
+  googleFamilies.forEach(function(post){
+    if (familiesList.indexOf(post) == -1 ) {
+      test(post, function(t) {
+        t.fail("Add the new font '"+ post +"' to families.json")
+        t.end();
+      });
+    }
+  });
+  
 }
