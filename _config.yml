@@ -7,8 +7,8 @@ image:
 github: https://github.com/katydecorah/font-library
 contributing: https://github.com/katydecorah/font-library/blob/gh-pages/CONTRIBUTING.md
 
-angular: 1.4.8
-jquery: 2.1.4
+angular: 1.5.5
+jquery: 2.2.3
 underscore: 1.8.3
 
 port: 4000

@@ -350,7 +350,13 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             if ( $scope.preview == i.family ) {
               // get all variants
               font += ':'+i.variants;
-            } // otherwise get this text for the font
+            }
+            // if the custom preview input exists, then get all of the characters
+            else if ($scope.customPreview) {
+              //font +='&text=' + encodeURIComponent($scope.customPreview);
+              // ^^ this is too slow 
+            }
+            // otherwise get this text for the font
             else {
               font +='&text=' + encodeURIComponent(i.family);
               
@@ -373,6 +379,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             $scope.selectedVariants = undefined;
             $scope.selectedCategory = undefined;
             $scope.selectedFamily = undefined;
+            $scope.customPreview = undefined;
             $scope.currentPage = 1;
             $location.url($location.path());
             $location.path('');
