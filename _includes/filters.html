@@ -1,5 +1,7 @@
 <div class="controls" ng-class="{ active: showDetails}">
   
+  <input type="text" id="custom-preview" value="" placeholder="Custom text preview&hellip;" ng-model="customPreview">
+  
   <select class="select-tags" ng-model="selectedTags" ng-change="resetPagination();removeFamily()" aria-label="Tag">
     <option value="" selected disabled>tag</option>
     <option ng-selected="[[ tag.tag == selectedTags ]]" ng-repeat="tag in tags" value="[[tag.tag]]">[[tag.tag]]</option>
@@ -20,7 +22,7 @@
     <option ng-selected="[[ key.variant == selectedVariants ]]" ng-repeat="key in variants | orderBy: 'variant' " value="[[key.variant]]">[[key.variant]]</option>
   </select>
   
-  <button ng-click="clearFilters();" class="btn btn-clear" ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets">Clear</button>
+  <button ng-click="clearFilters();" class="btn btn-clear" ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets || customPreview">Clear</button>
 </div>
 <!-- advanced search -->
 <div class="control-container">		

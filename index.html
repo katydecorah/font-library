@@ -14,11 +14,11 @@ layout: default
 		<div class="family" ng-repeat="font in searchCount=( data |
 		filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory, family: selectedFamily }:true ) | orderBy: familySorter | startFrom: starter | limitTo:pageSize">
 		<!-- links to google font page -->
-		<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link[[ (selectedSubsets.indexOf('hebrew') == 0 || selectedSubsets.indexOf('arabic') == 0) && ' language-rtl' || '' ]]">
+		<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link[[ (selectedSubsets.indexOf('hebrew') == 0 || selectedSubsets.indexOf('arabic') == 0) && ' language-rtl' || '' ]]" title="Font: [[font.family]]">
 			<!-- builds the inline styles & displays font name -->
 			<div class="family-title" style="[[familyStyle(font)]]">				
 				[[ languageSample(font) ]]
-				<span class="family-name[[ (font.subsets.indexOf('latin') < 0 || selectedSubsets.indexOf('latin') < 0 ) && ' family-title-small'|| '']]">[[font.family]]</span>
+				<span class="family-name[[ (font.subsets.indexOf('latin') < 0 || selectedSubsets.indexOf('latin') < 0 ) && ' family-title-small'|| '']]">[[customPreview && customPreview || font.family]]</span>
 			</div>
 		</a>
 		<!-- displays the font's tags -->
