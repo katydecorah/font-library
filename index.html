@@ -23,9 +23,7 @@ layout: default
 		</a>
 		<!-- displays the font's tags -->
 		<div class="family-tags">
-			<label ng-repeat="tag in font.tags" class="family-tag" ng-class="{active: tag == selectedTags}">
-				[[tag]]
-				<input class="hide" type="checkbox" name="tag" ng-model="selectedTags" value="[[tag]]" ng-change="selectTag('[[tag]]')">
+			<label ng-repeat="tag in font.tags" class="family-tag" ng-class="{active: tag == selectedTags}">[[tag]]<input class="hide" type="checkbox" name="tag" ng-model="selectedTags" value="[[tag]]" ng-change="selectTag('[[tag]]')">
 			</label>
 			<!-- displays the font's variants and subsets -->
 			<div class="family-meta" ng-show="font.variants">
