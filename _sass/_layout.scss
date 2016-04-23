@@ -164,10 +164,10 @@ select {
   position: relative;
   
   @include breakpoint(medium-up) {
-    text-align: right;
-    -ms-transform: translateY(-2.5em);
-    -webkit-transform: translateY(-2.5em);
-    transform: translateY(-2.5em);
+    //text-align: right;
+    -ms-transform: translateY(-3.25em);
+    -webkit-transform: translateY(-3.25em);
+    transform: translateY(-3.25em);
     transition: $transition;
   }
   
@@ -180,11 +180,17 @@ select {
   }
   
   &.active {
-    -ms-transform: translateY(.25em);
-    -webkit-transform: translateY(.25em);
-    transform: translateY(.25em);
+    -ms-transform: translateY(.5em);
+    -webkit-transform: translateY(.5em);
+    transform: translateY(.5em);
     transition: $transition;
   }
+  
+  label {
+    display: inline-block;
+    margin: .25em;
+  }
+  
 }
 
 .control-container {

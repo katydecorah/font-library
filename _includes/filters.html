@@ -20,7 +20,14 @@
     <option ng-selected="[[ key.variant == selectedVariants ]]" ng-repeat="key in variants | orderBy: 'variant' " value="[[key.variant]]">[[key.variant]]</option>
   </select>
   
-  <button ng-click="clearFilters();" class="btn btn-clear" ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets">Clear</button>
+  <select ng-model="selectedVariantCount" ng-show="variants" ng-change="resetPagination();setSearch('variantCount',selectedVariantCount);removeFamily()" aria-label="Variant Count" ng-options="item.count as item.count for item in variantCount track by item.count">
+    <option value="">number of variants</option>
+  </select> 
+  
+  <label class="small"><input type="checkbox" ng-model="fullVariant" value=""> has bold, italic, and regular</label>
+  
+  <button ng-click="clearFilters();" class="btn btn-clear" ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets || selectedVariantCount || fullVariant">Clear</button>
+    
 </div>
 <!-- advanced search -->
 <div class="control-container">		
