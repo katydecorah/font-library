@@ -300,6 +300,11 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             $location.search('variant', null);
           };
           
+          $scope.removeFullVariants = function() {
+            $scope.fullVariant = undefined;
+            $scope.resetPagination();
+          };
+          
           $scope.removeVariantCount = function() {
               $scope.selectedVariantCount = undefined;
               $scope.resetPagination();
