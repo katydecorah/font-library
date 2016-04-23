@@ -22,14 +22,18 @@
   @extend %fade;
 
   background: transparent;
-  border: 1px solid;
+  border: 0;
   cursor: pointer;
   display: inline-block;
-  margin-right: .25em;
-  padding: .2em .5em;
+  padding: .2em .3em;
 
   .sidebar & {
     margin-bottom: .25em;
+    margin-right: .25em;
+  }
+  
+  &:before {
+    content: '#';
   }
 
   &.active,
@@ -57,4 +61,30 @@
 
 .by-name {
   padding-bottom: 5em;
+}
+
+.tag-header {
+  
+  @extend %small;
+  
+  margin-bottom: .5em;
+  padding: 0 .3em;
+  
+  input {
+    display: none;
+  }
+  
+  .tag-header-tag,
+  .tag-header-count {
+    display: inline-block;
+  }
+  
+  label {
+    cursor: pointer;
+  }
+  
+  .tag-header-count {
+    float: right;
+  }
+  
 }

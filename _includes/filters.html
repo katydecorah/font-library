@@ -1,5 +1,7 @@
 <div class="controls" ng-class="{ active: showDetails}">
   
+  <input type="text" id="custom-preview" value="" placeholder="Custom text preview&hellip;" ng-model="customPreview">
+  
   <select class="select-tags" ng-model="selectedTags" ng-change="resetPagination();removeFamily()" aria-label="Tag">
     <option value="" selected disabled>tag</option>
     <option ng-selected="[[ tag.tag == selectedTags ]]" ng-repeat="tag in tags" value="[[tag.tag]]">[[tag.tag]]</option>
@@ -20,13 +22,15 @@
     <option ng-selected="[[ key.variant == selectedVariants ]]" ng-repeat="key in variants | orderBy: 'variant' " value="[[key.variant]]">[[key.variant]]</option>
   </select>
   
+  <!--
   <select ng-model="selectedVariantCount" ng-show="variants" ng-change="resetPagination();setSearch('variantCount',selectedVariantCount);removeFamily()" aria-label="Variant Count" ng-options="item.count as item.count for item in variantCount track by item.count">
     <option value="">number of variants</option>
   </select> 
+-->
   
-  <label class="small"><input type="checkbox" ng-model="fullVariant" value=""> has bold, italic, and regular</label>
+  <label class="small"><input class="checkbox" type="checkbox" ng-model="fullVariant" value=""> has bold, italic, and regular</label>
   
-  <button ng-click="clearFilters();" class="btn btn-clear" ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets || selectedVariantCount || fullVariant">Clear</button>
+  <button ng-click="clearFilters();" class="btn btn-clear" ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets || selectedVariantCount || fullVariant || customPreview">Clear</button>
     
 </div>
 <!-- advanced search -->

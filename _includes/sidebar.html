@@ -1,23 +1,29 @@
 <!-- tag index -->
 <div class="tags">
-  <div class="tag-heading">
-    Sort by tags 
-    <div class="btn-group-inputs float-right">
-      <div class="btn-group">
-        <div class="btn" ng-class="{'active':sorter == 'tag'|| sorter == '-tag'} ">
-          <label ng-hide="sorter == 'tag'"><input type="radio" name="sorter" ng-model="sorter" value="tag">A-Z <span ng-hide="sorter == 'value' || sorter == '-value'">↑</span></label>
-          <label ng-hide="sorter == '-tag' || sorter == 'value' || sorter == '-value' "><input type="radio" name="sorter" ng-model="sorter" value="-tag">A-Z ↓</label>
-        </div><div class="btn" ng-class="{'active':sorter == 'value' || sorter == '-value'}">
-          <label ng-hide="sorter == 'value'"><input type="radio" name="sorter" ng-model="sorter" value="value">0-9 <span ng-hide="sorter == 'tag' || sorter == '-tag'">↑</span></label>
-          <label ng-hide="sorter == '-value' || sorter == 'tag' || sorter == '-tag'"><input type="radio" name="sorter" ng-model="sorter" value="-value">0-9 ↓</label>
-        </div>
+  
+  <div class="btn-group-inputs">
+    <div class="btn-group" ng-init="tagView = 'list'">
+      <div class="btn" ng-class="{'active':tagView == 'list'}">
+        <label><input ng-change="sorter = 'tag'" type="radio" value="list" ng-model="tagView">List</label>
+      </div><div class="btn" ng-class="{'active':tagView == 'table'}">
+        <label><input type="radio" value="table" ng-model="tagView">Table</label>
       </div>
-      <label class="btn" ng-class="{'active':toTable == true}"><input type="checkbox" name="table" ng-model="toTable">Table</label>
     </div>
   </div>
-  <div id="tags" class="tags-container" ng-class="{'show-table':toTable == true} ">
-    <button ng-repeat="tag in tags | orderBy: sorter " class="family-tag" ng-class="{active: tag.tag == selectedTags}" name="tag" ng-model="selectedTags" value="[[tag.tag]]" ng-click="selectTag(tag.tag);">
-      [[tag.tag]] <span class="tag-count">[[tag.value]]</span>
+  
+  <div id="tags" class="tags-container" ng-class="{'show-table':tagView == 'table'} ">
+    
+    <div class="tag-header" ng-show="tagView == 'table'">
+      <div class="tag-header-tag" ng-class="{'active':sorter == 'tag'|| sorter == '-tag'} ">
+        <label ng-hide="sorter == 'tag'"><input type="radio" name="sorter" ng-model="sorter" value="tag">Tag <span ng-hide="sorter == 'value' || sorter == '-value'">↑</span></label>
+        <label ng-hide="sorter == '-tag' || sorter == 'value' || sorter == '-value' "><input type="radio" name="sorter" ng-model="sorter" value="-tag">Tag ↓</label>
+      </div><div class="tag-header-count" ng-class="{'active':sorter == 'value' || sorter == '-value'}">
+        <label ng-hide="sorter == 'value'"><input type="radio" name="sorter" ng-model="sorter" value="value">Count <span ng-hide="sorter == 'tag' || sorter == '-tag'">↑</span></label>
+        <label ng-hide="sorter == '-value' || sorter == 'tag' || sorter == '-tag'"><input type="radio" name="sorter" ng-model="sorter" value="-value">Count ↓</label>
+      </div>
+    </div>
+    
+    <button ng-repeat="tag in tags | orderBy: sorter " class="family-tag" ng-class="{active: tag.tag == selectedTags}" name="tag" ng-model="selectedTags" value="[[tag.tag]]" ng-click="selectTag(tag.tag);">[[tag.tag]] <span class="tag-count" ng-show="tagView == 'table'">[[tag.value]]</span>
     </button>
   </div>
   <hr>

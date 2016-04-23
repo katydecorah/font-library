@@ -118,6 +118,26 @@ select {
   padding: .25em 1em;
 }
 
+input {
+  background: lighten($body-bg, 2%);
+  border: 1px solid;
+  border-radius: .4em;
+  color: $selected-tag;
+  display: inline-block;
+  font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+  font-size: .9em;
+  height: 22px;
+  line-height: 1.5;
+  padding: 0 .5em;
+  
+  @include placeholder {
+    color: lighten($selected-tag, 15%);
+    font-family: $sans;
+    text-transform: uppercase;
+  }
+   
+}
+
 
 .search-status {
   @extend %clearfix;
@@ -134,7 +154,7 @@ select {
     cursor: pointer;
   }
   
-  .family-tag:hover:before {
+  .family-tag:hover:after {
     content: '\00D7';
     font-size: 5em;
     left: 0;
@@ -154,7 +174,7 @@ select {
   -webkit-animation: fade $transition * 2 forwards 1s;
   animation: fade $transition * 2 forwards 1s;
   font-size: 1.25em;
-  margin-top: 2em;
+  margin-top: 3em;
   
 }
 
@@ -165,9 +185,9 @@ select {
   
   @include breakpoint(medium-up) {
     //text-align: right;
-    -ms-transform: translateY(-3.25em);
-    -webkit-transform: translateY(-3.25em);
-    transform: translateY(-3.25em);
+    -ms-transform: translateY(-3.75em);
+    -webkit-transform: translateY(-3.75em);
+    transform: translateY(-3.75em);
     transition: $transition;
   }
   
@@ -189,6 +209,11 @@ select {
   label {
     display: inline-block;
     margin: .25em;
+  }
+  
+  .checkbox {
+    position: relative;
+    top: 5px;    
   }
   
 }

@@ -14,18 +14,16 @@ layout: default
 		<div class="family" ng-repeat="font in searchCount=( data |
 		filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory, variantCount: (selectedVariantCount || undefined), family: selectedFamily, fullVariant:(fullVariant || undefined) }:true ) | orderBy: familySorter | startFrom: starter | limitTo:pageSize">
 		<!-- links to google font page -->
-		<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link[[ (selectedSubsets.indexOf('hebrew') == 0 || selectedSubsets.indexOf('arabic') == 0) && ' language-rtl' || '' ]]">
+		<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link[[ (selectedSubsets.indexOf('hebrew') == 0 || selectedSubsets.indexOf('arabic') == 0) && ' language-rtl' || '' ]]" title="Font: [[font.family]]">
 			<!-- builds the inline styles & displays font name -->
 			<div class="family-title" style="[[familyStyle(font)]]">				
 				[[ languageSample(font) ]]
-				<span class="family-name[[ (font.subsets.indexOf('latin') < 0 || selectedSubsets.indexOf('latin') < 0 ) && ' family-title-small'|| '']]">[[font.family]]</span>
+				<span class="family-name[[ (font.subsets.indexOf('latin') < 0 || selectedSubsets.indexOf('latin') < 0 ) && ' family-title-small'|| '']]">[[customPreview && customPreview || font.family]]</span>
 			</div>
 		</a>
 		<!-- displays the font's tags -->
 		<div class="family-tags">
-			<label ng-repeat="tag in font.tags" class="family-tag" ng-class="{active: tag == selectedTags}">
-				[[tag]]
-				<input class="hide" type="checkbox" name="tag" ng-model="selectedTags" value="[[tag]]" ng-change="selectTag('[[tag]]')">
+			<label ng-repeat="tag in font.tags" class="family-tag" ng-class="{active: tag == selectedTags}">[[tag]]<input class="hide" type="checkbox" name="tag" ng-model="selectedTags" value="[[tag]]" ng-change="selectTag('[[tag]]')">
 			</label>
 			<!-- displays the font's variants and subsets -->
 			<div class="family-meta" ng-show="font.variants">
