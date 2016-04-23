@@ -32,6 +32,10 @@
     margin-right: .25em;
   }
   
+  &.no-hash:before {
+    display: none;
+  }
+  
   &:before {
     content: '#';
   }
