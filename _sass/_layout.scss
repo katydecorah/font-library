@@ -180,11 +180,14 @@ input {
 
 
 .controls {
-  border-radius: .5em;
+  margin-bottom: .5em;
+  padding-bottom: 1em;
   position: relative;
   
   @include breakpoint(medium-up) {
-    //text-align: right;
+    border-bottom: 1px dashed rgba(58, 56, 44, .2);
+    margin-top: -5em;
+    padding-top: 1em;
     -ms-transform: translateY(-3.75em);
     -webkit-transform: translateY(-3.75em);
     transform: translateY(-3.75em);
@@ -200,6 +203,7 @@ input {
   }
   
   &.active {
+    margin-top: 0;
     -ms-transform: translateY(.5em);
     -webkit-transform: translateY(.5em);
     transform: translateY(.5em);
