@@ -40,6 +40,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     $scope.selectedCategory = $location.search().category;
     $scope.selectedSubsets = $location.search().subset;
     $scope.selectedVariants = $location.search().variant;
+    $scope.selectedVariantCount = parseInt($location.search().variantCount);
     $scope.selectedFamily = $location.search().family;
     if ($.isNumeric(locationSearch)) {
       // if it's a number
@@ -94,6 +95,15 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
         .value() , function (num,key) {
           return { variant: key }
         });
+        // create unique variant count array
+        $scope.variantCount = _.map(  
+          _.chain($scope.data)
+          .pluck('variantCount')
+          .flatten()
+          .countBy()
+          .value() , function (num,key) {
+            return  { count: parseInt(key) } 
+          });
         // create unique subset array
         $scope.subsets = _.map(  
           _.chain($scope.data)
@@ -125,11 +135,33 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
               var match = _.where(obj2, {family: obj1[i].family});
               if (match) {
                 // if there's a match push it to the final dataarray
+                
+                // Check for main variants
+                var hasItalic = false, hasBold = false,hasRegular = false,fullVariant = false;
+                if ( match[0].variants.indexOf('italic') != -1 ) {
+                  hasItalic = true;
+                }
+                if ( match[0].variants.indexOf('regular') != -1 || match[0].variants.indexOf('400') != -1 ) {
+                  hasRegular = true;
+                }
+                if ( match[0].variants.indexOf('500') != -1 || match[0].variants.indexOf('600') != -1 || match[0].variants.indexOf('700') != -1 || match[0].variants.indexOf('800') != -1 || match[0].variants.indexOf('900') != -1 ) {
+                  hasBold = true;
+                }
+                
+                if (hasBold && hasRegular && hasItalic) {
+                  fullVariant = true
+                }
+                
                 result.push({
                   'family' : obj1[i].family,
                   'tags' : obj1[i].tags,
                   'count': obj1[i].tags.length,
                   'variants': match[0].variants,
+                  'variantCount': match[0].variants.length, // number of variants
+                  'hasItalic': hasItalic,
+                  'hasBold': hasBold,
+                  'hasRegular': hasRegular,
+                  'fullVariant': fullVariant,
                   'subsets': match[0].subsets,
                   'category': match[0].category,
                   'lastModified': match[0].lastModified,
@@ -268,6 +300,12 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             $location.search('variant', null);
           };
           
+          $scope.removeVariantCount = function() {
+              $scope.selectedVariantCount = undefined;
+              $scope.resetPagination();
+              $location.search('variantCount', null);
+            };
+          
           $scope.removeSubset = function() {
             $scope.selectedSubsets = undefined;
             $scope.resetPagination();
@@ -377,6 +415,8 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             $scope.selectedTags =  undefined;
             $scope.selectedSubsets = undefined;
             $scope.selectedVariants = undefined;
+            $scope.selectedVariantCount = undefined;
+            $scope.fullVariant = undefined;
             $scope.selectedCategory = undefined;
             $scope.selectedFamily = undefined;
             $scope.customPreview = undefined;

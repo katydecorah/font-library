@@ -12,7 +12,7 @@ layout: default
 	<div class="families" id="families">
 		<!-- individual font -->
 		<div class="family" ng-repeat="font in searchCount=( data |
-		filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory, family: selectedFamily }:true ) | orderBy: familySorter | startFrom: starter | limitTo:pageSize">
+		filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory, variantCount: (selectedVariantCount || undefined), family: selectedFamily, fullVariant:(fullVariant || undefined) }:true ) | orderBy: familySorter | startFrom: starter | limitTo:pageSize">
 		<!-- links to google font page -->
 		<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link[[ (selectedSubsets.indexOf('hebrew') == 0 || selectedSubsets.indexOf('arabic') == 0) && ' language-rtl' || '' ]]" title="Font: [[font.family]]">
 			<!-- builds the inline styles & displays font name -->

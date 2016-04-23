@@ -174,7 +174,7 @@ input {
   -webkit-animation: fade $transition * 2 forwards 1s;
   animation: fade $transition * 2 forwards 1s;
   font-size: 1.25em;
-  margin-top: 2em;
+  margin-top: 3em;
   
 }
 
@@ -184,10 +184,10 @@ input {
   position: relative;
   
   @include breakpoint(medium-up) {
-    text-align: right;
-    -ms-transform: translateY(-2.5em);
-    -webkit-transform: translateY(-2.5em);
-    transform: translateY(-2.5em);
+    //text-align: right;
+    -ms-transform: translateY(-3.75em);
+    -webkit-transform: translateY(-3.75em);
+    transform: translateY(-3.75em);
     transition: $transition;
   }
   
@@ -200,11 +200,22 @@ input {
   }
   
   &.active {
-    -ms-transform: translateY(.25em);
-    -webkit-transform: translateY(.25em);
-    transform: translateY(.25em);
+    -ms-transform: translateY(.5em);
+    -webkit-transform: translateY(.5em);
+    transform: translateY(.5em);
     transition: $transition;
   }
+  
+  label {
+    display: inline-block;
+    margin: .25em;
+  }
+  
+  .checkbox {
+    position: relative;
+    top: 5px;    
+  }
+  
 }
 
 .control-container {
