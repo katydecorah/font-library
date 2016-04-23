@@ -154,7 +154,7 @@ input {
     cursor: pointer;
   }
   
-  .family-tag:hover:before {
+  .family-tag:hover:after {
     content: '\00D7';
     font-size: 5em;
     left: 0;
