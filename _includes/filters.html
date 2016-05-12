@@ -1,41 +1,41 @@
 <div class="controls" ng-class="{ active: showDetails}">
-  
+
   <input type="text" id="custom-preview" value="" placeholder="Custom text preview&hellip;" ng-model="customPreview">
-  
-  <select class="select-tags" ng-model="selectedTags" ng-change="resetPagination();removeFamily()" aria-label="Tag">
+
+  <select class="select-tags" ng-model="selectedTags" ng-change="resetPagination();" aria-label="Tag">
     <option value="" selected disabled>tag</option>
     <option ng-selected="[[ tag.tag == selectedTags ]]" ng-repeat="tag in tags" value="[[tag.tag]]">[[tag.tag]]</option>
   </select>
-  
-  <select ng-model="selectedCategory" ng-show="categories" ng-change="resetPagination();setSearch('category',selectedCategory);removeFamily()" aria-label="Category">
+
+  <select ng-model="selectedCategory" ng-show="categories" ng-change="resetPagination();setSearch('category',selectedCategory);" aria-label="Category">
     <option value="" selected disabled>category</option>
     <option ng-selected="[[ key.category == selectedCategory ]]" ng-repeat="key in categories | orderBy: 'category' " value="[[key.category]]">[[key.category]]</option>
   </select>
-  
-  <select ng-model="selectedSubsets" ng-show="subsets" ng-change="resetPagination();setSearch('subset',selectedSubsets);removeFamily()" aria-label="Subset">
+
+  <select ng-model="selectedSubsets" ng-show="subsets" ng-change="resetPagination();setSearch('subset',selectedSubsets);" aria-label="Subset">
     <option value="" selected disabled>subset</option>
     <option ng-selected="[[ key.subset == selectedSubsets ]]" ng-repeat="key in subsets | orderBy: 'subset' " value="[[key.subset]]">[[key.subset]]</option>
   </select>
-  
-  <select ng-model="selectedVariants" ng-show="variants" ng-change="resetPagination();setSearch('variant',selectedVariants);removeFamily()" aria-label="Variant">
+
+  <select ng-model="selectedVariants" ng-show="variants" ng-change="resetPagination();setSearch('variant',selectedVariants);" aria-label="Variant">
     <option value="" selected disabled>variant</option>
     <option ng-selected="[[ key.variant == selectedVariants ]]" ng-repeat="key in variants | orderBy: 'variant' " value="[[key.variant]]">[[key.variant]]</option>
   </select>
-  
+
   <!--
-  <select ng-model="selectedVariantCount" ng-show="variants" ng-change="resetPagination();setSearch('variantCount',selectedVariantCount);removeFamily()" aria-label="Variant Count" ng-options="item.count as item.count for item in variantCount track by item.count">
+  <select ng-model="selectedVariantCount" ng-show="variants" ng-change="resetPagination();setSearch('variantCount',selectedVariantCount);" aria-label="Variant Count" ng-options="item.count as item.count for item in variantCount track by item.count">
     <option value="">number of variants</option>
-  </select> 
+  </select>
 -->
 
-  
+
   <label class="small"><input class="checkbox" type="checkbox" ng-model="fullVariant" value=""> has bold, italic, and regular</label>
-  
-  <button ng-click="clearFilters();" class="btn btn-clear" ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets || selectedVariantCount || fullVariant || customPreview">Clear</button>
-    
+
+  <button ng-click="clearFilters();" class="btn btn-clear" ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets || selectedVariantCount || fullVariant || customPreview || search">Clear</button>
+
 </div>
 <!-- advanced search -->
-<div class="control-container">		
+<div class="control-container">
   <div class="btn-group">
     <div class="btn" ng-class="{'active':familySorter == 'family'|| familySorter == '-family'} ">
       <label ng-hide="familySorter == 'family'"><input type="radio" name="familySorter" ng-model="familySorter" value="family">A-Z <span ng-hide="familySorter == 'lastModified' || familySorter == '-lastModified'">↑</span></label>
@@ -45,6 +45,6 @@
       <label ng-hide="familySorter == 'lastModified' || familySorter == 'family' || familySorter == '-family'"><input type="radio" name="familySorter" ng-model="familySorter" value="lastModified">Date ↓</label>
     </div>
   </div>
-  
+
   <div ng-model="settings" ng-class="{active:settings}" ng-click="showDetails =! showDetails; settings =! settings" class="btn-settings">{% include settings.svg %}</div>
 </div>
