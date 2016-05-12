@@ -1,27 +1,27 @@
 .container {
-  
+
   @extend %clearfix;
-  
-  
+
+
   margin: 0 auto;
   max-width: $container-width;
   position: relative;
-  
+
   @include breakpoint(medium) {
     padding: 0 1em;
   }
 }
 
 header {
-  
+
   @extend %tight;
-  
+
   background: $accent;
   border-bottom: 1px solid $body-bg;
   font-size: 1.2em;
   margin-bottom: 1em;
   padding: .25em 1em;
-  
+
   @include breakpoint(medium-up) {
     font-size: $font-size;
     height: 35px;
@@ -33,50 +33,50 @@ header {
     width: 100%;
     z-index: 1;
   }
-  
+
   @include breakpoint(medium) {
     padding: .25em .75em;
   }
-  
+
   .title {
     color: $white;
-    
+
     &:hover {
       color: $white;
       text-decoration: underline;
     }
-    
+
   }
-  
+
   .subtitle {
     color: rgba($white, .55);
-    
+
     &:hover {
       color: rgba($white, .55);
       text-decoration: underline;
     }
-    
+
   }
-  
+
 }
 
 .content {
   max-width: 40em;
   position: relative;
-  
+
   @include breakpoint(medium-up) {
     float: right;
     padding-bottom: 5em;
     padding-top: 2em;
     width: 65%;
   }
-  
+
 }
 
 .sidebar {
-  
+
   display: none;
-  
+
   @include breakpoint(medium-up) {
     border-right: 1px dashed rgba($text-color, .2);
     display: block;
@@ -89,27 +89,27 @@ header {
     top: 35px;
     width: 30%;
   }
-  
+
 }
 
 
 
 .select-tags {
-  
+
   @include breakpoint(medium-up) {
     display: none;
   }
-  
+
 }
 
 select {
-  
+
   @extend %upper;
-  
+
   @extend %round;
-  
+
   @extend %tight;
-  
+
   background: lighten($body-bg, 2%);
   border: 1px solid;
   color: $selected-tag;
@@ -129,33 +129,33 @@ input {
   height: 22px;
   line-height: 1.5;
   padding: 0 .5em;
-  
+
   @include placeholder {
     color: lighten($selected-tag, 15%);
     font-family: $sans;
     text-transform: uppercase;
   }
-   
+
 }
 
 
 .search-status {
   @extend %clearfix;
-  
+
   margin-bottom: .5em;
   margin-top: 1em;
-  
+
   .family-tag {
     margin-left: .25em;
     margin-right: .25em;
     position: relative;
   }
-  
+
   .family-tag:hover {
     color: $accent;
     cursor: pointer;
   }
-  
+
   .family-tag:hover:after {
     content: '\00D7';
     font-size: 5em;
@@ -166,18 +166,18 @@ input {
     top: -.35em;
     width: 100%;
   }
-  
+
 }
 
 .no-results {
-  
+
   @extend %fade;
-  
+
   -webkit-animation: fade $transition * 2 forwards 1s;
   animation: fade $transition * 2 forwards 1s;
   font-size: 1.25em;
   margin-top: 3em;
-  
+
 }
 
 
@@ -185,9 +185,9 @@ input {
   margin-bottom: .5em;
   padding-bottom: 1em;
   position: relative;
-  
+
   @include breakpoint(medium-up) {
-    border-bottom: 1px dashed rgba(58, 56, 44, .2);
+    border-bottom: 1px dashed $hr-color;
     margin-top: -5em;
     padding-top: 1em;
     -ms-transform: translateY(-3.75em);
@@ -195,15 +195,15 @@ input {
     transform: translateY(-3.75em);
     transition: $transition;
   }
-  
+
   @include breakpoint(medium) {
-    
+
     select {
       border-radius: 0;
       margin-bottom: .5em;
     }
   }
-  
+
   &.active {
     margin-top: 0;
     -ms-transform: translateY(.5em);
@@ -211,28 +211,28 @@ input {
     transform: translateY(.5em);
     transition: $transition;
   }
-  
+
   label {
     display: inline-block;
     margin: .25em;
   }
-  
+
   .checkbox {
     position: relative;
-    top: 5px;    
+    top: 5px;
   }
-  
+
 }
 
 .control-container {
   position: relative;
-  
-  
+
+
   @include breakpoint(medium-up) {
     float: right;
     top: 18px;
   }
-  
+
   @include breakpoint(medium-down) {
     margin-bottom: 1em;
   }
@@ -245,16 +245,16 @@ hr {
 }
 
 .show-table {
-  
+
   .family-tag {
     display: block;
     text-align: left;
     width: 100%;
   }
-  
+
   .tag-count {
     float: right;
     width: 2em;
   }
-  
+
 }
