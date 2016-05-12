@@ -8,15 +8,15 @@ layout: default
 
 <main class="content">
 	{% include filters.html %}
-	{% include search-status.html %}	
+	{% include search-status.html %}
 	<div class="families" id="families">
 		<!-- individual font -->
 		<div class="family" ng-repeat="font in searchCount=( data |
-		filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory, variantCount: (selectedVariantCount || undefined), family: selectedFamily, fullVariant:(fullVariant || undefined) }:true ) | orderBy: familySorter | startFrom: starter | limitTo:pageSize">
+		filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory, variantCount: (selectedVariantCount || undefined), family: selectedFamily, fullVariant:(fullVariant || undefined) }:true | filter:search ) | orderBy: familySorter | startFrom: starter | limitTo:pageSize">
 		<!-- links to google font page -->
 		<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link[[ (selectedSubsets.indexOf('hebrew') == 0 || selectedSubsets.indexOf('arabic') == 0) && ' language-rtl' || '' ]]" title="Font: [[font.family]]">
 			<!-- builds the inline styles & displays font name -->
-			<div class="family-title" style="[[familyStyle(font)]]">				
+			<div class="family-title" style="[[familyStyle(font)]]">
 				[[ languageSample(font) ]]
 				<span class="family-name[[ (font.subsets.indexOf('latin') < 0 || selectedSubsets.indexOf('latin') < 0 ) && ' family-title-small'|| '']]">[[customPreview && customPreview || font.family]]</span>
 			</div>
@@ -46,7 +46,7 @@ layout: default
 </div>
 
 <section class="preview-container" ng-class="{active: preview}">
-	<div class="container preview" style="font-family: '[[preview]]';">		
+	<div class="container preview" style="font-family: '[[preview]]';">
 		<div class="btn-close" ng-click="selectPreview(undefined)">&times;</div>
 		<p>Previewing: <a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[preview.replace(' ','+')]]">[[preview]]</a></p>
 		<div ng-click="selectPreview(undefined)">

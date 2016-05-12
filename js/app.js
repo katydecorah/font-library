@@ -32,7 +32,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     'thai':'สวัสดีชาวโลก',
     'vietnamese':'xin chào'
   };
-  
+
   $scope.$watch(function () { return $location.url(); }, function () {
     var path = $location.path().split('/'),
     locationSearch = path[1],
@@ -40,6 +40,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     $scope.selectedCategory = $location.search().category;
     $scope.selectedSubsets = $location.search().subset;
     $scope.selectedVariants = $location.search().variant;
+    $scope.search = $location.search().search;
     $scope.selectedVariantCount = parseInt($location.search().variantCount);
     $scope.selectedFamily = $location.search().family;
     if ($.isNumeric(locationSearch)) {
@@ -65,20 +66,20 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
       $scope.selectedTags = locationSearch.split('+').join(' ');
     }
   });
-  
-  
+
+
   $http.get('families.json')
   .then(function(res){
     $scope.dataTemp = res.data;
     $scope.helpWantedNewFont();
   });
-  
+
   // merges families.json and Google Fonts API
   $http.get($scope.url).success(function(res){
     $scope.api = res.items;
     $scope.data = merge($scope.dataTemp,$scope.api);
     // create unique tag array
-    $scope.tags = _.map(  
+    $scope.tags = _.map(
       _.chain($scope.data)
       .pluck('tags')
       .flatten()
@@ -87,7 +88,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
         return { tag: key, value: num }
       });
       // create unique variants array
-      $scope.variants = _.map(  
+      $scope.variants = _.map(
         _.chain($scope.data)
         .pluck('variants')
         .flatten()
@@ -96,16 +97,16 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
           return { variant: key }
         });
         // create unique variant count array
-        $scope.variantCount = _.map(  
+        $scope.variantCount = _.map(
           _.chain($scope.data)
           .pluck('variantCount')
           .flatten()
           .countBy()
           .value() , function (num,key) {
-            return  { count: parseInt(key) } 
+            return  { count: parseInt(key) }
           });
         // create unique subset array
-        $scope.subsets = _.map(  
+        $scope.subsets = _.map(
           _.chain($scope.data)
           .pluck('subsets')
           .flatten()
@@ -114,7 +115,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             return { subset: key }
           });
           // create unique category array
-          $scope.categories = _.map(  
+          $scope.categories = _.map(
             _.chain($scope.data)
             .pluck('category')
             .flatten()
@@ -126,7 +127,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             // If app can't connect to Google Font API then just use families.json data
             $scope.data = $scope.dataTemp;
           });
-          
+
           // reiterate: this breaks when the APIs aren't 1:1
           function merge(obj1,obj2) {
             var result = [];
@@ -135,7 +136,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
               var match = _.where(obj2, {family: obj1[i].family});
               if (match) {
                 // if there's a match push it to the final dataarray
-                
+
                 // Check for main variants
                 var hasItalic = false, hasBold = false,hasRegular = false,fullVariant = false;
                 if ( match[0].variants.indexOf('italic') != -1 ) {
@@ -147,11 +148,11 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
                 if ( match[0].variants.indexOf('500') != -1 || match[0].variants.indexOf('600') != -1 || match[0].variants.indexOf('700') != -1 || match[0].variants.indexOf('800') != -1 || match[0].variants.indexOf('900') != -1 ) {
                   hasBold = true;
                 }
-                
+
                 if (hasBold && hasRegular && hasItalic) {
                   fullVariant = true
                 }
-                
+
                 result.push({
                   'family' : obj1[i].family,
                   'tags' : obj1[i].tags,
@@ -176,19 +177,19 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
           $scope.helpWantedNewFont = function() {
             var storedFamilies = [],
             apiFamilies = [];
-            
+
             angular.forEach($scope.dataTemp, function(key) {
               storedFamilies.push(key.family);
             });
-            
+
             $http.get($scope.url)
             .then(function(res){
               $scope.api = res.data.items;
-              
+
               angular.forEach($scope.api, function(key) {
                 apiFamilies.push(key.family);
               });
-              
+
               var needToAdd = _.difference(apiFamilies,storedFamilies);
               if (needToAdd.length) {
                 console.groupCollapsed("New font alert!");
@@ -205,22 +206,22 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
               }
             });
           };
-          
+
           $scope.sendAnalytics = function() {
             $window.ga('send', 'pageview', { page: '/#'+$location.url() });
           };
-          
+
           $scope.updateLocation = function() {
             $location.path("/"+$scope.selectedTags.replace(' ','+'));
             $scope.sendAnalytics();
           };
-          
+
           $scope.reset = function() {
             $location.path("");
           };
-          
+
           $scope.updateLocPage = function(i) {
-            
+
             if( $scope.selectedTags) {
               $location.path("/"+$scope.selectedTags.replace(' ','+')+"/"+ ($scope.currentPage));
             } else {
@@ -229,7 +230,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             window.scrollTo(0, 0);
             $scope.sendAnalytics();
           };
-          
+
           $scope.resetPagination = function() {
             $scope.currentPage = 1;
             if ($scope.selectedTags) {
@@ -241,11 +242,11 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             $scope.preview = undefined;
             window.scrollTo(0, 0);
           };
-          
+
           $scope.setSearch = function(x,y) {
             $location.search(x, y);
           }
-          
+
           $scope.selectTag = function(i) {
             $scope.selectedTags = i;
             $scope.resetPagination();
@@ -255,11 +256,11 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             $scope.preview = undefined;
             $scope.removeFamily();
           };
-          
+
           $scope.selectPreview = function(i) {
             $scope.preview = i;
           };
-          
+
           $scope.selectPreviewVariants = function(i) {
             var styles;
             if ( i.indexOf('italic') > 0 ){
@@ -274,72 +275,80 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             }
             $scope.previewStyles = styles;
           };
-          
+
           $scope.removeTag = function() {
             $scope.selectedTags = undefined;
             $scope.resetPagination();
             $scope.reset();
             $scope.sendAnalytics();
           };
-          
+
+          $scope.removeSearch = function() {
+            $scope.search = undefined;
+            $scope.resetPagination();
+            $scope.reset();
+            $scope.sendAnalytics();
+            $location.search('search', null);
+          };
+
           $scope.removeFamily = function() {
             $scope.selectedFamily = undefined;
             $scope.resetPagination();
             $location.search('family', null);
           };
-          
+
           $scope.removeCategory = function() {
             $scope.selectedCategory = undefined;
             $scope.resetPagination();
             $location.search('category', null);
           };
-          
+
           $scope.removeVariant = function() {
             $scope.selectedVariants = undefined;
             $scope.resetPagination();
             $location.search('variant', null);
           };
-          
+
           $scope.removeFullVariants = function() {
             $scope.fullVariant = undefined;
             $scope.resetPagination();
           };
-          
+
           $scope.removeVariantCount = function() {
               $scope.selectedVariantCount = undefined;
               $scope.resetPagination();
               $location.search('variantCount', null);
             };
-          
+
           $scope.removeSubset = function() {
             $scope.selectedSubsets = undefined;
             $scope.resetPagination();
             $location.search('subset', null);
           };
-          
+
           $scope.numberOfPages=function(){
             var myFilteredData = $filter('filter')($scope.data,$scope.search,true);
             return Math.ceil(myFilteredData.length/$scope.pageSize);
           };
-          
+
           $scope.numberOfResults=function(){
             var myFilteredData = $filter('filter')($scope.data,$scope.search,true);
             return Math.ceil(myFilteredData.length);
           };
-          
+
           // build out the style attr for the font based on the search parameters and what the font supports
           $scope.familyStyle = function(font) {
-            
+
             var style = 'font-family: "' + font.family + '";';
-            
+
             if ( font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') >= 0 ) {
               style += 'font-style: italic;';
             }
-            
+
             if ( font.variants.indexOf('regular') < 0 && font.variants.indexOf('italic') < 0 ) {
               style += 'font-weight: '+font.variants[0] +';';
             }
-            
+
             // when users filters by variant
             if ($scope.selectedVariants != undefined) {
               if ($scope.selectedVariants.match('italic') == 'italic') {
@@ -349,18 +358,18 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
                 style += 'font-weight: ' + $scope.selectedVariants +';';
               }
             }
-            
+
             return style
           };
-          
+
           // provide sample in language if subset is filtered or the font doesn't have a latin subset
           $scope.languageSample = function(font) {
             var sample;
-            
+
             if ( font.subsets.indexOf('latin') < 0 ) {
               var sample = $scope.languages[font.subsets];
             }
-            
+
             else {
               for (var key in $scope.languages) {
                 if ($scope.selectedSubsets == key) {
@@ -368,11 +377,11 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
                 }
               }
             }
-            
-            
+
+
             return sample
           }
-          
+
           // build the api call to retrieve the font
           $scope.fontCall = function(i) {
             //get font name
@@ -388,7 +397,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             // if no regular or italic?
             if (i.variants.indexOf('regular') < 0 && i.variants.indexOf('italic') < 0 ) {
               font += ':'+i.variants[0];
-            }            
+            }
             // if font is being previewed, get the full char font
             if ( $scope.preview == i.family ) {
               // get all variants
@@ -397,12 +406,12 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             // if the custom preview input exists, then get all of the characters
             else if ($scope.customPreview) {
               //font +='&text=' + encodeURIComponent($scope.customPreview);
-              // ^^ this is too slow 
+              // ^^ this is too slow
             }
             // otherwise get this text for the font
             else {
               font +='&text=' + encodeURIComponent(i.family);
-              
+
               for (var key in $scope.languages) {
                 if ($scope.selectedSubsets == key || i.subsets.indexOf('latin') < 0) {
                   font += encodeURIComponent($scope.languages[key]);
@@ -415,7 +424,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             }
             return font;
           };
-          
+
           $scope.clearFilters = function(){
             $scope.selectedTags =  undefined;
             $scope.selectedSubsets = undefined;
@@ -425,26 +434,27 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             $scope.selectedCategory = undefined;
             $scope.selectedFamily = undefined;
             $scope.customPreview = undefined;
+            $scope.search = undefined;
             $scope.currentPage = 1;
             $location.url($location.path());
             $location.path('');
             $scope.sendAnalytics();
           };
         });
-        
+
         app.filter('startFrom', function() {
           return function(input, start) {
             start = +start;
             return input.slice(start);
           };
         });
-        
+
         app.filter('ceil', function() {
           return function(input) {
             return Math.ceil(input);
           };
         });
-        
+
         // infinite scroll
         $(window).scroll(function() {
           if ($(window).scrollTop() == ( $(document).height() - $(window).height()  ) ) {
