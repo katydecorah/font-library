@@ -42,7 +42,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     $scope.selectedVariants = $location.search().variant;
     $scope.search = $location.search().search;
     $scope.selectedVariantCount = parseInt($location.search().variantCount);
-    $scope.selectedFamily = $location.search().family;
     if ($.isNumeric(locationSearch)) {
       // if it's a number
       $scope.currentPage = parseInt(locationSearch);
@@ -254,7 +253,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             $scope.sendAnalytics();
             $scope.tagCount = undefined;
             $scope.preview = undefined;
-            $scope.removeFamily();
           };
 
           $scope.selectPreview = function(i) {
@@ -289,12 +287,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             $scope.reset();
             $scope.sendAnalytics();
             $location.search('search', null);
-          };
-
-          $scope.removeFamily = function() {
-            $scope.selectedFamily = undefined;
-            $scope.resetPagination();
-            $location.search('family', null);
           };
 
           $scope.removeCategory = function() {
@@ -432,7 +424,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             $scope.selectedVariantCount = undefined;
             $scope.fullVariant = undefined;
             $scope.selectedCategory = undefined;
-            $scope.selectedFamily = undefined;
             $scope.customPreview = undefined;
             $scope.search = undefined;
             $scope.currentPage = 1;
