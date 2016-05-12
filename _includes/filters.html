@@ -1,7 +1,7 @@
 <div class="controls" ng-class="{ active: showDetails}">
 
   <input type="text" id="custom-preview" value="" placeholder="Custom text preview&hellip;" ng-model="customPreview">
-  
+
   <select class="select-tags" ng-model="selectedTags" ng-change="resetPagination();" aria-label="Tag">
     <option value="" selected disabled>tag</option>
     <option ng-selected="[[ tag.tag == selectedTags ]]" ng-repeat="tag in tags" value="[[tag.tag]]">[[tag.tag]]</option>
@@ -31,7 +31,7 @@
 
   <label class="small"><input class="checkbox" type="checkbox" ng-model="fullVariant" value=""> has bold, italic, and regular</label>
 
-  <button ng-click="clearFilters();" class="btn btn-clear" ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets || selectedVariantCount || fullVariant || customPreview">Clear</button>
+  <button ng-click="clearFilters();" class="btn btn-clear" ng-show="selectedTags || selectedCategory || selectedVariants || selectedSubsets || selectedVariantCount || fullVariant || customPreview || search">Clear</button>
 
 </div>
 <!-- advanced search -->
