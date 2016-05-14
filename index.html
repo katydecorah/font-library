@@ -11,8 +11,7 @@ layout: default
 	{% include search-status.html %}
 	<div class="families" id="families">
 		<!-- individual font -->
-		<div class="family" ng-repeat="font in searchCount=( data |
-		filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory, variantCount: (selectedVariantCount || undefined), fullVariant:(fullVariant || undefined) }:true | filter:search ) | orderBy: familySorter | startFrom: starter | limitTo:pageSize">
+		<div class="family" ng-repeat="{{site.filter}}">
 		<!-- links to google font page -->
 		<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link[[ (selectedSubsets.indexOf('hebrew') == 0 || selectedSubsets.indexOf('arabic') == 0) && ' language-rtl' || '' ]]" title="Font: [[font.family]]">
 			<!-- builds the inline styles & displays font name -->

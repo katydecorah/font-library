@@ -7,6 +7,14 @@ image:
 github: https://github.com/katydecorah/font-library
 contributing: https://github.com/katydecorah/font-library/blob/gh-pages/CONTRIBUTING.md
 
+### The brains
+# Used in head.html (gets the fonts)
+# and index.html (outputs the data)
+###
+filter: |
+  font in searchCount=( data |
+  filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory, variantCount: (selectedVariantCount || undefined), fullVariant:(fullVariant || undefined) }:true | filter:search ) | orderBy: familySorter | startFrom: starter | limitTo:pageSize
+
 angular: 1.5.5
 jquery: 2.2.3
 underscore: 1.8.3

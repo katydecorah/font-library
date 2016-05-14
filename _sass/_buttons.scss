@@ -50,21 +50,6 @@
 
 }
 
-.btn-small {
-  border-radius: .5em;
-  box-shadow: none;
-  cursor: pointer;
-  font-size: .8em;
-  height: 21px;
-  padding-top: 2px;
-
-  &.active {
-    background: $accent;
-    color: $white;
-  }
-
-}
-
 .btn-group-inputs {
   display: block;
   margin-bottom: 1em;
@@ -140,36 +125,4 @@
     display: block;
   }
 
-}
-
-.btn-settings {
-
-  @extend %fade;
-
-  cursor: pointer;
-  display: inline-block;
-  font-size: .8em;
-  margin-left: 2em;
-  position: relative;
-  top: 7px;
-  width: 21px;
-
-  @include breakpoint(medium-down) {
-    display: none;
-  }
-
-  path {
-
-    @extend %fade;
-
-    fill: $text-color;
-  }
-
-  &:hover path,
-  &.active path {
-
-    @extend %fade;
-
-    fill: $accent;
-  }
 }

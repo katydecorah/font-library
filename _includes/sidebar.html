@@ -1,5 +1,6 @@
 <div class="sidebar-group">
-  <input class="input-text input-large" type="search" ng-model="search" placeholder="Search&hellip;" ng-change="setSearch('search',search)">
+  <label class="hide" for="search">Search</label>
+  <input id="search" class="input-text input-large" type="search" ng-model="search" placeholder="Search&hellip;" ng-change="setSearch('search',search)">
 </div>
 
 <div class="controls sidebar-group">
@@ -8,26 +9,26 @@
   <input class="input-text" type="text" id="custom-preview" value="" placeholder="Custom text preview&hellip;" ng-model="customPreview">
 
   <select class="select-tags" ng-model="selectedTags" ng-change="resetPagination();" aria-label="Tag">
-    <option value="" selected disabled>tag</option>
+    <option value="" selected disabled>Choose a tag</option>
     <option ng-selected="[[ tag.tag == selectedTags ]]" ng-repeat="tag in tags" value="[[tag.tag]]">[[tag.tag]]</option>
   </select>
 
   <label class="select-label" for="category">Category</label>
   <select id="category" ng-model="selectedCategory" ng-show="categories" ng-change="resetPagination();setSearch('category',selectedCategory);" aria-label="Category">
-    <option value="" selected disabled>category</option>
+    <option value="" selected disabled>Choose a category</option>
     <option ng-selected="[[ key.category == selectedCategory ]]" ng-repeat="key in categories | orderBy: 'category' " value="[[key.category]]">[[key.category]]</option>
   </select>
 
   <label for="subsets" class="select-label">Subset</label>
   <select id="subsets" ng-model="selectedSubsets" ng-show="subsets" ng-change="resetPagination();setSearch('subset',selectedSubsets);" aria-label="Subset">
-    <option value="" selected disabled>subset</option>
+    <option value="" selected disabled>Choose a subset</option>
     <option ng-selected="[[ key.subset == selectedSubsets ]]" ng-repeat="key in subsets | orderBy: 'subset' " value="[[key.subset]]">[[key.subset]]</option>
   </select>
 
 
   <label for="variants" class="select-label">Variant</label>
   <select id="variants" ng-model="selectedVariants" ng-show="variants" ng-change="resetPagination();setSearch('variant',selectedVariants);" aria-label="Variant">
-    <option value="" selected disabled>variant</option>
+    <option value="" selected disabled>Choose a variant</option>
     <option ng-selected="[[ key.variant == selectedVariants ]]" ng-repeat="key in variants | orderBy: 'variant' " value="[[key.variant]]">[[key.variant]]</option>
   </select>
 

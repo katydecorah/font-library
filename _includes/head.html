@@ -15,8 +15,7 @@
 <link rel="stylesheet" href="{{site.baseurl}}/css/style.css">
 <link href='https://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
 <!-- gets google font-->
-<link ng-href="https://fonts.googleapis.com/css?family=[[fontCall(font)]]" rel="stylesheet" ng-repeat="font in searchCount=( data |
-filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory, variantCount: (selectedVariantCount || undefined), fullVariant:(fullVariant || undefined) }:true | filter:search) | orderBy: familySorter | startFrom: starter | limitTo:pageSize">
+<link ng-href="https://fonts.googleapis.com/css?family=[[fontCall(font)]]" rel="stylesheet" ng-repeat="{{site.filter}}">
 <style>
 [[previewStyles]]
 </style>

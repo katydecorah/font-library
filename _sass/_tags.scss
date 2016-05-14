@@ -31,11 +31,11 @@
     margin-bottom: .25em;
     margin-right: .25em;
   }
-  
+
   &.no-hash:before {
     display: none;
   }
-  
+
   &:before {
     content: '#';
   }
@@ -63,32 +63,28 @@
   color: lighten($text-color, 50%);
 }
 
-.by-name {
-  padding-bottom: 5em;
-}
-
 .tag-header {
-  
+
   @extend %small;
-  
+
   margin-bottom: .5em;
   padding: 0 .3em;
-  
+
   input {
     display: none;
   }
-  
+
   .tag-header-tag,
   .tag-header-count {
     display: inline-block;
   }
-  
+
   label {
     cursor: pointer;
   }
-  
+
   .tag-header-count {
     float: right;
   }
-  
+
 }
