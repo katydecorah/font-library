@@ -15,14 +15,15 @@ port: 4000
 host: 127.0.0.1
 
 exclude:
-  - "*.lock"
-  - "Gemfile"
-  - ".scss-lint.yml"
-  - "Rakefile"
-  - ".travis.yml"
-  - "LICENSE"
-  - "README.md"
-  - node_modules
+- Gemfile
+- .scss-lint.yml
+- .travis.yml
+- LICENSE
+- README.md
+- node_modules
+- package.json
+- test
+- CONTRIBUTING.md
 
 sass:
   style: :compressed
