@@ -24,7 +24,7 @@ Add tags to `families.json` as described in the next sections.
 * Avoid ambiguous names for tags; make the tag name intuitive (Would you use this tag to find font X?)
 * The family name must match the Google Font family name exactly
 
-These guidelines are enforced by tests. You can run the tests locally by first running `npm install` from the command line and then `npm run`. Or you can wait to create a pull request and the tests will run there.
+These guidelines are enforced by tests. You can run the tests locally by first running `npm install` from the command line and then `npm test`. Alternatively, you can wait to create a pull request and the tests will run there. 
 
 # Contributing
 
