@@ -4,7 +4,7 @@ Each font family is stored as an object in `families.json`. Each family has an a
 
 # Help wanted
 
-You can to edit `families.json` to add, edit, or improve tags. I recommend starting by tagging fonts that you often want to find for yourself -- curate your own tag! It's likely that someone else will dig your collection.
+You can edit `families.json` to add, edit, or improve tags. I recommend starting by tagging fonts that you often want to find for yourself -- curate your own tag! It's likely that someone else will dig your collection.
 
 Click **Need tags** to show all fonts that haven't been tagged yet:
 
