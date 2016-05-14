@@ -1,7 +1,7 @@
 $text-color: #3a382c;
 $body-bg: #f0eee7;
 $header-bg: #2c3e50;
-$sidebar-bg: #c5bfa0;
+$sidebar-bg: rgb(247, 246, 243);
 $search-bg: #34495e;
 $hr-color: rgba(58, 56, 44, .2);
 $accent: #db4053;
@@ -10,6 +10,7 @@ $black: #000;
 $link-color: #8e44ad;
 $sans: 'Unica One', sans-serif;
 $container-width: 950px;
+
 
 $font-size: 16px;
 
@@ -75,5 +76,11 @@ $transition: .2s;
 
   @include optional-at-root(':-ms-input-placeholder') {
     @content;
+  }
+}
+
+@include breakpoint(medium-down) {
+  .hide-mobile {
+    display: none;
   }
 }

@@ -1,9 +1,52 @@
-<input type="search" ng-model="search" placeholder="Search&hellip;" ng-change="setSearch('search',search)">
+<div class="sidebar-group">
+  <input class="input-text input-large" type="search" ng-model="search" placeholder="Search&hellip;" ng-change="setSearch('search',search)">
+</div>
 
-<hr>
+<div class="controls sidebar-group">
+
+  <label for="custom-preview" class="select-label">Preview</label>
+  <input class="input-text" type="text" id="custom-preview" value="" placeholder="Custom text preview&hellip;" ng-model="customPreview">
+
+  <select class="select-tags" ng-model="selectedTags" ng-change="resetPagination();" aria-label="Tag">
+    <option value="" selected disabled>tag</option>
+    <option ng-selected="[[ tag.tag == selectedTags ]]" ng-repeat="tag in tags" value="[[tag.tag]]">[[tag.tag]]</option>
+  </select>
+
+  <label class="select-label" for="category">Category</label>
+  <select id="category" ng-model="selectedCategory" ng-show="categories" ng-change="resetPagination();setSearch('category',selectedCategory);" aria-label="Category">
+    <option value="" selected disabled>category</option>
+    <option ng-selected="[[ key.category == selectedCategory ]]" ng-repeat="key in categories | orderBy: 'category' " value="[[key.category]]">[[key.category]]</option>
+  </select>
+
+  <label for="subsets" class="select-label">Subset</label>
+  <select id="subsets" ng-model="selectedSubsets" ng-show="subsets" ng-change="resetPagination();setSearch('subset',selectedSubsets);" aria-label="Subset">
+    <option value="" selected disabled>subset</option>
+    <option ng-selected="[[ key.subset == selectedSubsets ]]" ng-repeat="key in subsets | orderBy: 'subset' " value="[[key.subset]]">[[key.subset]]</option>
+  </select>
+
+
+  <label for="variants" class="select-label">Variant</label>
+  <select id="variants" ng-model="selectedVariants" ng-show="variants" ng-change="resetPagination();setSearch('variant',selectedVariants);" aria-label="Variant">
+    <option value="" selected disabled>variant</option>
+    <option ng-selected="[[ key.variant == selectedVariants ]]" ng-repeat="key in variants | orderBy: 'variant' " value="[[key.variant]]">[[key.variant]]</option>
+  </select>
+
+
+  <!--
+  <select ng-model="selectedVariantCount" ng-show="variants" ng-change="resetPagination();setSearch('variantCount',selectedVariantCount);" aria-label="Variant Count" ng-options="item.count as item.count for item in variantCount track by item.count">
+  <option value="">number of variants</option>
+</select>
+-->
+
+
+<label for="fullvariant" class="small">has bold, italic, &amp; regular</label>
+<input id="fullvariant" class="checkbox" type="checkbox" ng-model="fullVariant" value="">
+
+</div>
+
 
 <!-- tag index -->
-<div class="tags">
+<div class="tags sidebar-group">
 
   <div class="btn-group-inputs">
     <div class="btn-group" ng-init="tagView = 'list'">
@@ -30,7 +73,9 @@
     <button ng-repeat="tag in tags | orderBy: sorter " class="family-tag" ng-class="{active: tag.tag == selectedTags}" name="tag" ng-model="selectedTags" value="[[tag.tag]]" ng-click="selectTag(tag.tag);">[[tag.tag]] <span class="tag-count" ng-show="tagView == 'table'">[[tag.value]]</span>
     </button>
   </div>
-  <hr>
+</div>
+
+<div class="sidebar-group hide-mobile">
   <div class="tag-heading">Want to help the project?</div>
   <p>Sort by fonts that <label class="family-tag no-hash" ng-class="{active:tagCount === 0 }"><input ng-model="tagCount" type="checkbox" ng-true-value="0" ng-false-value="undefined" class="hide" ng-change="resetPagination(); removeTag(); ">Need tags</label> and then <a href="{{site.contributing}}">check out how to contribute</a>.</p>
 </div>
