@@ -284,8 +284,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
           $scope.removeSearch = function() {
             $scope.search = undefined;
             $scope.resetPagination();
-            $scope.reset();
-            $scope.sendAnalytics();
             $location.search('search', null);
           };
 
