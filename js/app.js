@@ -259,6 +259,14 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             $scope.preview = i;
           };
 
+          $scope.previewCode = function(i) {
+            if ( i == 'monospace') {
+              $scope.previewCodeCategory = true;
+            } else {
+              $scope.previewCodeCategory = false;
+            }
+          };
+
           $scope.selectPreviewVariants = function(i) {
             var styles;
             if ( i.indexOf('italic') > 0 ){
