@@ -50,13 +50,13 @@ layout: default
 		<p>Previewing: <a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[preview.replace(' ','+')]]">[[preview]]</a></p>
 		<div ng-click="selectPreview(undefined)" ng-show="previewCodeCategory">
 {% highlight js %}
-function myFunction() {
-  var x = "", i;
-  for (i=0; i<5; i++) {
-    x = x + "The number is " + i + "<br>";
-  }
-  document.getElementById("demo").innerHTML = x;
-}
+// example from http://eloquentjavascript.net/03_functions.html
+var square = function(x) {
+  return x * x;
+};
+
+console.log(square(12));
+// → 144
 {% endhighlight %}
 		</div>
 		<div ng-click="selectPreview(undefined)">{% include lorem.html %}</div>
