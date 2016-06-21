@@ -34,7 +34,7 @@ layout: default
 			</div>
 			<div class="float-right">
 				<!-- preview link -->
-				<button class="meta btn small quiet" ng-hide="selectedSubsets.indexOf('latin') < 0" ng-model="preview" ng-click="selectPreview(font.family);selectPreviewVariants(font.variants)">Preview</button>
+				<button class="meta btn small quiet" ng-hide="selectedSubsets.indexOf('latin') < 0" ng-model="preview" ng-click="selectPreview(font.family);selectPreviewVariants(font.variants);previewCode(font.category);">Preview</button>
 				<!-- link to the font's spec -->
 				<a ng-href="https://www.google.com/fonts/specimen/[[font.family.replace(' ','+')]]" class="meta btn small quiet" target="_blank">Specimen</a>
 				<!-- link to line number -->
@@ -48,9 +48,24 @@ layout: default
 	<div class="container preview" style="font-family: '[[preview]]';">
 		<div class="btn-close" ng-click="selectPreview(undefined)">&times;</div>
 		<p>Previewing: <a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[preview.replace(' ','+')]]">[[preview]]</a></p>
-		<div ng-click="selectPreview(undefined)">
-		{% include lorem.html %}
-	</div>
+		<div ng-click="selectPreview(undefined)" ng-show="previewCodeCategory">
+{% highlight js %}
+function min(a, b) {
+  if (a < b)
+    return a;
+  else
+    return b;
+}
+
+console.log(min(0, 10));
+// → 0
+console.log(min(0, -10));
+// → -10
+
+// code example from http://eloquentjavascript.net/
+{% endhighlight %}
+		</div>
+		<div ng-click="selectPreview(undefined)">{% include lorem.html %}</div>
 	</div>
 </section>
 </main>

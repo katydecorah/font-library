@@ -1,0 +1,177 @@
+figure {
+  margin: 0;
+}
+
+code,
+pre {
+
+  background: $white;
+  border-radius: .2em;
+  hyphens: none;
+  tab-size: 4;
+  white-space: pre-wrap;
+  word-break: break-word;
+  word-spacing: normal;
+}
+
+pre {
+  margin: 1em 0 2em;
+
+  code {
+    background: none;
+    padding: 0;
+  }
+
+}
+
+code {
+  padding: 0 .25em;
+}
+
+
+// Adapted from https://gist.github.com/edwardhotchkiss/2005058
+.highlight {
+
+  .c {color: $highlightcomment;}
+
+  .err {color: $highlighterror;}
+
+  .g {color: $highlightgeneric;}
+
+  .k {color: $highlightkeyword;}
+
+  .l {color: $highlightliteral;}
+
+  .n {color: $highlightname;}
+
+  .o {color: $highlightoperator;}
+
+  .x {color: $highlightother;}
+
+  .p {color: $highlightpunctuation;}
+
+  .cm {color: $highlightcommentmultiline;}
+
+  .cp {color: $highlightcommentpreproc;}
+
+  .c1 {color: $highlightcommentsingle;}
+
+  .cs {color: $highlightcommentspecial;}
+
+  .gd {color: $highlightgenericdeleted;}
+
+  .ge {
+    color: $highlightgenericemph;
+    font-style: italic;
+  }
+
+  .gr {color: $highlightgenericerror;}
+
+  .gh {color: $highlightgenericheading;}
+
+  .gi {color: $highlightgenericinserted;}
+
+  .go {color: $highlightgenericoutput;}
+
+  .gp {color: $highlightgenericprompt;}
+
+  .gs {
+    color: $highlightgenericstrong;
+    font-weight: bold;
+  }
+
+  .gu {color: $highlightgenericsubheading;}
+
+  .gt {color: $highlightgenerictraceback;}
+
+  .kc {color: $highlightkeywordconstant;}
+
+  .kd {color: $highlightkeyworddeclaration;}
+
+  .kn {color: $highlightkeywordnamespace;}
+
+  .kp {color: $highlightkeywordpseudo;}
+
+  .kr {color: $highlightkeywordreserved;}
+
+  .kt {color: $highlightkeywordtype;}
+
+  .ld {color: $highlightliteraldate;}
+
+  .m {color: $highlightliteralnumber;}
+
+  .s {color: $highlightliteralstring;}
+
+  .na {color: $highlightnameattribute;}
+
+  .nb {color: $highlightnamebuiltin;}
+
+  .nc {color: $highlightnameclass;}
+
+  .no {color: $highlightnameconstant;}
+
+  .nd {color: $highlightnamedecorator;}
+
+  .ni {color: $highlightnameentity;}
+
+  .ne {color: $highlightnameexception;}
+
+  .nf {color: $highlightnamefunction;}
+
+  .nl {color: $highlightnamelabel;}
+
+  .nn {color: $highlightnamenamespace;}
+
+  .nx {color: $highlightnameother;}
+
+  .py {color: $highlightnameproperty;}
+
+  .nt {color: $highlightnametag;}
+
+  .nv {color: $highlightnamevariable;}
+
+  .ow {color: $highlightoperatorword;}
+
+  .w {color: $highlighttextwhitespace;}
+
+  .mf {color: $highlightliteralnumberfloat;}
+
+  .mh {color: $highlightliteralnumberhex;}
+
+  .mi {color: $highlightliteralnumberinteger;}
+
+  .mo {color: $highlightliteralnumberoct;}
+
+  .sb {color: $highlightliteralstringbacktick;}
+
+  .sc {color: $highlightliteralstringchar;}
+
+  .sd {color: $highlightliteralstringdoc;}
+
+  .s2 {color: $highlightliteralstringdouble;}
+
+  .se {color: $highlightliteralstringescape;}
+
+  .sh {color: $highlightliteralstringheredoc;}
+
+  .si {color: $highlightliteralstringinterpol;}
+
+  .sx {color: $highlightliteralstringother;}
+
+  .sr {color: $highlightliteralstringregex;}
+
+  .s1 {color: $highlightliteralstringsingle;}
+
+  .ss {color: $highlightliteralstringsymbol;}
+
+  .bp {color: $highlightnamebuiltinpseudo;}
+
+  .vc {color: $highlightnamevariableclass;}
+
+  .vg {color: $highlightnamevariableglobal;}
+
+  .vi {color: $highlightnamevariableinstance;}
+
+  .il {color: $highlightliteralnumberintegerlong;}
+
+}
