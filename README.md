@@ -1,7 +1,7 @@
 Font Library [![Build Status](https://travis-ci.org/katydecorah/font-library.svg?branch=gh-pages)](https://travis-ci.org/katydecorah/font-library)
 -----------
 
-The are over 700 [Google Fonts](http://www.google.com/fonts), let's organize them! See [CONTRIBUTING.md](https://github.com/katydecorah/font-library/blob/gh-pages/CONTRIBUTING.md) to get started.
+The are over 800 [Google Fonts](http://www.google.com/fonts), let's organize them! See [CONTRIBUTING.md](https://github.com/katydecorah/font-library/blob/gh-pages/CONTRIBUTING.md) to get started.
 
 ## Build
 
