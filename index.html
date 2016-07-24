@@ -13,7 +13,7 @@ layout: default
 		<!-- individual font -->
 		<div class="family" ng-repeat="{{site.filter}}">
 		<!-- links to google font page -->
-		<a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[font.family.replace(' ','+')]]" class="family-link[[ (selectedSubsets.indexOf('hebrew') == 0 || selectedSubsets.indexOf('arabic') == 0) && ' language-rtl' || '' ]]" title="Font: [[font.family]]">
+		<a ng-href="https://fonts.google.com/specimen/[[font.family.replace(' ','+')]]" class="family-link[[ (selectedSubsets.indexOf('hebrew') == 0 || selectedSubsets.indexOf('arabic') == 0) && ' language-rtl' || '' ]]" title="Font: [[font.family]]">
 			<!-- builds the inline styles & displays font name -->
 			<div class="family-title" style="[[familyStyle(font)]]">
 				[[ languageSample(font) ]]
@@ -36,7 +36,7 @@ layout: default
 				<!-- preview link -->
 				<button class="meta btn small quiet" ng-hide="selectedSubsets.indexOf('latin') < 0" ng-model="preview" ng-click="selectPreview(font.family);selectPreviewVariants(font.variants);previewCode(font.category);">Preview</button>
 				<!-- link to the font's spec -->
-				<a ng-href="https://www.google.com/fonts/specimen/[[font.family.replace(' ','+')]]" class="meta btn small quiet" target="_blank">Specimen</a>
+				<a ng-href="https://fonts.google.com/specimen/[[font.family.replace(' ','+')]]" class="meta btn small quiet" target="_blank">Specimen</a>
 				<!-- link to line number -->
 				<a ng-href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L[[font.lineNumber]]" class="meta btn small quiet" target="_blank">Edit</a>
 			</div>
@@ -47,7 +47,7 @@ layout: default
 <section class="preview-container" ng-class="{active: preview}">
 	<div class="container preview" style="font-family: '[[preview]]';">
 		<div class="btn-close" ng-click="selectPreview(undefined)">&times;</div>
-		<p>Previewing: <a ng-href="http://www.google.com/fonts#UsePlace:use/Collection:[[preview.replace(' ','+')]]">[[preview]]</a></p>
+		<p>Previewing: <a ng-href="https://fonts.google.com/specimen/[[preview.replace(' ','+')]]">[[preview]]</a></p>
 		<div ng-click="selectPreview(undefined)" ng-show="previewCodeCategory">
 {% highlight js %}
 function min(a, b) {
