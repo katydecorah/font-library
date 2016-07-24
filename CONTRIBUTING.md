@@ -1,10 +1,12 @@
-Font Library is built with [Jekyll](http://jekyllrb.com/) and [AngularJS](https://angularjs.org/), but you don't need to know either to add or edit the tags &mdash; you only need to edit a file!
+Font Library is built with [Jekyll](http://jekyllrb.com/) and [AngularJS](https://angularjs.org/), but you don't need to know either to add or edit the tags &mdash; you only need to edit a file! First-time contributors welcome here :tada:!
 
-Each font family is stored as an object in `families.json`. Each family has an array of tags.
+Each font family is stored as an object in [families.json](families.json). Each family has an array of tags.
+
+![image](https://cloud.githubusercontent.com/assets/2180540/17084462/722b9f52-518c-11e6-97bb-b3f710395542.png)
 
 # Help wanted
 
-You can edit `families.json` to add, edit, or improve tags. I recommend starting by tagging fonts that you often want to find for yourself &mdash; curate your own tag! It's likely that someone else will dig your collection.
+You can edit [families.json](families.json) to add, edit, or improve tags. I recommend starting by tagging fonts that you often want to find for yourself &mdash; curate your own tag! It's likely that someone else will dig your collection.
 
 You can also click **Need tags** to show all fonts that haven't been tagged yet:
 
@@ -12,7 +14,7 @@ You can also click **Need tags** to show all fonts that haven't been tagged yet:
 
 # Editing families.json guidelines
 
-[View families.json](https://github.com/katydecorah/font-library/blob/gh-pages/families.json)
+[View families.json](families.json)
 
 * Keep the list alphabetical by family name
 * Tags are lowercase
@@ -45,7 +47,7 @@ When creating a pull request, it's helpful to:
 
 * Double check your tags and ask yourself if it's something that you would use to find fonts
 * Provide a brief description of the tags you added or changed
-* Edit tags in small batches (<20 edits) to make reviewing quicker and easier
+* Edit tags in small batches (<20 edits) to help speed up the reviewing process
 
 :grey_question: If you're new to Github, I recommend reading: [Creating a pull request](https://help.github.com/articles/creating-a-pull-request/). 
 
