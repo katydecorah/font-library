@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "An open source project to tag and organize Google Fonts.",
   "scripts": {
-    "test": "scss-lint _sass/*.scss && jsonlint families.json -q && tape test/*.js | tap-spec"
+    "test": "scss-lint _sass/*.scss && jsonlint families.json -q && tape test/*.js | tap-min"
   },
   "dependencies": {
     "jsonlint": "^1.6.2",
@@ -11,8 +11,8 @@
   },
   "devDependencies": {
     "js-yaml": "^2.1.3",
-    "request": "^2.72.0",
-    "tap-spec": "~4.1.1",
-    "tape": "^4.5.1"
+    "request": "^2.74.0",
+    "tap-min": "^1.1.0",
+    "tape": "^4.6.0"
   }
 }
