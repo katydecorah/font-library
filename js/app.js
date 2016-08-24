@@ -70,7 +70,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   $http.get('families.json')
   .then(function(res){
     $scope.dataTemp = res.data;
-    $scope.helpWantedNewFont();
   });
 
   // merges families.json and Google Fonts API
@@ -171,40 +170,6 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
             }
             return result;
           }
-          // reiterate this
-          /* log new fonts - fonts that needs to be added to families.json */
-          $scope.helpWantedNewFont = function() {
-            var storedFamilies = [],
-            apiFamilies = [];
-
-            angular.forEach($scope.dataTemp, function(key) {
-              storedFamilies.push(key.family);
-            });
-
-            $http.get($scope.url)
-            .then(function(res){
-              $scope.api = res.data.items;
-
-              angular.forEach($scope.api, function(key) {
-                apiFamilies.push(key.family);
-              });
-
-              var needToAdd = _.difference(apiFamilies,storedFamilies);
-              if (needToAdd.length) {
-                console.groupCollapsed("New font alert!");
-                console.info("Copy and paste the following into families.json. Be sure to keep the font family names in alphabetical order.");
-                angular.forEach(needToAdd, function(key) {
-                  var found = $filter('filter')($scope.api, {family: key}, true);
-                  if (found.length) {
-                    var cat = found[0].category;
-                  }
-                  var lineNumb = parseInt(_.sortedIndex(storedFamilies,key)) + 2;
-                  console.log('{ "family": "'+key+'", "tags": [] },\t line ' + lineNumb);
-                });
-                console.groupEnd();
-              }
-            });
-          };
 
           $scope.sendAnalytics = function() {
             $window.ga('send', 'pageview', { page: '/#'+$location.url() });
