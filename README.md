@@ -16,6 +16,8 @@ To build the site: `bundle exec jekyll serve --watch`
 
 To test the site, first run `npm install` and then `npm test`.
 
+To add new Google Fonts automatically to the library, run `npm run update-fonts`.
+
 ## License
 
 [The MIT License (MIT)](LICENSE)
