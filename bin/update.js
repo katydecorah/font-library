@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+
+// Require dependencies
 var request = require('request');
 var http = require('http'); 
 var fs = require('fs');
@@ -35,13 +38,6 @@ request.get('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7
     
     // if there are missing fonts
     if (missing.length > 0) {
-      // sort the library
-      function sortByKey(array, key) {
-        return array.sort(function(a, b) {
-          var x = a[key]; var y = b[key];
-          return ((x < y) ? -1 : ((x > y) ? 1 : 0));
-        });
-      }
       library = sortByKey(library, 'family');
       
       // write new data to families.json
@@ -52,4 +48,12 @@ request.get('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7
       console.log('No new fonts to add');
     }
   }
-});  
+});
+
+// sort the library
+function sortByKey(array, key) {
+  return array.sort(function(a, b) {
+    var x = a[key]; var y = b[key];
+    return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+  });
+}

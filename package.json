@@ -7,6 +7,7 @@
     "update-fonts": "node scripts/find.js"
   },
   "dependencies": {
+    "json-stringify-pretty-compact": "^1.0.2",
     "jsonlint": "^1.6.2",
     "scsslint": "0.0.3"
   },
@@ -15,5 +16,8 @@
     "request": "^2.74.0",
     "tap-min": "^1.1.0",
     "tape": "^4.6.0"
+  },
+  "bin": {
+    "update-library": "bin/update.js"
   }
 }
