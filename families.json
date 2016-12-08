@@ -534,6 +534,7 @@
   {"family": "Nova Square", "tags": ["square"]},
   {"family": "Numans", "tags": ["grotesque"]},
   {"family": "Nunito", "tags": ["rounded"]},
+  {"family": "Nunito Sans", "tags": []},
   {"family": "Odor Mean Chey", "tags": ["tall"]},
   {"family": "Offside", "tags": ["monolinear", "futuristic", "headlines"]},
   {"family": "Old Standard TT", "tags": ["classic"]},
