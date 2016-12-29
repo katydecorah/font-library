@@ -15,8 +15,8 @@ filter: |
   font in searchCount=( data |
   filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory, variantCount: (selectedVariantCount || undefined), fullVariant:(fullVariant || undefined) }:true | filter:search ) | orderBy: familySorter | startFrom: starter | limitTo:pageSize
 
-angular: 1.5.5
-jquery: 2.2.3
+angular: 1.6.1
+jquery: 3.1.1
 underscore: 1.8.3
 
 port: 4000
@@ -24,6 +24,7 @@ host: 127.0.0.1
 
 exclude:
 - Gemfile
+- Gemfile.lock
 - .scss-lint.yml
 - .travis.yml
 - LICENSE
