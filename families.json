@@ -267,6 +267,8 @@
   {"family": "Finger Paint", "tags": ["brush", "kids"]},
   {"family": "Fira Mono", "tags": ["code"]},
   {"family": "Fira Sans", "tags": ["legibility"]},
+  {"family": "Fira Sans Condensed", "tags": []},
+  {"family": "Fira Sans Extra Condensed", "tags": []},
   {"family": "Fjalla One", "tags": ["narrow"]},
   {"family": "Fjord One", "tags": ["low contrast"]},
   {"family": "Flamenco", "tags": ["slab", "monolinear"]},
