@@ -1,21 +1,20 @@
 name: Font Library
 baseurl: /font-library
-description: An open source project to tag and organize Google Fonts.
+url: http://katydecorah.com
 permalink: pretty
-image:
+
+description: An open source project to tag and organize Google Fonts.
 github: https://github.com/katydecorah/font-library
 contributing: https://github.com/katydecorah/font-library/blob/gh-pages/CONTRIBUTING.md
 
-### The brains
-# Used in head.html (gets the fonts)
-# and index.html (outputs the data)
-###
-filter: |
-  font in searchCount=( data |
-  filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory, variantCount: (selectedVariantCount || undefined), fullVariant:(fullVariant || undefined) }:true | filter:search ) | orderBy: familySorter | startFrom: starter | limitTo:pageSize
+author:
+  name: Katy DeCorah
+  email: katydecorah@gmail.com
+  uri: http://katydecorah.com
+  twitter: katydecorah
 
-angular: 1.5.5
-jquery: 2.2.3
+angular: 1.6.1
+jquery: 3.1.1
 underscore: 1.8.3
 
 port: 4000
@@ -23,6 +22,7 @@ host: 127.0.0.1
 
 exclude:
 - Gemfile
+- Gemfile.lock
 - .scss-lint.yml
 - .travis.yml
 - LICENSE
@@ -31,6 +31,19 @@ exclude:
 - package.json
 - test
 - CONTRIBUTING.md
+- scripts
+
+gems:
+- jekyll-sitemap
+- jekyll-feed
 
 sass:
   style: :compressed
+
+### The brains
+# Used in head.html (gets the fonts)
+# and index.html (outputs the data)
+###
+filter: |
+  font in searchCount=( data |
+  filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory, variantCount: (selectedVariantCount || undefined), fullVariant:(fullVariant || undefined) }:true | filter:search ) | orderBy: familySorter | startFrom: starter | limitTo:pageSize
