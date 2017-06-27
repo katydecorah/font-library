@@ -98,6 +98,7 @@
   {"family": "Baumans", "tags": ["monolinear", "large sizes", "headlines"]},
   {"family": "Bayon", "tags": ["monolinear"]},
   {"family": "Belgrano", "tags": ["slab"]},
+  {"family": "Bellefair", "tags": []},
   {"family": "Belleza", "tags": ["humanist"]},
   {"family": "BenchNine", "tags": ["condensed", "headlines"]},
   {"family": "Bentham", "tags": ["engraved"]},
@@ -817,5 +818,6 @@
   {"family": "Yeseva One", "tags": ["didone"]},
   {"family": "Yesteryear", "tags": ["cursive", "1940s"]},
   {"family": "Yrsa", "tags": []},
-  {"family": "Zeyada", "tags": ["scrawl"]}
+  {"family": "Zeyada", "tags": ["scrawl"]},
+  {"family": "Zilla Slab", "tags": []}
 ]
