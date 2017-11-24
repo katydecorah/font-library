@@ -12,8 +12,8 @@
   },
   "devDependencies": {
     "js-yaml": "^2.1.3",
-    "request": "^2.79.0",
-    "tap-min": "^1.1.0",
+    "request": "^2.83.0",
+    "tap-min": "^1.2.2",
     "tape": "^4.8.0"
   },
   "bin": {

@@ -33,7 +33,7 @@ exclude:
 - CONTRIBUTING.md
 - scripts
 
-gems:
+plugins:
 - jekyll-sitemap
 - jekyll-feed
 
