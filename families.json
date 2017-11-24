@@ -845,6 +845,6 @@
   {"family": "Yesteryear", "tags": ["cursive", "1940s"]},
   {"family": "Yrsa", "tags": []},
   {"family": "Zeyada", "tags": ["scrawl"]},
-  {"family": "Zilla Slab", "tags": []},
-  {"family": "Zilla Slab Highlight", "tags": []}
+  {"family": "Zilla Slab", "tags": ["slab"]},
+  {"family": "Zilla Slab Highlight", "tags": ["slab"]}
 ]
