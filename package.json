@@ -6,7 +6,7 @@
     "test": "scss-lint _sass/*.scss && jsonlint families.json -q && tape test/*.js | tap-min"
   },
   "dependencies": {
-    "json-stringify-pretty-compact": "^1.0.4",
+    "json-stringify-pretty-compact": "^1.2.0",
     "jsonlint": "^1.6.2",
     "scsslint": "0.0.3"
   },
