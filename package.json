@@ -13,11 +13,25 @@
   },
   "devDependencies": {
     "js-yaml": "^2.1.3",
-    "request": "^2.87.0",
-    "tap-min": "^1.2.2",
-    "tape": "^4.9.1"
+    "request": "^2.88.0",
+    "tap-min": "^1.3.0",
+    "tape": "^4.10.1"
   },
   "bin": {
     "update-library": "bin/update.js"
-  }
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katydecorah/font-library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katydecorah/font-library/issues"
+  },
+  "homepage": "https://github.com/katydecorah/font-library#readme"
 }
