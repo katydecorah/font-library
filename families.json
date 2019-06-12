@@ -591,6 +591,7 @@
   {"family": "Nothing You Could Do", "tags": ["scrawl", "handwritten"]},
   {"family": "Noticia Text", "tags": ["slab", "humanist", "small sizes", "hinted"]},
   {"family": "Noto Sans", "tags": ["hinted"]},
+  {"family": "Noto Sans HK", "tags": []},
   {"family": "Noto Sans JP", "tags": []},
   {"family": "Noto Sans KR", "tags": []},
   {"family": "Noto Sans SC", "tags": []},
