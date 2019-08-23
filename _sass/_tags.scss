@@ -1,4 +1,3 @@
-
 .tag-heading {
   margin-bottom: 1em;
 }
@@ -8,7 +7,6 @@
 }
 
 .family-tag {
-
   @extend %small;
 
   @extend %lighten;
@@ -25,11 +23,11 @@
   border: 0;
   cursor: pointer;
   display: inline-block;
-  padding: .2em .3em;
+  padding: 0.2em 0.3em;
 
   .sidebar & {
-    margin-bottom: .25em;
-    margin-right: .25em;
+    margin-bottom: 0.25em;
+    margin-right: 0.25em;
   }
 
   &.no-hash:before {
@@ -37,38 +35,33 @@
   }
 
   &:before {
-    content: '#';
+    content: "#";
   }
 
   &.active,
   &:hover {
-
     @extend %flat-bg;
 
     @extend %fade;
 
     border-color: $selected-tag;
     color: $selected-tag;
-
   }
 
   &.active {
     cursor: default;
   }
-
 }
-
 
 .tag-count {
   color: lighten($text-color, 50%);
 }
 
 .tag-header {
-
   @extend %small;
 
-  margin-bottom: .5em;
-  padding: 0 .3em;
+  margin-bottom: 0.5em;
+  padding: 0 0.3em;
 
   input {
     display: none;
@@ -86,5 +79,4 @@
   .tag-header-count {
     float: right;
   }
-
 }

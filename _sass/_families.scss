@@ -1,13 +1,13 @@
-
 .family {
-
   @extend %fade;
 
   -webkit-animation: fade $transition * 4 forwards;
   animation: fade $transition * 4 forwards;
   margin-bottom: 1em;
 
-  .cssanimations & { opacity: 0; }
+  .cssanimations & {
+    opacity: 0;
+  }
 }
 
 @-webkit-keyframes fade {
@@ -23,27 +23,24 @@
 }
 
 .family-link {
-
   @extend %flat-bg;
 
-  border-radius: .5em .5em 0 0;
+  border-radius: 0.5em 0.5em 0 0;
   color: $text-color;
   display: block;
-  padding: 1em 2em .5em;
+  padding: 1em 2em 0.5em;
   position: relative;
 
   @include breakpoint(medium) {
-    padding: .5em 1em 0;
+    padding: 0.5em 1em 0;
   }
 
   &:hover {
     color: $accent;
   }
-
 }
 
 .family-title {
-
   @extend %fade;
 
   color: inherit;
@@ -62,7 +59,6 @@
   @extend %xsmall;
 
   @extend %lighten;
-
 }
 
 .language-rtl {
@@ -70,34 +66,31 @@
 }
 
 .family-tags {
-
   @extend %clearfix;
 
-  background: rgba($white, .5);
-  border-radius: 0 0 .5em .5em;
+  background: rgba($white, 0.5);
+  border-radius: 0 0 0.5em 0.5em;
   min-height: 30px;
-  padding: .5em 2em;
+  padding: 0.5em 2em;
   position: relative;
 
   @include breakpoint(medium) {
-    padding: .5em 1em;
+    padding: 0.5em 1em;
 
     .btn {
       display: none;
     }
   }
-
 }
 
 .family-meta {
-
   @extend %small;
 
   @extend %upper;
 
   @extend %tight;
 
-  color: rgba($text-color, .35);
+  color: rgba($text-color, 0.35);
   position: absolute;
   right: 2.25em;
   text-align: right;
@@ -106,21 +99,20 @@
   @include breakpoint(medium) {
     display: none;
   }
-
 }
 
 .meta {
   position: relative;
 
   &[data-title]:hover {
-    color: rgba($text-color, .25);
+    color: rgba($text-color, 0.25);
     cursor: help;
 
     &:before {
       border-color: transparent transparent $accent;
       border-style: solid;
       border-width: 5px;
-      content: '';
+      content: "";
       display: block;
       left: 48%;
       position: absolute;
@@ -134,14 +126,12 @@
       content: attr(data-title);
       display: block;
       left: 0;
-      padding: .5em;
+      padding: 0.5em;
       position: absolute;
       text-align: left;
       top: 140%;
       width: 200%;
       z-index: 100;
     }
-
   }
 }
-

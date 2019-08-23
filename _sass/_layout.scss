@@ -1,7 +1,5 @@
 .container {
-
   @extend %clearfix;
-
 
   margin: 0 auto;
   max-width: $container-width;
@@ -13,14 +11,13 @@
 }
 
 header {
-
   @extend %tight;
 
   background: $accent;
   border-bottom: 1px solid $body-bg;
   font-size: 1.2em;
   margin-bottom: 1em;
-  padding: .25em 1em;
+  padding: 0.25em 1em;
 
   @include breakpoint(medium-up) {
     font-size: $font-size;
@@ -35,7 +32,7 @@ header {
   }
 
   @include breakpoint(medium) {
-    padding: .25em .75em;
+    padding: 0.25em 0.75em;
   }
 
   .title {
@@ -45,19 +42,16 @@ header {
       color: $white;
       text-decoration: underline;
     }
-
   }
 
   .subtitle {
-    color: rgba($white, .55);
+    color: rgba($white, 0.55);
 
     &:hover {
-      color: rgba($white, .55);
+      color: rgba($white, 0.55);
       text-decoration: underline;
     }
-
   }
-
 }
 
 .content {
@@ -70,30 +64,27 @@ header {
     padding-top: 2em;
     width: 65%;
   }
-
 }
 
 .sidebar-group {
   background: $sidebar-bg;
-  border-radius: .3em;
-  margin: .5em;
+  border-radius: 0.3em;
+  margin: 0.5em;
   padding: 1em 1.5em;
   position: relative;
 
   @include breakpoint(medium-down) {
-    margin: .25em 0;
+    margin: 0.25em 0;
   }
 
   .btn-group-inputs {
     position: absolute;
-    right: .25em;
-    top: .25em;
+    right: 0.25em;
+    top: 0.25em;
   }
-
 }
 
 .sidebar {
-
   @include breakpoint(medium-up) {
     //border-right: 1px dashed rgba($text-color, .2);
     display: block;
@@ -112,7 +103,6 @@ header {
   }
 
   .tags {
-
     @include breakpoint(medium-down) {
       display: none;
     }
@@ -120,19 +110,13 @@ header {
     @include breakpoint(medium-up) {
       padding-top: 2.5em;
     }
-
   }
-
 }
 
-
-
 .select-tags {
-
   @include breakpoint(medium-up) {
     display: none;
   }
-
 }
 
 .select-label {
@@ -152,11 +136,9 @@ header {
       width: 69%;
     }
   }
-
 }
 
 select {
-
   @extend %upper;
 
   @extend %round;
@@ -167,21 +149,22 @@ select {
   border: 0;
   color: $selected-tag;
   display: inline-block;
-  font-size: .9em;
-  padding: .25em 1em;
+  font-size: 0.9em;
+  padding: 0.25em 1em;
   width: 100%;
 }
 
 .input-text {
   background: $white;
   border: 0;
-  border-radius: .3em;
+  border-radius: 0.3em;
   color: $selected-tag;
   display: inline-block;
-  font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
-  font-size: .9em;
+  font-family: ".SFNSText-Regular", "SF UI Text", "Lucida Grande", "Segoe UI",
+    Ubuntu, Cantarell, sans-serif;
+  font-size: 0.9em;
   height: 1.5em;
-  padding: 0 .5em;
+  padding: 0 0.5em;
 
   @include placeholder {
     color: lighten($selected-tag, 15%);
@@ -192,7 +175,6 @@ select {
   @include breakpoint(medium-down) {
     width: 100%;
   }
-
 }
 
 .input-large {
@@ -203,12 +185,12 @@ select {
 .search-status {
   @extend %clearfix;
 
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   margin-top: 1em;
 
   .family-tag {
-    margin-left: .25em;
-    margin-right: .25em;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
     position: relative;
   }
 
@@ -218,33 +200,29 @@ select {
   }
 
   .family-tag:hover:after {
-    content: '\00D7';
+    content: "\00D7";
     font-size: 5em;
     left: 0;
     line-height: 1;
     position: absolute;
     text-align: center;
-    top: -.35em;
+    top: -0.35em;
     width: 100%;
   }
-
 }
 
 .no-results {
-
   @extend %fade;
 
   -webkit-animation: fade $transition * 2 forwards 1s;
   animation: fade $transition * 2 forwards 1s;
   font-size: 1.25em;
   margin-top: 3em;
-
 }
-
 
 label {
   display: inline-block;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 
   &.small {
     @extend %lighten;
@@ -255,19 +233,17 @@ label {
   position: relative;
 
   .input-text {
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
   }
 
   select {
     border-radius: 0;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
   }
-
 }
 
 .control-container {
   position: relative;
-
 
   @include breakpoint(medium-up) {
     float: right;
@@ -280,7 +256,6 @@ label {
 }
 
 .show-table {
-
   .family-tag {
     display: block;
     text-align: left;
@@ -291,5 +266,4 @@ label {
     float: right;
     width: 2em;
   }
-
 }

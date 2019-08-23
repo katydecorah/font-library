@@ -1,9 +1,10 @@
 *,
 *:after,
-*:before { box-sizing: border-box; }
+*:before {
+  box-sizing: border-box;
+}
 
 body {
-
   @extend %upper;
 
   background: $body-bg;
@@ -16,24 +17,38 @@ body {
 
 small,
 .small,
-%small { font-size: .85em; }
+%small {
+  font-size: 0.85em;
+}
 
-%xsmall { font-size: .6em; }
+%xsmall {
+  font-size: 0.6em;
+}
 
-%upper { text-transform: uppercase; }
+%upper {
+  text-transform: uppercase;
+}
 
 %tight {
   font-family: $sans;
   line-height: 1;
 }
 
-%round { border-radius: 1em; }
+%round {
+  border-radius: 1em;
+}
 
-%flat-bg { background: $white; }
+%flat-bg {
+  background: $white;
+}
 
-%lighten { color: lighten($text-color, 20%); }
+%lighten {
+  color: lighten($text-color, 20%);
+}
 
-%fade { transition: $transition; }
+%fade {
+  transition: $transition;
+}
 
 a {
   color: $accent;
@@ -42,7 +57,6 @@ a {
   &:hover {
     color: lighten($accent, 10%);
   }
-
 }
 
 ::selection {

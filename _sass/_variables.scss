@@ -3,25 +3,23 @@ $body-bg: #f0eee7;
 $header-bg: #2c3e50;
 $sidebar-bg: rgb(247, 246, 243);
 $search-bg: #34495e;
-$hr-color: rgba(58, 56, 44, .2);
+$hr-color: rgba(58, 56, 44, 0.2);
 $accent: #db4053;
 $white: #fff;
 $black: #000;
 $link-color: #8e44ad;
-$sans: 'Unica One', sans-serif;
+$sans: "Unica One", sans-serif;
 $container-width: 950px;
-
 
 $font-size: 16px;
 
 $selected-tag: #e5a52b;
 $tag-bg: #bdc3c7;
 
-$transition: .2s;
+$transition: 0.2s;
 
 /////////////// Code Highlighter
 // Adapted from https://gist.github.com/edwardhotchkiss/2005058
-
 
 $highlightone: #586e75;
 $highlighttwo: #93a1a1;
@@ -104,38 +102,47 @@ $highlightnamevariableglobal: $highlightseven;
 $highlightnamevariableinstance: $highlightseven;
 $highlightliteralnumberintegerlong: $highlightfive;
 
-
 %clearfix {
   clear: both;
 
   &:before,
   &:after {
-    content: ' ';
+    content: " ";
     display: table;
   }
 
   &:after {
     clear: both;
   }
-
 }
 
-.hide { display: none; }
+.hide {
+  display: none;
+}
 
-.float-right { float: right;}
+.float-right {
+  float: right;
+}
 
 //.float-left { float: left; }
 
-
 @mixin breakpoint($point) {
   @if $point == large {
-    @media (min-width: $container-width) { @content; }
+    @media (min-width: $container-width) {
+      @content;
+    }
   } @else if $point == medium {
-    @media (max-width: $container-width + 30px) { @content; }
+    @media (max-width: $container-width + 30px) {
+      @content;
+    }
   } @else if $point == medium-up {
-    @media (min-width: 800px) { @content; }
+    @media (min-width: 800px) {
+      @content;
+    }
   } @else if $point == medium-down {
-    @media (max-width: 800px) { @content; }
+    @media (max-width: 800px) {
+      @content;
+    }
   }
 }
 
@@ -147,19 +154,19 @@ $highlightliteralnumberintegerlong: $highlightfive;
 }
 
 @mixin placeholder {
-  @include optional-at-root('::-webkit-input-placeholder') {
+  @include optional-at-root("::-webkit-input-placeholder") {
     @content;
   }
 
-  @include optional-at-root(':-moz-placeholder') {
+  @include optional-at-root(":-moz-placeholder") {
     @content;
   }
 
-  @include optional-at-root('::-moz-placeholder') {
+  @include optional-at-root("::-moz-placeholder") {
     @content;
   }
 
-  @include optional-at-root(':-ms-input-placeholder') {
+  @include optional-at-root(":-ms-input-placeholder") {
     @content;
   }
 }

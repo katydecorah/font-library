@@ -1,5 +1,4 @@
-Font Library [![Build Status](https://travis-ci.org/katydecorah/font-library.svg?branch=gh-pages)](https://travis-ci.org/katydecorah/font-library)
------------
+## Font Library [![Build Status](https://travis-ci.org/katydecorah/font-library.svg?branch=gh-pages)](https://travis-ci.org/katydecorah/font-library)
 
 The are over 800 [Google Fonts](http://www.google.com/fonts), let's organize them! See [CONTRIBUTING.md](https://github.com/katydecorah/font-library/blob/gh-pages/CONTRIBUTING.md) to get started.
 
@@ -9,8 +8,8 @@ Font Library is built with [Jekyll](http://jekyllrb.com/). If you're updating ta
 
 To build it locally, you will need to:
 
-* [Install Jekyll](https://help.github.com/articles/using-jekyll-with-pages/#installing-jekyll)
-* Install Bundler: `bundle install`
+- [Install Jekyll](https://help.github.com/articles/using-jekyll-with-pages/#installing-jekyll)
+- Install Bundler: `bundle install`
 
 To build the site: `bundle exec jekyll serve`
 

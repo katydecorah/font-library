@@ -1,4 +1,6 @@
-.noscroll { overflow: hidden; }
+.noscroll {
+  overflow: hidden;
+}
 
 .btn-close {
   color: $accent;
@@ -26,8 +28,8 @@
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
-  -webkit-transition: .25s;
-  transition: .25s;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
   width: 70%;
 
   @include breakpoint(medium) {
@@ -38,8 +40,8 @@
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
-    -webkit-transition: .5s;
-    transition: .5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
 
   .container {
@@ -48,14 +50,16 @@
     text-transform: none;
   }
 
-  p { margin-bottom: 1.3em; }
+  p {
+    margin-bottom: 1.3em;
+  }
 
   h1,
   h2,
   h3 {
     font-weight: inherit;
     line-height: 1.2;
-    margin: 1.414em 0 .5em;
+    margin: 1.414em 0 0.5em;
   }
 
   h1 {
@@ -63,9 +67,13 @@
     margin-top: 0;
   }
 
-  h2 {font-size: 1.953em;}
+  h2 {
+    font-size: 1.953em;
+  }
 
-  h3 {font-size: 1.563em;}
+  h3 {
+    font-size: 1.563em;
+  }
 
   a {
     color: $accent;
@@ -73,7 +81,5 @@
     &:hover {
       color: lighten($accent, 10%);
     }
-
   }
-
 }

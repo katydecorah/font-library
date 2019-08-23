@@ -1,6 +1,6 @@
-scss_files: '_sass/*.scss'
+scss_files: "_sass/*.scss"
 
-exclude: 'css/style.scss'
+exclude: "css/style.scss"
 
 linters:
   VendorPrefix:
@@ -9,3 +9,9 @@ linters:
     enabled: false
   PseudoElement:
     enabled: false
+  LeadingZero:
+    enabled: true
+    style: include_zero
+  StringQuotes:
+    eanbled: true
+    style: double_quotes

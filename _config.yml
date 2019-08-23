@@ -21,21 +21,21 @@ port: 4000
 host: 127.0.0.1
 
 exclude:
-- Gemfile
-- Gemfile.lock
-- .scss-lint.yml
-- .travis.yml
-- LICENSE
-- README.md
-- node_modules
-- package.json
-- test
-- CONTRIBUTING.md
-- scripts
+  - Gemfile
+  - Gemfile.lock
+  - .scss-lint.yml
+  - .travis.yml
+  - LICENSE
+  - README.md
+  - node_modules
+  - package.json
+  - test
+  - CONTRIBUTING.md
+  - scripts
 
 plugins:
-- jekyll-sitemap
-- jekyll-feed
+  - jekyll-sitemap
+  - jekyll-feed
 
 sass:
   style: :compressed

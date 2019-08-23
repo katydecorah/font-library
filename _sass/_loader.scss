@@ -28,25 +28,23 @@
 }
 
 .ng-hide {
-
   .loader:before,
   .loader:after {
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
   }
-
 }
 
 .loader:before,
 .loader:after {
-  -webkit-animation: spin .75s infinite;
-  animation: spin .75s infinite;
+  -webkit-animation: spin 0.75s infinite;
+  animation: spin 0.75s infinite;
   border-color: transparent;
   border-radius: 1em;
   border-style: double;
-  border-width: .5em;
+  border-width: 0.5em;
   box-sizing: border-box;
-  content: '';
+  content: "";
   display: block;
   height: 1em;
   position: absolute;
@@ -55,14 +53,14 @@
 }
 
 .loader:after {
-  border-left-color: rgba($accent, .5);
+  border-left-color: rgba($accent, 0.5);
   left: 0;
 }
 
 .loader:before {
-  -webkit-animation-delay: -.1875s;
-  animation-delay: -.1875s;
-  border-right-color: rgba($accent, .5);
+  -webkit-animation-delay: -0.1875s;
+  animation-delay: -0.1875s;
+  border-right-color: rgba($accent, 0.5);
   right: 0;
 }
 

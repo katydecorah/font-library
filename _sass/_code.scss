@@ -4,9 +4,8 @@ figure {
 
 code,
 pre {
-
   background: $white;
-  border-radius: .2em;
+  border-radius: 0.2em;
   hyphens: none;
   tab-size: 4;
   white-space: pre-wrap;
@@ -21,157 +20,285 @@ pre {
     background: none;
     padding: 0;
   }
-
 }
 
 code {
-  padding: 0 .25em;
+  padding: 0 0.25em;
 }
-
 
 // Adapted from https://gist.github.com/edwardhotchkiss/2005058
 .highlight {
+  .c {
+    color: $highlightcomment;
+  }
 
-  .c {color: $highlightcomment;}
+  .err {
+    color: $highlighterror;
+  }
 
-  .err {color: $highlighterror;}
+  .g {
+    color: $highlightgeneric;
+  }
 
-  .g {color: $highlightgeneric;}
+  .k {
+    color: $highlightkeyword;
+  }
 
-  .k {color: $highlightkeyword;}
+  .l {
+    color: $highlightliteral;
+  }
 
-  .l {color: $highlightliteral;}
+  .n {
+    color: $highlightname;
+  }
 
-  .n {color: $highlightname;}
+  .o {
+    color: $highlightoperator;
+  }
 
-  .o {color: $highlightoperator;}
+  .x {
+    color: $highlightother;
+  }
 
-  .x {color: $highlightother;}
+  .p {
+    color: $highlightpunctuation;
+  }
 
-  .p {color: $highlightpunctuation;}
+  .cm {
+    color: $highlightcommentmultiline;
+  }
 
-  .cm {color: $highlightcommentmultiline;}
+  .cp {
+    color: $highlightcommentpreproc;
+  }
 
-  .cp {color: $highlightcommentpreproc;}
+  .c1 {
+    color: $highlightcommentsingle;
+  }
 
-  .c1 {color: $highlightcommentsingle;}
+  .cs {
+    color: $highlightcommentspecial;
+  }
 
-  .cs {color: $highlightcommentspecial;}
-
-  .gd {color: $highlightgenericdeleted;}
+  .gd {
+    color: $highlightgenericdeleted;
+  }
 
   .ge {
     color: $highlightgenericemph;
     font-style: italic;
   }
 
-  .gr {color: $highlightgenericerror;}
+  .gr {
+    color: $highlightgenericerror;
+  }
 
-  .gh {color: $highlightgenericheading;}
+  .gh {
+    color: $highlightgenericheading;
+  }
 
-  .gi {color: $highlightgenericinserted;}
+  .gi {
+    color: $highlightgenericinserted;
+  }
 
-  .go {color: $highlightgenericoutput;}
+  .go {
+    color: $highlightgenericoutput;
+  }
 
-  .gp {color: $highlightgenericprompt;}
+  .gp {
+    color: $highlightgenericprompt;
+  }
 
   .gs {
     color: $highlightgenericstrong;
     font-weight: bold;
   }
 
-  .gu {color: $highlightgenericsubheading;}
+  .gu {
+    color: $highlightgenericsubheading;
+  }
 
-  .gt {color: $highlightgenerictraceback;}
+  .gt {
+    color: $highlightgenerictraceback;
+  }
 
-  .kc {color: $highlightkeywordconstant;}
+  .kc {
+    color: $highlightkeywordconstant;
+  }
 
-  .kd {color: $highlightkeyworddeclaration;}
+  .kd {
+    color: $highlightkeyworddeclaration;
+  }
 
-  .kn {color: $highlightkeywordnamespace;}
+  .kn {
+    color: $highlightkeywordnamespace;
+  }
 
-  .kp {color: $highlightkeywordpseudo;}
+  .kp {
+    color: $highlightkeywordpseudo;
+  }
 
-  .kr {color: $highlightkeywordreserved;}
+  .kr {
+    color: $highlightkeywordreserved;
+  }
 
-  .kt {color: $highlightkeywordtype;}
+  .kt {
+    color: $highlightkeywordtype;
+  }
 
-  .ld {color: $highlightliteraldate;}
+  .ld {
+    color: $highlightliteraldate;
+  }
 
-  .m {color: $highlightliteralnumber;}
+  .m {
+    color: $highlightliteralnumber;
+  }
 
-  .s {color: $highlightliteralstring;}
+  .s {
+    color: $highlightliteralstring;
+  }
 
-  .na {color: $highlightnameattribute;}
+  .na {
+    color: $highlightnameattribute;
+  }
 
-  .nb {color: $highlightnamebuiltin;}
+  .nb {
+    color: $highlightnamebuiltin;
+  }
 
-  .nc {color: $highlightnameclass;}
+  .nc {
+    color: $highlightnameclass;
+  }
 
-  .no {color: $highlightnameconstant;}
+  .no {
+    color: $highlightnameconstant;
+  }
 
-  .nd {color: $highlightnamedecorator;}
+  .nd {
+    color: $highlightnamedecorator;
+  }
 
-  .ni {color: $highlightnameentity;}
+  .ni {
+    color: $highlightnameentity;
+  }
 
-  .ne {color: $highlightnameexception;}
+  .ne {
+    color: $highlightnameexception;
+  }
 
-  .nf {color: $highlightnamefunction;}
+  .nf {
+    color: $highlightnamefunction;
+  }
 
-  .nl {color: $highlightnamelabel;}
+  .nl {
+    color: $highlightnamelabel;
+  }
 
-  .nn {color: $highlightnamenamespace;}
+  .nn {
+    color: $highlightnamenamespace;
+  }
 
-  .nx {color: $highlightnameother;}
+  .nx {
+    color: $highlightnameother;
+  }
 
-  .py {color: $highlightnameproperty;}
+  .py {
+    color: $highlightnameproperty;
+  }
 
-  .nt {color: $highlightnametag;}
+  .nt {
+    color: $highlightnametag;
+  }
 
-  .nv {color: $highlightnamevariable;}
+  .nv {
+    color: $highlightnamevariable;
+  }
 
-  .ow {color: $highlightoperatorword;}
+  .ow {
+    color: $highlightoperatorword;
+  }
 
-  .w {color: $highlighttextwhitespace;}
+  .w {
+    color: $highlighttextwhitespace;
+  }
 
-  .mf {color: $highlightliteralnumberfloat;}
+  .mf {
+    color: $highlightliteralnumberfloat;
+  }
 
-  .mh {color: $highlightliteralnumberhex;}
+  .mh {
+    color: $highlightliteralnumberhex;
+  }
 
-  .mi {color: $highlightliteralnumberinteger;}
+  .mi {
+    color: $highlightliteralnumberinteger;
+  }
 
-  .mo {color: $highlightliteralnumberoct;}
+  .mo {
+    color: $highlightliteralnumberoct;
+  }
 
-  .sb {color: $highlightliteralstringbacktick;}
+  .sb {
+    color: $highlightliteralstringbacktick;
+  }
 
-  .sc {color: $highlightliteralstringchar;}
+  .sc {
+    color: $highlightliteralstringchar;
+  }
 
-  .sd {color: $highlightliteralstringdoc;}
+  .sd {
+    color: $highlightliteralstringdoc;
+  }
 
-  .s2 {color: $highlightliteralstringdouble;}
+  .s2 {
+    color: $highlightliteralstringdouble;
+  }
 
-  .se {color: $highlightliteralstringescape;}
+  .se {
+    color: $highlightliteralstringescape;
+  }
 
-  .sh {color: $highlightliteralstringheredoc;}
+  .sh {
+    color: $highlightliteralstringheredoc;
+  }
 
-  .si {color: $highlightliteralstringinterpol;}
+  .si {
+    color: $highlightliteralstringinterpol;
+  }
 
-  .sx {color: $highlightliteralstringother;}
+  .sx {
+    color: $highlightliteralstringother;
+  }
 
-  .sr {color: $highlightliteralstringregex;}
+  .sr {
+    color: $highlightliteralstringregex;
+  }
 
-  .s1 {color: $highlightliteralstringsingle;}
+  .s1 {
+    color: $highlightliteralstringsingle;
+  }
 
-  .ss {color: $highlightliteralstringsymbol;}
+  .ss {
+    color: $highlightliteralstringsymbol;
+  }
 
-  .bp {color: $highlightnamebuiltinpseudo;}
+  .bp {
+    color: $highlightnamebuiltinpseudo;
+  }
 
-  .vc {color: $highlightnamevariableclass;}
+  .vc {
+    color: $highlightnamevariableclass;
+  }
 
-  .vg {color: $highlightnamevariableglobal;}
+  .vg {
+    color: $highlightnamevariableglobal;
+  }
 
-  .vi {color: $highlightnamevariableinstance;}
+  .vi {
+    color: $highlightnamevariableinstance;
+  }
 
-  .il {color: $highlightliteralnumberintegerlong;}
-
+  .il {
+    color: $highlightliteralnumberintegerlong;
+  }
 }
