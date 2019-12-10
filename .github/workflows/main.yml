@@ -1,0 +1,21 @@
+on:
+  issues:
+    types: opened
+
+jobs:
+  update_library:
+    runs-on: macOS-latest
+    name: Update library
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Update library
+        uses: katydecorah/font-library-action@0.1.0
+        env:
+          GoogleToken: ${{ secrets.GoogleToken }}
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A && git commit -m "Updated font library"
+          git push "https://${GITHUB_ACTOR}:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git" HEAD:${GITHUB_REF}
