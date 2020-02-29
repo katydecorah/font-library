@@ -40,7 +40,7 @@ function runTests(googleFamilies) {
       // check if font exists in Google Fonts
       t.notEqual(
         googleFamilies.indexOf(post.family),
-        -1,
+        '-1',
         "The font '" +
           post.family +
           "' does not match a font found in Google Fonts"
