@@ -793,6 +793,7 @@
   {"family": "Rasa", "tags": []},
   {"family": "Rationale", "tags": ["geometric", "monolinear"]},
   {"family": "Ravi Prakash", "tags": ["tapered"]},
+  {"family": "Recursive", "tags": []},
   {"family": "Red Hat Display", "tags": []},
   {"family": "Red Hat Text", "tags": []},
   {"family": "Red Rose", "tags": []},
