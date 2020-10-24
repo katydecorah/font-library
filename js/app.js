@@ -1,9 +1,9 @@
-var app = angular.module('finder', [], function($interpolateProvider) {
+var app = angular.module('finder', [], function ($interpolateProvider) {
   $interpolateProvider.startSymbol('[[');
   $interpolateProvider.endSymbol(']]');
 });
 
-app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
+app.controller('ctrl', function ($scope, $filter, $http, $location, $window) {
   $scope.currentPage = 1;
   $scope.pageSize = 20;
   $scope.starter = ($scope.currentPage - 1) * $scope.pageSize;
@@ -31,14 +31,14 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     tamil: 'வணக்கம் உலக',
     telugu: 'హలో వరల్డ్',
     thai: 'สวัสดีชาวโลก',
-    vietnamese: 'xin chào'
+    vietnamese: 'xin chào',
   };
 
   $scope.$watch(
-    function() {
+    function () {
       return $location.url();
     },
-    function() {
+    function () {
       var path = $location.path().split('/'),
         locationSearch = path[1],
         locationPage = path[2];
@@ -75,7 +75,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
 
   $http({
     method: 'GET',
-    url: 'families.json'
+    url: 'families.json',
   }).then(
     function successCallback(res) {
       $scope.dataTemp = res.data;
@@ -88,63 +88,43 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   // merges families.json and Google Fonts API
   $http({
     method: 'GET',
-    url: $scope.url
+    url: $scope.url,
   }).then(
     function successCallback(res) {
       $scope.api = res.data.items;
       $scope.data = merge($scope.dataTemp, $scope.api);
       // create unique tag array
       $scope.tags = _.map(
-        _.chain($scope.data)
-          .pluck('tags')
-          .flatten()
-          .countBy()
-          .value(),
-        function(num, key) {
+        _.chain($scope.data).pluck('tags').flatten().countBy().value(),
+        function (num, key) {
           return { tag: key, value: num };
         }
       );
       // create unique variants array
       $scope.variants = _.map(
-        _.chain($scope.data)
-          .pluck('variants')
-          .flatten()
-          .countBy()
-          .value(),
-        function(num, key) {
+        _.chain($scope.data).pluck('variants').flatten().countBy().value(),
+        function (num, key) {
           return { variant: key };
         }
       );
       // create unique variant count array
       $scope.variantCount = _.map(
-        _.chain($scope.data)
-          .pluck('variantCount')
-          .flatten()
-          .countBy()
-          .value(),
-        function(num, key) {
+        _.chain($scope.data).pluck('variantCount').flatten().countBy().value(),
+        function (num, key) {
           return { count: parseInt(key) };
         }
       );
       // create unique subset array
       $scope.subsets = _.map(
-        _.chain($scope.data)
-          .pluck('subsets')
-          .flatten()
-          .countBy()
-          .value(),
-        function(num, key) {
+        _.chain($scope.data).pluck('subsets').flatten().countBy().value(),
+        function (num, key) {
           return { subset: key };
         }
       );
       // create unique category array
       $scope.categories = _.map(
-        _.chain($scope.data)
-          .pluck('category')
-          .flatten()
-          .countBy()
-          .value(),
-        function(num, key) {
+        _.chain($scope.data).pluck('category').flatten().countBy().value(),
+        function (num, key) {
           return { category: key };
         }
       );
@@ -205,27 +185,27 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
           subsets: match[0].subsets,
           category: match[0].category,
           lastModified: match[0].lastModified,
-          lineNumber: parseInt(i) + 2
+          lineNumber: parseInt(i) + 2,
         });
       }
     }
     return result;
   }
 
-  $scope.sendAnalytics = function() {
+  $scope.sendAnalytics = function () {
     $window.ga('send', 'pageview', { page: '/#' + $location.url() });
   };
 
-  $scope.updateLocation = function() {
+  $scope.updateLocation = function () {
     $location.path('/' + $scope.selectedTags.replace(' ', '+'));
     $scope.sendAnalytics();
   };
 
-  $scope.reset = function() {
+  $scope.reset = function () {
     $location.path('');
   };
 
-  $scope.updateLocPage = function() {
+  $scope.updateLocPage = function () {
     if ($scope.selectedTags) {
       $location.path(
         '/' + $scope.selectedTags.replace(' ', '+') + '/' + $scope.currentPage
@@ -237,7 +217,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     $scope.sendAnalytics();
   };
 
-  $scope.resetPagination = function() {
+  $scope.resetPagination = function () {
     $scope.currentPage = 1;
     if ($scope.selectedTags) {
       $location.path('/' + $scope.selectedTags.split(' ').join('+') + '/');
@@ -249,11 +229,11 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     window.scrollTo(0, 0);
   };
 
-  $scope.setSearch = function(x, y) {
+  $scope.setSearch = function (x, y) {
     $location.search(x, y);
   };
 
-  $scope.selectTag = function(i) {
+  $scope.selectTag = function (i) {
     $scope.selectedTags = i;
     $scope.resetPagination();
     $location.path('/' + $scope.selectedTags.split(' ').join('+') + '/');
@@ -262,11 +242,11 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     $scope.preview = undefined;
   };
 
-  $scope.selectPreview = function(i) {
+  $scope.selectPreview = function (i) {
     $scope.preview = i;
   };
 
-  $scope.previewCode = function(i) {
+  $scope.previewCode = function (i) {
     if (i == 'monospace') {
       $scope.previewCodeCategory = true;
     } else {
@@ -274,7 +254,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     }
   };
 
-  $scope.selectPreviewVariants = function(i) {
+  $scope.selectPreviewVariants = function (i) {
     var styles;
     if (i.indexOf('italic') > 0) {
       styles = '.preview em { font-style: italic; }';
@@ -295,60 +275,60 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     $scope.previewStyles = styles;
   };
 
-  $scope.removeTag = function() {
+  $scope.removeTag = function () {
     $scope.selectedTags = undefined;
     $scope.resetPagination();
     $scope.reset();
     $scope.sendAnalytics();
   };
 
-  $scope.removeSearch = function() {
+  $scope.removeSearch = function () {
     $scope.search = undefined;
     $scope.resetPagination();
     $location.search('search', null);
   };
 
-  $scope.removeCategory = function() {
+  $scope.removeCategory = function () {
     $scope.selectedCategory = undefined;
     $scope.resetPagination();
     $location.search('category', null);
   };
 
-  $scope.removeVariant = function() {
+  $scope.removeVariant = function () {
     $scope.selectedVariants = undefined;
     $scope.resetPagination();
     $location.search('variant', null);
   };
 
-  $scope.removeFullVariants = function() {
+  $scope.removeFullVariants = function () {
     $scope.fullVariant = undefined;
     $scope.resetPagination();
   };
 
-  $scope.removeVariantCount = function() {
+  $scope.removeVariantCount = function () {
     $scope.selectedVariantCount = undefined;
     $scope.resetPagination();
     $location.search('variantCount', null);
   };
 
-  $scope.removeSubset = function() {
+  $scope.removeSubset = function () {
     $scope.selectedSubsets = undefined;
     $scope.resetPagination();
     $location.search('subset', null);
   };
 
-  $scope.numberOfPages = function() {
+  $scope.numberOfPages = function () {
     var myFilteredData = $filter('filter')($scope.data, $scope.search, true);
     return Math.ceil(myFilteredData.length / $scope.pageSize);
   };
 
-  $scope.numberOfResults = function() {
+  $scope.numberOfResults = function () {
     var myFilteredData = $filter('filter')($scope.data, $scope.search, true);
     return Math.ceil(myFilteredData.length);
   };
 
   // build out the style attr for the font based on the search parameters and what the font supports
-  $scope.familyStyle = function(font) {
+  $scope.familyStyle = function (font) {
     var style = 'font-family: "' + font.family + '";';
 
     if (
@@ -382,7 +362,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   };
 
   // provide sample in language if subset is filtered or the font doesn't have a latin subset
-  $scope.languageSample = function(font) {
+  $scope.languageSample = function (font) {
     var sample;
 
     if (font.subsets.indexOf('latin') < 0) {
@@ -398,7 +378,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   };
 
   // build the api call to retrieve the font
-  $scope.fontCall = function(i) {
+  $scope.fontCall = function (i) {
     //get font name
     var font = i.family.replace(' ', '+');
     // if no regular variant
@@ -441,7 +421,7 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
     return font;
   };
 
-  $scope.clearFilters = function() {
+  $scope.clearFilters = function () {
     $scope.selectedTags = undefined;
     $scope.selectedSubsets = undefined;
     $scope.selectedVariants = undefined;
@@ -457,25 +437,25 @@ app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
   };
 });
 
-app.filter('startFrom', function() {
-  return function(input, start) {
+app.filter('startFrom', function () {
+  return function (input, start) {
     start = +start;
     return input.slice(start);
   };
 });
 
-app.filter('ceil', function() {
-  return function(input) {
+app.filter('ceil', function () {
+  return function (input) {
     return Math.ceil(input);
   };
 });
 
 // infinite scroll
-$(window).scroll(function() {
+$(window).scroll(function () {
   if ($(window).scrollTop() == $(document).height() - $(window).height()) {
     var tempScrollTop = $(window).scrollTop();
     var scope = angular.element($('#families')).scope();
-    scope.$apply(function() {
+    scope.$apply(function () {
       if (scope.searchCount.length >= scope.pageSize) {
         scope.pageSize = scope.pageSize + 10;
         scope.currentPage = scope.currentPage + 1;
