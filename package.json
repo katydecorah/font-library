@@ -4,19 +4,19 @@
   "description": "An open source project to tag and organize Google Fonts.",
   "scripts": {
     "pretest": "eslint .",
-    "test": "jsonlint families.json -q && tape test/*.js | tap-min"
+    "test": "jsonlint families.json -q && tape test/*.js | tap-spec"
   },
   "devDependencies": {
-    "eslint": "^7.12.0",
-    "eslint-config-prettier": "^6.14.0",
-    "husky": "^4.3.0",
-    "json-stringify-pretty-compact": "^2.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^4.3.8",
+    "json-stringify-pretty-compact": "^3.0.0",
     "jsonlint": "^1.6.3",
-    "lint-staged": "^10.4.2",
-    "prettier": "^2.1.2",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.4.0",
     "request": "^2.88.2",
     "scsslint": "0.0.3",
-    "tap-min": "^2.0.0",
+    "tap-spec": "^5.0.0",
     "tape": "^5.0.1"
   },
   "bin": {
@@ -64,6 +64,5 @@
       "prettier --print-width 600  --write",
       "git add"
     ]
-  },
-  "dependencies": {}
+  }
 }
