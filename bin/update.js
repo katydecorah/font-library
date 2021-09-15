@@ -1,34 +1,34 @@
 #!/usr/bin/env node
 
 // Require dependencies
-var request = require('request');
-var fs = require('fs');
-var stringify = require('json-stringify-pretty-compact');
+const request = require('request');
+const fs = require('fs');
+const stringify = require('json-stringify-pretty-compact');
 
 request.get(
   'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE',
-  function(error, response, body) {
+  (error, response, body) => {
     if (!error && response.statusCode == 200) {
       // get current fonts in google fonts api
-      var data = JSON.parse(body);
+      const data = JSON.parse(body);
 
       // get data from families.json
-      var buffer = JSON.parse(fs.readFileSync('families.json'));
+      const buffer = JSON.parse(fs.readFileSync('families.json'));
 
       // get full library
-      var library = buffer;
+      let library = buffer;
 
       // get list of families in font library
-      var libraryFonts = [];
-      buffer.forEach(function(font) {
+      const libraryFonts = [];
+      buffer.forEach((font) => {
         libraryFonts.push(font.family);
       });
 
       // track missing fonts
-      var missing = [];
+      const missing = [];
 
       // see if every google font is in font library
-      data.items.forEach(function(font) {
+      data.items.forEach((font) => {
         if (libraryFonts.indexOf(font.family) == -1) {
           // if not, add to library
           library.push({ family: font.family, tags: [] });
@@ -46,7 +46,7 @@ request.get(
           stringify(library, { maxLength: 200 }),
           'utf-8'
         );
-        console.log('Added ' + missing.join(', ') + ' to families.json');
+        console.log(`Added ${missing.join(', ')} to families.json`);
       } else {
         // otherwise carry on
         console.log('No new fonts to add');
@@ -57,9 +57,9 @@ request.get(
 
 // sort the library
 function sortByKey(array, key) {
-  return array.sort(function(a, b) {
-    var x = a[key];
-    var y = b[key];
+  return array.sort((a, b) => {
+    const x = a[key];
+    const y = b[key];
     return x < y ? -1 : x > y ? 1 : 0;
   });
 }

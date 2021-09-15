@@ -1,5 +1,6 @@
 {
   "extends": ["eslint:recommended", "prettier"],
+  "parser": "babel-eslint",
   "env": {
     "browser": true,
     "node": true,
@@ -9,5 +10,11 @@
     "angular": true,
     "$": true,
     "_": true
+  },
+  "rules": {
+    "prefer-arrow-callback": "error",
+    "prefer-const": "error",
+    "prefer-template": "error",
+    "no-var": "error"
   }
 }
