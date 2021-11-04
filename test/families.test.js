@@ -1,7 +1,7 @@
-const test = require('tape');
-const { readFileSync } = require('fs');
-const fetch = require('node-fetch');
-const path = 'families.json';
+const test = require("tape");
+const { readFileSync } = require("fs");
+const fetch = require("node-fetch");
+const path = "families.json";
 
 const families = JSON.parse(readFileSync(path));
 
@@ -11,7 +11,7 @@ const familiesList = families.map(({ family }) => family);
 (async () => {
   try {
     const response = await fetch(
-      'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE'
+      "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE"
     );
     const { items } = await response.json();
     // build list of family names in Google Fonts API
@@ -26,19 +26,19 @@ function runTests(googleFamilies) {
   // test each family in families.json
   families.forEach(({ family, tags }, index) => {
     test(family, (t) => {
-      t.ok(family, 'must have a family');
-      t.ok(tags, 'must have tags');
+      t.ok(family, "must have a family");
+      t.ok(tags, "must have tags");
 
       // check if font exists in Google Fonts
       t.notEqual(
         googleFamilies.indexOf(family),
-        '-1',
+        "-1",
         `The font '${family}' does not match a font found in Google Fonts`
       );
 
       // no more than 5 tags
       if (tags) {
-        t.equal(tags.length < 6, true, 'no more than 5 tags');
+        t.equal(tags.length < 6, true, "no more than 5 tags");
       }
       // tags must be lowercase
       tags.forEach((tag) => {

@@ -4,18 +4,19 @@
   "description": "An open source project to tag and organize Google Fonts.",
   "scripts": {
     "pretest": "eslint .",
-    "test": "jsonlint families.json -q && tape test/*.js | tap-spec"
+    "test": "jsonlint families.json -q && tape test/*.js | tap-spec",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
-    "husky": "^4.3.8",
+    "husky": "^7.0.0",
     "json-stringify-pretty-compact": "^3.0.0",
     "jsonlint": "^1.6.3",
-    "lint-staged": "^10.5.4",
-    "node-fetch": "^2.6.2",
-    "prettier": "^2.4.0",
+    "lint-staged": "^11.2.6",
+    "node-fetch": "^2.6.6",
+    "prettier": "^2.4.1",
     "scsslint": "0.0.3",
     "tap-spec": "^5.0.0",
     "tape": "^5.0.1"
@@ -37,34 +38,14 @@
     "url": "https://github.com/katydecorah/font-library/issues"
   },
   "homepage": "https://github.com/katydecorah/font-library#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "**/*.js": [
-      "eslint",
-      "prettier --single-quote --write",
-      "git add"
-    ],
-    "**/*.md": [
-      "prettier --write",
-      "git add"
-    ],
-    "**/*.yml": [
-      "prettier --write",
-      "git add"
-    ],
     "**/*.scss": [
-      "scss-lint",
-      "prettier --write",
-      "git add"
+      "scss-lint"
     ],
     "**/*.json": [
-      "prettier --print-width 600  --write",
-      "git add"
-    ]
-  },
-  "dependencies": {}
+      "prettier --print-width 600  --write"
+    ],
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md,yml,scss}": "prettier --write"
+  }
 }

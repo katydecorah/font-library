@@ -1,19 +1,19 @@
 #!/usr/bin/env node
 
 // Require dependencies
-const request = require('request');
-const fs = require('fs');
-const stringify = require('json-stringify-pretty-compact');
+const request = require("request");
+const fs = require("fs");
+const stringify = require("json-stringify-pretty-compact");
 
 request.get(
-  'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE',
+  "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE",
   (error, response, body) => {
     if (!error && response.statusCode == 200) {
       // get current fonts in google fonts api
       const data = JSON.parse(body);
 
       // get data from families.json
-      const buffer = JSON.parse(fs.readFileSync('families.json'));
+      const buffer = JSON.parse(fs.readFileSync("families.json"));
 
       // get full library
       let library = buffer;
@@ -38,18 +38,18 @@ request.get(
 
       // if there are missing fonts
       if (missing.length > 0) {
-        library = sortByKey(library, 'family');
+        library = sortByKey(library, "family");
 
         // write new data to families.json
         fs.writeFileSync(
-          'families.json',
+          "families.json",
           stringify(library, { maxLength: 200 }),
-          'utf-8'
+          "utf-8"
         );
-        console.log(`Added ${missing.join(', ')} to families.json`);
+        console.log(`Added ${missing.join(", ")} to families.json`);
       } else {
         // otherwise carry on
-        console.log('No new fonts to add');
+        console.log("No new fonts to add");
       }
     }
   }
