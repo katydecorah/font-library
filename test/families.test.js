@@ -1,9 +1,6 @@
 const test = require("tape");
-const { readFileSync } = require("fs");
 const fetch = require("node-fetch");
-const path = "families.json";
-
-const families = JSON.parse(readFileSync(path));
+const families = require("../families.json");
 
 // build list of family names in families.json
 const familiesList = families.map(({ family }) => family);
