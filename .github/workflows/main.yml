@@ -6,8 +6,10 @@ jobs:
   update_library:
     runs-on: macOS-latest
     name: Update library
-    if: ${{ github.event.issue.number == 430 && github.event.issue.user.login == 'fontbot' }} 
+    #if: ${{ github.event.issue.number == 430 && github.event.issue.user.login == 'fontbot' }} 
+    if: ${{ github.event.issue.number == 430 }}
     steps:
+      - run: echo "This PR is opened by ${{ github.event.issue.user.login }} ." 
       - name: Checkout
         uses: actions/checkout@v2
       - name: Update library
