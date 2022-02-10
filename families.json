@@ -1119,6 +1119,7 @@
   {"family": "Roboto", "tags": ["legibility"]},
   {"family": "Roboto Condensed", "tags": ["condensed"]},
   {"family": "Roboto Mono", "tags": ["code"]},
+  {"family": "Roboto Serif", "tags": []},
   {"family": "Roboto Slab", "tags": ["slab"]},
   {"family": "Rochester", "tags": ["cursive", "art deco"]},
   {"family": "Rock 3D", "tags": []},
