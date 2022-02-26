@@ -1,10 +1,13 @@
 {
   "extends": ["eslint:recommended", "prettier"],
-  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "globals": {
     "angular": true,
