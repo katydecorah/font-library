@@ -13,9 +13,7 @@ To build it locally, you will need to:
 
 To build the site: `bundle exec jekyll serve`
 
-To test the site, first run `npm install` and then `npm test`.
-
-To add new Google Fonts automatically to the library, first run `npm link` and then `update-library`.
+To test the site, first run `npm ci` and then `npm test`.
 
 ## License
 
