@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Update library
-        uses: katydecorah/font-library-action@0.1.0
+        uses: katydecorah/font-library-action@v2.0.0
         env:
           GoogleToken: ${{ secrets.GoogleToken }}
       - name: Commit files
