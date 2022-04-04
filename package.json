@@ -16,7 +16,7 @@
     "jsonlint": "^1.6.3",
     "lint-staged": "^12.3.7",
     "node-fetch": "^2.6.7",
-    "prettier": "^2.6.1",
+    "prettier": "^2.6.2",
     "scsslint": "0.0.3"
   },
   "main": "index.js",
