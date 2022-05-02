@@ -11,7 +11,7 @@
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "husky": "^7.0.0",
-    "jest": "^27.5.1",
+    "jest": "^28.0.3",
     "json-stringify-pretty-compact": "^3.0.0",
     "jsonlint": "^1.6.3",
     "lint-staged": "^12.4.1",
