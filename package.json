@@ -10,7 +10,7 @@
   "devDependencies": {
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",
-    "husky": "^7.0.0",
+    "husky": "^8.0.0",
     "jest": "^28.0.3",
     "json-stringify-pretty-compact": "^3.0.0",
     "jsonlint": "^1.6.3",
