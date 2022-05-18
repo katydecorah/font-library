@@ -4,7 +4,7 @@
   "description": "An open source project to tag and organize Google Fonts.",
   "scripts": {
     "pretest": "eslint .",
-    "test": "jsonlint families.json -q && jest",
+    "test": "jest",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -12,7 +12,6 @@
     "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.1",
     "jest": "^28.1.0",
-    "jsonlint": "^1.6.3",
     "lint-staged": "^12.4.1",
     "node-fetch": "^2.6.7",
     "prettier": "^2.6.2"
