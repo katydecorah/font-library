@@ -14,7 +14,7 @@
     "jest": "^28.1.1",
     "lint-staged": "^13.0.2",
     "node-fetch": "^2.6.7",
-    "prettier": "^2.6.2"
+    "prettier": "^2.7.1"
   },
   "main": "index.js",
   "directories": {
