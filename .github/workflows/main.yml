@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Update library
-        uses: katydecorah/font-library-action@v2.1.0
+        uses: katydecorah/font-library-action@v2.2.0
         with:
           GoogleToken: ${{ secrets.GoogleToken }}
       - name: Commit files
@@ -22,5 +22,5 @@ jobs:
           git pull
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add -A && git commit -m "Updated font library"
-          git push "https://${GITHUB_ACTOR}:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git" HEAD:${GITHUB_REF}
+          git add -A && git commit -m "${{ env.LibraryCommitMessage }}"
+          git push
