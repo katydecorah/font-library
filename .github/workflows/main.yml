@@ -1,3 +1,5 @@
+name: Update library
+
 on:
   schedule:
     - cron: "30 5 * * *"
