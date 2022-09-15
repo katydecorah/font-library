@@ -1,21 +1,23 @@
 on:
-  issue_comment:
-    types: [created]
+  schedule:
+    - cron: "30 5 * * *"
+  workflow_dispatch: # enables run button on github.com
 
 jobs:
   update_library:
     runs-on: macOS-latest
     name: Update library
-    if: github.event.issue.number == 430
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Update library
-        uses: katydecorah/font-library-action@v2.0.0
+        uses: katydecorah/font-library-action@v2.1.0
         with:
           GoogleToken: ${{ secrets.GoogleToken }}
       - name: Commit files
+        if: ${{ env.UpdatedLibrary }} === 'true'
         run: |
+          git pull
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A && git commit -m "Updated font library"
