@@ -17,7 +17,7 @@ jobs:
         with:
           GoogleToken: ${{ secrets.GoogleToken }}
       - name: Commit files
-        if: ${{ env.UpdatedLibrary }} === 'true'
+        if: env.UpdatedLibrary == 'true'
         run: |
           git pull
           git config --local user.email "action@github.com"
