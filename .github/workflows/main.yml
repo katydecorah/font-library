@@ -4,7 +4,7 @@ on:
   pull_request:
   schedule:
     - cron: "30 5 * * *"
-  workflow_dispatch: # enables run button on github.com
+  workflow_dispatch:
 
 jobs:
   update_library:
