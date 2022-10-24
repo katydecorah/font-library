@@ -1,7 +1,7 @@
 name: Update library
 
 on:
-  pull_request:
+  #pull_request:
   schedule:
     - cron: "30 5 * * *"
   workflow_dispatch: # enables run button on github.com
