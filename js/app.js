@@ -10,12 +10,9 @@ app.controller("ctrl", ($scope, $filter, $http, $location, $window) => {
   $scope.data = [];
   $scope.searchCount = undefined;
   $scope.selectedOrder = "alpha";
-  $scope.dataTemp = [];
   $scope.sorter = "tag";
   $scope.familySorter = "family";
   $scope.preview = undefined;
-  $scope.url =
-    "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDK4Jz71F7DQCrUhXYaF3xgEXoQGLDk5iE";
   // simple phrases in variant
   $scope.languages = {
     arabic: "مرحبا بالعالم",
@@ -75,122 +72,20 @@ app.controller("ctrl", ($scope, $filter, $http, $location, $window) => {
 
   $http({
     method: "GET",
-    url: "families.json",
+    url: "generated/data.json",
   }).then(
     (res) => {
-      $scope.dataTemp = res.data;
+      $scope.data = res.data.families;
+      $scope.tags = res.data.tags;
+      $scope.variants = res.data.variants;
+      $scope.variantCount = res.data.variants;
+      $scope.subsets = res.data.subsets;
+      $scope.categories = res.data.categories;
     },
     (res) => {
       console.log(res);
     }
   );
-
-  // merges families.json and Google Fonts API
-  $http({
-    method: "GET",
-    url: $scope.url,
-  }).then(
-    (res) => {
-      $scope.api = res.data.items;
-      $scope.data = merge($scope.dataTemp, $scope.api);
-      // create unique tag array
-      $scope.tags = _.map(
-        _.chain($scope.data).pluck("tags").flatten().countBy().value(),
-        (num, key) => {
-          return { tag: key, value: num };
-        }
-      );
-      // create unique variants array
-      $scope.variants = _.map(
-        _.chain($scope.data).pluck("variants").flatten().countBy().value(),
-        (num, key) => {
-          return { variant: key };
-        }
-      );
-      // create unique variant count array
-      $scope.variantCount = _.map(
-        _.chain($scope.data).pluck("variantCount").flatten().countBy().value(),
-        (num, key) => {
-          return { count: parseInt(key) };
-        }
-      );
-      // create unique subset array
-      $scope.subsets = _.map(
-        _.chain($scope.data).pluck("subsets").flatten().countBy().value(),
-        (num, key) => {
-          return { subset: key };
-        }
-      );
-      // create unique category array
-      $scope.categories = _.map(
-        _.chain($scope.data).pluck("category").flatten().countBy().value(),
-        (num, key) => {
-          return { category: key };
-        }
-      );
-    },
-    () => {
-      // If app can't connect to Google Font API then just use families.json data
-      $scope.data = $scope.dataTemp;
-    }
-  );
-
-  // reiterate: this breaks when the APIs aren't 1:1
-  function merge(obj1, obj2) {
-    const result = [];
-    for (const i in obj1) {
-      // check the API, does it match any values in families.json?
-      const match = _.where(obj2, { family: obj1[i].family });
-      if (match.length > 0) {
-        // if there's a match push it to the final dataarray
-
-        // Check for main variants
-        let hasItalic = false,
-          hasBold = false,
-          hasRegular = false,
-          fullVariant = false;
-        if (match[0].variants.indexOf("italic") != -1) {
-          hasItalic = true;
-        }
-        if (
-          match[0].variants.indexOf("regular") != -1 ||
-          match[0].variants.indexOf("400") != -1
-        ) {
-          hasRegular = true;
-        }
-        if (
-          match[0].variants.indexOf("500") != -1 ||
-          match[0].variants.indexOf("600") != -1 ||
-          match[0].variants.indexOf("700") != -1 ||
-          match[0].variants.indexOf("800") != -1 ||
-          match[0].variants.indexOf("900") != -1
-        ) {
-          hasBold = true;
-        }
-
-        if (hasBold && hasRegular && hasItalic) {
-          fullVariant = true;
-        }
-
-        result.push({
-          family: obj1[i].family,
-          tags: obj1[i].tags,
-          count: obj1[i].tags.length,
-          variants: match[0].variants,
-          variantCount: match[0].variants.length, // number of variants
-          hasItalic: hasItalic,
-          hasBold: hasBold,
-          hasRegular: hasRegular,
-          fullVariant: fullVariant,
-          subsets: match[0].subsets,
-          category: match[0].category,
-          lastModified: match[0].lastModified,
-          lineNumber: parseInt(i) + 2,
-        });
-      }
-    }
-    return result;
-  }
 
   $scope.sendAnalytics = function () {
     $window.ga("send", "pageview", { page: `/#${$location.url()}` });
