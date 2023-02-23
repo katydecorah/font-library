@@ -43,12 +43,12 @@ layout: default
         <div class="family-meta" ng-show="font.variants">
           <span class="meta">[[font.category]]</span>
           &bull;
-          <span class="meta" data-title="[[font.variants.join(', ')]]"
+          <span class="meta" aria-label="[[font.variants.join(', ')]]"
             >[[font.variants.length == 1 && font.variants.length + " variant" ||
             font.variants.length + " variants"]]</span
           >
           &bull;
-          <span class="meta" data-title="[[font.subsets.join(', ')]]"
+          <span class="meta" aria-label="[[font.subsets.join(', ')]]"
             >[[font.subsets.length == 1 && font.subsets.length + " subset" ||
             font.subsets.length + " subsets"]]</span
           >
