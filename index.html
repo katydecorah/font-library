@@ -2,70 +2,106 @@
 layout: default
 ---
 
-<aside class="sidebar">
-	{% include sidebar.html %}
-</aside>
+<aside class="sidebar">{% include sidebar.html %}</aside>
 
 <main class="content">
-	{% include filters.html %}
-	{% include search-status.html %}
-	<div class="families" id="families">
-		<!-- individual font -->
-		<div class="family" ng-repeat="{{site.filter}}">
-		<!-- links to google font page -->
-		<a ng-href="https://fonts.google.com/specimen/[[font.family.toString().split(' ').join('+')]]" class="family-link[[ (selectedSubsets.indexOf('hebrew') == 0 || selectedSubsets.indexOf('arabic') == 0) && ' language-rtl' || '' ]]" title="Font: [[font.family]]">
-			<!-- builds the inline styles & displays font name -->
-			<div class="family-title" style="[[familyStyle(font)]]">
-				[[ languageSample(font) ]]
-				<span class="family-name[[ (font.subsets.indexOf('latin') < 0 || selectedSubsets.indexOf('latin') < 0 ) && ' family-title-small'|| '']]">[[customPreview && customPreview || font.family]]</span>
-			</div>
-		</a>
-		<!-- displays the font's tags -->
-		<div class="family-tags">
-			<label ng-repeat="tag in font.tags" class="family-tag" ng-class="{active: tag == selectedTags}">[[tag]]<input class="hide" type="checkbox" name="tag" ng-model="selectedTags" value="[[tag]]" ng-change="selectTag('[[tag]]')">
-			</label>
-			<!-- displays the font's variants and subsets -->
-			<div class="family-meta" ng-show="font.variants">
-				<span class="meta">[[font.category]]</span>
-				&bull;
-				<span class="meta" data-title="[[font.variants.join(', ')]]">[[font.variants.length == 1 && font.variants.length + " variant" || font.variants.length + " variants"]]</span>
-				&bull;
-				<span class="meta" data-title="[[font.subsets.join(', ')]]">[[font.subsets.length == 1 && font.subsets.length + " subset" || font.subsets.length + " subsets"]]</span>
-			</div>
-			<div class="float-right">
-				<!-- preview link -->
-				<button class="meta btn small quiet" ng-hide="selectedSubsets.indexOf('latin') < 0" ng-model="preview" ng-click="selectPreview(font.family);selectPreviewVariants(font.variants);previewCode(font.category);">Preview</button>
-				<!-- link to the font's spec -->
-				<a ng-href="https://fonts.google.com/specimen/[[font.family.toString().split(' ').join('+')]]" class="meta btn small quiet" target="_blank">Specimen</a>
-				<!-- link to line number -->
-				<a ng-href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L[[font.lineNumber]]" class="meta btn small quiet" target="_blank">Edit</a>
-			</div>
-		</div>
-	</div>
-</div>
+  {% include filters.html %} {% include search-status.html %}
+  <div class="families" id="families">
+    <!-- individual font -->
+    <div class="family" ng-repeat="{{site.filter}}">
+      <!-- links to google font page -->
+      <a
+        ng-href="https://fonts.google.com/specimen/[[font.family.toString().split(' ').join('+')]]"
+        class="family-link[[ (selectedSubsets.indexOf('hebrew') == 0 || selectedSubsets.indexOf('arabic') == 0) && ' language-rtl' || '' ]]"
+        title="Font: [[font.family]]"
+      >
+        <!-- builds the inline styles & displays font name -->
+        <div class="family-title" style="[[familyStyle(font)]]">
+          [[ languageSample(font) ]]
+          <span
+            class="family-name[[ (font.subsets.indexOf('latin') < 0 || selectedSubsets.indexOf('latin') < 0 ) && ' family-title-small'|| '']]"
+            >[[customPreview && customPreview || font.family]]</span
+          >
+        </div>
+      </a>
+      <!-- displays the font's tags -->
+      <div class="family-tags">
+        <label
+          ng-repeat="tag in font.tags"
+          class="family-tag"
+          ng-class="{active: tag == selectedTags}"
+          >[[tag]]<input
+            class="hide"
+            type="checkbox"
+            name="tag"
+            ng-model="selectedTags"
+            value="[[tag]]"
+            ng-change="selectTag('[[tag]]')"
+          />
+        </label>
+        <!-- displays the font's variants and subsets -->
+        <div class="family-meta" ng-show="font.variants">
+          <span class="meta">[[font.category]]</span>
+          &bull;
+          <span class="meta" aria-label="[[font.variants.join(', ')]]"
+            >[[font.variants.length == 1 && font.variants.length + " variant" ||
+            font.variants.length + " variants"]]</span
+          >
+          &bull;
+          <span class="meta" aria-label="[[font.subsets.join(', ')]]"
+            >[[font.subsets.length == 1 && font.subsets.length + " subset" ||
+            font.subsets.length + " subsets"]]</span
+          >
+        </div>
+        <div class="float-right">
+          <!-- preview link -->
+          <button
+            class="meta btn small quiet"
+            ng-hide="selectedSubsets.indexOf('latin') < 0"
+            ng-model="preview"
+            ng-click="selectPreview(font.family);selectPreviewVariants(font.variants);previewCode(font.category);"
+          >
+            Preview
+          </button>
+          <!-- link to the font's spec -->
+          <a
+            ng-href="https://fonts.google.com/specimen/[[font.family.toString().split(' ').join('+')]]"
+            class="meta btn small quiet"
+            target="_blank"
+            >Specimen</a
+          >
+          <!-- link to line number -->
+          <a
+            ng-href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L[[font.lineNumber]]"
+            class="meta btn small quiet"
+            target="_blank"
+            >Edit</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
 
-<section class="preview-container" ng-class="{active: preview}">
-	<div class="container preview" style="font-family: '[[preview]]';">
-		<div class="btn-close" ng-click="selectPreview(undefined)">&times;</div>
-		<p>Previewing: <a ng-href="https://fonts.google.com/specimen/[[preview.toString().split(' ').join('+')]]">[[preview]]</a></p>
-		<div ng-click="selectPreview(undefined)" ng-show="previewCodeCategory">
-{% highlight js %}
-function min(a, b) {
-  if (a < b)
-    return a;
-  else
-    return b;
-}
-
-console.log(min(0, 10));
-// → 0
-console.log(min(0, -10));
-// → -10
-
-// code example from http://eloquentjavascript.net/
-{% endhighlight %}
-		</div>
-		<div ng-click="selectPreview(undefined)">{% include lorem.html %}</div>
-	</div>
-</section>
+  <section class="preview-container" ng-class="{active: preview}">
+    <div
+      class="container preview"
+      style="font-family: '[[preview]]'"
+      ng-show="preview"
+    >
+      <div class="btn-close" ng-click="selectPreview(undefined)">&times;</div>
+      <p>
+        Previewing:
+        <a
+          ng-href="https://fonts.google.com/specimen/[[preview.toString().split(' ').join('+')]]"
+          >[[preview]]</a
+        >
+      </p>
+      <div ng-click="selectPreview(undefined)" ng-show="previewCodeCategory">
+        {% highlight js %} function min(a, b) { if (a < b) return a; else return
+        b; } console.log(min(0, 10)); // → 0 console.log(min(0, -10)); // → -10
+        // code example from http://eloquentjavascript.net/ {% endhighlight %}
+      </div>
+      <div ng-click="selectPreview(undefined)">{% include lorem.html %}</div>
+    </div>
+  </section>
 </main>

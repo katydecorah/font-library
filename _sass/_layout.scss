@@ -45,7 +45,7 @@ header {
   }
 
   .subtitle {
-    color: rgba($white, 0.55);
+    color: $white;
 
     &:hover {
       color: rgba($white, 0.55);
@@ -100,6 +100,10 @@ header {
 
   @include breakpoint(medium-down) {
     margin-bottom: 1em;
+  }
+
+  a {
+    text-decoration: underline;
   }
 
   .tags {

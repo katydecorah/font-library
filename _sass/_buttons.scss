@@ -5,7 +5,7 @@
 
   @extend %tight;
 
-  background: lighten($body-bg, 2%);
+  background: $white;
   border: 1px solid $accent;
   box-shadow: 0 0.1em darken($accent, 5%);
   color: $accent;
@@ -21,7 +21,6 @@
   &.quiet {
     border: 1px solid;
     box-shadow: none;
-    color: rgba($accent, 0.25);
   }
 
   &:hover {

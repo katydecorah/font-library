@@ -2,6 +2,9 @@ name: Accessibility scan
 
 on:
   workflow_dispatch:
+  push:
+    paths-ignore:
+      - "families.json"
 
 jobs:
   build:
@@ -21,15 +24,13 @@ jobs:
         with:
           node-version: 16
 
-      - name: Build site
-        run: bundle exec jekyll build
-
-      - run: npx serve _site &
+      - name: Serve site
+        run: bundle exec jekyll serve &
 
       - name: Scan site
         uses: double-great/accessibility-scan-action@v0.2.0
         with:
-          url: "http://localhost:3000/font-library/"
+          url: http://127.0.0.1:4000/font-library/
 
       - name: Upload report as artifact
         uses: actions/upload-artifact@v3

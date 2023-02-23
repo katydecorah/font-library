@@ -30,13 +30,8 @@
   },
   "homepage": "https://github.com/katydecorah/font-library#readme",
   "lint-staged": {
-    "**/*.scss": [
-      "scss-lint"
-    ],
     "**/*.json": [
       "prettier --print-width 600  --write"
-    ],
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md,yml,scss}": "prettier --write"
+    ]
   }
 }
