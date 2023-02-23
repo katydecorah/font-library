@@ -90,7 +90,7 @@
 
   @extend %tight;
 
-  color: rgba($text-color, 0.35);
+  color: $text-color;
   position: absolute;
   right: 2.25em;
   text-align: right;
