@@ -3,8 +3,8 @@ name: Accessibility scan
 on:
   workflow_dispatch:
   push:
-    paths:
-      - "!families.json"
+    paths-ignore:
+      - "families.json"
 
 jobs:
   build:
