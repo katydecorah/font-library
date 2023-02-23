@@ -31,6 +31,7 @@ jobs:
         uses: double-great/accessibility-scan-action@v0.2.0
         with:
           url: http://127.0.0.1:4000/font-library/
+          inputUrls: http://127.0.0.1:4000/font-library/#!/art+nouveau http://127.0.0.1:4000/font-library/#!/?category=display
 
       - name: Upload report as artifact
         uses: actions/upload-artifact@v3
