@@ -1,0 +1,39 @@
+name: Accessibility scan
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Scan site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v3
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "2.7" # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Build site
+        run: bundle exec jekyll build
+
+      - run: npx serve _site &
+
+      - name: Scan site
+        uses: double-great/accessibility-scan-action@v0.2.0
+        with:
+          url: "http://localhost:3000/font-library/"
+
+      - name: Upload report as artifact
+        uses: actions/upload-artifact@v3
+        if: success() || failure()
+        with:
+          name: "Accessibility report"
+          path: ${{ github.workspace }}/_accessibility-reports/
