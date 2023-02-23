@@ -2,6 +2,9 @@ name: Accessibility scan
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - "!families.json"
 
 jobs:
   build:
