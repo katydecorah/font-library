@@ -11,7 +11,7 @@ layout: default
     <div class="family" ng-repeat="{{site.filter}}">
       <!-- links to google font page -->
       <a
-        ng-href="https://fonts.google.com/specimen/[[font.family.toString().split(' ').join('+')]]"
+        ng-href="https://fonts.google.com/specimen/[[font.slug]]"
         class="family-link[[ (selectedSubsets.indexOf('hebrew') == 0 || selectedSubsets.indexOf('arabic') == 0) && ' language-rtl' || '' ]]"
         title="Font: [[font.family]]"
       >
@@ -59,13 +59,13 @@ layout: default
             class="meta btn small quiet"
             ng-hide="selectedSubsets.indexOf('latin') < 0"
             ng-model="preview"
-            ng-click="selectPreview(font.family);selectPreviewVariants(font.variants);previewCode(font.category);"
+            ng-click="selectPreview(font);selectPreviewVariants(font.variants);previewCode(font.category);"
           >
             Preview
           </button>
           <!-- link to the font's spec -->
           <a
-            ng-href="https://fonts.google.com/specimen/[[font.family.toString().split(' ').join('+')]]"
+            ng-href="https://fonts.google.com/specimen/[[font.slug]]"
             class="meta btn small quiet"
             target="_blank"
             >Specimen</a
@@ -85,15 +85,14 @@ layout: default
   <section class="preview-container" ng-class="{active: preview}">
     <div
       class="container preview"
-      style="font-family: '[[preview]]'"
+      style="font-family: '[[preview.family]]'"
       ng-show="preview"
     >
       <div class="btn-close" ng-click="selectPreview(undefined)">&times;</div>
       <p>
         Previewing:
-        <a
-          ng-href="https://fonts.google.com/specimen/[[preview.toString().split(' ').join('+')]]"
-          >[[preview]]</a
+        <a ng-href="https://fonts.google.com/specimen/[[preview.slug]]"
+          >[[preview.family]]</a
         >
       </p>
       <div ng-click="selectPreview(undefined)" ng-show="previewCodeCategory">

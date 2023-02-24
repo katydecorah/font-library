@@ -87,20 +87,20 @@ app.controller("ctrl", ($scope, $filter, $http, $location, $window) => {
     }
   );
 
-  $scope.sendAnalytics = function () {
+  $scope.sendAnalytics = () => {
     $window.ga("send", "pageview", { page: `/#${$location.url()}` });
   };
 
-  $scope.updateLocation = function () {
+  $scope.updateLocation = () => {
     $location.path(`/${$scope.selectedTags.split(" ").join("+")}`);
     $scope.sendAnalytics();
   };
 
-  $scope.reset = function () {
+  $scope.reset = () => {
     $location.path("");
   };
 
-  $scope.updateLocPage = function () {
+  $scope.updateLocPage = () => {
     if ($scope.selectedTags) {
       $location.path(
         `/${$scope.selectedTags.split(" ").join("+")}/${$scope.currentPage}`
@@ -112,7 +112,7 @@ app.controller("ctrl", ($scope, $filter, $http, $location, $window) => {
     $scope.sendAnalytics();
   };
 
-  $scope.resetPagination = function () {
+  $scope.resetPagination = () => {
     $scope.currentPage = 1;
     if ($scope.selectedTags) {
       $location.path(`/${$scope.selectedTags.split(" ").join("+")}/`);
@@ -128,7 +128,7 @@ app.controller("ctrl", ($scope, $filter, $http, $location, $window) => {
     $location.search(x, y);
   };
 
-  $scope.selectTag = function (i) {
+  $scope.selectTag = (i) => {
     $scope.selectedTags = i;
     $scope.resetPagination();
     $location.path(`/${$scope.selectedTags.split(" ").join("+")}/`);
@@ -137,107 +137,90 @@ app.controller("ctrl", ($scope, $filter, $http, $location, $window) => {
     $scope.preview = undefined;
   };
 
-  $scope.selectPreview = function (i) {
-    $scope.preview = i;
+  $scope.selectPreview = (font) => {
+    $scope.preview = font;
   };
 
-  $scope.previewCode = function (i) {
-    if (i == "monospace") {
-      $scope.previewCodeCategory = true;
-    } else {
-      $scope.previewCodeCategory = false;
-    }
+  $scope.previewCode = (i) => {
+    $scope.previewCodeCategory = i == "monospace";
   };
 
-  $scope.selectPreviewVariants = function (i) {
-    let styles;
-    if (i.indexOf("italic") > 0) {
-      styles = ".preview em { font-style: italic; }";
-    } else {
-      styles = ".preview em {font-style: normal; }";
-    }
-    if (
-      i.indexOf("500") > 0 ||
-      i.indexOf("600") > 0 ||
-      i.indexOf("700") > 0 ||
-      i.indexOf("800") > 0 ||
-      i.indexOf("900") > 0
-    ) {
-      styles += ".preview strong { font-weight: bold; }";
-    } else {
-      styles += ".preview strong {font-weight: normal; }";
-    }
-    $scope.previewStyles = styles;
+  $scope.selectPreviewVariants = (variants) => {
+    const hasItalic = variants.includes("italic");
+    const hasBold =
+      variants.includes("500") ||
+      variants.includes("600") ||
+      variants.includes("700") ||
+      variants.includes("800") ||
+      variants.includes("900");
+    $scope.previewStyles = `
+    .preview em { font-style: ${hasItalic ? "italic" : "normal"}; }
+    .preview strong { font-weight: ${hasBold ? "bold" : "normal"}; }
+    `;
   };
 
-  $scope.removeTag = function () {
+  $scope.removeTag = () => {
     $scope.selectedTags = undefined;
     $scope.resetPagination();
     $scope.reset();
     $scope.sendAnalytics();
   };
 
-  $scope.removeSearch = function () {
+  $scope.removeSearch = () => {
     $scope.search = undefined;
     $scope.resetPagination();
     $location.search("search", null);
   };
 
-  $scope.removeCategory = function () {
+  $scope.removeCategory = () => {
     $scope.selectedCategory = undefined;
     $scope.resetPagination();
     $location.search("category", null);
   };
 
-  $scope.removeVariant = function () {
+  $scope.removeVariant = () => {
     $scope.selectedVariants = undefined;
     $scope.resetPagination();
     $location.search("variant", null);
   };
 
-  $scope.removeFullVariants = function () {
+  $scope.removeFullVariants = () => {
     $scope.fullVariant = undefined;
     $scope.resetPagination();
   };
 
-  $scope.removeVariantCount = function () {
+  $scope.removeVariantCount = () => {
     $scope.selectedVariantCount = undefined;
     $scope.resetPagination();
     $location.search("variantCount", null);
   };
 
-  $scope.removeSubset = function () {
+  $scope.removeSubset = () => {
     $scope.selectedSubsets = undefined;
     $scope.resetPagination();
     $location.search("subset", null);
   };
 
-  $scope.numberOfPages = function () {
+  $scope.numberOfPages = () => {
     const myFilteredData = $filter("filter")($scope.data, $scope.search, true);
     return Math.ceil(myFilteredData.length / $scope.pageSize);
   };
 
-  $scope.numberOfResults = function () {
+  $scope.numberOfResults = () => {
     const myFilteredData = $filter("filter")($scope.data, $scope.search, true);
     return Math.ceil(myFilteredData.length);
   };
 
   // build out the style attr for the font based on the search parameters and what the font supports
-  $scope.familyStyle = function (font) {
-    let style = `font-family: "${font.family}";`;
+  $scope.familyStyle = ({ family, variants }) => {
+    let style = `font-family: "${family}";`;
 
-    if (
-      font.variants.indexOf("regular") < 0 &&
-      font.variants.indexOf("italic") >= 0
-    ) {
+    if (!variants.includes("regular") && variants.includes("italic")) {
       style += "font-style: italic;";
     }
 
-    if (
-      font.variants.indexOf("regular") < 0 &&
-      font.variants.indexOf("italic") < 0
-    ) {
-      style += `font-weight: ${font.variants[0]};`;
+    if (!variants.includes("regular") && !variants.includes("italic")) {
+      style += `font-weight: ${variants[0]};`;
     }
 
     // when users filters by variant
@@ -257,11 +240,11 @@ app.controller("ctrl", ($scope, $filter, $http, $location, $window) => {
   };
 
   // provide sample in language if subset is filtered or the font doesn't have a latin subset
-  $scope.languageSample = function (font) {
+  $scope.languageSample = ({ subsets }) => {
     let sample;
 
-    if (font.subsets.indexOf("latin") < 0) {
-      sample = $scope.languages[font.subsets];
+    if (subsets.indexOf("latin") < 0) {
+      sample = $scope.languages[subsets];
     } else {
       for (const key in $scope.languages) {
         if ($scope.selectedSubsets == key) {
@@ -273,38 +256,37 @@ app.controller("ctrl", ($scope, $filter, $http, $location, $window) => {
   };
 
   // build the api call to retrieve the font
-  $scope.fontCall = function (i) {
+  $scope.fontCall = ({ family, variants, subsets, slug }) => {
     //get font name
-    let font = i.family.split(" ").join("+");
+    let font = slug;
+
     // if no regular variant
-    if (
-      i.variants.indexOf("regular") < 0 &&
-      i.variants.indexOf("italic") >= 0
-    ) {
-      font += `:${i.variants[0]}`;
+    if (!variants.includes("regular") && variants.includes("italic")) {
+      font += `:${variants[0]}`;
     }
     // get selected variant
     if ($scope.selectedVariants !== undefined) {
       font += `:${$scope.selectedVariants}`;
     }
     // if no regular or italic?
-    if (i.variants.indexOf("regular") < 0 && i.variants.indexOf("italic") < 0) {
-      font += `:${i.variants[0]}`;
+    if (!variants.includes("regular") && !variants.includes("italic")) {
+      font += `:${variants[0]}`;
     }
+
     // if font is being previewed, get the full char font
-    if ($scope.preview == i.family) {
+    if ($scope.preview && $scope.preview.family == family) {
       // get all variants
-      font += `:${i.variants}`;
+      font += `:${variants}`;
     } else if ($scope.customPreview) {
       // if the custom preview input exists, then get all of the characters
       //font +='&text=' + encodeURIComponent($scope.customPreview);
       // ^^ this is too slow
     } else {
       // otherwise get this text for the font
-      font += `&text=${encodeURIComponent(i.family)}`;
+      font += `&text=${encodeURIComponent(family)}`;
 
       for (const key in $scope.languages) {
-        if ($scope.selectedSubsets == key || i.subsets.indexOf("latin") < 0) {
+        if ($scope.selectedSubsets == key || subsets.indexOf("latin") < 0) {
           font += encodeURIComponent($scope.languages[key]);
         }
       }
@@ -316,7 +298,7 @@ app.controller("ctrl", ($scope, $filter, $http, $location, $window) => {
     return font;
   };
 
-  $scope.clearFilters = function () {
+  $scope.clearFilters = () => {
     $scope.selectedTags = undefined;
     $scope.selectedSubsets = undefined;
     $scope.selectedVariants = undefined;
