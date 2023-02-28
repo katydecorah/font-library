@@ -1,106 +1,89 @@
 ---
-layout: default
 ---
 
-<aside class="sidebar">{% include sidebar.html %}</aside>
-
-<main class="content">
-  {% include filters.html %} {% include search-status.html %}
-  <div class="families" id="families">
-    <!-- individual font -->
-    <div class="family" ng-repeat="{{site.filter}}">
-      <!-- links to google font page -->
-      <a
-        ng-href="https://fonts.google.com/specimen/[[font.slug]]"
-        class="family-link[[ (selectedSubsets.indexOf('hebrew') == 0 || selectedSubsets.indexOf('arabic') == 0) && ' language-rtl' || '' ]]"
-        title="Font: [[font.family]]"
-      >
-        <!-- builds the inline styles & displays font name -->
-        <div class="family-title" style="[[familyStyle(font)]]">
-          [[ languageSample(font) ]]
-          <span
-            class="family-name[[ (font.subsets.indexOf('latin') < 0 || selectedSubsets.indexOf('latin') < 0 ) && ' family-title-small'|| '']]"
-            >[[customPreview && customPreview || font.family]]</span
-          >
-        </div>
-      </a>
-      <!-- displays the font's tags -->
-      <div class="family-tags">
-        <label
-          ng-repeat="tag in font.tags"
-          class="family-tag"
-          ng-class="{active: tag == selectedTags}"
-          >[[tag]]<input
-            class="hide"
-            type="checkbox"
-            name="tag"
-            ng-model="selectedTags"
-            value="[[tag]]"
-            ng-change="selectTag('[[tag]]')"
-          />
-        </label>
-        <!-- displays the font's variants and subsets -->
-        <div class="family-meta" ng-show="font.variants">
-          <span class="meta">[[font.category]]</span>
-          &bull;
-          <span class="meta" aria-label="[[font.variants.join(', ')]]"
-            >[[font.variants.length == 1 && font.variants.length + " variant" ||
-            font.variants.length + " variants"]]</span
-          >
-          &bull;
-          <span class="meta" aria-label="[[font.subsets.join(', ')]]"
-            >[[font.subsets.length == 1 && font.subsets.length + " subset" ||
-            font.subsets.length + " subsets"]]</span
-          >
-        </div>
-        <div class="float-right">
-          <!-- preview link -->
-          <button
-            class="meta btn small quiet"
-            ng-hide="selectedSubsets.indexOf('latin') < 0"
-            ng-model="preview"
-            ng-click="selectPreview(font);selectPreviewVariants(font.variants);previewCode(font.category);"
-          >
-            Preview
-          </button>
-          <!-- link to the font's spec -->
-          <a
-            ng-href="https://fonts.google.com/specimen/[[font.slug]]"
-            class="meta btn small quiet"
-            target="_blank"
-            >Specimen</a
-          >
-          <!-- link to line number -->
-          <a
-            ng-href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L[[font.lineNumber]]"
-            class="meta btn small quiet"
-            target="_blank"
-            >Edit</a
-          >
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{site.title}} | {{site.description}}</title>
+    <meta name="description" content="{{site.description}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- twitter-->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@{{site.author.twitter}}" />
+    <meta name="twitter:title" content="{{site.title}}" />
+    <meta name="twitter:description" content="{{site.description}}" />
+    <meta name="twitter:creator" content="@{{site.author.twitter}}" />
+    <meta name="twitter:domain" content="{{site.url}}{{site.baseurl}}" />
+    <!-- facebook-->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{site.url}}{{site.baseurl}}" />
+    <meta property="og:title" content="{{site.title}}" />
+    <meta property="og:site_name" content="{{site.title}}" />
+    <meta property="og:description" content="{{site.description}}" />
+    <!-- other stuff -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="{{site.baseurl}}/css/style.css" />
+    {% feed_meta %}
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <h1>{{site.title}}</h1>
+        <div>{{site.description}}</div>
       </div>
+      <a href="{{site.contributing}}" class="btn">Contribute on GitHub</a>
+    </header>
+    <div class="container">
+      <aside class="sidebar">
+        {%- assign data = site.data.metadata -%}
+        <div class="tags sidebar-group">
+          <h2>Tags</h2>
+          <div id="tags" class="tags-container">
+            {% for tag in data.uniqueTags %}
+            <button is="tag-button" class="family-tag" value="{{tag}}">
+              {{tag}}
+            </button>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="sidebar-group">
+          <h2>Want to help the project?</h2>
+          <p>
+            Sort by fonts that
+            <button is="tag-button" class="family-tag" value="need tags">
+              need tags</button
+            >. Learn <a href="{{site.contributing}}">how to contribute</a>.
+          </p>
+        </div>
+      </aside>
+      <main class="content">
+        <font-results></font-results>
+      </main>
     </div>
-  </div>
-
-  <section class="preview-container" ng-class="{active: preview}">
-    <div
-      class="container preview"
-      style="font-family: '[[preview.family]]'"
-      ng-show="preview"
-    >
-      <div class="btn-close" ng-click="selectPreview(undefined)">&times;</div>
-      <p>
-        Previewing:
-        <a ng-href="https://fonts.google.com/specimen/[[preview.slug]]"
-          >[[preview.family]]</a
-        >
-      </p>
-      <div ng-click="selectPreview(undefined)" ng-show="previewCodeCategory">
-        {% highlight js %} function min(a, b) { if (a < b) return a; else return
-        b; } console.log(min(0, 10)); // → 0 console.log(min(0, -10)); // → -10
-        // code example from http://eloquentjavascript.net/ {% endhighlight %}
-      </div>
-      <div ng-click="selectPreview(undefined)">{% include lorem.html %}</div>
-    </div>
-  </section>
-</main>
+    <script src="js/app.js"></script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-34842039-3", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
+</html>

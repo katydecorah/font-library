@@ -1,0 +1,1558 @@
+{
+  "uniqueTags": [
+    "1700s",
+    "1900s",
+    "1920s",
+    "1930s",
+    "1940s",
+    "1950s",
+    "1960s",
+    "1970s",
+    "1980s",
+    "ancient",
+    "antiqua",
+    "art deco",
+    "art nouveau",
+    "bamboo",
+    "blackletter",
+    "block",
+    "brush",
+    "bubbly",
+    "calligraphic",
+    "cambodian",
+    "caps",
+    "cartoon",
+    "celtic",
+    "classic",
+    "code",
+    "comic",
+    "compact",
+    "condensed",
+    "connected",
+    "copperplate",
+    "curls",
+    "cursive",
+    "cute",
+    "decal",
+    "decorative",
+    "diagonal",
+    "didone",
+    "disco",
+    "dotted",
+    "editorial",
+    "egyptian",
+    "elegant",
+    "engraved",
+    "eurostile",
+    "fat",
+    "fat face",
+    "flared",
+    "formal",
+    "fraktur",
+    "friendly",
+    "fun",
+    "funky",
+    "futuristic",
+    "fuzzy",
+    "game",
+    "geometric",
+    "german",
+    "gothic",
+    "groovy",
+    "grotesque",
+    "grunge",
+    "halloween",
+    "handwritten",
+    "headlines",
+    "heavy",
+    "high contrast",
+    "hinted",
+    "humanist",
+    "im fell",
+    "khmer",
+    "kids",
+    "large sizes",
+    "legibility",
+    "light",
+    "lines",
+    "literacy",
+    "literature",
+    "looped",
+    "loopless",
+    "love",
+    "low contrast",
+    "marker",
+    "modern",
+    "monolinear",
+    "narrow",
+    "neoclassical",
+    "old style",
+    "outline",
+    "paris",
+    "penant",
+    "pixel",
+    "playful",
+    "pulp",
+    "retro",
+    "rock",
+    "roman",
+    "romantic",
+    "rounded",
+    "salsa",
+    "scrawl",
+    "script",
+    "semi-condensed",
+    "shadow",
+    "signage",
+    "sketch",
+    "slab",
+    "slanted",
+    "small caps",
+    "small sizes",
+    "speed",
+    "spicy",
+    "square",
+    "stencil",
+    "stone",
+    "surf",
+    "swash",
+    "swirl",
+    "tall",
+    "tapered",
+    "tattoo",
+    "techno",
+    "thin",
+    "transitional",
+    "typewriter",
+    "uneven",
+    "urban",
+    "vintage",
+    "western",
+    "whimsical",
+    "wide"
+  ],
+  "tags": [
+    {
+      "tag": "literacy",
+      "value": 7
+    },
+    {
+      "tag": "kids",
+      "value": 15
+    },
+    {
+      "tag": "condensed",
+      "value": 34
+    },
+    {
+      "tag": "heavy",
+      "value": 32
+    },
+    {
+      "tag": "elegant",
+      "value": 7
+    },
+    {
+      "tag": "didone",
+      "value": 14
+    },
+    {
+      "tag": "headlines",
+      "value": 68
+    },
+    {
+      "tag": "modern",
+      "value": 14
+    },
+    {
+      "tag": "friendly",
+      "value": 20
+    },
+    {
+      "tag": "cartoon",
+      "value": 14
+    },
+    {
+      "tag": "comic",
+      "value": 11
+    },
+    {
+      "tag": "groovy",
+      "value": 4
+    },
+    {
+      "tag": "thin",
+      "value": 14
+    },
+    {
+      "tag": "legibility",
+      "value": 20
+    },
+    {
+      "tag": "compact",
+      "value": 1
+    },
+    {
+      "tag": "small sizes",
+      "value": 9
+    },
+    {
+      "tag": "transitional",
+      "value": 8
+    },
+    {
+      "tag": "cursive",
+      "value": 51
+    },
+    {
+      "tag": "script",
+      "value": 19
+    },
+    {
+      "tag": "brush",
+      "value": 34
+    },
+    {
+      "tag": "lines",
+      "value": 3
+    },
+    {
+      "tag": "art deco",
+      "value": 10
+    },
+    {
+      "tag": "square",
+      "value": 12
+    },
+    {
+      "tag": "techno",
+      "value": 12
+    },
+    {
+      "tag": "geometric",
+      "value": 19
+    },
+    {
+      "tag": "literature",
+      "value": 10
+    },
+    {
+      "tag": "small caps",
+      "value": 19
+    },
+    {
+      "tag": "humanist",
+      "value": 22
+    },
+    {
+      "tag": "slab",
+      "value": 32
+    },
+    {
+      "tag": "egyptian",
+      "value": 5
+    },
+    {
+      "tag": "old style",
+      "value": 7
+    },
+    {
+      "tag": "slanted",
+      "value": 24
+    },
+    {
+      "tag": "stencil",
+      "value": 10
+    },
+    {
+      "tag": "whimsical",
+      "value": 17
+    },
+    {
+      "tag": "art nouveau",
+      "value": 4
+    },
+    {
+      "tag": "scrawl",
+      "value": 18
+    },
+    {
+      "tag": "1900s",
+      "value": 3
+    },
+    {
+      "tag": "calligraphic",
+      "value": 17
+    },
+    {
+      "tag": "code",
+      "value": 18
+    },
+    {
+      "tag": "western",
+      "value": 5
+    },
+    {
+      "tag": "grotesque",
+      "value": 12
+    },
+    {
+      "tag": "low contrast",
+      "value": 27
+    },
+    {
+      "tag": "hinted",
+      "value": 7
+    },
+    {
+      "tag": "high contrast",
+      "value": 21
+    },
+    {
+      "tag": "rounded",
+      "value": 32
+    },
+    {
+      "tag": "editorial",
+      "value": 1
+    },
+    {
+      "tag": "wide",
+      "value": 16
+    },
+    {
+      "tag": "fat face",
+      "value": 3
+    },
+    {
+      "tag": "engraved",
+      "value": 4
+    },
+    {
+      "tag": "monolinear",
+      "value": 24
+    },
+    {
+      "tag": "fraktur",
+      "value": 5
+    },
+    {
+      "tag": "loopless",
+      "value": 3
+    },
+    {
+      "tag": "uneven",
+      "value": 10
+    },
+    {
+      "tag": "1950s",
+      "value": 16
+    },
+    {
+      "tag": "disco",
+      "value": 9
+    },
+    {
+      "tag": "futuristic",
+      "value": 10
+    },
+    {
+      "tag": "grunge",
+      "value": 8
+    },
+    {
+      "tag": "gothic",
+      "value": 9
+    },
+    {
+      "tag": "tall",
+      "value": 7
+    },
+    {
+      "tag": "large sizes",
+      "value": 18
+    },
+    {
+      "tag": "swash",
+      "value": 10
+    },
+    {
+      "tag": "cambodian",
+      "value": 5
+    },
+    {
+      "tag": "khmer",
+      "value": 5
+    },
+    {
+      "tag": "cute",
+      "value": 8
+    },
+    {
+      "tag": "decorative",
+      "value": 6
+    },
+    {
+      "tag": "1960s",
+      "value": 10
+    },
+    {
+      "tag": "salsa",
+      "value": 1
+    },
+    {
+      "tag": "fun",
+      "value": 29
+    },
+    {
+      "tag": "signage",
+      "value": 8
+    },
+    {
+      "tag": "outline",
+      "value": 12
+    },
+    {
+      "tag": "shadow",
+      "value": 4
+    },
+    {
+      "tag": "halloween",
+      "value": 4
+    },
+    {
+      "tag": "sketch",
+      "value": 3
+    },
+    {
+      "tag": "ancient",
+      "value": 3
+    },
+    {
+      "tag": "roman",
+      "value": 6
+    },
+    {
+      "tag": "1920s",
+      "value": 4
+    },
+    {
+      "tag": "pulp",
+      "value": 2
+    },
+    {
+      "tag": "caps",
+      "value": 10
+    },
+    {
+      "tag": "dotted",
+      "value": 2
+    },
+    {
+      "tag": "marker",
+      "value": 6
+    },
+    {
+      "tag": "celtic",
+      "value": 4
+    },
+    {
+      "tag": "bubbly",
+      "value": 2
+    },
+    {
+      "tag": "paris",
+      "value": 1
+    },
+    {
+      "tag": "typewriter",
+      "value": 6
+    },
+    {
+      "tag": "tapered",
+      "value": 2
+    },
+    {
+      "tag": "vintage",
+      "value": 11
+    },
+    {
+      "tag": "swirl",
+      "value": 6
+    },
+    {
+      "tag": "love",
+      "value": 8
+    },
+    {
+      "tag": "formal",
+      "value": 4
+    },
+    {
+      "tag": "1930s",
+      "value": 5
+    },
+    {
+      "tag": "playful",
+      "value": 3
+    },
+    {
+      "tag": "fat",
+      "value": 3
+    },
+    {
+      "tag": "copperplate",
+      "value": 2
+    },
+    {
+      "tag": "1940s",
+      "value": 2
+    },
+    {
+      "tag": "speed",
+      "value": 2
+    },
+    {
+      "tag": "antiqua",
+      "value": 6
+    },
+    {
+      "tag": "narrow",
+      "value": 2
+    },
+    {
+      "tag": "spicy",
+      "value": 2
+    },
+    {
+      "tag": "funky",
+      "value": 2
+    },
+    {
+      "tag": "blackletter",
+      "value": 5
+    },
+    {
+      "tag": "neoclassical",
+      "value": 2
+    },
+    {
+      "tag": "curls",
+      "value": 2
+    },
+    {
+      "tag": "retro",
+      "value": 8
+    },
+    {
+      "tag": "penant",
+      "value": 1
+    },
+    {
+      "tag": "block",
+      "value": 6
+    },
+    {
+      "tag": "bamboo",
+      "value": 2
+    },
+    {
+      "tag": "im fell",
+      "value": 10
+    },
+    {
+      "tag": "eurostile",
+      "value": 3
+    },
+    {
+      "tag": "1700s",
+      "value": 3
+    },
+    {
+      "tag": "handwritten",
+      "value": 13
+    },
+    {
+      "tag": "fuzzy",
+      "value": 1
+    },
+    {
+      "tag": "semi-condensed",
+      "value": 1
+    },
+    {
+      "tag": "rock",
+      "value": 2
+    },
+    {
+      "tag": "tattoo",
+      "value": 5
+    },
+    {
+      "tag": "decal",
+      "value": 1
+    },
+    {
+      "tag": "urban",
+      "value": 3
+    },
+    {
+      "tag": "connected",
+      "value": 3
+    },
+    {
+      "tag": "diagonal",
+      "value": 1
+    },
+    {
+      "tag": "stone",
+      "value": 1
+    },
+    {
+      "tag": "classic",
+      "value": 1
+    },
+    {
+      "tag": "german",
+      "value": 3
+    },
+    {
+      "tag": "surf",
+      "value": 2
+    },
+    {
+      "tag": "romantic",
+      "value": 1
+    },
+    {
+      "tag": "game",
+      "value": 3
+    },
+    {
+      "tag": "1980s",
+      "value": 1
+    },
+    {
+      "tag": "pixel",
+      "value": 2
+    },
+    {
+      "tag": "light",
+      "value": 1
+    },
+    {
+      "tag": "1970s",
+      "value": 1
+    },
+    {
+      "tag": "looped",
+      "value": 2
+    },
+    {
+      "tag": "flared",
+      "value": 1
+    }
+  ],
+  "uniqueVariants": ["100", "100italic", "200", "200italic", "300", "300italic", "500", "500italic", "600", "600italic", "700", "700italic", "800", "800italic", "900", "900italic", "italic", "regular"],
+  "variants": [
+    {
+      "variant": "100",
+      "value": 214
+    },
+    {
+      "variant": "200",
+      "value": 256
+    },
+    {
+      "variant": "300",
+      "value": 371
+    },
+    {
+      "variant": "500",
+      "value": 423
+    },
+    {
+      "variant": "600",
+      "value": 401
+    },
+    {
+      "variant": "700",
+      "value": 599
+    },
+    {
+      "variant": "800",
+      "value": 275
+    },
+    {
+      "variant": "900",
+      "value": 239
+    },
+    {
+      "variant": "regular",
+      "value": 1485
+    },
+    {
+      "variant": "italic",
+      "value": 263
+    },
+    {
+      "variant": "100italic",
+      "value": 77
+    },
+    {
+      "variant": "200italic",
+      "value": 98
+    },
+    {
+      "variant": "300italic",
+      "value": 136
+    },
+    {
+      "variant": "500italic",
+      "value": 144
+    },
+    {
+      "variant": "600italic",
+      "value": 142
+    },
+    {
+      "variant": "700italic",
+      "value": 207
+    },
+    {
+      "variant": "800italic",
+      "value": 99
+    },
+    {
+      "variant": "900italic",
+      "value": 91
+    }
+  ],
+  "uniqueSubsets": [
+    "adlam",
+    "ahom",
+    "anatolian-hieroglyphs",
+    "arabic",
+    "armenian",
+    "avestan",
+    "balinese",
+    "bamum",
+    "bassa-vah",
+    "batak",
+    "bengali",
+    "bhaiksuki",
+    "brahmi",
+    "buginese",
+    "buhid",
+    "canadian-aboriginal",
+    "carian",
+    "caucasian-albanian",
+    "chakma",
+    "cham",
+    "cherokee",
+    "chinese-hongkong",
+    "chinese-simplified",
+    "chinese-traditional",
+    "coptic",
+    "cuneiform",
+    "cypriot",
+    "cyrillic",
+    "cyrillic-ext",
+    "deseret",
+    "devanagari",
+    "dogra",
+    "duployan",
+    "egyptian-hieroglyphs",
+    "elbasan",
+    "elymaic",
+    "emoji",
+    "ethiopic",
+    "georgian",
+    "glagolitic",
+    "gothic",
+    "grantha",
+    "greek",
+    "greek-ext",
+    "gujarati",
+    "gunjala-gondi",
+    "gurmukhi",
+    "hanifi-rohingya",
+    "hanunoo",
+    "hatran",
+    "hebrew",
+    "imperial-aramaic",
+    "indic-siyaq-numbers",
+    "inscriptional-pahlavi",
+    "inscriptional-parthian",
+    "japanese",
+    "javanese",
+    "kaithi",
+    "kannada",
+    "kayah-li",
+    "kharoshthi",
+    "khmer",
+    "khojki",
+    "khudawadi",
+    "korean",
+    "lao",
+    "latin",
+    "latin-ext",
+    "lepcha",
+    "limbu",
+    "linear-a",
+    "linear-b",
+    "lisu",
+    "lycian",
+    "lydian",
+    "mahajani",
+    "malayalam",
+    "mandaic",
+    "manichaean",
+    "marchen",
+    "masaram-gondi",
+    "math",
+    "mayan-numerals",
+    "medefaidrin",
+    "meetei-mayek",
+    "mende-kikakui",
+    "meroitic",
+    "miao",
+    "modi",
+    "mongolian",
+    "mro",
+    "multani",
+    "music",
+    "myanmar",
+    "nabataean",
+    "new-tai-lue",
+    "newa",
+    "nko",
+    "nushu",
+    "nyiakeng-puachue-hmong",
+    "ogham",
+    "ol-chiki",
+    "old-hungarian",
+    "old-italic",
+    "old-north-arabian",
+    "old-permic",
+    "old-persian",
+    "old-sogdian",
+    "old-south-arabian",
+    "old-turkic",
+    "oriya",
+    "osage",
+    "osmanya",
+    "pahawh-hmong",
+    "palmyrene",
+    "pau-cin-hau",
+    "phags-pa",
+    "phoenician",
+    "psalter-pahlavi",
+    "rejang",
+    "runic",
+    "samaritan",
+    "saurashtra",
+    "sharada",
+    "shavian",
+    "siddham",
+    "signwriting",
+    "sinhala",
+    "sogdian",
+    "sora-sompeng",
+    "soyombo",
+    "sundanese",
+    "syloti-nagri",
+    "symbols",
+    "syriac",
+    "tagalog",
+    "tagbanwa",
+    "tai-le",
+    "tai-tham",
+    "tai-viet",
+    "takri",
+    "tamil",
+    "tamil-supplement",
+    "tangsa",
+    "tangut",
+    "telugu",
+    "thaana",
+    "thai",
+    "tibetan",
+    "tifinagh",
+    "tirhuta",
+    "toto",
+    "ugaritic",
+    "vai",
+    "vietnamese",
+    "wancho",
+    "warang-citi",
+    "yezidi",
+    "yi",
+    "zanabazar-square"
+  ],
+  "subsets": [
+    {
+      "subset": "latin",
+      "value": 1412
+    },
+    {
+      "subset": "latin-ext",
+      "value": 1043
+    },
+    {
+      "subset": "sinhala",
+      "value": 6
+    },
+    {
+      "subset": "ethiopic",
+      "value": 3
+    },
+    {
+      "subset": "cyrillic",
+      "value": 205
+    },
+    {
+      "subset": "cyrillic-ext",
+      "value": 159
+    },
+    {
+      "subset": "greek",
+      "value": 77
+    },
+    {
+      "subset": "kannada",
+      "value": 9
+    },
+    {
+      "subset": "telugu",
+      "value": 24
+    },
+    {
+      "subset": "devanagari",
+      "value": 55
+    },
+    {
+      "subset": "vietnamese",
+      "value": 391
+    },
+    {
+      "subset": "hebrew",
+      "value": 44
+    },
+    {
+      "subset": "greek-ext",
+      "value": 47
+    },
+    {
+      "subset": "arabic",
+      "value": 42
+    },
+    {
+      "subset": "bengali",
+      "value": 9
+    },
+    {
+      "subset": "gujarati",
+      "value": 12
+    },
+    {
+      "subset": "gurmukhi",
+      "value": 8
+    },
+    {
+      "subset": "malayalam",
+      "value": 8
+    },
+    {
+      "subset": "oriya",
+      "value": 4
+    },
+    {
+      "subset": "tamil",
+      "value": 15
+    },
+    {
+      "subset": "khmer",
+      "value": 27
+    },
+    {
+      "subset": "thai",
+      "value": 31
+    },
+    {
+      "subset": "japanese",
+      "value": 52
+    },
+    {
+      "subset": "korean",
+      "value": 31
+    },
+    {
+      "subset": "cherokee",
+      "value": 3
+    },
+    {
+      "subset": "tibetan",
+      "value": 3
+    },
+    {
+      "subset": "kayah-li",
+      "value": 2
+    },
+    {
+      "subset": "chinese-simplified",
+      "value": 9
+    },
+    {
+      "subset": "lepcha",
+      "value": 2
+    },
+    {
+      "subset": "math",
+      "value": 2
+    },
+    {
+      "subset": "emoji",
+      "value": 2
+    },
+    {
+      "subset": "music",
+      "value": 1
+    },
+    {
+      "subset": "adlam",
+      "value": 2
+    },
+    {
+      "subset": "anatolian-hieroglyphs",
+      "value": 1
+    },
+    {
+      "subset": "armenian",
+      "value": 2
+    },
+    {
+      "subset": "avestan",
+      "value": 1
+    },
+    {
+      "subset": "balinese",
+      "value": 2
+    },
+    {
+      "subset": "bamum",
+      "value": 1
+    },
+    {
+      "subset": "bassa-vah",
+      "value": 1
+    },
+    {
+      "subset": "batak",
+      "value": 1
+    },
+    {
+      "subset": "bhaiksuki",
+      "value": 1
+    },
+    {
+      "subset": "brahmi",
+      "value": 1
+    },
+    {
+      "subset": "buginese",
+      "value": 1
+    },
+    {
+      "subset": "buhid",
+      "value": 1
+    },
+    {
+      "subset": "canadian-aboriginal",
+      "value": 1
+    },
+    {
+      "subset": "carian",
+      "value": 1
+    },
+    {
+      "subset": "caucasian-albanian",
+      "value": 1
+    },
+    {
+      "subset": "chakma",
+      "value": 1
+    },
+    {
+      "subset": "cham",
+      "value": 1
+    },
+    {
+      "subset": "coptic",
+      "value": 1
+    },
+    {
+      "subset": "cuneiform",
+      "value": 1
+    },
+    {
+      "subset": "cypriot",
+      "value": 1
+    },
+    {
+      "subset": "deseret",
+      "value": 1
+    },
+    {
+      "subset": "duployan",
+      "value": 1
+    },
+    {
+      "subset": "egyptian-hieroglyphs",
+      "value": 1
+    },
+    {
+      "subset": "elbasan",
+      "value": 1
+    },
+    {
+      "subset": "elymaic",
+      "value": 1
+    },
+    {
+      "subset": "georgian",
+      "value": 2
+    },
+    {
+      "subset": "glagolitic",
+      "value": 1
+    },
+    {
+      "subset": "gothic",
+      "value": 1
+    },
+    {
+      "subset": "grantha",
+      "value": 2
+    },
+    {
+      "subset": "gunjala-gondi",
+      "value": 1
+    },
+    {
+      "subset": "chinese-hongkong",
+      "value": 2
+    },
+    {
+      "subset": "hanifi-rohingya",
+      "value": 1
+    },
+    {
+      "subset": "hanunoo",
+      "value": 1
+    },
+    {
+      "subset": "hatran",
+      "value": 1
+    },
+    {
+      "subset": "imperial-aramaic",
+      "value": 1
+    },
+    {
+      "subset": "indic-siyaq-numbers",
+      "value": 1
+    },
+    {
+      "subset": "inscriptional-pahlavi",
+      "value": 1
+    },
+    {
+      "subset": "inscriptional-parthian",
+      "value": 1
+    },
+    {
+      "subset": "javanese",
+      "value": 1
+    },
+    {
+      "subset": "kaithi",
+      "value": 1
+    },
+    {
+      "subset": "kharoshthi",
+      "value": 1
+    },
+    {
+      "subset": "khojki",
+      "value": 2
+    },
+    {
+      "subset": "khudawadi",
+      "value": 1
+    },
+    {
+      "subset": "lao",
+      "value": 3
+    },
+    {
+      "subset": "limbu",
+      "value": 1
+    },
+    {
+      "subset": "linear-a",
+      "value": 1
+    },
+    {
+      "subset": "linear-b",
+      "value": 1
+    },
+    {
+      "subset": "lisu",
+      "value": 1
+    },
+    {
+      "subset": "lycian",
+      "value": 1
+    },
+    {
+      "subset": "lydian",
+      "value": 1
+    },
+    {
+      "subset": "mahajani",
+      "value": 1
+    },
+    {
+      "subset": "mandaic",
+      "value": 1
+    },
+    {
+      "subset": "manichaean",
+      "value": 1
+    },
+    {
+      "subset": "marchen",
+      "value": 1
+    },
+    {
+      "subset": "masaram-gondi",
+      "value": 1
+    },
+    {
+      "subset": "mayan-numerals",
+      "value": 1
+    },
+    {
+      "subset": "medefaidrin",
+      "value": 1
+    },
+    {
+      "subset": "meetei-mayek",
+      "value": 1
+    },
+    {
+      "subset": "mende-kikakui",
+      "value": 1
+    },
+    {
+      "subset": "meroitic",
+      "value": 1
+    },
+    {
+      "subset": "miao",
+      "value": 1
+    },
+    {
+      "subset": "modi",
+      "value": 1
+    },
+    {
+      "subset": "mongolian",
+      "value": 1
+    },
+    {
+      "subset": "mro",
+      "value": 1
+    },
+    {
+      "subset": "multani",
+      "value": 1
+    },
+    {
+      "subset": "myanmar",
+      "value": 3
+    },
+    {
+      "subset": "nko",
+      "value": 1
+    },
+    {
+      "subset": "nabataean",
+      "value": 1
+    },
+    {
+      "subset": "new-tai-lue",
+      "value": 1
+    },
+    {
+      "subset": "newa",
+      "value": 1
+    },
+    {
+      "subset": "nushu",
+      "value": 2
+    },
+    {
+      "subset": "ogham",
+      "value": 1
+    },
+    {
+      "subset": "ol-chiki",
+      "value": 1
+    },
+    {
+      "subset": "old-hungarian",
+      "value": 1
+    },
+    {
+      "subset": "old-italic",
+      "value": 1
+    },
+    {
+      "subset": "old-north-arabian",
+      "value": 1
+    },
+    {
+      "subset": "old-permic",
+      "value": 1
+    },
+    {
+      "subset": "old-persian",
+      "value": 1
+    },
+    {
+      "subset": "old-sogdian",
+      "value": 1
+    },
+    {
+      "subset": "old-south-arabian",
+      "value": 1
+    },
+    {
+      "subset": "old-turkic",
+      "value": 1
+    },
+    {
+      "subset": "osage",
+      "value": 1
+    },
+    {
+      "subset": "osmanya",
+      "value": 1
+    },
+    {
+      "subset": "pahawh-hmong",
+      "value": 1
+    },
+    {
+      "subset": "palmyrene",
+      "value": 1
+    },
+    {
+      "subset": "pau-cin-hau",
+      "value": 1
+    },
+    {
+      "subset": "phags-pa",
+      "value": 1
+    },
+    {
+      "subset": "phoenician",
+      "value": 1
+    },
+    {
+      "subset": "psalter-pahlavi",
+      "value": 1
+    },
+    {
+      "subset": "rejang",
+      "value": 1
+    },
+    {
+      "subset": "runic",
+      "value": 1
+    },
+    {
+      "subset": "samaritan",
+      "value": 1
+    },
+    {
+      "subset": "saurashtra",
+      "value": 1
+    },
+    {
+      "subset": "sharada",
+      "value": 1
+    },
+    {
+      "subset": "shavian",
+      "value": 1
+    },
+    {
+      "subset": "siddham",
+      "value": 1
+    },
+    {
+      "subset": "signwriting",
+      "value": 1
+    },
+    {
+      "subset": "sogdian",
+      "value": 1
+    },
+    {
+      "subset": "sora-sompeng",
+      "value": 1
+    },
+    {
+      "subset": "soyombo",
+      "value": 1
+    },
+    {
+      "subset": "sundanese",
+      "value": 1
+    },
+    {
+      "subset": "syloti-nagri",
+      "value": 1
+    },
+    {
+      "subset": "symbols",
+      "value": 2
+    },
+    {
+      "subset": "syriac",
+      "value": 1
+    },
+    {
+      "subset": "chinese-traditional",
+      "value": 2
+    },
+    {
+      "subset": "tagalog",
+      "value": 1
+    },
+    {
+      "subset": "tagbanwa",
+      "value": 1
+    },
+    {
+      "subset": "tai-le",
+      "value": 1
+    },
+    {
+      "subset": "tai-tham",
+      "value": 1
+    },
+    {
+      "subset": "tai-viet",
+      "value": 2
+    },
+    {
+      "subset": "takri",
+      "value": 1
+    },
+    {
+      "subset": "tamil-supplement",
+      "value": 1
+    },
+    {
+      "subset": "tangsa",
+      "value": 1
+    },
+    {
+      "subset": "thaana",
+      "value": 1
+    },
+    {
+      "subset": "tifinagh",
+      "value": 1
+    },
+    {
+      "subset": "tirhuta",
+      "value": 1
+    },
+    {
+      "subset": "ugaritic",
+      "value": 1
+    },
+    {
+      "subset": "vai",
+      "value": 1
+    },
+    {
+      "subset": "wancho",
+      "value": 1
+    },
+    {
+      "subset": "warang-citi",
+      "value": 1
+    },
+    {
+      "subset": "yi",
+      "value": 2
+    },
+    {
+      "subset": "zanabazar-square",
+      "value": 1
+    },
+    {
+      "subset": "ahom",
+      "value": 1
+    },
+    {
+      "subset": "dogra",
+      "value": 1
+    },
+    {
+      "subset": "nyiakeng-puachue-hmong",
+      "value": 1
+    },
+    {
+      "subset": "tangut",
+      "value": 1
+    },
+    {
+      "subset": "toto",
+      "value": 1
+    },
+    {
+      "subset": "yezidi",
+      "value": 1
+    }
+  ],
+  "uniqueCategories": ["display", "handwriting", "monospace", "sans-serif", "serif"],
+  "categories": [
+    {
+      "category": "sans-serif",
+      "value": 553
+    },
+    {
+      "category": "serif",
+      "value": 292
+    },
+    {
+      "category": "display",
+      "value": 391
+    },
+    {
+      "category": "handwriting",
+      "value": 222
+    },
+    {
+      "category": "monospace",
+      "value": 32
+    }
+  ]
+}

@@ -1,55 +1,42 @@
 .container {
-  @extend %clearfix;
-
   margin: 0 auto;
-  max-width: $container-width;
-  position: relative;
+  padding: 0 1em;
 
-  @include breakpoint(medium) {
-    padding: 0 1em;
+  @include breakpoint(medium-up) {
+    display: flex;
+    grid-gap: 2em;
+    padding: 0;
   }
 }
 
 header {
-  @extend %tight;
-
   background: $accent;
   border-bottom: 1px solid $body-bg;
-  font-size: 1.2em;
   margin-bottom: 1em;
   padding: 0.25em 1em;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 3px;
+  color: $white;
+  justify-content: space-between;
 
   @include breakpoint(medium-up) {
-    font-size: $font-size;
-    height: 35px;
-    line-height: 1.6;
     margin-bottom: 0;
-    padding-left: 2em;
-    padding-right: 2em;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
+    padding-left: 1em;
+    padding-right: 1em;
+    flex-direction: row;
+    align-items: center;
   }
 
   @include breakpoint(medium) {
-    padding: 0.25em 0.75em;
+    padding: 0.25em 0.75em 0.5em;
   }
 
   .title {
-    color: $white;
-
-    &:hover {
-      color: $white;
-      text-decoration: underline;
-    }
-  }
-
-  .subtitle {
-    color: $white;
-
-    &:hover {
-      color: rgba($white, 0.55);
-      text-decoration: underline;
+    @include breakpoint(medium-up) {
+      display: flex;
+      align-items: center;
+      grid-gap: 1em;
     }
   }
 }
@@ -57,45 +44,20 @@ header {
 .content {
   max-width: 40em;
   position: relative;
-
-  @include breakpoint(medium-up) {
-    float: right;
-    padding-bottom: 5em;
-    padding-top: 2em;
-    width: 65%;
-  }
-}
-
-.sidebar-group {
-  background: $sidebar-bg;
-  border-radius: 0.3em;
-  margin: 0.5em;
-  padding: 1em 1.5em;
-  position: relative;
+  flex-grow: 1;
+  padding-right: 1em;
 
   @include breakpoint(medium-down) {
-    margin: 0.25em 0;
-  }
-
-  .btn-group-inputs {
-    position: absolute;
-    right: 0.25em;
-    top: 0.25em;
+    padding: 0;
   }
 }
 
 .sidebar {
   @include breakpoint(medium-up) {
-    //border-right: 1px dashed rgba($text-color, .2);
-    display: block;
-    float: left;
-    height: 100%;
-    left: 0;
-    overflow-y: scroll;
-    padding-bottom: 3em;
-    position: fixed;
-    top: 35px;
-    width: 30%;
+    background: $sidebar-bg;
+    padding: 0 1em 2em;
+    width: 35%;
+    max-width: 450px;
   }
 
   @include breakpoint(medium-down) {
@@ -105,16 +67,6 @@ header {
   a {
     text-decoration: underline;
   }
-
-  .tags {
-    @include breakpoint(medium-down) {
-      display: none;
-    }
-
-    @include breakpoint(medium-up) {
-      padding-top: 2.5em;
-    }
-  }
 }
 
 .select-tags {
@@ -123,74 +75,10 @@ header {
   }
 }
 
-.select-label {
-  @extend %lighten;
-  @extend %small;
-
-  width: 29%;
-
-  @include breakpoint(medium-down) {
-    display: none;
-  }
-
-  + * {
-    @include breakpoint(medium-up) {
-      display: inline;
-      margin: 0;
-      width: 69%;
-    }
-  }
-}
-
-select {
-  @extend %upper;
-
-  @extend %round;
-
-  @extend %tight;
-
-  background: $white;
-  border: 0;
-  color: $selected-tag;
-  display: inline-block;
-  font-size: 0.9em;
-  padding: 0.25em 1em;
-  width: 100%;
-}
-
-.input-text {
-  background: $white;
-  border: 0;
-  border-radius: 0.3em;
-  color: $selected-tag;
-  display: inline-block;
-  font-family: ".SFNSText-Regular", "SF UI Text", "Lucida Grande", "Segoe UI",
-    Ubuntu, Cantarell, sans-serif;
-  font-size: 0.9em;
-  height: 1.5em;
-  padding: 0 0.5em;
-
-  @include placeholder {
-    color: lighten($selected-tag, 15%);
-    font-family: $sans;
-    text-transform: uppercase;
-  }
-
-  @include breakpoint(medium-down) {
-    width: 100%;
-  }
-}
-
-.input-large {
-  font-size: 1.25em;
-  width: 100%;
-}
-
 .search-status {
-  @extend %clearfix;
-
   margin-bottom: 0.5em;
   margin-top: 1em;
+  min-height: 26.5px;
 
   .family-tag {
     margin-left: 0.25em;
@@ -215,59 +103,8 @@ select {
   }
 }
 
-.no-results {
-  @extend %fade;
-
-  -webkit-animation: fade $transition * 2 forwards 1s;
-  animation: fade $transition * 2 forwards 1s;
-  font-size: 1.25em;
-  margin-top: 3em;
-}
-
-label {
-  display: inline-block;
-  margin-bottom: 0.5em;
-
-  &.small {
-    @extend %lighten;
-  }
-}
-
-.controls {
-  position: relative;
-
-  .input-text {
-    margin-bottom: 0.5em;
-  }
-
-  select {
-    border-radius: 0;
-    margin-bottom: 0.5em;
-  }
-}
-
-.control-container {
-  position: relative;
-
-  @include breakpoint(medium-up) {
-    float: right;
-    top: 18px;
-  }
-
-  @include breakpoint(medium-down) {
-    margin-bottom: 1em;
-  }
-}
-
-.show-table {
-  .family-tag {
-    display: block;
-    text-align: left;
-    width: 100%;
-  }
-
-  .tag-count {
-    float: right;
-    width: 2em;
-  }
+.pagination {
+  margin-bottom: 1em;
+  display: flex;
+  grid-gap: 0.5em;
 }

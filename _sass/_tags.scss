@@ -1,44 +1,27 @@
-.tag-heading {
-  margin-bottom: 1em;
-}
-
 .tags-container {
-  @extend %clearfix;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 9px;
 }
 
 .family-tag {
-  @extend %small;
-
   @extend %lighten;
-
-  @extend %upper;
-
-  @extend %tight;
-
-  @extend %round;
 
   @extend %fade;
 
   background: transparent;
-  border: 0;
+  font-size: 1em;
   cursor: pointer;
-  display: inline-block;
-  padding: 0.2em 0.3em;
 
-  .sidebar & {
-    margin-bottom: 0.25em;
-    margin-right: 0.25em;
-  }
-
-  &.no-hash:before {
-    display: none;
-  }
-
-  &:before {
-    content: "#";
-  }
+  border: 1px solid #e9e6d5;
+  padding: 2px 7px;
+  border-radius: 3px;
+  border-left-width: 5px;
+  border-bottom-width: 3px;
+  border-bottom-color: #d6d2bc;
 
   &.active,
+  &:has(:checked),
   &:hover {
     @extend %flat-bg;
 
@@ -50,33 +33,5 @@
 
   &.active {
     cursor: default;
-  }
-}
-
-.tag-count {
-  color: $text-color;
-}
-
-.tag-header {
-  @extend %small;
-
-  margin-bottom: 0.5em;
-  padding: 0 0.3em;
-
-  input {
-    display: none;
-  }
-
-  .tag-header-tag,
-  .tag-header-count {
-    display: inline-block;
-  }
-
-  label {
-    cursor: pointer;
-  }
-
-  .tag-header-count {
-    float: right;
   }
 }

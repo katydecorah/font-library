@@ -13,10 +13,6 @@ author:
   uri: http://katydecorah.com
   twitter: katydecorah
 
-angular: 1.6.1
-jquery: 3.1.1
-underscore: 1.8.3
-
 port: 4000
 host: 127.0.0.1
 
@@ -41,11 +37,3 @@ plugins:
 
 sass:
   style: :compressed
-
-### The brains
-# Used in head.html (gets the fonts)
-# and index.html (outputs the data)
-###
-filter: |
-  font in searchCount=( data |
-  filter:{ tags: selectedTags, count:tagCount, variants:selectedVariants, subsets:selectedSubsets, category:selectedCategory, variantCount: (selectedVariantCount || undefined), fullVariant:(fullVariant || undefined) }:true | filter:search ) | orderBy: familySorter | startFrom: starter | limitTo:pageSize

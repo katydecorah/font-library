@@ -8,7 +8,8 @@ $accent: #d6293d;
 $white: #fff;
 $black: #000;
 $link-color: #8e44ad;
-$sans: "Unica One", sans-serif;
+$sans: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+  helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
 $container-width: 950px;
 
 $font-size: 16px;
@@ -18,113 +19,9 @@ $tag-bg: #bdc3c7;
 
 $transition: 0.2s;
 
-/////////////// Code Highlighter
-// Adapted from https://gist.github.com/edwardhotchkiss/2005058
-
-$highlightone: #586e75;
-$highlighttwo: #93a1a1;
-$highlightthree: #859900;
-$highlightfour: #cb4b16;
-$highlightfive: #2aa198;
-$highlightsix: #dc322f;
-$highlightseven: #268bd2;
-$highlighteight: #b58900;
-$highlightnine: #555;
-
-$highlightcomment: $highlightone;
-$highlighterror: $highlighttwo;
-$highlightgeneric: $highlighttwo;
-$highlightkeyword: $highlightthree;
-$highlightliteral: $highlighttwo;
-$highlightname: $highlighttwo;
-$highlightoperator: $highlightthree;
-$highlightother: $highlightfour;
-$highlightpunctuation: $highlighttwo;
-$highlightcommentmultiline: $highlightone;
-$highlightcommentpreproc: $highlightthree;
-$highlightcommentsingle: $highlightone;
-$highlightcommentspecial: $highlightthree;
-$highlightgenericdeleted: $highlightfive;
-$highlightgenericemph: $highlighttwo;
-$highlightgenericemph: $highlighttwo;
-$highlightgenericerror: $highlightsix;
-$highlightgenericheading: $highlightfour;
-$highlightgenericinserted: $highlightthree;
-$highlightgenericoutput: $highlighttwo;
-$highlightgenericprompt: $highlighttwo;
-$highlightgenericstrong: $highlighttwo;
-$highlightgenericsubheading: $highlightfour;
-$highlightgenerictraceback: $highlighttwo;
-$highlightkeywordconstant: $highlightfour;
-$highlightkeyworddeclaration: $highlightseven;
-$highlightkeywordnamespace: $highlightthree;
-$highlightkeywordpseudo: $highlightthree;
-$highlightkeywordreserved: $highlightseven;
-$highlightkeywordtype: $highlightsix;
-$highlightliteraldate: $highlighttwo;
-$highlightliteralnumber: $highlightfive;
-$highlightliteralstring: $highlightfive;
-$highlightnameattribute: $highlighttwo;
-$highlightnamebuiltin: $highlighteight;
-$highlightnameclass: $highlightseven;
-$highlightnameconstant: $highlightfour;
-$highlightnamedecorator: $highlightseven;
-$highlightnameentity: $highlightfour;
-$highlightnameexception: $highlightfour;
-$highlightnamefunction: $highlightseven;
-$highlightnamelabel: $highlighttwo;
-$highlightnamelabel: $highlighttwo;
-$highlightnamenamespace: $highlighttwo;
-$highlightnameother: $highlightnine;
-$highlightnameproperty: $highlighttwo;
-$highlightnametag: $highlightseven;
-$highlightnamevariable: $highlightseven;
-$highlightoperatorword: $highlightthree;
-$highlighttextwhitespace: $highlighttwo;
-$highlightliteralnumberfloat: $highlightfive;
-$highlightliteralnumberhex: $highlightfive;
-$highlightliteralnumberinteger: $highlightfive;
-$highlightliteralnumberoct: $highlightfive;
-$highlightliteralstringbacktick: $highlightone;
-$highlightliteralstringchar: $highlightfive;
-$highlightliteralstringdoc: $highlighttwo;
-$highlightliteralstringdouble: $highlightfive;
-$highlightliteralstringescape: $highlightfour;
-$highlightliteralstringheredoc: $highlighttwo;
-$highlightliteralstringinterpol: $highlightfive;
-$highlightliteralstringother: $highlightfive;
-$highlightliteralstringregex: $highlightsix;
-$highlightliteralstringsingle: $highlightfive;
-$highlightliteralstringsymbol: $highlightfive;
-$highlightnamebuiltinpseudo: $highlightseven;
-$highlightnamevariableclass: $highlightseven;
-$highlightnamevariableglobal: $highlightseven;
-$highlightnamevariableinstance: $highlightseven;
-$highlightliteralnumberintegerlong: $highlightfive;
-
-%clearfix {
-  clear: both;
-
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
-
-  &:after {
-    clear: both;
-  }
-}
-
 .hide {
-  display: none;
+  display: none !important;
 }
-
-.float-right {
-  float: right;
-}
-
-//.float-left { float: left; }
 
 @mixin breakpoint($point) {
   @if $point == large {

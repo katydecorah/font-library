@@ -25,7 +25,7 @@
 .family-link {
   @extend %flat-bg;
 
-  border-radius: 0.5em 0.5em 0 0;
+  border-radius: 3px 3px 0 0;
   color: $text-color;
   display: block;
   padding: 1em 2em 0.5em;
@@ -33,10 +33,6 @@
 
   @include breakpoint(medium) {
     padding: 0.5em 1em 0;
-  }
-
-  &:hover {
-    color: $accent;
   }
 }
 
@@ -66,13 +62,14 @@
 }
 
 .family-tags {
-  @extend %clearfix;
-
   background: rgba($white, 0.5);
-  border-radius: 0 0 0.5em 0.5em;
+  border-radius: 0 0 3px 3px;
   min-height: 30px;
   padding: 0.5em 2em;
   position: relative;
+
+  display: flex;
+  justify-content: space-between;
 
   @include breakpoint(medium) {
     padding: 0.5em 1em;
@@ -83,54 +80,57 @@
   }
 }
 
+.family-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 3px;
+}
+
 .family-meta {
-  @extend %small;
-
-  @extend %upper;
-
-  @extend %tight;
-
-  color: $text-color;
-  position: absolute;
-  right: 2.25em;
   text-align: right;
-  top: -1.25em;
 
   @include breakpoint(medium) {
     display: none;
   }
-}
 
-.meta {
-  position: relative;
+  span {
+    position: relative;
 
-  &[aria-label]:hover {
-    cursor: help;
+    &[aria-label]:hover {
+      cursor: help;
 
-    &:before {
-      border-color: transparent transparent $accent;
-      border-style: solid;
-      border-width: 5px;
-      content: "";
-      display: block;
-      left: 48%;
-      position: absolute;
-      top: 77%;
-    }
+      &:before {
+        border-color: transparent transparent $accent;
+        border-style: solid;
+        border-width: 5px;
+        content: "";
+        display: block;
+        left: 48%;
+        position: absolute;
+        top: 77%;
+      }
 
-    &:after {
-      background: $accent;
-      border-radius: 5px;
-      color: $white;
-      content: attr(aria-label);
-      display: block;
-      left: 0;
-      padding: 0.5em;
-      position: absolute;
-      text-align: left;
-      top: 140%;
-      width: 200%;
-      z-index: 100;
+      &:after {
+        background: $accent;
+        border-radius: 5px;
+        color: $white;
+        content: attr(aria-label);
+        display: block;
+        left: 0;
+        padding: 0.5em;
+        position: absolute;
+        text-align: left;
+        top: 1.5em;
+        width: 200%;
+        z-index: 100;
+      }
     }
   }
+}
+
+.family-meta-links {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 1em;
 }
