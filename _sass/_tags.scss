@@ -7,7 +7,7 @@
 .family-tag {
   @extend %lighten;
 
-  @extend %fade;
+  // @extend %fade;
 
   background: transparent;
   font-size: 1em;
@@ -25,7 +25,7 @@
   &:hover {
     @extend %flat-bg;
 
-    @extend %fade;
+    // @extend %fade;
 
     border-color: $selected-tag;
     color: $selected-tag;
