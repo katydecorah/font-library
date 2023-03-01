@@ -13,10 +13,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Update library
-        uses: katydecorah/font-library-action@metadata
+
+      - uses: actions/setup-node@v3
         with:
+          node-version: 16
+
+      - run: npm install @actions/core node-fetch json-stringify-pretty-compact
+
+      - name: Update library
+        run: node .github/actions/update-library.js
+        id: update
+        env:
           GoogleToken: ${{ secrets.GoogleToken }}
+
       - name: Commit files
         if: env.UpdatedLibrary == 'true'
         run: |

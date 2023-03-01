@@ -11,6 +11,7 @@
     "1980s",
     "ancient",
     "antiqua",
+    "arabic",
     "art deco",
     "art nouveau",
     "bamboo",
@@ -25,6 +26,7 @@
     "celtic",
     "classic",
     "code",
+    "collegiate",
     "comic",
     "compact",
     "condensed",
@@ -58,6 +60,7 @@
     "geometric",
     "german",
     "gothic",
+    "graffiti",
     "groovy",
     "grotesque",
     "grunge",
@@ -65,12 +68,14 @@
     "handwritten",
     "headlines",
     "heavy",
+    "hebrew",
     "high contrast",
     "hinted",
     "humanist",
     "im fell",
     "khmer",
     "kids",
+    "korean",
     "large sizes",
     "legibility",
     "light",
@@ -97,6 +102,7 @@
     "rock",
     "roman",
     "romantic",
+    "round",
     "rounded",
     "salsa",
     "scrawl",
@@ -134,23 +140,27 @@
   "tags": [
     {
       "tag": "literacy",
-      "value": 7
+      "value": 10
     },
     {
       "tag": "kids",
-      "value": 15
+      "value": 21
     },
     {
       "tag": "condensed",
-      "value": 34
+      "value": 40
+    },
+    {
+      "tag": "caps",
+      "value": 19
     },
     {
       "tag": "heavy",
-      "value": 32
+      "value": 39
     },
     {
       "tag": "elegant",
-      "value": 7
+      "value": 27
     },
     {
       "tag": "didone",
@@ -162,11 +172,11 @@
     },
     {
       "tag": "modern",
-      "value": 14
+      "value": 18
     },
     {
       "tag": "friendly",
-      "value": 20
+      "value": 23
     },
     {
       "tag": "cartoon",
@@ -174,7 +184,7 @@
     },
     {
       "tag": "comic",
-      "value": 11
+      "value": 12
     },
     {
       "tag": "groovy",
@@ -182,54 +192,62 @@
     },
     {
       "tag": "thin",
-      "value": 14
-    },
-    {
-      "tag": "legibility",
       "value": 20
     },
     {
+      "tag": "legibility",
+      "value": 28
+    },
+    {
       "tag": "compact",
-      "value": 1
+      "value": 4
     },
     {
       "tag": "small sizes",
-      "value": 9
+      "value": 10
     },
     {
       "tag": "transitional",
-      "value": 8
+      "value": 9
     },
     {
       "tag": "cursive",
-      "value": 51
+      "value": 75
     },
     {
       "tag": "script",
-      "value": 19
+      "value": 23
     },
     {
       "tag": "brush",
-      "value": 34
+      "value": 44
     },
     {
       "tag": "lines",
-      "value": 3
+      "value": 7
+    },
+    {
+      "tag": "semi-condensed",
+      "value": 6
+    },
+    {
+      "tag": "narrow",
+      "value": 7
     },
     {
       "tag": "art deco",
       "value": 10
     },
     {
+      "tag": "geometric",
+      "value": 25
+    },
+    {
       "tag": "square",
-      "value": 12
+      "value": 22
     },
     {
       "tag": "techno",
-      "value": 12
-    },
-    {
-      "tag": "geometric",
       "value": 19
     },
     {
@@ -242,11 +260,11 @@
     },
     {
       "tag": "humanist",
-      "value": 22
+      "value": 24
     },
     {
       "tag": "slab",
-      "value": 32
+      "value": 34
     },
     {
       "tag": "egyptian",
@@ -258,15 +276,43 @@
     },
     {
       "tag": "slanted",
-      "value": 24
+      "value": 33
     },
     {
       "tag": "stencil",
-      "value": 10
+      "value": 14
+    },
+    {
+      "tag": "calligraphic",
+      "value": 30
+    },
+    {
+      "tag": "formal",
+      "value": 18
+    },
+    {
+      "tag": "arabic",
+      "value": 11
     },
     {
       "tag": "whimsical",
-      "value": 17
+      "value": 21
+    },
+    {
+      "tag": "light",
+      "value": 13
+    },
+    {
+      "tag": "outline",
+      "value": 21
+    },
+    {
+      "tag": "collegiate",
+      "value": 2
+    },
+    {
+      "tag": "block",
+      "value": 10
     },
     {
       "tag": "art nouveau",
@@ -274,19 +320,27 @@
     },
     {
       "tag": "scrawl",
-      "value": 18
+      "value": 20
     },
     {
       "tag": "1900s",
       "value": 3
     },
     {
-      "tag": "calligraphic",
-      "value": 17
+      "tag": "code",
+      "value": 26
     },
     {
-      "tag": "code",
-      "value": 18
+      "tag": "futuristic",
+      "value": 21
+    },
+    {
+      "tag": "tall",
+      "value": 12
+    },
+    {
+      "tag": "eurostile",
+      "value": 4
     },
     {
       "tag": "western",
@@ -297,8 +351,20 @@
       "value": 12
     },
     {
+      "tag": "curls",
+      "value": 4
+    },
+    {
+      "tag": "cute",
+      "value": 15
+    },
+    {
+      "tag": "swirl",
+      "value": 12
+    },
+    {
       "tag": "low contrast",
-      "value": 27
+      "value": 31
     },
     {
       "tag": "hinted",
@@ -306,11 +372,11 @@
     },
     {
       "tag": "high contrast",
-      "value": 21
+      "value": 23
     },
     {
       "tag": "rounded",
-      "value": 32
+      "value": 38
     },
     {
       "tag": "editorial",
@@ -318,7 +384,7 @@
     },
     {
       "tag": "wide",
-      "value": 16
+      "value": 21
     },
     {
       "tag": "fat face",
@@ -330,7 +396,7 @@
     },
     {
       "tag": "monolinear",
-      "value": 24
+      "value": 26
     },
     {
       "tag": "fraktur",
@@ -342,7 +408,7 @@
     },
     {
       "tag": "uneven",
-      "value": 10
+      "value": 15
     },
     {
       "tag": "1950s",
@@ -353,28 +419,52 @@
       "value": 9
     },
     {
-      "tag": "futuristic",
-      "value": 10
+      "tag": "grunge",
+      "value": 9
     },
     {
-      "tag": "grunge",
+      "tag": "funky",
+      "value": 3
+    },
+    {
+      "tag": "love",
+      "value": 9
+    },
+    {
+      "tag": "romantic",
       "value": 8
     },
     {
       "tag": "gothic",
-      "value": 9
+      "value": 12
     },
     {
-      "tag": "tall",
-      "value": 7
+      "tag": "fun",
+      "value": 36
+    },
+    {
+      "tag": "playful",
+      "value": 15
     },
     {
       "tag": "large sizes",
-      "value": 18
+      "value": 20
+    },
+    {
+      "tag": "decorative",
+      "value": 9
     },
     {
       "tag": "swash",
       "value": 10
+    },
+    {
+      "tag": "spicy",
+      "value": 3
+    },
+    {
+      "tag": "fuzzy",
+      "value": 3
     },
     {
       "tag": "cambodian",
@@ -382,15 +472,7 @@
     },
     {
       "tag": "khmer",
-      "value": 5
-    },
-    {
-      "tag": "cute",
       "value": 8
-    },
-    {
-      "tag": "decorative",
-      "value": 6
     },
     {
       "tag": "1960s",
@@ -401,20 +483,12 @@
       "value": 1
     },
     {
-      "tag": "fun",
-      "value": 29
-    },
-    {
       "tag": "signage",
       "value": 8
     },
     {
-      "tag": "outline",
-      "value": 12
-    },
-    {
       "tag": "shadow",
-      "value": 4
+      "value": 5
     },
     {
       "tag": "halloween",
@@ -430,19 +504,19 @@
     },
     {
       "tag": "roman",
-      "value": 6
+      "value": 9
     },
     {
       "tag": "1920s",
       "value": 4
     },
     {
-      "tag": "pulp",
-      "value": 2
+      "tag": "vintage",
+      "value": 12
     },
     {
-      "tag": "caps",
-      "value": 10
+      "tag": "pulp",
+      "value": 2
     },
     {
       "tag": "dotted",
@@ -450,7 +524,7 @@
     },
     {
       "tag": "marker",
-      "value": 6
+      "value": 7
     },
     {
       "tag": "celtic",
@@ -466,39 +540,31 @@
     },
     {
       "tag": "typewriter",
-      "value": 6
+      "value": 7
     },
     {
       "tag": "tapered",
       "value": 2
     },
     {
-      "tag": "vintage",
-      "value": 11
+      "tag": "pixel",
+      "value": 3
     },
     {
-      "tag": "swirl",
-      "value": 6
+      "tag": "game",
+      "value": 7
     },
     {
-      "tag": "love",
-      "value": 8
-    },
-    {
-      "tag": "formal",
-      "value": 4
+      "tag": "handwritten",
+      "value": 28
     },
     {
       "tag": "1930s",
       "value": 5
     },
     {
-      "tag": "playful",
-      "value": 3
-    },
-    {
       "tag": "fat",
-      "value": 3
+      "value": 4
     },
     {
       "tag": "copperplate",
@@ -517,18 +583,6 @@
       "value": 6
     },
     {
-      "tag": "narrow",
-      "value": 2
-    },
-    {
-      "tag": "spicy",
-      "value": 2
-    },
-    {
-      "tag": "funky",
-      "value": 2
-    },
-    {
       "tag": "blackletter",
       "value": 5
     },
@@ -537,20 +591,20 @@
       "value": 2
     },
     {
-      "tag": "curls",
-      "value": 2
+      "tag": "korean",
+      "value": 12
     },
     {
       "tag": "retro",
-      "value": 8
+      "value": 9
+    },
+    {
+      "tag": "round",
+      "value": 3
     },
     {
       "tag": "penant",
       "value": 1
-    },
-    {
-      "tag": "block",
-      "value": 6
     },
     {
       "tag": "bamboo",
@@ -561,24 +615,12 @@
       "value": 10
     },
     {
-      "tag": "eurostile",
-      "value": 3
-    },
-    {
       "tag": "1700s",
       "value": 3
     },
     {
-      "tag": "handwritten",
-      "value": 13
-    },
-    {
-      "tag": "fuzzy",
-      "value": 1
-    },
-    {
-      "tag": "semi-condensed",
-      "value": 1
+      "tag": "hebrew",
+      "value": 3
     },
     {
       "tag": "rock",
@@ -621,24 +663,12 @@
       "value": 2
     },
     {
-      "tag": "romantic",
-      "value": 1
-    },
-    {
-      "tag": "game",
-      "value": 3
-    },
-    {
       "tag": "1980s",
       "value": 1
     },
     {
-      "tag": "pixel",
-      "value": 2
-    },
-    {
-      "tag": "light",
-      "value": 1
+      "tag": "graffiti",
+      "value": 3
     },
     {
       "tag": "1970s",
@@ -653,7 +683,26 @@
       "value": 1
     }
   ],
-  "uniqueVariants": ["100", "100italic", "200", "200italic", "300", "300italic", "500", "500italic", "600", "600italic", "700", "700italic", "800", "800italic", "900", "900italic", "italic", "regular"],
+  "uniqueVariants": [
+    "100",
+    "100italic",
+    "200",
+    "200italic",
+    "300",
+    "300italic",
+    "500",
+    "500italic",
+    "600",
+    "600italic",
+    "700",
+    "700italic",
+    "800",
+    "800italic",
+    "900",
+    "900italic",
+    "italic",
+    "regular"
+  ],
   "variants": [
     {
       "variant": "100",
@@ -1532,7 +1581,13 @@
       "value": 1
     }
   ],
-  "uniqueCategories": ["display", "handwriting", "monospace", "sans-serif", "serif"],
+  "uniqueCategories": [
+    "display",
+    "handwriting",
+    "monospace",
+    "sans-serif",
+    "serif"
+  ],
   "categories": [
     {
       "category": "sans-serif",
