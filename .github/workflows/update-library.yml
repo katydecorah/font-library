@@ -1,10 +1,12 @@
 name: Update library
 
 on:
-  #pull_request:
+  push:
+    branches:
+      - gh-pages
   schedule:
     - cron: "30 5 * * *"
-  workflow_dispatch: # enables run button on github.com
+  workflow_dispatch:
 
 jobs:
   update_library:
