@@ -66,6 +66,7 @@
     "grunge",
     "halloween",
     "handwritten",
+    "headline",
     "headlines",
     "heavy",
     "hebrew",
@@ -148,15 +149,15 @@
     },
     {
       "tag": "condensed",
-      "value": 40
+      "value": 42
     },
     {
       "tag": "caps",
-      "value": 19
+      "value": 20
     },
     {
       "tag": "heavy",
-      "value": 39
+      "value": 41
     },
     {
       "tag": "elegant",
@@ -196,7 +197,7 @@
     },
     {
       "tag": "legibility",
-      "value": 28
+      "value": 31
     },
     {
       "tag": "compact",
@@ -244,11 +245,11 @@
     },
     {
       "tag": "square",
-      "value": 22
+      "value": 23
     },
     {
       "tag": "techno",
-      "value": 19
+      "value": 20
     },
     {
       "tag": "literature",
@@ -312,7 +313,7 @@
     },
     {
       "tag": "block",
-      "value": 10
+      "value": 11
     },
     {
       "tag": "art nouveau",
@@ -332,7 +333,7 @@
     },
     {
       "tag": "futuristic",
-      "value": 21
+      "value": 22
     },
     {
       "tag": "tall",
@@ -372,11 +373,11 @@
     },
     {
       "tag": "high contrast",
-      "value": 23
+      "value": 24
     },
     {
       "tag": "rounded",
-      "value": 38
+      "value": 39
     },
     {
       "tag": "editorial",
@@ -384,7 +385,7 @@
     },
     {
       "tag": "wide",
-      "value": 21
+      "value": 24
     },
     {
       "tag": "fat face",
@@ -519,12 +520,16 @@
       "value": 2
     },
     {
+      "tag": "headline",
+      "value": 1
+    },
+    {
       "tag": "dotted",
       "value": 2
     },
     {
       "tag": "marker",
-      "value": 7
+      "value": 8
     },
     {
       "tag": "celtic",
@@ -556,7 +561,7 @@
     },
     {
       "tag": "handwritten",
-      "value": 28
+      "value": 30
     },
     {
       "tag": "1930s",
@@ -8836,8 +8841,13 @@
       ],
       "lastModified": "2023-02-23",
       "category": "display",
-      "tags": [],
-      "count": 0,
+      "tags": [
+        "heavy",
+        "block",
+        "rounded",
+        "headline"
+      ],
+      "count": 4,
       "lineNumber": 272
     },
     {
@@ -13317,8 +13327,13 @@
       ],
       "lastModified": "2023-02-16",
       "category": "display",
-      "tags": [],
-      "count": 0,
+      "tags": [
+        "heavy",
+        "futuristic",
+        "techno",
+        "square"
+      ],
+      "count": 4,
       "lineNumber": 443
     },
     {
@@ -13972,8 +13987,10 @@
       ],
       "lastModified": "2023-02-16",
       "category": "serif",
-      "tags": [],
-      "count": 0,
+      "tags": [
+        "high contrast"
+      ],
+      "count": 1,
       "lineNumber": 468
     },
     {
@@ -19340,8 +19357,11 @@
       ],
       "lastModified": "2023-01-06",
       "category": "sans-serif",
-      "tags": [],
-      "count": 0,
+      "tags": [
+        "wide",
+        "legibility"
+      ],
+      "count": 2,
       "lineNumber": 669
     },
     {
@@ -19370,8 +19390,11 @@
       ],
       "lastModified": "2023-01-06",
       "category": "sans-serif",
-      "tags": [],
-      "count": 0,
+      "tags": [
+        "wide",
+        "legibility"
+      ],
+      "count": 2,
       "lineNumber": 670
     },
     {
@@ -19400,8 +19423,11 @@
       ],
       "lastModified": "2023-01-06",
       "category": "sans-serif",
-      "tags": [],
-      "count": 0,
+      "tags": [
+        "wide",
+        "legibility"
+      ],
+      "count": 2,
       "lineNumber": 671
     },
     {
@@ -23066,8 +23092,10 @@
       ],
       "lastModified": "2023-02-16",
       "category": "handwriting",
-      "tags": [],
-      "count": 0,
+      "tags": [
+        "handwritten"
+      ],
+      "count": 1,
       "lineNumber": 814
     },
     {
@@ -30307,8 +30335,10 @@
       ],
       "lastModified": "2023-02-16",
       "category": "display",
-      "tags": [],
-      "count": 0,
+      "tags": [
+        "caps"
+      ],
+      "count": 1,
       "lineNumber": 1106
     },
     {
@@ -34794,8 +34824,11 @@
       ],
       "lastModified": "2023-02-16",
       "category": "display",
-      "tags": [],
-      "count": 0,
+      "tags": [
+        "handwritten",
+        "marker"
+      ],
+      "count": 2,
       "lineNumber": 1275
     },
     {
@@ -35692,8 +35725,10 @@
       ],
       "lastModified": "2023-02-02",
       "category": "sans-serif",
-      "tags": [],
-      "count": 0,
+      "tags": [
+        "condensed"
+      ],
+      "count": 1,
       "lineNumber": 1311
     },
     {
@@ -35733,8 +35768,10 @@
       ],
       "lastModified": "2023-02-02",
       "category": "sans-serif",
-      "tags": [],
-      "count": 0,
+      "tags": [
+        "condensed"
+      ],
+      "count": 1,
       "lineNumber": 1312
     },
     {
