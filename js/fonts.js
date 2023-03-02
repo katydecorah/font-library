@@ -10,22 +10,6 @@ class FontResults extends HTMLElement {
     this.resultsLength;
     this.pageSize = 5;
     this.curPage = 1;
-    this.languages = {
-      arabic: "مرحبا بالعالم",
-      bengali: "ওহে বিশ্ব",
-      cyrillic: "привет мир",
-      "cyrillic-ext": "привет мир",
-      devanagari: "हैलो वर्ल्ड",
-      greek: "γειά σου Κόσμε",
-      "greek-ext": "γειά σου Κόσμε",
-      gujarati: "હેલો વર્લ્ડ",
-      hebrew: "שלום עולם",
-      khmer: "ជំរាបសួរពិភពលោក",
-      tamil: "வணக்கம் உலக",
-      telugu: "హలో వరల్డ్",
-      thai: "สวัสดีชาวโลก",
-      vietnamese: "xin chào",
-    };
 
     // Bind functions
     this.selectTag = this.selectTag.bind(this);
@@ -142,6 +126,13 @@ class FontResults extends HTMLElement {
       "",
       `${window.location.pathname}?tag=${encodeTag}`
     );
+    /*
+    const contentElement = document.querySelector("#content");
+    // add focus to #content
+    contentElement.focus();
+    // scroll to #content
+    contentElement.scrollIntoView();
+    */
   }
 
   removeTag() {

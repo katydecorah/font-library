@@ -1,6 +1,22 @@
 class FontResult extends HTMLElement {
   constructor() {
     super();
+    this.languages = {
+      arabic: "مرحبا بالعالم",
+      bengali: "ওহে বিশ্ব",
+      cyrillic: "привет мир",
+      "cyrillic-ext": "привет мир",
+      devanagari: "हैलो वर्ल्ड",
+      greek: "γειά σου Κόσμε",
+      "greek-ext": "γειά σου Κόσμε",
+      gujarati: "હેલો વર્લ્ડ",
+      hebrew: "שלום עולם",
+      khmer: "ជំរាបសួរពិភពលោក",
+      tamil: "வணக்கம் உலக",
+      telugu: "హలో వరల్డ్",
+      thai: "สวัสดีชาวโลก",
+      vietnamese: "xin chào",
+    };
   }
   connectedCallback() {
     const wrapper = document.createElement("div");
