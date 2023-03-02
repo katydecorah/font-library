@@ -18,7 +18,10 @@ class Tag extends HTMLButtonElement {
     });
   }
   connectedCallback() {
-    this.classList.add("family-tag");
+    this.classList.add(
+      "family-tag",
+      `tag-${this.innerHTML.replace(/ /g, "-")}`
+    );
   }
 }
 

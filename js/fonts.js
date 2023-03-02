@@ -126,6 +126,13 @@ class FontResults extends HTMLElement {
       "",
       `${window.location.pathname}?tag=${encodeTag}`
     );
+    // remove tag from .family-tag.active
+    this.removeActiveTag();
+
+    const nextActiveTags = document.querySelectorAll(
+      `.tag-${tag.replace(/ /g, "-")}`
+    );
+    nextActiveTags.forEach((tagButton) => tagButton.classList.add("active"));
     /*
     const contentElement = document.querySelector("#content");
     // add focus to #content
@@ -135,10 +142,18 @@ class FontResults extends HTMLElement {
     */
   }
 
+  removeActiveTag() {
+    const prevActiveTag = document.querySelectorAll(".family-tag.active");
+    prevActiveTag.forEach((activeTagButton) =>
+      activeTagButton.classList.remove("active")
+    );
+  }
+
   removeTag() {
     this.selectedTag = "";
     this.renderBody();
     window.history.pushState({}, "", `${window.location.pathname}`);
+    this.removeActiveTag();
   }
 
   nextPage() {
