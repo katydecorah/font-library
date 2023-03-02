@@ -52,10 +52,7 @@ class FontResult extends HTMLElement {
     </div>
     <div class="family-tags">
       <div class="family-tags-container">${this.tags
-        .map(
-          (tag) =>
-            `<button is="tag-button" class="family-tag" value="${tag}">${tag}</button>`
-        )
+        .map((tag) => `<button is="tag-button">${tag}</button>`)
         .join("")}</div>
       <div class="family-meta-links">
         <a
@@ -78,6 +75,7 @@ class FontResult extends HTMLElement {
     this.appendChild(wrapper);
   }
 
+  // Refactor this function
   fontCall({ family, variants, subsets, slug }) {
     //get font name
     let font = slug;

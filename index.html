@@ -41,9 +41,7 @@
           <h2>Tags</h2>
           <div id="tags" class="tags-container">
             {% for tag in data.uniqueTags %}
-            <button is="tag-button" class="family-tag" value="{{tag}}">
-              {{tag}}
-            </button>
+            <button is="tag-button">{{tag}}</button>
             {% endfor %}
           </div>
         </div>
@@ -51,9 +49,8 @@
           <h2>Want to help the project?</h2>
           <p>
             Sort by fonts that
-            <button is="tag-button" class="family-tag" value="need tags">
-              need tags</button
-            >. Learn <a href="{{site.contributing}}">how to contribute</a>.
+            <button is="tag-button">need tags</button>. Learn
+            <a href="{{site.contributing}}">how to contribute</a>.
           </p>
         </div>
       </aside>
