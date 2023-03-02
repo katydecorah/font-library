@@ -66,6 +66,7 @@
     "grunge",
     "halloween",
     "handwritten",
+    "headline",
     "headlines",
     "heavy",
     "hebrew",
@@ -148,15 +149,15 @@
     },
     {
       "tag": "condensed",
-      "value": 40
+      "value": 42
     },
     {
       "tag": "caps",
-      "value": 19
+      "value": 20
     },
     {
       "tag": "heavy",
-      "value": 39
+      "value": 41
     },
     {
       "tag": "elegant",
@@ -196,7 +197,7 @@
     },
     {
       "tag": "legibility",
-      "value": 28
+      "value": 31
     },
     {
       "tag": "compact",
@@ -244,11 +245,11 @@
     },
     {
       "tag": "square",
-      "value": 22
+      "value": 23
     },
     {
       "tag": "techno",
-      "value": 19
+      "value": 20
     },
     {
       "tag": "literature",
@@ -312,7 +313,7 @@
     },
     {
       "tag": "block",
-      "value": 10
+      "value": 11
     },
     {
       "tag": "art nouveau",
@@ -332,7 +333,7 @@
     },
     {
       "tag": "futuristic",
-      "value": 21
+      "value": 22
     },
     {
       "tag": "tall",
@@ -372,11 +373,11 @@
     },
     {
       "tag": "high contrast",
-      "value": 23
+      "value": 24
     },
     {
       "tag": "rounded",
-      "value": 38
+      "value": 39
     },
     {
       "tag": "editorial",
@@ -384,7 +385,7 @@
     },
     {
       "tag": "wide",
-      "value": 21
+      "value": 24
     },
     {
       "tag": "fat face",
@@ -519,12 +520,16 @@
       "value": 2
     },
     {
+      "tag": "headline",
+      "value": 1
+    },
+    {
       "tag": "dotted",
       "value": 2
     },
     {
       "tag": "marker",
-      "value": 7
+      "value": 8
     },
     {
       "tag": "celtic",
@@ -556,7 +561,7 @@
     },
     {
       "tag": "handwritten",
-      "value": 28
+      "value": 30
     },
     {
       "tag": "1930s",
