@@ -33,63 +33,53 @@ class FontResult extends HTMLElement {
       .split(",")
       .filter((tag) => tag);
 
+    const { slug, family, category, variants, subsets, lineNumber, tags } =
+      this;
+
     // Add Google Font to document head
     const googleFont = document.createElement("link");
-    googleFont.href = `https://fonts.googleapis.com/css2?family=${this.fontCall(
-      {
-        family: this.family,
-        variants: this.variants,
-        subsets: this.subsets,
-        slug: this.slug,
-      }
-    )}`;
+    googleFont.href = `https://fonts.googleapis.com/css2?family=${this.fontCall()}`;
     googleFont.rel = "stylesheet";
-    googleFont.setAttribute("data-family", this.family);
+    googleFont.setAttribute("data-family", family);
     document.head.appendChild(googleFont);
 
-    wrapper.innerHTML = `<div id="family-${this.slug}">
+    wrapper.innerHTML = `<div id="family-${slug}">
     <div class="family-link">
-      <div id="family-name" class="family-title" style="${this.familyStyle({
-        family: this.family,
-        variants: this.variants,
-        subsets: this.subsets,
-      })}">
-        ${this.subsetFamily({ subsets: this.subsets, family: this.family })}
+      <div id="family-name" class="family-title" style="${this.familyStyle()}">
+        ${this.subsetFamily()}
       </div>
       <div class="family-meta-container">
      <span class="family-title-small">${
-       !this.subsets.includes("latin") ? this.family : ""
+       !subsets.includes("latin") ? family : ""
      }</span>
       <div class="family-meta">
-        <span>${this.category}</span>
+        <span>${category}</span>
         &bull;
-        <span aria-label="${this.variants.join(", ")}"
-          >${this.variants.length} variants</span
+        <span aria-label="${variants.join(", ")}"
+          >${variants.length} variants</span
         >
         &bull;
-        <span aria-label="${this.subsets.join(", ")}">${
-      this.subsets.length
+        <span aria-label="${subsets.join(", ")}">${
+      subsets.length
     } subsets</span>
       </div>
       </div>
     </div>
     <div class="family-tags">
-      <div class="family-tags-container">${this.tags
+      <div class="family-tags-container">${tags
         .map((tag) => `<button is="tag-button">${tag}</button>`)
         .join("")}</div>
       <div class="family-meta-links">
         <a
-          href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L${
-            this.lineNumber
-          }"
+          href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L${lineNumber}"
           target="_blank"
-          aria-label="Edit tags for ${this.family}"
+          aria-label="Edit tags for ${family}"
           >Edit tags</a
         >
            <a
-          href="https://fonts.google.com/specimen/${this.slug}"
+          href="https://fonts.google.com/specimen/${slug}"
           target="_blank"
-          aria-label="Visit ${this.family} on Google Fonts"
+          aria-label="Visit ${family} on Google Fonts"
           >Google Fonts &rarr;</a
         >
       </div>
@@ -99,7 +89,8 @@ class FontResult extends HTMLElement {
   }
 
   // Refactor this function
-  fontCall({ family, variants, subsets, slug }) {
+  fontCall() {
+    const { family, variants, subsets, slug } = this;
     //get font name
     let font = slug;
 
@@ -127,7 +118,8 @@ class FontResult extends HTMLElement {
     return font;
   }
 
-  familyStyle({ family, variants, subsets }) {
+  familyStyle() {
+    const { family, variants, subsets } = this;
     let style = `font-family: '${family}';`;
 
     if (!variants.includes("regular") && variants.includes("italic")) {
@@ -148,7 +140,8 @@ class FontResult extends HTMLElement {
     return style;
   }
 
-  subsetFamily({ subsets, family }) {
+  subsetFamily() {
+    const { subsets, family } = this;
     if (!subsets.includes("latin")) {
       return this.languages[subsets];
     }
