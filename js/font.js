@@ -53,17 +53,23 @@ class FontResult extends HTMLElement {
         family: this.family,
         variants: this.variants,
       })}">
-        ${this.subsetFamily({ subsets: this.subsets })}
-        <span class="family-name">${this.family}</span>
+        ${this.subsetFamily({ subsets: this.subsets, family: this.family })}
       </div>
+      <div class="family-meta-container">
+     <span class="family-title-small">${
+       !this.subsets.includes("latin") ? this.family : ""
+     }</span>
       <div class="family-meta">
         <span>${this.category}</span>
         &bull;
-        <span aria-label="${this.variants}"
+        <span aria-label="${this.variants.join(", ")}"
           >${this.variants.length} variants</span
         >
         &bull;
-        <span aria-label="${this.subsets}">${this.subsets.length} subsets</span>
+        <span aria-label="${this.subsets.join(", ")}">${
+      this.subsets.length
+    } subsets</span>
+      </div>
       </div>
     </div>
     <div class="family-tags">
@@ -100,10 +106,7 @@ class FontResult extends HTMLElement {
     if (!variants.includes("regular") && variants.includes("italic")) {
       font += `:${variants[0]}`;
     }
-    // get selected variant
-    if (this.selectedVariant !== undefined) {
-      font += `:${this.electedVariant}`;
-    }
+
     // if no regular or italic?
     if (!variants.includes("regular") && !variants.includes("italic")) {
       font += `:${variants[0]}`;
@@ -113,13 +116,9 @@ class FontResult extends HTMLElement {
     font += `&text=${encodeURIComponent(family)}`;
 
     for (const key in this.languages) {
-      if (this.selectedSubset == key || subsets.indexOf("latin") < 0) {
+      if (subsets.indexOf("latin") < 0) {
         font += encodeURIComponent(this.languages[key]);
       }
-    }
-    // set the subset
-    if (this.selectedSubset !== undefined) {
-      font += `&subset=${this.selectedSubset}`;
     }
 
     font += `&display=swap`;
@@ -141,11 +140,11 @@ class FontResult extends HTMLElement {
     return style;
   }
 
-  subsetFamily({ subsets }) {
+  subsetFamily({ subsets, family }) {
     if (!subsets.includes("latin")) {
       return this.languages[subsets];
     }
-    return "";
+    return family;
   }
 }
 

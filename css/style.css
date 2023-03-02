@@ -235,8 +235,6 @@ header {
 }
 
 .family-title-small {
-  font-size: 0.6em;
-
   color: var(--text-color-accent);
 }
 
@@ -270,8 +268,9 @@ header {
   grid-gap: 3px;
 }
 
-.family-meta {
-  text-align: right;
+.family-meta-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (max-width: 980px) {
