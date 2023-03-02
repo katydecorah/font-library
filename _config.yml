@@ -34,6 +34,3 @@ exclude:
 plugins:
   - jekyll-sitemap
   - jekyll-feed
-
-sass:
-  style: :compressed
