@@ -1,29 +1,17 @@
 class FontResult extends HTMLElement {
   constructor() {
     super();
-    const shadow = this.attachShadow({
-      mode: "open",
-    });
+  }
+  connectedCallback() {
     const wrapper = document.createElement("div");
     wrapper.classList.add("family");
-    shadow.appendChild(wrapper);
-    this.render();
-  }
-  render() {
-    // Apply external styles to the shadow DOM
-    const linkElem = document.createElement("link");
-    linkElem.setAttribute("rel", "stylesheet");
-    linkElem.setAttribute("href", "css/style.css");
-    // Attach the created element to the shadow DOM
-    this.shadowRoot.appendChild(linkElem);
-
-    const wrapper = this.shadowRoot.querySelector(".family");
     this.slug = this.getAttribute("slug");
     this.family = this.getAttribute("family");
     this.category = this.getAttribute("category");
     this.variants = this.getAttribute("variants").split(",");
     this.subsets = this.getAttribute("subsets").split(",");
     this.lineNumber = this.getAttribute("lineNumber");
+
     // get tags json parse
     this.tags = this.getAttribute("tags")
       .split(",")
@@ -87,6 +75,7 @@ class FontResult extends HTMLElement {
       </div>
     </div>
   </div>`;
+    this.appendChild(wrapper);
   }
 
   fontCall({ family, variants, subsets, slug }) {

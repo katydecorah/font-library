@@ -44,18 +44,9 @@ class FontResults extends HTMLElement {
     this.addEventListener("tag-button-selected-tag", this.selectTag);
     document.addEventListener("tag-button-remove-tag", this.removeTag);
     this.addEventListener("tag-button-remove-tag", this.removeTag);
-
-    // Create component
-    this.createComponent();
-
-    // Render fonts
-    this.render();
   }
 
-  createComponent() {
-    const shadow = this.attachShadow({
-      mode: "open",
-    });
+  connectedCallback() {
     // Main
     const fontContainer = document.createElement("div");
     // Search status
@@ -83,17 +74,9 @@ class FontResults extends HTMLElement {
     nav.append(prevButton, pageCount, nextButton);
     nextButton.addEventListener("click", this.nextPage, false);
     prevButton.addEventListener("click", this.previousPage, false);
+    fontContainer.append(nav);
 
-    shadow.append(fontContainer, nav);
-  }
-
-  render() {
-    // Apply external styles to the shadow DOM
-    const linkElem = document.createElement("link");
-    linkElem.setAttribute("rel", "stylesheet");
-    linkElem.setAttribute("href", "css/style.css");
-    // Attach the created element to the shadow DOM
-    this.shadowRoot.appendChild(linkElem);
+    this.appendChild(fontContainer);
 
     this.renderStatus();
     this.renderBody();
@@ -119,7 +102,7 @@ class FontResults extends HTMLElement {
 
   performPagination(data) {
     // pagination
-    this.shadowRoot.querySelector("#page-count").innerHTML = `${
+    this.querySelector("#page-count").innerHTML = `${
       this.curPage
     } of ${Math.ceil(this.resultsLength / this.pageSize)}`;
 
@@ -134,7 +117,7 @@ class FontResults extends HTMLElement {
   }
 
   renderBody() {
-    const fontBody = this.shadowRoot.querySelector(".families");
+    const fontBody = this.querySelector(".families");
     const filteredData = this.performFilter();
     this.renderStatus();
     const paginatedData = this.performPagination(filteredData);
@@ -176,9 +159,9 @@ class FontResults extends HTMLElement {
 
   setNextPageState() {
     if (this.curPage * this.pageSize >= this.resultsLength) {
-      this.shadowRoot.querySelector("#btn-next").disabled = true;
+      this.querySelector("#btn-next").disabled = true;
     } else {
-      this.shadowRoot.querySelector("#btn-next").disabled = false;
+      this.querySelector("#btn-next").disabled = false;
     }
   }
 
@@ -191,15 +174,14 @@ class FontResults extends HTMLElement {
 
   setPrevPageState() {
     if (this.curPage === 1) {
-      this.shadowRoot.querySelector("#btn-prev").disabled = true;
+      this.querySelector("#btn-prev").disabled = true;
     } else {
-      this.shadowRoot.querySelector("#btn-prev").disabled = false;
+      this.querySelector("#btn-prev").disabled = false;
     }
   }
 
   renderStatus() {
-    const status = this.shadowRoot.querySelector(".search-status");
-
+    const status = this.querySelector(".search-status");
     let elm = "";
     elm += `Found ${this.resultsLength} fonts`;
     if (this.selectedTag) {
