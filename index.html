@@ -37,14 +37,14 @@
     <div class="container">
       <aside class="sidebar">
         {%- assign data = site.data.metadata -%}
-        <div class="tags sidebar-group">
+        <section class="tags sidebar-group">
           <h2>Tags</h2>
           <div id="tags" class="tags-container">
             {% for tag in data.uniqueTags %}
             <button is="tag-button">{{tag}}</button>
             {% endfor %}
           </div>
-        </div>
+        </section>
         <div class="sidebar-group">
           <h2>Want to help the project?</h2>
           <p>
