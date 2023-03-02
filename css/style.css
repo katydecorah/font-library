@@ -238,10 +238,6 @@ header {
   color: var(--text-color-accent);
 }
 
-.language-rtl {
-  direction: rtl;
-}
-
 .family-tags {
   background: var(--background-accent);
   border-radius: 0 0 3px 3px;

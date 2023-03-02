@@ -52,6 +52,7 @@ class FontResult extends HTMLElement {
       <div id="family-name" class="family-title" style="${this.familyStyle({
         family: this.family,
         variants: this.variants,
+        subsets: this.subsets,
       })}">
         ${this.subsetFamily({ subsets: this.subsets, family: this.family })}
       </div>
@@ -126,7 +127,7 @@ class FontResult extends HTMLElement {
     return font;
   }
 
-  familyStyle({ family, variants }) {
+  familyStyle({ family, variants, subsets }) {
     let style = `font-family: '${family}';`;
 
     if (!variants.includes("regular") && variants.includes("italic")) {
@@ -135,6 +136,13 @@ class FontResult extends HTMLElement {
 
     if (!variants.includes("regular") && !variants.includes("italic")) {
       style += `font-weight: ${variants[0]};`;
+    }
+
+    if (
+      (subsets.includes("hebrew") || subsets.includes("arabic")) &&
+      !subsets.includes("latin")
+    ) {
+      style += "direction: rtl;";
     }
 
     return style;
