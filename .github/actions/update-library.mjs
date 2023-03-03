@@ -5,6 +5,10 @@ import stringify from "json-stringify-pretty-compact";
 
 async function library() {
   try {
+    if (!process.env.GoogleToken) {
+      setFailed("GoogleToken is not set.");
+      return;
+    }
     const response = await fetch(
       `https://www.googleapis.com/webfonts/v1/webfonts?key=${process.env.GoogleToken}`
     );
@@ -132,13 +136,13 @@ function combineLibraries(remoteFonts, local) {
   return {
     generatedMetadata: {
       uniqueTags: [...new Set(tagArr)].sort(),
-      tags: groupBy(tagArr, "tag"),
-      uniqueVariants: [...new Set(variantArr)].sort(),
-      variants: groupBy(variantArr, "variant"),
-      uniqueSubsets: [...new Set(subsetArr)].sort(),
-      subsets: groupBy(subsetArr, "subset"),
-      uniqueCategories: [...new Set(categoryArr)].sort(),
-      categories: groupBy(categoryArr, "category"),
+      //tags: groupBy(tagArr, "tag"),
+      //uniqueVariants: [...new Set(variantArr)].sort(),
+      //variants: groupBy(variantArr, "variant"),
+      //uniqueSubsets: [...new Set(subsetArr)].sort(),
+      //subsets: groupBy(subsetArr, "subset"),
+      //uniqueCategories: [...new Set(categoryArr)].sort(),
+      //categories: groupBy(categoryArr, "category"),
     },
     generatedFamilies: `const generatedData=${JSON.stringify(
       combineLibrary.sort((a, b) => (a.family > b.family ? 1 : -1))

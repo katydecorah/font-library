@@ -23,7 +23,7 @@ jobs:
       - run: npm install @actions/core node-fetch json-stringify-pretty-compact
 
       - name: Update library
-        run: node .github/actions/update-library.js
+        run: node .github/actions/update-library.mjs
         id: update
         env:
           GoogleToken: ${{ secrets.GoogleToken }}

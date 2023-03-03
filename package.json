@@ -7,7 +7,9 @@
     "pretest": "eslint .",
     "test": "jest",
     "prepare": "husky install",
-    "start": "bundle exec jekyll serve"
+    "start": "npx @11ty/eleventy --serve",
+    "update-library": "node .github/actions/update-library.mjs",
+    "build": "npx eleventy"
   },
   "devDependencies": {
     "@actions/core": "^1.10.0",
