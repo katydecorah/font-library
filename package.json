@@ -2,9 +2,9 @@
   "name": "font-library",
   "version": "0.0.0",
   "description": "An open source project to tag and organize Google Fonts.",
-
   "scripts": {
-    "pretest": "eslint .",
+    "lint": "eslint . && stylelint \"**/*.css\"",
+    "pretest": "npm run lint",
     "test": "jest",
     "prepare": "husky install",
     "start": "npx @11ty/eleventy --serve",
@@ -22,7 +22,9 @@
     "json-stringify-pretty-compact": "^4.0.0",
     "lint-staged": "^13.1.2",
     "node-fetch": "^3.3.0",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "stylelint": "^15.2.0",
+    "stylelint-config-standard": "^30.0.1"
   },
   "repository": {
     "type": "git",
