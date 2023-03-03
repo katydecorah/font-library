@@ -157,6 +157,12 @@ header {
   border-left-width: 5px;
   border-bottom-width: 3px;
   border-bottom-color: #d6d2bc;
+  display: inline-flex;
+  align-items: center;
+}
+
+.family-tag svg {
+  height: 1em;
 }
 
 .family-tag.active,
@@ -167,36 +173,20 @@ header {
   color: var(--selected-tag);
 }
 
-.family-tag.active {
-  cursor: default;
-}
-
 .search-status {
   margin-bottom: 0.5em;
   margin-top: 1em;
-  min-height: 26.5px;
+  min-height: 31px;
+  display: flex;
+  align-items: center;
+  grid-gap: 0.25em;
 }
 
 .search-status .family-tag {
   margin-left: 0.25em;
   margin-right: 0.25em;
   position: relative;
-}
-
-.search-status .family-tag:hover {
-  color: var(--accent);
-  cursor: pointer;
-}
-
-.search-status .family-tag:hover::after {
-  content: "\00D7";
-  font-size: 5em;
-  left: 0;
-  line-height: 1;
-  position: absolute;
-  text-align: center;
-  top: -0.35em;
-  width: 100%;
+  grid-gap: 0.5em;
 }
 
 .pagination {
