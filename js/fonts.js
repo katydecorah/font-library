@@ -133,13 +133,12 @@ class FontResults extends HTMLElement {
       `.tag-${tag.replace(/ /g, "-")}`
     );
     nextActiveTags.forEach((tagButton) => tagButton.classList.add("active"));
-    /*
+    this.scrollToContent();
+  }
+
+  scrollToContent() {
     const contentElement = document.querySelector("#content");
-    // add focus to #content
-    contentElement.focus();
-    // scroll to #content
     contentElement.scrollIntoView();
-    */
   }
 
   removeActiveTag() {
@@ -161,6 +160,7 @@ class FontResults extends HTMLElement {
     if (this.curPage * this.pageSize < this.resultsLength) this.curPage++;
     this.setNextPageState();
     this.renderBody();
+    this.scrollToContent();
   }
 
   setNextPageState() {
@@ -176,6 +176,7 @@ class FontResults extends HTMLElement {
     if (this.curPage > 1) this.curPage--;
     this.setPrevPageState();
     this.renderBody();
+    this.scrollToContent();
   }
 
   setPrevPageState() {
