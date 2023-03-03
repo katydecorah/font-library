@@ -1,5 +1,7 @@
 // https://www.raymondcamden.com/2022/05/23/building-table-sorting-and-pagination-in-a-web-component
 
+const svgClose = `<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
+
 class FontResults extends HTMLElement {
   constructor() {
     super();
@@ -130,7 +132,7 @@ class FontResults extends HTMLElement {
     this.removeActiveTag();
 
     const nextActiveTags = document.querySelectorAll(
-      `.tag-${tag.replace(/ /g, "-")}`
+      `.tag-${tag.replace(/ /g, "-")}:not([data-event="tag-button-remove-tag"])`
     );
     nextActiveTags.forEach((tagButton) => tagButton.classList.add("active"));
     this.scrollToContent();
@@ -193,7 +195,7 @@ class FontResults extends HTMLElement {
     elm += `Found ${this.resultsLength} fonts`;
     if (this.selectedTag) {
       elm += this.selectedTag === "need tags" ? ` that ` : ` for `;
-      elm += `<tag-button data-event='tag-button-remove-tag' class="active" value="${this.selectedTag}">${this.selectedTag}</tag-button>`;
+      elm += `<tag-button data-event="tag-button-remove-tag" aria-label="${this.selectedTag}, remove tag" value="${this.selectedTag}"> ${svgClose} ${this.selectedTag}</tag-button>`;
     }
     status.innerHTML = elm;
   }

@@ -67,7 +67,7 @@ class FontResult extends HTMLElement {
     </div>
     <div class="family-tags">
       <div class="family-tags-container">${tags
-        .map((tag) => `<tag-button>${tag}</tag-button>`)
+        .map((tag) => `<tag-button value="${tag}">${tag}</tag-button>`)
         .join("")}</div>
       <div class="family-meta-links">
         <a
