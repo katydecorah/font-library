@@ -1,6 +1,8 @@
-class Tag extends HTMLButtonElement {
+class Tag extends HTMLElement {
   constructor() {
     super();
+  }
+  connectedCallback() {
     this.eventName = "tag-button-selected-tag";
     if (this.hasAttribute("data-event")) {
       this.eventName = this.getAttribute("data-event");
@@ -16,8 +18,8 @@ class Tag extends HTMLButtonElement {
         })
       );
     });
-  }
-  connectedCallback() {
+
+    // eslint-disable-next-line wc/no-self-class
     this.classList.add(
       "family-tag",
       `tag-${this.innerHTML.replace(/ /g, "-")}`
@@ -25,4 +27,4 @@ class Tag extends HTMLButtonElement {
   }
 }
 
-customElements.define("tag-button", Tag, { extends: "button" });
+customElements.define("tag-button", Tag);

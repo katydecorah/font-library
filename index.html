@@ -34,7 +34,7 @@
           <h2>Tags</h2>
           <div id="tags" class="tags-container">
             {% for tag in metadata.uniqueTags %}
-            <button is="tag-button">{{tag}}</button>
+            <tag-button>{{tag}}</tag-button>
             {% endfor %}
           </div>
         </section>
@@ -42,7 +42,7 @@
           <h2>Want to help the project?</h2>
           <p>
             Sort by fonts that
-            <button is="tag-button">need tags</button>. Learn
+            <tag-button>need tags</tag-button>. Learn
             <a href="{{site.contributing}}">how to contribute</a>.
           </p>
         </div>

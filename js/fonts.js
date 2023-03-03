@@ -193,7 +193,7 @@ class FontResults extends HTMLElement {
     elm += `Found ${this.resultsLength} fonts`;
     if (this.selectedTag) {
       elm += this.selectedTag === "need tags" ? ` that ` : ` for `;
-      elm += `<button is="tag-button" data-event='tag-button-remove-tag' class="family-tag active" value="${this.selectedTag}">${this.selectedTag}</button>`;
+      elm += `<tag-button data-event='tag-button-remove-tag' class="active" value="${this.selectedTag}">${this.selectedTag}</tag-button>`;
     }
     status.innerHTML = elm;
   }
