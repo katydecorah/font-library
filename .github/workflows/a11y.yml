@@ -19,7 +19,7 @@ jobs:
           node-version: 16
 
       - name: Build site
-        run: npm ci && npm start
+        run: npm ci && npm start &
 
       - name: Scan site
         uses: double-great/accessibility-scan-action@v0.2.0
