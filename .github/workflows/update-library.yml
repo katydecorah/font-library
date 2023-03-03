@@ -6,7 +6,7 @@ on:
       - gh-pages
   schedule:
     - cron: "30 5 * * *"
-  workflow_dispatch: # enables run button on github.com
+  workflow_dispatch:
 
 jobs:
   update_library:
@@ -15,10 +15,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Update library
-        uses: katydecorah/font-library-action@v3.1.1
+
+      - uses: actions/setup-node@v3
         with:
+          node-version: 16
+
+      - run: npm install @actions/core node-fetch json-stringify-pretty-compact
+
+      - name: Update library
+        run: node .github/actions/update-library.mjs
+        id: update
+        env:
           GoogleToken: ${{ secrets.GoogleToken }}
+
       - name: Commit files
         if: env.UpdatedLibrary == 'true'
         run: |

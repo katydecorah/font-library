@@ -1,18 +1,12 @@
 {
-  "extends": ["eslint:recommended", "prettier"],
+  "extends": ["eslint:recommended", "plugin:wc/recommended", "prettier"],
   "parserOptions": {
     "ecmaVersion": 2020
   },
   "env": {
     "browser": true,
-    "node": true,
     "es6": true,
     "jest": true
-  },
-  "globals": {
-    "angular": true,
-    "$": true,
-    "_": true
   },
   "rules": {
     "prefer-arrow-callback": "error",

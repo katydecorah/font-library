@@ -14,23 +14,17 @@ jobs:
       - name: Checkout branch
         uses: actions/checkout@v3
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "2.7" # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-
       - uses: actions/setup-node@v3
         with:
           node-version: 16
 
-      - name: Serve site
-        run: bundle exec jekyll serve &
+      - name: Build site
+        run: npm ci && npm start &
 
       - name: Scan site
         uses: double-great/accessibility-scan-action@v0.2.0
         with:
-          url: http://127.0.0.1:4000/font-library/
+          url: http://localhost:8080/font-library/
 
       - name: Upload report as artifact
         uses: actions/upload-artifact@v3
