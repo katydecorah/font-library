@@ -2,7 +2,7 @@
   "name": "font-library",
   "version": "0.0.0",
   "description": "An open source project to tag and organize Google Fonts.",
-  "type": "module",
+
   "scripts": {
     "pretest": "eslint .",
     "test": "jest",
@@ -12,6 +12,7 @@
     "build": "npx eleventy"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
     "@actions/core": "^1.10.0",
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
@@ -22,10 +23,6 @@
     "lint-staged": "^13.1.2",
     "node-fetch": "^3.3.0",
     "prettier": "^2.8.4"
-  },
-  "main": "index.js",
-  "directories": {
-    "test": "test"
   },
   "repository": {
     "type": "git",
