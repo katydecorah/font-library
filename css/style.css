@@ -39,17 +39,17 @@ header {
 }
 
 *,
-*:after,
-*:before {
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
 body {
   background: var(--background);
   color: var(--text-color);
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
-    helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+    "segoe ui", "helvetica neue", helvetica, Cantarell, Ubuntu, roboto, noto,
+    arial, sans-serif;
   font-size: 16px;
   line-height: 1.45;
 }
@@ -79,7 +79,7 @@ a:hover {
   padding: 0 1em;
 }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .container {
     display: flex;
     grid-gap: 2em;
@@ -91,7 +91,7 @@ header {
   background: var(--accent);
   border-bottom: 1px solid var(--background);
   margin-bottom: 1em;
-  padding: 0.25em 1em;
+  padding: 0.25em 0.75em 0.5em;
   display: flex;
   flex-direction: column;
   grid-gap: 3px;
@@ -99,23 +99,14 @@ header {
   justify-content: space-between;
 }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   header {
     margin-bottom: 0;
-    padding-left: 1em;
-    padding-right: 1em;
     flex-direction: row;
     align-items: center;
+    padding: 0.25em 1em;
   }
-}
 
-@media (max-width: 980px) {
-  header {
-    padding: 0.25em 0.75em 0.5em;
-  }
-}
-
-@media (min-width: 800px) {
   header .title {
     display: flex;
     align-items: center;
@@ -127,16 +118,16 @@ header {
   max-width: 40em;
   position: relative;
   flex-grow: 1;
-  padding-right: 1em;
+  padding: 0;
 }
 
-@media (max-width: 800px) {
+@media screen and (min-width: 800px) {
   .content {
-    padding: 0;
+    padding-right: 1em;
   }
 }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .sidebar {
     background: var(--background-accent);
     padding: 0 1em 2em;
@@ -145,20 +136,39 @@ header {
   }
 }
 
-@media (max-width: 800px) {
-  .sidebar {
-    margin-bottom: 1em;
-  }
-}
-
 .sidebar a {
   text-decoration: underline;
 }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .select-tags {
     display: none;
   }
+}
+
+.family-tag {
+  color: var(--text-color-accent);
+  background: transparent;
+  font-size: 1em;
+  cursor: pointer;
+  border: 1px solid #e9e6d5;
+  padding: 2px 7px;
+  border-radius: 3px;
+  border-left-width: 5px;
+  border-bottom-width: 3px;
+  border-bottom-color: #d6d2bc;
+}
+
+.family-tag.active,
+.family-tag:has(:checked),
+.family-tag:hover {
+  background: var(--white);
+  border-color: var(--selected-tag);
+  color: var(--selected-tag);
+}
+
+.family-tag.active {
+  cursor: default;
 }
 
 .search-status {
@@ -178,7 +188,7 @@ header {
   cursor: pointer;
 }
 
-.search-status .family-tag:hover:after {
+.search-status .family-tag:hover::after {
   content: "\00D7";
   font-size: 5em;
   left: 0;
@@ -198,7 +208,7 @@ header {
 .family {
   /*
   transition: var(--transition);
-  animation: fade var(--transition) * 4 forwards;*/
+  animation: fade var(--transition) * 4 forwards; */
   margin-bottom: 1em;
 }
 
@@ -206,32 +216,21 @@ header {
   background: var(--white);
   border-radius: 3px 3px 0 0;
   color: var(--text-color);
-  display: block;
-  padding: 1em 2em 0.5em;
+  padding: 1em;
   position: relative;
 }
 
-@media (max-width: 980px) {
+@media screen and (min-width: 800px) {
   .family-link {
-    padding: 0.5em 1em 0;
+    padding: 1em 2em 0.5em;
   }
 }
 
 .family-title {
   /* transition: var(--transition); */
 
-  color: inherit;
-  font-size: 2em;
-  line-height: 1.45;
-  text-transform: none;
-}
-
-@media (max-width: 980px) {
-  .family-title {
-    font-size: 1.75em;
-    height: 40px;
-    overflow: hidden;
-  }
+  font-size: 1.75em;
+  overflow: hidden;
 }
 
 .family-title-small {
@@ -241,20 +240,19 @@ header {
 .family-tags {
   background: var(--background-accent);
   border-radius: 0 0 3px 3px;
-  min-height: 30px;
-  padding: 0.5em 2em;
+  padding: 0.5em 1em;
+  flex-direction: column;
   position: relative;
-
   display: flex;
   justify-content: space-between;
+  grid-gap: 0.5em;
 }
 
-@media (max-width: 980px) {
+@media screen and (min-width: 800px) {
   .family-tags {
-    padding: 0.5em 1em;
-  }
-  .family-tags .btn {
-    display: none;
+    padding: 0.5em 2em;
+    flex-direction: row;
+    align-items: center;
   }
 }
 
@@ -269,9 +267,15 @@ header {
   justify-content: space-between;
 }
 
-@media (max-width: 980px) {
+.family-meta {
+  display: none;
+}
+
+@media screen and (min-width: 980px) {
   .family-meta {
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 0.25em;
   }
 }
 
@@ -282,7 +286,8 @@ header {
 .family-meta span[aria-label]:hover {
   cursor: help;
 }
-.family-meta span[aria-label]:hover:before {
+
+.family-meta span[aria-label]:hover::before {
   border-color: transparent transparent var(--accent);
   border-style: solid;
   border-width: 5px;
@@ -293,7 +298,7 @@ header {
   top: 77%;
 }
 
-.family-meta span[aria-label]:hover:after {
+.family-meta span[aria-label]:hover::after {
   background: var(--accent);
   border-radius: 5px;
   color: var(--white);
@@ -311,41 +316,19 @@ header {
 .family-meta-links {
   flex-shrink: 0;
   display: flex;
-  justify-content: space-between;
   grid-gap: 1em;
+}
+
+@media screen and (min-width: 800px) {
+  .family-meta-links {
+    justify-content: space-between;
+  }
 }
 
 .tags-container {
   display: flex;
   flex-wrap: wrap;
   gap: 7px 9px;
-}
-
-.family-tag {
-  color: var(--text-color-accent);
-
-  background: transparent;
-  font-size: 1em;
-  cursor: pointer;
-
-  border: 1px solid #e9e6d5;
-  padding: 2px 7px;
-  border-radius: 3px;
-  border-left-width: 5px;
-  border-bottom-width: 3px;
-  border-bottom-color: #d6d2bc;
-}
-
-.family-tag.active,
-.family-tag:has(:checked),
-.family-tag:hover {
-  background: var(--white);
-  border-color: var(--selected-tag);
-  color: var(--selected-tag);
-}
-
-.family-tag.active {
-  cursor: default;
 }
 
 .btn {
