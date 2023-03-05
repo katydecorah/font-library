@@ -8,7 +8,6 @@ describe("families.json", () => {
       });
 
       test("make sure `family` is in alphabetical order", () => {
-        // make sure families are in alphabetical order
         const prevFamily = families[index - 1]
           ? families[index - 1].family
           : undefined;
