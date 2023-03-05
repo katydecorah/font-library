@@ -142,8 +142,11 @@ class FontResult extends HTMLElement {
 
   subsetFamily() {
     const { subsets, family } = this;
-    if (!subsets.includes("latin")) {
+    if (!subsets.includes("latin") && this.languages[subsets]) {
       return this.languages[subsets];
+    }
+    if (!subsets.includes("latin") && !this.languages[subsets]) {
+      return "";
     }
     return family;
   }

@@ -174,12 +174,23 @@ header {
 }
 
 .search-status {
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   margin-top: 1em;
-  min-height: 31px;
+  min-height: 33px;
   display: flex;
   align-items: center;
   grid-gap: 0.25em;
+  flex-wrap: wrap;
+}
+
+.search-status div {
+  display: flex;
+  align-items: center;
+  grid-gap: 0.25em;
+  background-color: var(--background-accent);
+  padding: 0.25em 0.5em;
+  border-radius: 3px;
+  border: 1px solid #e9e6d5;
 }
 
 .search-status .family-tag {
@@ -356,4 +367,33 @@ header {
 .btn.active {
   background: var(--accent);
   color: var(--white);
+}
+
+.selects {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 0.5em;
+  margin: 1em 0;
+}
+
+select {
+  border: 1px solid #e9e6d5;
+  border-radius: 3px;
+  padding: 0.25em 0.5em;
+  font-size: 1em;
+  background: var(--white);
+  color: var(--text-color);
+}
+
+.screen-reader-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.hide {
+  display: none;
 }
