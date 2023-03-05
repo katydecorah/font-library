@@ -37,9 +37,19 @@
     "url": "https://github.com/katydecorah/font-library/issues"
   },
   "homepage": "https://github.com/katydecorah/font-library#readme",
+  "prettier": {
+    "overrides": [
+      {
+        "files": "families.json",
+        "options": {
+          "printWidth": 600
+        }
+      }
+    ]
+  },
   "lint-staged": {
-    "**/*.json": [
-      "prettier --print-width 600  --write"
+    "families.json": [
+      "prettier --write"
     ]
   }
 }

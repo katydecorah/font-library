@@ -3,8 +3,5 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  },
-  "files.exclude": {
-    "**/.dist": true
   }
 }
