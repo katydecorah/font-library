@@ -317,6 +317,12 @@ class FontResult extends HTMLElement {
     ) {
       style += "direction: rtl;";
     }
+    // add italic style
+    const selectedVariant = document.querySelector("#variant").value;
+    if (selectedVariant.includes("italic")) {
+      style += "font-style: italic;";
+    }
+
     return style;
   }
 
