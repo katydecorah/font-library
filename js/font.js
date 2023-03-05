@@ -201,12 +201,12 @@ class FontResult extends HTMLElement {
     const { slug, family, category, variants, subsets, lineNumber, tags } =
       this;
 
-    const familyName = this.subsetFamily();
+    const previewName = this.subsetFamily();
 
     // Add Google Font to document head
     const googleFont = document.createElement("link");
     googleFont.href = `https://fonts.googleapis.com/css2?family=${this.fontCall(
-      familyName
+      previewName
     )}`;
     googleFont.rel = "stylesheet";
     googleFont.setAttribute("data-family", family);
@@ -215,13 +215,13 @@ class FontResult extends HTMLElement {
     wrapper.innerHTML = `<div id="family-${slug}">
     <div class="family-link">
       <div id="family-name" class="family-title" style="${this.familyStyle(
-        familyName
+        previewName
       )}">
-        ${familyName}
+        ${previewName}
       </div>
       <div class="family-meta-container">
      <span class="family-title-small">${
-       familyName !== family ? family : ""
+       previewName == family ? "" : family
      }</span>
       <div class="family-meta">
         <span>${category}</span>
