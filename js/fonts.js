@@ -173,6 +173,7 @@ class FontResults extends HTMLElement {
     const fontBody = this.querySelector(".families");
     const filteredData = this.performFilter();
     this.renderStatus();
+    this.cleanUpFonts();
     const paginatedData = this.performPagination(filteredData);
 
     let result = "";
