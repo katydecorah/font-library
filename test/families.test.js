@@ -2,7 +2,7 @@ const families = require("../families.json");
 
 describe("families.json", () => {
   for (const [index, { family, tags }] of families.entries()) {
-    describe(family, () => {
+    describe(`${family}`, () => {
       test("should have `family`", () => {
         expect(family).toBeTruthy();
       });
@@ -19,6 +19,7 @@ describe("families.json", () => {
         test("should have `tags`", () => {
           expect(tags).toBeTruthy();
         });
+
         test("no more than 5 tags", () => {
           expect(tags.length < 6).toBeTruthy();
         });
@@ -28,7 +29,7 @@ describe("families.json", () => {
         });
 
         for (const tag of tags) {
-          describe(tag, () => {
+          describe(`${tag}`, () => {
             test("is lowercase", () => {
               expect(tag).toBe(tag.toLowerCase());
             });
