@@ -265,14 +265,34 @@ class FontResult extends HTMLElement {
     //get font name
     let font = slug;
 
-    // if no regular variant
-    if (!variants.includes("regular") && variants.includes("italic")) {
-      font += `:${variants[0]}`;
-    }
+    // get selectedVariants
+    const selectedVariant = document.querySelector("#variant").value;
 
-    // if no regular or italic?
-    if (!variants.includes("regular") && !variants.includes("italic")) {
-      font += `:${variants[0]}`;
+    if (selectedVariant && selectedVariant !== "regular") {
+      const variants = [];
+      const hasItalic = selectedVariant.includes("italic");
+      if (hasItalic) {
+        variants.push("ital");
+      }
+      // get number form selectedVariant
+      const variantNumber = selectedVariant.match(/\d+/g);
+      if (variantNumber && variantNumber[0]) {
+        variants.push(`wght@${hasItalic ? "1," : ""}${variantNumber[0]}`);
+      }
+      if (selectedVariant === "italic") {
+        variants.push(`wght@1,400`);
+      }
+      font += `:${variants.join(",")}`;
+    } else {
+      // if no regular variant
+      if (!variants.includes("regular") && variants.includes("italic")) {
+        font += `:wght@${variants[0]}`;
+      }
+
+      // if no regular or italic?
+      if (!variants.includes("regular") && !variants.includes("italic")) {
+        font += `:wght@${variants[0]}`;
+      }
     }
 
     // otherwise get this text for the font
@@ -290,24 +310,13 @@ class FontResult extends HTMLElement {
   }
 
   familyStyle(familyName) {
-    const { family, variants, subsets } = this;
-    let style = `font-family: '${family}';`;
-
-    if (!variants.includes("regular") && variants.includes("italic")) {
-      style += "font-style: italic;";
-    }
-
-    if (!variants.includes("regular") && !variants.includes("italic")) {
-      style += `font-weight: ${variants[0]};`;
-    }
-
-    const hasRtlSubSet =
-      subsets.filter((f) => this.rtlLanguages.includes(f)).length > 0;
-
-    if (hasRtlSubSet && family !== familyName) {
+    let style = `font-family: '${this.family}';`;
+    if (
+      this.subsets.filter((f) => this.rtlLanguages.includes(f)).length > 0 &&
+      this.family !== familyName
+    ) {
       style += "direction: rtl;";
     }
-
     return style;
   }
 
