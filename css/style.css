@@ -127,8 +127,13 @@ header {
   }
 }
 
+.sidebar {
+  display: none;
+}
+
 @media screen and (min-width: 800px) {
   .sidebar {
+    display: block;
     background: var(--background-accent);
     padding: 0 1em 2em;
     width: 35%;
@@ -396,4 +401,14 @@ select {
 
 .hide {
   display: none;
+}
+
+.mobile {
+  display: block;
+}
+
+@media screen and (min-width: 800px) {
+  .mobile {
+    display: none;
+  }
 }

@@ -26,7 +26,10 @@ class FontResults extends HTMLElement {
     // If tag is in URL, set it
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has("tag")) {
-      this.selectedTag = urlParams.get("tag");
+      const tagOnLoad = urlParams.get("tag");
+      this.selectedTag = tagOnLoad;
+      const tag = document.querySelector("#tag");
+      tag.value = tagOnLoad;
     }
 
     // Event listeners
@@ -59,6 +62,12 @@ class FontResults extends HTMLElement {
       this.selectedVariant = e.target.value;
       this.renderStatus();
       this.renderBody();
+    });
+
+    // Tag event listener
+    const tag = document.querySelector("#tag");
+    tag.addEventListener("change", (e) => {
+      this.selectTag({ detail: { tag: e.target.value } });
     });
   }
 
@@ -204,6 +213,8 @@ class FontResults extends HTMLElement {
     );
     nextActiveTags.forEach((tagButton) => tagButton.classList.add("active"));
     this.scrollToContent();
+    const select = document.querySelector("#tag");
+    select.value = tag;
   }
 
   scrollToContent() {
@@ -223,6 +234,8 @@ class FontResults extends HTMLElement {
     this.renderBody();
     window.history.pushState({}, "", `${window.location.pathname}`);
     this.removeActiveTag();
+    const select = document.querySelector("#tag");
+    select.value = "";
   }
 
   nextPage() {

@@ -49,6 +49,15 @@
       </aside>
       <main class="content" id="content">
         <div class="selects">
+          <div class="mobile">
+            <label class="screen-reader-only" for="category">Tag</label>
+            <select id="tag">
+              <option value="">All tags</option>
+              {% for tag in metadata.tags %}
+              <option value="{{tag}}">{{tag}}</option>
+              {% endfor %}
+            </select>
+          </div>
           <label class="screen-reader-only" for="category">Category</label>
           <select id="category">
             <option value="">All categories</option>
