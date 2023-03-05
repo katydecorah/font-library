@@ -1,23 +1,48 @@
 const families = require("../families.json");
 
-// test each family in families.json
-families.forEach(({ family, tags }, index) => {
-  test(family, async () => {
-    expect(family).toBeDefined();
-    expect(tags).toBeDefined();
+describe("families.json", () => {
+  for (const [index, { family, tags }] of families.entries()) {
+    describe(family, () => {
+      test("should have `family`", () => {
+        expect(family).toBeTruthy();
+      });
 
-    // no more than 5 tags
-    if (tags) {
-      expect(tags.length < 6).toBeTruthy();
-    }
-    // tags must be lowercase
-    tags.forEach((tag) => {
-      expect(isNaN(tag[0]) && tag[0] == tag[0].toUpperCase()).toBeFalsy();
+      test("make sure `family` is in alphabetical order", () => {
+        // make sure families are in alphabetical order
+        const prevFamily = families[index - 1]
+          ? families[index - 1].family
+          : undefined;
+        expect(prevFamily > family).toBeFalsy();
+      });
+
+      describe("tags", () => {
+        test("should have `tags`", () => {
+          expect(tags).toBeTruthy();
+        });
+        test("no more than 5 tags", () => {
+          expect(tags.length < 6).toBeTruthy();
+        });
+
+        test("tags should be an array", () => {
+          expect(Array.isArray(tags)).toBeTruthy();
+        });
+
+        for (const tag of tags) {
+          describe(tag, () => {
+            test("is lowercase", () => {
+              expect(tag).toBe(tag.toLowerCase());
+            });
+
+            test("contains letters, numbers, dashes, and spaces only", () => {
+              expect(tag).toMatch(/^[a-z0-9\- ]+$/);
+            });
+
+            test("is a string", () => {
+              expect(typeof tag).toBe("string");
+            });
+          });
+        }
+      });
     });
-    // make sure families are in alphabetical order
-    const prevFamily = families[index - 1]
-      ? families[index - 1].family
-      : undefined;
-    expect(prevFamily > family).toBeFalsy();
-  });
+  }
 });
