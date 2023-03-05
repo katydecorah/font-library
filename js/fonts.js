@@ -9,6 +9,9 @@ class FontResults extends HTMLElement {
     // eslint-disable-next-line no-undef
     this.data = generatedData;
     this.selectedTag = "";
+    this.selectedCategory = "";
+    this.selectedSubset = "";
+    this.selectedVariant = "";
     this.resultsLength;
     this.pageSize = 5;
     this.curPage = 1;
@@ -18,6 +21,7 @@ class FontResults extends HTMLElement {
     this.removeTag = this.removeTag.bind(this);
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
+    this.clearFilter = this.clearFilter.bind(this);
 
     // If tag is in URL, set it
     const urlParams = new URLSearchParams(window.location.search);
@@ -30,6 +34,50 @@ class FontResults extends HTMLElement {
     this.addEventListener("tag-button-selected-tag", this.selectTag);
     document.addEventListener("tag-button-remove-tag", this.removeTag);
     this.addEventListener("tag-button-remove-tag", this.removeTag);
+    document.addEventListener("clear-filter", this.clearFilter);
+    this.addEventListener("clear-filter", this.clearFilter);
+
+    // Category event listener
+    const category = document.querySelector("#category");
+    category.addEventListener("change", (e) => {
+      this.selectedCategory = e.target.value;
+      this.renderStatus();
+      this.renderBody();
+    });
+
+    // Subset event listener
+    const subset = document.querySelector("#subset");
+    subset.addEventListener("change", (e) => {
+      this.selectedSubset = e.target.value;
+      this.renderStatus();
+      this.renderBody();
+    });
+
+    // Variant event listener
+    const variant = document.querySelector("#variant");
+    variant.addEventListener("change", (e) => {
+      this.selectedVariant = e.target.value;
+      this.renderStatus();
+      this.renderBody();
+    });
+  }
+
+  clearFilter() {
+    this.selectedCategory = "";
+    this.selectedSubset = "";
+    this.selectedVariant = "";
+    // reset select elements
+    const category = document.querySelector("#category");
+    category.value = "";
+    const subset = document.querySelector("#subset");
+    subset.value = "";
+    const variant = document.querySelector("#variant");
+    variant.value = "";
+    // remove tag
+    this.removeTag();
+    // Render
+    this.renderStatus();
+    this.renderBody();
   }
 
   connectedCallback() {
@@ -81,16 +129,35 @@ class FontResults extends HTMLElement {
         return row.tags.length === 0;
       });
     }
+    if (this.selectedCategory) {
+      filteredData = filteredData.filter((row) => {
+        return row.category === this.selectedCategory;
+      });
+    }
+    if (this.selectedSubset) {
+      filteredData = filteredData.filter((row) => {
+        return row.subsets.includes(this.selectedSubset);
+      });
+    }
+    if (this.selectedVariant) {
+      filteredData = filteredData.filter((row) => {
+        return row.variants.includes(this.selectedVariant);
+      });
+    }
 
     this.resultsLength = filteredData.length;
     return filteredData;
   }
 
   performPagination(data) {
-    // pagination
-    this.querySelector("#page-count").innerHTML = `${
-      this.curPage
-    } of ${Math.ceil(this.resultsLength / this.pageSize)}`;
+    const totalPages = Math.ceil(this.resultsLength / this.pageSize);
+    this.querySelector(
+      "#page-count"
+    ).innerHTML = `${this.curPage} of ${totalPages}`;
+    if (totalPages === 0) {
+      // add "hide" class to #pagination
+      this.querySelector(".pagination").classList.add("hide");
+    }
 
     this.setNextPageState();
     this.setPrevPageState();
@@ -191,12 +258,35 @@ class FontResults extends HTMLElement {
 
   renderStatus() {
     const status = this.querySelector(".search-status");
+    const hasFilters =
+      this.selectedCategory ||
+      this.selectedTag ||
+      this.selectedSubset ||
+      this.selectedVariant;
     let elm = "";
     elm += `Found ${this.resultsLength} fonts`;
-    if (this.selectedTag) {
+
+    if (hasFilters) {
       elm += this.selectedTag === "need tags" ? ` that ` : ` for `;
-      elm += `<tag-button data-event="tag-button-remove-tag" aria-label="${this.selectedTag}, remove tag" value="${this.selectedTag}"> ${svgClose} ${this.selectedTag}</tag-button>`;
     }
+
+    if (this.selectedSubset) {
+      elm += `<div>subset: <strong>${this.selectedSubset}</strong></div>`;
+    }
+
+    if (this.selectedCategory) {
+      elm += `<div>category: <strong>${this.selectedCategory}</strong></div>`;
+    }
+    if (this.selectedVariant) {
+      elm += `<div>variant: <strong>${this.selectedVariant}</strong></div>`;
+    }
+    if (this.selectedTag) {
+      elm += `<div>tag: <strong>${this.selectedTag}</strong></div>`;
+    }
+    if (hasFilters) {
+      elm += `<clear-button class="btn btn-clear">Clear</clear-butto>`;
+    }
+
     status.innerHTML = elm;
   }
 

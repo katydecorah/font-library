@@ -135,29 +135,15 @@ function combineLibraries(remoteFonts, local) {
   const categoryArr = combineLibrary.map((f) => f.category);
   return {
     generatedMetadata: {
-      uniqueTags: [...new Set(tagArr)].sort(),
-      //tags: groupBy(tagArr, "tag"),
-      //uniqueVariants: [...new Set(variantArr)].sort(),
-      //variants: groupBy(variantArr, "variant"),
-      //uniqueSubsets: [...new Set(subsetArr)].sort(),
-      //subsets: groupBy(subsetArr, "subset"),
-      //uniqueCategories: [...new Set(categoryArr)].sort(),
-      //categories: groupBy(categoryArr, "category"),
+      tags: [...new Set(tagArr)].sort(),
+      categories: [...new Set(categoryArr)].sort(),
+      subsets: [...new Set(subsetArr)].sort(),
+      variants: [...new Set(variantArr)].sort(),
     },
     generatedFamilies: `const generatedData=${JSON.stringify(
       combineLibrary.sort((a, b) => (a.family > b.family ? 1 : -1))
     )}`,
   };
-}
-
-function groupBy(array, label) {
-  const obj = array.reduce((obj, key) => {
-    if (!obj[key]) obj[key] = 0;
-    obj[key]++;
-    return obj;
-  }, {});
-
-  return Object.keys(obj).map((key) => ({ [label]: key, value: obj[key] }));
 }
 
 export default library();

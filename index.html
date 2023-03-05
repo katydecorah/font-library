@@ -33,7 +33,7 @@
         <section class="tags sidebar-group">
           <h2>Tags</h2>
           <div id="tags" class="tags-container">
-            {% for tag in metadata.uniqueTags %}
+            {% for tag in metadata.tags %}
             <tag-button value="{{tag}}">{{tag}}</tag-button>
             {% endfor %}
           </div>
@@ -48,11 +48,35 @@
         </div>
       </aside>
       <main class="content" id="content">
+        <div class="selects">
+          <label class="screen-reader-only" for="category">Category</label>
+          <select id="category">
+            <option value="">All categories</option>
+            {% for category in metadata.categories %}
+            <option value="{{category}}">{{category}}</option>
+            {% endfor %}
+          </select>
+          <label class="screen-reader-only" for="subset">Subsets</label>
+          <select id="subset">
+            <option value="">All subsets</option>
+            {% for subset in metadata.subsets %}
+            <option value="{{subset}}">{{subset}}</option>
+            {% endfor %}
+          </select>
+          <label class="screen-reader-only" for="variant">Variants</label>
+          <select id="variant">
+            <option value="">All variants</option>
+            {% for variant in metadata.variants %}
+            <option value="{{variant}}">{{variant}}</option>
+            {% endfor %}
+          </select>
+        </div>
         <font-results></font-results>
       </main>
     </div>
     <script src="{{ '/js/data.js' | url }}"></script>
     <script src="{{ '/js/tag.js' | url }}"></script>
+    <script src="{{ '/js/clear.js' | url }}"></script>
     <script src="{{ '/js/font.js' | url }}"></script>
     <script src="{{ '/js/fonts.js' | url }}"></script>
     <script
