@@ -7,9 +7,9 @@
     "pretest": "npm run lint",
     "test": "jest",
     "prepare": "husky install",
-    "start": "npx @11ty/eleventy --serve",
+    "start": "ELEVENTY_ENV=development npx @11ty/eleventy --serve",
     "update-library": "node .github/actions/update-library.mjs",
-    "build": "npx eleventy"
+    "build": "ELEVENTY_ENV=production npx eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",

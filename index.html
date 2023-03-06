@@ -70,6 +70,19 @@
         </section>
       </main>
     </div>
+    <script
+      src="https://browser.sentry-cdn.com/7.41.0/bundle.tracing.min.js"
+      integrity="sha384-o2yGd/Hej06Mkzo+23LGsEgqH9JbnYyroaq5YA7EgamabrwR83McAHkzac6ZFCrx"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      Sentry.init({
+        dsn: "https://8446261a1b98432f935915973ca4e2cf@o513158.ingest.sentry.io/4504794281672704",
+        release: "{{site.hash}}",
+        integrations: [new Sentry.BrowserTracing()],
+        environment: "{{site.env}}",
+      });
+    </script>
     <script src="{{ '/js/data.js' | url }}"></script>
     <script src="{{ '/js/tag.js' | url }}"></script>
     <script src="{{ '/js/clear.js' | url }}"></script>
