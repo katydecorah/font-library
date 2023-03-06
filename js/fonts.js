@@ -278,24 +278,26 @@ class FontResults extends HTMLElement {
       this.selectedSubset ||
       this.selectedVariant;
     let elm = "";
-    elm += `Found ${this.resultsLength} fonts`;
+    elm += `<div>Found ${this.resultsLength} fonts`;
 
     if (hasFilters) {
       elm += this.selectedTag === "need tags" ? ` that ` : ` for `;
     }
 
+    elm += `</div>`;
+
     if (this.selectedSubset) {
-      elm += `<div>subset: <strong>${this.selectedSubset}</strong></div>`;
+      elm += `<div class="search-filter">subset: <strong>${this.selectedSubset}</strong></div>`;
     }
 
     if (this.selectedCategory) {
-      elm += `<div>category: <strong>${this.selectedCategory}</strong></div>`;
+      elm += `<div class="search-filter">category: <strong>${this.selectedCategory}</strong></div>`;
     }
     if (this.selectedVariant) {
-      elm += `<div>variant: <strong>${this.selectedVariant}</strong></div>`;
+      elm += `<div class="search-filter">variant: <strong>${this.selectedVariant}</strong></div>`;
     }
     if (this.selectedTag) {
-      elm += `<div>tag: <strong>${this.selectedTag}</strong></div>`;
+      elm += `<div class="search-filter">tag: <strong>${this.selectedTag}</strong></div>`;
     }
     if (hasFilters) {
       elm += `<clear-button class="btn btn-clear">Clear</clear-butto>`;

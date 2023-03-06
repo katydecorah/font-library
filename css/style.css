@@ -27,7 +27,6 @@ header {
   font-size: 1em;
   margin: 0;
   padding: 0;
-  vertical-align: baseline;
 }
 
 article,
@@ -181,7 +180,7 @@ header {
 .search-status {
   margin-bottom: 1em;
   margin-top: 1em;
-  min-height: 33px;
+  min-height: 25px;
   display: flex;
   align-items: center;
   grid-gap: 0.25em;
@@ -189,20 +188,20 @@ header {
 }
 
 .search-status div {
-  display: flex;
+  display: inline-flex;
+}
+
+.search-status .search-filter {
   align-items: center;
   grid-gap: 0.25em;
   background-color: var(--background-accent);
-  padding: 0.25em 0.5em;
+  padding: 0 0.5em;
   border-radius: 3px;
   border: 1px solid #e9e6d5;
 }
 
-.search-status .family-tag {
-  margin-left: 0.25em;
-  margin-right: 0.25em;
-  position: relative;
-  grid-gap: 0.5em;
+.search-status .btn-clear {
+  padding: 0 1em;
 }
 
 .pagination {
