@@ -48,29 +48,20 @@
         </div>
       </aside>
       <main class="content" id="content">
-        <div class="selects">
-          <label class="screen-reader-only" for="category">Category</label>
-          <select id="category">
-            <option value="">All categories</option>
-            {% for category in metadata.categories %}
-            <option value="{{category}}">{{category}}</option>
-            {% endfor %}
-          </select>
-          <label class="screen-reader-only" for="subset">Subsets</label>
-          <select id="subset">
-            <option value="">All subsets</option>
-            {% for subset in metadata.subsets %}
-            <option value="{{subset}}">{{subset}}</option>
-            {% endfor %}
-          </select>
-          <label class="screen-reader-only" for="variant">Variants</label>
-          <select id="variant">
-            <option value="">All variants</option>
-            {% for variant in metadata.variants %}
-            <option value="{{variant}}">{{variant}}</option>
-            {% endfor %}
-          </select>
-        </div>
+        <section class="selects">
+          {% for group in metadata %}{% assign key = group[0] %}{% assign value
+          = group[1] %}
+          <div class="select-group{% if key == 'tags' %} mobile{% endif %}">
+            <label for="select-{{key}}">{{key}}</label>
+            <select id="select-{{key}}">
+              <option value="">All {{key}}</option>
+              {% for item in value %}
+              <option value="{{item}}">{{item}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          {% endfor %}
+        </section>
         <font-results></font-results>
       </main>
     </div>

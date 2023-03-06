@@ -26,7 +26,10 @@ class FontResults extends HTMLElement {
     // If tag is in URL, set it
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has("tag")) {
-      this.selectedTag = urlParams.get("tag");
+      const tagOnLoad = urlParams.get("tag");
+      this.selectedTag = tagOnLoad;
+      const tag = document.querySelector("#select-tags");
+      tag.value = tagOnLoad;
     }
 
     // Event listeners
@@ -38,7 +41,7 @@ class FontResults extends HTMLElement {
     this.addEventListener("clear-filter", this.clearFilter);
 
     // Category event listener
-    const category = document.querySelector("#category");
+    const category = document.querySelector("#select-categories");
     category.addEventListener("change", (e) => {
       this.selectedCategory = e.target.value;
       this.renderStatus();
@@ -46,7 +49,7 @@ class FontResults extends HTMLElement {
     });
 
     // Subset event listener
-    const subset = document.querySelector("#subset");
+    const subset = document.querySelector("#select-subsets");
     subset.addEventListener("change", (e) => {
       this.selectedSubset = e.target.value;
       this.renderStatus();
@@ -54,11 +57,17 @@ class FontResults extends HTMLElement {
     });
 
     // Variant event listener
-    const variant = document.querySelector("#variant");
+    const variant = document.querySelector("#select-variants");
     variant.addEventListener("change", (e) => {
       this.selectedVariant = e.target.value;
       this.renderStatus();
       this.renderBody();
+    });
+
+    // Tag event listener
+    const tag = document.querySelector("#select-tags");
+    tag.addEventListener("change", (e) => {
+      this.selectTag({ detail: { tag: e.target.value } });
     });
   }
 
@@ -67,11 +76,11 @@ class FontResults extends HTMLElement {
     this.selectedSubset = "";
     this.selectedVariant = "";
     // reset select elements
-    const category = document.querySelector("#category");
+    const category = document.querySelector("#select-categories");
     category.value = "";
-    const subset = document.querySelector("#subset");
+    const subset = document.querySelector("#select-subsets");
     subset.value = "";
-    const variant = document.querySelector("#variant");
+    const variant = document.querySelector("#select-variants");
     variant.value = "";
     // remove tag
     this.removeTag();
@@ -204,6 +213,8 @@ class FontResults extends HTMLElement {
     );
     nextActiveTags.forEach((tagButton) => tagButton.classList.add("active"));
     this.scrollToContent();
+    const select = document.querySelector("#select-tags");
+    select.value = tag;
   }
 
   scrollToContent() {
@@ -223,6 +234,8 @@ class FontResults extends HTMLElement {
     this.renderBody();
     window.history.pushState({}, "", `${window.location.pathname}`);
     this.removeActiveTag();
+    const select = document.querySelector("#select-tags");
+    select.value = "";
   }
 
   nextPage() {
@@ -265,24 +278,26 @@ class FontResults extends HTMLElement {
       this.selectedSubset ||
       this.selectedVariant;
     let elm = "";
-    elm += `Found ${this.resultsLength} fonts`;
+    elm += `<div>Found ${this.resultsLength} fonts`;
 
     if (hasFilters) {
       elm += this.selectedTag === "need tags" ? ` that ` : ` for `;
     }
 
+    elm += `</div>`;
+
     if (this.selectedSubset) {
-      elm += `<div>subset: <strong>${this.selectedSubset}</strong></div>`;
+      elm += `<div class="search-filter">subset: <strong>${this.selectedSubset}</strong></div>`;
     }
 
     if (this.selectedCategory) {
-      elm += `<div>category: <strong>${this.selectedCategory}</strong></div>`;
+      elm += `<div class="search-filter">category: <strong>${this.selectedCategory}</strong></div>`;
     }
     if (this.selectedVariant) {
-      elm += `<div>variant: <strong>${this.selectedVariant}</strong></div>`;
+      elm += `<div class="search-filter">variant: <strong>${this.selectedVariant}</strong></div>`;
     }
     if (this.selectedTag) {
-      elm += `<div>tag: <strong>${this.selectedTag}</strong></div>`;
+      elm += `<div class="search-filter">tag: <strong>${this.selectedTag}</strong></div>`;
     }
     if (hasFilters) {
       elm += `<clear-button class="btn btn-clear">Clear</clear-butto>`;
