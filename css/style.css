@@ -381,6 +381,11 @@ header {
   margin: 1em 0;
 }
 
+.select-group {
+  display: flex;
+  flex-direction: column;
+}
+
 select {
   border: 1px solid #e9e6d5;
   border-radius: 3px;
@@ -388,6 +393,12 @@ select {
   font-size: 1em;
   background: var(--white);
   color: var(--text-color);
+}
+
+.select-group label {
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 .screen-reader-only {
@@ -404,7 +415,7 @@ select {
 }
 
 .mobile {
-  display: block;
+  display: flex;
 }
 
 @media screen and (min-width: 800px) {
