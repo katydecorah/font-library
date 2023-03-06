@@ -49,8 +49,8 @@
       </aside>
       <main class="content" id="content">
         <section class="selects">
-          {% for group in metadata %} {% assign key = group[0] %} {% assign
-          value = group[1] %}
+          {% for group in metadata %}{% assign key = group[0] %}{% assign value
+          = group[1] %}
           <div class="select-group{% if key == 'tags' %} mobile{% endif %}">
             <label for="select-{{key}}">{{key}}</label>
             <select id="select-{{key}}">
@@ -60,7 +60,6 @@
               {% endfor %}
             </select>
           </div>
-
           {% endfor %}
         </section>
         <font-results></font-results>
