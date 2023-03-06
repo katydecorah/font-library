@@ -39,7 +39,7 @@
           </div>
         </section>
         <div class="sidebar-group">
-          <h2>Want to help the project?</h2>
+          <h3>Want to help the project?</h3>
           <p>
             Sort by fonts that
             <tag-button value="need tags">need tags</tag-button>. Learn
@@ -49,20 +49,25 @@
       </aside>
       <main class="content" id="content">
         <section class="selects">
-          {% for group in metadata %}{% assign key = group[0] %}{% assign value
-          = group[1] %}
-          <div class="select-group{% if key == 'tags' %} mobile{% endif %}">
-            <label for="select-{{key}}">{{key}}</label>
-            <select id="select-{{key}}">
-              <option value="">All {{key}}</option>
-              {% for item in value %}
-              <option value="{{item}}">{{item}}</option>
-              {% endfor %}
-            </select>
+          <h2>Filters</h2>
+          <div class="select-group-container">
+            {% for group in metadata %}{% assign key = group[0] %}{% assign
+            value = group[1] %}
+            <div class="select-group{% if key == 'tags' %} mobile{% endif %}">
+              <label for="select-{{key}}">{{key}}</label>
+              <select id="select-{{key}}">
+                <option value="">All {{key}}</option>
+                {% for item in value %}
+                <option value="{{item}}">{{item}}</option>
+                {% endfor %}
+              </select>
+            </div>
+            {% endfor %}
           </div>
-          {% endfor %}
         </section>
-        <font-results></font-results>
+        <section class="results">
+          <font-results></font-results>
+        </section>
       </main>
     </div>
     <script src="{{ '/js/data.js' | url }}"></script>
