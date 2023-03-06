@@ -7,7 +7,7 @@ class Tag extends HTMLElement {
 
     this.addEventListener("click", () => {
       this.dispatchEvent(
-        new CustomEvent("tag-button-selected-tag", {
+        new CustomEvent("tag-button-selected", {
           bubbles: true,
           composed: true,
           detail: {

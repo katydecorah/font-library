@@ -23,8 +23,8 @@ class FontResults extends HTMLElement {
     this.clearFilter = this.clearFilter.bind(this);
 
     // Event listeners
-    document.addEventListener("tag-button-selected-tag", this.selectTag);
-    this.addEventListener("tag-button-selected-tag", this.selectTag);
+    document.addEventListener("tag-button-selected", this.selectTag);
+    this.addEventListener("tag-button-selected", this.selectTag);
     document.addEventListener("clear-filter", this.clearFilter);
     this.addEventListener("clear-filter", this.clearFilter);
 
