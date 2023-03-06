@@ -18,73 +18,90 @@ class FontResults extends HTMLElement {
 
     // Bind functions
     this.selectTag = this.selectTag.bind(this);
-    this.removeTag = this.removeTag.bind(this);
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
     this.clearFilter = this.clearFilter.bind(this);
 
-    // If tag is in URL, set it
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has("tag")) {
-      const tagOnLoad = urlParams.get("tag");
-      this.selectedTag = tagOnLoad;
-      const tag = document.querySelector("#select-tags");
-      tag.value = tagOnLoad;
-    }
-
     // Event listeners
-    document.addEventListener("tag-button-selected-tag", this.selectTag);
-    this.addEventListener("tag-button-selected-tag", this.selectTag);
-    document.addEventListener("tag-button-remove-tag", this.removeTag);
-    this.addEventListener("tag-button-remove-tag", this.removeTag);
+    document.addEventListener("tag-button-selected", this.selectTag);
+    this.addEventListener("tag-button-selected", this.selectTag);
     document.addEventListener("clear-filter", this.clearFilter);
     this.addEventListener("clear-filter", this.clearFilter);
 
-    // Category event listener
-    const category = document.querySelector("#select-categories");
-    category.addEventListener("change", (e) => {
-      this.selectedCategory = e.target.value;
-      this.renderStatus();
-      this.renderBody();
-    });
+    // Filter event listeners and set initial values
+    this.filters = [
+      {
+        select: "#select-categories",
+        param: "category",
+        selectVar: "selectedCategory",
+      },
+      {
+        select: "#select-subsets",
+        param: "subset",
+        selectVar: "selectedSubset",
+      },
+      {
+        select: "#select-variants",
+        param: "variant",
+        selectVar: "selectedVariant",
+      },
+      {
+        select: "#select-tags",
+        param: "tag",
+        selectVar: "selectedTag",
+      },
+    ];
 
-    // Subset event listener
-    const subset = document.querySelector("#select-subsets");
-    subset.addEventListener("change", (e) => {
-      this.selectedSubset = e.target.value;
-      this.renderStatus();
-      this.renderBody();
-    });
+    for (const { select, param, selectVar } of this.filters) {
+      if (select === "#select-tags") continue;
+      this.getUrlParams(param, selectVar, select);
+      document.querySelector(select).addEventListener("change", (e) => {
+        this[selectVar] = e.target.value;
+        this.renderStatus();
+        this.renderBody();
+        this.setUrlParams(param, e.target.value);
+      });
+    }
 
-    // Variant event listener
-    const variant = document.querySelector("#select-variants");
-    variant.addEventListener("change", (e) => {
-      this.selectedVariant = e.target.value;
-      this.renderStatus();
-      this.renderBody();
-    });
-
-    // Tag event listener
-    const tag = document.querySelector("#select-tags");
-    tag.addEventListener("change", (e) => {
+    this.getUrlParams("tag", "selectedTag", "#select-tags");
+    document.querySelector("#select-tags").addEventListener("change", (e) => {
       this.selectTag({ detail: { tag: e.target.value } });
     });
   }
 
+  getUrlParams(param, selectVar, selectElement) {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (!urlParams.has(param)) return;
+    const newValue = urlParams.get(param);
+    this[selectVar] = newValue;
+    const select = document.querySelector(selectElement);
+    select.value = newValue;
+
+    if (selectElement === "#select-tags") {
+      this.addActiveTag(newValue);
+    }
+  }
+
+  setUrlParams(param, value) {
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set(param, value);
+    window.history.replaceState(
+      {},
+      "",
+      `${window.location.pathname}?${urlParams.toString()}`
+    );
+  }
+
   clearFilter() {
-    this.selectedCategory = "";
-    this.selectedSubset = "";
-    this.selectedVariant = "";
-    // reset select elements
-    const category = document.querySelector("#select-categories");
-    category.value = "";
-    const subset = document.querySelector("#select-subsets");
-    subset.value = "";
-    const variant = document.querySelector("#select-variants");
-    variant.value = "";
-    // remove tag
-    this.removeTag();
-    // Render
+    // Reset selects
+    for (const { select, selectVar } of this.filters) {
+      this[selectVar] = "";
+      document.querySelector(select).value = "";
+    }
+    this.removeActiveTag();
+    // Reset URL
+    window.history.pushState({}, "", `${window.location.pathname}`);
+    // Re-render
     this.renderStatus();
     this.renderBody();
   }
@@ -199,19 +216,11 @@ class FontResults extends HTMLElement {
     this.curPage = 1;
     this.renderBody();
     // set URL query string with tag
-    const encodeTag = tag.replace(/\s/g, "+");
-    window.history.pushState(
-      {},
-      "",
-      `${window.location.pathname}?tag=${encodeTag}`
-    );
+    this.setUrlParams("tag", tag);
     // remove tag from .family-tag.active
     this.removeActiveTag();
-
-    const nextActiveTags = document.querySelectorAll(
-      `.tag-${tag.replace(/ /g, "-")}:not([data-event="tag-button-remove-tag"])`
-    );
-    nextActiveTags.forEach((tagButton) => tagButton.classList.add("active"));
+    // add active tage
+    this.addActiveTag(tag);
     this.scrollToContent();
     const select = document.querySelector("#select-tags");
     select.value = tag;
@@ -229,13 +238,11 @@ class FontResults extends HTMLElement {
     );
   }
 
-  removeTag() {
-    this.selectedTag = "";
-    this.renderBody();
-    window.history.pushState({}, "", `${window.location.pathname}`);
-    this.removeActiveTag();
-    const select = document.querySelector("#select-tags");
-    select.value = "";
+  addActiveTag(newTag) {
+    const nextActiveTags = document.querySelectorAll(
+      `.tag-${newTag.replace(/ /g, "-")}`
+    );
+    nextActiveTags.forEach((tagButton) => tagButton.classList.add("active"));
   }
 
   nextPage() {
