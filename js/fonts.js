@@ -28,7 +28,7 @@ class FontResults extends HTMLElement {
     if (urlParams.has("tag")) {
       const tagOnLoad = urlParams.get("tag");
       this.selectedTag = tagOnLoad;
-      const tag = document.querySelector("#tag");
+      const tag = document.querySelector("#select-tags");
       tag.value = tagOnLoad;
     }
 
@@ -41,7 +41,7 @@ class FontResults extends HTMLElement {
     this.addEventListener("clear-filter", this.clearFilter);
 
     // Category event listener
-    const category = document.querySelector("#category");
+    const category = document.querySelector("#select-categories");
     category.addEventListener("change", (e) => {
       this.selectedCategory = e.target.value;
       this.renderStatus();
@@ -49,7 +49,7 @@ class FontResults extends HTMLElement {
     });
 
     // Subset event listener
-    const subset = document.querySelector("#subset");
+    const subset = document.querySelector("#select-subsets");
     subset.addEventListener("change", (e) => {
       this.selectedSubset = e.target.value;
       this.renderStatus();
@@ -57,7 +57,7 @@ class FontResults extends HTMLElement {
     });
 
     // Variant event listener
-    const variant = document.querySelector("#variant");
+    const variant = document.querySelector("#select-variants");
     variant.addEventListener("change", (e) => {
       this.selectedVariant = e.target.value;
       this.renderStatus();
@@ -65,7 +65,7 @@ class FontResults extends HTMLElement {
     });
 
     // Tag event listener
-    const tag = document.querySelector("#tag");
+    const tag = document.querySelector("#select-tags");
     tag.addEventListener("change", (e) => {
       this.selectTag({ detail: { tag: e.target.value } });
     });
@@ -76,11 +76,11 @@ class FontResults extends HTMLElement {
     this.selectedSubset = "";
     this.selectedVariant = "";
     // reset select elements
-    const category = document.querySelector("#category");
+    const category = document.querySelector("#select-categories");
     category.value = "";
-    const subset = document.querySelector("#subset");
+    const subset = document.querySelector("#select-subsets");
     subset.value = "";
-    const variant = document.querySelector("#variant");
+    const variant = document.querySelector("#select-variants");
     variant.value = "";
     // remove tag
     this.removeTag();
@@ -213,7 +213,7 @@ class FontResults extends HTMLElement {
     );
     nextActiveTags.forEach((tagButton) => tagButton.classList.add("active"));
     this.scrollToContent();
-    const select = document.querySelector("#tag");
+    const select = document.querySelector("#select-tags");
     select.value = tag;
   }
 
@@ -234,7 +234,7 @@ class FontResults extends HTMLElement {
     this.renderBody();
     window.history.pushState({}, "", `${window.location.pathname}`);
     this.removeActiveTag();
-    const select = document.querySelector("#tag");
+    const select = document.querySelector("#select-tags");
     select.value = "";
   }
 

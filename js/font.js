@@ -266,7 +266,7 @@ class FontResult extends HTMLElement {
     let font = slug;
 
     // get selectedVariants
-    const selectedVariant = document.querySelector("#variant").value;
+    const selectedVariant = document.querySelector("#select-variants").value;
 
     if (selectedVariant && selectedVariant !== "regular") {
       const variants = [];
@@ -318,7 +318,7 @@ class FontResult extends HTMLElement {
       style += "direction: rtl;";
     }
     // add italic style
-    const selectedVariant = document.querySelector("#variant").value;
+    const selectedVariant = document.querySelector("#select-variants").value;
     if (selectedVariant.includes("italic")) {
       style += "font-style: italic;";
     }
@@ -328,7 +328,7 @@ class FontResult extends HTMLElement {
 
   subsetFamily() {
     const { subsets, family } = this;
-    const selectedSubset = document.querySelector("#subset").value;
+    const selectedSubset = document.querySelector("#select-subsets").value;
 
     if (
       (!subsets.includes("latin") || family.startsWith("Noto")) &&

@@ -49,42 +49,19 @@
       </aside>
       <main class="content" id="content">
         <section class="selects">
-          <div class="select-group mobile">
-            <label for="tag">Tag</label>
-            <select id="tag">
-              <option value="">All tags</option>
-              {% for tag in metadata.tags %}
-              <option value="{{tag}}">{{tag}}</option>
+          {% for group in metadata %} {% assign key = group[0] %} {% assign
+          value = group[1] %}
+          <div class="select-group{% if key == 'tags' %} mobile{% endif %}">
+            <label for="select-{{key}}">{{key}}</label>
+            <select id="select-{{key}}">
+              <option value="">All {{key}}</option>
+              {% for item in value %}
+              <option value="{{item}}">{{item}}</option>
               {% endfor %}
             </select>
           </div>
-          <div class="select-group">
-            <label for="category">Category</label>
-            <select id="category">
-              <option value="">All categories</option>
-              {% for category in metadata.categories %}
-              <option value="{{category}}">{{category}}</option>
-              {% endfor %}
-            </select>
-          </div>
-          <div class="select-group">
-            <label for="subset">Subsets</label>
-            <select id="subset">
-              <option value="">All subsets</option>
-              {% for subset in metadata.subsets %}
-              <option value="{{subset}}">{{subset}}</option>
-              {% endfor %}
-            </select>
-          </div>
-          <div class="select-group">
-            <label for="variant">Variants</label>
-            <select id="variant">
-              <option value="">All variants</option>
-              {% for variant in metadata.variants %}
-              <option value="{{variant}}">{{variant}}</option>
-              {% endfor %}
-            </select>
-          </div>
+
+          {% endfor %}
         </section>
         <font-results></font-results>
       </main>
