@@ -188,8 +188,7 @@ header {
   }
 
   .results {
-    flex-grow: 1;
-    max-width: 600px;
+    width: 500px;
   }
 
   .select-group-container {
@@ -326,13 +325,15 @@ select {
 .family-meta-container {
   display: flex;
   justify-content: space-between;
-}
-
-.family-meta {
-  display: none;
+  flex-flow: column wrap;
+  grid-column-gap: 0.5em;
 }
 
 @media screen and (min-width: 800px) {
+  .family-meta-container {
+    flex-direction: row;
+  }
+
   .family-meta {
     display: flex;
     justify-content: space-between;
