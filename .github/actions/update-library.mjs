@@ -1,7 +1,6 @@
 import { exportVariable, setFailed, info } from "@actions/core";
 import fetch from "node-fetch";
 import { readFileSync, writeFileSync } from "fs";
-import stringify from "json-stringify-pretty-compact";
 import { execSync } from "child_process";
 
 async function library() {
@@ -86,10 +85,7 @@ async function library() {
     if (hasFamiliesToAdd || hasFamiliesToRemove || updateLocal.commitMessage) {
       writeFileSync(
         "families.json",
-        stringify(
-          local.sort((a, b) => (a.family > b.family ? 1 : -1)),
-          { maxLength: 200 }
-        ),
+        JSON.stringify(local.sort((a, b) => (a.family > b.family ? 1 : -1))),
         "utf-8"
       );
       // run prettier CLI on families.json
