@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 16
 
-      - run: npm install @actions/core node-fetch json-stringify-pretty-compact
+      - run: npm install @actions/core node-fetch
 
       - name: Update library
         run: node .github/actions/update-library.mjs
@@ -31,6 +31,7 @@ jobs:
       - name: Commit files
         if: env.UpdatedLibrary == 'true'
         run: |
+          git pull
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A && git commit -m "${{ env.LibraryCommitMessage }}"
