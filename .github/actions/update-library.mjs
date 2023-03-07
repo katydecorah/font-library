@@ -167,7 +167,7 @@ function autoAddToLocal(local) {
   return {
     local,
     commitMessage: updatedLocalLibrary
-      ? 'Updated local library with "small caps" tag'
+      ? "Updated local library with small caps tag"
       : undefined,
   };
 }
