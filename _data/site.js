@@ -2,10 +2,7 @@ const childProcess = require("child_process");
 const process = require("process");
 
 // https://www.aleksandrhovhannisyan.com/blog/eleventy-build-info/
-const hash = childProcess
-  .execSync("git rev-parse --short HEAD")
-  .toString()
-  .trim();
+const hash = childProcess.execSync("git rev-parse HEAD").toString().trim();
 
 // eslint-disable-next-line no-undef
 module.exports = {
