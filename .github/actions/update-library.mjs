@@ -2,6 +2,7 @@ import { exportVariable, setFailed, info } from "@actions/core";
 import fetch from "node-fetch";
 import { readFileSync, writeFileSync } from "fs";
 import stringify from "json-stringify-pretty-compact";
+import { execSync } from "child_process";
 
 async function library() {
   try {
@@ -9,6 +10,7 @@ async function library() {
       setFailed("GoogleToken is not set.");
       return;
     }
+    let commitMessage = [];
     const response = await fetch(
       `https://www.googleapis.com/webfonts/v1/webfonts?key=${process.env.GoogleToken}`
     );
@@ -18,13 +20,18 @@ async function library() {
 
     // get list of families in font library
     let local = JSON.parse(readFileSync("families.json", "utf-8"));
+
+    let updateLocal = autoAddToLocal(local);
+    local = updateLocal.local;
+    if (updateLocal.commitMessage) {
+      commitMessage.push(updateLocal.commitMessage);
+    }
+
     const localFonts = local.map((font) => font.family);
     // get difference between remote and local libraries
     const familiesToAdd = remoteFonts.filter((x) => !localFonts.includes(x));
     // get difference between local and remote library
     const familiesToRemove = localFonts.filter((x) => !remoteFonts.includes(x));
-
-    const commitMessage = [];
 
     const { generatedMetadata, generatedFamilies } = combineLibraries(
       library.items,
@@ -39,7 +46,8 @@ async function library() {
     if (
       !hasFamiliesToAdd &&
       !hasFamiliesToRemove &&
-      !hasGeneratedDataToUpdate
+      !hasGeneratedDataToUpdate &&
+      !updateLocal.updatedLocalLibrary
     ) {
       exportVariable("UpdatedLibrary", false);
       info("Nothing to update.");
@@ -75,7 +83,7 @@ async function library() {
       exportVariable("UpdatedLibrary", true);
     }
 
-    if (hasFamiliesToAdd || hasFamiliesToRemove) {
+    if (hasFamiliesToAdd || hasFamiliesToRemove || updateLocal.commitMessage) {
       writeFileSync(
         "families.json",
         stringify(
@@ -84,6 +92,8 @@ async function library() {
         ),
         "utf-8"
       );
+      // run prettier CLI on families.json
+      execSync("npx prettier --write families.json");
     }
 
     exportVariable("LibraryCommitMessage", commitMessage.join("; "));
@@ -147,3 +157,21 @@ function combineLibraries(remoteFonts, local) {
 }
 
 export default library();
+
+function autoAddToLocal(local) {
+  let updatedLocalLibrary = false;
+  // if family name has "SC" and does not have "small caps" tag, add it
+  local.forEach((font) => {
+    if (font.family.includes("SC") && !font.tags.includes("small caps")) {
+      font.tags.push("small caps");
+      updatedLocalLibrary = true;
+    }
+  });
+
+  return {
+    local,
+    commitMessage: updatedLocalLibrary
+      ? 'Updated local library with "small caps" tag'
+      : undefined,
+  };
+}
