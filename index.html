@@ -33,9 +33,9 @@
         <section class="tags sidebar-group">
           <h2>Tags</h2>
           <div id="tags" class="tags-container">
-            {% for tag in metadata.tags %}
+            {%- for tag in metadata.tags -%}
             <tag-button value="{{tag}}">{{tag}}</tag-button>
-            {% endfor %}
+            {%- endfor -%}
           </div>
         </section>
         <div class="sidebar-group">
@@ -51,18 +51,18 @@
         <section class="selects">
           <h2>Filters</h2>
           <div class="select-group-container">
-            {% for group in metadata %}{% assign key = group[0] %}{% assign
-            value = group[1] %}
+            {%- for group in metadata %} {%- assign key = group[0] -%} {%-
+            assign value = group[1] -%}
             <div class="select-group{% if key == 'tags' %} mobile{% endif %}">
               <label for="select-{{key}}">{{key}}</label>
               <select id="select-{{key}}">
                 <option value="">All {{key}}</option>
-                {% for item in value %}
+                {%- for item in value -%}
                 <option value="{{item}}">{{item}}</option>
-                {% endfor %}
+                {%- endfor -%}
               </select>
             </div>
-            {% endfor %}
+            {%- endfor -%}
           </div>
         </section>
         <section class="results">
@@ -98,7 +98,6 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-7KLW06M68M");
     </script>
   </body>
