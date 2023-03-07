@@ -55,6 +55,7 @@ class FontResults extends HTMLElement {
       this.getUrlParams(param, selectVar, select);
       document.querySelector(select).addEventListener("change", (e) => {
         this[selectVar] = e.target.value;
+        this.curPage = 1;
         this.renderStatus();
         this.renderBody();
         this.setUrlParams(param, e.target.value);
