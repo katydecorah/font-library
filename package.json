@@ -50,5 +50,8 @@
     "families.json": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "json-stringify-pretty-compact": "^4.0.0"
   }
 }
