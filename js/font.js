@@ -212,11 +212,13 @@ class FontResult extends HTMLElement {
     googleFont.setAttribute("data-family", family);
     document.head.appendChild(googleFont);
 
-    wrapper.innerHTML = `<div id="family-${slug}">
+    const id = `${family.toLowerCase().replace(/ /g, "-")}`;
+
+    wrapper.innerHTML = `<div id="family-${id}">
     <div class="family-link">
-      <div id="family-name" class="family-title" style="${this.familyStyle(
-        previewName
-      )}">
+      <div id="family-name" class="family-title ${id}" style="${this.familyStyle(
+      previewName
+    )}">
         ${previewName}
       </div>
       <div class="family-meta-container">
@@ -329,6 +331,14 @@ class FontResult extends HTMLElement {
   subsetFamily() {
     const { subsets, family } = this;
     const selectedSubset = document.querySelector("#select-subsets").value;
+
+    // if family starts with materials icons
+    if (
+      family.startsWith("Material Icons") ||
+      family.startsWith("Material Symbols")
+    ) {
+      return "favorite add delete settings search";
+    }
 
     if (
       (!subsets.includes("latin") || family.startsWith("Noto")) &&
