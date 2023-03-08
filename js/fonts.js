@@ -10,6 +10,7 @@ class FontResults extends HTMLElement {
     this.selectedCategory = "";
     this.selectedSubset = "";
     this.selectedVariant = "";
+    this.search = "";
     this.resultsLength;
     this.pageSize = 5;
     this.curPage = 1;
@@ -62,9 +63,18 @@ class FontResults extends HTMLElement {
       });
     }
 
+    // Tags
     this.getUrlParams("tag", "selectedTag", "#select-tags");
     document.querySelector("#select-tags").addEventListener("change", (e) => {
       this.selectTag({ detail: { tag: e.target.value } });
+    });
+
+    // Search
+    document.querySelector("#input-search").addEventListener("input", (e) => {
+      this.search = e.target.value;
+      this.curPage = 1;
+      this.renderStatus();
+      this.renderBody();
     });
   }
 
@@ -97,6 +107,10 @@ class FontResults extends HTMLElement {
       this[selectVar] = "";
       document.querySelector(select).value = "";
     }
+    // Reset search
+    this.search = "";
+    document.querySelector("#input-search").value = "";
+    // Reset tags
     this.removeActiveTag();
     // Reset URL
     window.history.pushState({}, "", `${window.location.pathname}`);
@@ -143,6 +157,12 @@ class FontResults extends HTMLElement {
 
   performFilter() {
     let filteredData = this.data;
+
+    if (this.search) {
+      filteredData = filteredData.filter((row) =>
+        row.family.toLowerCase().includes(this.search.toLowerCase())
+      );
+    }
 
     if (this.selectedTag && this.selectedTag !== "need tags") {
       filteredData = filteredData.filter((row) =>
@@ -282,7 +302,8 @@ class FontResults extends HTMLElement {
       this.selectedCategory ||
       this.selectedTag ||
       this.selectedSubset ||
-      this.selectedVariant;
+      this.selectedVariant ||
+      this.search;
     let elm = "";
     elm += `<div>Found ${this.resultsLength} fonts`;
 
@@ -291,6 +312,10 @@ class FontResults extends HTMLElement {
     }
 
     elm += `</div>`;
+
+    if (this.search) {
+      elm += `<div class="search-filter">search: <strong>${this.search}</strong></div>`;
+    }
 
     if (this.selectedSubset) {
       elm += `<div class="search-filter">subset: <strong>${this.selectedSubset}</strong></div>`;
