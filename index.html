@@ -51,6 +51,10 @@
         <section class="selects">
           <h2>Filters</h2>
           <div class="select-group-container">
+            <div class="select-group">
+              <label for="input-search">Filter fonts</label>
+              <input type="text" id="input-search" />
+            </div>
             {%- for group in metadata %} {%- assign key = group[0] -%} {%-
             assign value = group[1] -%}
             <div class="select-group{% if key == 'tags' %} mobile{% endif %}">
