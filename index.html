@@ -62,7 +62,7 @@
               <select id="select-{{key}}">
                 <option value="">All {{key}}</option>
                 {%- for item in value -%}
-                <option value="{{item}}">{{item}}</option>
+                <option id="{{item}}" value="{{item}}">{{item}}</option>
                 {%- endfor -%}
               </select>
             </div>

@@ -3,6 +3,7 @@
     "eslint:recommended",
     "plugin:wc/recommended",
     "plugin:jest/recommended",
+    "plugin:xss/recommended",
     "prettier"
   ],
   "parserOptions": {

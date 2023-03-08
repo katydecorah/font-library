@@ -71,7 +71,7 @@ class FontResults extends HTMLElement {
 
     // Search
     document.querySelector("#input-search").addEventListener("input", (e) => {
-      this.search = e.target.value;
+      this.search = e.target.value.replace(/[^a-zA-Z0-9\- ]/g, "");
       this.curPage = 1;
       this.renderStatus();
       this.renderBody();
@@ -81,7 +81,12 @@ class FontResults extends HTMLElement {
   getUrlParams(param, selectVar, selectElement) {
     const urlParams = new URLSearchParams(window.location.search);
     if (!urlParams.has(param)) return;
-    const newValue = urlParams.get(param);
+    let newValue = urlParams.get(param);
+    newValue = newValue.replace(/[^a-zA-Z0-9\- ]/g, "");
+    // if value doesn't exist in select, return
+    if (!document.querySelector(selectElement).options.namedItem(newValue)) {
+      return;
+    }
     this[selectVar] = newValue;
     const select = document.querySelector(selectElement);
     select.value = newValue;
@@ -227,7 +232,7 @@ class FontResults extends HTMLElement {
         font;
       result += `<font-result slug="${slug}" family="${family}" category="${category}" variants="${variants}" subsets="${subsets}" lineNumber="${lineNumber}" tags="${tags}"></font-result>`;
     }
-    fontBody.innerHTML = result;
+    fontBody.innerHTML = `${result}`;
   }
 
   selectTag({ detail: { tag } }) {
@@ -261,6 +266,7 @@ class FontResults extends HTMLElement {
     const nextActiveTags = document.querySelectorAll(
       `.tag-${newTag.replace(/ /g, "-")}`
     );
+    if (nextActiveTags.length === 0) return;
     nextActiveTags.forEach((tagButton) => tagButton.classList.add("active"));
   }
 
@@ -334,7 +340,7 @@ class FontResults extends HTMLElement {
       elm += `<clear-button class="btn btn-clear">Clear</clear-butto>`;
     }
 
-    status.innerHTML = elm;
+    status.innerHTML = `${elm}`;
   }
 
   cleanUpFonts() {
