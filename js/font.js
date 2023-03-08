@@ -1,3 +1,6 @@
+import languages from "./samples.json";
+import rtlLanguages from "./rtl.json";
+
 class FontResult extends HTMLElement {
   constructor() {
     super();
