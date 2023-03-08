@@ -4,8 +4,7 @@ class FontResults extends HTMLElement {
   constructor() {
     super();
 
-    // eslint-disable-next-line no-undef
-    this.data = generatedData;
+    this.generatedData = generatedData;
     this.selectedTag = "";
     this.selectedCategory = "";
     this.selectedSubset = "";
@@ -161,7 +160,7 @@ class FontResults extends HTMLElement {
   }
 
   performFilter() {
-    let filteredData = this.data;
+    let filteredData = this.generatedData;
 
     if (this.search) {
       filteredData = filteredData.filter((row) =>
