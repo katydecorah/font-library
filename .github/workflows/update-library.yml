@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 16
 
-      - run: npm install @actions/core node-fetch json-stringify-pretty-compact
+      - run: npm install @actions/core node-fetch
 
       - name: Update library
         run: node .github/actions/update-library.mjs
