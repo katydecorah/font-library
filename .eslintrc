@@ -3,12 +3,14 @@
     "eslint:recommended",
     "plugin:wc/recommended",
     "plugin:jest/recommended",
-    "plugin:xss/recommended",
+    "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2020
   },
+  "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
     "es6": true,

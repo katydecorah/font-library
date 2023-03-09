@@ -1,11 +1,47 @@
 // https://www.raymondcamden.com/2022/05/23/building-table-sorting-and-pagination-in-a-web-component
 import generatedData from "./data.json";
+export type GeneratedData = typeof generatedData;
+
+const filters = [
+  {
+    select: "#select-categories",
+    param: "category",
+    selectVar: "selectedCategory",
+  },
+  {
+    select: "#select-subsets",
+    param: "subset",
+    selectVar: "selectedSubset",
+  },
+  {
+    select: "#select-variants",
+    param: "variant",
+    selectVar: "selectedVariant",
+  },
+  {
+    select: "#select-tags",
+    param: "tag",
+    selectVar: "selectedTag",
+  },
+  {
+    select: "#input-search",
+    param: "search",
+    selectVar: "search",
+  },
+];
 
 class FontResults extends HTMLElement {
+  selectedTag: string;
+  selectedCategory: string;
+  selectedSubset: string;
+  selectedVariant: string;
+  search: string;
+  resultsLength: number;
+  pageSize: number;
+  curPage: number;
   constructor() {
     super();
 
-    this.generatedData = generatedData;
     this.selectedTag = "";
     this.selectedCategory = "";
     this.selectedSubset = "";
@@ -22,56 +58,40 @@ class FontResults extends HTMLElement {
     this.clearFilter = this.clearFilter.bind(this);
 
     // Event listeners
-    document.addEventListener("tag-button-selected", this.selectTag);
-    this.addEventListener("tag-button-selected", this.selectTag);
+    document.addEventListener("tag-button-selected", (e: CustomEvent) =>
+      this.selectTag(e.detail.tag)
+    );
+    this.addEventListener("tag-button-selected", (e: CustomEvent) =>
+      this.selectTag(e.detail.tag)
+    );
     document.addEventListener("clear-filter", this.clearFilter);
     this.addEventListener("clear-filter", this.clearFilter);
 
-    // Filter event listeners and set initial values
-    this.filters = [
-      {
-        select: "#select-categories",
-        param: "category",
-        selectVar: "selectedCategory",
-      },
-      {
-        select: "#select-subsets",
-        param: "subset",
-        selectVar: "selectedSubset",
-      },
-      {
-        select: "#select-variants",
-        param: "variant",
-        selectVar: "selectedVariant",
-      },
-      {
-        select: "#select-tags",
-        param: "tag",
-        selectVar: "selectedTag",
-      },
-    ];
-
-    for (const { select, param, selectVar } of this.filters) {
-      if (select === "#select-tags") continue;
+    for (const { select, param, selectVar } of filters) {
+      if (select === "#select-tags" || select === "#input-search") continue;
       this.getUrlParams(param, selectVar, select);
       document.querySelector(select).addEventListener("change", (e) => {
-        this[selectVar] = e.target.value;
+        const newValue = (e.target as HTMLSelectElement).value;
+        Object.assign(this, {
+          [selectVar]: newValue,
+        });
         this.curPage = 1;
         this.renderStatus();
         this.renderBody();
-        this.setUrlParams(param, e.target.value);
+        this.setUrlParams(param, newValue);
       });
     }
 
     // Tags
     this.getUrlParams("tag", "selectedTag", "#select-tags");
     document.querySelector("#select-tags").addEventListener("change", (e) => {
-      this.selectTag({ detail: { tag: e.target.value } });
+      this.selectTag((e.target as HTMLSelectElement).value);
     });
 
     // Search
     document.querySelector("#input-search").addEventListener("input", (e) => {
-      this.search = e.target.value.replace(/[^a-zA-Z0-9\- ]/g, "");
+      const target = e.target as HTMLInputElement;
+      this.search = target.value.replace(/[^a-zA-Z0-9\- ]/g, "");
       this.curPage = 1;
       this.renderStatus();
       this.renderBody();
@@ -84,25 +104,28 @@ class FontResults extends HTMLElement {
     prevButton.addEventListener("click", this.previousPage, false);
   }
 
-  getUrlParams(param, selectVar, selectElement) {
+  getUrlParams(param: string, selectVar: string, selectElement: string) {
     const urlParams = new URLSearchParams(window.location.search);
     if (!urlParams.has(param)) return;
     let newValue = urlParams.get(param);
     newValue = newValue.replace(/[^a-zA-Z0-9\- ]/g, "");
+
+    const elm = document.querySelector(selectElement) as HTMLSelectElement;
     // if value doesn't exist in select, return
-    if (!document.querySelector(selectElement).options.namedItem(newValue)) {
+    if (!elm.options.namedItem(newValue)) {
       return;
     }
-    this[selectVar] = newValue;
-    const select = document.querySelector(selectElement);
-    select.value = newValue;
+    Object.assign(this, {
+      [selectVar]: newValue,
+    });
+    elm.value = newValue;
 
     if (selectElement === "#select-tags") {
       this.addActiveTag(newValue);
     }
   }
 
-  setUrlParams(param, value) {
+  setUrlParams(param: string, value: string) {
     const urlParams = new URLSearchParams(window.location.search);
     urlParams.set(param, value);
     window.history.replaceState(
@@ -114,13 +137,12 @@ class FontResults extends HTMLElement {
 
   clearFilter() {
     // Reset selects
-    for (const { select, selectVar } of this.filters) {
-      this[selectVar] = "";
-      document.querySelector(select).value = "";
+    for (const { select, selectVar } of filters) {
+      Object.assign(this, {
+        [selectVar]: "",
+      });
+      (document.querySelector(select) as HTMLSelectElement).value = "";
     }
-    // Reset search
-    this.search = "";
-    document.querySelector("#input-search").value = "";
     // Reset tags
     this.removeActiveTag();
     // Reset URL
@@ -135,8 +157,8 @@ class FontResults extends HTMLElement {
     this.renderBody();
   }
 
-  performFilter() {
-    let filteredData = this.generatedData;
+  performFilter(): GeneratedData {
+    let filteredData = generatedData;
 
     if (this.search) {
       filteredData = filteredData.filter((row) =>
@@ -174,7 +196,7 @@ class FontResults extends HTMLElement {
     return filteredData;
   }
 
-  performPagination(data) {
+  performPagination(data: GeneratedData) {
     const totalPages = Math.ceil(this.resultsLength / this.pageSize);
     this.querySelector(
       "#page-count"
@@ -208,7 +230,7 @@ class FontResults extends HTMLElement {
     fontBody.innerHTML = `${result}`;
   }
 
-  selectTag({ detail: { tag } }) {
+  selectTag(tag: string) {
     this.selectedTag = tag;
     this.curPage = 1;
     this.renderBody();
@@ -219,8 +241,7 @@ class FontResults extends HTMLElement {
     // add active tage
     this.addActiveTag(tag);
     this.scrollToContent();
-    const select = document.querySelector("#select-tags");
-    select.value = tag;
+    (document.querySelector("#select-tags") as HTMLSelectElement).value = tag;
   }
 
   scrollToContent() {
@@ -235,7 +256,7 @@ class FontResults extends HTMLElement {
     );
   }
 
-  addActiveTag(newTag) {
+  addActiveTag(newTag: string) {
     const nextActiveTags = document.querySelectorAll(
       `.tag-${newTag.replace(/ /g, "-")}`
     );
@@ -252,10 +273,11 @@ class FontResults extends HTMLElement {
   }
 
   setNextPageState() {
+    const elm = this.querySelector("#btn-next") as HTMLButtonElement;
     if (this.curPage * this.pageSize >= this.resultsLength) {
-      this.querySelector("#btn-next").disabled = true;
+      elm.disabled = true;
     } else {
-      this.querySelector("#btn-next").disabled = false;
+      elm.disabled = false;
     }
   }
 
@@ -268,10 +290,11 @@ class FontResults extends HTMLElement {
   }
 
   setPrevPageState() {
+    const elm = this.querySelector("#btn-prev") as HTMLButtonElement;
     if (this.curPage === 1) {
-      this.querySelector("#btn-prev").disabled = true;
+      elm.disabled = true;
     } else {
-      this.querySelector("#btn-prev").disabled = false;
+      elm.disabled = false;
     }
   }
 
