@@ -30,6 +30,8 @@ const filters = [
   },
 ];
 
+export type Fonts = typeof FontResults;
+
 class FontResults extends HTMLElement {
   selectedTag: string;
   selectedCategory: string;
@@ -299,44 +301,8 @@ class FontResults extends HTMLElement {
   }
 
   renderStatus() {
-    const status = this.querySelector(".search-status");
-    const hasFilters =
-      this.selectedCategory ||
-      this.selectedTag ||
-      this.selectedSubset ||
-      this.selectedVariant ||
-      this.search;
-    let elm = "";
-    elm += `<div>Found ${this.resultsLength} fonts`;
-
-    if (hasFilters) {
-      elm += this.selectedTag === "need tags" ? ` that ` : ` for `;
-    }
-
-    elm += `</div>`;
-
-    if (this.search) {
-      elm += `<div class="search-filter">search: <strong>${this.search}</strong></div>`;
-    }
-
-    if (this.selectedSubset) {
-      elm += `<div class="search-filter">subset: <strong>${this.selectedSubset}</strong></div>`;
-    }
-
-    if (this.selectedCategory) {
-      elm += `<div class="search-filter">category: <strong>${this.selectedCategory}</strong></div>`;
-    }
-    if (this.selectedVariant) {
-      elm += `<div class="search-filter">variant: <strong>${this.selectedVariant}</strong></div>`;
-    }
-    if (this.selectedTag) {
-      elm += `<div class="search-filter">tag: <strong>${this.selectedTag}</strong></div>`;
-    }
-    if (hasFilters) {
-      elm += `<clear-button class="btn btn-clear">Clear</clear-butto>`;
-    }
-
-    status.innerHTML = `${elm}`;
+    const status = this.querySelector("#search-status");
+    status.innerHTML = `<search-status class="search-status" resultsLength="${this.resultsLength}" selectedCategory="${this.selectedCategory}" selectedTag="${this.selectedTag}" selectedSubset="${this.selectedSubset}" selectedVariant="${this.selectedVariant}" search="${this.search}" resultsLength="${this.resultsLength}"></search-status>`;
   }
 
   cleanUpFonts() {
