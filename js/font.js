@@ -7,40 +7,18 @@ class FontResult extends HTMLElement {
   }
 
   connectedCallback() {
-    const wrapper = document.createElement("div");
-    wrapper.classList.add("family");
-    this.slug = this.getAttribute("slug");
-    this.family = this.getAttribute("family");
-    this.category = this.getAttribute("category");
-    this.variants = this.getAttribute("variants").split(",");
-    this.subsets = this.getAttribute("subsets").split(",");
-    this.lineNumber = this.getAttribute("lineNumber");
+    const fontString = this.getAttribute("font");
+    const font = fontString ? JSON.parse(fontString) : {};
+    const { family, category, variants, subsets, lineNumber, tags, slug, id } =
+      font;
+    const previewName = this.subsetFamily(font);
 
-    // get tags json parse
-    this.tags = this.getAttribute("tags")
-      .split(",")
-      .filter((tag) => tag);
+    this.addFontToHead({ previewName, ...font });
 
-    const { slug, family, category, variants, subsets, lineNumber, tags } =
-      this;
-
-    const previewName = this.subsetFamily();
-
-    // Add Google Font to document head
-    const googleFont = document.createElement("link");
-    googleFont.href = `https://fonts.googleapis.com/css2?family=${this.fontCall(
-      previewName
-    )}`;
-    googleFont.rel = "stylesheet";
-    googleFont.setAttribute("data-family", family);
-    document.head.appendChild(googleFont);
-
-    const id = `${family.toLowerCase().replace(/ /g, "-")}`;
-
-    wrapper.innerHTML = `<div id="family-${id}">
+    this.innerHTML = `<div id="family-${id}" class="family">
     <div class="family-link">
       <div id="family-name" class="family-title ${id}" style="${this.familyStyle(
-      previewName
+      { previewName, ...font }
     )}">
         ${previewName}
       </div>
@@ -72,7 +50,7 @@ class FontResult extends HTMLElement {
           aria-label="Edit tags for ${family}"
           >Edit tags</a
         >
-           <a
+        <a
           href="https://fonts.google.com/specimen/${slug}"
           target="_blank"
           aria-label="Visit ${family} on Google Fonts"
@@ -81,12 +59,20 @@ class FontResult extends HTMLElement {
       </div>
     </div>
   </div>`;
-    this.appendChild(wrapper);
+  }
+
+  addFontToHead({ previewName, family, variants, slug }) {
+    const googleFont = document.createElement("link");
+    googleFont.href = `https://fonts.googleapis.com/css2?family=${this.fontCall(
+      { previewName, family, variants, slug }
+    )}`;
+    googleFont.rel = "stylesheet";
+    googleFont.setAttribute("data-family", family);
+    document.head.appendChild(googleFont);
   }
 
   // Refactor this function
-  fontCall(familyName) {
-    const { variants, subsets, slug } = this;
+  fontCall({ previewName, variants, slug }) {
     //get font name
     let font = slug;
 
@@ -121,24 +107,18 @@ class FontResult extends HTMLElement {
     }
 
     // otherwise get this text for the font
-    font += `&text=${encodeURIComponent(familyName)}`;
-
-    for (const key in sampleSubsets) {
-      if (subsets.indexOf("latin") < 0) {
-        font += encodeURIComponent(sampleSubsets[key]);
-      }
-    }
+    font += `&text=${encodeURIComponent(previewName)}`;
 
     font += `&display=swap`;
 
     return font;
   }
 
-  familyStyle(familyName) {
-    let style = `font-family: '${this.family}';`;
+  familyStyle({ previewName, subsets, family }) {
+    let style = `font-family: '${family}';`;
     if (
-      this.subsets.filter((f) => rtlSubsets.includes(f)).length > 0 &&
-      this.family !== familyName
+      subsets.filter((f) => rtlSubsets.includes(f)).length > 0 &&
+      family !== previewName
     ) {
       style += "direction: rtl;";
     }
@@ -151,8 +131,7 @@ class FontResult extends HTMLElement {
     return style;
   }
 
-  subsetFamily() {
-    const { subsets, family } = this;
+  subsetFamily({ family, subsets }) {
     const selectedSubset = document.querySelector("#select-subsets").value;
 
     // if family starts with materials icons

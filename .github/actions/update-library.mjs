@@ -119,15 +119,15 @@ function combineLibraries(remoteFonts, local) {
   const combineLibrary = [];
   for (const [
     index,
-    { family, variants, subsets, lastModified, category },
+    { family, variants, subsets, category },
   ] of remoteFonts.entries()) {
     const localFont = local.find((f) => f.family === family);
     combineLibrary.push({
       family,
       slug: family.replace(/ /g, "+"),
+      id: family.toLowerCase().replace(/ /g, "-"),
       variants,
       subsets,
-      lastModified,
       category,
       tags: localFont ? localFont.tags : [],
       lineNumber: index + 2,
