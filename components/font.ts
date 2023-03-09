@@ -1,4 +1,18 @@
+import subsetSamples from "./samples.json";
+import rtlSubsets from "./rtl.json";
+
+export type SubsetSamples = typeof subsetSamples;
+export type RtlSubsets = typeof rtlSubsets;
+
 class FontResult extends HTMLElement {
+  slug: string;
+  family: string;
+  category: string;
+  variants: string[];
+  subsets: string[];
+  lineNumber: string;
+  tags: string[];
+
   constructor() {
     super();
   }
@@ -82,13 +96,16 @@ class FontResult extends HTMLElement {
   }
 
   // Refactor this function
-  fontCall(familyName) {
-    const { variants, subsets, slug } = this;
+  fontCall(familyName: string) {
+    const { variants, slug } = this;
     //get font name
     let font = slug;
 
     // get selectedVariants
-    const selectedVariant = document.querySelector("#select-variants").value;
+    const variantSelect = document.querySelector(
+      "#select-variants"
+    ) as HTMLSelectElement;
+    const selectedVariant = variantSelect.value;
 
     if (selectedVariant && selectedVariant !== "regular") {
       const variants = [];
@@ -106,13 +123,7 @@ class FontResult extends HTMLElement {
       }
       font += `:${variants.join(",")}`;
     } else {
-      // if no regular variant
-      if (!variants.includes("regular") && variants.includes("italic")) {
-        font += `:wght@${variants[0]}`;
-      }
-
-      // if no regular or italic?
-      if (!variants.includes("regular") && !variants.includes("italic")) {
+      if (!variants.includes("regular")) {
         font += `:wght@${variants[0]}`;
       }
     }
@@ -120,21 +131,15 @@ class FontResult extends HTMLElement {
     // otherwise get this text for the font
     font += `&text=${encodeURIComponent(familyName)}`;
 
-    for (const key in languages) {
-      if (subsets.indexOf("latin") < 0) {
-        font += encodeURIComponent(languages[key]);
-      }
-    }
-
     font += `&display=swap`;
 
     return font;
   }
 
-  familyStyle(familyName) {
+  familyStyle(familyName: string) {
     let style = `font-family: '${this.family}';`;
     if (
-      this.subsets.filter((f) => rtlLanguages.includes(f)).length > 0 &&
+      this.subsets.filter((f) => rtlSubsets.includes(f)).length > 0 &&
       this.family !== familyName
     ) {
       style += "direction: rtl;";
@@ -162,11 +167,11 @@ class FontResult extends HTMLElement {
 
     if (
       (!subsets.includes("latin") || family.startsWith("Noto")) &&
-      (languages[selectedSubset] || languages[subsets[0]])
+      (subsetSamples[selectedSubset] || subsetSamples[subsets[0]])
     ) {
-      return languages[selectedSubset] || languages[subsets[0]];
+      return subsetSamples[selectedSubset] || subsetSamples[subsets[0]];
     }
-    if (!subsets.includes("latin") && !languages[subsets]) {
+    if (!subsets.includes("latin") && !subsetSamples[subsets]) {
       return "";
     }
     return family;
