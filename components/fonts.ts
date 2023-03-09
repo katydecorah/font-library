@@ -30,8 +30,6 @@ const filters = [
   },
 ];
 
-export type Fonts = typeof FontResults;
-
 class FontResults extends HTMLElement {
   selectedTag: string;
   selectedCategory: string;
