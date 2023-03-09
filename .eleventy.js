@@ -1,15 +1,17 @@
+const esbuild = require("esbuild");
+const glob = require("glob");
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.setLiquidOptions({
     dynamicPartials: false,
   });
 
-  eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("css");
 
   eleventyConfig.on("afterBuild", () => {
     return esbuild.build({
       stdin: { contents: "" },
-      inject: glob.sync("components/*.ts"),
+      inject: glob.sync("js/*.js"),
       bundle: true,
       outfile: "_site/js/bundle.js",
       minify: process.env.ELEVENTY_ENV === "production",

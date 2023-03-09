@@ -36,11 +36,14 @@ async function library() {
       libraryApi.items,
       libraryLocal
     );
-    const localGeneratedData = readFileSync("js/data.js", "utf-8");
+    const localGeneratedData = readFileSync("js/data.json", "utf-8");
 
     const hasFamiliesToAdd = familiesToAdd.length > 0;
     const hasFamiliesToRemove = familiesToRemove.length > 0;
-    const hasGeneratedDataToUpdate = generatedFamilies !== localGeneratedData;
+    const hasGeneratedDataToUpdate = !arraysEqual(
+      generatedFamilies,
+      localGeneratedData
+    );
 
     if (
       !hasFamiliesToAdd &&
@@ -74,7 +77,7 @@ async function library() {
     }
 
     if (hasGeneratedDataToUpdate) {
-      writeFileSync("js/data.js", generatedFamilies, "utf-8");
+      writeFileSync("js/data.json", generatedFamilies, "utf-8");
       writeFileSync(
         "_data/metadata.json",
         JSON.stringify(generatedMetadata, null, 2),
@@ -84,6 +87,7 @@ async function library() {
       commitMessage.push(updated);
       info(updated);
       exportVariable("UpdatedLibrary", true);
+      execSync("npx prettier --write js/data.json _data/metadata.json");
     }
 
     if (hasFamiliesToAdd || hasFamiliesToRemove || updateLocal.commitMessage) {
@@ -104,6 +108,13 @@ async function library() {
   }
 }
 
+function arraysEqual(a1, a2) {
+  a1 = a1.replace(/\s/g, "");
+  a2 = a2.replace(/\s/g, "");
+
+  return JSON.stringify(a1) == JSON.stringify(a2);
+}
+
 function combineLibraries(remoteFonts, local) {
   const combineLibrary = [];
   for (const [
@@ -114,6 +125,7 @@ function combineLibraries(remoteFonts, local) {
     combineLibrary.push({
       family,
       slug: family.replace(/ /g, "+"),
+      id: family.toLowerCase().replace(/ /g, "-"),
       variants,
       subsets,
       category,
@@ -129,7 +141,7 @@ function combineLibraries(remoteFonts, local) {
       subsets: getUnique(combineLibrary, "subsets"),
       variants: getUnique(combineLibrary, "variants"),
     },
-    generatedFamilies: `const generatedData=${JSON.stringify(
+    generatedFamilies: `${JSON.stringify(
       combineLibrary.sort((a, b) => (a.family > b.family ? 1 : -1))
     )}`,
   };

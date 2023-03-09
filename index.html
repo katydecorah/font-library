@@ -70,7 +70,15 @@
           </div>
         </section>
         <section class="results">
-          <font-results></font-results>
+          <font-results>
+            <div class="search-status"></div>
+            <div class="families"></div>
+            <div class="pagination">
+              <button class="btn" id="btn-prev">Previous page</button>
+              <div class="page-count" id="page-count"></div>
+              <button class="btn" id="btn-next">Next page</button>
+            </div>
+          </font-results>
         </section>
       </main>
     </div>
@@ -87,12 +95,7 @@
         environment: "{{site.env}}",
       });
     </script>
-    <script src="{{ '/js/data.js' | url }}"></script>
-    <script src="{{ '/js/subsets.js' | url }}"></script>
-    <script src="{{ '/js/tag.js' | url }}"></script>
-    <script src="{{ '/js/clear.js' | url }}"></script>
-    <script src="{{ '/js/font.js' | url }}"></script>
-    <script src="{{ '/js/fonts.js' | url }}"></script>
+    <script src="{{ '/js/bundle.js' | url }}"></script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-7KLW06M68M"
