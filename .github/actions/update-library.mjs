@@ -114,6 +114,7 @@ function combineLibraries(remoteFonts, local) {
     combineLibrary.push({
       family,
       slug: family.replace(/ /g, "+"),
+      id: family.toLowerCase().replace(/ /g, "-"),
       variants,
       subsets,
       lastModified,

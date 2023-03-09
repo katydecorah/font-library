@@ -75,6 +75,12 @@ class FontResults extends HTMLElement {
       this.renderStatus();
       this.renderBody();
     });
+
+    // Pagination
+    const nextButton = document.querySelector("#btn-next");
+    const prevButton = document.querySelector("#btn-prev");
+    nextButton.addEventListener("click", this.nextPage, false);
+    prevButton.addEventListener("click", this.previousPage, false);
   }
 
   getUrlParams(param, selectVar, selectElement) {
@@ -124,37 +130,6 @@ class FontResults extends HTMLElement {
   }
 
   connectedCallback() {
-    // Main
-    const fontContainer = document.createElement("div");
-    // Search status
-    const statusContainer = document.createElement("div");
-    statusContainer.classList.add("search-status");
-    // Families
-    const fontBody = document.createElement("div");
-    fontBody.classList.add("families");
-    fontContainer.append(statusContainer, fontBody);
-    // Pagination
-    const nav = document.createElement("div");
-    nav.classList.add("pagination");
-    const prevButton = document.createElement("button");
-    prevButton.classList.add("btn");
-    prevButton.disabled = true;
-    prevButton.id = "btn-prev";
-    prevButton.innerHTML = "Previous page";
-    const pageCount = document.createElement("div");
-    pageCount.classList.add("page-count");
-    pageCount.id = "page-count";
-    const nextButton = document.createElement("button");
-    nextButton.classList.add("btn");
-    nextButton.innerHTML = "Next page";
-    nextButton.id = "btn-next";
-    nav.append(prevButton, pageCount, nextButton);
-    nextButton.addEventListener("click", this.nextPage, false);
-    prevButton.addEventListener("click", this.previousPage, false);
-    fontContainer.append(nav);
-
-    this.appendChild(fontContainer);
-
     this.renderStatus();
     this.renderBody();
   }
@@ -227,9 +202,7 @@ class FontResults extends HTMLElement {
 
     let result = "";
     for (const font of paginatedData) {
-      const { slug, family, category, variants, subsets, lineNumber, tags } =
-        font;
-      result += `<font-result slug="${slug}" family="${family}" category="${category}" variants="${variants}" subsets="${subsets}" lineNumber="${lineNumber}" tags="${tags}"></font-result>`;
+      result += `<font-result font='${JSON.stringify(font)}'></font-result>`;
     }
     fontBody.innerHTML = `${result}`;
   }
