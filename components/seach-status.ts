@@ -1,5 +1,3 @@
-import { Fonts } from "./fonts";
-
 class SearchStatus extends HTMLElement {
   constructor() {
     super();
@@ -19,6 +17,7 @@ class SearchStatus extends HTMLElement {
       selectedSubset ||
       selectedVariant ||
       search;
+
     let elm = "";
     elm += `<div>Found ${resultsLength} fonts`;
 
