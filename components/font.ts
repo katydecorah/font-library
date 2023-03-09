@@ -1,7 +1,7 @@
-import subsetSamples from "./samples.json";
+import sampleSubsets from "./samples.json";
 import rtlSubsets from "./rtl.json";
 
-export type SubsetSamples = typeof subsetSamples;
+export type SampleSubsets = typeof sampleSubsets;
 export type RtlSubsets = typeof rtlSubsets;
 
 class FontResult extends HTMLElement {
@@ -186,17 +186,17 @@ class FontResult extends HTMLElement {
     }
     if (
       (!subsets.includes("latin") || family.startsWith("Noto")) &&
-      (selectedSubset in subsetSamples ||
-        subsetSamples[subsets[0] as keyof SubsetSamples])
+      (selectedSubset in sampleSubsets ||
+        sampleSubsets[subsets[0] as keyof SampleSubsets])
     ) {
       return (
-        subsetSamples[selectedSubset as keyof SubsetSamples] ||
-        subsetSamples[subsets[0] as keyof SubsetSamples]
+        sampleSubsets[selectedSubset as keyof SampleSubsets] ||
+        sampleSubsets[subsets[0] as keyof SampleSubsets]
       );
     }
     if (
       !subsets.includes("latin") &&
-      !subsetSamples[subsets[0] as keyof SubsetSamples]
+      !sampleSubsets[subsets[0] as keyof SampleSubsets]
     ) {
       return "";
     }
