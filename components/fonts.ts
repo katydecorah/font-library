@@ -23,6 +23,11 @@ const filters = [
     param: "tag",
     selectVar: "selectedTag",
   },
+  {
+    select: "#input-search",
+    param: "search",
+    selectVar: "search",
+  },
 ];
 
 class FontResults extends HTMLElement {
@@ -63,23 +68,24 @@ class FontResults extends HTMLElement {
     this.addEventListener("clear-filter", this.clearFilter);
 
     for (const { select, param, selectVar } of filters) {
-      if (select === "#select-tags") continue;
+      if (select === "#select-tags" || select === "#input-search") continue;
       this.getUrlParams(param, selectVar, select);
       document.querySelector(select).addEventListener("change", (e) => {
-        const target = e.target as HTMLSelectElement;
-        this[selectVar] = target.value;
+        const newValue = (e.target as HTMLSelectElement).value;
+        Object.assign(this, {
+          [selectVar]: newValue,
+        });
         this.curPage = 1;
         this.renderStatus();
         this.renderBody();
-        this.setUrlParams(param, target.value);
+        this.setUrlParams(param, newValue);
       });
     }
 
     // Tags
     this.getUrlParams("tag", "selectedTag", "#select-tags");
     document.querySelector("#select-tags").addEventListener("change", (e) => {
-      const target = e.target as HTMLSelectElement;
-      this.selectTag(target.value);
+      this.selectTag((e.target as HTMLSelectElement).value);
     });
 
     // Search
@@ -103,14 +109,16 @@ class FontResults extends HTMLElement {
     if (!urlParams.has(param)) return;
     let newValue = urlParams.get(param);
     newValue = newValue.replace(/[^a-zA-Z0-9\- ]/g, "");
+
     const elm = document.querySelector(selectElement) as HTMLSelectElement;
     // if value doesn't exist in select, return
     if (!elm.options.namedItem(newValue)) {
       return;
     }
-    this[selectVar] = newValue;
-    const select = document.querySelector(selectElement) as HTMLSelectElement;
-    select.value = newValue;
+    Object.assign(this, {
+      [selectVar]: newValue,
+    });
+    elm.value = newValue;
 
     if (selectElement === "#select-tags") {
       this.addActiveTag(newValue);
@@ -130,12 +138,11 @@ class FontResults extends HTMLElement {
   clearFilter() {
     // Reset selects
     for (const { select, selectVar } of filters) {
-      this[selectVar] = "";
-      document.querySelector(select).value = "";
+      Object.assign(this, {
+        [selectVar]: "",
+      });
+      (document.querySelector(select) as HTMLSelectElement).value = "";
     }
-    // Reset search
-    this.search = "";
-    document.querySelector("#input-search").value = "";
     // Reset tags
     this.removeActiveTag();
     // Reset URL
@@ -234,8 +241,7 @@ class FontResults extends HTMLElement {
     // add active tage
     this.addActiveTag(tag);
     this.scrollToContent();
-    const select = document.querySelector("#select-tags") as HTMLSelectElement;
-    select.value = tag;
+    (document.querySelector("#select-tags") as HTMLSelectElement).value = tag;
   }
 
   scrollToContent() {

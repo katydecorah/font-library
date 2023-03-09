@@ -52,7 +52,7 @@ class FontResult extends HTMLElement {
     </div>
     <div class="family-tags">
       <div class="family-tags-container">${tags
-        .map((tag) => `<tag-button value="${tag}">${tag}</tag-button>`)
+        .map((tag: string) => `<tag-button value="${tag}">${tag}</tag-button>`)
         .join("")}</div>
       <div class="family-meta-links">
         <a
@@ -72,10 +72,20 @@ class FontResult extends HTMLElement {
   </div>`;
   }
 
-  addFontToHead({ previewName, family, variants, slug }) {
+  addFontToHead({
+    previewName,
+    family,
+    variants,
+    slug,
+  }: {
+    previewName: string;
+    family: string;
+    variants: string[];
+    slug: string;
+  }): void {
     const googleFont = document.createElement("link");
     googleFont.href = `https://fonts.googleapis.com/css2?family=${this.fontCall(
-      { previewName, family, variants, slug }
+      { previewName, variants, slug }
     )}`;
     googleFont.rel = "stylesheet";
     googleFont.setAttribute("data-family", family);
@@ -83,15 +93,22 @@ class FontResult extends HTMLElement {
   }
 
   // Refactor this function
-  fontCall({ previewName, variants, slug }) {
+  fontCall({
+    previewName,
+    variants,
+    slug,
+  }: {
+    previewName: string;
+    variants: string[];
+    slug: string;
+  }): string {
     //get font name
     let font = slug;
 
     // get selectedVariants
-    const variantSelect = document.querySelector(
-      "#select-variants"
-    ) as HTMLSelectElement;
-    const selectedVariant = variantSelect.value;
+    const selectedVariant = (
+      document.querySelector("#select-variants") as HTMLSelectElement
+    ).value;
 
     if (selectedVariant && selectedVariant !== "regular") {
       const variants = [];
@@ -122,7 +139,15 @@ class FontResult extends HTMLElement {
     return font;
   }
 
-  familyStyle({ previewName, subsets, family }) {
+  familyStyle({
+    previewName,
+    subsets,
+    family,
+  }: {
+    previewName: string;
+    subsets: string[];
+    family: string;
+  }): string {
     let style = `font-family: '${family}';`;
     if (
       subsets.filter((f) => rtlSubsets.includes(f)).length > 0 &&
@@ -131,7 +156,9 @@ class FontResult extends HTMLElement {
       style += "direction: rtl;";
     }
     // add italic style
-    const selectedVariant = document.querySelector("#select-variants").value;
+    const selectedVariant = (
+      document.querySelector("#select-variants") as HTMLSelectElement
+    ).value;
     if (selectedVariant.includes("italic")) {
       style += "font-style: italic;";
     }
@@ -139,8 +166,16 @@ class FontResult extends HTMLElement {
     return style;
   }
 
-  subsetFamily({ family, subsets }) {
-    const selectedSubset = document.querySelector("#select-subsets").value;
+  subsetFamily({
+    family,
+    subsets,
+  }: {
+    family: string;
+    subsets: string[];
+  }): string {
+    const selectedSubset = (
+      document.querySelector("#select-subsets") as HTMLSelectElement
+    ).value;
 
     // if family starts with materials icons
     if (
@@ -149,14 +184,20 @@ class FontResult extends HTMLElement {
     ) {
       return "favorite add delete settings search";
     }
-
     if (
       (!subsets.includes("latin") || family.startsWith("Noto")) &&
-      (subsetSamples[selectedSubset] || subsetSamples[subsets[0]])
+      (selectedSubset in subsetSamples ||
+        subsetSamples[subsets[0] as keyof SubsetSamples])
     ) {
-      return subsetSamples[selectedSubset] || subsetSamples[subsets[0]];
+      return (
+        subsetSamples[selectedSubset as keyof SubsetSamples] ||
+        subsetSamples[subsets[0] as keyof SubsetSamples]
+      );
     }
-    if (!subsets.includes("latin") && !subsetSamples[subsets]) {
+    if (
+      !subsets.includes("latin") &&
+      !subsetSamples[subsets[0] as keyof SubsetSamples]
+    ) {
       return "";
     }
     return family;

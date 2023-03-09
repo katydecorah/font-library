@@ -36,7 +36,7 @@ async function library() {
       libraryApi.items,
       libraryLocal
     );
-    const localGeneratedData = readFileSync("js/data.json", "utf-8");
+    const localGeneratedData = readFileSync("components/data.json", "utf-8");
 
     const hasFamiliesToAdd = familiesToAdd.length > 0;
     const hasFamiliesToRemove = familiesToRemove.length > 0;
@@ -77,7 +77,7 @@ async function library() {
     }
 
     if (hasGeneratedDataToUpdate) {
-      writeFileSync("js/data.json", generatedFamilies, "utf-8");
+      writeFileSync("components/data.json", generatedFamilies, "utf-8");
       writeFileSync(
         "_data/metadata.json",
         JSON.stringify(generatedMetadata, null, 2),
@@ -87,7 +87,7 @@ async function library() {
       commitMessage.push(updated);
       info(updated);
       exportVariable("UpdatedLibrary", true);
-      execSync("npx prettier --write js/data.json _data/metadata.json");
+      execSync("npx prettier --write components/data.json _data/metadata.json");
     }
 
     if (hasFamiliesToAdd || hasFamiliesToRemove || updateLocal.commitMessage) {

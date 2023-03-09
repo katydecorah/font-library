@@ -9,7 +9,7 @@
     "prepare": "husky install",
     "start": "ELEVENTY_ENV=development npx @11ty/eleventy --serve",
     "update-library": "node .github/actions/update-library.mjs",
-    "build": "ELEVENTY_ENV=production npx eleventy"
+    "build": "tsc -noEmit && ELEVENTY_ENV=production npx eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
