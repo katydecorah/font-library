@@ -137,13 +137,7 @@
     "whimsical",
     "wide"
   ],
-  "categories": [
-    "display",
-    "handwriting",
-    "monospace",
-    "sans-serif",
-    "serif"
-  ],
+  "categories": ["display", "handwriting", "monospace", "sans-serif", "serif"],
   "subsets": [
     "adlam",
     "ahom",

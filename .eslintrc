@@ -14,11 +14,6 @@
     "es6": true,
     "jest": true
   },
-  "globals": {
-    "rtlLanguages": "readonly",
-    "languages": "readonly",
-    "generatedData": "readonly"
-  },
   "rules": {
     "prefer-arrow-callback": "error",
     "prefer-const": "error",

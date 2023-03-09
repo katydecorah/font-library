@@ -1,3 +1,6 @@
+import sampleSubsets from "./samples.json";
+import rtlSubsets from "./rtl.json";
+
 class FontResult extends HTMLElement {
   constructor() {
     super();
@@ -120,9 +123,9 @@ class FontResult extends HTMLElement {
     // otherwise get this text for the font
     font += `&text=${encodeURIComponent(familyName)}`;
 
-    for (const key in languages) {
+    for (const key in sampleSubsets) {
       if (subsets.indexOf("latin") < 0) {
-        font += encodeURIComponent(languages[key]);
+        font += encodeURIComponent(sampleSubsets[key]);
       }
     }
 
@@ -134,7 +137,7 @@ class FontResult extends HTMLElement {
   familyStyle(familyName) {
     let style = `font-family: '${this.family}';`;
     if (
-      this.subsets.filter((f) => rtlLanguages.includes(f)).length > 0 &&
+      this.subsets.filter((f) => rtlSubsets.includes(f)).length > 0 &&
       this.family !== familyName
     ) {
       style += "direction: rtl;";
@@ -162,11 +165,11 @@ class FontResult extends HTMLElement {
 
     if (
       (!subsets.includes("latin") || family.startsWith("Noto")) &&
-      (languages[selectedSubset] || languages[subsets[0]])
+      (sampleSubsets[selectedSubset] || sampleSubsets[subsets[0]])
     ) {
-      return languages[selectedSubset] || languages[subsets[0]];
+      return sampleSubsets[selectedSubset] || sampleSubsets[subsets[0]];
     }
-    if (!subsets.includes("latin") && !languages[subsets]) {
+    if (!subsets.includes("latin") && !sampleSubsets[subsets]) {
       return "";
     }
     return family;
