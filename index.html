@@ -45,8 +45,14 @@
           <h3>Want to help the project?</h3>
           <p>
             Sort by fonts that
-            <tag-button value="need tags">need tags</tag-button>. Learn
-            <a href="{{site.contributing}}">how to contribute</a>.
+            <label class="family-tag"
+              >need tags
+              <input
+                type="radio"
+                name="tag"
+                value="need tags"
+                class="hide" /></label
+            >. Learn <a href="{{site.contributing}}">how to contribute</a>.
           </p>
         </div>
       </aside>
@@ -64,7 +70,9 @@
               <label for="select-{{key}}">{{key}}</label>
               <select id="select-{{key}}">
                 <option value="">All {{key}}</option>
-                {%- for item in value -%}
+                {%- if key == 'tags' -%}
+                <option id="need tags" value="need tags">need tags</option>
+                {%- endif -%} {%- for item in value -%}
                 <option id="{{item}}" value="{{item}}">{{item}}</option>
                 {%- endfor -%}
               </select>
