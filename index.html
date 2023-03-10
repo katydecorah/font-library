@@ -34,7 +34,10 @@
           <h2>Tags</h2>
           <div id="tags" class="tags-container">
             {%- for tag in metadata.tags -%}
-            <tag-button value="{{tag}}">{{tag}}</tag-button>
+            <label class="family-tag"
+              >{{tag}}
+              <input type="radio" name="tag" value="{{tag}}" class="hide"
+            /></label>
             {%- endfor -%}
           </div>
         </section>

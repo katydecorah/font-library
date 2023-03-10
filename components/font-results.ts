@@ -51,19 +51,22 @@ class FontResults extends HTMLElement {
     this.pageSize = 5;
     this.curPage = 1;
 
-    // Bind functions
-    this.selectTag = this.selectTag.bind(this);
-
     // Event listeners
-    document.addEventListener("tag-button-selected", (e: CustomEvent) =>
-      this.selectTag(e.detail.tag)
-    );
     this.addEventListener("tag-button-selected", (e: CustomEvent) =>
       this.selectTag(e.detail.tag)
     );
     this.addEventListener("clear-filter", this.clearFilter);
     this.addEventListener("next-page", this.handlePage);
     this.addEventListener("previous-page", this.handlePage);
+
+    // Radio button on click
+    const radios = document.querySelectorAll("[name='tag']");
+    radios.forEach((radio) => {
+      radio.addEventListener("click", (e) => {
+        const target = e.target as HTMLInputElement;
+        this.selectTag(target.value);
+      });
+    });
 
     for (const { select, param, selectVar } of filters) {
       if (select === "#select-tags" || select === "#input-search") continue;
@@ -108,6 +111,17 @@ class FontResults extends HTMLElement {
       [selectVar]: newValue,
     });
     elm.value = newValue;
+    if (selectElement === "#select-tags") {
+      this.setRadio(newValue);
+    }
+  }
+
+  setRadio(tag: string) {
+    // set radio button
+    const radio = document.querySelector(
+      `[value='${tag}']`
+    ) as HTMLInputElement;
+    radio.checked = true;
   }
 
   setUrlParams(param: string, value: string) {
@@ -128,6 +142,11 @@ class FontResults extends HTMLElement {
       });
       (document.querySelector(select) as HTMLSelectElement).value = "";
     }
+    // Reset radio buttons
+    const radios = document.querySelectorAll("[name='tag']");
+    radios.forEach((radio) => {
+      (radio as HTMLInputElement).checked = false;
+    });
     // Reset URL
     window.history.pushState({}, "", `${window.location.pathname}`);
     // Re-render
@@ -222,6 +241,7 @@ class FontResults extends HTMLElement {
     this.setUrlParams("tag", tag);
     this.scrollToContent();
     (document.querySelector("#select-tags") as HTMLSelectElement).value = tag;
+    this.setRadio(tag);
   }
 
   scrollToContent() {
