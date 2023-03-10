@@ -121,7 +121,6 @@ function combineLibraries(remoteFonts, local) {
     index,
     { family, variants, subsets, category },
   ] of remoteFonts.entries()) {
-    const tags = local[family] || [];
     combineLibrary.push({
       family,
       slug: family.replace(/ /g, "+"),
@@ -129,8 +128,8 @@ function combineLibraries(remoteFonts, local) {
       variants,
       subsets,
       category,
-      tags,
-      lineNumber: index + 1,
+      tags: local[family] || [],
+      lineNumber: index + 2,
     });
   }
 
