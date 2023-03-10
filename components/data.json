@@ -7984,7 +7984,7 @@
       "800",
       "900"
     ],
-    "subsets": ["latin", "latin-ext"],
+    "subsets": ["latin", "latin-ext", "math"],
     "category": "sans-serif",
     "tags": [],
     "lineNumber": 643
