@@ -4,7 +4,7 @@ import rtlSubsets from "./rtl.json";
 export type SampleSubsets = typeof sampleSubsets;
 export type RtlSubsets = typeof rtlSubsets;
 
-class FontResult extends HTMLElement {
+class FontItem extends HTMLElement {
   slug: string;
   family: string;
   category: string;
@@ -208,4 +208,4 @@ class FontResult extends HTMLElement {
   }
 }
 
-customElements.define("font-result", FontResult);
+customElements.define("font-item", FontItem);

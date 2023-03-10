@@ -1,4 +1,4 @@
-class Tag extends HTMLElement {
+class TagButton extends HTMLElement {
   constructor() {
     super();
   }
@@ -28,4 +28,4 @@ class Tag extends HTMLElement {
   }
 }
 
-customElements.define("tag-button", Tag);
+customElements.define("tag-button", TagButton);

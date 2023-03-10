@@ -1,4 +1,4 @@
-class Pagination extends HTMLElement {
+class PaginationButtons extends HTMLElement {
   constructor() {
     super();
   }
@@ -37,4 +37,4 @@ class Pagination extends HTMLElement {
   }
 }
 
-customElements.define("pagination-buttons", Pagination);
+customElements.define("pagination-buttons", PaginationButtons);

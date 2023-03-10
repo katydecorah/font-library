@@ -186,9 +186,9 @@ class FontResults extends HTMLElement {
     this.querySelector("#families").innerHTML = paginatedData
       .map(
         (font) =>
-          `<font-result selectedTag='${
-            this.selectedTag
-          }' font='${JSON.stringify(font)}'></font-result>`
+          `<font-item selectedTag='${this.selectedTag}' font='${JSON.stringify(
+            font
+          )}'></font-item>`
       )
       .join("");
   }
