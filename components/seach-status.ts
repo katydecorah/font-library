@@ -34,14 +34,9 @@ class SearchStatus extends HTMLElement {
       selectedVariant ||
       search;
 
-    let elm = "";
-    elm += `<div>Found ${resultsLength} fonts`;
-
-    if (hasFilters) {
-      elm += selectedTag === "need tags" ? ` that ` : ` for `;
-    }
-
-    elm += `</div>`;
+    let elm = `<div>Found ${resultsLength} fonts ${
+      hasFilters ? (selectedTag === "need tags" ? ` that ` : ` for `) : ""
+    }</div>`;
 
     if (search) {
       elm += this.filterTag("search", search);
