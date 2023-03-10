@@ -165,6 +165,7 @@ class FontResults extends HTMLElement {
       window.history.pushState({}, "", `${window.location.pathname}`);
     }
 
+    this.curPage = 1;
     this.render();
   }
 

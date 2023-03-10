@@ -44,27 +44,29 @@ class SearchStatus extends HTMLElement {
     elm += `</div>`;
 
     if (search) {
-      elm += `<div class="search-filter">search: <strong>${search}</strong> <clear-button aria-label="remove search" value="search">${iconClose}</clear-button></div>`;
+      elm += this.filterTag("search", search);
     }
-
     if (selectedSubset) {
-      elm += `<div class="search-filter">subset: <strong>${selectedSubset}</strong> <clear-button aria-label="remove subset" value="subset">${iconClose}</clear-button></div>`;
+      elm += this.filterTag("subset", selectedSubset);
     }
-
     if (selectedCategory) {
-      elm += `<div class="search-filter">category: <strong>${selectedCategory}</strong> <clear-button aria-label="remove category" value="category">${iconClose}</clear-button></div>`;
+      elm += this.filterTag("category", selectedCategory);
     }
     if (selectedVariant) {
-      elm += `<div class="search-filter">variant: <strong>${selectedVariant}</strong> <clear-button aria-label="remove variant" value="variant">${iconClose}</clear-button></div>`;
+      elm += this.filterTag("variant", selectedVariant);
     }
     if (selectedTag) {
-      elm += `<div class="search-filter">tag: <strong>${selectedTag}</strong> <clear-button aria-label="remove tag" value="tag">${iconClose}</clear-button></div>`;
+      elm += this.filterTag("tag", selectedTag);
     }
     if (hasFilters) {
       elm += `<clear-button  aria-label="remove all filters" class="btn btn-clear">Clear</clear-button>`;
     }
 
     this.innerHTML = `${elm}`;
+  }
+
+  filterTag(param: string, value: string) {
+    return `<div class="search-filter">${param}: <strong>${value}</strong> <clear-button aria-label="remove ${param}" value="${param}">${iconClose}</clear-button></div>`;
   }
 }
 
