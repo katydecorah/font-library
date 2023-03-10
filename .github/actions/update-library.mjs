@@ -57,9 +57,7 @@ async function library() {
     }
 
     if (hasFamiliesToAdd) {
-      familiesToAdd.map((font) =>
-        libraryLocal.push({ family: font, tags: [] })
-      );
+      familiesToAdd.forEach((font) => (libraryLocal[font] = []));
       const added = `➕ Added: ${familiesToAdd.join(", ")}`;
       commitMessage.push(added);
       info(added);
@@ -67,9 +65,7 @@ async function library() {
     }
 
     if (hasFamiliesToRemove) {
-      libraryLocal = libraryLocal.filter(
-        (f) => !familiesToRemove.includes(f.family)
-      );
+      familiesToRemove.forEach((font) => delete libraryLocal[font]);
       const removed = `✂️ Removed: ${familiesToRemove.join(", ")}`;
       commitMessage.push(removed);
       info(removed);
@@ -93,9 +89,7 @@ async function library() {
     if (hasFamiliesToAdd || hasFamiliesToRemove || updateLocal.commitMessage) {
       writeFileSync(
         "families.json",
-        JSON.stringify(
-          libraryLocal.sort((a, b) => (a.family > b.family ? 1 : -1))
-        ),
+        JSON.stringify(orderObject(libraryLocal)),
         "utf-8"
       );
       // run prettier CLI on families.json
@@ -106,6 +100,15 @@ async function library() {
   } catch (error) {
     setFailed(error);
   }
+}
+
+function orderObject(unordered) {
+  return Object.keys(unordered)
+    .sort()
+    .reduce((obj, key) => {
+      obj[key] = unordered[key];
+      return obj;
+    }, {});
 }
 
 function arraysEqual(a1, a2) {

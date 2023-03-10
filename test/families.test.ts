@@ -1,16 +1,18 @@
 import families from "../families.json";
 
+type Families = typeof families;
+
 describe("families.json", () => {
-  for (const [index, { family, tags }] of families.entries()) {
+  Object.keys(families).forEach((family, index) => {
+    const tags = families[family as keyof Families];
     describe(`${family}`, () => {
       test("should have `family`", () => {
         expect(family).toBeTruthy();
       });
 
       test("make sure `family` is in alphabetical order", () => {
-        const prevFamily = families[index - 1]
-          ? families[index - 1].family
-          : undefined;
+        const keys = Object.keys(families);
+        const prevFamily = keys[index - 1] || undefined;
         expect(prevFamily > family).toBeFalsy();
       });
 
@@ -44,5 +46,5 @@ describe("families.json", () => {
         }
       });
     });
-  }
+  });
 });
