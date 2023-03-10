@@ -26,7 +26,7 @@ async function library() {
       commitMessage.push(updateLocal.commitMessage);
     }
 
-    const fontsLocal = libraryLocal.map((font) => font.family);
+    const fontsLocal = Object.keys(libraryLocal);
     // get difference between remote and local libraries
     const familiesToAdd = fontsApi.filter((x) => !fontsLocal.includes(x));
     // get difference between local and remote library
@@ -121,7 +121,7 @@ function combineLibraries(remoteFonts, local) {
     index,
     { family, variants, subsets, category },
   ] of remoteFonts.entries()) {
-    const localFont = local.find((f) => f.family === family);
+    const tags = local[family] || [];
     combineLibrary.push({
       family,
       slug: family.replace(/ /g, "+"),
@@ -129,8 +129,8 @@ function combineLibraries(remoteFonts, local) {
       variants,
       subsets,
       category,
-      tags: localFont ? localFont.tags : [],
-      lineNumber: index + 2,
+      tags,
+      lineNumber: index + 1,
     });
   }
 
@@ -157,9 +157,10 @@ function getUnique(arr, key) {
 function autoAddToLocal(local) {
   let updatedLocalLibrary = false;
   // if family name has "SC" and does not have "small caps" tag, add it
-  local.forEach((font) => {
-    if (font.family.includes("SC") && !font.tags.includes("small caps")) {
-      font.tags.push("small caps");
+  Object.keys(local).forEach((font) => {
+    const tags = local[font];
+    if (font.includes("SC") && !tags.includes("small caps")) {
+      local[font].push("small caps");
       updatedLocalLibrary = true;
     }
   });
