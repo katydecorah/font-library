@@ -14,6 +14,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@actions/core": "^1.10.0",
+    "@types/jest": "^29.4.0",
     "esbuild": "^0.17.11",
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.7.0",
@@ -26,6 +27,7 @@
     "prettier": "^2.8.4",
     "stylelint": "^15.2.0",
     "stylelint-config-standard": "^30.0.1",
+    "ts-jest": "^29.0.5",
     "typescript": "^4.9.5"
   },
   "repository": {
@@ -52,5 +54,8 @@
     "families.json": [
       "prettier --write"
     ]
+  },
+  "jest": {
+    "preset": "ts-jest"
   }
 }

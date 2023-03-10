@@ -1,5 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const families = require("../families.json");
+import families from "../families.json";
 
 describe("families.json", () => {
   for (const [index, { family, tags }] of families.entries()) {
