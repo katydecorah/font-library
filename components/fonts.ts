@@ -53,9 +53,6 @@ class FontResults extends HTMLElement {
 
     // Bind functions
     this.selectTag = this.selectTag.bind(this);
-    this.nextPage = this.nextPage.bind(this);
-    this.previousPage = this.previousPage.bind(this);
-    this.clearFilter = this.clearFilter.bind(this);
 
     // Event listeners
     document.addEventListener("tag-button-selected", (e: CustomEvent) =>
@@ -64,22 +61,17 @@ class FontResults extends HTMLElement {
     this.addEventListener("tag-button-selected", (e: CustomEvent) =>
       this.selectTag(e.detail.tag)
     );
-    document.addEventListener("clear-filter", this.clearFilter);
     this.addEventListener("clear-filter", this.clearFilter);
+    this.addEventListener("next-page", this.handlePage);
+    this.addEventListener("previous-page", this.handlePage);
 
     for (const { select, param, selectVar } of filters) {
       if (select === "#select-tags" || select === "#input-search") continue;
       this.getUrlParams(param, selectVar, select);
-      document.querySelector(select).addEventListener("change", (e) => {
-        const newValue = (e.target as HTMLSelectElement).value;
-        Object.assign(this, {
-          [selectVar]: newValue,
-        });
-        this.curPage = 1;
-        this.renderStatus();
-        this.renderBody();
-        this.setUrlParams(param, newValue);
-      });
+      const filterElement = document.querySelector(select);
+      filterElement.addEventListener("change", (e) =>
+        this.handleFilter(e, selectVar, param)
+      );
     }
 
     // Tags
@@ -93,15 +85,12 @@ class FontResults extends HTMLElement {
       const target = e.target as HTMLInputElement;
       this.search = target.value.replace(/[^a-zA-Z0-9\- ]/g, "");
       this.curPage = 1;
-      this.renderStatus();
-      this.renderBody();
+      this.render();
     });
+  }
 
-    // Pagination
-    const nextButton = document.querySelector("#btn-next");
-    const prevButton = document.querySelector("#btn-prev");
-    nextButton.addEventListener("click", this.nextPage, false);
-    prevButton.addEventListener("click", this.previousPage, false);
+  connectedCallback() {
+    this.render();
   }
 
   getUrlParams(param: string, selectVar: string, selectElement: string) {
@@ -119,10 +108,6 @@ class FontResults extends HTMLElement {
       [selectVar]: newValue,
     });
     elm.value = newValue;
-
-    if (selectElement === "#select-tags") {
-      this.addActiveTag(newValue);
-    }
   }
 
   setUrlParams(param: string, value: string) {
@@ -143,18 +128,10 @@ class FontResults extends HTMLElement {
       });
       (document.querySelector(select) as HTMLSelectElement).value = "";
     }
-    // Reset tags
-    this.removeActiveTag();
     // Reset URL
     window.history.pushState({}, "", `${window.location.pathname}`);
     // Re-render
-    this.renderStatus();
-    this.renderBody();
-  }
-
-  connectedCallback() {
-    this.renderStatus();
-    this.renderBody();
+    this.render();
   }
 
   performFilter(): GeneratedData {
@@ -193,53 +170,56 @@ class FontResults extends HTMLElement {
     }
 
     this.resultsLength = filteredData.length;
-    return filteredData;
-  }
-
-  performPagination(data: GeneratedData) {
-    const totalPages = Math.ceil(this.resultsLength / this.pageSize);
-    this.querySelector(
-      "#page-count"
-    ).innerHTML = `${this.curPage} of ${totalPages}`;
-    if (totalPages === 0) {
-      // add "hide" class to #pagination
-      this.querySelector(".pagination").classList.add("hide");
-    }
-
-    this.setNextPageState();
-    this.setPrevPageState();
-
-    return data.filter((row, index) => {
+    return filteredData.filter((row, index) => {
       const start = (this.curPage - 1) * this.pageSize;
       const end = this.curPage * this.pageSize;
       if (index >= start && index < end) return true;
     });
   }
 
-  renderBody() {
-    const fontBody = this.querySelector(".families");
-    const filteredData = this.performFilter();
-    this.renderStatus();
+  render() {
+    const paginatedData = this.performFilter();
     this.cleanUpFonts();
-    const paginatedData = this.performPagination(filteredData);
+    this.renderSearchStatus();
+    this.renderPagination();
 
-    let result = "";
-    for (const font of paginatedData) {
-      result += `<font-result font='${JSON.stringify(font)}'></font-result>`;
-    }
-    fontBody.innerHTML = `${result}`;
+    this.querySelector("#families").innerHTML = paginatedData
+      .map(
+        (font) =>
+          `<font-result selectedTag='${
+            this.selectedTag
+          }' font='${JSON.stringify(font)}'></font-result>`
+      )
+      .join("");
+  }
+
+  renderSearchStatus() {
+    const {
+      selectedTag,
+      selectedCategory,
+      selectedSubset,
+      selectedVariant,
+      resultsLength,
+      search,
+    } = this;
+    this.querySelector(
+      "#search-status"
+    ).innerHTML = `<search-status class="search-status" resultsLength="${resultsLength}" selectedCategory="${selectedCategory}" selectedTag="${selectedTag}" selectedSubset="${selectedSubset}" selectedVariant="${selectedVariant}" search="${search}"></search-status>`;
+  }
+
+  renderPagination() {
+    const { resultsLength, pageSize, curPage } = this;
+    this.querySelector(
+      "#pagination"
+    ).innerHTML = `<pagination-buttons resultsLength="${resultsLength}" pageSize="${pageSize}" currentPage="${curPage}"></pagination-buttons>`;
   }
 
   selectTag(tag: string) {
     this.selectedTag = tag;
     this.curPage = 1;
-    this.renderBody();
+    this.render();
     // set URL query string with tag
     this.setUrlParams("tag", tag);
-    // remove tag from .family-tag.active
-    this.removeActiveTag();
-    // add active tage
-    this.addActiveTag(tag);
     this.scrollToContent();
     (document.querySelector("#select-tags") as HTMLSelectElement).value = tag;
   }
@@ -249,66 +229,33 @@ class FontResults extends HTMLElement {
     contentElement.scrollIntoView();
   }
 
-  removeActiveTag() {
-    const prevActiveTag = document.querySelectorAll(".family-tag.active");
-    prevActiveTag.forEach((activeTagButton) =>
-      activeTagButton.classList.remove("active")
-    );
-  }
-
-  addActiveTag(newTag: string) {
-    const nextActiveTags = document.querySelectorAll(
-      `.tag-${newTag.replace(/ /g, "-")}`
-    );
-    if (nextActiveTags.length === 0) return;
-    nextActiveTags.forEach((tagButton) => tagButton.classList.add("active"));
-  }
-
-  nextPage() {
-    this.cleanUpFonts();
-    if (this.curPage * this.pageSize < this.resultsLength) this.curPage++;
-    this.setNextPageState();
-    this.renderBody();
+  handlePage({ type }: CustomEvent) {
+    if (
+      type === "next-page" &&
+      this.curPage * this.pageSize < this.resultsLength
+    ) {
+      this.curPage++;
+    }
+    if (type === "previous-page" && this.curPage > 1) {
+      this.curPage--;
+    }
+    this.render();
     this.scrollToContent();
   }
 
-  setNextPageState() {
-    const elm = this.querySelector("#btn-next") as HTMLButtonElement;
-    if (this.curPage * this.pageSize >= this.resultsLength) {
-      elm.disabled = true;
-    } else {
-      elm.disabled = false;
-    }
-  }
-
-  previousPage() {
-    this.cleanUpFonts();
-    if (this.curPage > 1) this.curPage--;
-    this.setPrevPageState();
-    this.renderBody();
-    this.scrollToContent();
-  }
-
-  setPrevPageState() {
-    const elm = this.querySelector("#btn-prev") as HTMLButtonElement;
-    if (this.curPage === 1) {
-      elm.disabled = true;
-    } else {
-      elm.disabled = false;
-    }
-  }
-
-  renderStatus() {
-    const status = this.querySelector("#search-status");
-    status.innerHTML = `<search-status class="search-status" resultsLength="${this.resultsLength}" selectedCategory="${this.selectedCategory}" selectedTag="${this.selectedTag}" selectedSubset="${this.selectedSubset}" selectedVariant="${this.selectedVariant}" search="${this.search}" resultsLength="${this.resultsLength}"></search-status>`;
+  handleFilter({ target }: Event, selectVar: string, param: string) {
+    const newValue = (target as HTMLSelectElement).value;
+    Object.assign(this, {
+      [selectVar]: newValue,
+    });
+    this.curPage = 1;
+    this.render();
+    this.setUrlParams(param, newValue);
   }
 
   cleanUpFonts() {
-    // remove data-font element from document head
     const fonts = document.querySelectorAll("link[data-family]");
-    fonts.forEach((font) => {
-      document.head.removeChild(font);
-    });
+    fonts.forEach((font) => document.head.removeChild(font));
   }
 }
 

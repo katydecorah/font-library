@@ -4,6 +4,7 @@ class Tag extends HTMLElement {
   }
   connectedCallback() {
     const tag = this.getAttribute("value");
+    const selectedTag = this.getAttribute("selectedTag");
 
     this.addEventListener("click", () => {
       this.dispatchEvent(
@@ -19,6 +20,11 @@ class Tag extends HTMLElement {
 
     // eslint-disable-next-line wc/no-self-class
     this.classList.add("family-tag", `tag-${tag.replace(/ /g, "-")}`);
+
+    if (selectedTag === tag) {
+      // eslint-disable-next-line wc/no-self-class
+      this.classList.add("active");
+    }
   }
 }
 

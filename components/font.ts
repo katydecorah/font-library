@@ -19,6 +19,7 @@ class FontResult extends HTMLElement {
 
   connectedCallback() {
     const fontString = this.getAttribute("font");
+    const selectedTag = this.getAttribute("selectedTag");
     const font = fontString ? JSON.parse(fontString) : {};
     const { family, category, variants, subsets, lineNumber, tags, slug, id } =
       font;
@@ -52,7 +53,10 @@ class FontResult extends HTMLElement {
     </div>
     <div class="family-tags">
       <div class="family-tags-container">${tags
-        .map((tag: string) => `<tag-button value="${tag}">${tag}</tag-button>`)
+        .map(
+          (tag: string) =>
+            `<tag-button selectedTag="${selectedTag}" value="${tag}">${tag}</tag-button>`
+        )
         .join("")}</div>
       <div class="family-meta-links">
         <a
