@@ -134,23 +134,46 @@ class FontResults extends HTMLElement {
     );
   }
 
-  clearFilter() {
-    // Reset selects
-    for (const { select, selectVar } of filters) {
+  clearFilter({ detail: { filter } }: CustomEvent<{ filter: string }>) {
+    if (filter) {
+      const { select, selectVar } = filters.find((f) => f.param === filter);
       Object.assign(this, {
         [selectVar]: "",
       });
       (document.querySelector(select) as HTMLSelectElement).value = "";
+      const urlParams = new URLSearchParams(window.location.search);
+      urlParams.delete(filter);
+      window.history.replaceState(
+        {},
+        "",
+        `${window.location.pathname}?${urlParams.toString()}`
+      );
+      if (filter === "tag") {
+        this.resetRadioTags();
+      }
+    } else {
+      // Reset filters
+      for (const { select, selectVar } of filters) {
+        Object.assign(this, {
+          [selectVar]: "",
+        });
+        (document.querySelector(select) as HTMLSelectElement).value = "";
+      }
+      // Reset radio buttons
+      this.resetRadioTags();
+      // Reset URL
+      window.history.pushState({}, "", `${window.location.pathname}`);
     }
+
+    this.render();
+  }
+
+  resetRadioTags() {
     // Reset radio buttons
     const radios = document.querySelectorAll("[name='tag']");
     radios.forEach((radio) => {
       (radio as HTMLInputElement).checked = false;
     });
-    // Reset URL
-    window.history.pushState({}, "", `${window.location.pathname}`);
-    // Re-render
-    this.render();
   }
 
   performFilter(): GeneratedData {

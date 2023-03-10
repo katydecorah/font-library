@@ -8,6 +8,9 @@ class ClearButton extends HTMLElement {
         new CustomEvent("clear-filter", {
           bubbles: true,
           composed: true,
+          detail: {
+            filter: this.getAttribute("value"),
+          },
         })
       );
     });
