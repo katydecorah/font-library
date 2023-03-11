@@ -3,6 +3,8 @@ class ClearButton extends HTMLElement {
     super();
   }
   connectedCallback() {
+    // add aria-role
+    this.setAttribute("role", "button");
     this.addEventListener("click", () => {
       this.dispatchEvent(
         new CustomEvent("clear-filter", {
