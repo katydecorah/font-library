@@ -1,3 +1,20 @@
+const iconClose = `<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+    role="img"
+  >
+    <line x1="18" y1="6" x2="6" y2="18"></line>
+    <line x1="6" y1="6" x2="18" y2="18"></line>
+  </svg>`;
+
 class SearchStatus extends HTMLElement {
   constructor() {
     super();
@@ -18,37 +35,34 @@ class SearchStatus extends HTMLElement {
       selectedVariant ||
       search;
 
-    let elm = "";
-    elm += `<div>Found ${resultsLength} fonts`;
-
-    if (hasFilters) {
-      elm += selectedTag === "need tags" ? ` that ` : ` for `;
-    }
-
-    elm += `</div>`;
+    let elm = `<div>Found ${resultsLength} fonts ${
+      hasFilters ? (selectedTag === "need tags" ? ` that ` : ` for `) : ""
+    }</div>`;
 
     if (search) {
-      elm += `<div class="search-filter">search: <strong>${search}</strong></div>`;
+      elm += this.filterTag("search", search);
     }
-
     if (selectedSubset) {
-      elm += `<div class="search-filter">subset: <strong>${selectedSubset}</strong></div>`;
+      elm += this.filterTag("subset", selectedSubset);
     }
-
     if (selectedCategory) {
-      elm += `<div class="search-filter">category: <strong>${selectedCategory}</strong></div>`;
+      elm += this.filterTag("category", selectedCategory);
     }
     if (selectedVariant) {
-      elm += `<div class="search-filter">variant: <strong>${selectedVariant}</strong></div>`;
+      elm += this.filterTag("variant", selectedVariant);
     }
     if (selectedTag) {
-      elm += `<div class="search-filter">tag: <strong>${selectedTag}</strong></div>`;
+      elm += this.filterTag("tag", selectedTag);
     }
     if (hasFilters) {
-      elm += `<clear-button class="btn btn-clear">Clear</clear-butto>`;
+      elm += `<clear-button aria-label="remove all filters" class="btn btn-clear">Clear</clear-button>`;
     }
 
     this.innerHTML = `${elm}`;
+  }
+
+  filterTag(param: string, value: string) {
+    return `<div class="search-filter">${param}: <strong>${value}</strong><clear-button aria-label="remove ${param}" value="${param}">${iconClose}</clear-button></div>`;
   }
 }
 

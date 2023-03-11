@@ -151,10 +151,6 @@ header {
   align-items: center;
 }
 
-.family-tag svg {
-  height: 1em;
-}
-
 .family-tag.active,
 .family-tag:has(:checked),
 .family-tag:hover {
@@ -262,6 +258,23 @@ input[type="text"] {
   padding: 0 0.5em;
   border-radius: 3px;
   border: 1px solid #e9e6d5;
+  display: flex;
+}
+
+clear-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--accent);
+}
+
+clear-button:hover {
+  color: var(--accent-dark);
+}
+
+clear-button svg {
+  height: 1em;
+  width: 1em;
 }
 
 .search-status .btn-clear {

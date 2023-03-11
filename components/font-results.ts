@@ -134,8 +134,17 @@ class FontResults extends HTMLElement {
     );
   }
 
-  clearFilter() {
-    // Reset selects
+  clearFilter({ detail: { filter } }: CustomEvent<{ filter: string }>) {
+    if (filter) {
+      this.removeSingleFilter(filter);
+    } else {
+      this.removeAllFilters();
+    }
+    this.curPage = 1;
+    this.render();
+  }
+
+  removeAllFilters() {
     for (const { select, selectVar } of filters) {
       Object.assign(this, {
         [selectVar]: "",
@@ -143,14 +152,35 @@ class FontResults extends HTMLElement {
       (document.querySelector(select) as HTMLSelectElement).value = "";
     }
     // Reset radio buttons
+    this.resetRadioTags();
+    // Reset URL
+    window.history.pushState({}, "", `${window.location.pathname}`);
+  }
+
+  removeSingleFilter(filter: string) {
+    const { select, selectVar } = filters.find((f) => f.param === filter);
+    Object.assign(this, {
+      [selectVar]: "",
+    });
+    (document.querySelector(select) as HTMLSelectElement).value = "";
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.delete(filter);
+    window.history.replaceState(
+      {},
+      "",
+      `${window.location.pathname}?${urlParams.toString()}`
+    );
+    if (filter === "tag") {
+      this.resetRadioTags();
+    }
+  }
+
+  resetRadioTags() {
+    // Reset radio buttons
     const radios = document.querySelectorAll("[name='tag']");
     radios.forEach((radio) => {
       (radio as HTMLInputElement).checked = false;
     });
-    // Reset URL
-    window.history.pushState({}, "", `${window.location.pathname}`);
-    // Re-render
-    this.render();
   }
 
   performFilter(): GeneratedData {
