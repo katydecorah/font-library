@@ -136,37 +136,43 @@ class FontResults extends HTMLElement {
 
   clearFilter({ detail: { filter } }: CustomEvent<{ filter: string }>) {
     if (filter) {
-      const { select, selectVar } = filters.find((f) => f.param === filter);
+      this.removeSingleFilter(filter);
+    } else {
+      this.removeAllFilters();
+    }
+    this.curPage = 1;
+    this.render();
+  }
+
+  removeAllFilters() {
+    for (const { select, selectVar } of filters) {
       Object.assign(this, {
         [selectVar]: "",
       });
       (document.querySelector(select) as HTMLSelectElement).value = "";
-      const urlParams = new URLSearchParams(window.location.search);
-      urlParams.delete(filter);
-      window.history.replaceState(
-        {},
-        "",
-        `${window.location.pathname}?${urlParams.toString()}`
-      );
-      if (filter === "tag") {
-        this.resetRadioTags();
-      }
-    } else {
-      // Reset filters
-      for (const { select, selectVar } of filters) {
-        Object.assign(this, {
-          [selectVar]: "",
-        });
-        (document.querySelector(select) as HTMLSelectElement).value = "";
-      }
-      // Reset radio buttons
-      this.resetRadioTags();
-      // Reset URL
-      window.history.pushState({}, "", `${window.location.pathname}`);
     }
+    // Reset radio buttons
+    this.resetRadioTags();
+    // Reset URL
+    window.history.pushState({}, "", `${window.location.pathname}`);
+  }
 
-    this.curPage = 1;
-    this.render();
+  removeSingleFilter(filter: string) {
+    const { select, selectVar } = filters.find((f) => f.param === filter);
+    Object.assign(this, {
+      [selectVar]: "",
+    });
+    (document.querySelector(select) as HTMLSelectElement).value = "";
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.delete(filter);
+    window.history.replaceState(
+      {},
+      "",
+      `${window.location.pathname}?${urlParams.toString()}`
+    );
+    if (filter === "tag") {
+      this.resetRadioTags();
+    }
   }
 
   resetRadioTags() {
