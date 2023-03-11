@@ -2636,7 +2636,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["gradient"],
     "lineNumber": 214
   },
   {
@@ -10192,7 +10192,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic-ext", "latin", "latin-ext", "math", "vietnamese"],
     "category": "display",
-    "tags": ["game", "square"],
+    "tags": ["game", "square", "isometric", "gradient"],
     "lineNumber": 824
   },
   {
