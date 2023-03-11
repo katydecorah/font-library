@@ -54,14 +54,14 @@ class SearchStatus extends HTMLElement {
       elm += this.filterTag("tag", selectedTag);
     }
     if (hasFilters) {
-      elm += `<clear-button  aria-label="remove all filters" class="btn btn-clear">Clear</clear-button>`;
+      elm += `<clear-button aria-label="remove all filters" class="btn btn-clear">Clear</clear-button>`;
     }
 
     this.innerHTML = `${elm}`;
   }
 
   filterTag(param: string, value: string) {
-    return `<div class="search-filter">${param}: <strong>${value}</strong> <clear-button aria-label="remove ${param}" value="${param}">${iconClose}</clear-button></div>`;
+    return `<div class="search-filter">${param}: <strong>${value}</strong><clear-button aria-label="remove ${param}" value="${param}">${iconClose}</clear-button></div>`;
   }
 }
 
