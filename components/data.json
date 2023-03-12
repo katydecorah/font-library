@@ -2636,7 +2636,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["gradient"],
+    "tags": ["gradient", "color"],
     "lineNumber": 214
   },
   {
@@ -2735,7 +2735,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700", "800", "900"],
     "subsets": ["arabic", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["color"],
     "lineNumber": 223
   },
   {
@@ -10192,7 +10192,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic-ext", "latin", "latin-ext", "math", "vietnamese"],
     "category": "display",
-    "tags": ["game", "square", "isometric", "gradient"],
+    "tags": ["game", "square", "isometric", "gradient", "color"],
     "lineNumber": 824
   },
   {
@@ -15341,7 +15341,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "hebrew", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["outline"],
     "lineNumber": 1231
   },
   {
