@@ -15,6 +15,7 @@
     "art deco",
     "art nouveau",
     "bamboo",
+    "barcode",
     "blackletter",
     "block",
     "brush",
@@ -137,7 +138,8 @@
     "vintage",
     "western",
     "whimsical",
-    "wide"
+    "wide",
+    "wireframe"
   ],
   "categories": ["display", "handwriting", "monospace", "sans-serif", "serif"],
   "subsets": [

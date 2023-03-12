@@ -1711,7 +1711,7 @@
     "variants": ["regular", "italic", "700", "700italic"],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
     "category": "display",
-    "tags": ["rounded", "friendly"],
+    "tags": ["rounded", "friendly", "wireframe"],
     "lineNumber": 142
   },
   {
@@ -5139,7 +5139,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["wireframe"],
     "lineNumber": 417
   },
   {
@@ -5149,7 +5149,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["wireframe"],
     "lineNumber": 418
   },
   {
@@ -5159,7 +5159,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["wireframe"],
     "lineNumber": 419
   },
   {
@@ -8396,7 +8396,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "display",
-    "tags": [],
+    "tags": ["barcode"],
     "lineNumber": 672
   },
   {
@@ -8406,7 +8406,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "display",
-    "tags": [],
+    "tags": ["barcode"],
     "lineNumber": 673
   },
   {
@@ -8416,7 +8416,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "display",
-    "tags": [],
+    "tags": ["barcode"],
     "lineNumber": 674
   },
   {
@@ -8426,7 +8426,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "display",
-    "tags": [],
+    "tags": ["barcode"],
     "lineNumber": 675
   },
   {
@@ -8436,7 +8436,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "display",
-    "tags": [],
+    "tags": ["barcode"],
     "lineNumber": 676
   },
   {
@@ -8446,7 +8446,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "display",
-    "tags": [],
+    "tags": ["barcode"],
     "lineNumber": 677
   },
   {
@@ -8456,7 +8456,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "display",
-    "tags": [],
+    "tags": ["barcode"],
     "lineNumber": 678
   },
   {
@@ -14731,7 +14731,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["wireframe"],
     "lineNumber": 1184
   },
   {
@@ -14741,7 +14741,7 @@
     "variants": ["300", "regular", "700"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["wireframe"],
     "lineNumber": 1185
   },
   {
