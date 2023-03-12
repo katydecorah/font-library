@@ -48,7 +48,7 @@ class FontResults extends HTMLElement {
     this.selectedVariant = "";
     this.search = "";
     this.resultsLength;
-    this.pageSize = 5;
+    this.pageSize = 10;
     this.curPage = 1;
 
     // Event listeners
