@@ -1,8 +1,10 @@
 import sampleSubsets from "./samples.json";
 import rtlSubsets from "./rtl.json";
+import swaps from "./swaps.json";
 
 export type SampleSubsets = typeof sampleSubsets;
 export type RtlSubsets = typeof rtlSubsets;
+export type Swaps = typeof swaps;
 
 class FontItem extends HTMLElement {
   slug: string;
@@ -181,12 +183,8 @@ class FontItem extends HTMLElement {
       document.querySelector("#select-subsets") as HTMLSelectElement
     ).value;
 
-    // if family starts with materials icons
-    if (
-      family.startsWith("Material Icons") ||
-      family.startsWith("Material Symbols")
-    ) {
-      return "favorite add delete settings search";
+    if (family in swaps) {
+      return swaps[family as keyof Swaps];
     }
     if (
       (!subsets.includes("latin") || family.startsWith("Noto")) &&
