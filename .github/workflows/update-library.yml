@@ -48,6 +48,6 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git add -A && git commit -m "Review auto-tag" -m "${{ env.LibraryCommitMessage }}"
           git push --set-upstream origin review-tags-${{ github.run_id }}
-          gh pr create -B main -H "review-tags-${{ github.run_id }}" --fill
+          gh pr create -B gh-pages -H "review-tags-${{ github.run_id }}" --fill
         env:
           GH_TOKEN: ${{ github.token }}
