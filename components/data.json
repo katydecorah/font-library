@@ -3591,7 +3591,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": ["celtic"],
+    "tags": ["celtic", "unicase"],
     "lineNumber": 297
   },
   {
@@ -3747,7 +3747,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "display",
-    "tags": ["condensed"],
+    "tags": ["condensed", "unicase"],
     "lineNumber": 310
   },
   {
@@ -3963,7 +3963,7 @@
     "variants": ["regular", "700"],
     "subsets": ["latin"],
     "category": "handwriting",
-    "tags": ["round", "comic"],
+    "tags": ["round", "comic", "unicase"],
     "lineNumber": 330
   },
   {
@@ -17107,7 +17107,7 @@
     "variants": ["regular", "700"],
     "subsets": ["latin"],
     "category": "sans-serif",
-    "tags": ["futuristic", "caps"],
+    "tags": ["futuristic", "unicase"],
     "lineNumber": 1373
   },
   {
@@ -17813,7 +17813,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["futuristic", "headlines"],
+    "tags": ["futuristic", "headlines", "unicase"],
     "lineNumber": 1428
   },
   {
