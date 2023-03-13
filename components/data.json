@@ -1818,7 +1818,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["condensed"],
+    "tags": ["semi-condensed"],
     "lineNumber": 147
   },
   {
@@ -4459,7 +4459,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["condensed"],
+    "tags": ["semi-condensed"],
     "lineNumber": 372
   },
   {
@@ -15616,7 +15616,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["condensed"],
+    "tags": ["semi-condensed"],
     "lineNumber": 1252
   },
   {
@@ -16421,7 +16421,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "greek", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["semi-condensed"],
     "lineNumber": 1320
   },
   {

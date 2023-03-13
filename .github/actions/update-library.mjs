@@ -157,20 +157,33 @@ function getUnique(arr, key) {
 }
 
 function autoAddToLocal(local) {
-  let updatedLocalLibrary = false;
+  let updatedLocalLibrary = undefined;
   // if family name has "SC" and does not have "small caps" tag, add it
   Object.keys(local).forEach((font) => {
     const tags = local[font];
     if (font.includes("SC") && !tags.includes("small caps")) {
       local[font].push("small caps");
-      updatedLocalLibrary = true;
+      updatedLocalLibrary = "Updated local library with small caps tag";
+    }
+    if (
+      font.toLowerCase().includes("semi condensed") &&
+      !tags.includes("semi-condensed")
+    ) {
+      local[font].push("semi-condensed");
+      updatedLocalLibrary = "Updated local library with semi-condensed tag";
+    }
+    if (
+      font.toLowerCase().includes("condensed") &&
+      !font.toLowerCase().includes("semi condensed") &&
+      !tags.includes("condensed")
+    ) {
+      local[font].push("condensed");
+      updatedLocalLibrary = "Updated local library with condensed tag";
     }
   });
 
   return {
     local,
-    commitMessage: updatedLocalLibrary
-      ? "Updated local library with small caps tag"
-      : undefined,
+    commitMessage: updatedLocalLibrary,
   };
 }
