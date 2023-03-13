@@ -166,12 +166,12 @@ function autoAddToLocal(local) {
       commitMessage = "Updated local library with small caps tag";
     }
     const autoTags = ["condensed", "expanded", "round"];
-    autoTags.forEach((autoTag) => {
+    for (const autoTag of autoTags) {
       if (font.toLowerCase().includes(autoTag) && !tags.includes(autoTag)) {
         local[font].push(autoTag);
         commitMessage = `Updated local library with ${autoTag} tag`;
       }
-    });
+    }
   });
 
   return {
