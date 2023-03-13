@@ -165,29 +165,13 @@ function autoAddToLocal(local) {
       local[font].push("small caps");
       commitMessage = "Updated local library with small caps tag";
     }
-    if (
-      font.toLowerCase().includes("semi condensed") &&
-      !tags.includes("semi-condensed")
-    ) {
-      local[font].push("semi-condensed");
-      commitMessage = "Updated local library with semi-condensed tag";
-    }
-    if (
-      font.toLowerCase().includes("condensed") &&
-      !font.toLowerCase().includes("semi condensed") &&
-      !tags.includes("condensed")
-    ) {
-      local[font].push("condensed");
-      commitMessage = "Updated local library with condensed tag";
-    }
-    if (font.toLowerCase().includes("expanded") && !tags.includes("expanded")) {
-      local[font].push("expanded");
-      commitMessage = "Updated local library with expanded tag";
-    }
-    if (font.toLowerCase().includes("round") && !tags.includes("rounded")) {
-      local[font].push("rounded");
-      commitMessage = "Updated local library with rounded tag";
-    }
+    const autoTags = ["condensed", "expanded", "round"];
+    autoTags.forEach((autoTag) => {
+      if (font.toLowerCase().includes(autoTag) && !tags.includes(autoTag)) {
+        local[font].push(autoTag);
+        commitMessage = `Updated local library with ${autoTag} tag`;
+      }
+    });
   });
 
   return {
