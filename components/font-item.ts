@@ -14,6 +14,9 @@ class FontItem extends HTMLElement {
   subsets: string[];
   lineNumber: string;
   tags: string[];
+  selectedSubset: string;
+  subset: string;
+  selectedVariant: string;
 
   constructor() {
     super();
@@ -22,6 +25,12 @@ class FontItem extends HTMLElement {
   connectedCallback() {
     const fontString = this.getAttribute("font");
     const selectedTag = this.getAttribute("selectedTag");
+    const selectedSubset = this.getAttribute("selectedSubset");
+    this.selectedSubset = selectedSubset;
+    const selectedVariant = this.getAttribute("selectedVariant");
+    this.selectedVariant = selectedVariant;
+    this.subset = this.selectedSubset;
+
     const font = fontString ? JSON.parse(fontString) : {};
     const { family, category, variants, subsets, lineNumber, tags, slug, id } =
       font;
@@ -29,11 +38,11 @@ class FontItem extends HTMLElement {
 
     this.addFontToHead({ previewName, ...font });
 
+    const familyStyle = this.familyStyle({ previewName, ...font });
+
     this.innerHTML = `<div id="family-${id}" class="family">
     <div class="family-link">
-      <div id="family-name" class="family-title ${id}" style="${this.familyStyle(
-      { previewName, ...font }
-    )}">
+      <div id="family-name" class="family-title ${id}" style="${familyStyle}">
         ${previewName}
       </div>
       <div class="family-meta-container">
@@ -81,63 +90,47 @@ class FontItem extends HTMLElement {
   addFontToHead({
     previewName,
     family,
-    variants,
     slug,
   }: {
     previewName: string;
     family: string;
-    variants: string[];
     slug: string;
   }): void {
     const googleFont = document.createElement("link");
     googleFont.href = `https://fonts.googleapis.com/css2?family=${this.fontCall(
-      { previewName, variants, slug }
+      { previewName, slug }
     )}`;
     googleFont.rel = "stylesheet";
     googleFont.setAttribute("data-family", family);
     document.head.appendChild(googleFont);
   }
 
-  // Refactor this function
   fontCall({
     previewName,
-    variants,
     slug,
   }: {
     previewName: string;
-    variants: string[];
     slug: string;
   }): string {
-    //get font name
     let font = slug;
 
-    // get selectedVariants
-    const selectedVariant = (
-      document.querySelector("#select-variants") as HTMLSelectElement
-    ).value;
+    const hasItalic = this.selectedVariant.includes("italic");
+    const variantNumber = this.selectedVariant.match(/\d+/g); // get number form selectedVariant
 
-    if (selectedVariant && selectedVariant !== "regular") {
+    if (this.selectedVariant && this.selectedVariant !== "regular") {
       const variants = [];
-      const hasItalic = selectedVariant.includes("italic");
       if (hasItalic) {
         variants.push("ital");
       }
-      // get number form selectedVariant
-      const variantNumber = selectedVariant.match(/\d+/g);
       if (variantNumber && variantNumber[0]) {
         variants.push(`wght@${hasItalic ? "1," : ""}${variantNumber[0]}`);
       }
-      if (selectedVariant === "italic") {
+      if (this.selectedVariant === "italic") {
         variants.push(`wght@1,400`);
       }
       font += `:${variants.join(",")}`;
-    } else {
-      if (!variants.includes("regular")) {
-        font += `:wght@${variants[0]}`;
-      }
     }
 
-    // otherwise get this text for the font
     font += `&text=${encodeURIComponent(previewName)}`;
 
     font += `&display=swap`;
@@ -147,7 +140,6 @@ class FontItem extends HTMLElement {
 
   familyStyle({
     previewName,
-    subsets,
     family,
   }: {
     previewName: string;
@@ -155,20 +147,12 @@ class FontItem extends HTMLElement {
     family: string;
   }): string {
     let style = `font-family: '${family}';`;
-    if (
-      subsets.filter((f) => rtlSubsets.includes(f)).length > 0 &&
-      family !== previewName
-    ) {
+    if (rtlSubsets.includes(this.subset) && family !== previewName) {
       style += "direction: rtl;";
     }
-    // add italic style
-    const selectedVariant = (
-      document.querySelector("#select-variants") as HTMLSelectElement
-    ).value;
-    if (selectedVariant.includes("italic")) {
+    if (this.selectedVariant.includes("italic")) {
       style += "font-style: italic;";
     }
-
     return style;
   }
 
@@ -179,22 +163,20 @@ class FontItem extends HTMLElement {
     family: string;
     subsets: string[];
   }): string {
-    const selectedSubset = (
-      document.querySelector("#select-subsets") as HTMLSelectElement
-    ).value;
+    if (this.selectedSubset && this.selectedSubset in sampleSubsets) {
+      return sampleSubsets[this.selectedSubset as keyof SampleSubsets];
+    }
 
     if (family in swaps) {
       return swaps[family as keyof Swaps];
     }
+
     if (
       (!subsets.includes("latin") || family.startsWith("Noto")) &&
-      (selectedSubset in sampleSubsets ||
-        sampleSubsets[subsets[0] as keyof SampleSubsets])
+      sampleSubsets[subsets[0] as keyof SampleSubsets]
     ) {
-      return (
-        sampleSubsets[selectedSubset as keyof SampleSubsets] ||
-        sampleSubsets[subsets[0] as keyof SampleSubsets]
-      );
+      this.subset = subsets[0];
+      return sampleSubsets[subsets[0] as keyof SampleSubsets];
     }
     if (
       !subsets.includes("latin") &&
