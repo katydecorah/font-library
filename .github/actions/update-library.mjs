@@ -180,6 +180,10 @@ function autoAddToLocal(local) {
       local[font].push("condensed");
       commitMessage = "Updated local library with condensed tag";
     }
+    if (font.toLowerCase().includes("expanded") && !tags.includes("expanded")) {
+      local[font].push("expanded");
+      commitMessage = "Updated local library with expanded tag";
+    }
     if (font.toLowerCase().includes("round") && !tags.includes("rounded")) {
       local[font].push("rounded");
       commitMessage = "Updated local library with rounded tag";
