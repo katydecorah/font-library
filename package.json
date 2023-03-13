@@ -21,7 +21,7 @@
     "eslint-plugin-jest": "^27.2.1",
     "eslint-plugin-wc": "^1.4.0",
     "husky": "^8.0.3",
-    "jest": "^29.4.3",
+    "jest": "^29.5.0",
     "lint-staged": "^13.1.2",
     "node-fetch": "^3.3.1",
     "prettier": "^2.8.4",
