@@ -3690,7 +3690,7 @@
     "variants": ["regular", "italic"],
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
-    "tags": ["slab", "low contrast"],
+    "tags": ["slab", "low contrast", "rounded"],
     "lineNumber": 306
   },
   {
@@ -5159,7 +5159,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["wireframe"],
+    "tags": ["wireframe", "rounded"],
     "lineNumber": 419
   },
   {
@@ -8945,7 +8945,7 @@
       "vietnamese"
     ],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["rounded"],
     "lineNumber": 715
   },
   {
@@ -9338,7 +9338,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700"],
     "subsets": ["latin"],
     "category": "monospace",
-    "tags": [],
+    "tags": ["rounded"],
     "lineNumber": 751
   },
   {
@@ -16115,7 +16115,7 @@
     "variants": ["regular", "700"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": ["retro", "techno", "game"],
+    "tags": ["retro", "techno", "game", "pixel"],
     "lineNumber": 1298
   },
   {
