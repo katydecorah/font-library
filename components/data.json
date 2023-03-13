@@ -9298,7 +9298,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "monospace",
-    "tags": [],
+    "tags": ["outline"],
     "lineNumber": 747
   },
   {
@@ -9328,7 +9328,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700"],
     "subsets": ["latin"],
     "category": "monospace",
-    "tags": [],
+    "tags": ["outline"],
     "lineNumber": 750
   },
   {
