@@ -174,6 +174,10 @@ function autoAddToLocal(local) {
     }
   });
 
+  if (commitMessage) {
+    exportVariable("AutoTag", true);
+  }
+
   return {
     local,
     commitMessage,
