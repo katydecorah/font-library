@@ -2,8 +2,7 @@ name: Test
 
 on:
   push:
-    paths-ignore:
-      - "families.json"
+    - "families.json"
 
 jobs:
   build:
@@ -12,7 +11,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
       - run: npm ci
-      - run: npm run build
-      - run: npm test
+      - run: npm test -- families
         env:
           CI: true
