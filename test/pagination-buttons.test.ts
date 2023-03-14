@@ -64,4 +64,23 @@ describe("pagination-buttons", () => {
       </div>"
     `);
   });
+
+  it("fires a custom event when clicked", () => {
+    const resultsLength = 1200;
+    const pageSize = 10;
+    const curPage = 1;
+    document.body.innerHTML = `<pagination-buttons resultsLength="${resultsLength}" pageSize="${pageSize}" currentPage="${curPage}"></pagination-buttons>`;
+    const paginationButtons = document.querySelector(
+      "pagination-buttons #btn-next"
+    );
+    const clickEvent = new MouseEvent("click", {
+      bubbles: true,
+      cancelable: true,
+      view: window,
+    });
+    const clickHandler = jest.fn();
+    paginationButtons.addEventListener("click", clickHandler);
+    paginationButtons.dispatchEvent(clickEvent);
+    expect(clickHandler).toHaveBeenCalled();
+  });
 });

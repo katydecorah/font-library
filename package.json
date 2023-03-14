@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "eslint . && stylelint \"**/*.css\" && prettier --check families.json",
     "pretest": "npm run lint",
-    "test": "jest",
+    "test": "jest --coverage",
     "prepare": "husky install",
     "start": "ELEVENTY_ENV=development npx @11ty/eleventy --serve",
     "update-library": "node .github/actions/update-library.mjs",
@@ -14,6 +14,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@actions/core": "^1.10.0",
+    "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.4.0",
     "esbuild": "^0.17.11",
     "eslint": "^8.36.0",
