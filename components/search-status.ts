@@ -18,30 +18,33 @@ class SearchStatus extends HTMLElement {
       selectedVariant ||
       search;
 
-    let elm = `<div>Found ${resultsLength} fonts ${
-      hasFilters ? (selectedTag === "need tags" ? ` that ` : ` for `) : ""
-    }</div>`;
+    const elm = [
+      `<div>Found ${resultsLength} fonts ${
+        hasFilters ? (selectedTag === "need tags" ? ` that ` : ` for `) : ""
+      }</div>`,
+    ];
 
-    if (search) {
-      elm += this.filterTag("search", search);
+    const filterTags = {
+      category: selectedCategory,
+      tag: selectedTag,
+      subset: selectedSubset,
+      variant: selectedVariant,
+      search: search,
+    };
+
+    for (const [key, value] of Object.entries(filterTags)) {
+      if (value) {
+        elm.push(this.filterTag(key, value));
+      }
     }
-    if (selectedSubset) {
-      elm += this.filterTag("subset", selectedSubset);
-    }
-    if (selectedCategory) {
-      elm += this.filterTag("category", selectedCategory);
-    }
-    if (selectedVariant) {
-      elm += this.filterTag("variant", selectedVariant);
-    }
-    if (selectedTag) {
-      elm += this.filterTag("tag", selectedTag);
-    }
+
     if (hasFilters) {
-      elm += `<clear-button aria-label="remove all filters" class="btn btn-clear">Clear</clear-button>`;
+      elm.push(
+        `<clear-button aria-label="remove all filters" class="btn btn-clear">Clear</clear-button>`
+      );
     }
 
-    this.innerHTML = `${elm}`;
+    this.innerHTML = `${elm.join("\n")}`;
   }
 
   filterTag(param: string, value: string) {

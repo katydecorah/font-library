@@ -14,10 +14,10 @@ class PaginationButtons extends HTMLElement {
     const prevPageDisabledState = currentPage === 1 ? "disabled" : "";
 
     this.innerHTML = `<div class="pagination ${totalPages < 2 ? "hide" : ""}">
-      <button data-event="previous-page" class="btn" id="btn-prev" ${prevPageDisabledState}>Previous page</button>
-      <div class="page-count" id="page-count">${currentPage} of ${totalPages}</div>
-      <button data-event="next-page" class="btn" id="btn-next" ${nextPageDisabledState}>Next page</button>
-    </div>`;
+  <button data-event="previous-page" class="btn" id="btn-prev" ${prevPageDisabledState}>Previous page</button>
+  <div class="page-count" id="page-count">${currentPage} of ${totalPages}</div>
+  <button data-event="next-page" class="btn" id="btn-next" ${nextPageDisabledState}>Next page</button>
+</div>`;
 
     this.querySelectorAll("[data-event]").forEach((button) =>
       button.addEventListener("click", this.handlePage)
