@@ -241,7 +241,7 @@ class FontResults extends HTMLElement {
             this.selectedTag
           }' font='${JSON.stringify(font)}'></font-item>`
       )
-      .join("");
+      .join("\n");
   }
 
   renderSearchStatus() {
