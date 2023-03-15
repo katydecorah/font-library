@@ -103,7 +103,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "greek", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": ["modern"],
+    "tags": ["modern", "variable"],
     "lineNumber": 12
   },
   {
@@ -143,7 +143,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["devanagari", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": ["condensed", "narrow"],
+    "tags": ["condensed", "narrow", "variable"],
     "lineNumber": 17
   },
   {
@@ -194,7 +194,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 21
   },
   {
@@ -239,7 +239,7 @@
       "vietnamese"
     ],
     "category": "serif",
-    "tags": ["literature"],
+    "tags": ["literature", "variable"],
     "lineNumber": 24
   },
   {
@@ -362,7 +362,7 @@
     ],
     "subsets": ["arabic", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 30
   },
   {
@@ -501,7 +501,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["narrow", "condensed", "light", "thin"],
+    "tags": ["narrow", "condensed", "light", "thin", "variable"],
     "lineNumber": 45
   },
   {
@@ -616,7 +616,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 58
   },
   {
@@ -632,7 +632,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["bengali", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 60
   },
   {
@@ -640,7 +640,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["devanagari", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 61
   },
   {
@@ -648,7 +648,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["gujarati", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 62
   },
   {
@@ -656,7 +656,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["gurmukhi", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 63
   },
   {
@@ -664,7 +664,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["kannada", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 64
   },
   {
@@ -672,7 +672,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 65
   },
   {
@@ -680,7 +680,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext", "malayalam"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 66
   },
   {
@@ -688,7 +688,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext", "oriya"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 67
   },
   {
@@ -696,7 +696,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext", "tamil"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 68
   },
   {
@@ -704,7 +704,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext", "telugu"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 69
   },
   {
@@ -768,7 +768,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": ["narrow", "futuristic", "tall", "modern", "techno"],
+    "tags": ["narrow", "futuristic", "tall", "modern", "techno", "variable"],
     "lineNumber": 77
   },
   {
@@ -795,7 +795,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["eurostile"],
+    "tags": ["eurostile", "variable"],
     "lineNumber": 78
   },
   {
@@ -854,7 +854,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 83
   },
   {
@@ -879,7 +879,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["condensed"],
+    "tags": ["condensed", "variable"],
     "lineNumber": 85
   },
   {
@@ -919,7 +919,7 @@
       "vietnamese"
     ],
     "category": "display",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 89
   },
   {
@@ -953,7 +953,7 @@
       "vietnamese"
     ],
     "category": "sans-serif",
-    "tags": ["legibility", "literacy"],
+    "tags": ["legibility", "literacy", "variable"],
     "lineNumber": 91
   },
   {
@@ -1028,7 +1028,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["round"],
+    "tags": ["round", "variable"],
     "lineNumber": 98
   },
   {
@@ -1077,7 +1077,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["hebrew", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": ["legibility"],
+    "tags": ["legibility", "variable"],
     "lineNumber": 102
   },
   {
@@ -1224,7 +1224,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "monospace",
-    "tags": ["monolinear"],
+    "tags": ["monolinear", "variable"],
     "lineNumber": 118
   },
   {
@@ -1341,7 +1341,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "handwriting",
-    "tags": ["cursive", "elegant", "formal", "love", "romantic"],
+    "tags": ["cursive", "elegant", "formal", "love", "romantic", "variable"],
     "lineNumber": 131
   },
   {
@@ -1349,7 +1349,7 @@
     "variants": ["regular", "500", "600", "700", "800"],
     "subsets": ["devanagari", "latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 132
   },
   {
@@ -1357,7 +1357,7 @@
     "variants": ["regular", "500", "600", "700", "800"],
     "subsets": ["gujarati", "latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 133
   },
   {
@@ -1365,7 +1365,7 @@
     "variants": ["regular", "500", "600", "700", "800"],
     "subsets": ["arabic", "latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 134
   },
   {
@@ -1373,7 +1373,7 @@
     "variants": ["regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext", "oriya", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 135
   },
   {
@@ -1381,7 +1381,7 @@
     "variants": ["regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext", "malayalam", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 136
   },
   {
@@ -1389,7 +1389,7 @@
     "variants": ["regular", "500", "600", "700", "800"],
     "subsets": ["bengali", "latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 137
   },
   {
@@ -1397,7 +1397,7 @@
     "variants": ["regular", "500", "600", "700", "800"],
     "subsets": ["gurmukhi", "latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 138
   },
   {
@@ -1405,7 +1405,7 @@
     "variants": ["regular", "500", "600", "700", "800"],
     "subsets": ["kannada", "latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 139
   },
   {
@@ -1413,7 +1413,7 @@
     "variants": ["regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext", "telugu", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 140
   },
   {
@@ -1421,7 +1421,7 @@
     "variants": ["regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext", "tamil", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 141
   },
   {
@@ -1718,7 +1718,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
-    "tags": ["slab"],
+    "tags": ["slab", "variable"],
     "lineNumber": 167
   },
   {
@@ -1760,7 +1760,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["condensed", "tall", "narrow"],
+    "tags": ["condensed", "tall", "narrow", "variable"],
     "lineNumber": 171
   },
   {
@@ -1778,7 +1778,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["lines"],
+    "tags": ["lines", "variable"],
     "lineNumber": 172
   },
   {
@@ -1796,7 +1796,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["lines"],
+    "tags": ["lines", "variable"],
     "lineNumber": 173
   },
   {
@@ -1814,7 +1814,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["stencil"],
+    "tags": ["stencil", "variable"],
     "lineNumber": 174
   },
   {
@@ -1832,7 +1832,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["stencil"],
+    "tags": ["stencil", "variable"],
     "lineNumber": 175
   },
   {
@@ -1850,7 +1850,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["condensed", "tall"],
+    "tags": ["condensed", "tall", "variable"],
     "lineNumber": 176
   },
   {
@@ -1949,7 +1949,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": ["slab"],
+    "tags": ["slab", "variable"],
     "lineNumber": 186
   },
   {
@@ -2026,7 +2026,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 194
   },
   {
@@ -2130,7 +2130,7 @@
       "vietnamese"
     ],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 204
   },
   {
@@ -2243,7 +2243,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["humanist"],
+    "tags": ["humanist", "variable"],
     "lineNumber": 217
   },
   {
@@ -2283,7 +2283,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700", "800", "900"],
     "subsets": ["arabic", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": ["calligraphic", "modern", "wide"],
+    "tags": ["calligraphic", "modern", "wide", "variable"],
     "lineNumber": 222
   },
   {
@@ -2291,7 +2291,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700", "800", "900"],
     "subsets": ["arabic", "latin", "latin-ext"],
     "category": "display",
-    "tags": ["color"],
+    "tags": ["color", "variable"],
     "lineNumber": 223
   },
   {
@@ -2453,7 +2453,7 @@
     ],
     "subsets": ["latin", "latin-ext", "tamil"],
     "category": "sans-serif",
-    "tags": ["monolinear"],
+    "tags": ["monolinear", "variable"],
     "lineNumber": 242
   },
   {
@@ -2469,7 +2469,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
     "category": "handwriting",
-    "tags": ["scrawl"],
+    "tags": ["scrawl", "variable"],
     "lineNumber": 244
   },
   {
@@ -2520,7 +2520,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["arabic", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": ["square"],
+    "tags": ["square", "variable"],
     "lineNumber": 249
   },
   {
@@ -2675,7 +2675,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["grotesque", "headlines"],
+    "tags": ["grotesque", "headlines", "variable"],
     "lineNumber": 266
   },
   {
@@ -2702,7 +2702,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "monospace",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 267
   },
   {
@@ -2718,7 +2718,7 @@
     "variants": ["regular", "500", "600", "700", "800", "900"],
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
-    "tags": ["caps"],
+    "tags": ["caps", "variable"],
     "lineNumber": 269
   },
   {
@@ -2742,7 +2742,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": ["heavy", "block", "round", "headline"],
+    "tags": ["heavy", "block", "round", "headline", "variable"],
     "lineNumber": 272
   },
   {
@@ -2797,7 +2797,7 @@
       "vietnamese"
     ],
     "category": "display",
-    "tags": ["round", "geometric", "large sizes"],
+    "tags": ["round", "geometric", "large sizes", "variable"],
     "lineNumber": 278
   },
   {
@@ -2854,7 +2854,7 @@
       "vietnamese"
     ],
     "category": "sans-serif",
-    "tags": ["low contrast"],
+    "tags": ["low contrast", "variable"],
     "lineNumber": 283
   },
   {
@@ -2945,7 +2945,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 293
   },
   {
@@ -3105,7 +3105,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 307
   },
   {
@@ -3146,7 +3146,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["condensed", "grotesque"],
+    "tags": ["condensed", "grotesque", "variable"],
     "lineNumber": 311
   },
   {
@@ -3218,7 +3218,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "handwriting",
-    "tags": ["cursive", "1950s", "script"],
+    "tags": ["cursive", "1950s", "script", "variable"],
     "lineNumber": 320
   },
   {
@@ -3392,7 +3392,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 340
   },
   {
@@ -3432,7 +3432,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["round"],
+    "tags": ["round", "variable"],
     "lineNumber": 345
   },
   {
@@ -3464,7 +3464,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["cyrillic-ext", "latin", "latin-ext"],
     "category": "display",
-    "tags": ["playful"],
+    "tags": ["playful", "variable"],
     "lineNumber": 349
   },
   {
@@ -3499,7 +3499,7 @@
       "vietnamese"
     ],
     "category": "serif",
-    "tags": ["legibility"],
+    "tags": ["legibility", "variable"],
     "lineNumber": 351
   },
   {
@@ -3539,7 +3539,7 @@
     "variants": ["regular", "500", "600", "700", "800"],
     "subsets": ["devanagari", "greek", "greek-ext", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 356
   },
   {
@@ -3547,7 +3547,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin"],
     "category": "handwriting",
-    "tags": ["handwritten"],
+    "tags": ["handwritten", "variable"],
     "lineNumber": 357
   },
   {
@@ -3555,7 +3555,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin"],
     "category": "handwriting",
-    "tags": ["handwritten"],
+    "tags": ["handwritten", "variable"],
     "lineNumber": 358
   },
   {
@@ -3563,7 +3563,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin"],
     "category": "handwriting",
-    "tags": ["slanted"],
+    "tags": ["slanted", "variable"],
     "lineNumber": 359
   },
   {
@@ -3571,7 +3571,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin"],
     "category": "handwriting",
-    "tags": ["slanted"],
+    "tags": ["slanted", "variable"],
     "lineNumber": 360
   },
   {
@@ -3579,7 +3579,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin"],
     "category": "handwriting",
-    "tags": ["slanted"],
+    "tags": ["slanted", "variable"],
     "lineNumber": 361
   },
   {
@@ -3587,7 +3587,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["arabic", "cyrillic", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": ["arabic"],
+    "tags": ["arabic", "variable"],
     "lineNumber": 362
   },
   {
@@ -3645,7 +3645,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["round", "humanist"],
+    "tags": ["round", "humanist", "variable"],
     "lineNumber": 368
   },
   {
@@ -3699,7 +3699,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["caps", "small caps"],
+    "tags": ["caps", "small caps", "variable"],
     "lineNumber": 371
   },
   {
@@ -3794,7 +3794,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 378
   },
   {
@@ -3861,7 +3861,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["geometric", "techno"],
+    "tags": ["geometric", "techno", "variable"],
     "lineNumber": 384
   },
   {
@@ -3888,7 +3888,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["geometric", "techno"],
+    "tags": ["geometric", "techno", "variable"],
     "lineNumber": 385
   },
   {
@@ -3905,7 +3905,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": ["stencil"],
+    "tags": ["stencil", "variable"],
     "lineNumber": 386
   },
   {
@@ -3951,7 +3951,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 389
   },
   {
@@ -4036,7 +4036,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 398
   },
   {
@@ -4099,7 +4099,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 404
   },
   {
@@ -4124,7 +4124,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 406
   },
   {
@@ -4139,7 +4139,7 @@
       "latin-ext"
     ],
     "category": "monospace",
-    "tags": ["code"],
+    "tags": ["code", "variable"],
     "lineNumber": 407
   },
   {
@@ -4371,7 +4371,7 @@
     "variants": ["300", "regular", "500", "600", "700", "800", "900"],
     "subsets": ["hebrew", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 425
   },
   {
@@ -4398,7 +4398,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 426
   },
   {
@@ -4422,7 +4422,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["hebrew", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": ["round"],
+    "tags": ["round", "variable"],
     "lineNumber": 429
   },
   {
@@ -4593,7 +4593,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 448
   },
   {
@@ -4626,7 +4626,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext", "sinhala"],
     "category": "sans-serif",
-    "tags": ["futuristic", "techno", "square"],
+    "tags": ["futuristic", "techno", "square", "variable"],
     "lineNumber": 451
   },
   {
@@ -4653,7 +4653,7 @@
     ],
     "subsets": ["cherokee", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["futuristic", "square"],
+    "tags": ["futuristic", "square", "variable"],
     "lineNumber": 452
   },
   {
@@ -4728,7 +4728,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 457
   },
   {
@@ -4849,7 +4849,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 470
   },
   {
@@ -4867,7 +4867,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["round", "fun"],
+    "tags": ["round", "fun", "variable"],
     "lineNumber": 471
   },
   {
@@ -4899,7 +4899,7 @@
     "variants": ["regular", "500", "600", "700", "800", "900"],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 475
   },
   {
@@ -5000,7 +5000,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["kids", "round", "friendly"],
+    "tags": ["kids", "round", "friendly", "variable"],
     "lineNumber": 484
   },
   {
@@ -5077,7 +5077,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["roman"],
+    "tags": ["roman", "variable"],
     "lineNumber": 490
   },
   {
@@ -5183,7 +5183,7 @@
     ],
     "subsets": ["korean", "latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 502
   },
   {
@@ -5250,7 +5250,7 @@
     ],
     "subsets": ["cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 508
   },
   {
@@ -5300,7 +5300,7 @@
     ],
     "subsets": ["hebrew", "latin"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 513
   },
   {
@@ -5326,7 +5326,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 515
   },
   {
@@ -5682,7 +5682,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 550
   },
   {
@@ -5716,7 +5716,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": ["condensed", "compact"],
+    "tags": ["condensed", "compact", "variable"],
     "lineNumber": 553
   },
   {
@@ -5740,7 +5740,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700", "800", "900"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "monospace",
-    "tags": ["code"],
+    "tags": ["code", "variable"],
     "lineNumber": 556
   },
   {
@@ -5830,7 +5830,7 @@
       "vietnamese"
     ],
     "category": "sans-serif",
-    "tags": ["legibility"],
+    "tags": ["legibility", "variable"],
     "lineNumber": 565
   },
   {
@@ -5865,7 +5865,7 @@
       "vietnamese"
     ],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 566
   },
   {
@@ -5969,7 +5969,7 @@
       "vietnamese"
     ],
     "category": "monospace",
-    "tags": ["code"],
+    "tags": ["code", "variable"],
     "lineNumber": 576
   },
   {
@@ -6040,7 +6040,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["thin"],
+    "tags": ["thin", "variable"],
     "lineNumber": 583
   },
   {
@@ -6063,7 +6063,7 @@
     ],
     "subsets": ["latin"],
     "category": "serif",
-    "tags": ["slab", "thin"],
+    "tags": ["slab", "thin", "variable"],
     "lineNumber": 584
   },
   {
@@ -6090,7 +6090,7 @@
     ],
     "subsets": ["cyrillic", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 585
   },
   {
@@ -6155,7 +6155,7 @@
       "vietnamese"
     ],
     "category": "sans-serif",
-    "tags": ["eurostile"],
+    "tags": ["eurostile", "variable"],
     "lineNumber": 592
   },
   {
@@ -6310,7 +6310,7 @@
     ],
     "subsets": ["khmer", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 605
   },
   {
@@ -6341,7 +6341,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": ["grotesque"],
+    "tags": ["grotesque", "variable"],
     "lineNumber": 607
   },
   {
@@ -6591,7 +6591,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
-    "tags": ["low contrast"],
+    "tags": ["low contrast", "variable"],
     "lineNumber": 635
   },
   {
@@ -6649,7 +6649,7 @@
     ],
     "subsets": ["arabic", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 639
   },
   {
@@ -6702,7 +6702,7 @@
     ],
     "subsets": ["latin", "latin-ext", "math"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 643
   },
   {
@@ -6745,7 +6745,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 646
   },
   {
@@ -6836,7 +6836,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["gothic", "condensed"],
+    "tags": ["gothic", "condensed", "variable"],
     "lineNumber": 656
   },
   {
@@ -6862,7 +6862,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 658
   },
   {
@@ -6902,7 +6902,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["arabic", "latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["slanted"],
+    "tags": ["slanted", "variable"],
     "lineNumber": 663
   },
   {
@@ -6920,7 +6920,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["legibility"],
+    "tags": ["legibility", "variable"],
     "lineNumber": 664
   },
   {
@@ -6938,7 +6938,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["legibility"],
+    "tags": ["legibility", "variable"],
     "lineNumber": 665
   },
   {
@@ -6956,7 +6956,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["legibility"],
+    "tags": ["legibility", "variable"],
     "lineNumber": 666
   },
   {
@@ -6974,7 +6974,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["legibility"],
+    "tags": ["legibility", "variable"],
     "lineNumber": 667
   },
   {
@@ -6992,7 +6992,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["wide", "legibility"],
+    "tags": ["wide", "legibility", "variable"],
     "lineNumber": 668
   },
   {
@@ -7010,7 +7010,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["wide", "legibility"],
+    "tags": ["wide", "legibility", "variable"],
     "lineNumber": 669
   },
   {
@@ -7028,7 +7028,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["wide", "legibility"],
+    "tags": ["wide", "legibility", "variable"],
     "lineNumber": 670
   },
   {
@@ -7046,7 +7046,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["wide", "legibility"],
+    "tags": ["wide", "legibility", "variable"],
     "lineNumber": 671
   },
   {
@@ -7127,7 +7127,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 680
   },
   {
@@ -7170,7 +7170,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 683
   },
   {
@@ -7251,7 +7251,7 @@
       "vietnamese"
     ],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 690
   },
   {
@@ -7357,7 +7357,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 700
   },
   {
@@ -7447,7 +7447,7 @@
     ],
     "subsets": ["japanese", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 710
   },
   {
@@ -7455,7 +7455,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700"],
     "subsets": ["japanese", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["code"],
+    "tags": ["code", "variable"],
     "lineNumber": 711
   },
   {
@@ -7491,7 +7491,7 @@
     ],
     "subsets": ["japanese", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 713
   },
   {
@@ -7499,7 +7499,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["code"],
+    "tags": ["code", "variable"],
     "lineNumber": 714
   },
   {
@@ -7649,7 +7649,7 @@
       "vietnamese"
     ],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 729
   },
   {
@@ -7678,7 +7678,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 731
   },
   {
@@ -7718,7 +7718,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["arabic", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 736
   },
   {
@@ -7726,7 +7726,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["arabic", "latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 737
   },
   {
@@ -7766,7 +7766,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
     "category": "monospace",
-    "tags": ["code"],
+    "tags": ["code", "variable"],
     "lineNumber": 742
   },
   {
@@ -7854,7 +7854,7 @@
     "variants": ["regular", "500", "600", "700", "800", "900"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["techno"],
+    "tags": ["techno", "variable"],
     "lineNumber": 753
   },
   {
@@ -7934,7 +7934,7 @@
     "variants": ["300", "regular", "500", "600", "700", "800", "900"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "handwriting",
-    "tags": ["brush", "headlines"],
+    "tags": ["brush", "headlines", "variable"],
     "lineNumber": 763
   },
   {
@@ -7980,7 +7980,7 @@
     ],
     "subsets": ["cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["low contrast", "condensed"],
+    "tags": ["low contrast", "condensed", "variable"],
     "lineNumber": 766
   },
   {
@@ -8159,7 +8159,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 787
   },
   {
@@ -8223,7 +8223,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 795
   },
   {
@@ -8266,7 +8266,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["signage", "urban", "vintage"],
+    "tags": ["signage", "urban", "vintage", "variable"],
     "lineNumber": 798
   },
   {
@@ -8454,7 +8454,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 817
   },
   {
@@ -8479,7 +8479,7 @@
       "latin-ext"
     ],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 818
   },
   {
@@ -8506,7 +8506,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["geometric"],
+    "tags": ["geometric", "variable"],
     "lineNumber": 819
   },
   {
@@ -8546,7 +8546,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic-ext", "latin", "latin-ext", "math", "vietnamese"],
     "category": "display",
-    "tags": ["game", "square", "isometric", "gradient", "color"],
+    "tags": ["game", "square", "isometric", "gradient", "color", "variable"],
     "lineNumber": 824
   },
   {
@@ -8665,7 +8665,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": ["legibility"],
+    "tags": ["legibility", "variable"],
     "lineNumber": 837
   },
   {
@@ -8774,7 +8774,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["emoji"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 849
   },
   {
@@ -8792,7 +8792,7 @@
     ],
     "subsets": ["arabic"],
     "category": "sans-serif",
-    "tags": ["arabic"],
+    "tags": ["arabic", "variable"],
     "lineNumber": 850
   },
   {
@@ -8808,7 +8808,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["arabic", "latin", "latin-ext"],
     "category": "serif",
-    "tags": ["arabic"],
+    "tags": ["arabic", "variable"],
     "lineNumber": 852
   },
   {
@@ -8816,7 +8816,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["arabic", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 853
   },
   {
@@ -8834,7 +8834,7 @@
     ],
     "subsets": ["hebrew", "latin", "latin-ext"],
     "category": "serif",
-    "tags": ["hebrew"],
+    "tags": ["hebrew", "variable"],
     "lineNumber": 854
   },
   {
@@ -8878,7 +8878,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["adlam", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 856
   },
   {
@@ -8886,7 +8886,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["adlam", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 857
   },
   {
@@ -8912,7 +8912,7 @@
     ],
     "subsets": ["arabic"],
     "category": "sans-serif",
-    "tags": ["arabic"],
+    "tags": ["arabic", "variable"],
     "lineNumber": 859
   },
   {
@@ -8930,7 +8930,7 @@
     ],
     "subsets": ["armenian", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 860
   },
   {
@@ -8946,7 +8946,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["balinese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 862
   },
   {
@@ -8954,7 +8954,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["bamum", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 863
   },
   {
@@ -8962,7 +8962,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["bassa-vah", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 864
   },
   {
@@ -8988,7 +8988,7 @@
     ],
     "subsets": ["bengali", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 866
   },
   {
@@ -9038,7 +9038,7 @@
     ],
     "subsets": ["canadian-aboriginal", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 871
   },
   {
@@ -9080,7 +9080,7 @@
     ],
     "subsets": ["cham", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 875
   },
   {
@@ -9098,7 +9098,7 @@
     ],
     "subsets": ["cherokee", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 876
   },
   {
@@ -9148,7 +9148,7 @@
     ],
     "subsets": ["devanagari", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 881
   },
   {
@@ -9183,7 +9183,7 @@
       "vietnamese"
     ],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 882
   },
   {
@@ -9233,7 +9233,7 @@
     ],
     "subsets": ["ethiopic", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 887
   },
   {
@@ -9251,7 +9251,7 @@
     ],
     "subsets": ["georgian", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 888
   },
   {
@@ -9293,7 +9293,7 @@
     ],
     "subsets": ["gujarati", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 892
   },
   {
@@ -9319,7 +9319,7 @@
     ],
     "subsets": ["gurmukhi", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 894
   },
   {
@@ -9335,7 +9335,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["hanifi-rohingya", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 896
   },
   {
@@ -9369,7 +9369,7 @@
     ],
     "subsets": ["hebrew", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 899
   },
   {
@@ -9417,7 +9417,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["javanese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 905
   },
   {
@@ -9451,7 +9451,7 @@
     ],
     "subsets": ["kannada", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 908
   },
   {
@@ -9459,7 +9459,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["kayah-li", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 909
   },
   {
@@ -9485,7 +9485,7 @@
     ],
     "subsets": ["khmer", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 911
   },
   {
@@ -9519,7 +9519,7 @@
     ],
     "subsets": ["lao", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 914
   },
   {
@@ -9537,7 +9537,7 @@
     ],
     "subsets": ["lao", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 915
   },
   {
@@ -9577,7 +9577,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "lisu"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 920
   },
   {
@@ -9619,7 +9619,7 @@
     ],
     "subsets": ["latin", "latin-ext", "malayalam"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 924
   },
   {
@@ -9675,7 +9675,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "medefaidrin"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 931
   },
   {
@@ -9693,7 +9693,7 @@
     ],
     "subsets": ["latin", "latin-ext", "meetei-mayek"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 932
   },
   {
@@ -9759,7 +9759,7 @@
       "vietnamese"
     ],
     "category": "monospace",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 938
   },
   {
@@ -9817,7 +9817,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "new-tai-lue"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 944
   },
   {
@@ -9849,7 +9849,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "ol-chiki"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 948
   },
   {
@@ -9931,7 +9931,7 @@
     ],
     "subsets": ["latin", "latin-ext", "oriya"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 957
   },
   {
@@ -10085,7 +10085,7 @@
     ],
     "subsets": ["latin", "latin-ext", "sinhala"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 975
   },
   {
@@ -10101,7 +10101,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "sora-sompeng"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 977
   },
   {
@@ -10117,7 +10117,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "sundanese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 979
   },
   {
@@ -10143,7 +10143,7 @@
     ],
     "subsets": ["latin", "latin-ext", "symbols"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 981
   },
   {
@@ -10199,7 +10199,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "tai-tham"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 988
   },
   {
@@ -10233,7 +10233,7 @@
     ],
     "subsets": ["latin", "latin-ext", "tamil"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 991
   },
   {
@@ -10249,7 +10249,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "tangsa"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 993
   },
   {
@@ -10267,7 +10267,7 @@
     ],
     "subsets": ["latin", "latin-ext", "telugu"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 994
   },
   {
@@ -10285,7 +10285,7 @@
     ],
     "subsets": ["latin", "latin-ext", "thaana"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 995
   },
   {
@@ -10303,7 +10303,7 @@
     ],
     "subsets": ["latin", "latin-ext", "thai"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 996
   },
   {
@@ -10427,7 +10427,7 @@
     ],
     "subsets": ["armenian", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1008
   },
   {
@@ -10453,7 +10453,7 @@
     ],
     "subsets": ["bengali", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1010
   },
   {
@@ -10471,7 +10471,7 @@
     ],
     "subsets": ["devanagari", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1011
   },
   {
@@ -10506,7 +10506,7 @@
       "vietnamese"
     ],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1012
   },
   {
@@ -10532,7 +10532,7 @@
     ],
     "subsets": ["ethiopic", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1014
   },
   {
@@ -10550,7 +10550,7 @@
     ],
     "subsets": ["georgian", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1015
   },
   {
@@ -10576,7 +10576,7 @@
     ],
     "subsets": ["gujarati", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1017
   },
   {
@@ -10594,7 +10594,7 @@
     ],
     "subsets": ["gurmukhi", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1018
   },
   {
@@ -10608,7 +10608,7 @@
       "vietnamese"
     ],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1019
   },
   {
@@ -10626,7 +10626,7 @@
     ],
     "subsets": ["hebrew", "latin", "latin-ext"],
     "category": "serif",
-    "tags": ["hebrew"],
+    "tags": ["hebrew", "variable"],
     "lineNumber": 1020
   },
   {
@@ -10660,7 +10660,7 @@
     ],
     "subsets": ["kannada", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1023
   },
   {
@@ -10678,7 +10678,7 @@
     ],
     "subsets": ["khmer", "latin", "latin-ext"],
     "category": "serif",
-    "tags": ["khmer"],
+    "tags": ["khmer", "variable"],
     "lineNumber": 1024
   },
   {
@@ -10686,7 +10686,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["khojki", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1025
   },
   {
@@ -10704,7 +10704,7 @@
     ],
     "subsets": ["lao", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1026
   },
   {
@@ -10722,7 +10722,7 @@
     ],
     "subsets": ["latin", "latin-ext", "malayalam"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1027
   },
   {
@@ -10748,7 +10748,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin", "nyiakeng-puachue-hmong"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1029
   },
   {
@@ -10756,7 +10756,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "oriya"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1030
   },
   {
@@ -10782,7 +10782,7 @@
     ],
     "subsets": ["latin", "latin-ext", "sinhala"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1032
   },
   {
@@ -10817,7 +10817,7 @@
     ],
     "subsets": ["latin", "latin-ext", "tamil"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1034
   },
   {
@@ -10843,7 +10843,7 @@
     ],
     "subsets": ["latin", "latin-ext", "telugu"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1036
   },
   {
@@ -10861,7 +10861,7 @@
     ],
     "subsets": ["latin", "latin-ext", "thai"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1037
   },
   {
@@ -10879,7 +10879,7 @@
     ],
     "subsets": ["latin", "latin-ext", "tibetan"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1038
   },
   {
@@ -10887,7 +10887,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "toto"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1039
   },
   {
@@ -10895,7 +10895,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["yezidi"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1040
   },
   {
@@ -11000,7 +11000,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["round"],
+    "tags": ["round", "variable"],
     "lineNumber": 1051
   },
   {
@@ -11149,7 +11149,7 @@
       "vietnamese"
     ],
     "category": "sans-serif",
-    "tags": ["humanist"],
+    "tags": ["humanist", "variable"],
     "lineNumber": 1064
   },
   {
@@ -11165,7 +11165,7 @@
     "variants": ["regular", "500", "600", "700", "800", "900"],
     "subsets": ["latin"],
     "category": "sans-serif",
-    "tags": ["geometric", "futuristic", "square", "techno"],
+    "tags": ["geometric", "futuristic", "square", "techno", "variable"],
     "lineNumber": 1066
   },
   {
@@ -11205,7 +11205,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700"],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["narrow"],
+    "tags": ["narrow", "variable"],
     "lineNumber": 1071
   },
   {
@@ -11223,7 +11223,7 @@
     ],
     "subsets": ["latin"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1072
   },
   {
@@ -11274,7 +11274,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1076
   },
   {
@@ -11282,7 +11282,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "monospace",
-    "tags": ["code"],
+    "tags": ["code", "variable"],
     "lineNumber": 1077
   },
   {
@@ -11298,7 +11298,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": ["square", "futuristic", "game"],
+    "tags": ["square", "futuristic", "game", "variable"],
     "lineNumber": 1079
   },
   {
@@ -11573,7 +11573,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": ["cursive", "low contrast"],
+    "tags": ["cursive", "low contrast", "variable"],
     "lineNumber": 1111
   },
   {
@@ -11589,7 +11589,7 @@
     "variants": ["300", "regular", "500", "600", "700", "800", "900"],
     "subsets": ["cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["caps"],
+    "tags": ["caps", "variable"],
     "lineNumber": 1113
   },
   {
@@ -11624,7 +11624,7 @@
       "vietnamese"
     ],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1114
   },
   {
@@ -11700,7 +11700,13 @@
     ],
     "subsets": ["cyrillic", "latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": ["didone", "high contrast", "transitional", "headlines"],
+    "tags": [
+      "didone",
+      "high contrast",
+      "transitional",
+      "headlines",
+      "variable"
+    ],
     "lineNumber": 1121
   },
   {
@@ -11731,7 +11737,7 @@
     ],
     "subsets": ["cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1123
   },
   {
@@ -11739,7 +11745,7 @@
     "variants": ["regular", "500", "600", "700", "800"],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": ["monolinear", "slab", "small sizes"],
+    "tags": ["monolinear", "slab", "small sizes", "variable"],
     "lineNumber": 1124
   },
   {
@@ -11983,7 +11989,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1146
   },
   {
@@ -12063,7 +12069,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["light"],
+    "tags": ["light", "variable"],
     "lineNumber": 1156
   },
   {
@@ -12114,7 +12120,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1161
   },
   {
@@ -12165,7 +12171,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["elegant"],
+    "tags": ["elegant", "variable"],
     "lineNumber": 1165
   },
   {
@@ -12256,7 +12262,7 @@
     ],
     "subsets": ["gujarati", "latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1175
   },
   {
@@ -12280,7 +12286,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700"],
     "subsets": ["arabic", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1178
   },
   {
@@ -12288,7 +12294,7 @@
     "variants": ["300", "regular", "500", "600", "700", "800", "900"],
     "subsets": ["cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["code"],
+    "tags": ["code", "variable"],
     "lineNumber": 1179
   },
   {
@@ -12311,7 +12317,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1180
   },
   {
@@ -12330,7 +12336,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "monospace",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1181
   },
   {
@@ -12349,7 +12355,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1182
   },
   {
@@ -12357,7 +12363,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1183
   },
   {
@@ -12389,7 +12395,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["arabic", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["1900s"],
+    "tags": ["1900s", "variable"],
     "lineNumber": 1187
   },
   {
@@ -12397,7 +12403,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["arabic", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1188
   },
   {
@@ -12537,7 +12543,7 @@
       "vietnamese"
     ],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1201
   },
   {
@@ -12567,7 +12573,7 @@
       "vietnamese"
     ],
     "category": "monospace",
-    "tags": ["code"],
+    "tags": ["code", "variable"],
     "lineNumber": 1202
   },
   {
@@ -12594,7 +12600,7 @@
     ],
     "subsets": ["cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1203
   },
   {
@@ -12620,7 +12626,7 @@
       "vietnamese"
     ],
     "category": "serif",
-    "tags": ["slab"],
+    "tags": ["slab", "variable"],
     "lineNumber": 1204
   },
   {
@@ -12671,7 +12677,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": ["slab", "egyptian", "headlines"],
+    "tags": ["slab", "egyptian", "headlines", "variable"],
     "lineNumber": 1208
   },
   {
@@ -12706,7 +12712,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1211
   },
   {
@@ -12761,7 +12767,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "hebrew", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": ["round"],
+    "tags": ["round", "variable"],
     "lineNumber": 1216
   },
   {
@@ -12921,7 +12927,7 @@
     "variants": ["regular", "500", "600", "700", "800", "900"],
     "subsets": ["cyrillic", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1236
   },
   {
@@ -13009,7 +13015,7 @@
       "vietnamese"
     ],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1245
   },
   {
@@ -13060,7 +13066,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1249
   },
   {
@@ -13171,7 +13177,7 @@
     "variants": ["300", "regular", "500", "600", "700", "800", "900"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1258
   },
   {
@@ -13393,7 +13399,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["handwritten", "marker"],
+    "tags": ["handwritten", "marker", "variable"],
     "lineNumber": 1282
   },
   {
@@ -13505,7 +13511,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["legibility"],
+    "tags": ["legibility", "variable"],
     "lineNumber": 1296
   },
   {
@@ -13513,7 +13519,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["legibility"],
+    "tags": ["legibility", "variable"],
     "lineNumber": 1297
   },
   {
@@ -13627,7 +13633,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1310
   },
   {
@@ -13702,7 +13708,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "greek", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1317
   },
   {
@@ -13729,7 +13735,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "greek", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": ["condensed"],
+    "tags": ["condensed", "variable"],
     "lineNumber": 1318
   },
   {
@@ -13756,7 +13762,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "greek", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": ["condensed"],
+    "tags": ["condensed", "variable"],
     "lineNumber": 1319
   },
   {
@@ -13783,7 +13789,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "greek", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": ["condensed"],
+    "tags": ["condensed", "variable"],
     "lineNumber": 1320
   },
   {
@@ -13815,7 +13821,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1324
   },
   {
@@ -13831,7 +13837,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1326
   },
   {
@@ -13872,7 +13878,7 @@
       "vietnamese"
     ],
     "category": "monospace",
-    "tags": ["typewriter", "code"],
+    "tags": ["typewriter", "code", "variable"],
     "lineNumber": 1328
   },
   {
@@ -13905,7 +13911,7 @@
       "vietnamese"
     ],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1329
   },
   {
@@ -13966,7 +13972,7 @@
       "vietnamese"
     ],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1331
   },
   {
@@ -14002,7 +14008,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1333
   },
   {
@@ -14104,7 +14110,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1342
   },
   {
@@ -14123,7 +14129,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "monospace",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1343
   },
   {
@@ -14211,7 +14217,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext", "sinhala"],
     "category": "sans-serif",
-    "tags": ["stencil"],
+    "tags": ["stencil", "variable"],
     "lineNumber": 1354
   },
   {
@@ -14371,7 +14377,7 @@
     "variants": ["regular", "500", "600", "700", "800"],
     "subsets": ["greek", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1374
   },
   {
@@ -14529,7 +14535,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1389
   },
   {
@@ -14740,7 +14746,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["outline", "collegiate"],
+    "tags": ["outline", "collegiate", "variable"],
     "lineNumber": 1408
   },
   {
@@ -14791,7 +14797,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1412
   },
   {
@@ -14825,7 +14831,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1415
   },
   {
@@ -14935,7 +14941,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700", "800", "900"],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["round", "round"],
+    "tags": ["round", "round", "variable"],
     "lineNumber": 1425
   },
   {
@@ -15034,7 +15040,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": ["low contrast", "modern"],
+    "tags": ["low contrast", "modern", "variable"],
     "lineNumber": 1435
   },
   {
@@ -15074,7 +15080,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1440
   },
   {
@@ -15100,7 +15106,7 @@
     ],
     "subsets": ["arabic", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1442
   },
   {
@@ -15192,7 +15198,7 @@
       "vietnamese"
     ],
     "category": "serif",
-    "tags": ["old style"],
+    "tags": ["old style", "variable"],
     "lineNumber": 1451
   },
   {
@@ -15331,7 +15337,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["grotesque"],
+    "tags": ["grotesque", "variable"],
     "lineNumber": 1466
   },
   {
@@ -15347,7 +15353,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "sinhala"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1468
   },
   {
@@ -15355,7 +15361,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700"],
     "subsets": ["cyrillic", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["1920s"],
+    "tags": ["1920s", "variable"],
     "lineNumber": 1469
   },
   {
@@ -15430,7 +15436,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["variable"],
     "lineNumber": 1477
   },
   {
