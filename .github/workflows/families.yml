@@ -2,7 +2,8 @@ name: Validate families.json
 
 on:
   push:
-    - "families.json"
+    paths:
+       - "families.json"
 
 jobs:
   build:
