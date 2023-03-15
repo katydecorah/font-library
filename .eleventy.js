@@ -16,6 +16,7 @@ module.exports = function (eleventyConfig) {
       outfile: "_site/js/bundle.js",
       minify: process.env.ELEVENTY_ENV === "production",
       sourcemap: true,
+      loader: { ".svg": "text" },
     });
   });
   eleventyConfig.addWatchTarget("./components/");

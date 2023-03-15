@@ -12,4 +12,7 @@ module.exports = {
       statements: 99,
     },
   },
+  transform: {
+    "^.+\\.svg$": "<rootDir>/.jest/file-transformer.js",
+  },
 };

@@ -1,3 +1,5 @@
+import iconClose from "../svg/close.svg";
+
 class SearchStatus extends HTMLElement {
   constructor() {
     super();
@@ -20,7 +22,7 @@ class SearchStatus extends HTMLElement {
 
     const elm = [
       `<div>Found ${resultsLength} fonts ${
-        hasFilters ? (selectedTag === "need tags" ? ` that ` : ` for `) : ""
+        hasFilters ? (selectedTag === "need tags" ? "that" : "for") : ""
       }</div>`,
     ];
 
@@ -48,7 +50,7 @@ class SearchStatus extends HTMLElement {
   }
 
   filterTag(param: string, value: string) {
-    return `<div class="search-filter">${param}: <strong>${value}</strong><clear-button aria-label="remove ${param}" value="${param}"><icon-close></icon-close></clear-button></div>`;
+    return `<div class="search-filter">${param}: <strong>${value}</strong><clear-button aria-label="remove ${param}" value="${param}">${iconClose}</clear-button></div>`;
   }
 }
 
