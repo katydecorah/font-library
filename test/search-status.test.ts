@@ -25,7 +25,7 @@ describe("search-status", () => {
     document.body.innerHTML = `<search-status class="search-status" resultsLength="${resultsLength}" selectedCategory="${selectedCategory}" selectedTag="${selectedTag}" selectedSubset="${selectedSubset}" selectedVariant="${selectedVariant}" search="${search}"></search-status>`;
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
-      "<div>Found 1200 fonts  for </div>
+      "<div>Found 1200 fonts for</div>
       <div class="search-filter">category: <strong>sans-serif</strong><clear-button aria-label="remove category" value="category"><icon-close></icon-close></clear-button></div>
       <clear-button aria-label="remove all filters" class="btn btn-clear">Clear</clear-button>"
     `);
@@ -41,7 +41,7 @@ describe("search-status", () => {
     document.body.innerHTML = `<search-status class="search-status" resultsLength="${resultsLength}" selectedCategory="${selectedCategory}" selectedTag="${selectedTag}" selectedSubset="${selectedSubset}" selectedVariant="${selectedVariant}" search="${search}"></search-status>`;
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
-      "<div>Found 1200 fonts  for </div>
+      "<div>Found 1200 fonts for</div>
       <div class="search-filter">tag: <strong>cute</strong><clear-button aria-label="remove tag" value="tag"><icon-close></icon-close></clear-button></div>
       <clear-button aria-label="remove all filters" class="btn btn-clear">Clear</clear-button>"
     `);
@@ -57,7 +57,7 @@ describe("search-status", () => {
     document.body.innerHTML = `<search-status class="search-status" resultsLength="${resultsLength}" selectedCategory="${selectedCategory}" selectedTag="${selectedTag}" selectedSubset="${selectedSubset}" selectedVariant="${selectedVariant}" search="${search}"></search-status>`;
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
-      "<div>Found 1200 fonts  that </div>
+      "<div>Found 1200 fonts that</div>
       <div class="search-filter">tag: <strong>need tags</strong><clear-button aria-label="remove tag" value="tag"><icon-close></icon-close></clear-button></div>
       <clear-button aria-label="remove all filters" class="btn btn-clear">Clear</clear-button>"
     `);
@@ -73,7 +73,7 @@ describe("search-status", () => {
     document.body.innerHTML = `<search-status class="search-status" resultsLength="${resultsLength}" selectedCategory="${selectedCategory}" selectedTag="${selectedTag}" selectedSubset="${selectedSubset}" selectedVariant="${selectedVariant}" search="${search}"></search-status>`;
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
-      "<div>Found 1200 fonts  for </div>
+      "<div>Found 1200 fonts for</div>
       <div class="search-filter">variant: <strong>italic</strong><clear-button aria-label="remove variant" value="variant"><icon-close></icon-close></clear-button></div>
       <clear-button aria-label="remove all filters" class="btn btn-clear">Clear</clear-button>"
     `);
@@ -89,7 +89,7 @@ describe("search-status", () => {
     document.body.innerHTML = `<search-status class="search-status" resultsLength="${resultsLength}" selectedCategory="${selectedCategory}" selectedTag="${selectedTag}" selectedSubset="${selectedSubset}" selectedVariant="${selectedVariant}" search="${search}"></search-status>`;
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
-      "<div>Found 1200 fonts  for </div>
+      "<div>Found 1200 fonts for</div>
       <div class="search-filter">subset: <strong>hebrew</strong><clear-button aria-label="remove subset" value="subset"><icon-close></icon-close></clear-button></div>
       <clear-button aria-label="remove all filters" class="btn btn-clear">Clear</clear-button>"
     `);
@@ -105,7 +105,7 @@ describe("search-status", () => {
     document.body.innerHTML = `<search-status class="search-status" resultsLength="${resultsLength}" selectedCategory="${selectedCategory}" selectedTag="${selectedTag}" selectedSubset="${selectedSubset}" selectedVariant="${selectedVariant}" search="${search}"></search-status>`;
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
-      "<div>Found 1200 fonts  for </div>
+      "<div>Found 1200 fonts for</div>
       <div class="search-filter">search: <strong>hello</strong><clear-button aria-label="remove search" value="search"><icon-close></icon-close></clear-button></div>
       <clear-button aria-label="remove all filters" class="btn btn-clear">Clear</clear-button>"
     `);

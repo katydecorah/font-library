@@ -20,7 +20,7 @@ class SearchStatus extends HTMLElement {
 
     const elm = [
       `<div>Found ${resultsLength} fonts ${
-        hasFilters ? (selectedTag === "need tags" ? ` that ` : ` for `) : ""
+        hasFilters ? (selectedTag === "need tags" ? "that" : "for") : ""
       }</div>`,
     ];
 
