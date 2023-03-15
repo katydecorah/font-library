@@ -1,5 +1,124 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`FontResults does nothing when variable=false in query string 1`] = `
+<font-results>
+  
+            
+  <div
+    id="search-status"
+  >
+    <search-status
+      class="search-status"
+      resultslength="1497"
+      search=""
+      selectedcategory=""
+      selectedsubset=""
+      selectedtag=""
+      selectedvariable=""
+      selectedvariant=""
+    />
+  </div>
+  
+            
+  <div
+    class="families"
+    id="families"
+  >
+    <font-item
+      font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+  </div>
+  
+            
+  <div
+    id="pagination"
+  >
+    <pagination-buttons
+      currentpage="1"
+      pagesize="10"
+      resultslength="1497"
+    />
+  </div>
+  
+          
+</font-results>
+`;
+
 exports[`FontResults filters based on tag "cute" in search query 1`] = `
 <font-results>
   
@@ -14,6 +133,7 @@ exports[`FontResults filters based on tag "cute" in search query 1`] = `
       selectedcategory=""
       selectedsubset=""
       selectedtag="cute"
+      selectedvariable=""
       selectedvariant=""
     />
   </div>
@@ -24,7 +144,7 @@ exports[`FontResults filters based on tag "cute" in search query 1`] = `
     id="families"
   >
     <font-item
-      font="{"family":"Are You Serious","variants":["regular"],"subsets":["latin","latin-ext","vietnamese"],"category":"handwriting","tags":["whimsical","curls","cute","kids","swirl"],"lineNumber":86}"
+      font="{"family":"Are You Serious","variants":["regular"],"subsets":["latin","latin-ext","vietnamese"],"category":"handwriting","tags":["whimsical","curls","cute","kids","swirl"],"lineNumber":86,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -32,7 +152,7 @@ exports[`FontResults filters based on tag "cute" in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Bellota","variants":["300","300italic","regular","italic","700","700italic"],"subsets":["cyrillic","latin","latin-ext","vietnamese"],"category":"display","tags":["whimsical","large sizes","cute","decorative"],"lineNumber":161}"
+      font="{"family":"Bellota","variants":["300","300italic","regular","italic","700","700italic"],"subsets":["cyrillic","latin","latin-ext","vietnamese"],"category":"display","tags":["whimsical","large sizes","cute","decorative"],"lineNumber":161,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -40,7 +160,7 @@ exports[`FontResults filters based on tag "cute" in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Bonbon","variants":["regular"],"subsets":["latin"],"category":"handwriting","tags":["cute","decorative","headlines"],"lineNumber":197}"
+      font="{"family":"Bonbon","variants":["regular"],"subsets":["latin"],"category":"handwriting","tags":["cute","decorative","headlines"],"lineNumber":197,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -48,7 +168,7 @@ exports[`FontResults filters based on tag "cute" in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Butterfly Kids","variants":["regular"],"subsets":["latin","latin-ext"],"category":"handwriting","tags":["kids","cute"],"lineNumber":216}"
+      font="{"family":"Butterfly Kids","variants":["regular"],"subsets":["latin","latin-ext"],"category":"handwriting","tags":["kids","cute"],"lineNumber":216,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -56,7 +176,7 @@ exports[`FontResults filters based on tag "cute" in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Delius Swash Caps","variants":["regular"],"subsets":["latin"],"category":"handwriting","tags":["cute","swash","round"],"lineNumber":329}"
+      font="{"family":"Delius Swash Caps","variants":["regular"],"subsets":["latin"],"category":"handwriting","tags":["cute","swash","round"],"lineNumber":329,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -64,7 +184,7 @@ exports[`FontResults filters based on tag "cute" in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Emilys Candy","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["cute","love"],"lineNumber":367}"
+      font="{"family":"Emilys Candy","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["cute","love"],"lineNumber":367,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -72,7 +192,7 @@ exports[`FontResults filters based on tag "cute" in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Fuzzy Bubbles","variants":["regular","700"],"subsets":["latin","latin-ext","vietnamese"],"category":"handwriting","tags":["cute","kids","playful","handwritten"],"lineNumber":437}"
+      font="{"family":"Fuzzy Bubbles","variants":["regular","700"],"subsets":["latin","latin-ext","vietnamese"],"category":"handwriting","tags":["cute","kids","playful","handwritten"],"lineNumber":437,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -80,7 +200,7 @@ exports[`FontResults filters based on tag "cute" in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Gorditas","variants":["regular","700"],"subsets":["latin"],"category":"display","tags":["love","cute"],"lineNumber":476}"
+      font="{"family":"Gorditas","variants":["regular","700"],"subsets":["latin"],"category":"display","tags":["love","cute"],"lineNumber":476,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -88,7 +208,7 @@ exports[`FontResults filters based on tag "cute" in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Hi Melody","variants":["regular"],"subsets":["korean","latin"],"category":"handwriting","tags":["cute","korean"],"lineNumber":517}"
+      font="{"family":"Hi Melody","variants":["regular"],"subsets":["korean","latin"],"category":"handwriting","tags":["cute","korean"],"lineNumber":517,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -96,7 +216,7 @@ exports[`FontResults filters based on tag "cute" in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Ingrid Darling","variants":["regular"],"subsets":["latin","latin-ext","vietnamese"],"category":"handwriting","tags":["cursive","cute","playful","swirl","whimsical"],"lineNumber":559}"
+      font="{"family":"Ingrid Darling","variants":["regular"],"subsets":["latin","latin-ext","vietnamese"],"category":"handwriting","tags":["cursive","cute","playful","swirl","whimsical"],"lineNumber":559,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -118,6 +238,125 @@ exports[`FontResults filters based on tag "cute" in search query 1`] = `
 </font-results>
 `;
 
+exports[`FontResults filters based on variable=true in query string 1`] = `
+<font-results>
+  
+            
+  <div
+    id="search-status"
+  >
+    <search-status
+      class="search-status"
+      resultslength="293"
+      search=""
+      selectedcategory=""
+      selectedsubset=""
+      selectedtag=""
+      selectedvariable="true"
+      selectedvariant=""
+    />
+  </div>
+  
+            
+  <div
+    class="families"
+    id="families"
+  >
+    <font-item
+      font="{"family":"Advent Pro","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["cyrillic","cyrillic-ext","greek","latin","latin-ext"],"category":"sans-serif","tags":["modern"],"lineNumber":12,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Akshar","variants":["300","regular","500","600","700"],"subsets":["devanagari","latin","latin-ext"],"category":"sans-serif","tags":["condensed","narrow"],"lineNumber":17,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Albert Sans","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":[],"lineNumber":21,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Alegreya","variants":["regular","500","600","700","800","900","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["cyrillic","cyrillic-ext","greek","greek-ext","latin","latin-ext","vietnamese"],"category":"serif","tags":["literature"],"lineNumber":24,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Alexandria","variants":["100","200","300","regular","500","600","700","800","900"],"subsets":["arabic","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":[],"lineNumber":30,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Alumni Sans","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["cyrillic","cyrillic-ext","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["narrow","condensed","light","thin"],"lineNumber":45,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Andada Pro","variants":["regular","500","600","700","800","italic","500italic","600italic","700italic","800italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"serif","tags":[],"lineNumber":58,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Anek Bangla","variants":["100","200","300","regular","500","600","700","800"],"subsets":["bengali","latin","latin-ext"],"category":"sans-serif","tags":[],"lineNumber":60,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Anek Devanagari","variants":["100","200","300","regular","500","600","700","800"],"subsets":["devanagari","latin","latin-ext"],"category":"sans-serif","tags":[],"lineNumber":61,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Anek Gujarati","variants":["100","200","300","regular","500","600","700","800"],"subsets":["gujarati","latin","latin-ext"],"category":"sans-serif","tags":[],"lineNumber":62,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+  </div>
+  
+            
+  <div
+    id="pagination"
+  >
+    <pagination-buttons
+      currentpage="1"
+      pagesize="10"
+      resultslength="293"
+    />
+  </div>
+  
+          
+</font-results>
+`;
+
 exports[`FontResults filters fonts when a category is selected 1`] = `
 <font-results>
   
@@ -132,6 +371,7 @@ exports[`FontResults filters fonts when a category is selected 1`] = `
       selectedcategory="display"
       selectedsubset=""
       selectedtag=""
+      selectedvariable=""
       selectedvariant=""
     />
   </div>
@@ -142,7 +382,7 @@ exports[`FontResults filters fonts when a category is selected 1`] = `
     id="families"
   >
     <font-item
-      font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5}"
+      font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -150,7 +390,7 @@ exports[`FontResults filters fonts when a category is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6}"
+      font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -158,7 +398,7 @@ exports[`FontResults filters fonts when a category is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Akaya Kanadaka","variants":["regular"],"subsets":["kannada","latin","latin-ext"],"category":"display","tags":[],"lineNumber":14}"
+      font="{"family":"Akaya Kanadaka","variants":["regular"],"subsets":["kannada","latin","latin-ext"],"category":"display","tags":[],"lineNumber":14,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -166,7 +406,7 @@ exports[`FontResults filters fonts when a category is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Akaya Telivigala","variants":["regular"],"subsets":["latin","latin-ext","telugu"],"category":"display","tags":[],"lineNumber":15}"
+      font="{"family":"Akaya Telivigala","variants":["regular"],"subsets":["latin","latin-ext","telugu"],"category":"display","tags":[],"lineNumber":15,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -174,7 +414,7 @@ exports[`FontResults filters fonts when a category is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Akronim","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["brush","lines"],"lineNumber":16}"
+      font="{"family":"Akronim","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["brush","lines"],"lineNumber":16,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -182,7 +422,7 @@ exports[`FontResults filters fonts when a category is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Alfa Slab One","variants":["regular"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["slab","heavy","egyptian"],"lineNumber":31}"
+      font="{"family":"Alfa Slab One","variants":["regular"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["slab","heavy","egyptian"],"lineNumber":31,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -190,7 +430,7 @@ exports[`FontResults filters fonts when a category is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Allan","variants":["regular","700"],"subsets":["latin","latin-ext"],"category":"display","tags":["slanted"],"lineNumber":36}"
+      font="{"family":"Allan","variants":["regular","700"],"subsets":["latin","latin-ext"],"category":"display","tags":["slanted"],"lineNumber":36,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -198,7 +438,7 @@ exports[`FontResults filters fonts when a category is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Almendra Display","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["whimsical","literature"],"lineNumber":43}"
+      font="{"family":"Almendra Display","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["whimsical","literature"],"lineNumber":43,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -206,7 +446,7 @@ exports[`FontResults filters fonts when a category is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Alumni Sans Inline One","variants":["regular","italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["block","heavy"],"lineNumber":47}"
+      font="{"family":"Alumni Sans Inline One","variants":["regular","italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["block","heavy"],"lineNumber":47,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -214,7 +454,7 @@ exports[`FontResults filters fonts when a category is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Amarante","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["art nouveau"],"lineNumber":49}"
+      font="{"family":"Amarante","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["art nouveau"],"lineNumber":49,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -250,6 +490,7 @@ exports[`FontResults filters fonts when a subset is selected 1`] = `
       selectedcategory=""
       selectedsubset="arabic"
       selectedtag=""
+      selectedvariable=""
       selectedvariant=""
     />
   </div>
@@ -260,7 +501,7 @@ exports[`FontResults filters fonts when a subset is selected 1`] = `
     id="families"
   >
     <font-item
-      font="{"family":"Alexandria","variants":["100","200","300","regular","500","600","700","800","900"],"subsets":["arabic","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":[],"lineNumber":30}"
+      font="{"family":"Alexandria","variants":["100","200","300","regular","500","600","700","800","900"],"subsets":["arabic","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":[],"lineNumber":30,"variable":true}"
       selectedsubset="arabic"
       selectedtag=""
       selectedvariant=""
@@ -268,7 +509,7 @@ exports[`FontResults filters fonts when a subset is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Alkalami","variants":["regular"],"subsets":["arabic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":35}"
+      font="{"family":"Alkalami","variants":["regular"],"subsets":["arabic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":35,"variable":false}"
       selectedsubset="arabic"
       selectedtag=""
       selectedvariant=""
@@ -276,7 +517,7 @@ exports[`FontResults filters fonts when a subset is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Almarai","variants":["300","regular","700","800"],"subsets":["arabic"],"category":"sans-serif","tags":["arabic"],"lineNumber":41}"
+      font="{"family":"Almarai","variants":["300","regular","700","800"],"subsets":["arabic"],"category":"sans-serif","tags":["arabic"],"lineNumber":41,"variable":false}"
       selectedsubset="arabic"
       selectedtag=""
       selectedvariant=""
@@ -284,7 +525,7 @@ exports[`FontResults filters fonts when a subset is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Amiri","variants":["regular","italic","700","700italic"],"subsets":["arabic","latin","latin-ext"],"category":"serif","tags":["1900s","elegant"],"lineNumber":54}"
+      font="{"family":"Amiri","variants":["regular","italic","700","700italic"],"subsets":["arabic","latin","latin-ext"],"category":"serif","tags":["1900s","elegant"],"lineNumber":54,"variable":false}"
       selectedsubset="arabic"
       selectedtag=""
       selectedvariant=""
@@ -292,7 +533,7 @@ exports[`FontResults filters fonts when a subset is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Amiri Quran","variants":["regular"],"subsets":["arabic","latin"],"category":"serif","tags":[],"lineNumber":55}"
+      font="{"family":"Amiri Quran","variants":["regular"],"subsets":["arabic","latin"],"category":"serif","tags":[],"lineNumber":55,"variable":false}"
       selectedsubset="arabic"
       selectedtag=""
       selectedvariant=""
@@ -300,7 +541,7 @@ exports[`FontResults filters fonts when a subset is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Aref Ruqaa","variants":["regular","700"],"subsets":["arabic","latin","latin-ext"],"category":"serif","tags":["calligraphic"],"lineNumber":87}"
+      font="{"family":"Aref Ruqaa","variants":["regular","700"],"subsets":["arabic","latin","latin-ext"],"category":"serif","tags":["calligraphic"],"lineNumber":87,"variable":false}"
       selectedsubset="arabic"
       selectedtag=""
       selectedvariant=""
@@ -308,7 +549,7 @@ exports[`FontResults filters fonts when a subset is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Aref Ruqaa Ink","variants":["regular","700"],"subsets":["arabic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":88}"
+      font="{"family":"Aref Ruqaa Ink","variants":["regular","700"],"subsets":["arabic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":88,"variable":false}"
       selectedsubset="arabic"
       selectedtag=""
       selectedvariant=""
@@ -316,7 +557,7 @@ exports[`FontResults filters fonts when a subset is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Baloo Bhaijaan 2","variants":["regular","500","600","700","800"],"subsets":["arabic","latin","latin-ext","vietnamese"],"category":"display","tags":[],"lineNumber":134}"
+      font="{"family":"Baloo Bhaijaan 2","variants":["regular","500","600","700","800"],"subsets":["arabic","latin","latin-ext","vietnamese"],"category":"display","tags":[],"lineNumber":134,"variable":true}"
       selectedsubset="arabic"
       selectedtag=""
       selectedvariant=""
@@ -324,7 +565,7 @@ exports[`FontResults filters fonts when a subset is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Blaka","variants":["regular"],"subsets":["arabic","latin","latin-ext"],"category":"display","tags":["gothic","arabic"],"lineNumber":190}"
+      font="{"family":"Blaka","variants":["regular"],"subsets":["arabic","latin","latin-ext"],"category":"display","tags":["gothic","arabic"],"lineNumber":190,"variable":false}"
       selectedsubset="arabic"
       selectedtag=""
       selectedvariant=""
@@ -332,7 +573,7 @@ exports[`FontResults filters fonts when a subset is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Blaka Hollow","variants":["regular"],"subsets":["arabic","latin","latin-ext"],"category":"display","tags":["gothic","arabic","outline"],"lineNumber":191}"
+      font="{"family":"Blaka Hollow","variants":["regular"],"subsets":["arabic","latin","latin-ext"],"category":"display","tags":["gothic","arabic","outline"],"lineNumber":191,"variable":false}"
       selectedsubset="arabic"
       selectedtag=""
       selectedvariant=""
@@ -368,6 +609,7 @@ exports[`FontResults filters fonts when a tag is selected 1`] = `
       selectedcategory=""
       selectedsubset=""
       selectedtag="outline"
+      selectedvariable=""
       selectedvariant=""
     />
   </div>
@@ -378,7 +620,7 @@ exports[`FontResults filters fonts when a tag is selected 1`] = `
     id="families"
   >
     <font-item
-      font="{"family":"Alumni Sans Collegiate One","variants":["regular","italic"],"subsets":["cyrillic","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["outline","collegiate"],"lineNumber":46}"
+      font="{"family":"Alumni Sans Collegiate One","variants":["regular","italic"],"subsets":["cyrillic","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["outline","collegiate"],"lineNumber":46,"variable":false}"
       selectedsubset=""
       selectedtag="outline"
       selectedvariant=""
@@ -386,7 +628,7 @@ exports[`FontResults filters fonts when a tag is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Blaka Hollow","variants":["regular"],"subsets":["arabic","latin","latin-ext"],"category":"display","tags":["gothic","arabic","outline"],"lineNumber":191}"
+      font="{"family":"Blaka Hollow","variants":["regular"],"subsets":["arabic","latin","latin-ext"],"category":"display","tags":["gothic","arabic","outline"],"lineNumber":191,"variable":false}"
       selectedsubset=""
       selectedtag="outline"
       selectedvariant=""
@@ -394,7 +636,7 @@ exports[`FontResults filters fonts when a tag is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Bungee Outline","variants":["regular"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["outline","signage"],"lineNumber":212}"
+      font="{"family":"Bungee Outline","variants":["regular"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["outline","signage"],"lineNumber":212,"variable":false}"
       selectedsubset=""
       selectedtag="outline"
       selectedvariant=""
@@ -402,7 +644,7 @@ exports[`FontResults filters fonts when a tag is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Ewert","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["western","outline","decorative"],"lineNumber":383}"
+      font="{"family":"Ewert","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["western","outline","decorative"],"lineNumber":383,"variable":false}"
       selectedsubset=""
       selectedtag="outline"
       selectedvariant=""
@@ -410,7 +652,7 @@ exports[`FontResults filters fonts when a tag is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Geostar","variants":["regular"],"subsets":["latin"],"category":"display","tags":["square","outline","headlines"],"lineNumber":458}"
+      font="{"family":"Geostar","variants":["regular"],"subsets":["latin"],"category":"display","tags":["square","outline","headlines"],"lineNumber":458,"variable":false}"
       selectedsubset=""
       selectedtag="outline"
       selectedvariant=""
@@ -418,7 +660,7 @@ exports[`FontResults filters fonts when a tag is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Jacques Francois Shadow","variants":["regular"],"subsets":["latin"],"category":"display","tags":["outline","shadow","1700s","large sizes"],"lineNumber":574}"
+      font="{"family":"Jacques Francois Shadow","variants":["regular"],"subsets":["latin"],"category":"display","tags":["outline","shadow","1700s","large sizes"],"lineNumber":574,"variable":false}"
       selectedsubset=""
       selectedtag="outline"
       selectedvariant=""
@@ -426,7 +668,7 @@ exports[`FontResults filters fonts when a tag is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Kranky","variants":["regular"],"subsets":["latin"],"category":"display","tags":["outline"],"lineNumber":634}"
+      font="{"family":"Kranky","variants":["regular"],"subsets":["latin"],"category":"display","tags":["outline"],"lineNumber":634,"variable":false}"
       selectedsubset=""
       selectedtag="outline"
       selectedvariant=""
@@ -434,7 +676,7 @@ exports[`FontResults filters fonts when a tag is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Kumar One Outline","variants":["regular"],"subsets":["gujarati","latin","latin-ext"],"category":"display","tags":["outline"],"lineNumber":642}"
+      font="{"family":"Kumar One Outline","variants":["regular"],"subsets":["gujarati","latin","latin-ext"],"category":"display","tags":["outline"],"lineNumber":642,"variable":false}"
       selectedsubset=""
       selectedtag="outline"
       selectedvariant=""
@@ -442,7 +684,7 @@ exports[`FontResults filters fonts when a tag is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Londrina Outline","variants":["regular"],"subsets":["latin"],"category":"display","tags":["fun","outline","handwritten"],"lineNumber":695}"
+      font="{"family":"Londrina Outline","variants":["regular"],"subsets":["latin"],"category":"display","tags":["fun","outline","handwritten"],"lineNumber":695,"variable":false}"
       selectedsubset=""
       selectedtag="outline"
       selectedvariant=""
@@ -450,7 +692,7 @@ exports[`FontResults filters fonts when a tag is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Londrina Shadow","variants":["regular"],"subsets":["latin"],"category":"display","tags":["outline","shadow","handwritten"],"lineNumber":696}"
+      font="{"family":"Londrina Shadow","variants":["regular"],"subsets":["latin"],"category":"display","tags":["outline","shadow","handwritten"],"lineNumber":696,"variable":false}"
       selectedsubset=""
       selectedtag="outline"
       selectedvariant=""
@@ -486,6 +728,7 @@ exports[`FontResults filters fonts when a variant is selected 1`] = `
       selectedcategory=""
       selectedsubset=""
       selectedtag=""
+      selectedvariable=""
       selectedvariant="300italic"
     />
   </div>
@@ -496,7 +739,7 @@ exports[`FontResults filters fonts when a variant is selected 1`] = `
     id="families"
   >
     <font-item
-      font="{"family":"Advent Pro","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["cyrillic","cyrillic-ext","greek","latin","latin-ext"],"category":"sans-serif","tags":["modern"],"lineNumber":12}"
+      font="{"family":"Advent Pro","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["cyrillic","cyrillic-ext","greek","latin","latin-ext"],"category":"sans-serif","tags":["modern"],"lineNumber":12,"variable":true}"
       selectedsubset=""
       selectedtag=""
       selectedvariant="300italic"
@@ -504,7 +747,7 @@ exports[`FontResults filters fonts when a variant is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Albert Sans","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":[],"lineNumber":21}"
+      font="{"family":"Albert Sans","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":[],"lineNumber":21,"variable":true}"
       selectedsubset=""
       selectedtag=""
       selectedvariant="300italic"
@@ -512,7 +755,7 @@ exports[`FontResults filters fonts when a variant is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Alegreya Sans","variants":["100","100italic","300","300italic","regular","italic","500","500italic","700","700italic","800","800italic","900","900italic"],"subsets":["cyrillic","cyrillic-ext","greek","greek-ext","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["humanist","literature"],"lineNumber":26}"
+      font="{"family":"Alegreya Sans","variants":["100","100italic","300","300italic","regular","italic","500","500italic","700","700italic","800","800italic","900","900italic"],"subsets":["cyrillic","cyrillic-ext","greek","greek-ext","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["humanist","literature"],"lineNumber":26,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant="300italic"
@@ -520,7 +763,7 @@ exports[`FontResults filters fonts when a variant is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Alegreya Sans SC","variants":["100","100italic","300","300italic","regular","italic","500","500italic","700","700italic","800","800italic","900","900italic"],"subsets":["cyrillic","cyrillic-ext","greek","greek-ext","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["small caps","literature"],"lineNumber":27}"
+      font="{"family":"Alegreya Sans SC","variants":["100","100italic","300","300italic","regular","italic","500","500italic","700","700italic","800","800italic","900","900italic"],"subsets":["cyrillic","cyrillic-ext","greek","greek-ext","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["small caps","literature"],"lineNumber":27,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant="300italic"
@@ -528,7 +771,7 @@ exports[`FontResults filters fonts when a variant is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Aleo","variants":["300","300italic","regular","italic","700","700italic"],"subsets":["latin","latin-ext"],"category":"serif","tags":[],"lineNumber":28}"
+      font="{"family":"Aleo","variants":["300","300italic","regular","italic","700","700italic"],"subsets":["latin","latin-ext"],"category":"serif","tags":[],"lineNumber":28,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant="300italic"
@@ -536,7 +779,7 @@ exports[`FontResults filters fonts when a variant is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Alumni Sans","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["cyrillic","cyrillic-ext","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["narrow","condensed","light","thin"],"lineNumber":45}"
+      font="{"family":"Alumni Sans","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["cyrillic","cyrillic-ext","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["narrow","condensed","light","thin"],"lineNumber":45,"variable":true}"
       selectedsubset=""
       selectedtag=""
       selectedvariant="300italic"
@@ -544,7 +787,7 @@ exports[`FontResults filters fonts when a variant is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Anybody","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["eurostile"],"lineNumber":78}"
+      font="{"family":"Anybody","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["eurostile"],"lineNumber":78,"variable":true}"
       selectedsubset=""
       selectedtag=""
       selectedvariant="300italic"
@@ -552,7 +795,7 @@ exports[`FontResults filters fonts when a variant is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Archivo","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"sans-serif","tags":[],"lineNumber":83}"
+      font="{"family":"Archivo","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"sans-serif","tags":[],"lineNumber":83,"variable":true}"
       selectedsubset=""
       selectedtag=""
       selectedvariant="300italic"
@@ -560,7 +803,7 @@ exports[`FontResults filters fonts when a variant is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Asap","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["round"],"lineNumber":98}"
+      font="{"family":"Asap","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["round"],"lineNumber":98,"variable":true}"
       selectedsubset=""
       selectedtag=""
       selectedvariant="300italic"
@@ -568,7 +811,7 @@ exports[`FontResults filters fonts when a variant is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Asap Condensed","variants":["200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["condensed"],"lineNumber":99}"
+      font="{"family":"Asap Condensed","variants":["200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["condensed"],"lineNumber":99,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant="300italic"
@@ -604,6 +847,7 @@ exports[`FontResults filters fonts when search 1`] = `
       selectedcategory=""
       selectedsubset=""
       selectedtag=""
+      selectedvariable=""
       selectedvariant=""
     />
   </div>
@@ -614,7 +858,7 @@ exports[`FontResults filters fonts when search 1`] = `
     id="families"
   >
     <font-item
-      font="{"family":"Are You Serious","variants":["regular"],"subsets":["latin","latin-ext","vietnamese"],"category":"handwriting","tags":["whimsical","curls","cute","kids","swirl"],"lineNumber":86}"
+      font="{"family":"Are You Serious","variants":["regular"],"subsets":["latin","latin-ext","vietnamese"],"category":"handwriting","tags":["whimsical","curls","cute","kids","swirl"],"lineNumber":86,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -636,6 +880,125 @@ exports[`FontResults filters fonts when search 1`] = `
 </font-results>
 `;
 
+exports[`FontResults filters fonts when variable is checked and then unchecked 1`] = `
+<font-results>
+  
+            
+  <div
+    id="search-status"
+  >
+    <search-status
+      class="search-status"
+      resultslength="293"
+      search=""
+      selectedcategory=""
+      selectedsubset=""
+      selectedtag=""
+      selectedvariable="true"
+      selectedvariant=""
+    />
+  </div>
+  
+            
+  <div
+    class="families"
+    id="families"
+  >
+    <font-item
+      font="{"family":"Advent Pro","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["cyrillic","cyrillic-ext","greek","latin","latin-ext"],"category":"sans-serif","tags":["modern"],"lineNumber":12,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Akshar","variants":["300","regular","500","600","700"],"subsets":["devanagari","latin","latin-ext"],"category":"sans-serif","tags":["condensed","narrow"],"lineNumber":17,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Albert Sans","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":[],"lineNumber":21,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Alegreya","variants":["regular","500","600","700","800","900","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["cyrillic","cyrillic-ext","greek","greek-ext","latin","latin-ext","vietnamese"],"category":"serif","tags":["literature"],"lineNumber":24,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Alexandria","variants":["100","200","300","regular","500","600","700","800","900"],"subsets":["arabic","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":[],"lineNumber":30,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Alumni Sans","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["cyrillic","cyrillic-ext","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["narrow","condensed","light","thin"],"lineNumber":45,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Andada Pro","variants":["regular","500","600","700","800","italic","500italic","600italic","700italic","800italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"serif","tags":[],"lineNumber":58,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Anek Bangla","variants":["100","200","300","regular","500","600","700","800"],"subsets":["bengali","latin","latin-ext"],"category":"sans-serif","tags":[],"lineNumber":60,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Anek Devanagari","variants":["100","200","300","regular","500","600","700","800"],"subsets":["devanagari","latin","latin-ext"],"category":"sans-serif","tags":[],"lineNumber":61,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Anek Gujarati","variants":["100","200","300","regular","500","600","700","800"],"subsets":["gujarati","latin","latin-ext"],"category":"sans-serif","tags":[],"lineNumber":62,"variable":true}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+  </div>
+  
+            
+  <div
+    id="pagination"
+  >
+    <pagination-buttons
+      currentpage="1"
+      pagesize="10"
+      resultslength="293"
+    />
+  </div>
+  
+          
+</font-results>
+`;
+
 exports[`FontResults filters when tag radio clicked 1`] = `
 <font-results>
   
@@ -650,6 +1013,7 @@ exports[`FontResults filters when tag radio clicked 1`] = `
       selectedcategory=""
       selectedsubset=""
       selectedtag="1980s"
+      selectedvariable=""
       selectedvariant=""
     />
   </div>
@@ -660,7 +1024,7 @@ exports[`FontResults filters when tag radio clicked 1`] = `
     id="families"
   >
     <font-item
-      font="{"family":"Press Start 2P","variants":["regular"],"subsets":["cyrillic","cyrillic-ext","greek","latin","latin-ext"],"category":"display","tags":["game","1980s","pixel"],"lineNumber":1139}"
+      font="{"family":"Press Start 2P","variants":["regular"],"subsets":["cyrillic","cyrillic-ext","greek","latin","latin-ext"],"category":"display","tags":["game","1980s","pixel"],"lineNumber":1139,"variable":false}"
       selectedsubset=""
       selectedtag="1980s"
       selectedvariant=""
@@ -668,7 +1032,7 @@ exports[`FontResults filters when tag radio clicked 1`] = `
     
 
     <font-item
-      font="{"family":"Rubik 80s Fade","variants":["regular"],"subsets":["cyrillic","cyrillic-ext","hebrew","latin","latin-ext"],"category":"display","tags":["1980s"],"lineNumber":1217}"
+      font="{"family":"Rubik 80s Fade","variants":["regular"],"subsets":["cyrillic","cyrillic-ext","hebrew","latin","latin-ext"],"category":"display","tags":["1980s"],"lineNumber":1217,"variable":false}"
       selectedsubset=""
       selectedtag="1980s"
       selectedvariant=""
@@ -704,6 +1068,7 @@ exports[`FontResults fires a custom event when a font is selected 1`] = `
       selectedcategory=""
       selectedsubset=""
       selectedtag="cute"
+      selectedvariable=""
       selectedvariant=""
     />
   </div>
@@ -714,7 +1079,7 @@ exports[`FontResults fires a custom event when a font is selected 1`] = `
     id="families"
   >
     <font-item
-      font="{"family":"Are You Serious","variants":["regular"],"subsets":["latin","latin-ext","vietnamese"],"category":"handwriting","tags":["whimsical","curls","cute","kids","swirl"],"lineNumber":86}"
+      font="{"family":"Are You Serious","variants":["regular"],"subsets":["latin","latin-ext","vietnamese"],"category":"handwriting","tags":["whimsical","curls","cute","kids","swirl"],"lineNumber":86,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -722,7 +1087,7 @@ exports[`FontResults fires a custom event when a font is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Bellota","variants":["300","300italic","regular","italic","700","700italic"],"subsets":["cyrillic","latin","latin-ext","vietnamese"],"category":"display","tags":["whimsical","large sizes","cute","decorative"],"lineNumber":161}"
+      font="{"family":"Bellota","variants":["300","300italic","regular","italic","700","700italic"],"subsets":["cyrillic","latin","latin-ext","vietnamese"],"category":"display","tags":["whimsical","large sizes","cute","decorative"],"lineNumber":161,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -730,7 +1095,7 @@ exports[`FontResults fires a custom event when a font is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Bonbon","variants":["regular"],"subsets":["latin"],"category":"handwriting","tags":["cute","decorative","headlines"],"lineNumber":197}"
+      font="{"family":"Bonbon","variants":["regular"],"subsets":["latin"],"category":"handwriting","tags":["cute","decorative","headlines"],"lineNumber":197,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -738,7 +1103,7 @@ exports[`FontResults fires a custom event when a font is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Butterfly Kids","variants":["regular"],"subsets":["latin","latin-ext"],"category":"handwriting","tags":["kids","cute"],"lineNumber":216}"
+      font="{"family":"Butterfly Kids","variants":["regular"],"subsets":["latin","latin-ext"],"category":"handwriting","tags":["kids","cute"],"lineNumber":216,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -746,7 +1111,7 @@ exports[`FontResults fires a custom event when a font is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Delius Swash Caps","variants":["regular"],"subsets":["latin"],"category":"handwriting","tags":["cute","swash","round"],"lineNumber":329}"
+      font="{"family":"Delius Swash Caps","variants":["regular"],"subsets":["latin"],"category":"handwriting","tags":["cute","swash","round"],"lineNumber":329,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -754,7 +1119,7 @@ exports[`FontResults fires a custom event when a font is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Emilys Candy","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["cute","love"],"lineNumber":367}"
+      font="{"family":"Emilys Candy","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["cute","love"],"lineNumber":367,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -762,7 +1127,7 @@ exports[`FontResults fires a custom event when a font is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Fuzzy Bubbles","variants":["regular","700"],"subsets":["latin","latin-ext","vietnamese"],"category":"handwriting","tags":["cute","kids","playful","handwritten"],"lineNumber":437}"
+      font="{"family":"Fuzzy Bubbles","variants":["regular","700"],"subsets":["latin","latin-ext","vietnamese"],"category":"handwriting","tags":["cute","kids","playful","handwritten"],"lineNumber":437,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -770,7 +1135,7 @@ exports[`FontResults fires a custom event when a font is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Gorditas","variants":["regular","700"],"subsets":["latin"],"category":"display","tags":["love","cute"],"lineNumber":476}"
+      font="{"family":"Gorditas","variants":["regular","700"],"subsets":["latin"],"category":"display","tags":["love","cute"],"lineNumber":476,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -778,7 +1143,7 @@ exports[`FontResults fires a custom event when a font is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Hi Melody","variants":["regular"],"subsets":["korean","latin"],"category":"handwriting","tags":["cute","korean"],"lineNumber":517}"
+      font="{"family":"Hi Melody","variants":["regular"],"subsets":["korean","latin"],"category":"handwriting","tags":["cute","korean"],"lineNumber":517,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -786,7 +1151,7 @@ exports[`FontResults fires a custom event when a font is selected 1`] = `
     
 
     <font-item
-      font="{"family":"Ingrid Darling","variants":["regular"],"subsets":["latin","latin-ext","vietnamese"],"category":"handwriting","tags":["cursive","cute","playful","swirl","whimsical"],"lineNumber":559}"
+      font="{"family":"Ingrid Darling","variants":["regular"],"subsets":["latin","latin-ext","vietnamese"],"category":"handwriting","tags":["cursive","cute","playful","swirl","whimsical"],"lineNumber":559,"variable":false}"
       selectedsubset=""
       selectedtag="cute"
       selectedvariant=""
@@ -822,6 +1187,7 @@ exports[`FontResults fires a next-page custom event 1`] = `
       selectedcategory=""
       selectedsubset=""
       selectedtag=""
+      selectedvariable=""
       selectedvariant=""
     />
   </div>
@@ -832,7 +1198,7 @@ exports[`FontResults fires a next-page custom event 1`] = `
     id="families"
   >
     <font-item
-      font="{"family":"Advent Pro","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["cyrillic","cyrillic-ext","greek","latin","latin-ext"],"category":"sans-serif","tags":["modern"],"lineNumber":12}"
+      font="{"family":"Advent Pro","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["cyrillic","cyrillic-ext","greek","latin","latin-ext"],"category":"sans-serif","tags":["modern"],"lineNumber":12,"variable":true}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -840,7 +1206,7 @@ exports[`FontResults fires a next-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Aguafina Script","variants":["regular"],"subsets":["latin","latin-ext"],"category":"handwriting","tags":["cursive","elegant","script"],"lineNumber":13}"
+      font="{"family":"Aguafina Script","variants":["regular"],"subsets":["latin","latin-ext"],"category":"handwriting","tags":["cursive","elegant","script"],"lineNumber":13,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -848,7 +1214,7 @@ exports[`FontResults fires a next-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Akaya Kanadaka","variants":["regular"],"subsets":["kannada","latin","latin-ext"],"category":"display","tags":[],"lineNumber":14}"
+      font="{"family":"Akaya Kanadaka","variants":["regular"],"subsets":["kannada","latin","latin-ext"],"category":"display","tags":[],"lineNumber":14,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -856,7 +1222,7 @@ exports[`FontResults fires a next-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Akaya Telivigala","variants":["regular"],"subsets":["latin","latin-ext","telugu"],"category":"display","tags":[],"lineNumber":15}"
+      font="{"family":"Akaya Telivigala","variants":["regular"],"subsets":["latin","latin-ext","telugu"],"category":"display","tags":[],"lineNumber":15,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -864,7 +1230,7 @@ exports[`FontResults fires a next-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Akronim","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["brush","lines"],"lineNumber":16}"
+      font="{"family":"Akronim","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["brush","lines"],"lineNumber":16,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -872,7 +1238,7 @@ exports[`FontResults fires a next-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Akshar","variants":["300","regular","500","600","700"],"subsets":["devanagari","latin","latin-ext"],"category":"sans-serif","tags":["condensed","narrow"],"lineNumber":17}"
+      font="{"family":"Akshar","variants":["300","regular","500","600","700"],"subsets":["devanagari","latin","latin-ext"],"category":"sans-serif","tags":["condensed","narrow"],"lineNumber":17,"variable":true}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -880,7 +1246,7 @@ exports[`FontResults fires a next-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Aladin","variants":["regular"],"subsets":["latin","latin-ext"],"category":"handwriting","tags":["art deco"],"lineNumber":18}"
+      font="{"family":"Aladin","variants":["regular"],"subsets":["latin","latin-ext"],"category":"handwriting","tags":["art deco"],"lineNumber":18,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -888,7 +1254,7 @@ exports[`FontResults fires a next-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Alata","variants":["regular"],"subsets":["latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["geometric"],"lineNumber":19}"
+      font="{"family":"Alata","variants":["regular"],"subsets":["latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["geometric"],"lineNumber":19,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -896,7 +1262,7 @@ exports[`FontResults fires a next-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Alatsi","variants":["regular"],"subsets":["cyrillic-ext","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["modern","condensed","geometric"],"lineNumber":20}"
+      font="{"family":"Alatsi","variants":["regular"],"subsets":["cyrillic-ext","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":["modern","condensed","geometric"],"lineNumber":20,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -904,7 +1270,7 @@ exports[`FontResults fires a next-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Albert Sans","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":[],"lineNumber":21}"
+      font="{"family":"Albert Sans","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":[],"lineNumber":21,"variable":true}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -940,6 +1306,7 @@ exports[`FontResults fires a prev-page custom event 1`] = `
       selectedcategory=""
       selectedsubset=""
       selectedtag=""
+      selectedvariable=""
       selectedvariant=""
     />
   </div>
@@ -950,7 +1317,7 @@ exports[`FontResults fires a prev-page custom event 1`] = `
     id="families"
   >
     <font-item
-      font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2}"
+      font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -958,7 +1325,7 @@ exports[`FontResults fires a prev-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3}"
+      font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -966,7 +1333,7 @@ exports[`FontResults fires a prev-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4}"
+      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -974,7 +1341,7 @@ exports[`FontResults fires a prev-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5}"
+      font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -982,7 +1349,7 @@ exports[`FontResults fires a prev-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6}"
+      font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -990,7 +1357,7 @@ exports[`FontResults fires a prev-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7}"
+      font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -998,7 +1365,7 @@ exports[`FontResults fires a prev-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8}"
+      font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1006,7 +1373,7 @@ exports[`FontResults fires a prev-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9}"
+      font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1014,7 +1381,7 @@ exports[`FontResults fires a prev-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10}"
+      font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1022,7 +1389,7 @@ exports[`FontResults fires a prev-page custom event 1`] = `
     
 
     <font-item
-      font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11}"
+      font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1044,7 +1411,7 @@ exports[`FontResults fires a prev-page custom event 1`] = `
 </font-results>
 `;
 
-exports[`FontResults removes all filters 1`] = `
+exports[`FontResults removes all filters: tag, variable, search 1`] = `
 <font-results>
   
             
@@ -1058,6 +1425,7 @@ exports[`FontResults removes all filters 1`] = `
       selectedcategory=""
       selectedsubset=""
       selectedtag=""
+      selectedvariable=""
       selectedvariant=""
     />
   </div>
@@ -1068,7 +1436,7 @@ exports[`FontResults removes all filters 1`] = `
     id="families"
   >
     <font-item
-      font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2}"
+      font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1076,7 +1444,7 @@ exports[`FontResults removes all filters 1`] = `
     
 
     <font-item
-      font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3}"
+      font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1084,7 +1452,7 @@ exports[`FontResults removes all filters 1`] = `
     
 
     <font-item
-      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4}"
+      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1092,7 +1460,7 @@ exports[`FontResults removes all filters 1`] = `
     
 
     <font-item
-      font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5}"
+      font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1100,7 +1468,7 @@ exports[`FontResults removes all filters 1`] = `
     
 
     <font-item
-      font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6}"
+      font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1108,7 +1476,7 @@ exports[`FontResults removes all filters 1`] = `
     
 
     <font-item
-      font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7}"
+      font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1116,7 +1484,7 @@ exports[`FontResults removes all filters 1`] = `
     
 
     <font-item
-      font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8}"
+      font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1124,7 +1492,7 @@ exports[`FontResults removes all filters 1`] = `
     
 
     <font-item
-      font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9}"
+      font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1132,7 +1500,7 @@ exports[`FontResults removes all filters 1`] = `
     
 
     <font-item
-      font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10}"
+      font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1140,7 +1508,7 @@ exports[`FontResults removes all filters 1`] = `
     
 
     <font-item
-      font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11}"
+      font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1176,6 +1544,7 @@ exports[`FontResults removes search filter 1`] = `
       selectedcategory=""
       selectedsubset=""
       selectedtag=""
+      selectedvariable=""
       selectedvariant=""
     />
   </div>
@@ -1186,7 +1555,7 @@ exports[`FontResults removes search filter 1`] = `
     id="families"
   >
     <font-item
-      font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2}"
+      font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1194,7 +1563,7 @@ exports[`FontResults removes search filter 1`] = `
     
 
     <font-item
-      font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3}"
+      font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1202,7 +1571,7 @@ exports[`FontResults removes search filter 1`] = `
     
 
     <font-item
-      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4}"
+      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1210,7 +1579,7 @@ exports[`FontResults removes search filter 1`] = `
     
 
     <font-item
-      font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5}"
+      font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1218,7 +1587,7 @@ exports[`FontResults removes search filter 1`] = `
     
 
     <font-item
-      font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6}"
+      font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1226,7 +1595,7 @@ exports[`FontResults removes search filter 1`] = `
     
 
     <font-item
-      font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7}"
+      font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1234,7 +1603,7 @@ exports[`FontResults removes search filter 1`] = `
     
 
     <font-item
-      font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8}"
+      font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1242,7 +1611,7 @@ exports[`FontResults removes search filter 1`] = `
     
 
     <font-item
-      font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9}"
+      font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1250,7 +1619,7 @@ exports[`FontResults removes search filter 1`] = `
     
 
     <font-item
-      font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10}"
+      font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1258,7 +1627,7 @@ exports[`FontResults removes search filter 1`] = `
     
 
     <font-item
-      font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11}"
+      font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1294,6 +1663,7 @@ exports[`FontResults removes tag 1`] = `
       selectedcategory=""
       selectedsubset=""
       selectedtag=""
+      selectedvariable=""
       selectedvariant=""
     />
   </div>
@@ -1304,7 +1674,7 @@ exports[`FontResults removes tag 1`] = `
     id="families"
   >
     <font-item
-      font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2}"
+      font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1312,7 +1682,7 @@ exports[`FontResults removes tag 1`] = `
     
 
     <font-item
-      font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3}"
+      font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1320,7 +1690,7 @@ exports[`FontResults removes tag 1`] = `
     
 
     <font-item
-      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4}"
+      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1328,7 +1698,7 @@ exports[`FontResults removes tag 1`] = `
     
 
     <font-item
-      font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5}"
+      font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1336,7 +1706,7 @@ exports[`FontResults removes tag 1`] = `
     
 
     <font-item
-      font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6}"
+      font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1344,7 +1714,7 @@ exports[`FontResults removes tag 1`] = `
     
 
     <font-item
-      font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7}"
+      font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1352,7 +1722,7 @@ exports[`FontResults removes tag 1`] = `
     
 
     <font-item
-      font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8}"
+      font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1360,7 +1730,7 @@ exports[`FontResults removes tag 1`] = `
     
 
     <font-item
-      font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9}"
+      font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1368,7 +1738,7 @@ exports[`FontResults removes tag 1`] = `
     
 
     <font-item
-      font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10}"
+      font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1376,7 +1746,126 @@ exports[`FontResults removes tag 1`] = `
     
 
     <font-item
-      font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11}"
+      font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+  </div>
+  
+            
+  <div
+    id="pagination"
+  >
+    <pagination-buttons
+      currentpage="1"
+      pagesize="10"
+      resultslength="1497"
+    />
+  </div>
+  
+          
+</font-results>
+`;
+
+exports[`FontResults removes variable filter 1`] = `
+<font-results>
+  
+            
+  <div
+    id="search-status"
+  >
+    <search-status
+      class="search-status"
+      resultslength="1497"
+      search=""
+      selectedcategory=""
+      selectedsubset=""
+      selectedtag=""
+      selectedvariable=""
+      selectedvariant=""
+    />
+  </div>
+  
+            
+  <div
+    class="families"
+    id="families"
+  >
+    <font-item
+      font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10,"variable":false}"
+      selectedsubset=""
+      selectedtag=""
+      selectedvariant=""
+    />
+    
+
+    <font-item
+      font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1412,6 +1901,7 @@ exports[`FontResults renders correctly 1`] = `
       selectedcategory=""
       selectedsubset=""
       selectedtag=""
+      selectedvariable=""
       selectedvariant=""
     />
   </div>
@@ -1422,7 +1912,7 @@ exports[`FontResults renders correctly 1`] = `
     id="families"
   >
     <font-item
-      font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2}"
+      font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1430,7 +1920,7 @@ exports[`FontResults renders correctly 1`] = `
     
 
     <font-item
-      font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3}"
+      font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1438,7 +1928,7 @@ exports[`FontResults renders correctly 1`] = `
     
 
     <font-item
-      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4}"
+      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1446,7 +1936,7 @@ exports[`FontResults renders correctly 1`] = `
     
 
     <font-item
-      font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5}"
+      font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1454,7 +1944,7 @@ exports[`FontResults renders correctly 1`] = `
     
 
     <font-item
-      font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6}"
+      font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1462,7 +1952,7 @@ exports[`FontResults renders correctly 1`] = `
     
 
     <font-item
-      font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7}"
+      font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1470,7 +1960,7 @@ exports[`FontResults renders correctly 1`] = `
     
 
     <font-item
-      font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8}"
+      font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1478,7 +1968,7 @@ exports[`FontResults renders correctly 1`] = `
     
 
     <font-item
-      font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9}"
+      font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1486,7 +1976,7 @@ exports[`FontResults renders correctly 1`] = `
     
 
     <font-item
-      font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10}"
+      font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1494,7 +1984,7 @@ exports[`FontResults renders correctly 1`] = `
     
 
     <font-item
-      font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11}"
+      font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1530,6 +2020,7 @@ exports[`FontResults selects need tags tag 1`] = `
       selectedcategory=""
       selectedsubset=""
       selectedtag="need tags"
+      selectedvariable=""
       selectedvariant=""
     />
   </div>
@@ -1540,7 +2031,7 @@ exports[`FontResults selects need tags tag 1`] = `
     id="families"
   >
     <font-item
-      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4}"
+      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4,"variable":false}"
       selectedsubset=""
       selectedtag="need tags"
       selectedvariant=""
@@ -1548,7 +2039,7 @@ exports[`FontResults selects need tags tag 1`] = `
     
 
     <font-item
-      font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7}"
+      font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false}"
       selectedsubset=""
       selectedtag="need tags"
       selectedvariant=""
@@ -1556,7 +2047,7 @@ exports[`FontResults selects need tags tag 1`] = `
     
 
     <font-item
-      font="{"family":"Akaya Kanadaka","variants":["regular"],"subsets":["kannada","latin","latin-ext"],"category":"display","tags":[],"lineNumber":14}"
+      font="{"family":"Akaya Kanadaka","variants":["regular"],"subsets":["kannada","latin","latin-ext"],"category":"display","tags":[],"lineNumber":14,"variable":false}"
       selectedsubset=""
       selectedtag="need tags"
       selectedvariant=""
@@ -1564,7 +2055,7 @@ exports[`FontResults selects need tags tag 1`] = `
     
 
     <font-item
-      font="{"family":"Akaya Telivigala","variants":["regular"],"subsets":["latin","latin-ext","telugu"],"category":"display","tags":[],"lineNumber":15}"
+      font="{"family":"Akaya Telivigala","variants":["regular"],"subsets":["latin","latin-ext","telugu"],"category":"display","tags":[],"lineNumber":15,"variable":false}"
       selectedsubset=""
       selectedtag="need tags"
       selectedvariant=""
@@ -1572,7 +2063,7 @@ exports[`FontResults selects need tags tag 1`] = `
     
 
     <font-item
-      font="{"family":"Albert Sans","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":[],"lineNumber":21}"
+      font="{"family":"Albert Sans","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":[],"lineNumber":21,"variable":true}"
       selectedsubset=""
       selectedtag="need tags"
       selectedvariant=""
@@ -1580,7 +2071,7 @@ exports[`FontResults selects need tags tag 1`] = `
     
 
     <font-item
-      font="{"family":"Aleo","variants":["300","300italic","regular","italic","700","700italic"],"subsets":["latin","latin-ext"],"category":"serif","tags":[],"lineNumber":28}"
+      font="{"family":"Aleo","variants":["300","300italic","regular","italic","700","700italic"],"subsets":["latin","latin-ext"],"category":"serif","tags":[],"lineNumber":28,"variable":false}"
       selectedsubset=""
       selectedtag="need tags"
       selectedvariant=""
@@ -1588,7 +2079,7 @@ exports[`FontResults selects need tags tag 1`] = `
     
 
     <font-item
-      font="{"family":"Alexandria","variants":["100","200","300","regular","500","600","700","800","900"],"subsets":["arabic","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":[],"lineNumber":30}"
+      font="{"family":"Alexandria","variants":["100","200","300","regular","500","600","700","800","900"],"subsets":["arabic","latin","latin-ext","vietnamese"],"category":"sans-serif","tags":[],"lineNumber":30,"variable":true}"
       selectedsubset=""
       selectedtag="need tags"
       selectedvariant=""
@@ -1596,7 +2087,7 @@ exports[`FontResults selects need tags tag 1`] = `
     
 
     <font-item
-      font="{"family":"Alkalami","variants":["regular"],"subsets":["arabic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":35}"
+      font="{"family":"Alkalami","variants":["regular"],"subsets":["arabic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":35,"variable":false}"
       selectedsubset=""
       selectedtag="need tags"
       selectedvariant=""
@@ -1604,7 +2095,7 @@ exports[`FontResults selects need tags tag 1`] = `
     
 
     <font-item
-      font="{"family":"Amiri Quran","variants":["regular"],"subsets":["arabic","latin"],"category":"serif","tags":[],"lineNumber":55}"
+      font="{"family":"Amiri Quran","variants":["regular"],"subsets":["arabic","latin"],"category":"serif","tags":[],"lineNumber":55,"variable":false}"
       selectedsubset=""
       selectedtag="need tags"
       selectedvariant=""
@@ -1612,7 +2103,7 @@ exports[`FontResults selects need tags tag 1`] = `
     
 
     <font-item
-      font="{"family":"Andada Pro","variants":["regular","500","600","700","800","italic","500italic","600italic","700italic","800italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"serif","tags":[],"lineNumber":58}"
+      font="{"family":"Andada Pro","variants":["regular","500","600","700","800","italic","500italic","600italic","700italic","800italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"serif","tags":[],"lineNumber":58,"variable":true}"
       selectedsubset=""
       selectedtag="need tags"
       selectedvariant=""
@@ -1648,6 +2139,7 @@ exports[`FontResults skips unknown tag in search query 1`] = `
       selectedcategory=""
       selectedsubset=""
       selectedtag=""
+      selectedvariable=""
       selectedvariant=""
     />
   </div>
@@ -1658,7 +2150,7 @@ exports[`FontResults skips unknown tag in search query 1`] = `
     id="families"
   >
     <font-item
-      font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2}"
+      font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1666,7 +2158,7 @@ exports[`FontResults skips unknown tag in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3}"
+      font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1674,7 +2166,7 @@ exports[`FontResults skips unknown tag in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4}"
+      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1682,7 +2174,7 @@ exports[`FontResults skips unknown tag in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5}"
+      font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1690,7 +2182,7 @@ exports[`FontResults skips unknown tag in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6}"
+      font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1698,7 +2190,7 @@ exports[`FontResults skips unknown tag in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7}"
+      font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1706,7 +2198,7 @@ exports[`FontResults skips unknown tag in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8}"
+      font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1714,7 +2206,7 @@ exports[`FontResults skips unknown tag in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9}"
+      font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1722,7 +2214,7 @@ exports[`FontResults skips unknown tag in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10}"
+      font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""
@@ -1730,7 +2222,7 @@ exports[`FontResults skips unknown tag in search query 1`] = `
     
 
     <font-item
-      font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11}"
+      font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11,"variable":false}"
       selectedsubset=""
       selectedtag=""
       selectedvariant=""

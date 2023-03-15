@@ -119,6 +119,9 @@ function arraysEqual(a1, a2) {
 }
 
 function combineLibraries(remoteFonts, local) {
+  const variableFonts = JSON.parse(
+    readFileSync("./data/variable-fonts.json", "utf-8")
+  );
   const combineLibrary = [];
   for (const [
     index,
@@ -131,6 +134,7 @@ function combineLibraries(remoteFonts, local) {
       category,
       tags: local[family] || [],
       lineNumber: index + 2,
+      variable: variableFonts.includes(family),
     });
   }
 

@@ -12,18 +12,18 @@ class SearchStatus extends HTMLElement {
     const selectedVariant = this.getAttribute("selectedVariant");
     const search = this.getAttribute("search");
     const resultsLength = this.getAttribute("resultsLength");
+    const selectedVariable = this.getAttribute("selectedVariable") === "true";
 
     const hasFilters =
       selectedCategory ||
       selectedTag ||
       selectedSubset ||
       selectedVariant ||
+      selectedVariable ||
       search;
 
     const elm = [
-      `<div>Found ${resultsLength} fonts ${
-        hasFilters ? (selectedTag === "need tags" ? "that" : "for") : ""
-      }</div>`,
+      `<div>Found ${resultsLength} fonts${hasFilters ? ": " : ""}</div>`,
     ];
 
     const filterTags = {
@@ -32,11 +32,16 @@ class SearchStatus extends HTMLElement {
       subset: selectedSubset,
       variant: selectedVariant,
       search: search,
+      variable: selectedVariable,
     };
 
     for (const [key, value] of Object.entries(filterTags)) {
       if (value) {
-        elm.push(this.filterTag(key, value));
+        elm.push(
+          `<div class="search-filter">${key}${
+            key === "variable" ? "" : `: <strong>${value}</strong>`
+          }<clear-button aria-label="remove ${key}" value="${key}">${iconClose}</clear-button></div>`
+        );
       }
     }
 
@@ -47,10 +52,6 @@ class SearchStatus extends HTMLElement {
     }
 
     this.innerHTML = `${elm.join("\n")}`;
-  }
-
-  filterTag(param: string, value: string) {
-    return `<div class="search-filter">${param}: <strong>${value}</strong><clear-button aria-label="remove ${param}" value="${param}">${iconClose}</clear-button></div>`;
   }
 }
 
