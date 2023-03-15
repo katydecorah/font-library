@@ -39,7 +39,7 @@ class SearchStatus extends HTMLElement {
       if (value) {
         elm.push(
           `<div class="search-filter">${key}${
-            selectedVariable ? "" : `: <strong>${value}</strong>`
+            key === "variable" ? "" : `: <strong>${value}</strong>`
           }<clear-button aria-label="remove ${key}" value="${key}">${iconClose}</clear-button></div>`
         );
       }
