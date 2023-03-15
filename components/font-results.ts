@@ -28,6 +28,11 @@ const filters = [
     param: "search",
     selectVar: "search",
   },
+  {
+    select: "#checkbox-variable",
+    param: "variable",
+    selectVar: "selectedVariable",
+  },
 ];
 
 class FontResults extends HTMLElement {
@@ -39,6 +44,8 @@ class FontResults extends HTMLElement {
   resultsLength: number;
   pageSize: number;
   curPage: number;
+  selectedVariable: boolean;
+
   constructor() {
     super();
 
@@ -50,6 +57,7 @@ class FontResults extends HTMLElement {
     this.resultsLength;
     this.pageSize = 10;
     this.curPage = 1;
+    this.selectedVariable;
 
     // Event listeners
     this.addEventListener("tag-button-selected", (e: CustomEvent) =>
@@ -99,18 +107,29 @@ class FontResults extends HTMLElement {
   getUrlParams(param: string, selectVar: string, selectElement: string) {
     const urlParams = new URLSearchParams(window.location.search);
     if (!urlParams.has(param)) return;
-    let newValue = urlParams.get(param);
+    let newValue: string = urlParams.get(param);
     newValue = newValue.replace(/[^a-zA-Z0-9\- ]/g, "");
 
-    const elm = document.querySelector(selectElement) as HTMLSelectElement;
-    // if value doesn't exist in select, return
-    if (!elm.options.namedItem(newValue)) {
-      return;
+    const elm = document.querySelector(selectElement) as
+      | HTMLSelectElement
+      | HTMLInputElement;
+
+    if (elm instanceof HTMLSelectElement) {
+      if (!elm.options.namedItem(newValue)) return;
+      Object.assign(this, {
+        [selectVar]: newValue,
+      });
+      elm.value = newValue;
     }
-    Object.assign(this, {
-      [selectVar]: newValue,
-    });
-    elm.value = newValue;
+
+    if (elm instanceof HTMLInputElement) {
+      const checked = newValue === "true" ? true : false;
+      Object.assign(this, {
+        [selectVar]: checked,
+      });
+      elm.checked = checked;
+    }
+
     if (selectElement === "#select-tags") {
       this.setRadio(newValue);
     }
@@ -124,9 +143,14 @@ class FontResults extends HTMLElement {
     radio.checked = true;
   }
 
-  setUrlParams(param: string, value: string) {
+  setUrlParams(param: string, value: string | boolean) {
     const urlParams = new URLSearchParams(window.location.search);
-    urlParams.set(param, value);
+    // only set variable if it's true
+    if (param === "variable" && value === false) {
+      urlParams.delete(param);
+    } else {
+      urlParams.set(param, value.toString());
+    }
     window.history.replaceState(
       {},
       "",
@@ -149,7 +173,17 @@ class FontResults extends HTMLElement {
       Object.assign(this, {
         [selectVar]: "",
       });
-      (document.querySelector(select) as HTMLSelectElement).value = "";
+
+      const elm = document.querySelector(select) as
+        | HTMLInputElement
+        | HTMLSelectElement;
+
+      if (elm.value) {
+        elm.value = "";
+      }
+      if (elm instanceof HTMLInputElement && elm.checked) {
+        elm.checked = false;
+      }
     }
     // Reset radio buttons
     this.resetRadioTags();
@@ -162,7 +196,17 @@ class FontResults extends HTMLElement {
     Object.assign(this, {
       [selectVar]: "",
     });
-    (document.querySelector(select) as HTMLSelectElement).value = "";
+    const elm = document.querySelector(select) as
+      | HTMLInputElement
+      | HTMLSelectElement;
+
+    if (elm.value) {
+      elm.value = "";
+    }
+    if (elm instanceof HTMLInputElement && elm.checked) {
+      elm.checked = false;
+    }
+
     const urlParams = new URLSearchParams(window.location.search);
     urlParams.delete(filter);
     window.history.replaceState(
@@ -178,8 +222,8 @@ class FontResults extends HTMLElement {
   resetRadioTags() {
     // Reset radio buttons
     const radios = document.querySelectorAll("[name='tag']");
-    radios.forEach((radio) => {
-      (radio as HTMLInputElement).checked = false;
+    radios.forEach((radio: HTMLInputElement) => {
+      radio.checked = false;
     });
   }
 
@@ -218,6 +262,12 @@ class FontResults extends HTMLElement {
       });
     }
 
+    if (this.selectedVariable === true) {
+      filteredData = filteredData.filter((row) => {
+        return row.variable;
+      });
+    }
+
     this.resultsLength = filteredData.length;
     return filteredData.filter((row, index) => {
       const start = (this.curPage - 1) * this.pageSize;
@@ -250,12 +300,15 @@ class FontResults extends HTMLElement {
       selectedCategory,
       selectedSubset,
       selectedVariant,
+      selectedVariable,
       resultsLength,
       search,
     } = this;
     this.querySelector(
       "#search-status"
-    ).innerHTML = `<search-status class="search-status" resultsLength="${resultsLength}" selectedCategory="${selectedCategory}" selectedTag="${selectedTag}" selectedSubset="${selectedSubset}" selectedVariant="${selectedVariant}" search="${search}"></search-status>`;
+    ).innerHTML = `<search-status class="search-status" resultsLength="${resultsLength}" selectedCategory="${selectedCategory}" selectedTag="${selectedTag}" selectedSubset="${selectedSubset}" selectedVariant="${selectedVariant}" search="${search}" selectedVariable="${
+      selectedVariable === true ? "true" : ""
+    }"></search-status>`;
   }
 
   renderPagination() {
@@ -296,7 +349,12 @@ class FontResults extends HTMLElement {
   }
 
   handleFilter({ target }: Event, selectVar: string, param: string) {
-    const newValue = (target as HTMLSelectElement).value;
+    const elm = target as HTMLInputElement | HTMLSelectElement;
+    const newValue =
+      elm.type === "checkbox"
+        ? (target as HTMLInputElement).checked
+        : (target as HTMLSelectElement).value;
+
     Object.assign(this, {
       [selectVar]: newValue,
     });

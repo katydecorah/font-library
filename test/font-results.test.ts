@@ -9,16 +9,12 @@ const body = html.match(/<body>(.*)<\/body>/s)[1];
 
 describe("FontResults", () => {
   let fontResults: HTMLElement;
+
   beforeAll(() => {
     window.HTMLElement.prototype.scrollIntoView = jest.fn();
   });
 
   beforeEach(() => {
-    document.body.innerHTML = body;
-    fontResults = document.querySelector("font-results");
-  });
-
-  afterEach(() => {
     const location = {
       ...window.location,
       search: "",
@@ -27,6 +23,9 @@ describe("FontResults", () => {
       writable: true,
       value: location,
     });
+    window.history.replaceState = jest.fn();
+    document.body.innerHTML = body;
+    fontResults = document.querySelector("font-results");
   });
 
   test("renders correctly", () => {
@@ -130,17 +129,33 @@ describe("FontResults", () => {
     expect(fontResults).toMatchSnapshot();
   });
 
-  test("removes all filters", async () => {
-    // add tag first
+  test("removes variable filter", async () => {
+    const checkboxVariable: HTMLInputElement =
+      document.querySelector("#checkbox-variable");
+    await userEvent.click(checkboxVariable);
+
     fontResults.dispatchEvent(
-      new CustomEvent("tag-button-selected", {
-        detail: { tag: "cute" },
+      new CustomEvent("clear-filter", {
+        detail: { filter: "variable" },
       })
     );
 
+    expect(fontResults).toMatchSnapshot();
+  });
+
+  test("removes all filters: tag, variable, search", async () => {
+    fontResults.dispatchEvent(
+      new CustomEvent("tag-button-selected", {
+        detail: { tag: "modern" },
+      })
+    );
+    const checkboxVariable: HTMLInputElement =
+      document.querySelector("#checkbox-variable");
+    await userEvent.click(checkboxVariable);
+
     const inputSearch: HTMLInputElement =
       document.querySelector("#input-search");
-    await userEvent.type(inputSearch, "are you serious");
+    await userEvent.type(inputSearch, "cairo");
 
     fontResults.dispatchEvent(
       new CustomEvent("clear-filter", {
@@ -194,6 +209,58 @@ describe("FontResults", () => {
       document.querySelector("#select-tags");
     await userEvent.selectOptions(selectedTag, "outline");
 
+    expect(fontResults).toMatchSnapshot();
+  });
+
+  test("filters fonts when variable is checked and then unchecked", async () => {
+    const checkboxVariable: HTMLInputElement =
+      document.querySelector("#checkbox-variable");
+    await userEvent.click(checkboxVariable);
+    expect(window.history.replaceState).toHaveBeenNthCalledWith(
+      1,
+      {},
+      "",
+      "/?variable=true"
+    );
+    expect(fontResults).toMatchSnapshot();
+
+    // uncheck
+    await userEvent.click(checkboxVariable);
+    expect(window.history.replaceState).toHaveBeenNthCalledWith(
+      2,
+      {},
+      "",
+      "/?"
+    );
+  });
+
+  test("filters based on variable=true in query string", async () => {
+    const location = {
+      ...window.location,
+      search: "?variable=true",
+    };
+    Object.defineProperty(window, "location", {
+      writable: true,
+      value: location,
+    });
+
+    document.body.innerHTML = body;
+    fontResults = document.querySelector("font-results");
+    expect(fontResults).toMatchSnapshot();
+  });
+
+  test("does nothing when variable=false in query string", async () => {
+    const location = {
+      ...window.location,
+      search: "?variable=false",
+    };
+    Object.defineProperty(window, "location", {
+      writable: true,
+      value: location,
+    });
+
+    document.body.innerHTML = body;
+    fontResults = document.querySelector("font-results");
     expect(fontResults).toMatchSnapshot();
   });
 });

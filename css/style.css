@@ -213,6 +213,10 @@ select {
   color: var(--text-color);
 }
 
+input[type="checkbox"] {
+  accent-color: var(--accent);
+}
+
 input[type="text"] {
   border: 1px solid #e9e6d5;
   border-radius: 3px;
@@ -226,6 +230,9 @@ input[type="text"] {
   font-weight: bold;
   font-size: 12px;
   text-transform: uppercase;
+  display: flex;
+  grid-gap: 0.5em;
+  align-items: center;
 }
 
 .screen-reader-only {
