@@ -263,9 +263,7 @@ class FontResults extends HTMLElement {
     }
 
     if (this.selectedVariable === true) {
-      filteredData = filteredData.filter((row) => {
-        return row.variable;
-      });
+      filteredData = filteredData.filter((row) => row.variable);
     }
 
     this.resultsLength = filteredData.length;
@@ -304,11 +302,10 @@ class FontResults extends HTMLElement {
       resultsLength,
       search,
     } = this;
+    const strSelectedVariable = selectedVariable ? "true" : "";
     this.querySelector(
       "#search-status"
-    ).innerHTML = `<search-status class="search-status" resultsLength="${resultsLength}" selectedCategory="${selectedCategory}" selectedTag="${selectedTag}" selectedSubset="${selectedSubset}" selectedVariant="${selectedVariant}" search="${search}" selectedVariable="${
-      selectedVariable === true ? "true" : ""
-    }"></search-status>`;
+    ).innerHTML = `<search-status class="search-status" resultsLength="${resultsLength}" selectedCategory="${selectedCategory}" selectedTag="${selectedTag}" selectedSubset="${selectedSubset}" selectedVariant="${selectedVariant}" search="${search}" selectedVariable="${strSelectedVariable}"></search-status>`;
   }
 
   renderPagination() {
