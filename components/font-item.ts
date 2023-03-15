@@ -1,6 +1,6 @@
-import sampleSubsets from "./samples.json";
-import rtlSubsets from "./rtl.json";
-import swaps from "./swaps.json";
+import sampleSubsets from "../data/samples.json";
+import rtlSubsets from "../data/rtl.json";
+import swaps from "../data/swaps.json";
 
 export type SampleSubsets = typeof sampleSubsets;
 export type RtlSubsets = typeof rtlSubsets;

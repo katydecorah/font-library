@@ -1,5 +1,5 @@
 // https://www.raymondcamden.com/2022/05/23/building-table-sorting-and-pagination-in-a-web-component
-import generatedData from "./data.json";
+import generatedData from "../data/data.json";
 export type GeneratedData = typeof generatedData;
 
 const filters = [
