@@ -465,8 +465,3 @@ clear-button svg {
     display: none;
   }
 }
-
-icon-close {
-  display: flex;
-  align-items: center;
-}
