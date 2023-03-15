@@ -31,7 +31,7 @@ class FontItem extends HTMLElement {
     this.selectedVariant = selectedVariant;
     this.subset = this.selectedSubset;
 
-    const font = fontString ? JSON.parse(fontString) : {};
+    const font = JSON.parse(fontString);
     const { family, category, variants, subsets, lineNumber, tags, slug, id } =
       font;
     const previewName = this.subsetFamily(font);
@@ -115,7 +115,7 @@ class FontItem extends HTMLElement {
     let font = slug;
 
     const hasItalic = this.selectedVariant.includes("italic");
-    const variantNumber = this.selectedVariant.match(/\d+/g); // get number form selectedVariant
+    const variantNumber = this.selectedVariant.match(/\d+/g); // get number from selectedVariant
 
     if (this.selectedVariant && this.selectedVariant !== "regular") {
       const variants = [];
@@ -124,9 +124,6 @@ class FontItem extends HTMLElement {
       }
       if (variantNumber && variantNumber[0]) {
         variants.push(`wght@${hasItalic ? "1," : ""}${variantNumber[0]}`);
-      }
-      if (this.selectedVariant === "italic") {
-        variants.push(`wght@1,400`);
       }
       font += `:${variants.join(",")}`;
     }
@@ -177,12 +174,6 @@ class FontItem extends HTMLElement {
     ) {
       this.subset = subsets[0];
       return sampleSubsets[subsets[0] as keyof SampleSubsets];
-    }
-    if (
-      !subsets.includes("latin") &&
-      !sampleSubsets[subsets[0] as keyof SampleSubsets]
-    ) {
-      return "";
     }
     return family;
   }

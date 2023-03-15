@@ -94,13 +94,44 @@ describe("FontItem", () => {
     `);
   });
 
-  test("selected variant", () => {
+  test("selected variant, 900italic", () => {
     document.body.innerHTML = `<font-item selectedVariant="900italic" selectedSubset="" font='{"family":"Anybody","slug":"Anybody","id":"anybody","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["eurostile"],"lineNumber":78}'></font-item>`;
     const fontItem = document.querySelector("font-item").innerHTML;
     expect(fontItem).toMatchInlineSnapshot(`
       "<div id="family-anybody" class="family">
           <div class="family-link">
             <div id="family-name" class="family-title anybody" style="font-family: 'Anybody';font-style: italic;">
+              Anybody
+            </div>
+            <div class="family-meta-container">
+           <span class="family-title-small"></span>
+            <div class="family-meta">
+              <span>display</span>
+              •
+              <span aria-label="100, 200, 300, regular, 500, 600, 700, 800, 900, 100italic, 200italic, 300italic, italic, 500italic, 600italic, 700italic, 800italic, 900italic">18 variants</span>
+              •
+              <span aria-label="latin, latin-ext, vietnamese">3 subsets</span>
+            </div>
+            </div>
+          </div>
+          <div class="family-tags">
+            <div class="family-tags-container"><tag-button selectedtag="null" value="eurostile">eurostile</tag-button></div>
+            <div class="family-meta-links">
+              <a href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L78" target="_blank" aria-label="Edit tags for Anybody">Edit tags</a>
+              <a href="https://fonts.google.com/specimen/Anybody" target="_blank" aria-label="Visit Anybody on Google Fonts">Google Fonts →</a>
+            </div>
+          </div>
+        </div>"
+    `);
+  });
+
+  test("selected variant, 900", () => {
+    document.body.innerHTML = `<font-item selectedVariant="900" selectedSubset="" font='{"family":"Anybody","slug":"Anybody","id":"anybody","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["eurostile"],"lineNumber":78}'></font-item>`;
+    const fontItem = document.querySelector("font-item").innerHTML;
+    expect(fontItem).toMatchInlineSnapshot(`
+      "<div id="family-anybody" class="family">
+          <div class="family-link">
+            <div id="family-name" class="family-title anybody" style="font-family: 'Anybody';">
               Anybody
             </div>
             <div class="family-meta-container">
@@ -153,6 +184,128 @@ describe("FontItem", () => {
             </div>
           </div>
         </div>"
+    `);
+  });
+
+  test("has family name that exists in swaps.json", () => {
+    document.body.innerHTML = `<font-item selectedVariant="" selectedSubset="" font='{"family":"Material Symbols Sharp","slug":"Material+Symbols+Sharp","id":"material-symbols-sharp","variants":["100","200","300","regular","500","600","700"],"subsets":["latin"],"category":"monospace","tags":[],"lineNumber":752}'></font-item>`;
+    const fontItem = document.querySelector("font-item");
+    expect(fontItem).toMatchInlineSnapshot(`
+      <font-item
+        font="{"family":"Material Symbols Sharp","slug":"Material+Symbols+Sharp","id":"material-symbols-sharp","variants":["100","200","300","regular","500","600","700"],"subsets":["latin"],"category":"monospace","tags":[],"lineNumber":752}"
+        selectedsubset=""
+        selectedvariant=""
+      >
+        <div
+          class="family"
+          id="family-material-symbols-sharp"
+        >
+          
+          
+          <div
+            class="family-link"
+          >
+            
+            
+            <div
+              class="family-title material-symbols-sharp"
+              id="family-name"
+              style="font-family: 'Material Symbols Sharp';"
+            >
+              
+              favorite add delete settings search
+            
+            </div>
+            
+            
+            <div
+              class="family-meta-container"
+            >
+              
+           
+              <span
+                class="family-title-small"
+              >
+                Material Symbols Sharp
+              </span>
+              
+            
+              <div
+                class="family-meta"
+              >
+                
+              
+                <span>
+                  monospace
+                </span>
+                
+              •
+              
+                <span
+                  aria-label="100, 200, 300, regular, 500, 600, 700"
+                >
+                  7 variants
+                </span>
+                
+              •
+              
+                <span
+                  aria-label="latin"
+                >
+                  1 subsets
+                </span>
+                
+            
+              </div>
+              
+            
+            </div>
+            
+          
+          </div>
+          
+          
+          <div
+            class="family-tags"
+          >
+            
+            
+            <div
+              class="family-tags-container"
+            />
+            
+            
+            <div
+              class="family-meta-links"
+            >
+              
+              
+              <a
+                aria-label="Edit tags for Material Symbols Sharp"
+                href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L752"
+                target="_blank"
+              >
+                Edit tags
+              </a>
+              
+              
+              <a
+                aria-label="Visit Material Symbols Sharp on Google Fonts"
+                href="https://fonts.google.com/specimen/Material+Symbols+Sharp"
+                target="_blank"
+              >
+                Google Fonts →
+              </a>
+              
+            
+            </div>
+            
+          
+          </div>
+          
+        
+        </div>
+      </font-item>
     `);
   });
 });
