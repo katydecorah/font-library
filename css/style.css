@@ -185,6 +185,8 @@ header {
 
   .results {
     width: 500px;
+    flex-grow: 1;
+    max-width: 675px;
   }
 
   .select-group-container {
