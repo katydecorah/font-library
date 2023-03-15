@@ -7,7 +7,6 @@ export type RtlSubsets = typeof rtlSubsets;
 export type Swaps = typeof swaps;
 
 class FontItem extends HTMLElement {
-  slug: string;
   family: string;
   category: string;
   variants: string[];
@@ -17,6 +16,8 @@ class FontItem extends HTMLElement {
   selectedSubset: string;
   subset: string;
   selectedVariant: string;
+  id: string;
+  slug: string;
 
   constructor() {
     super();
@@ -32,17 +33,20 @@ class FontItem extends HTMLElement {
     this.subset = this.selectedSubset;
 
     const font = JSON.parse(fontString);
-    const { family, category, variants, subsets, lineNumber, tags, slug, id } =
-      font;
+    const { family, category, variants, subsets, lineNumber, tags } = font;
+    this.id = family.toLowerCase().replace(/ /g, "-");
+    this.slug = family.replace(/ /g, "+");
     const previewName = this.subsetFamily(font);
 
     this.addFontToHead({ previewName, ...font });
 
     const familyStyle = this.familyStyle({ previewName, ...font });
 
-    this.innerHTML = `<div id="family-${id}" class="family">
+    this.innerHTML = `<div id="family-${this.id}" class="family">
     <div class="family-link">
-      <div id="family-name" class="family-title ${id}" style="${familyStyle}">
+      <div id="family-name" class="family-title ${
+        this.id
+      }" style="${familyStyle}">
         ${previewName}
       </div>
       <div class="family-meta-container">
@@ -77,7 +81,7 @@ class FontItem extends HTMLElement {
           >Edit tags</a
         >
         <a
-          href="https://fonts.google.com/specimen/${slug}"
+          href="https://fonts.google.com/specimen/${this.slug}"
           target="_blank"
           aria-label="Visit ${family} on Google Fonts"
           >Google Fonts &rarr;</a
@@ -90,29 +94,21 @@ class FontItem extends HTMLElement {
   addFontToHead({
     previewName,
     family,
-    slug,
   }: {
     previewName: string;
     family: string;
-    slug: string;
   }): void {
     const googleFont = document.createElement("link");
     googleFont.href = `https://fonts.googleapis.com/css2?family=${this.fontCall(
-      { previewName, slug }
+      { previewName }
     )}`;
     googleFont.rel = "stylesheet";
     googleFont.setAttribute("data-family", family);
     document.head.appendChild(googleFont);
   }
 
-  fontCall({
-    previewName,
-    slug,
-  }: {
-    previewName: string;
-    slug: string;
-  }): string {
-    let font = slug;
+  fontCall({ previewName }: { previewName: string }): string {
+    let font = this.slug;
 
     const hasItalic = this.selectedVariant.includes("italic");
     const variantNumber = this.selectedVariant.match(/\d+/g); // get number from selectedVariant
