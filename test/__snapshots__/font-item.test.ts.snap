@@ -119,6 +119,136 @@ exports[`FontItem has family name that exists in swaps.json 1`] = `
 </font-item>
 `;
 
+exports[`FontItem is variable font 1`] = `
+<font-item
+  font="{"family":"Akshar","variants":["300","regular","500","600","700"],"subsets":["devanagari","latin","latin-ext"],"category":"sans-serif","tags":["condensed","narrow"],"lineNumber":17,"variable":true}"
+  id="akshar"
+  selectedsubset=""
+  selectedvariant=""
+>
+  <div
+    class="family"
+    id="family-akshar"
+  >
+    
+    
+    <div
+      class="family-link"
+    >
+      
+      
+      <div
+        class="family-title akshar"
+        id="family-name"
+        style="font-family: 'Akshar';"
+      >
+        
+        Akshar
+      
+      </div>
+      
+      
+      <div
+        class="family-meta-container"
+      >
+        
+     
+        <span
+          class="family-title-small"
+        />
+        
+      
+        <div
+          class="family-meta"
+        >
+          
+        
+          <span>
+            sans-serif
+          </span>
+          
+        •
+        
+          <span
+            aria-label="300, regular, 500, 600, 700"
+          >
+            5 variants (variable)
+          </span>
+          
+        •
+        
+          <span
+            aria-label="devanagari, latin, latin-ext"
+          >
+            3 subsets
+          </span>
+          
+      
+        </div>
+        
+      
+      </div>
+      
+    
+    </div>
+    
+    
+    <div
+      class="family-tags"
+    >
+      
+      
+      <div
+        class="family-tags-container"
+      >
+        <tag-button
+          selectedtag="null"
+          value="condensed"
+        >
+          condensed
+        </tag-button>
+        <tag-button
+          selectedtag="null"
+          value="narrow"
+        >
+          narrow
+        </tag-button>
+      </div>
+      
+      
+      <div
+        class="family-meta-links"
+      >
+        
+        
+        <a
+          aria-label="Edit tags for Akshar"
+          href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L17"
+          target="_blank"
+        >
+          Edit tags
+        </a>
+        
+        
+        <a
+          aria-label="Visit Akshar on Google Fonts"
+          href="https://fonts.google.com/specimen/Akshar"
+          target="_blank"
+        >
+          Google Fonts →
+        </a>
+        
+      
+      </div>
+      
+    
+    </div>
+    
+  
+  </div>
+</font-item>
+`;
+
 exports[`FontItem no latin subset 1`] = `
 <font-item
   font="{"family":"GFS Neohellenic","variants":["regular","italic","700","700italic"],"subsets":["greek"],"category":"sans-serif","tags":["round","monolinear","1930s"],"lineNumber":439}"
