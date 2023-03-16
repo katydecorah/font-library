@@ -42,4 +42,10 @@ describe("FontItem", () => {
     const fontItem = document.querySelector("font-item");
     expect(fontItem).toMatchSnapshot();
   });
+
+  test("is variable font", () => {
+    document.body.innerHTML = `<font-item selectedVariant="" selectedSubset="" font='{"family":"Akshar","variants":["300","regular","500","600","700"],"subsets":["devanagari","latin","latin-ext"],"category":"sans-serif","tags":["condensed","narrow"],"lineNumber":17,"variable":true}'></font-item>`;
+    const fontItem = document.querySelector("font-item");
+    expect(fontItem).toMatchSnapshot();
+  });
 });

@@ -33,7 +33,8 @@ class FontItem extends HTMLElement {
     this.subset = this.selectedSubset;
 
     const font = JSON.parse(fontString);
-    const { family, category, variants, subsets, lineNumber, tags } = font;
+    const { family, category, variants, subsets, lineNumber, tags, variable } =
+      font;
     this.id = family.toLowerCase().replace(/ /g, "-");
     this.slug = family.replace(/ /g, "+");
     const previewName = this.subsetFamily(font);
@@ -57,7 +58,7 @@ class FontItem extends HTMLElement {
         <span>${category}</span>
         &bull;
         <span aria-label="${variants.join(", ")}"
-          >${variants.length} variants</span
+          >${variants.length} variants${variable ? " (variable)" : ""}</span
         >
         &bull;
         <span aria-label="${subsets.join(", ")}">${
