@@ -2136,25 +2136,20 @@ exports[`MainApp renders correctly 1`] = `
         selected-variable="undefined"
         selected-variant=""
       >
-        <div
-          id="search-status"
-        >
-          <search-status
-            class="search-status"
-            resultslength="1497"
-            search=""
-            selectedcategory=""
-            selectedsubset=""
-            selectedtag=""
-            selectedvariable=""
-            selectedvariant=""
-          />
-        </div>
+        <search-status
+          class="search-status"
+          resultslength="1497"
+          search=""
+          selectedcategory=""
+          selectedsubset=""
+          selectedtag=""
+          selectedvariable=""
+          selectedvariant=""
+        />
         
 
         <div
           class="families"
-          id="families"
         >
           <font-item
             font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false}"
@@ -2237,15 +2232,11 @@ exports[`MainApp renders correctly 1`] = `
         </div>
         
 
-        <div
-          id="pagination"
-        >
-          <pagination-buttons
-            currentpage="1"
-            pagesize="10"
-            resultslength="1497"
-          />
-        </div>
+        <pagination-buttons
+          currentpage="1"
+          pagesize="10"
+          resultslength="1497"
+        />
       </font-results>
     </div>
     

@@ -30,52 +30,41 @@ class FontResults extends HTMLElement {
     this.pageSize = 10;
     this.curPage = 1;
 
-    this.innerHTML = `<div id="search-status"></div>
-<div id="families" class="families"></div>
-<div id="pagination"></div>`;
-
     this.render();
   }
 
   render() {
     const paginatedData = this.performFilter();
     this.cleanUpFonts();
-    this.renderSearchStatus();
-    this.renderPagination();
-
-    this.querySelector("#families").innerHTML = paginatedData
-      .map(
-        (font) =>
-          `<font-item selectedVariant='${
-            this.selectedVariant
-          }' selectedSubset='${this.selectedSubset}' selectedTag='${
-            this.selectedTag
-          }' font='${JSON.stringify(font)}'></font-item>`
-      )
-      .join("\n");
-  }
-
-  renderSearchStatus() {
     const {
       selectedTag,
       selectedCategory,
       selectedSubset,
       selectedVariant,
+      search,
       selectedVariable,
       resultsLength,
-      search,
+      pageSize,
+      curPage,
     } = this;
     const strSelectedVariable = selectedVariable ? "true" : "";
-    this.querySelector(
-      "#search-status"
-    ).innerHTML = `<search-status class="search-status" resultsLength="${resultsLength}" selectedCategory="${selectedCategory}" selectedTag="${selectedTag}" selectedSubset="${selectedSubset}" selectedVariant="${selectedVariant}" search="${search}" selectedVariable="${strSelectedVariable}"></search-status>`;
-  }
 
-  renderPagination() {
-    const { resultsLength, pageSize, curPage } = this;
-    this.querySelector(
-      "#pagination"
-    ).innerHTML = `<pagination-buttons resultsLength="${resultsLength}" pageSize="${pageSize}" currentPage="${curPage}"></pagination-buttons>`;
+    const searchStatus = `<search-status class="search-status" resultsLength="${resultsLength}" selectedCategory="${selectedCategory}" selectedTag="${selectedTag}" selectedSubset="${selectedSubset}" selectedVariant="${selectedVariant}" search="${search}" selectedVariable="${strSelectedVariable}"></search-status>`;
+
+    const fontItems = paginatedData
+      .map(
+        (font) =>
+          `<font-item selectedVariant='${selectedVariant}' selectedSubset='${selectedSubset}' selectedTag='${selectedTag}' font='${JSON.stringify(
+            font
+          )}'></font-item>`
+      )
+      .join("\n");
+
+    const paginationButtons = `<pagination-buttons resultsLength="${resultsLength}" pageSize="${pageSize}" currentPage="${curPage}"></pagination-buttons>`;
+
+    this.innerHTML = `${searchStatus}
+<div class="families">${fontItems}</div>
+${paginationButtons}`;
   }
 
   handlePage({ type }: CustomEvent) {
@@ -108,24 +97,22 @@ class FontResults extends HTMLElement {
       );
     }
     if (this.selectedTag === "need tags") {
-      filteredData = filteredData.filter((row) => {
-        return row.tags.length === 0;
-      });
+      filteredData = filteredData.filter((row) => row.tags.length === 0);
     }
     if (this.selectedCategory) {
-      filteredData = filteredData.filter((row) => {
-        return row.category === this.selectedCategory;
-      });
+      filteredData = filteredData.filter(
+        (row) => row.category === this.selectedCategory
+      );
     }
     if (this.selectedSubset) {
-      filteredData = filteredData.filter((row) => {
-        return row.subsets.includes(this.selectedSubset);
-      });
+      filteredData = filteredData.filter((row) =>
+        row.subsets.includes(this.selectedSubset)
+      );
     }
     if (this.selectedVariant) {
-      filteredData = filteredData.filter((row) => {
-        return row.variants.includes(this.selectedVariant);
-      });
+      filteredData = filteredData.filter((row) =>
+        row.variants.includes(this.selectedVariant)
+      );
     }
 
     if (this.selectedVariable === true) {
