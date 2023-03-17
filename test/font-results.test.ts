@@ -38,21 +38,41 @@ describe("FontResults", () => {
         detail: { tag: "cute" },
       })
     );
-
-    expect(fontResults).toMatchSnapshot();
+    // expect "cute" to be selected
+    expect(
+      (document.querySelector("#select-tags") as HTMLSelectElement).value
+    ).toBe("cute");
+    // expect cute to show in search-results
+    expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="15"
+        search=""
+        selectedcategory=""
+        selectedsubset=""
+        selectedtag="cute"
+        selectedvariable=""
+        selectedvariant=""
+      />
+    `);
+    // expect cute radio to be checked
+    expect(
+      (document.querySelector("#tags input[value='cute']") as HTMLInputElement)
+        .checked
+    ).toBe(true);
   });
 
   test("fires a next-page custom event", () => {
     fontResults.dispatchEvent(new CustomEvent("next-page"));
-
-    expect(fontResults).toMatchSnapshot();
+    const pagination = document.querySelector("pagination-buttons");
+    expect(pagination.getAttribute("currentpage")).toBe("2");
   });
 
   test("fires a prev-page custom event", () => {
     fontResults.dispatchEvent(new CustomEvent("next-page"));
     fontResults.dispatchEvent(new CustomEvent("previous-page"));
-
-    expect(fontResults).toMatchSnapshot();
+    const pagination = document.querySelector("pagination-buttons");
+    expect(pagination.getAttribute("currentpage")).toBe("1");
   });
 
   test("filters fonts when a variant is selected", async () => {
@@ -61,7 +81,19 @@ describe("FontResults", () => {
     // mock addEventListener change event for selectVariant
     await userEvent.selectOptions(selectVariant, "300italic");
 
-    expect(fontResults).toMatchSnapshot();
+    expect(selectVariant.value).toBe("300italic");
+    expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="136"
+        search=""
+        selectedcategory=""
+        selectedsubset=""
+        selectedtag=""
+        selectedvariable=""
+        selectedvariant="300italic"
+      />
+    `);
   });
 
   test("filters fonts when a subset is selected", async () => {
@@ -69,7 +101,19 @@ describe("FontResults", () => {
       document.querySelector("#select-subsets");
     await userEvent.selectOptions(selectedSubset, "arabic");
 
-    expect(fontResults).toMatchSnapshot();
+    expect(selectedSubset.value).toBe("arabic");
+    expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="42"
+        search=""
+        selectedcategory=""
+        selectedsubset="arabic"
+        selectedtag=""
+        selectedvariable=""
+        selectedvariant=""
+      />
+    `);
   });
 
   test("filters fonts when a category is selected", async () => {
@@ -77,7 +121,19 @@ describe("FontResults", () => {
       document.querySelector("#select-categories");
     await userEvent.selectOptions(selectedCategory, "display");
 
-    expect(fontResults).toMatchSnapshot();
+    expect(selectedCategory.value).toBe("display");
+    expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="391"
+        search=""
+        selectedcategory="display"
+        selectedsubset=""
+        selectedtag=""
+        selectedvariable=""
+        selectedvariant=""
+      />
+    `);
   });
 
   test("selects need tags tag", () => {
@@ -86,8 +142,22 @@ describe("FontResults", () => {
         detail: { tag: "need tags" },
       })
     );
-
-    expect(fontResults).toMatchSnapshot();
+    const searchStatus = document.querySelector("search-status");
+    expect(
+      (document.querySelector("#select-tags") as HTMLSelectElement).value
+    ).toBe("need tags");
+    expect(searchStatus).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="523"
+        search=""
+        selectedcategory=""
+        selectedsubset=""
+        selectedtag="need tags"
+        selectedvariable=""
+        selectedvariant=""
+      />
+    `);
   });
 
   test("removes tag", () => {
@@ -104,7 +174,19 @@ describe("FontResults", () => {
       })
     );
 
-    expect(fontResults).toMatchSnapshot();
+    expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="1497"
+        search=""
+        selectedcategory=""
+        selectedsubset=""
+        selectedtag=""
+        selectedvariable=""
+        selectedvariant=""
+      />
+    `);
+    expect(document.querySelectorAll("font-item").length).toEqual(10);
   });
 
   test("filters fonts when search", async () => {
@@ -112,7 +194,26 @@ describe("FontResults", () => {
       document.querySelector("#input-search");
     await userEvent.type(inputSearch, "are you serious");
 
-    expect(fontResults).toMatchSnapshot();
+    const searchStatus = document.querySelector("search-status");
+    const resultsLength = parseInt(searchStatus.getAttribute("resultslength"));
+
+    expect(searchStatus).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="1"
+        search="are you serious"
+        selectedcategory=""
+        selectedsubset=""
+        selectedtag=""
+        selectedvariable=""
+        selectedvariant=""
+      />
+    `);
+
+    // expect there two be resultsLength number of font-items
+    expect(document.querySelectorAll("font-item").length).toEqual(
+      resultsLength
+    );
   });
 
   test("removes search filter", async () => {
@@ -125,8 +226,20 @@ describe("FontResults", () => {
         detail: { filter: "search" },
       })
     );
-
-    expect(fontResults).toMatchSnapshot();
+    const searchStatus = document.querySelector("search-status");
+    expect(searchStatus).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="1497"
+        search=""
+        selectedcategory=""
+        selectedsubset=""
+        selectedtag=""
+        selectedvariable=""
+        selectedvariant=""
+      />
+    `);
+    expect(document.querySelectorAll("font-item").length).toEqual(10);
   });
 
   test("removes variable filter", async () => {
@@ -140,7 +253,20 @@ describe("FontResults", () => {
       })
     );
 
-    expect(fontResults).toMatchSnapshot();
+    const searchStatus = document.querySelector("search-status");
+    expect(searchStatus).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="1497"
+        search=""
+        selectedcategory=""
+        selectedsubset=""
+        selectedtag=""
+        selectedvariable=""
+        selectedvariant=""
+      />
+    `);
+    expect(document.querySelectorAll("font-item").length).toEqual(10);
   });
 
   test("removes all filters: tag, variable, search", async () => {
@@ -163,7 +289,20 @@ describe("FontResults", () => {
       })
     );
 
-    expect(fontResults).toMatchSnapshot();
+    const searchStatus = document.querySelector("search-status");
+    expect(searchStatus).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="1497"
+        search=""
+        selectedcategory=""
+        selectedsubset=""
+        selectedtag=""
+        selectedvariable=""
+        selectedvariant=""
+      />
+    `);
+    expect(document.querySelectorAll("font-item").length).toEqual(10);
   });
 
   test('filters based on tag "cute" in search query', async () => {
@@ -177,8 +316,25 @@ describe("FontResults", () => {
     });
 
     document.body.innerHTML = body;
-    fontResults = document.querySelector("font-results");
-    expect(fontResults).toMatchSnapshot();
+
+    const searchStatus = document.querySelector("search-status");
+    expect(searchStatus).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="15"
+        search=""
+        selectedcategory=""
+        selectedsubset=""
+        selectedtag="cute"
+        selectedvariable=""
+        selectedvariant=""
+      />
+    `);
+
+    // expect tag to be selected
+    expect(
+      (document.querySelector("#select-tags") as HTMLSelectElement).value
+    ).toBe("cute");
   });
 
   test("filters when tag radio clicked", async () => {
@@ -186,7 +342,19 @@ describe("FontResults", () => {
       "#tags input[value='1980s']"
     );
     radioButton.click();
-    expect(fontResults).toMatchSnapshot();
+    const searchStatus = document.querySelector("search-status");
+    expect(searchStatus).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="2"
+        search=""
+        selectedcategory=""
+        selectedsubset=""
+        selectedtag="1980s"
+        selectedvariable=""
+        selectedvariant=""
+      />
+    `);
   });
 
   test("skips unknown tag in search query", async () => {
@@ -200,8 +368,19 @@ describe("FontResults", () => {
     });
 
     document.body.innerHTML = body;
-    fontResults = document.querySelector("font-results");
-    expect(fontResults).toMatchSnapshot();
+    const searchStatus = document.querySelector("search-status");
+    expect(searchStatus).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="1497"
+        search=""
+        selectedcategory=""
+        selectedsubset=""
+        selectedtag=""
+        selectedvariable=""
+        selectedvariant=""
+      />
+    `);
   });
 
   test("filters fonts when a tag is selected", async () => {
@@ -209,7 +388,19 @@ describe("FontResults", () => {
       document.querySelector("#select-tags");
     await userEvent.selectOptions(selectedTag, "outline");
 
-    expect(fontResults).toMatchSnapshot();
+    const searchStatus = document.querySelector("search-status");
+    expect(searchStatus).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="24"
+        search=""
+        selectedcategory=""
+        selectedsubset=""
+        selectedtag="outline"
+        selectedvariable=""
+        selectedvariant=""
+      />
+    `);
   });
 
   test("filters fonts when variable is checked and then unchecked", async () => {
@@ -222,7 +413,19 @@ describe("FontResults", () => {
       "",
       "/?variable=true"
     );
-    expect(fontResults).toMatchSnapshot();
+    const searchStatus = document.querySelector("search-status");
+    expect(searchStatus).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="293"
+        search=""
+        selectedcategory=""
+        selectedsubset=""
+        selectedtag=""
+        selectedvariable="true"
+        selectedvariant=""
+      />
+    `);
 
     // uncheck
     await userEvent.click(checkboxVariable);
@@ -232,6 +435,18 @@ describe("FontResults", () => {
       "",
       "/?"
     );
+    expect(searchStatus).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="293"
+        search=""
+        selectedcategory=""
+        selectedsubset=""
+        selectedtag=""
+        selectedvariable="true"
+        selectedvariant=""
+      />
+    `);
   });
 
   test("filters based on variable=true in query string", async () => {
@@ -245,8 +460,23 @@ describe("FontResults", () => {
     });
 
     document.body.innerHTML = body;
-    fontResults = document.querySelector("font-results");
-    expect(fontResults).toMatchSnapshot();
+    const searchStatus = document.querySelector("search-status");
+    expect(searchStatus).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="293"
+        search=""
+        selectedcategory=""
+        selectedsubset=""
+        selectedtag=""
+        selectedvariable="true"
+        selectedvariant=""
+      />
+    `);
+    // expect variable to be checked
+    expect(
+      (document.querySelector("#checkbox-variable") as HTMLInputElement).checked
+    ).toBe(true);
   });
 
   test("does nothing when variable=false in query string", async () => {
@@ -260,7 +490,21 @@ describe("FontResults", () => {
     });
 
     document.body.innerHTML = body;
-    fontResults = document.querySelector("font-results");
-    expect(fontResults).toMatchSnapshot();
+    const searchStatus = document.querySelector("search-status");
+    expect(searchStatus).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        resultslength="1497"
+        search=""
+        selectedcategory=""
+        selectedsubset=""
+        selectedtag=""
+        selectedvariable=""
+        selectedvariant=""
+      />
+    `);
+    expect(
+      (document.querySelector("#checkbox-variable") as HTMLInputElement).checked
+    ).toBe(false);
   });
 });
