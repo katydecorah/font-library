@@ -1,9 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FontResults renders correctly 1`] = `
-<font-results>
-  
-            
+<font-results
+  search=""
+  selected-category=""
+  selected-subset=""
+  selected-tag=""
+  selected-variable=""
+  selected-variant=""
+>
   <div
     id="search-status"
   >
@@ -19,7 +24,7 @@ exports[`FontResults renders correctly 1`] = `
     />
   </div>
   
-            
+
   <div
     class="families"
     id="families"
@@ -104,7 +109,7 @@ exports[`FontResults renders correctly 1`] = `
     />
   </div>
   
-            
+
   <div
     id="pagination"
   >
@@ -114,7 +119,5 @@ exports[`FontResults renders correctly 1`] = `
       resultslength="1497"
     />
   </div>
-  
-          
 </font-results>
 `;
