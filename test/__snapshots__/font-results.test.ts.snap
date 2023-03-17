@@ -1,28 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FontResults renders correctly 1`] = `
-<font-results>
+<font-results
+  search=""
+  selected-category=""
+  selected-subset=""
+  selected-tag=""
+  selected-variable=""
+  selected-variant=""
+>
+  <search-status
+    class="search-status"
+    resultslength="1497"
+    search=""
+    selectedcategory=""
+    selectedsubset=""
+    selectedtag=""
+    selectedvariable=""
+    selectedvariant=""
+  />
   
-            
-  <div
-    id="search-status"
-  >
-    <search-status
-      class="search-status"
-      resultslength="1497"
-      search=""
-      selectedcategory=""
-      selectedsubset=""
-      selectedtag=""
-      selectedvariable=""
-      selectedvariant=""
-    />
-  </div>
-  
-            
+
   <div
     class="families"
-    id="families"
   >
     <font-item
       font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false}"
@@ -104,17 +104,11 @@ exports[`FontResults renders correctly 1`] = `
     />
   </div>
   
-            
-  <div
-    id="pagination"
-  >
-    <pagination-buttons
-      currentpage="1"
-      pagesize="10"
-      resultslength="1497"
-    />
-  </div>
-  
-          
+
+  <pagination-buttons
+    currentpage="1"
+    pagesize="10"
+    resultslength="1497"
+  />
 </font-results>
 `;

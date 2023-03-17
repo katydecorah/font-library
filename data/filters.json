@@ -1,0 +1,32 @@
+[
+  {
+    "select": "#select-categories",
+    "param": "category",
+    "selectVar": "selectedCategory"
+  },
+  {
+    "select": "#select-subsets",
+    "param": "subset",
+    "selectVar": "selectedSubset"
+  },
+  {
+    "select": "#select-variants",
+    "param": "variant",
+    "selectVar": "selectedVariant"
+  },
+  {
+    "select": "#select-tags",
+    "param": "tag",
+    "selectVar": "selectedTag"
+  },
+  {
+    "select": "#input-search",
+    "param": "search",
+    "selectVar": "search"
+  },
+  {
+    "select": "#checkbox-variable",
+    "param": "variable",
+    "selectVar": "selectedVariable"
+  }
+]
