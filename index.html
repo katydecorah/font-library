@@ -90,6 +90,7 @@
         </section>
       </main-app>
     </div>
+    {% if site.env == 'production' %}
     <script
       src="https://browser.sentry-cdn.com/7.41.0/bundle.tracing.min.js"
       integrity="sha384-o2yGd/Hej06Mkzo+23LGsEgqH9JbnYyroaq5YA7EgamabrwR83McAHkzac6ZFCrx"
@@ -103,7 +104,6 @@
         environment: "{{site.env}}",
       });
     </script>
-    <script src="{{ '/js/bundle.js' | url }}"></script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-7KLW06M68M"
@@ -116,5 +116,7 @@
       gtag("js", new Date());
       gtag("config", "G-7KLW06M68M");
     </script>
+    {% endif %}
+    <script src="{{ '/js/bundle.js' | url }}"></script>
   </body>
 </html>
