@@ -40,14 +40,14 @@ class SearchStatus extends HTMLElement {
         elm.push(
           `<div class="search-filter">${key}${
             key === "variable" ? "" : `: <strong>${value}</strong>`
-          }<clear-button aria-label="remove ${key}" value="${key}">${iconClose}</clear-button></div>`
+          }<button is="clear-button" aria-label="remove ${key}" value="${key}">${iconClose}</button></div>`
         );
       }
     }
 
     if (hasFilters) {
       elm.push(
-        `<clear-button aria-label="remove all filters" class="btn btn-clear">Clear</clear-button>`
+        `<button is="clear-button" aria-label="remove all filters" class="btn btn-clear">Clear</button>`
       );
     }
 

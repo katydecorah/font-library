@@ -1,22 +1,22 @@
-class ClearButton extends HTMLElement {
+class ClearButton extends HTMLButtonElement {
   constructor() {
     super();
+    this.onclick = this.onClick;
+    // add "clear-button" class
+    this.classList.add("clear-button");
   }
-  connectedCallback() {
-    // add aria-role
-    this.setAttribute("role", "button");
-    this.addEventListener("click", () => {
-      this.dispatchEvent(
-        new CustomEvent("clear-filter", {
-          bubbles: true,
-          composed: true,
-          detail: {
-            filter: this.getAttribute("value"),
-          },
-        })
-      );
-    });
+
+  onClick() {
+    this.dispatchEvent(
+      new CustomEvent("clear-filter", {
+        bubbles: true,
+        composed: true,
+        detail: {
+          filter: this.getAttribute("value"),
+        },
+      })
+    );
   }
 }
 
-customElements.define("clear-button", ClearButton);
+customElements.define("clear-button", ClearButton, { extends: "button" });

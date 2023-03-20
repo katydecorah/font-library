@@ -270,18 +270,23 @@ input[type="text"] {
   display: flex;
 }
 
-clear-button {
+.clear-button {
   display: flex;
   align-items: center;
   cursor: pointer;
   color: var(--accent);
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 1em;
 }
 
-clear-button:hover {
+.clear-button:hover {
   color: var(--accent-dark);
 }
 
-clear-button svg {
+.clear-button svg {
   height: 1em;
   width: 1em;
 }
