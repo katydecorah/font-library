@@ -15,13 +15,25 @@ class FilterSelect extends HTMLSelectElement {
   onChange() {
     const eventName =
       this.id === "selectedTag" ? "tag-button-selected" : "filter-select";
-
     this.dispatchEvent(
       new CustomEvent(eventName, {
         bubbles: true,
         composed: true,
         detail: { id: this.id, value: this.value },
       })
+    );
+
+    this.setUrlParam();
+  }
+
+  setUrlParam() {
+    const param = this.dataset.param;
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set(param, this.value.toString());
+    window.history.replaceState(
+      {},
+      "",
+      `${window.location.pathname}?${urlParams.toString()}`
     );
   }
 }
