@@ -2112,9 +2112,11 @@ exports[`MainApp renders correctly 1`] = `
         <label
           for="selectedVariable"
         >
-          Variable font 
+          Variable font
+                
           <input
             id="selectedVariable"
+            is="filter-checkbox"
             type="checkbox"
           />
         </label>

@@ -37,7 +37,13 @@
             for tag in tags.data -%}
             <label class="family-tag"
               >{{tag}}
-              <input type="radio" name="tag" value="{{tag}}" class="hide"
+              <input
+                data-param="tag"
+                is="filter-radio"
+                type="radio"
+                name="tag"
+                value="{{tag}}"
+                class="hide"
             /></label>
             {%- endfor -%}
           </div>
@@ -86,7 +92,11 @@
             {%- endif -%}{%- endfor -%}
             <div class="select-group">
               <label for="selectedVariable"
-                >Variable font <input type="checkbox" id="selectedVariable"
+                >Variable font
+                <input
+                  is="filter-checkbox"
+                  type="checkbox"
+                  id="selectedVariable"
               /></label>
             </div>
           </div>

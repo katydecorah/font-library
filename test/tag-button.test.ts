@@ -1,6 +1,17 @@
 import "./components";
 
 describe("tag-button", () => {
+  beforeEach(() => {
+    const location = {
+      ...window.location,
+      search: "",
+    };
+    Object.defineProperty(window, "location", {
+      writable: true,
+      value: location,
+    });
+  });
+
   it("renders", () => {
     const tag = "cute";
     const selectedTag = "";
@@ -46,5 +57,33 @@ describe("tag-button", () => {
     tagButton.addEventListener("tag-button-selected", mockFn);
     tagButton.click();
     expect(mockFn).toHaveBeenCalled();
+  });
+
+  it("sets initial value if param is in url", () => {
+    const tag = "cute";
+    const selectedTag = "";
+    const location = {
+      ...window.location,
+      search: "?tag=cute",
+    };
+    Object.defineProperty(window, "location", {
+      writable: true,
+      value: location,
+    });
+
+    document.body.innerHTML = `<button is="tag-button" selectedTag="${selectedTag}" value="${tag}">${tag}</button>`;
+    const tagButton: HTMLButtonElement = document.querySelector(
+      "button[is=tag-button]"
+    );
+    expect(tagButton).toMatchInlineSnapshot(`
+      <button
+        class="active family-tag tag-cute"
+        is="tag-button"
+        selectedtag=""
+        value="cute"
+      >
+        cute
+      </button>
+    `);
   });
 });
