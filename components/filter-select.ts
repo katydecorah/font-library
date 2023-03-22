@@ -5,15 +5,14 @@ class FilterSelect extends HTMLSelectElement {
   }
 
   onChange() {
-    const id = this.id.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
     const eventName =
-      id === "selectedTag" ? "tag-button-selected" : "filter-select";
+      this.id === "selectedTag" ? "tag-button-selected" : "filter-select";
 
     this.dispatchEvent(
       new CustomEvent(eventName, {
         bubbles: true,
         composed: true,
-        detail: { id, value: this.value },
+        detail: { id: this.id, value: this.value },
       })
     );
   }

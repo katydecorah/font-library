@@ -1,7 +1,7 @@
 import "../components/filter-select";
 
 describe("filter-select", () => {
-  document.body.innerHTML = `<select is="filter-select" id="selected-tag" class="filter-select">
+  document.body.innerHTML = `<select is="filter-select" id="selectedTag" class="filter-select">
     <option value="all">All</option>
     <option value="tag1">Tag 1</option>
     <option value="tag2">Tag 2</option>
