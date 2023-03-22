@@ -22,7 +22,7 @@ class TagButton extends HTMLButtonElement {
         bubbles: true,
         composed: true,
         detail: {
-          tag: this.getAttribute("value"),
+          value: this.getAttribute("value"),
         },
       })
     );
