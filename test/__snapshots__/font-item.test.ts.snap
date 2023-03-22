@@ -202,6 +202,7 @@ exports[`FontItem is variable font 1`] = `
         class="family-tags-container"
       >
         <button
+          class="family-tag tag-condensed"
           is="tag-button"
           selectedtag="null"
           value="condensed"
@@ -209,6 +210,7 @@ exports[`FontItem is variable font 1`] = `
           condensed
         </button>
         <button
+          class="family-tag tag-narrow"
           is="tag-button"
           selectedtag="null"
           value="narrow"
@@ -336,6 +338,7 @@ exports[`FontItem no latin subset 1`] = `
         class="family-tags-container"
       >
         <button
+          class="family-tag tag-round"
           is="tag-button"
           selectedtag="null"
           value="round"
@@ -343,6 +346,7 @@ exports[`FontItem no latin subset 1`] = `
           round
         </button>
         <button
+          class="family-tag tag-monolinear"
           is="tag-button"
           selectedtag="null"
           value="monolinear"
@@ -350,6 +354,7 @@ exports[`FontItem no latin subset 1`] = `
           monolinear
         </button>
         <button
+          class="family-tag tag-1930s"
           is="tag-button"
           selectedtag="null"
           value="1930s"
@@ -475,6 +480,7 @@ exports[`FontItem renders correctly 1`] = `
         class="family-tags-container"
       >
         <button
+          class="family-tag tag-geometric"
           is="tag-button"
           selectedtag="null"
           value="geometric"
@@ -602,6 +608,7 @@ exports[`FontItem rtl subset 1`] = `
         class="family-tags-container"
       >
         <button
+          class="family-tag tag-arabic"
           is="tag-button"
           selectedtag="null"
           value="arabic"
@@ -729,6 +736,7 @@ exports[`FontItem selected subset 1`] = `
         class="family-tags-container"
       >
         <button
+          class="family-tag tag-geometric"
           is="tag-button"
           selectedtag="null"
           value="geometric"
@@ -854,6 +862,7 @@ exports[`FontItem selected variant, 900 1`] = `
         class="family-tags-container"
       >
         <button
+          class="family-tag tag-eurostile"
           is="tag-button"
           selectedtag="null"
           value="eurostile"
@@ -979,6 +988,7 @@ exports[`FontItem selected variant, 900italic 1`] = `
         class="family-tags-container"
       >
         <button
+          class="family-tag tag-eurostile"
           is="tag-button"
           selectedtag="null"
           value="eurostile"

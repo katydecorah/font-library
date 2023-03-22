@@ -1,4 +1,4 @@
-import "../components/pagination-buttons";
+import "./components";
 
 describe("pagination-buttons", () => {
   it("renders first page", () => {

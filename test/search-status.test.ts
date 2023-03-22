@@ -1,4 +1,4 @@
-import "../components/search-status";
+import "./components";
 
 describe("search-status", () => {
   it("renders search status", () => {
@@ -26,8 +26,8 @@ describe("search-status", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
       "<div>Found 1200 fonts: </div>
-      <div class="search-filter">category: <strong>sans-serif</strong><button is="clear-button" aria-label="remove category" value="category">close.svg</button></div>
-      <button is="clear-button" aria-label="remove all filters" class="btn btn-clear">Clear</button>"
+      <div class="search-filter">category: <strong>sans-serif</strong><button is="clear-button" aria-label="remove category" value="category" class="clear-button">close.svg</button></div>
+      <button is="clear-button" aria-label="remove all filters" class="btn btn-clear clear-button">Clear</button>"
     `);
   });
 
@@ -42,8 +42,8 @@ describe("search-status", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
       "<div>Found 1200 fonts: </div>
-      <div class="search-filter">tag: <strong>cute</strong><button is="clear-button" aria-label="remove tag" value="tag">close.svg</button></div>
-      <button is="clear-button" aria-label="remove all filters" class="btn btn-clear">Clear</button>"
+      <div class="search-filter">tag: <strong>cute</strong><button is="clear-button" aria-label="remove tag" value="tag" class="clear-button">close.svg</button></div>
+      <button is="clear-button" aria-label="remove all filters" class="btn btn-clear clear-button">Clear</button>"
     `);
   });
 
@@ -58,8 +58,8 @@ describe("search-status", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
       "<div>Found 1200 fonts: </div>
-      <div class="search-filter">tag: <strong>need tags</strong><button is="clear-button" aria-label="remove tag" value="tag">close.svg</button></div>
-      <button is="clear-button" aria-label="remove all filters" class="btn btn-clear">Clear</button>"
+      <div class="search-filter">tag: <strong>need tags</strong><button is="clear-button" aria-label="remove tag" value="tag" class="clear-button">close.svg</button></div>
+      <button is="clear-button" aria-label="remove all filters" class="btn btn-clear clear-button">Clear</button>"
     `);
   });
 
@@ -74,8 +74,8 @@ describe("search-status", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
       "<div>Found 1200 fonts: </div>
-      <div class="search-filter">variant: <strong>italic</strong><button is="clear-button" aria-label="remove variant" value="variant">close.svg</button></div>
-      <button is="clear-button" aria-label="remove all filters" class="btn btn-clear">Clear</button>"
+      <div class="search-filter">variant: <strong>italic</strong><button is="clear-button" aria-label="remove variant" value="variant" class="clear-button">close.svg</button></div>
+      <button is="clear-button" aria-label="remove all filters" class="btn btn-clear clear-button">Clear</button>"
     `);
   });
 
@@ -90,8 +90,8 @@ describe("search-status", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
       "<div>Found 1200 fonts: </div>
-      <div class="search-filter">subset: <strong>hebrew</strong><button is="clear-button" aria-label="remove subset" value="subset">close.svg</button></div>
-      <button is="clear-button" aria-label="remove all filters" class="btn btn-clear">Clear</button>"
+      <div class="search-filter">subset: <strong>hebrew</strong><button is="clear-button" aria-label="remove subset" value="subset" class="clear-button">close.svg</button></div>
+      <button is="clear-button" aria-label="remove all filters" class="btn btn-clear clear-button">Clear</button>"
     `);
   });
 
@@ -106,8 +106,8 @@ describe("search-status", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
       "<div>Found 1200 fonts: </div>
-      <div class="search-filter">search: <strong>hello</strong><button is="clear-button" aria-label="remove search" value="search">close.svg</button></div>
-      <button is="clear-button" aria-label="remove all filters" class="btn btn-clear">Clear</button>"
+      <div class="search-filter">search: <strong>hello</strong><button is="clear-button" aria-label="remove search" value="search" class="clear-button">close.svg</button></div>
+      <button is="clear-button" aria-label="remove all filters" class="btn btn-clear clear-button">Clear</button>"
     `);
   });
 
@@ -122,8 +122,8 @@ describe("search-status", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
       "<div>Found 1200 fonts: </div>
-      <div class="search-filter">variable<button is="clear-button" aria-label="remove variable" value="variable">close.svg</button></div>
-      <button is="clear-button" aria-label="remove all filters" class="btn btn-clear">Clear</button>"
+      <div class="search-filter">variable<button is="clear-button" aria-label="remove variable" value="variable" class="clear-button">close.svg</button></div>
+      <button is="clear-button" aria-label="remove all filters" class="btn btn-clear clear-button">Clear</button>"
     `);
   });
 });

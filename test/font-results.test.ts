@@ -1,4 +1,4 @@
-import "../components/font-results";
+import "./components";
 
 describe("FontResults", () => {
   beforeAll(() => {

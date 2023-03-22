@@ -1,6 +1,4 @@
-import "../components/main-app";
-import "../components/font-results";
-import "../components/filter-select";
+import "./components";
 import userEvent from "@testing-library/user-event";
 import { readFileSync } from "fs";
 
@@ -55,7 +53,38 @@ describe("MainApp", () => {
         selectedtag="cute"
         selectedvariable=""
         selectedvariant=""
-      />
+      >
+        <div>
+          Found 15 fonts: 
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          tag: 
+          <strong>
+            cute
+          </strong>
+          <button
+            aria-label="remove tag"
+            class="clear-button"
+            is="clear-button"
+            value="tag"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <button
+          aria-label="remove all filters"
+          class="btn btn-clear clear-button"
+          is="clear-button"
+        >
+          Clear
+        </button>
+      </search-status>
     `);
     // expect cute radio to be checked
     expect(
@@ -80,7 +109,38 @@ describe("MainApp", () => {
         selectedtag=""
         selectedvariable=""
         selectedvariant="300italic"
-      />
+      >
+        <div>
+          Found 136 fonts: 
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          variant: 
+          <strong>
+            300italic
+          </strong>
+          <button
+            aria-label="remove variant"
+            class="clear-button"
+            is="clear-button"
+            value="variant"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <button
+          aria-label="remove all filters"
+          class="btn btn-clear clear-button"
+          is="clear-button"
+        >
+          Clear
+        </button>
+      </search-status>
     `);
   });
 
@@ -100,7 +160,38 @@ describe("MainApp", () => {
         selectedtag=""
         selectedvariable=""
         selectedvariant=""
-      />
+      >
+        <div>
+          Found 42 fonts: 
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          subset: 
+          <strong>
+            arabic
+          </strong>
+          <button
+            aria-label="remove subset"
+            class="clear-button"
+            is="clear-button"
+            value="subset"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <button
+          aria-label="remove all filters"
+          class="btn btn-clear clear-button"
+          is="clear-button"
+        >
+          Clear
+        </button>
+      </search-status>
     `);
   });
 
@@ -120,7 +211,38 @@ describe("MainApp", () => {
         selectedtag=""
         selectedvariable=""
         selectedvariant=""
-      />
+      >
+        <div>
+          Found 390 fonts: 
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          category: 
+          <strong>
+            display
+          </strong>
+          <button
+            aria-label="remove category"
+            class="clear-button"
+            is="clear-button"
+            value="category"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <button
+          aria-label="remove all filters"
+          class="btn btn-clear clear-button"
+          is="clear-button"
+        >
+          Clear
+        </button>
+      </search-status>
     `);
   });
 
@@ -141,7 +263,38 @@ describe("MainApp", () => {
         selectedtag="need tags"
         selectedvariable=""
         selectedvariant=""
-      />
+      >
+        <div>
+          Found 524 fonts: 
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          tag: 
+          <strong>
+            need tags
+          </strong>
+          <button
+            aria-label="remove tag"
+            class="clear-button"
+            is="clear-button"
+            value="tag"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <button
+          aria-label="remove all filters"
+          class="btn btn-clear clear-button"
+          is="clear-button"
+        >
+          Clear
+        </button>
+      </search-status>
     `);
   });
 
@@ -169,7 +322,11 @@ describe("MainApp", () => {
         selectedtag=""
         selectedvariable=""
         selectedvariant=""
-      />
+      >
+        <div>
+          Found 1495 fonts
+        </div>
+      </search-status>
     `);
     expect(document.querySelectorAll("font-item").length).toEqual(10);
   });
@@ -192,7 +349,38 @@ describe("MainApp", () => {
         selectedtag=""
         selectedvariable=""
         selectedvariant=""
-      />
+      >
+        <div>
+          Found 1 fonts: 
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          search: 
+          <strong>
+            are you serious
+          </strong>
+          <button
+            aria-label="remove search"
+            class="clear-button"
+            is="clear-button"
+            value="search"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <button
+          aria-label="remove all filters"
+          class="btn btn-clear clear-button"
+          is="clear-button"
+        >
+          Clear
+        </button>
+      </search-status>
     `);
 
     // expect there two be resultsLength number of font-items
@@ -222,7 +410,11 @@ describe("MainApp", () => {
         selectedtag=""
         selectedvariable=""
         selectedvariant=""
-      />
+      >
+        <div>
+          Found 1495 fonts
+        </div>
+      </search-status>
     `);
     expect(document.querySelectorAll("font-item").length).toEqual(10);
   });
@@ -249,7 +441,11 @@ describe("MainApp", () => {
         selectedtag=""
         selectedvariable=""
         selectedvariant=""
-      />
+      >
+        <div>
+          Found 1495 fonts
+        </div>
+      </search-status>
     `);
     expect(document.querySelectorAll("font-item").length).toEqual(10);
   });
@@ -285,7 +481,11 @@ describe("MainApp", () => {
         selectedtag=""
         selectedvariable=""
         selectedvariant=""
-      />
+      >
+        <div>
+          Found 1495 fonts
+        </div>
+      </search-status>
     `);
     expect(document.querySelectorAll("font-item").length).toEqual(10);
   });
@@ -313,7 +513,38 @@ describe("MainApp", () => {
         selectedtag="cute"
         selectedvariable=""
         selectedvariant=""
-      />
+      >
+        <div>
+          Found 15 fonts: 
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          tag: 
+          <strong>
+            cute
+          </strong>
+          <button
+            aria-label="remove tag"
+            class="clear-button"
+            is="clear-button"
+            value="tag"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <button
+          aria-label="remove all filters"
+          class="btn btn-clear clear-button"
+          is="clear-button"
+        >
+          Clear
+        </button>
+      </search-status>
     `);
 
     // expect tag to be selected
@@ -338,7 +569,38 @@ describe("MainApp", () => {
         selectedtag="1980s"
         selectedvariable=""
         selectedvariant=""
-      />
+      >
+        <div>
+          Found 2 fonts: 
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          tag: 
+          <strong>
+            1980s
+          </strong>
+          <button
+            aria-label="remove tag"
+            class="clear-button"
+            is="clear-button"
+            value="tag"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <button
+          aria-label="remove all filters"
+          class="btn btn-clear clear-button"
+          is="clear-button"
+        >
+          Clear
+        </button>
+      </search-status>
     `);
   });
 
@@ -364,7 +626,11 @@ describe("MainApp", () => {
         selectedtag=""
         selectedvariable=""
         selectedvariant=""
-      />
+      >
+        <div>
+          Found 1495 fonts
+        </div>
+      </search-status>
     `);
   });
 
@@ -384,7 +650,38 @@ describe("MainApp", () => {
         selectedtag="outline"
         selectedvariable=""
         selectedvariant=""
-      />
+      >
+        <div>
+          Found 24 fonts: 
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          tag: 
+          <strong>
+            outline
+          </strong>
+          <button
+            aria-label="remove tag"
+            class="clear-button"
+            is="clear-button"
+            value="tag"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <button
+          aria-label="remove all filters"
+          class="btn btn-clear clear-button"
+          is="clear-button"
+        >
+          Clear
+        </button>
+      </search-status>
     `);
   });
 
@@ -409,7 +706,35 @@ describe("MainApp", () => {
         selectedtag=""
         selectedvariable="true"
         selectedvariant=""
-      />
+      >
+        <div>
+          Found 293 fonts: 
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          variable
+          <button
+            aria-label="remove variable"
+            class="clear-button"
+            is="clear-button"
+            value="variable"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <button
+          aria-label="remove all filters"
+          class="btn btn-clear clear-button"
+          is="clear-button"
+        >
+          Clear
+        </button>
+      </search-status>
     `);
 
     // uncheck
@@ -430,7 +755,35 @@ describe("MainApp", () => {
         selectedtag=""
         selectedvariable="true"
         selectedvariant=""
-      />
+      >
+        <div>
+          Found 293 fonts: 
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          variable
+          <button
+            aria-label="remove variable"
+            class="clear-button"
+            is="clear-button"
+            value="variable"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <button
+          aria-label="remove all filters"
+          class="btn btn-clear clear-button"
+          is="clear-button"
+        >
+          Clear
+        </button>
+      </search-status>
     `);
   });
 
@@ -456,7 +809,35 @@ describe("MainApp", () => {
         selectedtag=""
         selectedvariable="true"
         selectedvariant=""
-      />
+      >
+        <div>
+          Found 293 fonts: 
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          variable
+          <button
+            aria-label="remove variable"
+            class="clear-button"
+            is="clear-button"
+            value="variable"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <button
+          aria-label="remove all filters"
+          class="btn btn-clear clear-button"
+          is="clear-button"
+        >
+          Clear
+        </button>
+      </search-status>
     `);
     // expect variable to be checked
     expect(
@@ -486,7 +867,11 @@ describe("MainApp", () => {
         selectedtag=""
         selectedvariable=""
         selectedvariant=""
-      />
+      >
+        <div>
+          Found 1495 fonts
+        </div>
+      </search-status>
     `);
     expect(
       (document.querySelector("#selectedVariable") as HTMLInputElement).checked

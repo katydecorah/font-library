@@ -1,4 +1,4 @@
-import "../components/tag-button";
+import "./components";
 
 describe("tag-button", () => {
   it("renders", () => {

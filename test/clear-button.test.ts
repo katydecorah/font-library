@@ -1,4 +1,4 @@
-import "../components/clear-button";
+import "./components";
 
 describe("clear-button", () => {
   document.body.innerHTML = `<button is="clear-button" aria-label="remove all filters" class="btn btn-clear">Clear</button>`;

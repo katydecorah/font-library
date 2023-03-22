@@ -1,4 +1,4 @@
-import "../components/filter-select";
+import "./components";
 
 describe("filter-select", () => {
   document.body.innerHTML = `<select is="filter-select" id="selectedTag" class="filter-select">

@@ -1,4 +1,4 @@
-import "../components/font-item";
+import "./components";
 
 describe("FontItem", () => {
   test("renders correctly", () => {
