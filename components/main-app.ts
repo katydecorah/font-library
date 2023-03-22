@@ -214,8 +214,6 @@ class MainApp extends HTMLElement {
       [id]: value,
     });
     this.render();
-    const param = (event.target as HTMLButtonElement).dataset.param;
-    this.setUrlParams(param, value);
   }
 
   handleCheckbox() {
