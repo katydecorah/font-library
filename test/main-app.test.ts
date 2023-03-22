@@ -137,7 +137,7 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="525"
+        resultslength="524"
         search=""
         selectedcategory=""
         selectedsubset=""
