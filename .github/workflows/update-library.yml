@@ -29,7 +29,7 @@ jobs:
           GoogleToken: ${{ secrets.GoogleToken }}
 
       - name: Commit files
-        if: env.UpdatedLibrary == 'true' && env.AutoTag == 'false'
+        if: env.UpdatedLibrary == 'true' && env.AutoTag != 'true'
         run: |
           git pull
           git config --local user.email "action@github.com"
