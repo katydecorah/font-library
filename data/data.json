@@ -8542,7 +8542,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "monospace",
-    "tags": [],
+    "tags": ["round"],
     "lineNumber": 746,
     "variable": false
   },

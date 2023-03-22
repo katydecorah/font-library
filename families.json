@@ -743,7 +743,7 @@
   "Mate SC": ["small caps"],
   "Material Icons": [],
   "Material Icons Outlined": ["outline"],
-  "Material Icons Round": [],
+  "Material Icons Round": ["round"],
   "Material Icons Sharp": [],
   "Material Icons Two Tone": [],
   "Material Symbols Outlined": ["outline"],
