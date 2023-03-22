@@ -85,7 +85,6 @@ class MainApp extends HTMLElement {
       Object.assign(this, {
         [selectVar]: newValue,
       });
-      elm.value = newValue;
     }
 
     if (elm instanceof HTMLInputElement) {

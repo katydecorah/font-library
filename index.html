@@ -70,7 +70,11 @@
               class="select-group{% if filter.param == 'tag' %} mobile{% endif %}"
             >
               <label for="{{filter.selectVar}}">{{filter.label}}</label>
-              <select is="filter-select" id="{{filter.selectVar}}">
+              <select
+                data-param="{{filter.param}}"
+                is="filter-select"
+                id="{{filter.selectVar}}"
+              >
                 <option value="">All {{filter.label | downcase}}</option>
                 {%- if filter.param == 'tag' -%}
                 <option id="need tags" value="need tags">need tags</option>

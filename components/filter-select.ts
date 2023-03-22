@@ -2,6 +2,14 @@ class FilterSelect extends HTMLSelectElement {
   constructor() {
     super();
     this.onchange = this.onChange;
+
+    // Get initial value from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const initValue = urlParams.get(this.dataset.param);
+    if (initValue) {
+      if (!this.options.namedItem(initValue)) return;
+      this.value = initValue;
+    }
   }
 
   onChange() {

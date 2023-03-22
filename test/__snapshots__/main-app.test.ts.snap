@@ -55,6 +55,7 @@ exports[`MainApp renders correctly 1`] = `
         
               
         <select
+          data-param="tag"
           id="selectedTag"
           is="filter-select"
         >
@@ -934,6 +935,7 @@ exports[`MainApp renders correctly 1`] = `
         
               
         <select
+          data-param="category"
           id="selectedCategory"
           is="filter-select"
         >
@@ -991,6 +993,7 @@ exports[`MainApp renders correctly 1`] = `
         
               
         <select
+          data-param="subset"
           id="selectedSubset"
           is="filter-select"
         >
@@ -1978,6 +1981,7 @@ exports[`MainApp renders correctly 1`] = `
         
               
         <select
+          data-param="variant"
           id="selectedVariant"
           is="filter-select"
         >
