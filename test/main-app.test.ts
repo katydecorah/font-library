@@ -113,7 +113,7 @@ describe("MainApp", () => {
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="391"
+        resultslength="390"
         search=""
         selectedcategory="display"
         selectedsubset=""
@@ -137,7 +137,7 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="523"
+        resultslength="525"
         search=""
         selectedcategory=""
         selectedsubset=""
@@ -165,7 +165,7 @@ describe("MainApp", () => {
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="1497"
+        resultslength="1495"
         search=""
         selectedcategory=""
         selectedsubset=""
@@ -218,7 +218,7 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="1497"
+        resultslength="1495"
         search=""
         selectedcategory=""
         selectedsubset=""
@@ -245,7 +245,7 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="1497"
+        resultslength="1495"
         search=""
         selectedcategory=""
         selectedsubset=""
@@ -281,7 +281,7 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="1497"
+        resultslength="1495"
         search=""
         selectedcategory=""
         selectedsubset=""
@@ -360,7 +360,7 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="1497"
+        resultslength="1495"
         search=""
         selectedcategory=""
         selectedsubset=""
@@ -482,7 +482,7 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="1497"
+        resultslength="1495"
         search=""
         selectedcategory=""
         selectedsubset=""

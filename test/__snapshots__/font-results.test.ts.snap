@@ -11,7 +11,7 @@ exports[`FontResults renders correctly 1`] = `
 >
   <search-status
     class="search-status"
-    resultslength="1497"
+    resultslength="1495"
     search=""
     selectedcategory=""
     selectedsubset=""
@@ -108,7 +108,7 @@ exports[`FontResults renders correctly 1`] = `
   <pagination-buttons
     currentpage="1"
     pagesize="10"
-    resultslength="1497"
+    resultslength="1495"
   />
 </font-results>
 `;
