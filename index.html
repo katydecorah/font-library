@@ -33,7 +33,8 @@
         <section class="tags sidebar-group">
           <h2>Tags</h2>
           <div id="tags" class="tags-container">
-            {%- for tag in metadata.tags -%}
+            {%- assign tags = metadata | where: "param", "tag" | first -%}{%-
+            for tag in tags.data -%}
             <label class="family-tag"
               >{{tag}}
               <input type="radio" name="tag" value="{{tag}}" class="hide"
@@ -61,26 +62,31 @@
           <h2>Filters</h2>
           <div class="select-group-container">
             <div class="select-group">
-              <label for="input-search">Filter fonts</label>
-              <input type="text" id="input-search" />
+              <label for="selectedSearch">Filter fonts</label>
+              <input type="text" id="selectedSearch" value="" />
             </div>
-            {%- for group in metadata %} {%- assign key = group[0] -%} {%-
-            assign value = group[1] -%}
-            <div class="select-group{% if key == 'tags' %} mobile{% endif %}">
-              <label for="select-{{key}}">{{key}}</label>
-              <select id="select-{{key}}">
-                <option value="">All {{key}}</option>
-                {%- if key == 'tags' -%}
+            {%- for filter in metadata -%}{%- if filter.data -%}
+            <div
+              class="select-group{% if filter.param == 'tag' %} mobile{% endif %}"
+            >
+              <label for="{{filter.selectVar}}">{{filter.label}}</label>
+              <select
+                data-param="{{filter.param}}"
+                is="filter-select"
+                id="{{filter.selectVar}}"
+              >
+                <option value="">All {{filter.label | downcase}}</option>
+                {%- if filter.param == 'tag' -%}
                 <option id="need tags" value="need tags">need tags</option>
-                {%- endif -%} {%- for item in value -%}
+                {%- endif -%} {%- for item in filter.data -%}
                 <option id="{{item}}" value="{{item}}">{{item}}</option>
                 {%- endfor -%}
               </select>
             </div>
-            {%- endfor -%}
+            {%- endif -%}{%- endfor -%}
             <div class="select-group">
-              <label for="checkbox-variable"
-                >Variable font <input type="checkbox" id="checkbox-variable"
+              <label for="selectedVariable"
+                >Variable font <input type="checkbox" id="selectedVariable"
               /></label>
             </div>
           </div>

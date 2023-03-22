@@ -1,5 +1,6 @@
 import "../components/main-app";
 import "../components/font-results";
+import "../components/filter-select";
 import userEvent from "@testing-library/user-event";
 import { readFileSync } from "fs";
 
@@ -36,12 +37,12 @@ describe("MainApp", () => {
   test("fires a custom event when a font is selected", () => {
     mainApp.dispatchEvent(
       new CustomEvent("tag-button-selected", {
-        detail: { tag: "cute" },
+        detail: { value: "cute" },
       })
     );
     // expect "cute" to be selected
     expect(
-      (document.querySelector("#select-tags") as HTMLSelectElement).value
+      (document.querySelector("#selectedTag") as HTMLSelectElement).value
     ).toBe("cute");
     // expect cute to show in search-results
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
@@ -65,8 +66,7 @@ describe("MainApp", () => {
 
   test("filters fonts when a variant is selected", async () => {
     const selectVariant: HTMLSelectElement =
-      document.querySelector("#select-variants");
-    // mock addEventListener change event for selectVariant
+      document.querySelector("#selectedVariant");
     await userEvent.selectOptions(selectVariant, "300italic");
 
     expect(selectVariant.value).toBe("300italic");
@@ -86,7 +86,7 @@ describe("MainApp", () => {
 
   test("filters fonts when a subset is selected", async () => {
     const selectedSubset: HTMLSelectElement =
-      document.querySelector("#select-subsets");
+      document.querySelector("#selectedSubset");
     await userEvent.selectOptions(selectedSubset, "arabic");
 
     expect(selectedSubset.value).toBe("arabic");
@@ -106,7 +106,7 @@ describe("MainApp", () => {
 
   test("filters fonts when a category is selected", async () => {
     const selectedCategory: HTMLSelectElement =
-      document.querySelector("#select-categories");
+      document.querySelector("#selectedCategory");
     await userEvent.selectOptions(selectedCategory, "display");
 
     expect(selectedCategory.value).toBe("display");
@@ -127,13 +127,10 @@ describe("MainApp", () => {
   test("selects need tags tag", () => {
     mainApp.dispatchEvent(
       new CustomEvent("tag-button-selected", {
-        detail: { tag: "need tags" },
+        detail: { value: "need tags" },
       })
     );
     const searchStatus = document.querySelector("search-status");
-    expect(
-      (document.querySelector("#select-tags") as HTMLSelectElement).value
-    ).toBe("need tags");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
@@ -152,7 +149,7 @@ describe("MainApp", () => {
     // add tag first
     mainApp.dispatchEvent(
       new CustomEvent("tag-button-selected", {
-        detail: { tag: "cute" },
+        detail: { value: "cute" },
       })
     );
 
@@ -179,7 +176,7 @@ describe("MainApp", () => {
 
   test("filters fonts when search", async () => {
     const inputSearch: HTMLInputElement =
-      document.querySelector("#input-search");
+      document.querySelector("#selectedSearch");
     await userEvent.type(inputSearch, "are you serious");
 
     const searchStatus = document.querySelector("search-status");
@@ -206,7 +203,7 @@ describe("MainApp", () => {
 
   test("removes search filter", async () => {
     const inputSearch: HTMLInputElement =
-      document.querySelector("#input-search");
+      document.querySelector("#selectedSearch");
     await userEvent.type(inputSearch, "are you serious");
 
     mainApp.dispatchEvent(
@@ -232,7 +229,7 @@ describe("MainApp", () => {
 
   test("removes variable filter", async () => {
     const checkboxVariable: HTMLInputElement =
-      document.querySelector("#checkbox-variable");
+      document.querySelector("#selectedVariable");
     await userEvent.click(checkboxVariable);
 
     mainApp.dispatchEvent(
@@ -260,15 +257,15 @@ describe("MainApp", () => {
   test("removes all filters: tag, variable, search", async () => {
     mainApp.dispatchEvent(
       new CustomEvent("tag-button-selected", {
-        detail: { tag: "modern" },
+        detail: { value: "modern" },
       })
     );
     const checkboxVariable: HTMLInputElement =
-      document.querySelector("#checkbox-variable");
+      document.querySelector("#selectedVariable");
     await userEvent.click(checkboxVariable);
 
     const inputSearch: HTMLInputElement =
-      document.querySelector("#input-search");
+      document.querySelector("#selectedSearch");
     await userEvent.type(inputSearch, "cairo");
 
     mainApp.dispatchEvent(
@@ -321,7 +318,7 @@ describe("MainApp", () => {
 
     // expect tag to be selected
     expect(
-      (document.querySelector("#select-tags") as HTMLSelectElement).value
+      (document.querySelector("#selectedTag") as HTMLSelectElement).value
     ).toBe("cute");
   });
 
@@ -373,7 +370,7 @@ describe("MainApp", () => {
 
   test("filters fonts when a tag is selected", async () => {
     const selectedTag: HTMLSelectElement =
-      document.querySelector("#select-tags");
+      document.querySelector("#selectedTag");
     await userEvent.selectOptions(selectedTag, "outline");
 
     const searchStatus = document.querySelector("search-status");
@@ -393,7 +390,7 @@ describe("MainApp", () => {
 
   test("filters fonts when variable is checked and then unchecked", async () => {
     const checkboxVariable: HTMLInputElement =
-      document.querySelector("#checkbox-variable");
+      document.querySelector("#selectedVariable");
     await userEvent.click(checkboxVariable);
     expect(window.history.replaceState).toHaveBeenNthCalledWith(
       1,
@@ -463,7 +460,7 @@ describe("MainApp", () => {
     `);
     // expect variable to be checked
     expect(
-      (document.querySelector("#checkbox-variable") as HTMLInputElement).checked
+      (document.querySelector("#selectedVariable") as HTMLInputElement).checked
     ).toBe(true);
   });
 
@@ -492,7 +489,7 @@ describe("MainApp", () => {
       />
     `);
     expect(
-      (document.querySelector("#checkbox-variable") as HTMLInputElement).checked
+      (document.querySelector("#selectedVariable") as HTMLInputElement).checked
     ).toBe(false);
   });
 });

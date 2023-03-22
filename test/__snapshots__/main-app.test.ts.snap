@@ -28,15 +28,16 @@ exports[`MainApp renders correctly 1`] = `
         
               
         <label
-          for="input-search"
+          for="selectedSearch"
         >
           Filter fonts
         </label>
         
               
         <input
-          id="input-search"
+          id="selectedSearch"
           type="text"
+          value=""
         />
         
             
@@ -47,14 +48,16 @@ exports[`MainApp renders correctly 1`] = `
         
               
         <label
-          for="select-tags"
+          for="selectedTag"
         >
-          tags
+          Tags
         </label>
         
               
         <select
-          id="select-tags"
+          data-param="tag"
+          id="selectedTag"
+          is="filter-select"
         >
           
                 
@@ -925,14 +928,16 @@ exports[`MainApp renders correctly 1`] = `
         
               
         <label
-          for="select-categories"
+          for="selectedCategory"
         >
-          categories
+          Categories
         </label>
         
               
         <select
-          id="select-categories"
+          data-param="category"
+          id="selectedCategory"
+          is="filter-select"
         >
           
                 
@@ -981,14 +986,16 @@ exports[`MainApp renders correctly 1`] = `
         
               
         <label
-          for="select-subsets"
+          for="selectedSubset"
         >
-          subsets
+          Subsets
         </label>
         
               
         <select
-          id="select-subsets"
+          data-param="subset"
+          id="selectedSubset"
+          is="filter-select"
         >
           
                 
@@ -1967,14 +1974,16 @@ exports[`MainApp renders correctly 1`] = `
         
               
         <label
-          for="select-variants"
+          for="selectedVariant"
         >
-          variants
+          Variants
         </label>
         
               
         <select
-          id="select-variants"
+          data-param="variant"
+          id="selectedVariant"
+          is="filter-select"
         >
           
                 
@@ -2101,11 +2110,11 @@ exports[`MainApp renders correctly 1`] = `
         
               
         <label
-          for="checkbox-variable"
+          for="selectedVariable"
         >
           Variable font 
           <input
-            id="checkbox-variable"
+            id="selectedVariable"
             type="checkbox"
           />
         </label>

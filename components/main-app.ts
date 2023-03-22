@@ -1,11 +1,12 @@
-import filters from "../data/filters.json";
+import filters from "../_data/metadata.json";
+export type Filters = typeof filters;
 
 class MainApp extends HTMLElement {
   selectedTag: string;
   selectedCategory: string;
   selectedSubset: string;
   selectedVariant: string;
-  search: string;
+  selectedSearch: string;
   selectedVariable: boolean;
 
   constructor() {
@@ -15,14 +16,19 @@ class MainApp extends HTMLElement {
     this.selectedCategory = "";
     this.selectedSubset = "";
     this.selectedVariant = "";
-    this.search = "";
+    this.selectedSearch = "";
     this.selectedVariable;
+
+    // Bind methods
+    this.handleCheckbox = this.handleCheckbox.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
 
     // Event listeners
     this.addEventListener("tag-button-selected", (e: CustomEvent) =>
-      this.selectTag(e.detail.tag)
+      this.selectTag(e.detail.value)
     );
     this.addEventListener("clear-filter", this.clearFilter);
+    this.addEventListener("filter-select", this.handleFilter);
 
     // Radio button on click
     const radios = document.querySelectorAll("[name='tag']");
@@ -33,28 +39,18 @@ class MainApp extends HTMLElement {
       });
     });
 
-    for (const { select, param, selectVar } of filters) {
-      if (select === "#select-tags" || select === "#input-search") continue;
-      this.getUrlParams(param, selectVar, select);
-      const filterElement = document.querySelector(select);
-      filterElement.addEventListener("change", (e) =>
-        this.handleFilter(e, selectVar, param)
-      );
+    for (const { param, selectVar } of filters) {
+      if (selectVar === "selectedSearch") continue;
+      this.getUrlParams(param, selectVar);
     }
 
-    // Tags
-    this.getUrlParams("tag", "selectedTag", "#select-tags");
-    document.querySelector("#select-tags").addEventListener("change", (e) => {
-      this.selectTag((e.target as HTMLSelectElement).value);
-    });
+    document
+      .querySelector("#selectedSearch")
+      .addEventListener("input", this.handleSearch);
 
-    // Search
-    document.querySelector("#input-search").addEventListener("input", (e) => {
-      const target = e.target as HTMLInputElement;
-      this.search = target.value.replace(/[^a-zA-Z0-9\- ]/g, "");
-      // this.curPage = 1;
-      this.render();
-    });
+    document
+      .querySelector("#selectedVariable")
+      .addEventListener("change", this.handleCheckbox);
   }
 
   connectedCallback() {
@@ -68,19 +64,19 @@ class MainApp extends HTMLElement {
       selectedSubset,
       selectedVariant,
       selectedTag,
-      search,
+      selectedSearch: search,
       selectedVariable,
     } = this;
     fontResults.innerHTML = `<font-results selected-category="${selectedCategory}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-tag="${selectedTag}" search="${search}" selected-variable="${selectedVariable}"></font-results>`;
   }
 
-  getUrlParams(param: string, selectVar: string, selectElement: string) {
+  getUrlParams(param: string, selectVar: string) {
     const urlParams = new URLSearchParams(window.location.search);
     if (!urlParams.has(param)) return;
     let newValue: string = urlParams.get(param);
     newValue = newValue.replace(/[^a-zA-Z0-9\- ]/g, "");
 
-    const elm = document.querySelector(selectElement) as
+    const elm = document.querySelector(`#${selectVar}`) as
       | HTMLSelectElement
       | HTMLInputElement;
 
@@ -89,7 +85,6 @@ class MainApp extends HTMLElement {
       Object.assign(this, {
         [selectVar]: newValue,
       });
-      elm.value = newValue;
     }
 
     if (elm instanceof HTMLInputElement) {
@@ -100,7 +95,7 @@ class MainApp extends HTMLElement {
       elm.checked = checked;
     }
 
-    if (selectElement === "#select-tags") {
+    if (param === "tag") {
       this.setRadio(newValue);
     }
   }
@@ -139,12 +134,12 @@ class MainApp extends HTMLElement {
   }
 
   removeAllFilters() {
-    for (const { select, selectVar } of filters) {
+    for (const { selectVar } of filters) {
       Object.assign(this, {
         [selectVar]: "",
       });
 
-      const elm = document.querySelector(select) as
+      const elm = document.querySelector(`#${selectVar}`) as
         | HTMLInputElement
         | HTMLSelectElement;
 
@@ -162,11 +157,11 @@ class MainApp extends HTMLElement {
   }
 
   removeSingleFilter(filter: string) {
-    const { select, selectVar } = filters.find((f) => f.param === filter);
+    const { selectVar } = filters.find((f) => f.param === filter);
     Object.assign(this, {
       [selectVar]: "",
     });
-    const elm = document.querySelector(select) as
+    const elm = document.querySelector(`#${selectVar}`) as
       | HTMLInputElement
       | HTMLSelectElement;
 
@@ -204,7 +199,7 @@ class MainApp extends HTMLElement {
     // set URL query string with tag
     this.setUrlParams("tag", tag);
     this.scrollToContent();
-    (document.querySelector("#select-tags") as HTMLSelectElement).value = tag;
+    (document.querySelector("#selectedTag") as HTMLSelectElement).value = tag;
     this.setRadio(tag);
   }
 
@@ -213,19 +208,31 @@ class MainApp extends HTMLElement {
     contentElement.scrollIntoView();
   }
 
-  handleFilter({ target }: Event, selectVar: string, param: string) {
-    const elm = target as HTMLInputElement | HTMLSelectElement;
-    const newValue =
-      elm.type === "checkbox"
-        ? (target as HTMLInputElement).checked
-        : (target as HTMLSelectElement).value;
-
+  handleFilter(event: CustomEvent) {
+    const { id, value } = event.detail;
     Object.assign(this, {
-      [selectVar]: newValue,
+      [id]: value,
     });
-    // this.curPage = 1;
     this.render();
-    this.setUrlParams(param, newValue);
+    const param = (event.target as HTMLButtonElement).dataset.param;
+    this.setUrlParams(param, value);
+  }
+
+  handleCheckbox() {
+    const value = (
+      document.querySelector("#selectedVariable") as HTMLInputElement
+    ).checked;
+    Object.assign(this, {
+      selectedVariable: value,
+    });
+    this.render();
+    this.setUrlParams("variable", value);
+  }
+
+  handleSearch(e: Event) {
+    const target = e.target as HTMLInputElement;
+    this.selectedSearch = target.value.replace(/[^a-zA-Z0-9\- ]/g, "");
+    this.render();
   }
 }
 
