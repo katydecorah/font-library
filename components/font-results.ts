@@ -6,7 +6,7 @@ class FontResults extends HTMLElement {
   selectedCategory: string;
   selectedSubset: string;
   selectedVariant: string;
-  search: string;
+  selectedSearch: string;
   resultsLength: number;
   pageSize: number;
   curPage: number;
@@ -24,7 +24,7 @@ class FontResults extends HTMLElement {
     this.selectedCategory = this.getAttribute("selected-category");
     this.selectedSubset = this.getAttribute("selected-subset");
     this.selectedVariant = this.getAttribute("selected-variant");
-    this.search = this.getAttribute("search");
+    this.selectedSearch = this.getAttribute("selected-search");
     this.selectedVariable = this.getAttribute("selected-variable") === "true";
     this.resultsLength;
     this.pageSize = 10;
@@ -41,7 +41,7 @@ class FontResults extends HTMLElement {
       selectedCategory,
       selectedSubset,
       selectedVariant,
-      search,
+      selectedSearch,
       selectedVariable,
       resultsLength,
       pageSize,
@@ -49,18 +49,18 @@ class FontResults extends HTMLElement {
     } = this;
     const strSelectedVariable = selectedVariable ? "true" : "";
 
-    const searchStatus = `<search-status class="search-status" resultsLength="${resultsLength}" selectedCategory="${selectedCategory}" selectedTag="${selectedTag}" selectedSubset="${selectedSubset}" selectedVariant="${selectedVariant}" search="${search}" selectedVariable="${strSelectedVariable}"></search-status>`;
+    const searchStatus = `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${selectedSearch}" selected-variable="${strSelectedVariable}"></search-status>`;
 
     const fontItems = paginatedData
       .map(
         (font) =>
-          `<font-item selectedVariant='${selectedVariant}' selectedSubset='${selectedSubset}' selectedTag='${selectedTag}' font='${JSON.stringify(
+          `<font-item selected-variant='${selectedVariant}' selected-subset='${selectedSubset}' selected-tag='${selectedTag}' font='${JSON.stringify(
             font
           )}'></font-item>`
       )
       .join("\n");
 
-    const paginationButtons = `<pagination-buttons resultsLength="${resultsLength}" pageSize="${pageSize}" currentPage="${curPage}"></pagination-buttons>`;
+    const paginationButtons = `<pagination-buttons results-length="${resultsLength}" page-size="${pageSize}" current-page="${curPage}"></pagination-buttons>`;
 
     this.innerHTML = `${searchStatus}
 <div class="families">${fontItems}</div>
@@ -85,9 +85,9 @@ ${paginationButtons}`;
   performFilter(): GeneratedData {
     let filteredData = generatedData;
 
-    if (this.search) {
+    if (this.selectedSearch) {
       filteredData = filteredData.filter((row) =>
-        row.family.toLowerCase().includes(this.search.toLowerCase())
+        row.family.toLowerCase().includes(this.selectedSearch.toLowerCase())
       );
     }
 

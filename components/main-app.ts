@@ -54,10 +54,10 @@ class MainApp extends HTMLElement {
       selectedSubset,
       selectedVariant,
       selectedTag,
-      selectedSearch: search,
+      selectedSearch,
       selectedVariable,
     } = this;
-    fontResults.innerHTML = `<font-results selected-category="${selectedCategory}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-tag="${selectedTag}" search="${search}" selected-variable="${selectedVariable}"></font-results>`;
+    fontResults.innerHTML = `<font-results selected-category="${selectedCategory}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-tag="${selectedTag}" selected-search="${selectedSearch}" selected-variable="${selectedVariable}"></font-results>`;
   }
 
   getUrlParams(param: string, selectVar: string) {

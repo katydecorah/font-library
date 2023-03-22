@@ -46,13 +46,13 @@ describe("MainApp", () => {
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="15"
-        search=""
-        selectedcategory=""
-        selectedsubset=""
-        selectedtag="cute"
-        selectedvariable=""
-        selectedvariant=""
+        results-length="15"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag="cute"
+        selected-variable=""
+        selected-variant=""
       >
         <div>
           Found 15 fonts: 
@@ -102,13 +102,13 @@ describe("MainApp", () => {
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="136"
-        search=""
-        selectedcategory=""
-        selectedsubset=""
-        selectedtag=""
-        selectedvariable=""
-        selectedvariant="300italic"
+        results-length="136"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable=""
+        selected-variant="300italic"
       >
         <div>
           Found 136 fonts: 
@@ -153,13 +153,13 @@ describe("MainApp", () => {
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="42"
-        search=""
-        selectedcategory=""
-        selectedsubset="arabic"
-        selectedtag=""
-        selectedvariable=""
-        selectedvariant=""
+        results-length="42"
+        selected-category=""
+        selected-search=""
+        selected-subset="arabic"
+        selected-tag=""
+        selected-variable=""
+        selected-variant=""
       >
         <div>
           Found 42 fonts: 
@@ -204,13 +204,13 @@ describe("MainApp", () => {
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="390"
-        search=""
-        selectedcategory="display"
-        selectedsubset=""
-        selectedtag=""
-        selectedvariable=""
-        selectedvariant=""
+        results-length="390"
+        selected-category="display"
+        selected-search=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable=""
+        selected-variant=""
       >
         <div>
           Found 390 fonts: 
@@ -256,13 +256,13 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="524"
-        search=""
-        selectedcategory=""
-        selectedsubset=""
-        selectedtag="need tags"
-        selectedvariable=""
-        selectedvariant=""
+        results-length="524"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag="need tags"
+        selected-variable=""
+        selected-variant=""
       >
         <div>
           Found 524 fonts: 
@@ -315,13 +315,13 @@ describe("MainApp", () => {
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="1495"
-        search=""
-        selectedcategory=""
-        selectedsubset=""
-        selectedtag=""
-        selectedvariable=""
-        selectedvariant=""
+        results-length="1495"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable=""
+        selected-variant=""
       >
         <div>
           Found 1495 fonts
@@ -337,18 +337,18 @@ describe("MainApp", () => {
     await userEvent.type(inputSearch, "are you serious");
 
     const searchStatus = document.querySelector("search-status");
-    const resultsLength = parseInt(searchStatus.getAttribute("resultslength"));
+    const resultsLength = parseInt(searchStatus.getAttribute("results-length"));
 
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="1"
-        search="are you serious"
-        selectedcategory=""
-        selectedsubset=""
-        selectedtag=""
-        selectedvariable=""
-        selectedvariant=""
+        results-length="1"
+        selected-category=""
+        selected-search="are you serious"
+        selected-subset=""
+        selected-tag=""
+        selected-variable=""
+        selected-variant=""
       >
         <div>
           Found 1 fonts: 
@@ -403,13 +403,13 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="1495"
-        search=""
-        selectedcategory=""
-        selectedsubset=""
-        selectedtag=""
-        selectedvariable=""
-        selectedvariant=""
+        results-length="1495"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable=""
+        selected-variant=""
       >
         <div>
           Found 1495 fonts
@@ -434,13 +434,13 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="1495"
-        search=""
-        selectedcategory=""
-        selectedsubset=""
-        selectedtag=""
-        selectedvariable=""
-        selectedvariant=""
+        results-length="1495"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable=""
+        selected-variant=""
       >
         <div>
           Found 1495 fonts
@@ -474,13 +474,13 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="1495"
-        search=""
-        selectedcategory=""
-        selectedsubset=""
-        selectedtag=""
-        selectedvariable=""
-        selectedvariant=""
+        results-length="1495"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable=""
+        selected-variant=""
       >
         <div>
           Found 1495 fonts
@@ -506,13 +506,13 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="15"
-        search=""
-        selectedcategory=""
-        selectedsubset=""
-        selectedtag="cute"
-        selectedvariable=""
-        selectedvariant=""
+        results-length="15"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag="cute"
+        selected-variable=""
+        selected-variant=""
       >
         <div>
           Found 15 fonts: 
@@ -562,13 +562,13 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="2"
-        search=""
-        selectedcategory=""
-        selectedsubset=""
-        selectedtag="1980s"
-        selectedvariable=""
-        selectedvariant=""
+        results-length="2"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag="1980s"
+        selected-variable=""
+        selected-variant=""
       >
         <div>
           Found 2 fonts: 
@@ -619,13 +619,13 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="1495"
-        search=""
-        selectedcategory=""
-        selectedsubset=""
-        selectedtag=""
-        selectedvariable=""
-        selectedvariant=""
+        results-length="1495"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable=""
+        selected-variant=""
       >
         <div>
           Found 1495 fonts
@@ -643,13 +643,13 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="24"
-        search=""
-        selectedcategory=""
-        selectedsubset=""
-        selectedtag="outline"
-        selectedvariable=""
-        selectedvariant=""
+        results-length="24"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag="outline"
+        selected-variable=""
+        selected-variant=""
       >
         <div>
           Found 24 fonts: 
@@ -703,13 +703,13 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="293"
-        search=""
-        selectedcategory=""
-        selectedsubset=""
-        selectedtag=""
-        selectedvariable="true"
-        selectedvariant=""
+        results-length="293"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable="true"
+        selected-variant=""
       >
         <div>
           Found 293 fonts: 
@@ -752,13 +752,13 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="293"
-        search=""
-        selectedcategory=""
-        selectedsubset=""
-        selectedtag=""
-        selectedvariable="true"
-        selectedvariant=""
+        results-length="293"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable="true"
+        selected-variant=""
       >
         <div>
           Found 293 fonts: 
@@ -806,13 +806,13 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="293"
-        search=""
-        selectedcategory=""
-        selectedsubset=""
-        selectedtag=""
-        selectedvariable="true"
-        selectedvariant=""
+        results-length="293"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable="true"
+        selected-variant=""
       >
         <div>
           Found 293 fonts: 
@@ -864,13 +864,13 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        resultslength="1495"
-        search=""
-        selectedcategory=""
-        selectedsubset=""
-        selectedtag=""
-        selectedvariable=""
-        selectedvariant=""
+        results-length="1495"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable=""
+        selected-variant=""
       >
         <div>
           Found 1495 fonts

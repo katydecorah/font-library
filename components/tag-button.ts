@@ -13,7 +13,7 @@ class TagButton extends HTMLButtonElement {
   }
   connectedCallback() {
     const tag = this.getAttribute("value");
-    const selectedTag = this.getAttribute("selectedTag");
+    const selectedTag = this.getAttribute("selected-tag");
 
     // eslint-disable-next-line wc/no-self-class
     this.classList.add("family-tag", `tag-${tag.replace(/ /g, "-")}`);
