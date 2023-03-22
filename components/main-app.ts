@@ -20,24 +20,18 @@ class MainApp extends HTMLElement {
     this.selectedVariable;
 
     // Bind methods
-    this.handleCheckbox = this.handleCheckbox.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
 
     // Event listeners
     this.addEventListener("tag-button-selected", (e: CustomEvent) =>
       this.selectTag(e.detail.value)
     );
+    document.addEventListener("tag-button-selected", (e: CustomEvent) =>
+      this.selectTag(e.detail.value)
+    );
     this.addEventListener("clear-filter", this.clearFilter);
     this.addEventListener("filter-select", this.handleFilter);
-
-    // Radio button on click
-    const radios = document.querySelectorAll("[name='tag']");
-    radios.forEach((radio) => {
-      radio.addEventListener("click", (e) => {
-        const target = e.target as HTMLInputElement;
-        this.selectTag(target.value);
-      });
-    });
+    this.addEventListener("filter-variable", this.handleVariable);
 
     for (const { param, selectVar } of filters) {
       if (selectVar === "selectedSearch") continue;
@@ -47,10 +41,6 @@ class MainApp extends HTMLElement {
     document
       .querySelector("#selectedSearch")
       .addEventListener("input", this.handleSearch);
-
-    document
-      .querySelector("#selectedVariable")
-      .addEventListener("change", this.handleCheckbox);
   }
 
   connectedCallback() {
@@ -92,35 +82,7 @@ class MainApp extends HTMLElement {
       Object.assign(this, {
         [selectVar]: checked,
       });
-      elm.checked = checked;
     }
-
-    if (param === "tag") {
-      this.setRadio(newValue);
-    }
-  }
-
-  setRadio(tag: string) {
-    // set radio button
-    const radio = document.querySelector(
-      `[value='${tag}']`
-    ) as HTMLInputElement;
-    radio.checked = true;
-  }
-
-  setUrlParams(param: string, value: string | boolean) {
-    const urlParams = new URLSearchParams(window.location.search);
-    // only set variable if it's true
-    if (param === "variable" && value === false) {
-      urlParams.delete(param);
-    } else {
-      urlParams.set(param, value.toString());
-    }
-    window.history.replaceState(
-      {},
-      "",
-      `${window.location.pathname}?${urlParams.toString()}`
-    );
   }
 
   clearFilter({ detail: { filter } }: CustomEvent<{ filter: string }>) {
@@ -194,13 +156,14 @@ class MainApp extends HTMLElement {
 
   selectTag(tag: string) {
     this.selectedTag = tag;
-    // this.curPage = 1;
     this.render();
-    // set URL query string with tag
-    this.setUrlParams("tag", tag);
     this.scrollToContent();
     (document.querySelector("#selectedTag") as HTMLSelectElement).value = tag;
-    this.setRadio(tag);
+    // set radio button
+    const radio = document.querySelector(
+      `[value='${tag}']`
+    ) as HTMLInputElement;
+    radio.checked = true;
   }
 
   scrollToContent() {
@@ -216,15 +179,12 @@ class MainApp extends HTMLElement {
     this.render();
   }
 
-  handleCheckbox() {
-    const value = (
-      document.querySelector("#selectedVariable") as HTMLInputElement
-    ).checked;
+  handleVariable(event: CustomEvent) {
+    const { value } = event.detail;
     Object.assign(this, {
       selectedVariable: value,
     });
     this.render();
-    this.setUrlParams("variable", value);
   }
 
   handleSearch(e: Event) {

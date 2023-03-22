@@ -422,7 +422,7 @@ describe("MainApp", () => {
   test("removes variable filter", async () => {
     const checkboxVariable: HTMLInputElement =
       document.querySelector("#selectedVariable");
-    await userEvent.click(checkboxVariable);
+    checkboxVariable.checked = true;
 
     mainApp.dispatchEvent(
       new CustomEvent("clear-filter", {
@@ -458,7 +458,7 @@ describe("MainApp", () => {
     );
     const checkboxVariable: HTMLInputElement =
       document.querySelector("#selectedVariable");
-    await userEvent.click(checkboxVariable);
+    checkboxVariable.checked = true;
 
     const inputSearch: HTMLInputElement =
       document.querySelector("#selectedSearch");
@@ -688,7 +688,11 @@ describe("MainApp", () => {
   test("filters fonts when variable is checked and then unchecked", async () => {
     const checkboxVariable: HTMLInputElement =
       document.querySelector("#selectedVariable");
-    await userEvent.click(checkboxVariable);
+
+    expect(checkboxVariable.checked).toBeFalsy();
+
+    checkboxVariable.click();
+
     expect(window.history.replaceState).toHaveBeenNthCalledWith(
       1,
       {},
@@ -738,7 +742,7 @@ describe("MainApp", () => {
     `);
 
     // uncheck
-    await userEvent.click(checkboxVariable);
+    checkboxVariable.click();
     expect(window.history.replaceState).toHaveBeenNthCalledWith(
       2,
       {},
