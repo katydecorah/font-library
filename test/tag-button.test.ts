@@ -15,13 +15,13 @@ describe("tag-button", () => {
   it("renders", () => {
     const tag = "cute";
     const selectedTag = "";
-    document.body.innerHTML = `<button is="tag-button" selectedTag="${selectedTag}" value="${tag}">${tag}</button>`;
+    document.body.innerHTML = `<button is="tag-button" selected-tag="${selectedTag}" value="${tag}">${tag}</button>`;
     const tagButton = document.querySelector("button[is=tag-button]");
     expect(tagButton).toMatchInlineSnapshot(`
       <button
         class="family-tag tag-cute"
         is="tag-button"
-        selectedtag=""
+        selected-tag=""
         value="cute"
       >
         cute
@@ -32,13 +32,13 @@ describe("tag-button", () => {
   it("renders active", () => {
     const tag = "cute";
     const selectedTag = "cute";
-    document.body.innerHTML = `<button is="tag-button" selectedTag="${selectedTag}" value="${tag}">${tag}</button>`;
+    document.body.innerHTML = `<button is="tag-button" selected-tag="${selectedTag}" value="${tag}">${tag}</button>`;
     const tagButton = document.querySelector("button[is=tag-button]");
     expect(tagButton).toMatchInlineSnapshot(`
       <button
         class="family-tag tag-cute active"
         is="tag-button"
-        selectedtag="cute"
+        selected-tag="cute"
         value="cute"
       >
         cute
@@ -49,7 +49,7 @@ describe("tag-button", () => {
   it("fires a custom event when clicked", () => {
     const tag = "cute";
     const selectedTag = "";
-    document.body.innerHTML = `<button is="tag-button" selectedTag="${selectedTag}" value="${tag}">${tag}</button>`;
+    document.body.innerHTML = `<button is="tag-button" selected-tag="${selectedTag}" value="${tag}">${tag}</button>`;
     const tagButton: HTMLButtonElement = document.querySelector(
       "button[is=tag-button]"
     );
@@ -71,7 +71,7 @@ describe("tag-button", () => {
       value: location,
     });
 
-    document.body.innerHTML = `<button is="tag-button" selectedTag="${selectedTag}" value="${tag}">${tag}</button>`;
+    document.body.innerHTML = `<button is="tag-button" selected-tag="${selectedTag}" value="${tag}">${tag}</button>`;
     const tagButton: HTMLButtonElement = document.querySelector(
       "button[is=tag-button]"
     );
@@ -79,7 +79,7 @@ describe("tag-button", () => {
       <button
         class="active family-tag tag-cute"
         is="tag-button"
-        selectedtag=""
+        selected-tag=""
         value="cute"
       >
         cute

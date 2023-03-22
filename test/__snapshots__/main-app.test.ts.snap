@@ -2140,8 +2140,8 @@ exports[`MainApp renders correctly 1`] = `
       id="font-results"
     >
       <font-results
-        search=""
         selected-category=""
+        selected-search=""
         selected-subset=""
         selected-tag=""
         selected-variable="undefined"
@@ -2149,13 +2149,13 @@ exports[`MainApp renders correctly 1`] = `
       >
         <search-status
           class="search-status"
-          resultslength="1495"
-          search=""
-          selectedcategory=""
-          selectedsubset=""
-          selectedtag=""
-          selectedvariable=""
-          selectedvariant=""
+          results-length="1495"
+          selected-category=""
+          selected-search=""
+          selected-subset=""
+          selected-tag=""
+          selected-variable=""
+          selected-variant=""
         >
           <div>
             Found 1495 fonts
@@ -2169,9 +2169,9 @@ exports[`MainApp renders correctly 1`] = `
           <font-item
             font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false}"
             id="abeezee"
-            selectedsubset=""
-            selectedtag=""
-            selectedvariant=""
+            selected-subset=""
+            selected-tag=""
+            selected-variant=""
           >
             <div
               class="family"
@@ -2251,7 +2251,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-literacy"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="literacy"
                   >
                     literacy
@@ -2259,7 +2259,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-kids"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="kids"
                   >
                     kids
@@ -2303,9 +2303,9 @@ exports[`MainApp renders correctly 1`] = `
           <font-item
             font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3,"variable":false}"
             id="abel"
-            selectedsubset=""
-            selectedtag=""
-            selectedvariant=""
+            selected-subset=""
+            selected-tag=""
+            selected-variant=""
           >
             <div
               class="family"
@@ -2385,7 +2385,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-condensed"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="condensed"
                   >
                     condensed
@@ -2429,9 +2429,9 @@ exports[`MainApp renders correctly 1`] = `
           <font-item
             font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4,"variable":false}"
             id="abhaya-libre"
-            selectedsubset=""
-            selectedtag=""
-            selectedvariant=""
+            selected-subset=""
+            selected-tag=""
+            selected-variant=""
           >
             <div
               class="family"
@@ -2546,9 +2546,9 @@ exports[`MainApp renders correctly 1`] = `
           <font-item
             font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5,"variable":false}"
             id="aboreto"
-            selectedsubset=""
-            selectedtag=""
-            selectedvariant=""
+            selected-subset=""
+            selected-tag=""
+            selected-variant=""
           >
             <div
               class="family"
@@ -2628,7 +2628,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-caps"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="caps"
                   >
                     caps
@@ -2672,9 +2672,9 @@ exports[`MainApp renders correctly 1`] = `
           <font-item
             font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6,"variable":false}"
             id="abril-fatface"
-            selectedsubset=""
-            selectedtag=""
-            selectedvariant=""
+            selected-subset=""
+            selected-tag=""
+            selected-variant=""
           >
             <div
               class="family"
@@ -2754,7 +2754,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-heavy"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="heavy"
                   >
                     heavy
@@ -2762,7 +2762,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-elegant"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="elegant"
                   >
                     elegant
@@ -2770,7 +2770,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-didone"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="didone"
                   >
                     didone
@@ -2778,7 +2778,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-headlines"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="headlines"
                   >
                     headlines
@@ -2822,9 +2822,9 @@ exports[`MainApp renders correctly 1`] = `
           <font-item
             font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false}"
             id="abyssinica-sil"
-            selectedsubset=""
-            selectedtag=""
-            selectedvariant=""
+            selected-subset=""
+            selected-tag=""
+            selected-variant=""
           >
             <div
               class="family"
@@ -2939,9 +2939,9 @@ exports[`MainApp renders correctly 1`] = `
           <font-item
             font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8,"variable":false}"
             id="aclonica"
-            selectedsubset=""
-            selectedtag=""
-            selectedvariant=""
+            selected-subset=""
+            selected-tag=""
+            selected-variant=""
           >
             <div
               class="family"
@@ -3021,7 +3021,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-modern"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="modern"
                   >
                     modern
@@ -3029,7 +3029,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-friendly"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="friendly"
                   >
                     friendly
@@ -3073,9 +3073,9 @@ exports[`MainApp renders correctly 1`] = `
           <font-item
             font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9,"variable":false}"
             id="acme"
-            selectedsubset=""
-            selectedtag=""
-            selectedvariant=""
+            selected-subset=""
+            selected-tag=""
+            selected-variant=""
           >
             <div
               class="family"
@@ -3155,7 +3155,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-cartoon"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="cartoon"
                   >
                     cartoon
@@ -3163,7 +3163,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-comic"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="comic"
                   >
                     comic
@@ -3171,7 +3171,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-groovy"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="groovy"
                   >
                     groovy
@@ -3179,7 +3179,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-headlines"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="headlines"
                   >
                     headlines
@@ -3223,9 +3223,9 @@ exports[`MainApp renders correctly 1`] = `
           <font-item
             font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10,"variable":false}"
             id="actor"
-            selectedsubset=""
-            selectedtag=""
-            selectedvariant=""
+            selected-subset=""
+            selected-tag=""
+            selected-variant=""
           >
             <div
               class="family"
@@ -3305,7 +3305,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-thin"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="thin"
                   >
                     thin
@@ -3313,7 +3313,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-legibility"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="legibility"
                   >
                     legibility
@@ -3357,9 +3357,9 @@ exports[`MainApp renders correctly 1`] = `
           <font-item
             font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11,"variable":false}"
             id="adamina"
-            selectedsubset=""
-            selectedtag=""
-            selectedvariant=""
+            selected-subset=""
+            selected-tag=""
+            selected-variant=""
           >
             <div
               class="family"
@@ -3439,7 +3439,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-compact"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="compact"
                   >
                     compact
@@ -3447,7 +3447,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-small-sizes"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="small sizes"
                   >
                     small sizes
@@ -3455,7 +3455,7 @@ exports[`MainApp renders correctly 1`] = `
                   <button
                     class="family-tag tag-transitional"
                     is="tag-button"
-                    selectedtag=""
+                    selected-tag=""
                     value="transitional"
                   >
                     transitional
@@ -3498,9 +3498,9 @@ exports[`MainApp renders correctly 1`] = `
         
 
         <pagination-buttons
-          currentpage="1"
-          pagesize="10"
-          resultslength="1495"
+          current-page="1"
+          page-size="10"
+          results-length="1495"
         >
           <div
             class="pagination "

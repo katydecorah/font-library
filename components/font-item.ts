@@ -25,10 +25,10 @@ class FontItem extends HTMLElement {
 
   connectedCallback() {
     const fontString = this.getAttribute("font");
-    const selectedTag = this.getAttribute("selectedTag");
-    const selectedSubset = this.getAttribute("selectedSubset");
+    const selectedTag = this.getAttribute("selected-tag");
+    const selectedSubset = this.getAttribute("selected-subset");
     this.selectedSubset = selectedSubset;
-    const selectedVariant = this.getAttribute("selectedVariant");
+    const selectedVariant = this.getAttribute("selected-variant");
     this.selectedVariant = selectedVariant;
     this.subset = this.selectedSubset;
 
@@ -71,7 +71,7 @@ class FontItem extends HTMLElement {
       <div class="family-tags-container">${tags
         .map(
           (tag: string) =>
-            `<button is="tag-button" selectedTag="${selectedTag}" value="${tag}">${tag}</button>`
+            `<button is="tag-button" selected-tag="${selectedTag}" value="${tag}">${tag}</button>`
         )
         .join("")}</div>
       <div class="family-meta-links">

@@ -6,9 +6,9 @@ class PaginationButtons extends HTMLElement {
   }
 
   connectedCallback() {
-    const currentPage = parseInt(this.getAttribute("currentPage"));
-    const resultsLength = parseInt(this.getAttribute("resultsLength"));
-    const pageSize = parseInt(this.getAttribute("pageSize"));
+    const currentPage = parseInt(this.getAttribute("current-page"));
+    const resultsLength = parseInt(this.getAttribute("results-length"));
+    const pageSize = parseInt(this.getAttribute("page-size"));
 
     const totalPages = Math.ceil(resultsLength / pageSize);
     const nextPageDisabledState =

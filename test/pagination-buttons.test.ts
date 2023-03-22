@@ -5,7 +5,7 @@ describe("pagination-buttons", () => {
     const resultsLength = 1200;
     const pageSize = 10;
     const curPage = 1;
-    document.body.innerHTML = `<pagination-buttons resultsLength="${resultsLength}" pageSize="${pageSize}" currentPage="${curPage}"></pagination-buttons>`;
+    document.body.innerHTML = `<pagination-buttons results-length="${resultsLength}" page-size="${pageSize}" current-page="${curPage}"></pagination-buttons>`;
     const paginationButtons =
       document.querySelector("pagination-buttons").innerHTML;
     expect(paginationButtons).toMatchInlineSnapshot(`
@@ -21,7 +21,7 @@ describe("pagination-buttons", () => {
     const resultsLength = 1200;
     const pageSize = 10;
     const curPage = 2;
-    document.body.innerHTML = `<pagination-buttons resultsLength="${resultsLength}" pageSize="${pageSize}" currentPage="${curPage}"></pagination-buttons>`;
+    document.body.innerHTML = `<pagination-buttons results-length="${resultsLength}" page-size="${pageSize}" current-page="${curPage}"></pagination-buttons>`;
     const paginationButtons =
       document.querySelector("pagination-buttons").innerHTML;
     expect(paginationButtons).toMatchInlineSnapshot(`
@@ -37,7 +37,7 @@ describe("pagination-buttons", () => {
     const resultsLength = 1200;
     const pageSize = 10;
     const curPage = 120;
-    document.body.innerHTML = `<pagination-buttons resultsLength="${resultsLength}" pageSize="${pageSize}" currentPage="${curPage}"></pagination-buttons>`;
+    document.body.innerHTML = `<pagination-buttons results-length="${resultsLength}" page-size="${pageSize}" current-page="${curPage}"></pagination-buttons>`;
     const paginationButtons =
       document.querySelector("pagination-buttons").innerHTML;
     expect(paginationButtons).toMatchInlineSnapshot(`
@@ -53,7 +53,7 @@ describe("pagination-buttons", () => {
     const resultsLength = 10;
     const pageSize = 10;
     const curPage = 1;
-    document.body.innerHTML = `<pagination-buttons resultsLength="${resultsLength}" pageSize="${pageSize}" currentPage="${curPage}"></pagination-buttons>`;
+    document.body.innerHTML = `<pagination-buttons results-length="${resultsLength}" page-size="${pageSize}" current-page="${curPage}"></pagination-buttons>`;
     const paginationButtons =
       document.querySelector("pagination-buttons").innerHTML;
     expect(paginationButtons).toMatchInlineSnapshot(`
@@ -69,7 +69,7 @@ describe("pagination-buttons", () => {
     const resultsLength = 1200;
     const pageSize = 10;
     const curPage = 1;
-    document.body.innerHTML = `<pagination-buttons resultsLength="${resultsLength}" pageSize="${pageSize}" currentPage="${curPage}"></pagination-buttons>`;
+    document.body.innerHTML = `<pagination-buttons results-length="${resultsLength}" page-size="${pageSize}" current-page="${curPage}"></pagination-buttons>`;
     const paginationButtons = document.querySelector(
       "pagination-buttons #btn-next"
     );

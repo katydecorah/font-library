@@ -6,13 +6,13 @@ class SearchStatus extends HTMLElement {
   }
 
   connectedCallback() {
-    const selectedCategory = this.getAttribute("selectedCategory");
-    const selectedTag = this.getAttribute("selectedTag");
-    const selectedSubset = this.getAttribute("selectedSubset");
-    const selectedVariant = this.getAttribute("selectedVariant");
-    const search = this.getAttribute("search");
-    const resultsLength = this.getAttribute("resultsLength");
-    const selectedVariable = this.getAttribute("selectedVariable") === "true";
+    const selectedCategory = this.getAttribute("selected-category");
+    const selectedTag = this.getAttribute("selected-tag");
+    const selectedSubset = this.getAttribute("selected-subset");
+    const selectedVariant = this.getAttribute("selected-variant");
+    const selectedSearch = this.getAttribute("selected-search");
+    const resultsLength = this.getAttribute("results-length");
+    const selectedVariable = this.getAttribute("selected-variable") === "true";
 
     const hasFilters =
       selectedCategory ||
@@ -20,7 +20,7 @@ class SearchStatus extends HTMLElement {
       selectedSubset ||
       selectedVariant ||
       selectedVariable ||
-      search;
+      selectedSearch;
 
     const elm = [
       `<div>Found ${resultsLength} fonts${hasFilters ? ": " : ""}</div>`,
@@ -31,7 +31,7 @@ class SearchStatus extends HTMLElement {
       tag: selectedTag,
       subset: selectedSubset,
       variant: selectedVariant,
-      search: search,
+      search: selectedSearch,
       variable: selectedVariable,
     };
 
