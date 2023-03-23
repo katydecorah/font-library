@@ -21,6 +21,9 @@ class TagButton extends HTMLButtonElement {
     if (selectedTag === tag) {
       // eslint-disable-next-line wc/no-self-class
       this.classList.add("active");
+    } else {
+      // eslint-disable-next-line wc/no-self-class
+      this.classList.remove("active");
     }
   }
 

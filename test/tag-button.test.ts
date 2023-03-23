@@ -77,7 +77,7 @@ describe("tag-button", () => {
     );
     expect(tagButton).toMatchInlineSnapshot(`
       <button
-        class="active family-tag tag-cute"
+        class="family-tag tag-cute"
         is="tag-button"
         selected-tag=""
         value="cute"

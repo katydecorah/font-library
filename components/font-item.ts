@@ -95,20 +95,28 @@ class FontItem extends HTMLElement {
   addFontToHead({
     previewName,
     family,
+    variants,
   }: {
     previewName: string;
     family: string;
+    variants: string[];
   }): void {
     const googleFont = document.createElement("link");
     googleFont.href = `https://fonts.googleapis.com/css2?family=${this.fontCall(
-      { previewName }
+      { previewName, variants }
     )}`;
     googleFont.rel = "stylesheet";
     googleFont.setAttribute("data-family", family);
     document.head.appendChild(googleFont);
   }
 
-  fontCall({ previewName }: { previewName: string }): string {
+  fontCall({
+    previewName,
+    variants,
+  }: {
+    previewName: string;
+    variants: string[];
+  }): string {
     let font = this.slug;
 
     const hasItalic = this.selectedVariant.includes("italic");
@@ -117,12 +125,23 @@ class FontItem extends HTMLElement {
     if (this.selectedVariant && this.selectedVariant !== "regular") {
       const variants = [];
       if (hasItalic) {
-        variants.push("ital");
+        variants.push("ital@1");
       }
       if (variantNumber && variantNumber[0]) {
         variants.push(`wght@${hasItalic ? "1," : ""}${variantNumber[0]}`);
       }
       font += `:${variants.join(",")}`;
+    }
+
+    // if font doesn't have regular variant, add subset to font call
+    if (!this.selectedVariant && !variants.includes("regular")) {
+      // get first variant
+      const firstVariant = variants[0];
+      if (firstVariant.match(/\d+/g)) {
+        font += `:wght@${firstVariant}`;
+      } else if (firstVariant.includes("italic")) {
+        font += `:ital@1`;
+      }
     }
 
     font += `&text=${encodeURIComponent(previewName)}`;
