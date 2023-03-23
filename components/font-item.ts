@@ -95,11 +95,11 @@ class FontItem extends HTMLElement {
 
   addFontToHead(): void {
     const { family } = this.font;
-    const googleFont = document.createElement("link");
-    googleFont.href = `https://fonts.googleapis.com/css2?family=${this.fontCall()}`;
-    googleFont.rel = "stylesheet";
-    googleFont.setAttribute("data-family", family);
-    document.head.appendChild(googleFont);
+    const linkElement = document.createElement("link");
+    linkElement.href = this.fontCall();
+    linkElement.rel = "stylesheet";
+    linkElement.setAttribute("data-family", family);
+    document.head.appendChild(linkElement);
   }
 
   fontCall(): string {
@@ -132,7 +132,7 @@ class FontItem extends HTMLElement {
 
     fontCallStr += `&text=${encodeURIComponent(this.previewName)}&display=swap`;
 
-    return fontCallStr;
+    return `https://fonts.googleapis.com/css2?family=${fontCallStr}`;
   }
 
   familyStyle(): string {
