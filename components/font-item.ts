@@ -7,52 +7,53 @@ export type RtlSubsets = typeof rtlSubsets;
 export type Swaps = typeof swaps;
 
 class FontItem extends HTMLElement {
-  family: string;
-  category: string;
-  variants: string[];
-  subsets: string[];
-  lineNumber: string;
-  tags: string[];
   selectedSubset: string;
-  subset: string;
   selectedVariant: string;
+  selectedTag: string;
   id: string;
   slug: string;
+  previewName: string;
+  subset: string;
+  font: {
+    family: string;
+    category: string;
+    variants: string[];
+    subsets: string[];
+    lineNumber: string;
+    tags: string[];
+    variable?: boolean;
+  };
 
   constructor() {
     super();
   }
 
   connectedCallback() {
-    const fontString = this.getAttribute("font");
-    const selectedTag = this.getAttribute("selected-tag");
-    const selectedSubset = this.getAttribute("selected-subset");
-    this.selectedSubset = selectedSubset;
-    const selectedVariant = this.getAttribute("selected-variant");
-    this.selectedVariant = selectedVariant;
-    this.subset = this.selectedSubset;
-
-    const font = JSON.parse(fontString);
+    this.font = JSON.parse(this.getAttribute("font"));
     const { family, category, variants, subsets, lineNumber, tags, variable } =
-      font;
+      this.font;
+    this.selectedTag = this.getAttribute("selected-tag");
+    this.selectedSubset = this.getAttribute("selected-subset");
+    this.selectedVariant = this.getAttribute("selected-variant");
+    this.subset = this.selectedSubset;
     this.id = family.toLowerCase().replace(/ /g, "-");
     this.slug = family.replace(/ /g, "+");
-    const previewName = this.subsetFamily(font);
+    this.previewName = this.createPreviewName();
 
-    this.addFontToHead({ previewName, ...font });
+    this.addFontToHead();
 
-    const familyStyle = this.familyStyle({ previewName, ...font });
+    const familyStyle = this.familyStyle();
 
     this.innerHTML = `<div id="family-${this.id}" class="family">
     <div class="family-link">
       <div id="family-name" class="family-title ${
         this.id
       }" style="${familyStyle}">
-        ${previewName}
+        ${this.previewName}
       </div>
       <div class="family-meta-container">
      <span class="family-title-small">${
-       previewName == family ? "" : family
+       this.previewName == family ? "" : family
      }</span>
       <div class="family-meta">
         <span>${category}</span>
@@ -71,7 +72,7 @@ class FontItem extends HTMLElement {
       <div class="family-tags-container">${tags
         .map(
           (tag: string) =>
-            `<button is="tag-button" selected-tag="${selectedTag}" value="${tag}">${tag}</button>`
+            `<button is="tag-button" selected-tag="${this.selectedTag}" value="${tag}">${tag}</button>`
         )
         .join("")}</div>
       <div class="family-meta-links">
@@ -92,33 +93,18 @@ class FontItem extends HTMLElement {
   </div>`;
   }
 
-  addFontToHead({
-    previewName,
-    family,
-    variants,
-  }: {
-    previewName: string;
-    family: string;
-    variants: string[];
-  }): void {
-    const googleFont = document.createElement("link");
-    googleFont.href = `https://fonts.googleapis.com/css2?family=${this.fontCall(
-      { previewName, variants }
-    )}`;
-    googleFont.rel = "stylesheet";
-    googleFont.setAttribute("data-family", family);
-    document.head.appendChild(googleFont);
+  addFontToHead(): void {
+    const { family } = this.font;
+    const linkElement = document.createElement("link");
+    linkElement.href = this.fontCall();
+    linkElement.rel = "stylesheet";
+    linkElement.setAttribute("data-family", family);
+    document.head.appendChild(linkElement);
   }
 
-  fontCall({
-    previewName,
-    variants,
-  }: {
-    previewName: string;
-    variants: string[];
-  }): string {
-    let font = this.slug;
-
+  fontCall(): string {
+    const { variants } = this.font;
+    let fontCallStr = this.slug;
     const hasItalic = this.selectedVariant.includes("italic");
     const variantNumber = this.selectedVariant.match(/\d+/g); // get number from selectedVariant
 
@@ -130,7 +116,7 @@ class FontItem extends HTMLElement {
       if (variantNumber && variantNumber[0]) {
         variants.push(`wght@${hasItalic ? "1," : ""}${variantNumber[0]}`);
       }
-      font += `:${variants.join(",")}`;
+      fontCallStr += `:${variants.join(",")}`;
     }
 
     // if font doesn't have regular variant, add subset to font call
@@ -138,29 +124,21 @@ class FontItem extends HTMLElement {
       // get first variant
       const firstVariant = variants[0];
       if (firstVariant.match(/\d+/g)) {
-        font += `:wght@${firstVariant}`;
+        fontCallStr += `:wght@${firstVariant}`;
       } else if (firstVariant.includes("italic")) {
-        font += `:ital@1`;
+        fontCallStr += `:ital@1`;
       }
     }
 
-    font += `&text=${encodeURIComponent(previewName)}`;
+    fontCallStr += `&text=${encodeURIComponent(this.previewName)}&display=swap`;
 
-    font += `&display=swap`;
-
-    return font;
+    return `https://fonts.googleapis.com/css2?family=${fontCallStr}`;
   }
 
-  familyStyle({
-    previewName,
-    family,
-  }: {
-    previewName: string;
-    subsets: string[];
-    family: string;
-  }): string {
+  familyStyle(): string {
+    const { family } = this.font;
     let style = `font-family: '${family}';`;
-    if (rtlSubsets.includes(this.subset) && family !== previewName) {
+    if (rtlSubsets.includes(this.subset) && family !== this.previewName) {
       style += "direction: rtl;";
     }
     if (this.selectedVariant.includes("italic")) {
@@ -169,13 +147,8 @@ class FontItem extends HTMLElement {
     return style;
   }
 
-  subsetFamily({
-    family,
-    subsets,
-  }: {
-    family: string;
-    subsets: string[];
-  }): string {
+  createPreviewName(): string {
+    const { family, subsets } = this.font;
     if (this.selectedSubset && this.selectedSubset in sampleSubsets) {
       return sampleSubsets[this.selectedSubset as keyof SampleSubsets];
     }
