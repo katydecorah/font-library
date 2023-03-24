@@ -105,34 +105,43 @@ class FontItem extends HTMLElement {
   fontCall(): string {
     const { variants } = this.font;
     let fontCallStr = this.slug;
-    const hasItalic = this.selectedVariant.includes("italic");
-    const variantNumber = this.selectedVariant.match(/\d+/g); // get number from selectedVariant
 
     if (this.selectedVariant && this.selectedVariant !== "regular") {
-      const variants = [];
-      if (hasItalic) {
-        variants.push("ital@1");
-      }
-      if (variantNumber && variantNumber[0]) {
-        variants.push(`wght@${hasItalic ? "1," : ""}${variantNumber[0]}`);
-      }
-      fontCallStr += `:${variants.join(",")}`;
+      fontCallStr += this.fontCallSelectedVariant();
     }
-
     // if font doesn't have regular variant, add subset to font call
     if (!this.selectedVariant && !variants.includes("regular")) {
-      // get first variant
-      const firstVariant = variants[0];
-      if (firstVariant.match(/\d+/g)) {
-        fontCallStr += `:wght@${firstVariant}`;
-      } else if (firstVariant.includes("italic")) {
-        fontCallStr += `:ital@1`;
-      }
+      fontCallStr += this.fontCallVariant();
     }
 
     fontCallStr += `&text=${encodeURIComponent(this.previewName)}&display=swap`;
 
     return `https://fonts.googleapis.com/css2?family=${fontCallStr}`;
+  }
+
+  fontCallVariant(): string {
+    const firstVariant = this.font.variants[0];
+    if (firstVariant.match(/\d+/g)) {
+      return `:wght@${firstVariant}`;
+    } else if (firstVariant.includes("italic")) {
+      return `:ital@1`;
+    }
+  }
+
+  fontCallSelectedVariant() {
+    const hasItalic = this.selectedVariant.includes("italic");
+    const variantNumber = this.selectedVariant.match(/\d+/g); // get number from selectedVariant
+
+    const variants = [];
+    if (this.selectedVariant === "italic") {
+      variants.push("ital@1");
+    } else if (hasItalic) {
+      variants.push("ital");
+    }
+    if (variantNumber && variantNumber[0]) {
+      variants.push(`wght@${hasItalic ? "1," : ""}${variantNumber[0]}`);
+    }
+    return `:${variants.join(",")}`;
   }
 
   familyStyle(): string {
