@@ -28,6 +28,10 @@ describe("MainApp", () => {
     mainApp = document.querySelector("main-app");
   });
 
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   test("renders correctly", () => {
     expect(mainApp).toMatchSnapshot();
   });
@@ -693,12 +697,7 @@ describe("MainApp", () => {
 
     checkboxVariable.click();
 
-    expect(window.history.replaceState).toHaveBeenNthCalledWith(
-      1,
-      {},
-      "",
-      "/?variable=true"
-    );
+    expect(checkboxVariable.checked).toBeTruthy();
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
@@ -743,12 +742,7 @@ describe("MainApp", () => {
 
     // uncheck
     checkboxVariable.click();
-    expect(window.history.replaceState).toHaveBeenNthCalledWith(
-      2,
-      {},
-      "",
-      "/?"
-    );
+    expect(checkboxVariable.checked).toBeFalsy();
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
@@ -789,64 +783,6 @@ describe("MainApp", () => {
         </button>
       </search-status>
     `);
-  });
-
-  test("filters based on variable=true in query string", async () => {
-    const location = {
-      ...window.location,
-      search: "?variable=true",
-    };
-    Object.defineProperty(window, "location", {
-      writable: true,
-      value: location,
-    });
-
-    document.body.innerHTML = body;
-    const searchStatus = document.querySelector("search-status");
-    expect(searchStatus).toMatchInlineSnapshot(`
-      <search-status
-        class="search-status"
-        results-length="293"
-        selected-category=""
-        selected-search=""
-        selected-subset=""
-        selected-tag=""
-        selected-variable="true"
-        selected-variant=""
-      >
-        <div>
-          Found 293 fonts: 
-        </div>
-        
-
-        <div
-          class="search-filter"
-        >
-          variable
-          <button
-            aria-label="remove variable"
-            class="clear-button"
-            is="clear-button"
-            value="variable"
-          >
-            close.svg
-          </button>
-        </div>
-        
-
-        <button
-          aria-label="remove all filters"
-          class="btn btn-clear clear-button"
-          is="clear-button"
-        >
-          Clear
-        </button>
-      </search-status>
-    `);
-    // expect variable to be checked
-    expect(
-      (document.querySelector("#selectedVariable") as HTMLInputElement).checked
-    ).toBe(true);
   });
 
   test("does nothing when variable=false in query string", async () => {

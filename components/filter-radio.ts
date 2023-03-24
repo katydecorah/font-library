@@ -8,6 +8,11 @@ class FilterRadio extends HTMLInputElement {
     const tag = urlParams.get("tag");
     if (tag === this.value) {
       this.checked = true;
+
+      // Wait for main-app to load before dispatching event
+      window.addEventListener("main-app-loaded", () => {
+        this.onChange();
+      });
     }
   }
 
