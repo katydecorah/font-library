@@ -1,5 +1,9 @@
-import filters from "../_data/metadata.json";
-export type Filters = typeof filters;
+type SelectTypes =
+  | "selectedCategory"
+  | "selectedSubset"
+  | "selectedVariant"
+  | "selectedTag"
+  | "selectedSearch";
 
 class MainApp extends HTMLElement {
   selectedTag: string;
@@ -21,17 +25,14 @@ class MainApp extends HTMLElement {
 
     // Bind methods
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleFilter = this.handleFilter.bind(this);
 
     // Event listeners
-    this.addEventListener("tag-button-selected", (e: CustomEvent) =>
-      this.selectTag(e.detail.value)
-    );
-    document.addEventListener("tag-button-selected", (e: CustomEvent) =>
-      this.selectTag(e.detail.value)
-    );
     this.addEventListener("clear-filter", this.clearFilter);
+    this.addEventListener("tag-button-selected", this.handleFilter);
+    document.addEventListener("tag-button-selected", this.handleFilter);
     this.addEventListener("filter-select", this.handleFilter);
-    this.addEventListener("filter-variable", this.handleVariable);
+    this.addEventListener("filter-variable", this.handleFilter);
     document
       .querySelector("#selectedSearch")
       .addEventListener("input", this.handleSearch);
@@ -58,83 +59,60 @@ class MainApp extends HTMLElement {
   }
 
   clearFilter({ detail: { filter } }: CustomEvent<{ filter: string }>) {
-    if (filter) {
-      this.removeSingleFilter(filter);
-    } else {
-      this.removeAllFilters();
-    }
+    if (filter) this.removeSingleFilter(filter);
+    else this.removeAllFilters();
     this.render();
-  }
-
-  removeAllFilters() {
-    for (const { selectVar } of filters) {
-      Object.assign(this, {
-        [selectVar]: "",
-      });
-
-      const elm = document.querySelector(`#${selectVar}`) as
-        | HTMLInputElement
-        | HTMLSelectElement;
-
-      if (elm.value) {
-        elm.value = "";
-      }
-      if (elm instanceof HTMLInputElement && elm.checked) {
-        elm.checked = false;
-      }
-    }
-    // Reset radio buttons
-    this.resetRadioTags();
-    // Reset URL
-    window.history.pushState({}, "", `${window.location.pathname}`);
   }
 
   removeSingleFilter(filter: string) {
-    const { selectVar } = filters.find((f) => f.param === filter);
-    Object.assign(this, {
-      [selectVar]: "",
-    });
-    const elm = document.querySelector(`#${selectVar}`) as
-      | HTMLInputElement
-      | HTMLSelectElement;
-
-    if (elm.value) {
-      elm.value = "";
+    switch (filter) {
+      case "category":
+        this.removeSelect("selectedCategory");
+        break;
+      case "subset":
+        this.removeSelect("selectedSubset");
+        break;
+      case "variant":
+        this.removeSelect("selectedVariant");
+        break;
+      case "tag":
+        this.removeSelect("selectedTag");
+        break;
+      case "search":
+        this.removeSearch();
+        break;
+      case "variable":
+        this.removeCheckbox();
+        break;
     }
-    if (elm instanceof HTMLInputElement && elm.checked) {
-      elm.checked = false;
-    }
+  }
 
-    const urlParams = new URLSearchParams(window.location.search);
-    urlParams.delete(filter);
-    window.history.replaceState(
-      {},
-      "",
-      `${window.location.pathname}?${urlParams.toString()}`
+  removeAllFilters() {
+    if (this.selectedCategory) this.removeSelect("selectedCategory");
+    if (this.selectedSubset) this.removeSelect("selectedSubset");
+    if (this.selectedVariant) this.removeSelect("selectedVariant");
+    if (this.selectedVariable) this.removeCheckbox();
+    if (this.selectedTag) this.removeSelect("selectedTag");
+    if (this.selectedSearch) this.removeSearch();
+  }
+
+  removeSearch() {
+    this.selectedSearch = "";
+    (document.querySelector("#selectedSearch") as HTMLInputElement).value = "";
+  }
+
+  removeSelect(filter: string) {
+    window.dispatchEvent(
+      new CustomEvent("remove-select", {
+        detail: {
+          filter,
+        },
+      })
     );
-    if (filter === "tag") {
-      this.resetRadioTags();
-    }
   }
 
-  resetRadioTags() {
-    // Reset radio buttons
-    const radios = document.querySelectorAll("[name='tag']");
-    radios.forEach((radio: HTMLInputElement) => {
-      radio.checked = false;
-    });
-  }
-
-  selectTag(tag: string) {
-    this.selectedTag = tag;
-    this.render();
-    this.scrollToContent();
-    (document.querySelector("#selectedTag") as HTMLSelectElement).value = tag;
-    // set radio button
-    const radio = document.querySelector(
-      `[value='${tag}']`
-    ) as HTMLInputElement;
-    radio.checked = true;
+  removeCheckbox() {
+    window.dispatchEvent(new CustomEvent("remove-checkbox"));
   }
 
   scrollToContent() {
@@ -144,24 +122,18 @@ class MainApp extends HTMLElement {
 
   handleFilter(event: CustomEvent) {
     const { id, value } = event.detail;
-    Object.assign(this, {
-      [id]: value,
-    });
+    this[id as SelectTypes] = value;
     this.render();
+    this.scrollToContent();
   }
 
-  handleVariable(event: CustomEvent) {
-    const { value } = event.detail;
-    Object.assign(this, {
-      selectedVariable: value,
-    });
+  handleSearch(event: Event) {
+    this.selectedSearch = (event.target as HTMLInputElement).value.replace(
+      /[^a-zA-Z0-9\- ]/g,
+      ""
+    );
     this.render();
-  }
-
-  handleSearch(e: Event) {
-    const target = e.target as HTMLInputElement;
-    this.selectedSearch = target.value.replace(/[^a-zA-Z0-9\- ]/g, "");
-    this.render();
+    this.scrollToContent();
   }
 }
 

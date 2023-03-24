@@ -15,6 +15,21 @@ class FilterSelect extends HTMLSelectElement {
         this.onChange();
       });
     }
+
+    // Listen for events to clear filter
+    window.addEventListener("remove-select", (e: CustomEvent) => {
+      if (e.detail.filter === this.id) {
+        this.value = "";
+        this.onChange();
+      }
+    });
+
+    // Listen for changes by other tag elements (radio, button)
+    window.addEventListener("tag-button-selected", (e: CustomEvent) => {
+      if (this.id === "selectedTag" && this.value !== e.detail.value) {
+        this.value = e.detail.value;
+      }
+    });
   }
 
   onChange() {
@@ -34,7 +49,11 @@ class FilterSelect extends HTMLSelectElement {
   setUrlParam() {
     const param = this.dataset.param;
     const urlParams = new URLSearchParams(window.location.search);
-    urlParams.set(param, this.value.toString());
+    if (!this.value) {
+      urlParams.delete(param);
+    } else {
+      urlParams.set(param, this.value.toString());
+    }
     window.history.replaceState(
       {},
       "",

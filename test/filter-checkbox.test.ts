@@ -26,6 +26,7 @@ describe("filter-checkbox", () => {
     expect(mockFn).toHaveBeenCalled();
     expect(mockFn.mock.calls[0][0].detail).toMatchInlineSnapshot(`
       {
+        "id": "selectedVariable",
         "value": true,
       }
     `);

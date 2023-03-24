@@ -38,6 +38,7 @@ class TagButton extends HTMLButtonElement {
         bubbles: true,
         composed: true,
         detail: {
+          id: "selectedTag",
           value: this.getAttribute("value"),
         },
       })

@@ -14,6 +14,16 @@ class FilterRadio extends HTMLInputElement {
         this.onChange();
       });
     }
+
+    // Listen for changes by other tag elements (button, select)
+    window.addEventListener("tag-button-selected", (e: CustomEvent) => {
+      if (e.detail.value === this.value) {
+        this.checked = true;
+      }
+      if (e.detail.value !== this.value && this.checked) {
+        this.checked = false;
+      }
+    });
   }
 
   onChange() {
@@ -22,6 +32,7 @@ class FilterRadio extends HTMLInputElement {
         bubbles: true,
         composed: true,
         detail: {
+          id: "selectedTag",
           value: this.value,
         },
       })
