@@ -1,6 +1,12 @@
 import "./components";
 
 describe("FontItem", () => {
+  afterEach(() => {
+    document.body.innerHTML = "";
+    const fonts = document.querySelectorAll("link[data-family]");
+    fonts.forEach((font) => document.head.removeChild(font));
+  });
+
   test("renders correctly", () => {
     document.body.innerHTML = `<font-item selected-variant="" selected-subset="" font='{"family":"Alef","variants":["regular","700"],"subsets":["hebrew","latin"],"category":"sans-serif","tags":["geometric"],"lineNumber":23}'></font-item>`;
     const fontItem = document.querySelector("font-item");
@@ -43,7 +49,16 @@ describe("FontItem", () => {
     expect(
       document.querySelector("[data-family='Anybody']").getAttribute("href")
     ).toMatchInlineSnapshot(
-      `"https://fonts.googleapis.com/css2?family=Anybody:ital@1,wght@1,900&text=Anybody&display=swap"`
+      `"https://fonts.googleapis.com/css2?family=Anybody:ital,wght@1,900&text=Anybody&display=swap"`
+    );
+  });
+
+  test("selected variant, italic", () => {
+    document.body.innerHTML = `<font-item selected-variant="italic" selected-subset="" selected-tag="" font='{"family":"Anybody","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["eurostile"],"lineNumber":79,"variable":true}' id="anybody"></font-item>`;
+    expect(
+      document.querySelector("[data-family='Anybody']").getAttribute("href")
+    ).toMatchInlineSnapshot(
+      `"https://fonts.googleapis.com/css2?family=Anybody:ital@1&text=Anybody&display=swap"`
     );
   });
 
@@ -54,7 +69,7 @@ describe("FontItem", () => {
     expect(
       document.querySelector("[data-family='Anybody']").getAttribute("href")
     ).toMatchInlineSnapshot(
-      `"https://fonts.googleapis.com/css2?family=Anybody:ital@1,wght@1,900&text=Anybody&display=swap"`
+      `"https://fonts.googleapis.com/css2?family=Anybody:wght@900&text=Anybody&display=swap"`
     );
   });
 
@@ -65,7 +80,7 @@ describe("FontItem", () => {
     expect(
       document.querySelector("[data-family='Alef']").getAttribute("href")
     ).toMatchInlineSnapshot(
-      `"https://fonts.googleapis.com/css2?family=Alef&text=Alef&display=swap"`
+      `"https://fonts.googleapis.com/css2?family=Alef&text=%D7%A9%D6%B8%D7%81%D7%9C%D7%95%D6%B9%D7%9D%20%D7%A2%D7%95%D6%B9%D7%9C%D6%B8%D7%9D%20&display=swap"`
     );
   });
 

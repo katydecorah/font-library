@@ -110,8 +110,13 @@ class FontItem extends HTMLElement {
 
     if (this.selectedVariant && this.selectedVariant !== "regular") {
       const variants = [];
-      if (hasItalic) {
+
+      // right: :ital,wght@1,100
+      // wrong: :wght@1,100&text=Albert%20Sans&display=swap
+      if (this.selectedVariant === "italic") {
         variants.push("ital@1");
+      } else if (hasItalic) {
+        variants.push("ital");
       }
       if (variantNumber && variantNumber[0]) {
         variants.push(`wght@${hasItalic ? "1," : ""}${variantNumber[0]}`);
