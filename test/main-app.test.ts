@@ -9,12 +9,14 @@ const body = html.match(/<body>(.*)<\/body>/s)[1];
 
 describe("MainApp", () => {
   let mainApp: HTMLElement;
+  let user: ReturnType<typeof userEvent.setup>;
 
   beforeAll(() => {
     window.HTMLElement.prototype.scrollIntoView = jest.fn();
   });
 
   beforeEach(() => {
+    user = userEvent.setup();
     const location = {
       ...window.location,
       search: "",
@@ -36,71 +38,10 @@ describe("MainApp", () => {
     expect(mainApp).toMatchSnapshot();
   });
 
-  test("fires a custom event when a font is selected", () => {
-    mainApp.dispatchEvent(
-      new CustomEvent("tag-button-selected", {
-        detail: { value: "cute" },
-      })
-    );
-    // expect "cute" to be selected
-    expect(
-      (document.querySelector("#selectedTag") as HTMLSelectElement).value
-    ).toBe("cute");
-    // expect cute to show in search-results
-    expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
-      <search-status
-        class="search-status"
-        results-length="15"
-        selected-category=""
-        selected-search=""
-        selected-subset=""
-        selected-tag="cute"
-        selected-variable=""
-        selected-variant=""
-      >
-        <div>
-          Found 15 fonts: 
-        </div>
-        
-
-        <div
-          class="search-filter"
-        >
-          tag: 
-          <strong>
-            cute
-          </strong>
-          <button
-            aria-label="remove tag"
-            class="clear-button"
-            is="clear-button"
-            value="tag"
-          >
-            close.svg
-          </button>
-        </div>
-        
-
-        <button
-          aria-label="remove all filters"
-          class="btn btn-clear clear-button"
-          is="clear-button"
-        >
-          Clear
-        </button>
-      </search-status>
-    `);
-    // expect cute radio to be checked
-    expect(
-      (document.querySelector("#tags input[value='cute']") as HTMLInputElement)
-        .checked
-    ).toBe(true);
-  });
-
   test("filters fonts when a variant is selected", async () => {
     const selectVariant: HTMLSelectElement =
       document.querySelector("#selectedVariant");
-    await userEvent.selectOptions(selectVariant, "300italic");
+    await user.selectOptions(selectVariant, "300italic");
 
     expect(selectVariant.value).toBe("300italic");
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
@@ -151,7 +92,7 @@ describe("MainApp", () => {
   test("filters fonts when a subset is selected", async () => {
     const selectedSubset: HTMLSelectElement =
       document.querySelector("#selectedSubset");
-    await userEvent.selectOptions(selectedSubset, "arabic");
+    await user.selectOptions(selectedSubset, "arabic");
 
     expect(selectedSubset.value).toBe("arabic");
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
@@ -202,7 +143,7 @@ describe("MainApp", () => {
   test("filters fonts when a category is selected", async () => {
     const selectedCategory: HTMLSelectElement =
       document.querySelector("#selectedCategory");
-    await userEvent.selectOptions(selectedCategory, "display");
+    await user.selectOptions(selectedCategory, "display");
 
     expect(selectedCategory.value).toBe("display");
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
@@ -253,7 +194,7 @@ describe("MainApp", () => {
   test("selects need tags tag", () => {
     mainApp.dispatchEvent(
       new CustomEvent("tag-button-selected", {
-        detail: { value: "need tags" },
+        detail: { value: "need tags", id: "selectedTag" },
       })
     );
     const searchStatus = document.querySelector("search-status");
@@ -306,7 +247,7 @@ describe("MainApp", () => {
     // add tag first
     mainApp.dispatchEvent(
       new CustomEvent("tag-button-selected", {
-        detail: { value: "cute" },
+        detail: { value: "cute", id: "selectedTag" },
       })
     );
 
@@ -338,7 +279,7 @@ describe("MainApp", () => {
   test("filters fonts when search", async () => {
     const inputSearch: HTMLInputElement =
       document.querySelector("#selectedSearch");
-    await userEvent.type(inputSearch, "are you serious");
+    await user.type(inputSearch, "are you serious");
 
     const searchStatus = document.querySelector("search-status");
     const resultsLength = parseInt(searchStatus.getAttribute("results-length"));
@@ -396,7 +337,7 @@ describe("MainApp", () => {
   test("removes search filter", async () => {
     const inputSearch: HTMLInputElement =
       document.querySelector("#selectedSearch");
-    await userEvent.type(inputSearch, "are you serious");
+    await user.type(inputSearch, "are you serious");
 
     mainApp.dispatchEvent(
       new CustomEvent("clear-filter", {
@@ -426,11 +367,83 @@ describe("MainApp", () => {
   test("removes variable filter", async () => {
     const checkboxVariable: HTMLInputElement =
       document.querySelector("#selectedVariable");
-    checkboxVariable.checked = true;
+    checkboxVariable.click();
+
+    expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        results-length="293"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable="true"
+        selected-variant=""
+      >
+        <div>
+          Found 293 fonts: 
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          variable
+          <button
+            aria-label="remove variable"
+            class="clear-button"
+            is="clear-button"
+            value="variable"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <button
+          aria-label="remove all filters"
+          class="btn btn-clear clear-button"
+          is="clear-button"
+        >
+          Clear
+        </button>
+      </search-status>
+    `);
 
     mainApp.dispatchEvent(
       new CustomEvent("clear-filter", {
         detail: { filter: "variable" },
+      })
+    );
+
+    expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        results-length="1495"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable=""
+        selected-variant=""
+      >
+        <div>
+          Found 1495 fonts
+        </div>
+      </search-status>
+    `);
+    expect(document.querySelectorAll("font-item").length).toEqual(10);
+  });
+
+  test("removes category filter", async () => {
+    await user.selectOptions(
+      document.querySelector("#selectedCategory"),
+      "display"
+    );
+
+    mainApp.dispatchEvent(
+      new CustomEvent("clear-filter", {
+        detail: { filter: "category" },
       })
     );
 
@@ -454,28 +467,232 @@ describe("MainApp", () => {
     expect(document.querySelectorAll("font-item").length).toEqual(10);
   });
 
-  test("removes all filters: tag, variable, search", async () => {
-    mainApp.dispatchEvent(
-      new CustomEvent("tag-button-selected", {
-        detail: { value: "modern" },
-      })
+  test("removes subset filter", async () => {
+    await user.selectOptions(
+      document.querySelector("#selectedSubset"),
+      "hebrew"
     );
-    const checkboxVariable: HTMLInputElement =
-      document.querySelector("#selectedVariable");
-    checkboxVariable.checked = true;
-
-    const inputSearch: HTMLInputElement =
-      document.querySelector("#selectedSearch");
-    await userEvent.type(inputSearch, "cairo");
 
     mainApp.dispatchEvent(
       new CustomEvent("clear-filter", {
-        detail: { filter: undefined },
+        detail: { filter: "subset" },
       })
     );
 
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        results-length="1495"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable=""
+        selected-variant=""
+      >
+        <div>
+          Found 1495 fonts
+        </div>
+      </search-status>
+    `);
+    expect(document.querySelectorAll("font-item").length).toEqual(10);
+  });
+
+  test("removes variant filter", async () => {
+    await user.selectOptions(
+      document.querySelector("#selectedVariant"),
+      "100italic"
+    );
+
+    mainApp.dispatchEvent(
+      new CustomEvent("clear-filter", {
+        detail: { filter: "variant" },
+      })
+    );
+
+    const searchStatus = document.querySelector("search-status");
+    expect(searchStatus).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        results-length="1495"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable=""
+        selected-variant=""
+      >
+        <div>
+          Found 1495 fonts
+        </div>
+      </search-status>
+    `);
+    expect(document.querySelectorAll("font-item").length).toEqual(10);
+  });
+
+  test("adds and removes all filters: tag, variable, search, category, subset, variant", async () => {
+    mainApp.dispatchEvent(
+      new CustomEvent("tag-button-selected", {
+        detail: { value: "modern", id: "selectedTag" },
+      })
+    );
+    const checkboxVariable: HTMLInputElement =
+      document.querySelector("#selectedVariable");
+    checkboxVariable.click();
+
+    await user.type(document.querySelector("#selectedSearch"), "cairo");
+
+    await user.selectOptions(
+      document.querySelector("#selectedCategory"),
+      "display"
+    );
+
+    await user.selectOptions(
+      document.querySelector("#selectedSubset"),
+      "hebrew"
+    );
+
+    await user.selectOptions(
+      document.querySelector("#selectedVariant"),
+      "100italic"
+    );
+
+    expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
+      <search-status
+        class="search-status"
+        results-length="0"
+        selected-category="display"
+        selected-search="cairo"
+        selected-subset="hebrew"
+        selected-tag="modern"
+        selected-variable="true"
+        selected-variant="100italic"
+      >
+        <div>
+          Found 0 fonts: 
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          category: 
+          <strong>
+            display
+          </strong>
+          <button
+            aria-label="remove category"
+            class="clear-button"
+            is="clear-button"
+            value="category"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          tag: 
+          <strong>
+            modern
+          </strong>
+          <button
+            aria-label="remove tag"
+            class="clear-button"
+            is="clear-button"
+            value="tag"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          subset: 
+          <strong>
+            hebrew
+          </strong>
+          <button
+            aria-label="remove subset"
+            class="clear-button"
+            is="clear-button"
+            value="subset"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          variant: 
+          <strong>
+            100italic
+          </strong>
+          <button
+            aria-label="remove variant"
+            class="clear-button"
+            is="clear-button"
+            value="variant"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          search: 
+          <strong>
+            cairo
+          </strong>
+          <button
+            aria-label="remove search"
+            class="clear-button"
+            is="clear-button"
+            value="search"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <div
+          class="search-filter"
+        >
+          variable
+          <button
+            aria-label="remove variable"
+            class="clear-button"
+            is="clear-button"
+            value="variable"
+          >
+            close.svg
+          </button>
+        </div>
+        
+
+        <button
+          aria-label="remove all filters"
+          class="btn btn-clear clear-button"
+          is="clear-button"
+        >
+          Clear
+        </button>
+      </search-status>
+    `);
+
+    // click clear button
+    await user.click(document.querySelector(".btn-clear"));
+
+    expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
         results-length="1495"
@@ -641,7 +858,7 @@ describe("MainApp", () => {
   test("filters fonts when a tag is selected", async () => {
     const selectedTag: HTMLSelectElement =
       document.querySelector("#selectedTag");
-    await userEvent.selectOptions(selectedTag, "outline");
+    await user.selectOptions(selectedTag, "outline");
 
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
@@ -692,14 +909,10 @@ describe("MainApp", () => {
   test("filters fonts when variable is checked and then unchecked", async () => {
     const checkboxVariable: HTMLInputElement =
       document.querySelector("#selectedVariable");
-
     expect(checkboxVariable.checked).toBeFalsy();
-
     checkboxVariable.click();
-
     expect(checkboxVariable.checked).toBeTruthy();
-    const searchStatus = document.querySelector("search-status");
-    expect(searchStatus).toMatchInlineSnapshot(`
+    expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
         results-length="293"
@@ -743,44 +956,20 @@ describe("MainApp", () => {
     // uncheck
     checkboxVariable.click();
     expect(checkboxVariable.checked).toBeFalsy();
-    expect(searchStatus).toMatchInlineSnapshot(`
+    expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        results-length="293"
+        results-length="1495"
         selected-category=""
         selected-search=""
         selected-subset=""
         selected-tag=""
-        selected-variable="true"
+        selected-variable=""
         selected-variant=""
       >
         <div>
-          Found 293 fonts: 
+          Found 1495 fonts
         </div>
-        
-
-        <div
-          class="search-filter"
-        >
-          variable
-          <button
-            aria-label="remove variable"
-            class="clear-button"
-            is="clear-button"
-            value="variable"
-          >
-            close.svg
-          </button>
-        </div>
-        
-
-        <button
-          aria-label="remove all filters"
-          class="btn btn-clear clear-button"
-          is="clear-button"
-        >
-          Clear
-        </button>
       </search-status>
     `);
   });

@@ -14,6 +14,7 @@ describe("filter-radio", () => {
     expect(mockFn).toHaveBeenCalled();
     expect(mockFn.mock.calls[0][0].detail).toMatchInlineSnapshot(`
       {
+        "id": "selectedTag",
         "value": "tag1",
       }
     `);

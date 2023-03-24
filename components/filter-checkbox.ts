@@ -14,6 +14,11 @@ class FilterCheckbox extends HTMLInputElement {
         this.onChange();
       });
     }
+    // Listen for events to clear filter
+    window.addEventListener("remove-checkbox", () => {
+      this.checked = false;
+      this.onChange();
+    });
   }
 
   onChange() {
@@ -23,6 +28,7 @@ class FilterCheckbox extends HTMLInputElement {
         composed: true,
         detail: {
           value: this.checked,
+          id: this.id,
         },
       })
     );
