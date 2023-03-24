@@ -8,6 +8,11 @@ class FilterCheckbox extends HTMLInputElement {
     const variable = urlParams.get("variable");
     if (variable === "true") {
       this.checked = true;
+
+      // Wait for main-app to load before dispatching event
+      window.addEventListener("main-app-loaded", () => {
+        this.onChange();
+      });
     }
   }
 

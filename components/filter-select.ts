@@ -9,6 +9,11 @@ class FilterSelect extends HTMLSelectElement {
     if (initValue) {
       if (!this.options.namedItem(initValue)) return;
       this.value = initValue;
+
+      // Wait for main-app to load before dispatching event
+      window.addEventListener("main-app-loaded", () => {
+        this.onChange();
+      });
     }
   }
 

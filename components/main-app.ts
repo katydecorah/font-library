@@ -32,15 +32,12 @@ class MainApp extends HTMLElement {
     this.addEventListener("clear-filter", this.clearFilter);
     this.addEventListener("filter-select", this.handleFilter);
     this.addEventListener("filter-variable", this.handleVariable);
-
-    for (const { param, selectVar } of filters) {
-      if (selectVar === "selectedSearch") continue;
-      this.getUrlParams(param, selectVar);
-    }
-
     document
       .querySelector("#selectedSearch")
       .addEventListener("input", this.handleSearch);
+
+    // Dispatch main-app-loaded
+    window.dispatchEvent(new Event("main-app-loaded"));
   }
 
   connectedCallback() {
@@ -60,38 +57,12 @@ class MainApp extends HTMLElement {
     fontResults.innerHTML = `<font-results selected-category="${selectedCategory}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-tag="${selectedTag}" selected-search="${selectedSearch}" selected-variable="${selectedVariable}"></font-results>`;
   }
 
-  getUrlParams(param: string, selectVar: string) {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (!urlParams.has(param)) return;
-    let newValue: string = urlParams.get(param);
-    newValue = newValue.replace(/[^a-zA-Z0-9\- ]/g, "");
-
-    const elm = document.querySelector(`#${selectVar}`) as
-      | HTMLSelectElement
-      | HTMLInputElement;
-
-    if (elm instanceof HTMLSelectElement) {
-      if (!elm.options.namedItem(newValue)) return;
-      Object.assign(this, {
-        [selectVar]: newValue,
-      });
-    }
-
-    if (elm instanceof HTMLInputElement) {
-      const checked = newValue === "true" ? true : false;
-      Object.assign(this, {
-        [selectVar]: checked,
-      });
-    }
-  }
-
   clearFilter({ detail: { filter } }: CustomEvent<{ filter: string }>) {
     if (filter) {
       this.removeSingleFilter(filter);
     } else {
       this.removeAllFilters();
     }
-    // this.curPage = 1;
     this.render();
   }
 

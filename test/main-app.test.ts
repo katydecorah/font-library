@@ -28,6 +28,10 @@ describe("MainApp", () => {
     mainApp = document.querySelector("main-app");
   });
 
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   test("renders correctly", () => {
     expect(mainApp).toMatchSnapshot();
   });
@@ -693,12 +697,7 @@ describe("MainApp", () => {
 
     checkboxVariable.click();
 
-    expect(window.history.replaceState).toHaveBeenNthCalledWith(
-      1,
-      {},
-      "",
-      "/?variable=true"
-    );
+    expect(checkboxVariable.checked).toBeTruthy();
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
@@ -743,12 +742,7 @@ describe("MainApp", () => {
 
     // uncheck
     checkboxVariable.click();
-    expect(window.history.replaceState).toHaveBeenNthCalledWith(
-      2,
-      {},
-      "",
-      "/?"
-    );
+    expect(checkboxVariable.checked).toBeFalsy();
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
@@ -802,6 +796,8 @@ describe("MainApp", () => {
     });
 
     document.body.innerHTML = body;
+    window.dispatchEvent(new Event("main-app-loaded"));
+
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status

@@ -46,6 +46,11 @@ describe("filter-checkbox", () => {
       "input[is=filter-checkbox]"
     );
     expect(filterCheckbox.checked).toBe(true);
+    // expect the event to fire after the main-app is loaded
+    const mockFn = jest.fn();
+    filterCheckbox.addEventListener("filter-variable", mockFn);
+    window.dispatchEvent(new Event("main-app-loaded"));
+    expect(mockFn).toHaveBeenCalled();
   });
 
   it("removes variable=false from query string", () => {

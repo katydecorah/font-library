@@ -9,6 +9,11 @@ class TagButton extends HTMLButtonElement {
     if (tag === this.getAttribute("value")) {
       // eslint-disable-next-line wc/no-self-class
       this.classList.add("active");
+
+      // Wait for main-app to load before dispatching event
+      window.addEventListener("main-app-loaded", () => {
+        this.onClick();
+      });
     }
   }
   connectedCallback() {
