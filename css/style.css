@@ -72,12 +72,6 @@ a:hover {
   color: var(--accent-dark);
 }
 
-::selection {
-  background: var(--accent);
-  color: var(--white);
-  text-shadow: none;
-}
-
 .container {
   margin: 0 auto;
   padding: 0 1em;
