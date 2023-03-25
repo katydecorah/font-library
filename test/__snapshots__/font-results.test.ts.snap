@@ -114,6 +114,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-literacy"
               is="tag-button"
               selected-tag=""
+              style="font-family: "ABeeZee";"
+              title="literacy"
               value="literacy"
             >
               literacy
@@ -122,6 +124,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-kids"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Butterfly Kids";"
+              title="kids"
               value="kids"
             >
               kids
@@ -248,6 +252,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-condensed"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Abel";"
+              title="condensed"
               value="condensed"
             >
               condensed
@@ -491,6 +497,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-caps"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Aboreto";"
+              title="caps"
               value="caps"
             >
               caps
@@ -617,6 +625,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-heavy"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Anton";"
+              title="heavy"
               value="heavy"
             >
               heavy
@@ -625,6 +635,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-elegant"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Babylonica";"
+              title="elegant"
               value="elegant"
             >
               elegant
@@ -633,6 +645,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-didone"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Abril Fatface";"
+              title="didone"
               value="didone"
             >
               didone
@@ -641,6 +655,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-headlines"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Antic Didone";"
+              title="headlines"
               value="headlines"
             >
               headlines
@@ -884,6 +900,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-modern"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Aclonica";"
+              title="modern"
               value="modern"
             >
               modern
@@ -892,6 +910,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-friendly"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Amaranth";"
+              title="friendly"
               value="friendly"
             >
               friendly
@@ -1018,6 +1038,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-cartoon"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Bangers";"
+              title="cartoon"
               value="cartoon"
             >
               cartoon
@@ -1026,6 +1048,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-comic"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Architects Daughter";"
+              title="comic"
               value="comic"
             >
               comic
@@ -1034,6 +1058,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-groovy"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Acme";"
+              title="groovy"
               value="groovy"
             >
               groovy
@@ -1042,6 +1068,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-headlines"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Antic Didone";"
+              title="headlines"
               value="headlines"
             >
               headlines
@@ -1168,6 +1196,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-thin"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Actor";"
+              title="thin"
               value="thin"
             >
               thin
@@ -1176,6 +1206,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-legibility"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Alike";"
+              title="legibility"
               value="legibility"
             >
               legibility
@@ -1302,6 +1334,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-compact"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Adamina";"
+              title="compact"
               value="compact"
             >
               compact
@@ -1310,6 +1344,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-small-sizes"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Almendra";"
+              title="small sizes"
               value="small sizes"
             >
               small sizes
@@ -1318,6 +1354,8 @@ exports[`FontResults renders correctly 1`] = `
               class="family-tag tag-transitional"
               is="tag-button"
               selected-tag=""
+              style="font-family: "Amethysta";"
+              title="transitional"
               value="transitional"
             >
               transitional

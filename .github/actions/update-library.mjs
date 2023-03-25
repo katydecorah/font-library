@@ -115,7 +115,7 @@ function arraysEqual(a1, a2) {
   a1 = a1.replace(/\s/g, "");
   a2 = a2.replace(/\s/g, "");
 
-  return JSON.stringify(a1) == JSON.stringify(a2);
+  return JSON.stringify(a1) === JSON.stringify(a2);
 }
 
 function combineLibraries(remoteFonts, local) {
@@ -138,14 +138,45 @@ function combineLibraries(remoteFonts, local) {
     });
   }
 
-  const tags = getUnique(combineLibrary, "tags")
-    .sort()
-    .map((tag) => {
-      const sample = combineLibrary
-        .filter((font) => font.tags.includes(tag))
-        .map((font) => font.family);
-      return { name: tag, sample: sample[0] };
+  function fontInUse(array, fontsWithTag, index = 0) {
+    const isInUse = array.some((item) => item.sample === fontsWithTag[index]);
+    if (isInUse && index < fontsWithTag.length - 1) {
+      return fontInUse(array, fontsWithTag, index + 1);
+    } else {
+      return fontsWithTag[index];
+    }
+  }
+
+  // tags with array of fonts that use it
+  const tagsWithFonts = combineLibrary.reduce((array, font) => {
+    font.tags.forEach((tag) => {
+      if (array[tag]) {
+        array[tag].push(font.family);
+      } else {
+        array[tag] = [font.family];
+      }
     });
+    return array;
+  }, {});
+
+  // sort tagsWithFonts by number of fonts that use it
+  const tagsWithFontsSorted = Object.keys(tagsWithFonts)
+    .sort((a, b) => tagsWithFonts[a].length - tagsWithFonts[b].length)
+    .reduce((obj, key) => {
+      obj[key] = tagsWithFonts[key];
+      return obj;
+    }, {});
+
+  // add sample font to each tag
+  const tags = Object.keys(tagsWithFontsSorted)
+    .reduce((arr, key) => {
+      arr.push({
+        name: key,
+        sample: fontInUse(arr, tagsWithFontsSorted[key]),
+      });
+      return arr;
+    }, [])
+    .sort((a, b) => (a.name > b.name ? 1 : -1));
 
   return {
     generatedMetadata: {
