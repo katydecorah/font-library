@@ -26,11 +26,11 @@
     },
     {
       "name": "1960s",
-      "sample": "Ceviche One"
+      "sample": "Boogaloo"
     },
     {
       "name": "1970s",
-      "sample": "Salsa"
+      "sample": "Hachi Maru Pop"
     },
     {
       "name": "1980s",
@@ -101,10 +101,6 @@
       "sample": "Cormorant Infant"
     },
     {
-      "name": "classic",
-      "sample": "Old Standard TT"
-    },
-    {
       "name": "code",
       "sample": "Anaheim"
     },
@@ -149,16 +145,8 @@
       "sample": "Bonbon"
     },
     {
-      "name": "decal",
-      "sample": "Monofett"
-    },
-    {
       "name": "decorative",
       "sample": "Bellota"
-    },
-    {
-      "name": "diagonal",
-      "sample": "Nova Cut"
     },
     {
       "name": "didone",
@@ -171,10 +159,6 @@
     {
       "name": "dotted",
       "sample": "Codystar"
-    },
-    {
-      "name": "editorial",
-      "sample": "Asar"
     },
     {
       "name": "egyptian",
@@ -203,10 +187,6 @@
     {
       "name": "fat face",
       "sample": "Asset"
-    },
-    {
-      "name": "flared",
-      "sample": "Tenali Ramakrishna"
     },
     {
       "name": "formal",
@@ -238,7 +218,7 @@
     },
     {
       "name": "game",
-      "sample": "Oxanium"
+      "sample": "Nabla"
     },
     {
       "name": "geometric",
@@ -281,10 +261,6 @@
       "sample": "Edu NSW ACT Foundation"
     },
     {
-      "name": "headline",
-      "sample": "Climate Crisis"
-    },
-    {
       "name": "headlines",
       "sample": "Antic Didone"
     },
@@ -307,10 +283,6 @@
     {
       "name": "humanist",
       "sample": "Alegreya Sans"
-    },
-    {
-      "name": "isometric",
-      "sample": "Nabla"
     },
     {
       "name": "khmer",
@@ -393,14 +365,6 @@
       "sample": "Blaka Hollow"
     },
     {
-      "name": "paris",
-      "sample": "Croissant One"
-    },
-    {
-      "name": "penant",
-      "sample": "Graduate"
-    },
-    {
       "name": "pixel",
       "sample": "DotGothic16"
     },
@@ -431,10 +395,6 @@
     {
       "name": "round",
       "sample": "Asap"
-    },
-    {
-      "name": "salsa",
-      "sample": "Boogaloo"
     },
     {
       "name": "scrawl",
@@ -487,10 +447,6 @@
     {
       "name": "stencil",
       "sample": "Allerta Stencil"
-    },
-    {
-      "name": "stone",
-      "sample": "Nova Flat"
     },
     {
       "name": "surf",

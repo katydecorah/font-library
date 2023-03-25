@@ -1159,7 +1159,7 @@
     "variants": ["regular"],
     "subsets": ["devanagari", "latin", "latin-ext"],
     "category": "serif",
-    "tags": ["editorial", "round"],
+    "tags": ["round"],
     "lineNumber": 100,
     "variable": false
   },
@@ -2271,7 +2271,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "display",
-    "tags": ["1960s", "salsa"],
+    "tags": ["1960s"],
     "lineNumber": 199,
     "variable": false
   },
@@ -3012,7 +3012,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": ["heavy", "block", "round", "headline"],
+    "tags": ["heavy", "block", "round", "headlines"],
     "lineNumber": 272,
     "variable": true
   },
@@ -3428,7 +3428,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": ["paris"],
+    "tags": [],
     "lineNumber": 309,
     "variable": false
   },
@@ -5436,7 +5436,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "display",
-    "tags": ["penant", "block"],
+    "tags": ["collegiate", "block"],
     "lineNumber": 481,
     "variable": false
   },
@@ -5655,7 +5655,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "japanese", "latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["1970s", "1980s", "cute"],
     "lineNumber": 500,
     "variable": false
   },
@@ -7407,7 +7407,7 @@
     "variants": ["regular"],
     "subsets": ["arabic", "latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": ["heavy"],
+    "tags": ["heavy", "1960s", "1970s"],
     "lineNumber": 648,
     "variable": false
   },
@@ -8962,7 +8962,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "display",
-    "tags": ["decal"],
+    "tags": [],
     "lineNumber": 789,
     "variable": false
   },
@@ -9350,7 +9350,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic-ext", "latin", "latin-ext", "math", "vietnamese"],
     "category": "display",
-    "tags": ["game", "square", "isometric", "gradient", "color"],
+    "tags": ["game", "square", "gradient", "color"],
     "lineNumber": 822,
     "variable": true
   },
@@ -11933,7 +11933,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "display",
-    "tags": ["diagonal"],
+    "tags": ["geometric"],
     "lineNumber": 1040,
     "variable": false
   },
@@ -11942,7 +11942,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "display",
-    "tags": ["stone"],
+    "tags": [],
     "lineNumber": 1041,
     "variable": false
   },
@@ -12117,7 +12117,7 @@
     "variants": ["regular", "italic", "700"],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": ["classic"],
+    "tags": [],
     "lineNumber": 1056,
     "variable": false
   },
@@ -15852,7 +15852,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "telugu"],
     "category": "sans-serif",
-    "tags": ["flared"],
+    "tags": [],
     "lineNumber": 1384,
     "variable": false
   },
