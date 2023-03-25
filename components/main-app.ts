@@ -31,8 +31,7 @@ class MainApp extends HTMLElement {
     this.addEventListener("clear-filter", this.clearFilter);
     this.addEventListener("tag-button-selected", this.handleFilter);
     document.addEventListener("tag-button-selected", this.handleFilter);
-    this.addEventListener("filter-select", this.handleFilter);
-    this.addEventListener("filter-variable", this.handleFilter);
+    this.addEventListener("handle-filter", this.handleFilter);
     document
       .querySelector("#selectedSearch")
       .addEventListener("input", this.handleSearch);
@@ -66,24 +65,14 @@ class MainApp extends HTMLElement {
 
   removeSingleFilter(filter: string) {
     switch (filter) {
-      case "category":
-        this.removeSelect("selectedCategory");
-        break;
-      case "subset":
-        this.removeSelect("selectedSubset");
-        break;
-      case "variant":
-        this.removeSelect("selectedVariant");
-        break;
-      case "tag":
-        this.removeSelect("selectedTag");
-        break;
-      case "search":
+      case "selectedSearch":
         this.removeSearch();
         break;
-      case "variable":
+      case "selectedVariable":
         this.removeCheckbox();
         break;
+      default:
+        this.removeSelect(filter);
     }
   }
 

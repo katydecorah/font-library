@@ -27,20 +27,22 @@ class SearchStatus extends HTMLElement {
     ];
 
     const filterTags = {
-      category: selectedCategory,
-      tag: selectedTag,
-      subset: selectedSubset,
-      variant: selectedVariant,
-      search: selectedSearch,
-      variable: selectedVariable,
+      category: { selectedCategory },
+      tag: { selectedTag },
+      subset: { selectedSubset },
+      variant: { selectedVariant },
+      search: { selectedSearch },
+      variable: { selectedVariable },
     };
 
-    for (const [key, value] of Object.entries(filterTags)) {
+    for (const [key, selector] of Object.entries(filterTags)) {
+      const [selectVar] = Object.keys(selector);
+      const value = selector[selectVar as keyof typeof selector];
       if (value) {
         elm.push(
           `<div class="search-filter">${key}${
             key === "variable" ? "" : `: <strong>${value}</strong>`
-          }<button is="clear-button" aria-label="remove ${key}" value="${key}">${iconClose}</button></div>`
+          }<button is="clear-button" aria-label="remove ${key}" value="${selectVar}">${iconClose}</button></div>`
         );
       }
     }

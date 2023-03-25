@@ -20,7 +20,7 @@ describe("filter-checkbox", () => {
   it("fires a custom event on change", () => {
     expect(window.location.search).toBe("");
     const mockFn = jest.fn();
-    filterCheckbox.addEventListener("filter-variable", mockFn);
+    filterCheckbox.addEventListener("handle-filter", mockFn);
     filterCheckbox.checked = true;
     filterCheckbox.dispatchEvent(new Event("change"));
     expect(mockFn).toHaveBeenCalled();
@@ -49,7 +49,7 @@ describe("filter-checkbox", () => {
     expect(filterCheckbox.checked).toBe(true);
     // expect the event to fire after the main-app is loaded
     const mockFn = jest.fn();
-    filterCheckbox.addEventListener("filter-variable", mockFn);
+    filterCheckbox.addEventListener("handle-filter", mockFn);
     window.dispatchEvent(new Event("main-app-loaded"));
     expect(mockFn).toHaveBeenCalled();
   });

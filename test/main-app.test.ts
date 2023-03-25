@@ -71,7 +71,7 @@ describe("MainApp", () => {
             aria-label="remove variant"
             class="clear-button"
             is="clear-button"
-            value="variant"
+            value="selectedVariant"
           >
             close.svg
           </button>
@@ -122,7 +122,7 @@ describe("MainApp", () => {
             aria-label="remove subset"
             class="clear-button"
             is="clear-button"
-            value="subset"
+            value="selectedSubset"
           >
             close.svg
           </button>
@@ -173,7 +173,7 @@ describe("MainApp", () => {
             aria-label="remove category"
             class="clear-button"
             is="clear-button"
-            value="category"
+            value="selectedCategory"
           >
             close.svg
           </button>
@@ -225,7 +225,7 @@ describe("MainApp", () => {
             aria-label="remove tag"
             class="clear-button"
             is="clear-button"
-            value="tag"
+            value="selectedTag"
           >
             close.svg
           </button>
@@ -253,7 +253,7 @@ describe("MainApp", () => {
 
     mainApp.dispatchEvent(
       new CustomEvent("clear-filter", {
-        detail: { filter: "tag" },
+        detail: { filter: "selectedTag" },
       })
     );
 
@@ -311,7 +311,7 @@ describe("MainApp", () => {
             aria-label="remove search"
             class="clear-button"
             is="clear-button"
-            value="search"
+            value="selectedSearch"
           >
             close.svg
           </button>
@@ -341,7 +341,7 @@ describe("MainApp", () => {
 
     mainApp.dispatchEvent(
       new CustomEvent("clear-filter", {
-        detail: { filter: "search" },
+        detail: { filter: "selectedSearch" },
       })
     );
     const searchStatus = document.querySelector("search-status");
@@ -393,7 +393,7 @@ describe("MainApp", () => {
             aria-label="remove variable"
             class="clear-button"
             is="clear-button"
-            value="variable"
+            value="selectedVariable"
           >
             close.svg
           </button>
@@ -412,7 +412,7 @@ describe("MainApp", () => {
 
     mainApp.dispatchEvent(
       new CustomEvent("clear-filter", {
-        detail: { filter: "variable" },
+        detail: { filter: "selectedVariable" },
       })
     );
 
@@ -443,7 +443,7 @@ describe("MainApp", () => {
 
     mainApp.dispatchEvent(
       new CustomEvent("clear-filter", {
-        detail: { filter: "category" },
+        detail: { filter: "selectedCategory" },
       })
     );
 
@@ -475,7 +475,7 @@ describe("MainApp", () => {
 
     mainApp.dispatchEvent(
       new CustomEvent("clear-filter", {
-        detail: { filter: "subset" },
+        detail: { filter: "selectedSubset" },
       })
     );
 
@@ -507,7 +507,7 @@ describe("MainApp", () => {
 
     mainApp.dispatchEvent(
       new CustomEvent("clear-filter", {
-        detail: { filter: "variant" },
+        detail: { filter: "selectedVariant" },
       })
     );
 
@@ -585,7 +585,7 @@ describe("MainApp", () => {
             aria-label="remove category"
             class="clear-button"
             is="clear-button"
-            value="category"
+            value="selectedCategory"
           >
             close.svg
           </button>
@@ -603,7 +603,7 @@ describe("MainApp", () => {
             aria-label="remove tag"
             class="clear-button"
             is="clear-button"
-            value="tag"
+            value="selectedTag"
           >
             close.svg
           </button>
@@ -621,7 +621,7 @@ describe("MainApp", () => {
             aria-label="remove subset"
             class="clear-button"
             is="clear-button"
-            value="subset"
+            value="selectedSubset"
           >
             close.svg
           </button>
@@ -639,7 +639,7 @@ describe("MainApp", () => {
             aria-label="remove variant"
             class="clear-button"
             is="clear-button"
-            value="variant"
+            value="selectedVariant"
           >
             close.svg
           </button>
@@ -657,7 +657,7 @@ describe("MainApp", () => {
             aria-label="remove search"
             class="clear-button"
             is="clear-button"
-            value="search"
+            value="selectedSearch"
           >
             close.svg
           </button>
@@ -672,7 +672,7 @@ describe("MainApp", () => {
             aria-label="remove variable"
             class="clear-button"
             is="clear-button"
-            value="variable"
+            value="selectedVariable"
           >
             close.svg
           </button>
@@ -751,7 +751,7 @@ describe("MainApp", () => {
             aria-label="remove tag"
             class="clear-button"
             is="clear-button"
-            value="tag"
+            value="selectedTag"
           >
             close.svg
           </button>
@@ -807,7 +807,7 @@ describe("MainApp", () => {
             aria-label="remove tag"
             class="clear-button"
             is="clear-button"
-            value="tag"
+            value="selectedTag"
           >
             close.svg
           </button>
@@ -888,7 +888,7 @@ describe("MainApp", () => {
             aria-label="remove tag"
             class="clear-button"
             is="clear-button"
-            value="tag"
+            value="selectedTag"
           >
             close.svg
           </button>
@@ -936,7 +936,7 @@ describe("MainApp", () => {
             aria-label="remove variable"
             class="clear-button"
             is="clear-button"
-            value="variable"
+            value="selectedVariable"
           >
             close.svg
           </button>
@@ -1012,7 +1012,7 @@ describe("MainApp", () => {
             aria-label="remove variable"
             class="clear-button"
             is="clear-button"
-            value="variable"
+            value="selectedVariable"
           >
             close.svg
           </button>

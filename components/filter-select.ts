@@ -34,7 +34,7 @@ class FilterSelect extends HTMLSelectElement {
 
   onChange() {
     const eventName =
-      this.id === "selectedTag" ? "tag-button-selected" : "filter-select";
+      this.id === "selectedTag" ? "tag-button-selected" : "handle-filter";
     this.dispatchEvent(
       new CustomEvent(eventName, {
         bubbles: true,
