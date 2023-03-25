@@ -139,43 +139,12 @@ function combineLibraries(remoteFonts, local) {
   }
 
   return {
-    generatedMetadata: [
-      {
-        label: "Tags",
-        param: "tag",
-        selectVar: "selectedTag",
-        data: getUnique(combineLibrary, "tags"),
-      },
-
-      {
-        label: "Categories",
-        param: "category",
-        selectVar: "selectedCategory",
-        data: getUnique(combineLibrary, "category"),
-      },
-      {
-        label: "Subsets",
-        param: "subset",
-        selectVar: "selectedSubset",
-        data: getUnique(combineLibrary, "subsets"),
-      },
-      {
-        label: "Variants",
-        param: "variant",
-        selectVar: "selectedVariant",
-        data: getUnique(combineLibrary, "variants"),
-      },
-      {
-        label: "Search",
-        param: "search",
-        selectVar: "selectedSearch",
-      },
-      {
-        label: "Variable fonts",
-        param: "variable",
-        selectVar: "selectedVariable",
-      },
-    ],
+    generatedMetadata: {
+      tags: getUnique(combineLibrary, "tags"),
+      categories: getUnique(combineLibrary, "category"),
+      subsets: getUnique(combineLibrary, "subsets"),
+      variants: getUnique(combineLibrary, "variants"),
+    },
     generatedFamilies: `${JSON.stringify(
       combineLibrary.sort((a, b) => (a.family > b.family ? 1 : -1))
     )}`,

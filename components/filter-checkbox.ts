@@ -23,7 +23,7 @@ class FilterCheckbox extends HTMLInputElement {
 
   onChange() {
     this.dispatchEvent(
-      new CustomEvent("filter-variable", {
+      new CustomEvent("handle-filter", {
         bubbles: true,
         composed: true,
         detail: {

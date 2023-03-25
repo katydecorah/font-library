@@ -33,8 +33,7 @@
         <section class="tags sidebar-group">
           <h2>Tags</h2>
           <div id="tags" class="tags-container">
-            {%- assign tags = metadata | where: "param", "tag" | first -%}{%-
-            for tag in tags.data -%}
+            {%- for tag in metadata.tags -%}
             <label class="family-tag"
               >{{tag}}
               <input
@@ -73,25 +72,55 @@
               <label for="selectedSearch">Filter fonts</label>
               <input type="text" id="selectedSearch" value="" />
             </div>
-            {%- for filter in metadata -%}{%- if filter.data -%}
-            <div
-              class="select-group{% if filter.param == 'tag' %} mobile{% endif %}"
-            >
-              <label for="{{filter.selectVar}}">{{filter.label}}</label>
-              <select
-                data-param="{{filter.param}}"
-                is="filter-select"
-                id="{{filter.selectVar}}"
-              >
-                <option value="">All {{filter.label | downcase}}</option>
-                {%- if filter.param == 'tag' -%}
+            <div class="select-group mobile">
+              <label for="selectedTag">Tags</label>
+              <select data-param="tag" is="filter-select" id="selectedTag">
+                <option value="">All tags</option>
                 <option id="need tags" value="need tags">need tags</option>
-                {%- endif -%} {%- for item in filter.data -%}
-                <option id="{{item}}" value="{{item}}">{{item}}</option>
+                {%- for option in metadata.tags -%}
+                <option id="{{option}}" value="{{option}}">{{option}}</option>
                 {%- endfor -%}
               </select>
             </div>
-            {%- endif -%}{%- endfor -%}
+            <div class="select-group">
+              <label for="selectedCategory">Categories</label>
+              <select
+                data-param="category"
+                is="filter-select"
+                id="selectedCategory"
+              >
+                <option value="">All categories</option>
+                {%- for option in metadata.categories -%}
+                <option id="{{option}}" value="{{option}}">{{option}}</option>
+                {%- endfor -%}
+              </select>
+            </div>
+            <div class="select-group">
+              <label for="selectedSubset">Subsets</label>
+              <select
+                data-param="subset"
+                is="filter-select"
+                id="selectedSubset"
+              >
+                <option value="">All subsets</option>
+                {%- for option in metadata.subsets -%}
+                <option id="{{option}}" value="{{option}}">{{option}}</option>
+                {%- endfor -%}
+              </select>
+            </div>
+            <div class="select-group">
+              <label for="selectedVariant">Variants</label>
+              <select
+                data-param="variant"
+                is="filter-select"
+                id="selectedVariant"
+              >
+                <option value="">All variants</option>
+                {%- for option in metadata.variants -%}
+                <option id="{{option}}" value="{{option}}">{{option}}</option>
+                {%- endfor -%}
+              </select>
+            </div>
             <div class="select-group">
               <label for="selectedVariable"
                 >Variable font
