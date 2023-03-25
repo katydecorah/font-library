@@ -10,9 +10,10 @@ You can also click [**Need tags**](https://katydecorah.com/font-library/?tag=nee
 
 [Visit families.json](families.json)
 
-- Each font should have no more than 5 tags
-- Avoid creating new tags that are similar to already established tags, instead consolidate or rename all similar tags if a different tag name is more intuitive
-- Avoid ambiguous names for tags; make the tag name intuitive (Would you use this tag to find font X?)
+- Each font should have no more than 5 tags.
+- Avoid creating new tags that are similar to already established tags, instead consolidate or rename all similar tags if a different tag name is more intuitive.
+- Avoid ambiguous names for tags; make the tag name intuitive (Would you use this tag to find font X?).
+- A tag must be used by more than one font.
 
 These guidelines are enforced by tests. You can run the tests locally by first running `npm ci` from the command line and then `npm test`. Alternatively, you can wait to create a pull request and the tests will run there.
 

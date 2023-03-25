@@ -47,4 +47,28 @@ describe("families.json", () => {
       });
     });
   });
+
+  // sort tags by number of families
+  const tags = Object.values(families).reduce((acc, tags) => {
+    for (const tag of tags) {
+      if (acc[tag]) {
+        acc[tag]++;
+      } else {
+        acc[tag] = 1;
+      }
+    }
+    return acc;
+  }, {} as Record<string, number>);
+  const sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a]);
+
+  describe("tags", () => {
+    for (const tag of sortedTags) {
+      describe(`${tag}`, () => {
+        // has more than one family
+        test("has more than one family", () => {
+          expect(tags[tag] > 1).toBeTruthy();
+        });
+      });
+    }
+  });
 });

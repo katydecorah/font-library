@@ -277,14 +277,6 @@ exports[`MainApp renders correctly 1`] = `
                 
           </option>
           <option
-            id="classic"
-            value="classic"
-          >
-            
-                  classic
-                
-          </option>
-          <option
             id="code"
             value="code"
           >
@@ -373,27 +365,11 @@ exports[`MainApp renders correctly 1`] = `
                 
           </option>
           <option
-            id="decal"
-            value="decal"
-          >
-            
-                  decal
-                
-          </option>
-          <option
             id="decorative"
             value="decorative"
           >
             
                   decorative
-                
-          </option>
-          <option
-            id="diagonal"
-            value="diagonal"
-          >
-            
-                  diagonal
                 
           </option>
           <option
@@ -418,14 +394,6 @@ exports[`MainApp renders correctly 1`] = `
           >
             
                   dotted
-                
-          </option>
-          <option
-            id="editorial"
-            value="editorial"
-          >
-            
-                  editorial
                 
           </option>
           <option
@@ -482,14 +450,6 @@ exports[`MainApp renders correctly 1`] = `
           >
             
                   fat face
-                
-          </option>
-          <option
-            id="flared"
-            value="flared"
-          >
-            
-                  flared
                 
           </option>
           <option
@@ -637,14 +597,6 @@ exports[`MainApp renders correctly 1`] = `
                 
           </option>
           <option
-            id="headline"
-            value="headline"
-          >
-            
-                  headline
-                
-          </option>
-          <option
             id="headlines"
             value="headlines"
           >
@@ -690,14 +642,6 @@ exports[`MainApp renders correctly 1`] = `
           >
             
                   humanist
-                
-          </option>
-          <option
-            id="isometric"
-            value="isometric"
-          >
-            
-                  isometric
                 
           </option>
           <option
@@ -861,22 +805,6 @@ exports[`MainApp renders correctly 1`] = `
                 
           </option>
           <option
-            id="paris"
-            value="paris"
-          >
-            
-                  paris
-                
-          </option>
-          <option
-            id="penant"
-            value="penant"
-          >
-            
-                  penant
-                
-          </option>
-          <option
             id="pixel"
             value="pixel"
           >
@@ -938,14 +866,6 @@ exports[`MainApp renders correctly 1`] = `
           >
             
                   round
-                
-          </option>
-          <option
-            id="salsa"
-            value="salsa"
-          >
-            
-                  salsa
                 
           </option>
           <option
@@ -1050,14 +970,6 @@ exports[`MainApp renders correctly 1`] = `
           >
             
                   stencil
-                
-          </option>
-          <option
-            id="stone"
-            value="stone"
-          >
-            
-                  stone
                 
           </option>
           <option
