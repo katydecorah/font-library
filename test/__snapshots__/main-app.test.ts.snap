@@ -389,6 +389,14 @@ exports[`MainApp renders correctly 1`] = `
                 
           </option>
           <option
+            id="distressed"
+            value="distressed"
+          >
+            
+                  distressed
+                
+          </option>
+          <option
             id="dotted"
             value="dotted"
           >
@@ -530,6 +538,14 @@ exports[`MainApp renders correctly 1`] = `
           >
             
                   german
+                
+          </option>
+          <option
+            id="glitch"
+            value="glitch"
+          >
+            
+                  glitch
                 
           </option>
           <option

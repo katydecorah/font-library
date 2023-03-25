@@ -12229,7 +12229,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["whimsical"],
     "lineNumber": 1066,
     "variable": false
   },
@@ -13975,7 +13975,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "hebrew", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["grunge"],
     "lineNumber": 1216,
     "variable": false
   },
@@ -13984,7 +13984,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "hebrew", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["bubbly"],
     "lineNumber": 1217,
     "variable": false
   },
@@ -13993,7 +13993,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "hebrew", "latin", "latin-ext"],
     "category": "display",
-    "tags": ["outline"],
+    "tags": ["outline", "grunge"],
     "lineNumber": 1218,
     "variable": false
   },
@@ -14002,7 +14002,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "hebrew", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["distressed"],
     "lineNumber": 1219,
     "variable": false
   },
@@ -14011,7 +14011,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "hebrew", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["distressed"],
     "lineNumber": 1220,
     "variable": false
   },
@@ -14029,7 +14029,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "hebrew", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["glitch"],
     "lineNumber": 1222,
     "variable": false
   },
@@ -14038,7 +14038,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "hebrew", "latin", "latin-ext"],
     "category": "display",
-    "tags": ["outline"],
+    "tags": ["outline", "grunge"],
     "lineNumber": 1223,
     "variable": false
   },
@@ -14047,7 +14047,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "hebrew", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["glitch"],
     "lineNumber": 1224,
     "variable": false
   },
@@ -14092,7 +14092,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "hebrew", "latin", "latin-ext"],
     "category": "display",
-    "tags": ["outline"],
+    "tags": ["outline", "bubbly"],
     "lineNumber": 1229,
     "variable": false
   },
@@ -14110,7 +14110,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "hebrew", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["distressed"],
     "lineNumber": 1231,
     "variable": false
   },
@@ -14128,7 +14128,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "hebrew", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["halloween", "graffiti"],
     "lineNumber": 1233,
     "variable": false
   },
@@ -14409,7 +14409,7 @@
     "variants": ["300", "regular", "500", "600", "700", "800", "900"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["swash"],
     "lineNumber": 1256,
     "variable": true
   },

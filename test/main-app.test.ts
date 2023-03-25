@@ -201,7 +201,7 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         class="search-status"
-        results-length="528"
+        results-length="518"
         selected-category=""
         selected-search=""
         selected-subset=""
@@ -210,7 +210,7 @@ describe("MainApp", () => {
         selected-variant=""
       >
         <div>
-          Found 528 fonts: 
+          Found 518 fonts: 
         </div>
         
 
