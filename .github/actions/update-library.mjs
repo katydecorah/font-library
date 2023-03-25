@@ -138,9 +138,18 @@ function combineLibraries(remoteFonts, local) {
     });
   }
 
+  const tags = getUnique(combineLibrary, "tags")
+    .sort()
+    .map((tag) => {
+      const sample = combineLibrary
+        .filter((font) => font.tags.includes(tag))
+        .map((font) => font.family);
+      return { name: tag, sample: sample[0] };
+    });
+
   return {
     generatedMetadata: {
-      tags: getUnique(combineLibrary, "tags"),
+      tags,
       categories: getUnique(combineLibrary, "category"),
       subsets: getUnique(combineLibrary, "subsets"),
       variants: getUnique(combineLibrary, "variants"),
