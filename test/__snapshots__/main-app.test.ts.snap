@@ -661,6 +661,22 @@ exports[`MainApp renders correctly 1`] = `
                 
           </option>
           <option
+            id="icons"
+            value="icons"
+          >
+            
+                  icons
+                
+          </option>
+          <option
+            id="japanese"
+            value="japanese"
+          >
+            
+                  japanese
+                
+          </option>
+          <option
             id="khmer"
             value="khmer"
           >
@@ -762,6 +778,14 @@ exports[`MainApp renders correctly 1`] = `
           >
             
                   low contrast
+                
+          </option>
+          <option
+            id="manga"
+            value="manga"
+          >
+            
+                  manga
                 
           </option>
           <option

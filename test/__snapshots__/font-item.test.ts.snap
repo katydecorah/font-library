@@ -493,7 +493,7 @@ exports[`FontItem renders correctly 1`] = `
           class="family-tag tag-geometric"
           is="tag-button"
           selected-tag="null"
-          style="font-family: "Alata";"
+          style="font-family: "Alatsi";"
           title="geometric"
           value="geometric"
         >
@@ -753,7 +753,7 @@ exports[`FontItem selected subset 1`] = `
           class="family-tag tag-geometric"
           is="tag-button"
           selected-tag="null"
-          style="font-family: "Alata";"
+          style="font-family: "Alatsi";"
           title="geometric"
           value="geometric"
         >

@@ -226,7 +226,7 @@
     },
     {
       "name": "geometric",
-      "sample": "Alata"
+      "sample": "Alatsi"
     },
     {
       "name": "german",
@@ -293,6 +293,14 @@
       "sample": "Alegreya Sans"
     },
     {
+      "name": "icons",
+      "sample": "Noto Color Emoji"
+    },
+    {
+      "name": "japanese",
+      "sample": "Hina Mincho"
+    },
+    {
       "name": "khmer",
       "sample": "Cambo"
     },
@@ -338,11 +346,15 @@
     },
     {
       "name": "love",
-      "sample": "Emilys Candy"
+      "sample": "Ballet"
     },
     {
       "name": "low contrast",
-      "sample": "Armata"
+      "sample": "Alata"
+    },
+    {
+      "name": "manga",
+      "sample": "Mochiy Pop One"
     },
     {
       "name": "marker",
@@ -398,7 +410,7 @@
     },
     {
       "name": "romantic",
-      "sample": "Ballet"
+      "sample": "Beth Ellen"
     },
     {
       "name": "round",
