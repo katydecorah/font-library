@@ -157,6 +157,10 @@
       "sample": "Audiowide"
     },
     {
+      "name": "distressed",
+      "sample": "Rubik Dirt"
+    },
+    {
       "name": "dotted",
       "sample": "Codystar"
     },
@@ -227,6 +231,10 @@
     {
       "name": "german",
       "sample": "Oldenburg"
+    },
+    {
+      "name": "glitch",
+      "sample": "Rubik Glitch"
     },
     {
       "name": "gothic",
