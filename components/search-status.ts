@@ -14,40 +14,57 @@ class SearchStatus extends HTMLElement {
     const resultsLength = this.getAttribute("results-length");
     const selectedVariable = this.getAttribute("selected-variable") === "true";
 
-    const hasFilters =
-      selectedCategory ||
-      selectedTag ||
-      selectedSubset ||
-      selectedVariant ||
-      selectedVariable ||
-      selectedSearch;
-
-    const elm = [
-      `<div>Found ${resultsLength} fonts${hasFilters ? ": " : ""}</div>`,
+    const filters = [
+      {
+        label: "category",
+        value: selectedCategory,
+        id: "selectedCategory",
+      },
+      {
+        label: "tag",
+        value: selectedTag,
+        id: "selectedTag",
+      },
+      {
+        label: "subset",
+        value: selectedSubset,
+        id: "selectedSubset",
+      },
+      {
+        label: "variant",
+        value: selectedVariant,
+        id: "selectedVariant",
+      },
+      {
+        label: "search",
+        value: selectedSearch,
+        id: "selectedSearch",
+      },
+      {
+        label: "variable",
+        value: selectedVariable,
+        id: "selectedVariable",
+      },
     ];
 
-    const filterTags = {
-      category: { selectedCategory },
-      tag: { selectedTag },
-      subset: { selectedSubset },
-      variant: { selectedVariant },
-      search: { selectedSearch },
-      variable: { selectedVariable },
-    };
+    const selectedFilters = filters.filter(({ value }) => value);
+    const hasSelectedFilters = selectedFilters.length > 0;
 
-    for (const [key, selector] of Object.entries(filterTags)) {
-      const [selectVar] = Object.keys(selector);
-      const value = selector[selectVar as keyof typeof selector];
-      if (value) {
-        elm.push(
-          `<div class="search-filter">${key}${
-            key === "variable" ? "" : `: <strong>${value}</strong>`
-          }<button is="clear-button" aria-label="remove ${key}" value="${selectVar}">${iconClose}</button></div>`
-        );
-      }
+    const elm = [
+      `<div>Found ${resultsLength} fonts${
+        hasSelectedFilters ? ": " : ""
+      }</div>`,
+    ];
+
+    for (const { label, value, id } of selectedFilters) {
+      elm.push(
+        `<div class="search-filter">${label}${
+          label === "variable" ? "" : `: <strong>${value}</strong>`
+        }<button is="clear-button" aria-label="remove ${label}" value="${id}">${iconClose}</button></div>`
+      );
     }
 
-    if (hasFilters) {
+    if (hasSelectedFilters) {
       elm.push(
         `<button is="clear-button" aria-label="remove all filters" class="btn btn-clear">Clear</button>`
       );
