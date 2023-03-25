@@ -45,7 +45,7 @@ exports[`MainApp renders correctly 1`] = `
       
             
       <div
-        class="select-group mobile"
+        class="select-group"
       >
         
               
@@ -80,847 +80,1129 @@ exports[`MainApp renders correctly 1`] = `
             id="1700s"
             value="1700s"
           >
-            1700s
+            
+                  1700s
+                
           </option>
           <option
             id="1900s"
             value="1900s"
           >
-            1900s
+            
+                  1900s
+                
           </option>
           <option
             id="1920s"
             value="1920s"
           >
-            1920s
+            
+                  1920s
+                
           </option>
           <option
             id="1930s"
             value="1930s"
           >
-            1930s
+            
+                  1930s
+                
           </option>
           <option
             id="1940s"
             value="1940s"
           >
-            1940s
+            
+                  1940s
+                
           </option>
           <option
             id="1950s"
             value="1950s"
           >
-            1950s
+            
+                  1950s
+                
           </option>
           <option
             id="1960s"
             value="1960s"
           >
-            1960s
+            
+                  1960s
+                
           </option>
           <option
             id="1970s"
             value="1970s"
           >
-            1970s
+            
+                  1970s
+                
           </option>
           <option
             id="1980s"
             value="1980s"
           >
-            1980s
+            
+                  1980s
+                
           </option>
           <option
             id="ancient"
             value="ancient"
           >
-            ancient
+            
+                  ancient
+                
           </option>
           <option
             id="antiqua"
             value="antiqua"
           >
-            antiqua
+            
+                  antiqua
+                
           </option>
           <option
             id="arabic"
             value="arabic"
           >
-            arabic
+            
+                  arabic
+                
           </option>
           <option
             id="art deco"
             value="art deco"
           >
-            art deco
+            
+                  art deco
+                
           </option>
           <option
             id="art nouveau"
             value="art nouveau"
           >
-            art nouveau
+            
+                  art nouveau
+                
           </option>
           <option
             id="bamboo"
             value="bamboo"
           >
-            bamboo
+            
+                  bamboo
+                
           </option>
           <option
             id="barcode"
             value="barcode"
           >
-            barcode
+            
+                  barcode
+                
           </option>
           <option
             id="blackletter"
             value="blackletter"
           >
-            blackletter
+            
+                  blackletter
+                
           </option>
           <option
             id="block"
             value="block"
           >
-            block
+            
+                  block
+                
           </option>
           <option
             id="brush"
             value="brush"
           >
-            brush
+            
+                  brush
+                
           </option>
           <option
             id="bubbly"
             value="bubbly"
           >
-            bubbly
+            
+                  bubbly
+                
           </option>
           <option
             id="calligraphic"
             value="calligraphic"
           >
-            calligraphic
+            
+                  calligraphic
+                
           </option>
           <option
             id="cambodian"
             value="cambodian"
           >
-            cambodian
+            
+                  cambodian
+                
           </option>
           <option
             id="caps"
             value="caps"
           >
-            caps
+            
+                  caps
+                
           </option>
           <option
             id="cartoon"
             value="cartoon"
           >
-            cartoon
+            
+                  cartoon
+                
           </option>
           <option
             id="celtic"
             value="celtic"
           >
-            celtic
+            
+                  celtic
+                
           </option>
           <option
             id="classic"
             value="classic"
           >
-            classic
+            
+                  classic
+                
           </option>
           <option
             id="code"
             value="code"
           >
-            code
+            
+                  code
+                
           </option>
           <option
             id="collegiate"
             value="collegiate"
           >
-            collegiate
+            
+                  collegiate
+                
           </option>
           <option
             id="color"
             value="color"
           >
-            color
+            
+                  color
+                
           </option>
           <option
             id="comic"
             value="comic"
           >
-            comic
+            
+                  comic
+                
           </option>
           <option
             id="compact"
             value="compact"
           >
-            compact
+            
+                  compact
+                
           </option>
           <option
             id="condensed"
             value="condensed"
           >
-            condensed
+            
+                  condensed
+                
           </option>
           <option
             id="connected"
             value="connected"
           >
-            connected
+            
+                  connected
+                
           </option>
           <option
             id="copperplate"
             value="copperplate"
           >
-            copperplate
+            
+                  copperplate
+                
           </option>
           <option
             id="curls"
             value="curls"
           >
-            curls
+            
+                  curls
+                
           </option>
           <option
             id="cursive"
             value="cursive"
           >
-            cursive
+            
+                  cursive
+                
           </option>
           <option
             id="cute"
             value="cute"
           >
-            cute
+            
+                  cute
+                
           </option>
           <option
             id="decal"
             value="decal"
           >
-            decal
+            
+                  decal
+                
           </option>
           <option
             id="decorative"
             value="decorative"
           >
-            decorative
+            
+                  decorative
+                
           </option>
           <option
             id="diagonal"
             value="diagonal"
           >
-            diagonal
+            
+                  diagonal
+                
           </option>
           <option
             id="didone"
             value="didone"
           >
-            didone
+            
+                  didone
+                
           </option>
           <option
             id="disco"
             value="disco"
           >
-            disco
+            
+                  disco
+                
           </option>
           <option
             id="dotted"
             value="dotted"
           >
-            dotted
+            
+                  dotted
+                
           </option>
           <option
             id="editorial"
             value="editorial"
           >
-            editorial
+            
+                  editorial
+                
           </option>
           <option
             id="egyptian"
             value="egyptian"
           >
-            egyptian
+            
+                  egyptian
+                
           </option>
           <option
             id="elegant"
             value="elegant"
           >
-            elegant
+            
+                  elegant
+                
           </option>
           <option
             id="engraved"
             value="engraved"
           >
-            engraved
+            
+                  engraved
+                
           </option>
           <option
             id="eurostile"
             value="eurostile"
           >
-            eurostile
+            
+                  eurostile
+                
           </option>
           <option
             id="expanded"
             value="expanded"
           >
-            expanded
+            
+                  expanded
+                
           </option>
           <option
             id="fat"
             value="fat"
           >
-            fat
+            
+                  fat
+                
           </option>
           <option
             id="fat face"
             value="fat face"
           >
-            fat face
+            
+                  fat face
+                
           </option>
           <option
             id="flared"
             value="flared"
           >
-            flared
+            
+                  flared
+                
           </option>
           <option
             id="formal"
             value="formal"
           >
-            formal
+            
+                  formal
+                
           </option>
           <option
             id="fraktur"
             value="fraktur"
           >
-            fraktur
+            
+                  fraktur
+                
           </option>
           <option
             id="friendly"
             value="friendly"
           >
-            friendly
+            
+                  friendly
+                
           </option>
           <option
             id="fun"
             value="fun"
           >
-            fun
+            
+                  fun
+                
           </option>
           <option
             id="funky"
             value="funky"
           >
-            funky
+            
+                  funky
+                
           </option>
           <option
             id="futuristic"
             value="futuristic"
           >
-            futuristic
+            
+                  futuristic
+                
           </option>
           <option
             id="fuzzy"
             value="fuzzy"
           >
-            fuzzy
+            
+                  fuzzy
+                
           </option>
           <option
             id="game"
             value="game"
           >
-            game
+            
+                  game
+                
           </option>
           <option
             id="geometric"
             value="geometric"
           >
-            geometric
+            
+                  geometric
+                
           </option>
           <option
             id="german"
             value="german"
           >
-            german
+            
+                  german
+                
           </option>
           <option
             id="gothic"
             value="gothic"
           >
-            gothic
+            
+                  gothic
+                
           </option>
           <option
             id="gradient"
             value="gradient"
           >
-            gradient
+            
+                  gradient
+                
           </option>
           <option
             id="graffiti"
             value="graffiti"
           >
-            graffiti
+            
+                  graffiti
+                
           </option>
           <option
             id="groovy"
             value="groovy"
           >
-            groovy
+            
+                  groovy
+                
           </option>
           <option
             id="grotesque"
             value="grotesque"
           >
-            grotesque
+            
+                  grotesque
+                
           </option>
           <option
             id="grunge"
             value="grunge"
           >
-            grunge
+            
+                  grunge
+                
           </option>
           <option
             id="halloween"
             value="halloween"
           >
-            halloween
+            
+                  halloween
+                
           </option>
           <option
             id="handwritten"
             value="handwritten"
           >
-            handwritten
+            
+                  handwritten
+                
           </option>
           <option
             id="headline"
             value="headline"
           >
-            headline
+            
+                  headline
+                
           </option>
           <option
             id="headlines"
             value="headlines"
           >
-            headlines
+            
+                  headlines
+                
           </option>
           <option
             id="heavy"
             value="heavy"
           >
-            heavy
+            
+                  heavy
+                
           </option>
           <option
             id="hebrew"
             value="hebrew"
           >
-            hebrew
+            
+                  hebrew
+                
           </option>
           <option
             id="high contrast"
             value="high contrast"
           >
-            high contrast
+            
+                  high contrast
+                
           </option>
           <option
             id="hinted"
             value="hinted"
           >
-            hinted
+            
+                  hinted
+                
           </option>
           <option
             id="humanist"
             value="humanist"
           >
-            humanist
+            
+                  humanist
+                
           </option>
           <option
             id="isometric"
             value="isometric"
           >
-            isometric
+            
+                  isometric
+                
           </option>
           <option
             id="khmer"
             value="khmer"
           >
-            khmer
+            
+                  khmer
+                
           </option>
           <option
             id="kids"
             value="kids"
           >
-            kids
+            
+                  kids
+                
           </option>
           <option
             id="korean"
             value="korean"
           >
-            korean
+            
+                  korean
+                
           </option>
           <option
             id="large sizes"
             value="large sizes"
           >
-            large sizes
+            
+                  large sizes
+                
           </option>
           <option
             id="legibility"
             value="legibility"
           >
-            legibility
+            
+                  legibility
+                
           </option>
           <option
             id="light"
             value="light"
           >
-            light
+            
+                  light
+                
           </option>
           <option
             id="lines"
             value="lines"
           >
-            lines
+            
+                  lines
+                
           </option>
           <option
             id="literacy"
             value="literacy"
           >
-            literacy
+            
+                  literacy
+                
           </option>
           <option
             id="literature"
             value="literature"
           >
-            literature
+            
+                  literature
+                
           </option>
           <option
             id="looped"
             value="looped"
           >
-            looped
+            
+                  looped
+                
           </option>
           <option
             id="loopless"
             value="loopless"
           >
-            loopless
+            
+                  loopless
+                
           </option>
           <option
             id="love"
             value="love"
           >
-            love
+            
+                  love
+                
           </option>
           <option
             id="low contrast"
             value="low contrast"
           >
-            low contrast
+            
+                  low contrast
+                
           </option>
           <option
             id="marker"
             value="marker"
           >
-            marker
+            
+                  marker
+                
           </option>
           <option
             id="modern"
             value="modern"
           >
-            modern
+            
+                  modern
+                
           </option>
           <option
             id="monolinear"
             value="monolinear"
           >
-            monolinear
+            
+                  monolinear
+                
           </option>
           <option
             id="narrow"
             value="narrow"
           >
-            narrow
+            
+                  narrow
+                
           </option>
           <option
             id="neoclassical"
             value="neoclassical"
           >
-            neoclassical
+            
+                  neoclassical
+                
           </option>
           <option
             id="old style"
             value="old style"
           >
-            old style
+            
+                  old style
+                
           </option>
           <option
             id="outline"
             value="outline"
           >
-            outline
+            
+                  outline
+                
           </option>
           <option
             id="paris"
             value="paris"
           >
-            paris
+            
+                  paris
+                
           </option>
           <option
             id="penant"
             value="penant"
           >
-            penant
+            
+                  penant
+                
           </option>
           <option
             id="pixel"
             value="pixel"
           >
-            pixel
+            
+                  pixel
+                
           </option>
           <option
             id="playful"
             value="playful"
           >
-            playful
+            
+                  playful
+                
           </option>
           <option
             id="pulp"
             value="pulp"
           >
-            pulp
+            
+                  pulp
+                
           </option>
           <option
             id="retro"
             value="retro"
           >
-            retro
+            
+                  retro
+                
           </option>
           <option
             id="rock"
             value="rock"
           >
-            rock
+            
+                  rock
+                
           </option>
           <option
             id="roman"
             value="roman"
           >
-            roman
+            
+                  roman
+                
           </option>
           <option
             id="romantic"
             value="romantic"
           >
-            romantic
+            
+                  romantic
+                
           </option>
           <option
             id="round"
             value="round"
           >
-            round
+            
+                  round
+                
           </option>
           <option
             id="salsa"
             value="salsa"
           >
-            salsa
+            
+                  salsa
+                
           </option>
           <option
             id="scrawl"
             value="scrawl"
           >
-            scrawl
+            
+                  scrawl
+                
           </option>
           <option
             id="script"
             value="script"
           >
-            script
+            
+                  script
+                
           </option>
           <option
             id="shadow"
             value="shadow"
           >
-            shadow
+            
+                  shadow
+                
           </option>
           <option
             id="signage"
             value="signage"
           >
-            signage
+            
+                  signage
+                
           </option>
           <option
             id="sketch"
             value="sketch"
           >
-            sketch
+            
+                  sketch
+                
           </option>
           <option
             id="slab"
             value="slab"
           >
-            slab
+            
+                  slab
+                
           </option>
           <option
             id="slanted"
             value="slanted"
           >
-            slanted
+            
+                  slanted
+                
           </option>
           <option
             id="small caps"
             value="small caps"
           >
-            small caps
+            
+                  small caps
+                
           </option>
           <option
             id="small sizes"
             value="small sizes"
           >
-            small sizes
+            
+                  small sizes
+                
           </option>
           <option
             id="speed"
             value="speed"
           >
-            speed
+            
+                  speed
+                
           </option>
           <option
             id="spicy"
             value="spicy"
           >
-            spicy
+            
+                  spicy
+                
           </option>
           <option
             id="square"
             value="square"
           >
-            square
+            
+                  square
+                
           </option>
           <option
             id="stencil"
             value="stencil"
           >
-            stencil
+            
+                  stencil
+                
           </option>
           <option
             id="stone"
             value="stone"
           >
-            stone
+            
+                  stone
+                
           </option>
           <option
             id="surf"
             value="surf"
           >
-            surf
+            
+                  surf
+                
           </option>
           <option
             id="swash"
             value="swash"
           >
-            swash
+            
+                  swash
+                
           </option>
           <option
             id="swirl"
             value="swirl"
           >
-            swirl
+            
+                  swirl
+                
           </option>
           <option
             id="tall"
             value="tall"
           >
-            tall
+            
+                  tall
+                
           </option>
           <option
             id="tapered"
             value="tapered"
           >
-            tapered
+            
+                  tapered
+                
           </option>
           <option
             id="tattoo"
             value="tattoo"
           >
-            tattoo
+            
+                  tattoo
+                
           </option>
           <option
             id="techno"
             value="techno"
           >
-            techno
+            
+                  techno
+                
           </option>
           <option
             id="thin"
             value="thin"
           >
-            thin
+            
+                  thin
+                
           </option>
           <option
             id="transitional"
             value="transitional"
           >
-            transitional
+            
+                  transitional
+                
           </option>
           <option
             id="typewriter"
             value="typewriter"
           >
-            typewriter
+            
+                  typewriter
+                
           </option>
           <option
             id="uneven"
             value="uneven"
           >
-            uneven
+            
+                  uneven
+                
           </option>
           <option
             id="unicase"
             value="unicase"
           >
-            unicase
+            
+                  unicase
+                
           </option>
           <option
             id="urban"
             value="urban"
           >
-            urban
+            
+                  urban
+                
           </option>
           <option
             id="vintage"
             value="vintage"
           >
-            vintage
+            
+                  vintage
+                
           </option>
           <option
             id="western"
             value="western"
           >
-            western
+            
+                  western
+                
           </option>
           <option
             id="whimsical"
             value="whimsical"
           >
-            whimsical
+            
+                  whimsical
+                
           </option>
           <option
             id="wide"
             value="wide"
           >
-            wide
+            
+                  wide
+                
           </option>
           <option
             id="wireframe"
             value="wireframe"
           >
-            wireframe
+            
+                  wireframe
+                
           </option>
         </select>
         

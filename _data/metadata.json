@@ -1,146 +1,569 @@
 {
   "tags": [
-    "1700s",
-    "1900s",
-    "1920s",
-    "1930s",
-    "1940s",
-    "1950s",
-    "1960s",
-    "1970s",
-    "1980s",
-    "ancient",
-    "antiqua",
-    "arabic",
-    "art deco",
-    "art nouveau",
-    "bamboo",
-    "barcode",
-    "blackletter",
-    "block",
-    "brush",
-    "bubbly",
-    "calligraphic",
-    "cambodian",
-    "caps",
-    "cartoon",
-    "celtic",
-    "classic",
-    "code",
-    "collegiate",
-    "color",
-    "comic",
-    "compact",
-    "condensed",
-    "connected",
-    "copperplate",
-    "curls",
-    "cursive",
-    "cute",
-    "decal",
-    "decorative",
-    "diagonal",
-    "didone",
-    "disco",
-    "dotted",
-    "editorial",
-    "egyptian",
-    "elegant",
-    "engraved",
-    "eurostile",
-    "expanded",
-    "fat",
-    "fat face",
-    "flared",
-    "formal",
-    "fraktur",
-    "friendly",
-    "fun",
-    "funky",
-    "futuristic",
-    "fuzzy",
-    "game",
-    "geometric",
-    "german",
-    "gothic",
-    "gradient",
-    "graffiti",
-    "groovy",
-    "grotesque",
-    "grunge",
-    "halloween",
-    "handwritten",
-    "headline",
-    "headlines",
-    "heavy",
-    "hebrew",
-    "high contrast",
-    "hinted",
-    "humanist",
-    "isometric",
-    "khmer",
-    "kids",
-    "korean",
-    "large sizes",
-    "legibility",
-    "light",
-    "lines",
-    "literacy",
-    "literature",
-    "looped",
-    "loopless",
-    "love",
-    "low contrast",
-    "marker",
-    "modern",
-    "monolinear",
-    "narrow",
-    "neoclassical",
-    "old style",
-    "outline",
-    "paris",
-    "penant",
-    "pixel",
-    "playful",
-    "pulp",
-    "retro",
-    "rock",
-    "roman",
-    "romantic",
-    "round",
-    "salsa",
-    "scrawl",
-    "script",
-    "shadow",
-    "signage",
-    "sketch",
-    "slab",
-    "slanted",
-    "small caps",
-    "small sizes",
-    "speed",
-    "spicy",
-    "square",
-    "stencil",
-    "stone",
-    "surf",
-    "swash",
-    "swirl",
-    "tall",
-    "tapered",
-    "tattoo",
-    "techno",
-    "thin",
-    "transitional",
-    "typewriter",
-    "uneven",
-    "unicase",
-    "urban",
-    "vintage",
-    "western",
-    "whimsical",
-    "wide",
-    "wireframe"
+    {
+      "name": "1700s",
+      "sample": "Jacques Francois"
+    },
+    {
+      "name": "1900s",
+      "sample": "Amiri"
+    },
+    {
+      "name": "1920s",
+      "sample": "Cagliostro"
+    },
+    {
+      "name": "1930s",
+      "sample": "Englebert"
+    },
+    {
+      "name": "1940s",
+      "sample": "Fanwood Text"
+    },
+    {
+      "name": "1950s",
+      "sample": "Atomic Age"
+    },
+    {
+      "name": "1960s",
+      "sample": "Boogaloo"
+    },
+    {
+      "name": "1970s",
+      "sample": "Salsa"
+    },
+    {
+      "name": "1980s",
+      "sample": "Press Start 2P"
+    },
+    {
+      "name": "ancient",
+      "sample": "Caesar Dressing"
+    },
+    {
+      "name": "antiqua",
+      "sample": "Federant"
+    },
+    {
+      "name": "arabic",
+      "sample": "Almarai"
+    },
+    {
+      "name": "art deco",
+      "sample": "Aladin"
+    },
+    {
+      "name": "art nouveau",
+      "sample": "Amarante"
+    },
+    {
+      "name": "bamboo",
+      "sample": "Hanalei"
+    },
+    {
+      "name": "barcode",
+      "sample": "Libre Barcode 128"
+    },
+    {
+      "name": "blackletter",
+      "sample": "Fruktur"
+    },
+    {
+      "name": "block",
+      "sample": "Alumni Sans Inline One"
+    },
+    {
+      "name": "brush",
+      "sample": "Akronim"
+    },
+    {
+      "name": "bubbly",
+      "sample": "Crafty Girls"
+    },
+    {
+      "name": "calligraphic",
+      "sample": "Allison"
+    },
+    {
+      "name": "cambodian",
+      "sample": "Bokor"
+    },
+    {
+      "name": "caps",
+      "sample": "Aboreto"
+    },
+    {
+      "name": "cartoon",
+      "sample": "Acme"
+    },
+    {
+      "name": "celtic",
+      "sample": "Cormorant Infant"
+    },
+    {
+      "name": "classic",
+      "sample": "Old Standard TT"
+    },
+    {
+      "name": "code",
+      "sample": "Anaheim"
+    },
+    {
+      "name": "collegiate",
+      "sample": "Alumni Sans Collegiate One"
+    },
+    {
+      "name": "color",
+      "sample": "Bungee Spice"
+    },
+    {
+      "name": "comic",
+      "sample": "Acme"
+    },
+    {
+      "name": "compact",
+      "sample": "Adamina"
+    },
+    {
+      "name": "condensed",
+      "sample": "Abel"
+    },
+    {
+      "name": "connected",
+      "sample": "Montserrat Subrayada"
+    },
+    {
+      "name": "copperplate",
+      "sample": "Euphoria Script"
+    },
+    {
+      "name": "curls",
+      "sample": "Are You Serious"
+    },
+    {
+      "name": "cursive",
+      "sample": "Aguafina Script"
+    },
+    {
+      "name": "cute",
+      "sample": "Are You Serious"
+    },
+    {
+      "name": "decal",
+      "sample": "Monofett"
+    },
+    {
+      "name": "decorative",
+      "sample": "Bellota"
+    },
+    {
+      "name": "diagonal",
+      "sample": "Nova Cut"
+    },
+    {
+      "name": "didone",
+      "sample": "Abril Fatface"
+    },
+    {
+      "name": "disco",
+      "sample": "Audiowide"
+    },
+    {
+      "name": "dotted",
+      "sample": "Codystar"
+    },
+    {
+      "name": "editorial",
+      "sample": "Asar"
+    },
+    {
+      "name": "egyptian",
+      "sample": "Alfa Slab One"
+    },
+    {
+      "name": "elegant",
+      "sample": "Abril Fatface"
+    },
+    {
+      "name": "engraved",
+      "sample": "Asset"
+    },
+    {
+      "name": "eurostile",
+      "sample": "Anybody"
+    },
+    {
+      "name": "expanded",
+      "sample": "BhuTuka Expanded One"
+    },
+    {
+      "name": "fat",
+      "sample": "Erica One"
+    },
+    {
+      "name": "fat face",
+      "sample": "Asset"
+    },
+    {
+      "name": "flared",
+      "sample": "Tenali Ramakrishna"
+    },
+    {
+      "name": "formal",
+      "sample": "Allison"
+    },
+    {
+      "name": "fraktur",
+      "sample": "Astloch"
+    },
+    {
+      "name": "friendly",
+      "sample": "Aclonica"
+    },
+    {
+      "name": "fun",
+      "sample": "Barriecito"
+    },
+    {
+      "name": "funky",
+      "sample": "Bahianita"
+    },
+    {
+      "name": "futuristic",
+      "sample": "Antonio"
+    },
+    {
+      "name": "fuzzy",
+      "sample": "Black And White Picture"
+    },
+    {
+      "name": "game",
+      "sample": "DotGothic16"
+    },
+    {
+      "name": "geometric",
+      "sample": "Alata"
+    },
+    {
+      "name": "german",
+      "sample": "Oldenburg"
+    },
+    {
+      "name": "gothic",
+      "sample": "Balthazar"
+    },
+    {
+      "name": "gradient",
+      "sample": "Bungee Spice"
+    },
+    {
+      "name": "graffiti",
+      "sample": "Rubik Spray Paint"
+    },
+    {
+      "name": "groovy",
+      "sample": "Acme"
+    },
+    {
+      "name": "grotesque",
+      "sample": "Archivo Black"
+    },
+    {
+      "name": "grunge",
+      "sample": "Averia Gruesa Libre"
+    },
+    {
+      "name": "halloween",
+      "sample": "Butcherman"
+    },
+    {
+      "name": "handwritten",
+      "sample": "Edu NSW ACT Foundation"
+    },
+    {
+      "name": "headline",
+      "sample": "Climate Crisis"
+    },
+    {
+      "name": "headlines",
+      "sample": "Abril Fatface"
+    },
+    {
+      "name": "heavy",
+      "sample": "Abril Fatface"
+    },
+    {
+      "name": "hebrew",
+      "sample": "Karantina"
+    },
+    {
+      "name": "high contrast",
+      "sample": "Arya"
+    },
+    {
+      "name": "hinted",
+      "sample": "Arvo"
+    },
+    {
+      "name": "humanist",
+      "sample": "Alegreya Sans"
+    },
+    {
+      "name": "isometric",
+      "sample": "Nabla"
+    },
+    {
+      "name": "khmer",
+      "sample": "Bokor"
+    },
+    {
+      "name": "kids",
+      "sample": "ABeeZee"
+    },
+    {
+      "name": "korean",
+      "sample": "Gaegu"
+    },
+    {
+      "name": "large sizes",
+      "sample": "Baumans"
+    },
+    {
+      "name": "legibility",
+      "sample": "Actor"
+    },
+    {
+      "name": "light",
+      "sample": "Alumni Sans"
+    },
+    {
+      "name": "lines",
+      "sample": "Akronim"
+    },
+    {
+      "name": "literacy",
+      "sample": "ABeeZee"
+    },
+    {
+      "name": "literature",
+      "sample": "Alegreya"
+    },
+    {
+      "name": "looped",
+      "sample": "Taviraj"
+    },
+    {
+      "name": "loopless",
+      "sample": "Athiti"
+    },
+    {
+      "name": "love",
+      "sample": "Ballet"
+    },
+    {
+      "name": "low contrast",
+      "sample": "Armata"
+    },
+    {
+      "name": "marker",
+      "sample": "Combo"
+    },
+    {
+      "name": "modern",
+      "sample": "Aclonica"
+    },
+    {
+      "name": "monolinear",
+      "sample": "Astloch"
+    },
+    {
+      "name": "narrow",
+      "sample": "Akshar"
+    },
+    {
+      "name": "neoclassical",
+      "sample": "GFS Didot"
+    },
+    {
+      "name": "old style",
+      "sample": "Alice"
+    },
+    {
+      "name": "outline",
+      "sample": "Alumni Sans Collegiate One"
+    },
+    {
+      "name": "paris",
+      "sample": "Croissant One"
+    },
+    {
+      "name": "penant",
+      "sample": "Graduate"
+    },
+    {
+      "name": "pixel",
+      "sample": "DotGothic16"
+    },
+    {
+      "name": "playful",
+      "sample": "Barriecito"
+    },
+    {
+      "name": "pulp",
+      "sample": "Carter One"
+    },
+    {
+      "name": "retro",
+      "sample": "Glass Antiqua"
+    },
+    {
+      "name": "rock",
+      "sample": "Metal Mania"
+    },
+    {
+      "name": "roman",
+      "sample": "Caesar Dressing"
+    },
+    {
+      "name": "romantic",
+      "sample": "Ballet"
+    },
+    {
+      "name": "round",
+      "sample": "Asap"
+    },
+    {
+      "name": "salsa",
+      "sample": "Boogaloo"
+    },
+    {
+      "name": "scrawl",
+      "sample": "Amatic SC"
+    },
+    {
+      "name": "script",
+      "sample": "Aguafina Script"
+    },
+    {
+      "name": "shadow",
+      "sample": "Bungee Shade"
+    },
+    {
+      "name": "signage",
+      "sample": "Bungee"
+    },
+    {
+      "name": "sketch",
+      "sample": "Cabin Sketch"
+    },
+    {
+      "name": "slab",
+      "sample": "Alfa Slab One"
+    },
+    {
+      "name": "slanted",
+      "sample": "Allan"
+    },
+    {
+      "name": "small caps",
+      "sample": "Alegreya SC"
+    },
+    {
+      "name": "small sizes",
+      "sample": "Adamina"
+    },
+    {
+      "name": "speed",
+      "sample": "Faster One"
+    },
+    {
+      "name": "spicy",
+      "sample": "Black And White Picture"
+    },
+    {
+      "name": "square",
+      "sample": "Aldrich"
+    },
+    {
+      "name": "stencil",
+      "sample": "Allerta Stencil"
+    },
+    {
+      "name": "stone",
+      "sample": "Nova Flat"
+    },
+    {
+      "name": "surf",
+      "sample": "Original Surfer"
+    },
+    {
+      "name": "swash",
+      "sample": "Berkshire Swash"
+    },
+    {
+      "name": "swirl",
+      "sample": "Are You Serious"
+    },
+    {
+      "name": "tall",
+      "sample": "Antonio"
+    },
+    {
+      "name": "tapered",
+      "sample": "Denk One"
+    },
+    {
+      "name": "tattoo",
+      "sample": "Miltonian"
+    },
+    {
+      "name": "techno",
+      "sample": "Aldrich"
+    },
+    {
+      "name": "thin",
+      "sample": "Actor"
+    },
+    {
+      "name": "transitional",
+      "sample": "Adamina"
+    },
+    {
+      "name": "typewriter",
+      "sample": "Cutive"
+    },
+    {
+      "name": "uneven",
+      "sample": "Atma"
+    },
+    {
+      "name": "unicase",
+      "sample": "Cormorant Unicase"
+    },
+    {
+      "name": "urban",
+      "sample": "Montserrat"
+    },
+    {
+      "name": "vintage",
+      "sample": "Calistoga"
+    },
+    {
+      "name": "western",
+      "sample": "Arbutus"
+    },
+    {
+      "name": "whimsical",
+      "sample": "Almendra"
+    },
+    {
+      "name": "wide",
+      "sample": "Asset"
+    },
+    {
+      "name": "wireframe",
+      "sample": "Balsamiq Sans"
+    }
   ],
   "categories": ["display", "handwriting", "monospace", "sans-serif", "serif"],
   "subsets": [

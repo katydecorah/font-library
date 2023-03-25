@@ -19,6 +19,12 @@
     <!-- other stuff -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+    {%- for tag in metadata.tags -%}
+    <link
+      href="https://fonts.googleapis.com/css2?family={{tag.sample}}&text={{tag.name}}&display=swap"
+      rel="stylesheet"
+    />
+    {%- endfor -%}
   </head>
   <body>
     <header>
@@ -34,14 +40,13 @@
           <h2>Tags</h2>
           <div id="tags" class="tags-container">
             {%- for tag in metadata.tags -%}
-            <label class="family-tag"
-              >{{tag}}
-              <input
+            <label style="font-family: '{{tag.sample}}'" class="family-tag"
+              >{{tag.name}}<input
                 data-param="tag"
                 is="filter-radio"
                 type="radio"
                 name="tag"
-                value="{{tag}}"
+                value="{{tag.name}}"
                 class="hide"
             /></label>
             {%- endfor -%}
@@ -72,13 +77,15 @@
               <label for="selectedSearch">Filter fonts</label>
               <input type="text" id="selectedSearch" value="" />
             </div>
-            <div class="select-group mobile">
+            <div class="select-group">
               <label for="selectedTag">Tags</label>
               <select data-param="tag" is="filter-select" id="selectedTag">
                 <option value="">All tags</option>
                 <option id="need tags" value="need tags">need tags</option>
                 {%- for option in metadata.tags -%}
-                <option id="{{option}}" value="{{option}}">{{option}}</option>
+                <option id="{{option.name}}" value="{{option.name}}">
+                  {{option.name}}
+                </option>
                 {%- endfor -%}
               </select>
             </div>
