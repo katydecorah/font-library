@@ -205,6 +205,8 @@ exports[`FontItem is variable font 1`] = `
           class="family-tag tag-condensed"
           is="tag-button"
           selected-tag="null"
+          style="font-family: "Abel";"
+          title="condensed"
           value="condensed"
         >
           condensed
@@ -213,6 +215,8 @@ exports[`FontItem is variable font 1`] = `
           class="family-tag tag-narrow"
           is="tag-button"
           selected-tag="null"
+          style="font-family: "Akshar";"
+          title="narrow"
           value="narrow"
         >
           narrow
@@ -341,6 +345,8 @@ exports[`FontItem no latin subset 1`] = `
           class="family-tag tag-round"
           is="tag-button"
           selected-tag="null"
+          style="font-family: "Asap";"
+          title="round"
           value="round"
         >
           round
@@ -349,6 +355,8 @@ exports[`FontItem no latin subset 1`] = `
           class="family-tag tag-monolinear"
           is="tag-button"
           selected-tag="null"
+          style="font-family: "Azeret Mono";"
+          title="monolinear"
           value="monolinear"
         >
           monolinear
@@ -357,6 +365,8 @@ exports[`FontItem no latin subset 1`] = `
           class="family-tag tag-1930s"
           is="tag-button"
           selected-tag="null"
+          style="font-family: "Englebert";"
+          title="1930s"
           value="1930s"
         >
           1930s
@@ -483,6 +493,8 @@ exports[`FontItem renders correctly 1`] = `
           class="family-tag tag-geometric"
           is="tag-button"
           selected-tag="null"
+          style="font-family: "Alata";"
+          title="geometric"
           value="geometric"
         >
           geometric
@@ -611,6 +623,8 @@ exports[`FontItem rtl subset 1`] = `
           class="family-tag tag-arabic"
           is="tag-button"
           selected-tag="null"
+          style="font-family: "Almarai";"
+          title="arabic"
           value="arabic"
         >
           arabic
@@ -739,6 +753,8 @@ exports[`FontItem selected subset 1`] = `
           class="family-tag tag-geometric"
           is="tag-button"
           selected-tag="null"
+          style="font-family: "Alata";"
+          title="geometric"
           value="geometric"
         >
           geometric
@@ -865,6 +881,8 @@ exports[`FontItem selected variant, 900 1`] = `
           class="family-tag tag-eurostile"
           is="tag-button"
           selected-tag="null"
+          style="font-family: "Anybody";"
+          title="eurostile"
           value="eurostile"
         >
           eurostile
@@ -991,6 +1009,8 @@ exports[`FontItem selected variant, 900italic 1`] = `
           class="family-tag tag-eurostile"
           is="tag-button"
           selected-tag="null"
+          style="font-family: "Anybody";"
+          title="eurostile"
           value="eurostile"
         >
           eurostile

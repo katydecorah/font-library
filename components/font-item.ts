@@ -72,7 +72,7 @@ class FontItem extends HTMLElement {
       <div class="family-tags-container">${tags
         .map(
           (tag: string) =>
-            `<button is="tag-button" selected-tag="${this.selectedTag}" value="${tag}">${tag}</button>`
+            `<button is="tag-button" title="${tag}" selected-tag="${this.selectedTag}" value="${tag}">${tag}</button>`
         )
         .join("")}</div>
       <div class="family-meta-links">

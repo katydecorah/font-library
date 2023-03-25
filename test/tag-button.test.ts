@@ -22,6 +22,7 @@ describe("tag-button", () => {
         class="family-tag tag-cute"
         is="tag-button"
         selected-tag=""
+        style="font-family: "Bonbon";"
         value="cute"
       >
         cute
@@ -39,6 +40,7 @@ describe("tag-button", () => {
         class="family-tag tag-cute active"
         is="tag-button"
         selected-tag="cute"
+        style="font-family: "Bonbon";"
         value="cute"
       >
         cute
@@ -80,6 +82,7 @@ describe("tag-button", () => {
         class="family-tag tag-cute"
         is="tag-button"
         selected-tag=""
+        style="font-family: "Bonbon";"
         value="cute"
       >
         cute

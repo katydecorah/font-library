@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
     {%- for tag in metadata.tags -%}
     <link
-      href="https://fonts.googleapis.com/css2?family={{tag.sample}}&text={{tag.name}}&display=swap"
+      href="https://fonts.googleapis.com/css2?family={{tag.sample | split: ' ' | join: '+'}}&text={{tag.name | split: ' ' | join: '+'}}&display=swap"
       rel="stylesheet"
     />
     {%- endfor -%}
@@ -40,7 +40,10 @@
           <h2>Tags</h2>
           <div id="tags" class="tags-container">
             {%- for tag in metadata.tags -%}
-            <label style="font-family: '{{tag.sample}}'" class="family-tag"
+            <label
+              title="{{tag.name}}"
+              style="font-family: '{{tag.sample}}'"
+              class="family-tag"
               >{{tag.name}}<input
                 data-param="tag"
                 is="filter-radio"

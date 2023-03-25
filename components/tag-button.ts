@@ -1,3 +1,5 @@
+import { tags } from "../_data/metadata.json";
+
 class TagButton extends HTMLButtonElement {
   constructor() {
     super();
@@ -19,6 +21,12 @@ class TagButton extends HTMLButtonElement {
   connectedCallback() {
     const tag = this.getAttribute("value");
     const selectedTag = this.getAttribute("selected-tag");
+
+    // find name in tags
+    const tagData = tags.find((t) => t.name === tag);
+
+    // set style attribue
+    this.style.fontFamily = `"${tagData.sample}"`;
 
     // eslint-disable-next-line wc/no-self-class
     this.classList.add("family-tag", `tag-${tag.replace(/ /g, "-")}`);
