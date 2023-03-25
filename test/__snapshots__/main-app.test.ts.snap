@@ -42,6 +42,8 @@ exports[`MainApp renders correctly 1`] = `
         
             
       </div>
+      
+            
       <div
         class="select-group mobile"
       >
@@ -66,6 +68,8 @@ exports[`MainApp renders correctly 1`] = `
           >
             All tags
           </option>
+          
+                
           <option
             id="need tags"
             value="need tags"
@@ -922,6 +926,8 @@ exports[`MainApp renders correctly 1`] = `
         
             
       </div>
+      
+            
       <div
         class="select-group"
       >
@@ -980,6 +986,8 @@ exports[`MainApp renders correctly 1`] = `
         
             
       </div>
+      
+            
       <div
         class="select-group"
       >
@@ -1968,6 +1976,8 @@ exports[`MainApp renders correctly 1`] = `
         
             
       </div>
+      
+            
       <div
         class="select-group"
       >
@@ -2104,6 +2114,8 @@ exports[`MainApp renders correctly 1`] = `
         
             
       </div>
+      
+            
       <div
         class="select-group"
       >
