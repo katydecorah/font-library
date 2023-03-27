@@ -10478,7 +10478,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext", "music"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["icons"],
     "lineNumber": 849,
     "variable": false,
     "lastModified": "2022-11-09"
@@ -12091,7 +12091,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext", "symbols"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["icons"],
     "lineNumber": 980,
     "variable": false,
     "lastModified": "2022-12-08"
