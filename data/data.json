@@ -9266,7 +9266,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "monospace",
-    "tags": [],
+    "tags": ["icons"],
     "lineNumber": 744,
     "variable": false,
     "lastModified": "2023-03-08"
@@ -9276,7 +9276,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "monospace",
-    "tags": ["outline"],
+    "tags": ["outline", "icons"],
     "lineNumber": 745,
     "variable": false,
     "lastModified": "2023-03-08"
@@ -9286,7 +9286,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "monospace",
-    "tags": ["round"],
+    "tags": ["round", "icons"],
     "lineNumber": 746,
     "variable": false,
     "lastModified": "2023-03-21"
@@ -9296,7 +9296,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "monospace",
-    "tags": [],
+    "tags": ["icons"],
     "lineNumber": 747,
     "variable": false,
     "lastModified": "2023-03-08"
@@ -9306,7 +9306,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "monospace",
-    "tags": [],
+    "tags": ["icons"],
     "lineNumber": 748,
     "variable": false,
     "lastModified": "2023-03-08"
@@ -9316,7 +9316,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700"],
     "subsets": ["latin"],
     "category": "monospace",
-    "tags": ["outline"],
+    "tags": ["outline", "icons"],
     "lineNumber": 749,
     "variable": false,
     "lastModified": "2023-03-25"
@@ -9326,7 +9326,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700"],
     "subsets": ["latin"],
     "category": "monospace",
-    "tags": ["round"],
+    "tags": ["round", "icons"],
     "lineNumber": 750,
     "variable": false,
     "lastModified": "2023-03-25"
@@ -9336,7 +9336,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700"],
     "subsets": ["latin"],
     "category": "monospace",
-    "tags": [],
+    "tags": ["icons"],
     "lineNumber": 751,
     "variable": false,
     "lastModified": "2023-03-25"
