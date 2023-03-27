@@ -53,6 +53,13 @@ body {
   line-height: 1.45;
 }
 
+i {
+  font-style: normal;
+  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+    "segoe ui", "helvetica neue", helvetica, Cantarell, Ubuntu, roboto, noto,
+    arial, sans-serif;
+}
+
 h1 {
   font-size: 1.2em;
   margin: 0;

@@ -42,9 +42,9 @@
             {%- for tag in metadata.tags -%}
             <label
               title="{{tag.name}}"
-              style="font-family: '{{tag.sample}}'"
+              {%- unless tag.name == 'icons' -%}style="font-family: '{{tag.sample}}'"{%- endunless -%}
               class="family-tag"
-              >{{tag.name}}<input
+              >{%- if tag.name == 'icons' -%}<i>&hearts;</i>{%- endif -%}{{tag.name}}<input
                 data-param="tag"
                 is="filter-radio"
                 type="radio"

@@ -25,8 +25,11 @@ class TagButton extends HTMLButtonElement {
     // find name in tags
     const tagData = tags.find((t) => t.name === tag);
 
-    // set style attribue
-    this.style.fontFamily = `"${tagData.sample}"`;
+    if (tag === "icons") {
+      this.innerHTML = `<i>&hearts;</i> icons`;
+    } else {
+      this.style.fontFamily = `"${tagData.sample}"`;
+    }
 
     // eslint-disable-next-line wc/no-self-class
     this.classList.add("family-tag", `tag-${tag.replace(/ /g, "-")}`);
