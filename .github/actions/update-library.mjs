@@ -215,6 +215,7 @@ function autoAddToLocal(local) {
       "brush",
       "unicase",
       "outline",
+      "slab",
     ];
     for (const autoTag of autoTags) {
       if (font.toLowerCase().includes(autoTag) && !tags.includes(autoTag)) {

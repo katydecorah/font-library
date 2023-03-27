@@ -1836,7 +1836,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": ["uneven"],
+    "tags": ["uneven", "signage"],
     "lineNumber": 149,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -4098,7 +4098,7 @@
     "variants": ["300", "regular", "700"],
     "subsets": ["korean", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["round"],
     "lineNumber": 343,
     "variable": false,
     "lastModified": "2022-09-27"
@@ -4367,7 +4367,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": ["cute", "love"],
+    "tags": ["cute", "love", "hearts"],
     "lineNumber": 368,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -5845,7 +5845,7 @@
     "variants": ["regular", "700"],
     "subsets": ["latin"],
     "category": "display",
-    "tags": ["love", "cute"],
+    "tags": ["love", "cute", "hearts"],
     "lineNumber": 475,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -6342,7 +6342,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["slab"],
     "lineNumber": 514,
     "variable": true,
     "lastModified": "2023-03-21"
@@ -7246,7 +7246,7 @@
     ],
     "subsets": ["cyrillic", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["geometric"],
     "lineNumber": 584,
     "variable": true,
     "lastModified": "2022-09-22"
@@ -7372,7 +7372,7 @@
     ],
     "subsets": ["latin", "latin-ext", "thai", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["modern"],
     "lineNumber": 594,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -8743,7 +8743,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "handwriting",
-    "tags": ["romantic"],
+    "tags": ["romantic", "hearts"],
     "lineNumber": 699,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -9789,7 +9789,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["slab"],
     "lineNumber": 793,
     "variable": true,
     "lastModified": "2022-09-22"
@@ -11991,7 +11991,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext", "signwriting"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["icons"],
     "lineNumber": 972,
     "variable": false,
     "lastModified": "2023-01-06"
@@ -13562,7 +13562,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["devanagari", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["heavy"],
     "lineNumber": 1090,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -14699,7 +14699,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "display",
-    "tags": [],
+    "tags": ["signage"],
     "lineNumber": 1181,
     "variable": true,
     "lastModified": "2023-03-21"
@@ -14749,7 +14749,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["arabic", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["color", "fun", "hearts"],
     "lineNumber": 1186,
     "variable": true,
     "lastModified": "2023-03-09"
@@ -14759,7 +14759,7 @@
     "variants": ["regular"],
     "subsets": ["arabic", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": ["arabic"],
+    "tags": ["arabic", "color"],
     "lineNumber": 1187,
     "variable": false,
     "lastModified": "2022-12-08"
@@ -16419,7 +16419,7 @@
     "variants": ["300", "regular", "500", "700", "800"],
     "subsets": ["latin"],
     "category": "serif",
-    "tags": [],
+    "tags": ["slab"],
     "lineNumber": 1320,
     "variable": false,
     "lastModified": "2023-02-16"

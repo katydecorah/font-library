@@ -6,11 +6,25 @@ class SortBy extends HTMLElement {
   }
 
   connectedCallback() {
-    this.innerHTML = `<div class="sort-by"><div class="label">Sort by</div><div class="btn-group"><button class="${this.isActive(
-      "date"
-    )}" data-sort="date">Last modified</button><button class="${this.isActive(
-      "family"
-    )}" data-sort="family">Family</button></div></div>`;
+    const buttons = [
+      {
+        label: "Family",
+        value: "family",
+      },
+      {
+        label: "Last modified",
+        value: "date",
+      },
+    ];
+
+    this.innerHTML = `<div class="label">Sort by</div><div class="btn-group">${buttons
+      .map(
+        ({ value, label }) =>
+          `<button class="${this.isActive(
+            value
+          )}" data-sort="${value}">${label}</button>`
+      )
+      .join("")}</div>`;
 
     this.querySelectorAll("[data-sort]").forEach((button) =>
       button.addEventListener("click", this.handleSort)
