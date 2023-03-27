@@ -6342,7 +6342,7 @@
     ],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["slab"],
     "lineNumber": 514,
     "variable": true,
     "lastModified": "2023-03-21"
@@ -9789,7 +9789,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext", "vietnamese"],
     "category": "serif",
-    "tags": [],
+    "tags": ["slab"],
     "lineNumber": 793,
     "variable": true,
     "lastModified": "2022-09-22"
