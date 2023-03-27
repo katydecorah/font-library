@@ -27,7 +27,33 @@ exports[`FontResults renders correctly 1`] = `
 
   <sort-by
     sort-by="null"
-  />
+  >
+    <div
+      class="sort-by"
+    >
+      <div
+        class="label"
+      >
+        Sort by
+      </div>
+      <div
+        class="btn-group"
+      >
+        <button
+          class=""
+          data-sort="date"
+        >
+          Last modified
+        </button>
+        <button
+          class=""
+          data-sort="family"
+        >
+          Family
+        </button>
+      </div>
+    </div>
+  </sort-by>
   
 
   <div

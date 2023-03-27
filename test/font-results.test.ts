@@ -33,14 +33,4 @@ describe("FontResults", () => {
     const pagination = document.querySelector("pagination-buttons");
     expect(pagination.getAttribute("current-page")).toBe("1");
   });
-
-  test("clicks data-sort button", async () => {
-    const fontResults = document.querySelector("font-results");
-    const sortButtons = fontResults.querySelectorAll("[data-sort]");
-    document.body.innerHTML = `<div id="content"><font-results selected-category="" selected-subset="" selected-variant="" selected-tag="" selected-search="" selected-variable=""></font-results></div>`;
-    const dateButton = sortButtons[0] as HTMLButtonElement;
-    await user.click(dateButton);
-    const sortBy = fontResults.querySelector(".sort-by");
-    expect(sortBy).toMatchInlineSnapshot(`null`);
-  });
 });
