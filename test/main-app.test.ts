@@ -1066,4 +1066,45 @@ describe("MainApp", () => {
       (document.querySelector("#selectedVariable") as HTMLInputElement).checked
     ).toBe(false);
   });
+
+  test("sorts fonts when sort-by custom event is fired", async () => {
+    mainApp.dispatchEvent(
+      new CustomEvent("sort-by", {
+        detail: { sortBy: "date" },
+      })
+    );
+
+    const sortBy = document.querySelector("sort-by");
+    expect(sortBy).toMatchInlineSnapshot(`
+      <sort-by
+        sort-by="date"
+      >
+        <div
+          class="sort-by"
+        >
+          <div
+            class="label"
+          >
+            Sort by
+          </div>
+          <div
+            class="btn-group"
+          >
+            <button
+              class="active"
+              data-sort="date"
+            >
+              Last modified
+            </button>
+            <button
+              class=""
+              data-sort="family"
+            >
+              Family
+            </button>
+          </div>
+        </div>
+      </sort-by>
+    `);
+  });
 });

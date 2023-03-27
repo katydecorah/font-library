@@ -1,4 +1,4 @@
-type ButtonType = MouseEvent & { target: HTMLButtonElement };
+export type ButtonType = MouseEvent & { target: HTMLButtonElement };
 
 class PaginationButtons extends HTMLElement {
   constructor() {

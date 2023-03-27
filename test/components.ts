@@ -8,3 +8,4 @@ import "../components/main-app";
 import "../components/pagination-buttons";
 import "../components/search-status";
 import "../components/tag-button";
+import "../components/sort-by";

@@ -12,6 +12,7 @@ class MainApp extends HTMLElement {
   selectedVariant: string;
   selectedSearch: string;
   selectedVariable: boolean;
+  sortBy: string;
 
   constructor() {
     super();
@@ -22,6 +23,7 @@ class MainApp extends HTMLElement {
     this.selectedVariant = "";
     this.selectedSearch = "";
     this.selectedVariable;
+    this.sortBy = "family";
 
     // Bind methods
     this.handleSearch = this.handleSearch.bind(this);
@@ -35,6 +37,7 @@ class MainApp extends HTMLElement {
     document
       .querySelector("#selectedSearch")
       .addEventListener("input", this.handleSearch);
+    this.addEventListener("sort-by", this.handleSortBy);
 
     // Dispatch main-app-loaded
     window.dispatchEvent(new Event("main-app-loaded"));
@@ -53,8 +56,9 @@ class MainApp extends HTMLElement {
       selectedTag,
       selectedSearch,
       selectedVariable,
+      sortBy,
     } = this;
-    fontResults.innerHTML = `<font-results selected-category="${selectedCategory}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-tag="${selectedTag}" selected-search="${selectedSearch}" selected-variable="${selectedVariable}"></font-results>`;
+    fontResults.innerHTML = `<font-results sort-by="${sortBy}" selected-category="${selectedCategory}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-tag="${selectedTag}" selected-search="${selectedSearch}" selected-variable="${selectedVariable}"></font-results>`;
   }
 
   clearFilter({ detail: { filter } }: CustomEvent<{ filter: string }>) {
@@ -123,6 +127,11 @@ class MainApp extends HTMLElement {
     );
     this.render();
     this.scrollToContent();
+  }
+
+  handleSortBy(event: CustomEvent) {
+    this.sortBy = event.detail.sortBy;
+    this.render();
   }
 }
 

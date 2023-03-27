@@ -473,3 +473,42 @@ input[type="text"] {
     display: none;
   }
 }
+
+.sort-by {
+  display: flex;
+  grid-gap: 0.5em;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.btn-group {
+  display: flex;
+}
+
+.btn-group button {
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  background: var(--white);
+  color: var(--accent);
+  cursor: pointer;
+  padding: 0.1em 0.5em;
+  font-size: 1em;
+  width: fit-content;
+}
+
+.btn-group button.active {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.btn-group button:nth-child(1) {
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-group button:nth-child(2) {
+  border-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
