@@ -4098,7 +4098,7 @@
     "variants": ["300", "regular", "700"],
     "subsets": ["korean", "latin", "latin-ext", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["round"],
     "lineNumber": 343,
     "variable": false,
     "lastModified": "2022-09-27"
@@ -7246,7 +7246,7 @@
     ],
     "subsets": ["cyrillic", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["geometric"],
     "lineNumber": 584,
     "variable": true,
     "lastModified": "2022-09-22"
@@ -7372,7 +7372,7 @@
     ],
     "subsets": ["latin", "latin-ext", "thai", "vietnamese"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["modern"],
     "lineNumber": 594,
     "variable": false,
     "lastModified": "2022-09-22"
