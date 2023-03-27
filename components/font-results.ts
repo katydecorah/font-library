@@ -15,9 +15,6 @@ class FontResults extends HTMLElement {
 
   constructor() {
     super();
-
-    this.sortBy = "family";
-
     this.addEventListener("next-page", this.handlePage);
     this.addEventListener("previous-page", this.handlePage);
   }
@@ -29,6 +26,7 @@ class FontResults extends HTMLElement {
     this.selectedVariant = this.getAttribute("selected-variant");
     this.selectedSearch = this.getAttribute("selected-search");
     this.selectedVariable = this.getAttribute("selected-variable") === "true";
+    this.sortBy = this.getAttribute("sort-by");
     this.resultsLength;
     this.pageSize = 10;
     this.curPage = 1;
@@ -54,15 +52,7 @@ class FontResults extends HTMLElement {
 
     const searchStatus = `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${selectedSearch}" selected-variable="${strSelectedVariable}"></search-status>`;
 
-    const isActive = (type: string) => {
-      return this.sortBy === type ? "active" : "";
-    };
-
-    const sortBy = `<div class="sort-by"><div class="label">Sort by</div><div class="btn-group"><button class="${isActive(
-      "date"
-    )}" data-sort="date">Last modified</button><button class="${isActive(
-      "family"
-    )}" data-sort="family">Family</button></div></div>`;
+    const sortBy = `<sort-by sort-by=${this.sortBy}></sort-by>`;
 
     const fontItems = paginatedData
       .map(
@@ -79,14 +69,6 @@ class FontResults extends HTMLElement {
 ${sortBy}
 <div class="families">${fontItems}</div>
 ${paginationButtons}`;
-
-    const sortButtons = this.querySelectorAll("[data-sort]");
-    sortButtons.forEach((button) => {
-      button.addEventListener("click", (e) => {
-        this.sortBy = (e.target as HTMLButtonElement).dataset.sort;
-        this.render();
-      });
-    });
   }
 
   handlePage({ type }: CustomEvent) {

@@ -2392,6 +2392,7 @@ exports[`MainApp renders correctly 1`] = `
         selected-tag=""
         selected-variable="undefined"
         selected-variant=""
+        sort-by="family"
       >
         <search-status
           class="search-status"
@@ -2409,31 +2410,9 @@ exports[`MainApp renders correctly 1`] = `
         </search-status>
         
 
-        <div
-          class="sort-by"
-        >
-          <div
-            class="label"
-          >
-            Sort by
-          </div>
-          <div
-            class="btn-group"
-          >
-            <button
-              class=""
-              data-sort="date"
-            >
-              Last modified
-            </button>
-            <button
-              class="active"
-              data-sort="family"
-            >
-              Family
-            </button>
-          </div>
-        </div>
+        <sort-by
+          sort-by="family"
+        />
         
 
         <div

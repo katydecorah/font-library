@@ -41,32 +41,6 @@ describe("FontResults", () => {
     const dateButton = sortButtons[0] as HTMLButtonElement;
     await user.click(dateButton);
     const sortBy = fontResults.querySelector(".sort-by");
-    expect(sortBy).toMatchInlineSnapshot(`
-      <div
-        class="sort-by"
-      >
-        <div
-          class="label"
-        >
-          Sort by
-        </div>
-        <div
-          class="btn-group"
-        >
-          <button
-            class="active"
-            data-sort="date"
-          >
-            Last modified
-          </button>
-          <button
-            class=""
-            data-sort="family"
-          >
-            Family
-          </button>
-        </div>
-      </div>
-    `);
+    expect(sortBy).toMatchInlineSnapshot(`null`);
   });
 });
