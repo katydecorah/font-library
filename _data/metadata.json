@@ -273,6 +273,10 @@
       "sample": "Antic Didone"
     },
     {
+      "name": "hearts",
+      "sample": "Emilys Candy"
+    },
+    {
       "name": "heavy",
       "sample": "Anton"
     },
@@ -430,7 +434,7 @@
     },
     {
       "name": "signage",
-      "sample": "Bungee"
+      "sample": "Barrio"
     },
     {
       "name": "sketch",
