@@ -125,7 +125,7 @@ function combineLibraries(remoteFonts, local) {
   const combineLibrary = [];
   for (const [
     index,
-    { family, variants, subsets, category },
+    { family, variants, subsets, category, lastModified },
   ] of remoteFonts.entries()) {
     combineLibrary.push({
       family,
@@ -135,6 +135,7 @@ function combineLibraries(remoteFonts, local) {
       tags: local[family] || [],
       lineNumber: index + 2,
       variable: variableFonts.includes(family),
+      lastModified,
     });
   }
 

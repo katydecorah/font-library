@@ -11,9 +11,12 @@ class FontResults extends HTMLElement {
   pageSize: number;
   curPage: number;
   selectedVariable: boolean;
+  sortBy: string;
 
   constructor() {
     super();
+
+    this.sortBy = "family";
 
     this.addEventListener("next-page", this.handlePage);
     this.addEventListener("previous-page", this.handlePage);
@@ -51,6 +54,16 @@ class FontResults extends HTMLElement {
 
     const searchStatus = `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${selectedSearch}" selected-variable="${strSelectedVariable}"></search-status>`;
 
+    const isActive = (type: string) => {
+      return this.sortBy === type ? "active" : "";
+    };
+
+    const sortBy = `<div class="sort-by"><div class="label">Sort by</div><div class="btn-group"><button class="${isActive(
+      "date"
+    )}" data-sort="date">Last modified</button><button class="${isActive(
+      "family"
+    )}" data-sort="family">Family</button></div></div>`;
+
     const fontItems = paginatedData
       .map(
         (font) =>
@@ -63,8 +76,17 @@ class FontResults extends HTMLElement {
     const paginationButtons = `<pagination-buttons results-length="${resultsLength}" page-size="${pageSize}" current-page="${curPage}"></pagination-buttons>`;
 
     this.innerHTML = `${searchStatus}
+${sortBy}
 <div class="families">${fontItems}</div>
 ${paginationButtons}`;
+
+    const sortButtons = this.querySelectorAll("[data-sort]");
+    sortButtons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        this.sortBy = (e.target as HTMLButtonElement).dataset.sort;
+        this.render();
+      });
+    });
   }
 
   handlePage({ type }: CustomEvent) {
@@ -119,7 +141,22 @@ ${paginationButtons}`;
       filteredData = filteredData.filter((row) => row.variable);
     }
 
+    if (this.sortBy === "date") {
+      filteredData = filteredData.sort(
+        (a, b) =>
+          new Date(b.lastModified).getTime() -
+          new Date(a.lastModified).getTime()
+      );
+    }
+
+    if (this.sortBy === "family") {
+      filteredData = filteredData.sort((a, b) =>
+        a.family.localeCompare(b.family)
+      );
+    }
+
     this.resultsLength = filteredData.length;
+
     return filteredData.filter((row, index) => {
       const start = (this.curPage - 1) * this.pageSize;
       const end = this.curPage * this.pageSize;
