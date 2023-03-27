@@ -11991,7 +11991,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext", "signwriting"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["icons"],
     "lineNumber": 972,
     "variable": false,
     "lastModified": "2023-01-06"
@@ -16419,7 +16419,7 @@
     "variants": ["300", "regular", "500", "700", "800"],
     "subsets": ["latin"],
     "category": "serif",
-    "tags": [],
+    "tags": ["slab"],
     "lineNumber": 1320,
     "variable": false,
     "lastModified": "2023-02-16"
