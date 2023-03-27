@@ -1,12 +1,6 @@
-import userEvent from "@testing-library/user-event";
 import "./components";
 
 describe("FontResults", () => {
-  let user: ReturnType<typeof userEvent.setup>;
-
-  beforeEach(() => {
-    user = userEvent.setup();
-  });
   beforeAll(() => {
     window.HTMLElement.prototype.scrollIntoView = jest.fn();
   });

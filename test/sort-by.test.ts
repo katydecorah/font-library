@@ -1,14 +1,6 @@
-import userEvent from "@testing-library/user-event";
-
 import "./components";
 
 describe("sort-by", () => {
-  let user: ReturnType<typeof userEvent.setup>;
-
-  beforeEach(() => {
-    user = userEvent.setup();
-  });
-
   it("renders", () => {
     const sortBy = "family";
     document.body.innerHTML = `<sort-by sort-by="${sortBy}"></sort-by>`;

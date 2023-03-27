@@ -28,7 +28,6 @@ class MainApp extends HTMLElement {
     // Bind methods
     this.handleSearch = this.handleSearch.bind(this);
     this.handleFilter = this.handleFilter.bind(this);
-    this.handleSortBy = this.handleSortBy.bind(this);
 
     // Event listeners
     this.addEventListener("clear-filter", this.clearFilter);
@@ -39,7 +38,6 @@ class MainApp extends HTMLElement {
       .querySelector("#selectedSearch")
       .addEventListener("input", this.handleSearch);
     this.addEventListener("sort-by", this.handleSortBy);
-    document.addEventListener("sort-by", this.handleSortBy);
 
     // Dispatch main-app-loaded
     window.dispatchEvent(new Event("main-app-loaded"));
@@ -132,7 +130,6 @@ class MainApp extends HTMLElement {
   }
 
   handleSortBy(event: CustomEvent) {
-    console.log("handleSortBy", event.detail.sortBy);
     this.sortBy = event.detail.sortBy;
     this.render();
   }
