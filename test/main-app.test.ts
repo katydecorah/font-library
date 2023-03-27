@@ -1080,29 +1080,25 @@ describe("MainApp", () => {
         sort-by="date"
       >
         <div
-          class="sort-by"
+          class="label"
         >
-          <div
-            class="label"
+          Sort by
+        </div>
+        <div
+          class="btn-group"
+        >
+          <button
+            class=""
+            data-sort="family"
           >
-            Sort by
-          </div>
-          <div
-            class="btn-group"
+            Family
+          </button>
+          <button
+            class="active"
+            data-sort="date"
           >
-            <button
-              class="active"
-              data-sort="date"
-            >
-              Last modified
-            </button>
-            <button
-              class=""
-              data-sort="family"
-            >
-              Family
-            </button>
-          </div>
+            Last modified
+          </button>
         </div>
       </sort-by>
     `);

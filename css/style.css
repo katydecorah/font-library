@@ -481,7 +481,7 @@ input[type="text"] {
   }
 }
 
-.sort-by {
+sort-by {
   display: flex;
   grid-gap: 0.5em;
   align-items: center;
@@ -518,4 +518,8 @@ input[type="text"] {
   border-left: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+.btn-group button:hover:not(.active) {
+  background: var(--background-accent);
 }
