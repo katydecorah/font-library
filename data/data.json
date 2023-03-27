@@ -1085,7 +1085,7 @@
     "variants": ["regular", "700"],
     "subsets": ["arabic", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["color", "calligraphic"],
     "lineNumber": 89,
     "variable": false,
     "lastModified": "2022-09-14"
@@ -2377,7 +2377,7 @@
     "variants": ["regular"],
     "subsets": ["arabic", "latin", "latin-ext"],
     "category": "display",
-    "tags": ["arabic"],
+    "tags": ["arabic", "color"],
     "lineNumber": 192,
     "variable": false,
     "lastModified": "2022-09-14"
