@@ -621,6 +621,14 @@ exports[`MainApp renders correctly 1`] = `
                 
           </option>
           <option
+            id="hearts"
+            value="hearts"
+          >
+            
+                  hearts
+                
+          </option>
+          <option
             id="heavy"
             value="heavy"
           >
