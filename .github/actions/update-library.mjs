@@ -130,7 +130,7 @@ function combineLibraries(remoteFonts, local) {
     combineLibrary.push({
       family,
       variants,
-      subsets,
+      subsets: orderSubsets(subsets),
       category,
       tags: local[family] || [],
       lineNumber: index + 2,
@@ -233,4 +233,11 @@ function autoAddToLocal(local) {
     local,
     commitMessage,
   };
+}
+
+function orderSubsets(subsets) {
+  // move "latin" and "latin-ext" to the end
+  const latin = subsets.filter((v) => v.includes("latin"));
+  const nonLatin = subsets.filter((v) => !v.includes("latin"));
+  return [...nonLatin, ...latin];
 }

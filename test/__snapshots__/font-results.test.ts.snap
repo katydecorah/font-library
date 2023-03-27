@@ -323,7 +323,7 @@ exports[`FontResults renders correctly 1`] = `
     
 
     <font-item
-      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["latin","latin-ext","sinhala"],"category":"serif","tags":[],"lineNumber":4,"variable":false,"lastModified":"2022-09-22"}"
+      font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":4,"variable":false,"lastModified":"2022-09-22"}"
       id="abhaya-libre"
       selected-subset=""
       selected-tag=""
@@ -381,7 +381,7 @@ exports[`FontResults renders correctly 1`] = `
         •
         
               <span
-                aria-label="latin, latin-ext, sinhala"
+                aria-label="sinhala, latin, latin-ext"
               >
                 3 subsets
               </span>
