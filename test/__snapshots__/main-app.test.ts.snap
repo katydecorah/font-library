@@ -2412,7 +2412,33 @@ exports[`MainApp renders correctly 1`] = `
 
         <sort-by
           sort-by="family"
-        />
+        >
+          <div
+            class="sort-by"
+          >
+            <div
+              class="label"
+            >
+              Sort by
+            </div>
+            <div
+              class="btn-group"
+            >
+              <button
+                class=""
+                data-sort="date"
+              >
+                Last modified
+              </button>
+              <button
+                class="active"
+                data-sort="family"
+              >
+                Family
+              </button>
+            </div>
+          </div>
+        </sort-by>
         
 
         <div
