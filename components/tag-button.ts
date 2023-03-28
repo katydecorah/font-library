@@ -7,40 +7,32 @@ class TagButton extends HTMLButtonElement {
 
     // Get init value from URL param
     const urlParams = new URLSearchParams(window.location.search);
-    const tag = urlParams.get("tag");
-    if (tag === this.getAttribute("value")) {
-      // eslint-disable-next-line wc/no-self-class
-      this.classList.add("active");
-
-      // Wait for main-app to load before dispatching event
-      window.addEventListener("main-app-loaded", () => {
-        this.onClick();
-      });
-    }
-  }
-  connectedCallback() {
+    const urlTag = urlParams.get("tag");
     const tag = this.getAttribute("value");
-    const selectedTag = this.getAttribute("selected-tag");
+
+    if (urlTag === tag) {
+      this.classList.add("active");
+    }
 
     // find name in tags
     const tagData = tags.find((t) => t.name === tag);
 
-    if (tag === "icons") {
-      this.innerHTML = `<i>&hearts;</i> icons`;
-    } else {
-      this.style.fontFamily = `"${tagData.sample}"`;
+    if (tagData) {
+      if (tag === "icons") {
+        this.innerHTML = `<i>&hearts;</i> icons`;
+      } else {
+        this.style.fontFamily = `"${tagData.sample}"`;
+      }
     }
 
-    // eslint-disable-next-line wc/no-self-class
-    this.classList.add("family-tag", `tag-${tag.replace(/ /g, "-")}`);
-
-    if (selectedTag === tag) {
-      // eslint-disable-next-line wc/no-self-class
-      this.classList.add("active");
-    } else {
-      // eslint-disable-next-line wc/no-self-class
-      this.classList.remove("active");
-    }
+    // Listen for changes from other tag elements
+    window.addEventListener("tag-button-selected", (e: CustomEvent) => {
+      if (this.value === e.detail.value) {
+        this.classList.add("active");
+      } else {
+        this.classList.remove("active");
+      }
+    });
   }
 
   onClick() {

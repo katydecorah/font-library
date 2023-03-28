@@ -24,7 +24,7 @@ class FilterSelect extends HTMLSelectElement {
       }
     });
 
-    // Listen for changes by other tag elements (radio, button)
+    // Listen for changes by other tag elements
     window.addEventListener("tag-button-selected", (e: CustomEvent) => {
       if (this.id === "selectedTag" && this.value !== e.detail.value) {
         this.value = e.detail.value;

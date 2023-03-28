@@ -722,6 +722,7 @@ describe("MainApp", () => {
     });
 
     document.body.innerHTML = body;
+    window.dispatchEvent(new Event("main-app-loaded"));
 
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
@@ -772,57 +773,6 @@ describe("MainApp", () => {
     expect(
       (document.querySelector("#selectedTag") as HTMLSelectElement).value
     ).toBe("cute");
-  });
-
-  test("filters when tag radio clicked", async () => {
-    const radioButton: HTMLInputElement = document.querySelector(
-      "#tags input[value='1980s']"
-    );
-    radioButton.click();
-    const searchStatus = document.querySelector("search-status");
-    expect(searchStatus).toMatchInlineSnapshot(`
-      <search-status
-        class="search-status"
-        results-length="3"
-        selected-category=""
-        selected-search=""
-        selected-subset=""
-        selected-tag="1980s"
-        selected-variable=""
-        selected-variant=""
-      >
-        <div>
-          Found 3 fonts: 
-        </div>
-        
-
-        <div
-          class="search-filter"
-        >
-          tag: 
-          <strong>
-            1980s
-          </strong>
-          <button
-            aria-label="remove tag"
-            class="clear-button"
-            is="clear-button"
-            value="selectedTag"
-          >
-            close.svg
-          </button>
-        </div>
-        
-
-        <button
-          aria-label="remove all filters"
-          class="btn btn-clear clear-button"
-          is="clear-button"
-        >
-          Clear
-        </button>
-      </search-status>
-    `);
   });
 
   test("skips unknown tag in search query", async () => {

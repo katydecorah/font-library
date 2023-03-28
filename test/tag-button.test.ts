@@ -14,14 +14,12 @@ describe("tag-button", () => {
 
   it("renders", () => {
     const tag = "cute";
-    const selectedTag = "";
-    document.body.innerHTML = `<button is="tag-button" selected-tag="${selectedTag}" value="${tag}">${tag}</button>`;
+    document.body.innerHTML = `<button is="tag-button" class="family-tag" value="${tag}">${tag}</button>`;
     const tagButton = document.querySelector("button[is=tag-button]");
     expect(tagButton).toMatchInlineSnapshot(`
       <button
-        class="family-tag tag-cute"
+        class="family-tag"
         is="tag-button"
-        selected-tag=""
         style="font-family: "Bonbon";"
         value="cute"
       >
@@ -30,28 +28,9 @@ describe("tag-button", () => {
     `);
   });
 
-  it("renders active", () => {
+  it("renders active when clicked", () => {
     const tag = "cute";
-    const selectedTag = "cute";
-    document.body.innerHTML = `<button is="tag-button" selected-tag="${selectedTag}" value="${tag}">${tag}</button>`;
-    const tagButton = document.querySelector("button[is=tag-button]");
-    expect(tagButton).toMatchInlineSnapshot(`
-      <button
-        class="family-tag tag-cute active"
-        is="tag-button"
-        selected-tag="cute"
-        style="font-family: "Bonbon";"
-        value="cute"
-      >
-        cute
-      </button>
-    `);
-  });
-
-  it("fires a custom event when clicked", () => {
-    const tag = "cute";
-    const selectedTag = "";
-    document.body.innerHTML = `<button is="tag-button" selected-tag="${selectedTag}" value="${tag}">${tag}</button>`;
+    document.body.innerHTML = `<button is="tag-button" class="family-tag" value="${tag}">${tag}</button>`;
     const tagButton: HTMLButtonElement = document.querySelector(
       "button[is=tag-button]"
     );
@@ -59,11 +38,20 @@ describe("tag-button", () => {
     tagButton.addEventListener("tag-button-selected", mockFn);
     tagButton.click();
     expect(mockFn).toHaveBeenCalled();
+    expect(tagButton).toMatchInlineSnapshot(`
+      <button
+        class="family-tag active"
+        is="tag-button"
+        style="font-family: "Bonbon";"
+        value="cute"
+      >
+        cute
+      </button>
+    `);
   });
 
   it("sets initial value if param is in url", () => {
     const tag = "cute";
-    const selectedTag = "";
     const location = {
       ...window.location,
       search: "?tag=cute",
@@ -73,15 +61,14 @@ describe("tag-button", () => {
       value: location,
     });
 
-    document.body.innerHTML = `<button is="tag-button" selected-tag="${selectedTag}" value="${tag}">${tag}</button>`;
+    document.body.innerHTML = `<button is="tag-button" class="family-tag" value="${tag}">${tag}</button>`;
     const tagButton: HTMLButtonElement = document.querySelector(
       "button[is=tag-button]"
     );
     expect(tagButton).toMatchInlineSnapshot(`
       <button
-        class="family-tag tag-cute"
+        class="family-tag active"
         is="tag-button"
-        selected-tag=""
         style="font-family: "Bonbon";"
         value="cute"
       >
