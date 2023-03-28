@@ -19,7 +19,6 @@ describe("tag-button", () => {
     const tagButton = document.querySelector("button[is=tag-button]");
     expect(tagButton).toMatchInlineSnapshot(`
       <button
-        class="family-tag tag-cute"
         is="tag-button"
         selected-tag=""
         style="font-family: "Bonbon";"
@@ -37,7 +36,6 @@ describe("tag-button", () => {
     const tagButton = document.querySelector("button[is=tag-button]");
     expect(tagButton).toMatchInlineSnapshot(`
       <button
-        class="family-tag tag-cute active"
         is="tag-button"
         selected-tag="cute"
         style="font-family: "Bonbon";"
@@ -79,7 +77,7 @@ describe("tag-button", () => {
     );
     expect(tagButton).toMatchInlineSnapshot(`
       <button
-        class="family-tag tag-cute"
+        class="active"
         is="tag-button"
         selected-tag=""
         style="font-family: "Bonbon";"

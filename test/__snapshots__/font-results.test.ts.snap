@@ -139,9 +139,8 @@ exports[`FontResults renders correctly 1`] = `
             class="family-tags-container"
           >
             <button
-              class="family-tag tag-literacy"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "ABeeZee";"
               title="literacy"
               value="literacy"
@@ -149,9 +148,8 @@ exports[`FontResults renders correctly 1`] = `
               literacy
             </button>
             <button
-              class="family-tag tag-kids"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Butterfly Kids";"
               title="kids"
               value="kids"
@@ -277,9 +275,8 @@ exports[`FontResults renders correctly 1`] = `
             class="family-tags-container"
           >
             <button
-              class="family-tag tag-condensed"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Abel";"
               title="condensed"
               value="condensed"
@@ -522,9 +519,8 @@ exports[`FontResults renders correctly 1`] = `
             class="family-tags-container"
           >
             <button
-              class="family-tag tag-caps"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Aboreto";"
               title="caps"
               value="caps"
@@ -650,9 +646,8 @@ exports[`FontResults renders correctly 1`] = `
             class="family-tags-container"
           >
             <button
-              class="family-tag tag-heavy"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Anton";"
               title="heavy"
               value="heavy"
@@ -660,9 +655,8 @@ exports[`FontResults renders correctly 1`] = `
               heavy
             </button>
             <button
-              class="family-tag tag-elegant"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Babylonica";"
               title="elegant"
               value="elegant"
@@ -670,9 +664,8 @@ exports[`FontResults renders correctly 1`] = `
               elegant
             </button>
             <button
-              class="family-tag tag-didone"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Abril Fatface";"
               title="didone"
               value="didone"
@@ -680,9 +673,8 @@ exports[`FontResults renders correctly 1`] = `
               didone
             </button>
             <button
-              class="family-tag tag-headlines"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Antic Didone";"
               title="headlines"
               value="headlines"
@@ -925,9 +917,8 @@ exports[`FontResults renders correctly 1`] = `
             class="family-tags-container"
           >
             <button
-              class="family-tag tag-modern"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Aclonica";"
               title="modern"
               value="modern"
@@ -935,9 +926,8 @@ exports[`FontResults renders correctly 1`] = `
               modern
             </button>
             <button
-              class="family-tag tag-friendly"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Amaranth";"
               title="friendly"
               value="friendly"
@@ -1063,9 +1053,8 @@ exports[`FontResults renders correctly 1`] = `
             class="family-tags-container"
           >
             <button
-              class="family-tag tag-cartoon"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Bangers";"
               title="cartoon"
               value="cartoon"
@@ -1073,9 +1062,8 @@ exports[`FontResults renders correctly 1`] = `
               cartoon
             </button>
             <button
-              class="family-tag tag-comic"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Architects Daughter";"
               title="comic"
               value="comic"
@@ -1083,9 +1071,8 @@ exports[`FontResults renders correctly 1`] = `
               comic
             </button>
             <button
-              class="family-tag tag-groovy"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Acme";"
               title="groovy"
               value="groovy"
@@ -1093,9 +1080,8 @@ exports[`FontResults renders correctly 1`] = `
               groovy
             </button>
             <button
-              class="family-tag tag-headlines"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Antic Didone";"
               title="headlines"
               value="headlines"
@@ -1221,9 +1207,8 @@ exports[`FontResults renders correctly 1`] = `
             class="family-tags-container"
           >
             <button
-              class="family-tag tag-thin"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Actor";"
               title="thin"
               value="thin"
@@ -1231,9 +1216,8 @@ exports[`FontResults renders correctly 1`] = `
               thin
             </button>
             <button
-              class="family-tag tag-legibility"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Alike";"
               title="legibility"
               value="legibility"
@@ -1359,9 +1343,8 @@ exports[`FontResults renders correctly 1`] = `
             class="family-tags-container"
           >
             <button
-              class="family-tag tag-compact"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Adamina";"
               title="compact"
               value="compact"
@@ -1369,9 +1352,8 @@ exports[`FontResults renders correctly 1`] = `
               compact
             </button>
             <button
-              class="family-tag tag-small-sizes"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Almendra";"
               title="small sizes"
               value="small sizes"
@@ -1379,9 +1361,8 @@ exports[`FontResults renders correctly 1`] = `
               small sizes
             </button>
             <button
-              class="family-tag tag-transitional"
+              class="family-tag"
               is="tag-button"
-              selected-tag=""
               style="font-family: "Amethysta";"
               title="transitional"
               value="transitional"

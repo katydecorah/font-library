@@ -428,6 +428,13 @@ input[type="text"] {
   display: flex;
   flex-wrap: wrap;
   gap: 7px 9px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tags-container li {
+  display: flex;
 }
 
 .btn {
@@ -486,6 +493,12 @@ sort-by {
   grid-gap: 0.5em;
   align-items: center;
   margin: 1em 0;
+  font-size: 14px;
+}
+
+sort-by .label {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .btn-group {

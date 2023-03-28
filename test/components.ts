@@ -1,6 +1,5 @@
 import "../components/clear-button";
 import "../components/filter-checkbox";
-import "../components/filter-radio";
 import "../components/filter-select";
 import "../components/font-item";
 import "../components/font-results";
