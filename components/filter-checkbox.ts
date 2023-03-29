@@ -5,8 +5,8 @@ class FilterCheckbox extends HTMLInputElement {
 
     // Get init value from URL param
     const urlParams = new URLSearchParams(window.location.search);
-    const variable = urlParams.get("variable");
-    if (variable === "true") {
+    const initialValue = urlParams.get("variable");
+    if (initialValue === "true") {
       this.checked = true;
 
       // Wait for main-app to load before dispatching event

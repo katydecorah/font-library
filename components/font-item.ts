@@ -44,6 +44,13 @@ class FontItem extends HTMLElement {
 
     const familyStyle = this.familyStyle();
 
+    const tagButtons = tags
+      .map(
+        (tag: string) =>
+          `<button is="tag-button" class="family-tag" title="${tag}" value="${tag}">${tag}</button>`
+      )
+      .join("");
+
     this.innerHTML = `<div id="family-${this.id}" class="family">
     <div class="family-link">
       <div id="family-name" class="family-title ${
@@ -69,12 +76,7 @@ class FontItem extends HTMLElement {
       </div>
     </div>
     <div class="family-tags">
-      <div class="family-tags-container">${tags
-        .map(
-          (tag: string) =>
-            `<button is="tag-button" class="family-tag" title="${tag}" value="${tag}">${tag}</button>`
-        )
-        .join("")}</div>
+      <div class="family-tags-container">${tagButtons}</div>
       <div class="family-meta-links">
         <a
           href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L${lineNumber}"
@@ -174,6 +176,13 @@ class FontItem extends HTMLElement {
       return sampleSubsets[subsets[0] as keyof SampleSubsets];
     }
     return family;
+  }
+
+  disconnectedCallback() {
+    const linkElement = document.querySelector(
+      `link[data-family="${this.font.family}"]`
+    );
+    if (linkElement) linkElement.remove();
   }
 }
 

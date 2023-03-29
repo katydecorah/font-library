@@ -7,10 +7,10 @@ class TagButton extends HTMLButtonElement {
 
     // Get init value from URL param
     const urlParams = new URLSearchParams(window.location.search);
-    const urlTag = urlParams.get("tag");
+    const initialValue = urlParams.get("tag");
     const tag = this.getAttribute("value");
 
-    if (urlTag === tag) {
+    if (initialValue === tag) {
       this.classList.add("active");
     }
 

@@ -2,7 +2,6 @@ class ClearButton extends HTMLButtonElement {
   constructor() {
     super();
     this.onclick = this.onClick;
-    // add "clear-button" class
     this.classList.add("clear-button");
   }
 
