@@ -3,6 +3,7 @@ import { ButtonType } from "./pagination-buttons";
 class SortBy extends HTMLElement {
   constructor() {
     super();
+    this.button = this.button.bind(this);
   }
 
   connectedCallback() {
@@ -15,24 +16,21 @@ class SortBy extends HTMLElement {
         label: "Last modified",
         value: "date",
       },
-    ];
+    ]
+      .map(this.button)
+      .join("");
 
-    this.innerHTML = `<div class="label">Sort by</div><div class="btn-group">${buttons
-      .map(
-        ({ value, label }) =>
-          `<button class="${this.isActive(
-            value
-          )}" data-sort="${value}">${label}</button>`
-      )
-      .join("")}</div>`;
+    this.innerHTML = `<div class="label">Sort by</div><div class="btn-group">${buttons}</div>`;
 
     this.querySelectorAll("[data-sort]").forEach((button) =>
       button.addEventListener("click", this.handleSort)
     );
   }
 
-  isActive(sortBy: string) {
-    return this.getAttribute("sort-by") === sortBy ? "active" : "";
+  button({ label, value }: { label: string; value: string }) {
+    const active = this.getAttribute("sort-by") === value ? "active" : "";
+
+    return `<button class="${active}" data-sort="${value}">${label}</button>`;
   }
 
   handleSort(event: ButtonType) {

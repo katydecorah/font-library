@@ -5,10 +5,10 @@ class FilterSelect extends HTMLSelectElement {
 
     // Get initial value from URL
     const urlParams = new URLSearchParams(window.location.search);
-    const initValue = urlParams.get(this.dataset.param);
-    if (initValue) {
-      if (!this.options.namedItem(initValue)) return;
-      this.value = initValue;
+    const initialValue = urlParams.get(this.dataset.param);
+    if (initialValue) {
+      if (!this.options.namedItem(initialValue)) return;
+      this.value = initialValue;
 
       // Wait for main-app to load before dispatching event
       window.addEventListener("main-app-loaded", () => {
@@ -33,26 +33,28 @@ class FilterSelect extends HTMLSelectElement {
   }
 
   onChange() {
-    const eventName =
-      this.id === "selectedTag" ? "tag-button-selected" : "handle-filter";
+    const { id, value } = this;
     this.dispatchEvent(
-      new CustomEvent(eventName, {
-        bubbles: true,
-        composed: true,
-        detail: { id: this.id, value: this.value },
-      })
+      new CustomEvent(
+        id === "selectedTag" ? "tag-button-selected" : "handle-filter",
+        {
+          bubbles: true,
+          composed: true,
+          detail: { id, value },
+        }
+      )
     );
 
     this.setUrlParam();
   }
 
   setUrlParam() {
-    const param = this.dataset.param;
+    const { param } = this.dataset;
     const urlParams = new URLSearchParams(window.location.search);
-    if (!this.value) {
-      urlParams.delete(param);
-    } else {
+    if (this.value) {
       urlParams.set(param, this.value.toString());
+    } else {
+      urlParams.delete(param);
     }
     window.history.replaceState(
       {},

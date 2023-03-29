@@ -1,4 +1,5 @@
 import generatedData from "../data/data.json";
+import filter from "./filter";
 export type GeneratedData = typeof generatedData;
 
 class FontResults extends HTMLElement {
@@ -17,6 +18,7 @@ class FontResults extends HTMLElement {
     super();
     this.addEventListener("next-page", this.handlePage);
     this.addEventListener("previous-page", this.handlePage);
+    this.renderfontItem = this.renderfontItem.bind(this);
   }
 
   connectedCallback() {
@@ -30,13 +32,22 @@ class FontResults extends HTMLElement {
     this.resultsLength;
     this.pageSize = 10;
     this.curPage = 1;
-
     this.render();
   }
 
   render() {
-    const paginatedData = this.performFilter();
-    this.cleanUpFonts();
+    const [resultsLength, paginatedData] = filter(this, generatedData);
+    this.resultsLength = resultsLength;
+
+    this.innerHTML = `${this.renderSearchStatus()}
+<sort-by sort-by=${this.sortBy}></sort-by>
+<div class="families">${paginatedData.map(this.renderfontItem).join("\n")}</div>
+<pagination-buttons results-length="${resultsLength}" page-size="${
+      this.pageSize
+    }" current-page="${this.curPage}"></pagination-buttons>`;
+  }
+
+  renderSearchStatus() {
     const {
       selectedTag,
       selectedCategory,
@@ -45,30 +56,17 @@ class FontResults extends HTMLElement {
       selectedSearch,
       selectedVariable,
       resultsLength,
-      pageSize,
-      curPage,
     } = this;
     const strSelectedVariable = selectedVariable ? "true" : "";
 
-    const searchStatus = `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${selectedSearch}" selected-variable="${strSelectedVariable}"></search-status>`;
+    return `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${selectedSearch}" selected-variable="${strSelectedVariable}"></search-status>`;
+  }
 
-    const sortBy = `<sort-by sort-by=${this.sortBy}></sort-by>`;
-
-    const fontItems = paginatedData
-      .map(
-        (font) =>
-          `<font-item selected-variant='${selectedVariant}' selected-subset='${selectedSubset}' selected-tag='${selectedTag}' font='${JSON.stringify(
-            font
-          )}'></font-item>`
-      )
-      .join("\n");
-
-    const paginationButtons = `<pagination-buttons results-length="${resultsLength}" page-size="${pageSize}" current-page="${curPage}"></pagination-buttons>`;
-
-    this.innerHTML = `${searchStatus}
-${sortBy}
-<div class="families">${fontItems}</div>
-${paginationButtons}`;
+  renderfontItem(font: GeneratedData[number]) {
+    const { selectedVariant, selectedSubset, selectedTag } = this;
+    return `<font-item selected-variant='${selectedVariant}' selected-subset='${selectedSubset}' selected-tag='${selectedTag}' font='${JSON.stringify(
+      font
+    )}'></font-item>`;
   }
 
   handlePage({ type }: CustomEvent) {
@@ -84,71 +82,6 @@ ${paginationButtons}`;
     this.render();
     // scroll to #content
     document.querySelector("#content").scrollIntoView();
-  }
-
-  performFilter(): GeneratedData {
-    let filteredData = generatedData;
-
-    if (this.selectedSearch) {
-      filteredData = filteredData.filter((row) =>
-        row.family.toLowerCase().includes(this.selectedSearch.toLowerCase())
-      );
-    }
-
-    if (this.selectedTag && this.selectedTag !== "need tags") {
-      filteredData = filteredData.filter((row) =>
-        row.tags.includes(this.selectedTag)
-      );
-    }
-    if (this.selectedTag === "need tags") {
-      filteredData = filteredData.filter((row) => row.tags.length === 0);
-    }
-    if (this.selectedCategory) {
-      filteredData = filteredData.filter(
-        (row) => row.category === this.selectedCategory
-      );
-    }
-    if (this.selectedSubset) {
-      filteredData = filteredData.filter((row) =>
-        row.subsets.includes(this.selectedSubset)
-      );
-    }
-    if (this.selectedVariant) {
-      filteredData = filteredData.filter((row) =>
-        row.variants.includes(this.selectedVariant)
-      );
-    }
-
-    if (this.selectedVariable === true) {
-      filteredData = filteredData.filter((row) => row.variable);
-    }
-
-    if (this.sortBy === "date") {
-      filteredData = filteredData.sort(
-        (a, b) =>
-          new Date(b.lastModified).getTime() -
-          new Date(a.lastModified).getTime()
-      );
-    }
-
-    if (this.sortBy === "family") {
-      filteredData = filteredData.sort((a, b) =>
-        a.family.localeCompare(b.family)
-      );
-    }
-
-    this.resultsLength = filteredData.length;
-
-    return filteredData.filter((row, index) => {
-      const start = (this.curPage - 1) * this.pageSize;
-      const end = this.curPage * this.pageSize;
-      if (index >= start && index < end) return true;
-    });
-  }
-
-  cleanUpFonts() {
-    const fonts = document.querySelectorAll("link[data-family]");
-    fonts.forEach((font) => document.head.removeChild(font));
   }
 }
 

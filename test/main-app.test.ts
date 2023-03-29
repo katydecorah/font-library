@@ -590,8 +590,6 @@ describe("MainApp", () => {
             close.svg
           </button>
         </div>
-        
-
         <div
           class="search-filter"
         >
@@ -608,8 +606,6 @@ describe("MainApp", () => {
             close.svg
           </button>
         </div>
-        
-
         <div
           class="search-filter"
         >
@@ -626,8 +622,6 @@ describe("MainApp", () => {
             close.svg
           </button>
         </div>
-        
-
         <div
           class="search-filter"
         >
@@ -644,8 +638,6 @@ describe("MainApp", () => {
             close.svg
           </button>
         </div>
-        
-
         <div
           class="search-filter"
         >
@@ -662,8 +654,6 @@ describe("MainApp", () => {
             close.svg
           </button>
         </div>
-        
-
         <div
           class="search-filter"
         >
