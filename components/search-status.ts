@@ -5,27 +5,11 @@ class SearchStatus extends HTMLElement {
     super();
   }
 
-  connectedCallback() {
-    const selectedFilters = this.selectedFilters();
-    const hasSelectedFilters = selectedFilters.length > 0;
-
-    const elm = [
-      `<div>Found ${this.getAttribute("results-length")} fonts${
-        hasSelectedFilters ? ": " : ""
-      }</div>`,
-    ];
-
-    if (hasSelectedFilters) {
-      elm.push(selectedFilters.map(this.renderFilter).join(""));
-      elm.push(
-        `<button is="clear-button" aria-label="remove all filters" class="btn btn-clear">Clear</button>`
-      );
-    }
-
-    this.innerHTML = `${elm.join("\n")}`;
+  get resultsLength() {
+    return this.getAttribute("results-length");
   }
 
-  selectedFilters() {
+  get selectedFilters() {
     return [
       {
         label: "category",
@@ -58,6 +42,25 @@ class SearchStatus extends HTMLElement {
         id: "selectedVariable",
       },
     ].filter(({ value }) => value);
+  }
+
+  connectedCallback() {
+    const hasSelectedFilters = this.selectedFilters.length > 0;
+
+    const elm = [
+      `<div>Found ${this.resultsLength} fonts${
+        hasSelectedFilters ? ": " : ""
+      }</div>`,
+    ];
+
+    if (hasSelectedFilters) {
+      elm.push(this.selectedFilters.map(this.renderFilter).join(""));
+      elm.push(
+        `<button is="clear-button" aria-label="remove all filters" class="btn btn-clear">Clear</button>`
+      );
+    }
+
+    this.innerHTML = `${elm.join("\n")}`;
   }
 
   renderFilter({

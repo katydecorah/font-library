@@ -6,6 +6,10 @@ class SortBy extends HTMLElement {
     this.button = this.button.bind(this);
   }
 
+  get sortBy() {
+    return this.getAttribute("sort-by");
+  }
+
   connectedCallback() {
     const buttons = [
       {
@@ -28,8 +32,7 @@ class SortBy extends HTMLElement {
   }
 
   button({ label, value }: { label: string; value: string }) {
-    const active = this.getAttribute("sort-by") === value ? "active" : "";
-
+    const active = this.sortBy === value ? "active" : "";
     return `<button class="${active}" data-sort="${value}">${label}</button>`;
   }
 

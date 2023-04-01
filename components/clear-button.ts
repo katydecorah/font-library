@@ -11,7 +11,7 @@ class ClearButton extends HTMLButtonElement {
         bubbles: true,
         composed: true,
         detail: {
-          filter: this.getAttribute("value"),
+          filter: this.value,
         },
       })
     );

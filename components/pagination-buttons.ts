@@ -5,15 +5,39 @@ class PaginationButtons extends HTMLElement {
     super();
   }
 
-  connectedCallback() {
-    const currentPage = parseInt(this.getAttribute("current-page"));
-    const resultsLength = parseInt(this.getAttribute("results-length"));
-    const pageSize = parseInt(this.getAttribute("page-size"));
+  get currentPage() {
+    return parseInt(this.getAttribute("current-page"));
+  }
 
-    const totalPages = Math.ceil(resultsLength / pageSize);
-    const nextPageDisabledState =
-      currentPage * pageSize >= resultsLength ? "disabled" : "";
-    const prevPageDisabledState = currentPage === 1 ? "disabled" : "";
+  get resultsLength() {
+    return parseInt(this.getAttribute("results-length"));
+  }
+
+  get pageSize() {
+    return parseInt(this.getAttribute("page-size"));
+  }
+
+  get totalPages() {
+    return Math.ceil(this.resultsLength / this.pageSize);
+  }
+
+  get nextPageDisabledState() {
+    return this.currentPage * this.pageSize >= this.resultsLength
+      ? "disabled"
+      : "";
+  }
+
+  get prevPageDisabledState() {
+    return this.currentPage === 1 ? "disabled" : "";
+  }
+
+  connectedCallback() {
+    const {
+      currentPage,
+      prevPageDisabledState,
+      totalPages,
+      nextPageDisabledState,
+    } = this;
 
     this.innerHTML = `<div class="pagination ${totalPages < 2 ? "hide" : ""}">
   <button data-event="previous-page" class="btn" id="btn-prev" ${prevPageDisabledState}>Previous page</button>
