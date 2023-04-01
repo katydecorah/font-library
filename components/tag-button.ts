@@ -8,7 +8,7 @@ class TagButton extends HTMLButtonElement {
     // Get init value from URL param
     const urlParams = new URLSearchParams(window.location.search);
     const initialValue = urlParams.get("tag");
-    const tag = this.getAttribute("value");
+    const tag = this.value;
 
     if (initialValue === tag) {
       this.classList.add("active");
@@ -42,7 +42,7 @@ class TagButton extends HTMLButtonElement {
         composed: true,
         detail: {
           id: "selectedTag",
-          value: this.getAttribute("value"),
+          value: this.value,
         },
       })
     );
@@ -52,7 +52,7 @@ class TagButton extends HTMLButtonElement {
 
   setUrlParam() {
     const urlParams = new URLSearchParams(window.location.search);
-    urlParams.set("tag", this.getAttribute("value"));
+    urlParams.set("tag", this.value);
     window.history.replaceState(
       {},
       "",

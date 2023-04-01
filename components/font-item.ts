@@ -1,44 +1,63 @@
 import sampleSubsets from "../data/samples.json";
 import rtlSubsets from "../data/rtl.json";
 import swaps from "../data/swaps.json";
+import { GeneratedData } from "./font-results";
 
 export type SampleSubsets = typeof sampleSubsets;
 export type RtlSubsets = typeof rtlSubsets;
 export type Swaps = typeof swaps;
 
 class FontItem extends HTMLElement {
-  selectedSubset: string;
-  selectedVariant: string;
-  selectedTag: string;
-  id: string;
-  slug: string;
-  previewName: string;
   subset: string;
-  font: {
-    family: string;
-    category: string;
-    variants: string[];
-    subsets: string[];
-    lineNumber: string;
-    tags: string[];
-    variable?: boolean;
-  };
 
   constructor() {
     super();
   }
 
+  get font(): GeneratedData[number] {
+    return JSON.parse(this.getAttribute("font"));
+  }
+
+  get selectedSubset(): string {
+    return this.getAttribute("selected-subset");
+  }
+
+  get selectedVariant(): string {
+    return this.getAttribute("selected-variant");
+  }
+
+  get previewName(): string {
+    const { family, subsets } = this.font;
+    if (this.selectedSubset && this.selectedSubset in sampleSubsets) {
+      return sampleSubsets[this.selectedSubset as keyof SampleSubsets];
+    }
+
+    if (family in swaps) {
+      return swaps[family as keyof Swaps];
+    }
+
+    if (
+      (!subsets.includes("latin") || family.startsWith("Noto")) &&
+      sampleSubsets[subsets[0] as keyof SampleSubsets]
+    ) {
+      this.subset = subsets[0];
+      return sampleSubsets[subsets[0] as keyof SampleSubsets];
+    }
+    return family;
+  }
+
+  get id(): string {
+    return this.font.family.toLowerCase().replace(/ /g, "-");
+  }
+
+  get slug(): string {
+    return this.font.family.replace(/ /g, "+");
+  }
+
   connectedCallback() {
-    this.font = JSON.parse(this.getAttribute("font"));
     const { family, category, variants, subsets, lineNumber, tags, variable } =
       this.font;
-    this.selectedTag = this.getAttribute("selected-tag");
-    this.selectedSubset = this.getAttribute("selected-subset");
-    this.selectedVariant = this.getAttribute("selected-variant");
     this.subset = this.selectedSubset;
-    this.id = family.toLowerCase().replace(/ /g, "-");
-    this.slug = family.replace(/ /g, "+");
-    this.previewName = this.createPreviewName();
 
     this.addFontToHead();
 
@@ -156,26 +175,6 @@ class FontItem extends HTMLElement {
       style += "font-style: italic;";
     }
     return style;
-  }
-
-  createPreviewName(): string {
-    const { family, subsets } = this.font;
-    if (this.selectedSubset && this.selectedSubset in sampleSubsets) {
-      return sampleSubsets[this.selectedSubset as keyof SampleSubsets];
-    }
-
-    if (family in swaps) {
-      return swaps[family as keyof Swaps];
-    }
-
-    if (
-      (!subsets.includes("latin") || family.startsWith("Noto")) &&
-      sampleSubsets[subsets[0] as keyof SampleSubsets]
-    ) {
-      this.subset = subsets[0];
-      return sampleSubsets[subsets[0] as keyof SampleSubsets];
-    }
-    return family;
   }
 
   disconnectedCallback() {

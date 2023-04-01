@@ -3,16 +3,9 @@ import filter from "./filter";
 export type GeneratedData = typeof generatedData;
 
 class FontResults extends HTMLElement {
-  selectedTag: string;
-  selectedCategory: string;
-  selectedSubset: string;
-  selectedVariant: string;
-  selectedSearch: string;
   resultsLength: number;
   pageSize: number;
   curPage: number;
-  selectedVariable: boolean;
-  sortBy: string;
 
   constructor() {
     super();
@@ -21,14 +14,35 @@ class FontResults extends HTMLElement {
     this.renderfontItem = this.renderfontItem.bind(this);
   }
 
+  get selectedTag() {
+    return this.getAttribute("selected-tag");
+  }
+
+  get selectedCategory() {
+    return this.getAttribute("selected-category");
+  }
+
+  get selectedSubset() {
+    return this.getAttribute("selected-subset");
+  }
+
+  get selectedVariant() {
+    return this.getAttribute("selected-variant");
+  }
+
+  get selectedSearch() {
+    return this.getAttribute("selected-search");
+  }
+
+  get selectedVariable() {
+    return this.getAttribute("selected-variable") === "true";
+  }
+
+  get sortBy() {
+    return this.getAttribute("sort-by");
+  }
+
   connectedCallback() {
-    this.selectedTag = this.getAttribute("selected-tag");
-    this.selectedCategory = this.getAttribute("selected-category");
-    this.selectedSubset = this.getAttribute("selected-subset");
-    this.selectedVariant = this.getAttribute("selected-variant");
-    this.selectedSearch = this.getAttribute("selected-search");
-    this.selectedVariable = this.getAttribute("selected-variable") === "true";
-    this.sortBy = this.getAttribute("sort-by");
     this.resultsLength;
     this.pageSize = 10;
     this.curPage = 1;
