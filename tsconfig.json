@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es6",
+    "target": "ES2021",
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,

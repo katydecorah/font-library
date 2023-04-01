@@ -11,12 +11,12 @@ describe("filter-select", () => {
   );
 
   it("fires a custom event on change", () => {
-    const mockFn = jest.fn();
-    filterSelect.addEventListener("tag-button-selected", mockFn);
+    const mockFunction = jest.fn();
+    filterSelect.addEventListener("tag-button-selected", mockFunction);
     filterSelect.value = "tag1";
     filterSelect.dispatchEvent(new Event("change"));
-    expect(mockFn).toHaveBeenCalled();
-    expect(mockFn.mock.calls[0][0].detail).toMatchInlineSnapshot(`
+    expect(mockFunction).toHaveBeenCalled();
+    expect(mockFunction.mock.calls[0][0].detail).toMatchInlineSnapshot(`
       {
         "id": "selectedTag",
         "value": "tag1",

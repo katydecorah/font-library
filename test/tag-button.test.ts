@@ -34,10 +34,10 @@ describe("tag-button", () => {
     const tagButton: HTMLButtonElement = document.querySelector(
       "button[is=tag-button]"
     );
-    const mockFn = jest.fn();
-    tagButton.addEventListener("tag-button-selected", mockFn);
+    const mockFunction = jest.fn();
+    tagButton.addEventListener("tag-button-selected", mockFunction);
     tagButton.click();
-    expect(mockFn).toHaveBeenCalled();
+    expect(mockFunction).toHaveBeenCalled();
     expect(tagButton).toMatchInlineSnapshot(`
       <button
         class="family-tag active"

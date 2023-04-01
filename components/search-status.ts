@@ -54,8 +54,10 @@ class SearchStatus extends HTMLElement {
     ];
 
     if (hasSelectedFilters) {
-      elm.push(this.selectedFilters.map(this.renderFilter).join(""));
       elm.push(
+        this.selectedFilters
+          .map((filter) => this.renderFilter(filter))
+          .join(""),
         `<button is="clear-button" aria-label="remove all filters" class="btn btn-clear">Clear</button>`
       );
     }

@@ -3,7 +3,7 @@ import families from "../families.json";
 type Families = typeof families;
 
 describe("families.json", () => {
-  Object.keys(families).forEach((family, index) => {
+  for (const [index, family] of Object.keys(families).entries()) {
     const tags = families[family as keyof Families];
     describe(`${family}`, () => {
       test("should have `family`", () => {
@@ -12,8 +12,8 @@ describe("families.json", () => {
 
       test("make sure `family` is in alphabetical order", () => {
         const keys = Object.keys(families);
-        const prevFamily = keys[index - 1] || undefined;
-        expect(prevFamily > family).toBeFalsy();
+        const previousFamily = keys[index - 1] || undefined;
+        expect(previousFamily > family).toBeFalsy();
       });
 
       describe("tags", () => {
@@ -36,7 +36,7 @@ describe("families.json", () => {
             });
 
             test("contains letters, numbers, dashes, and spaces only", () => {
-              expect(tag).toMatch(/^[a-z0-9\- ]+$/);
+              expect(tag).toMatch(/^[\d a-z-]+$/);
             });
 
             test("is a string", () => {
@@ -46,18 +46,19 @@ describe("families.json", () => {
         }
       });
     });
-  });
+  }
 
   // sort tags by number of families
-  const tags = Object.values(families).reduce((acc, tags) => {
+  // eslint-disable-next-line unicorn/no-array-reduce
+  const tags = Object.values(families).reduce((accumulator, tags) => {
     for (const tag of tags) {
-      if (acc[tag]) {
-        acc[tag]++;
+      if (accumulator[tag]) {
+        accumulator[tag]++;
       } else {
-        acc[tag] = 1;
+        accumulator[tag] = 1;
       }
     }
-    return acc;
+    return accumulator;
   }, {} as Record<string, number>);
   const sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a]);
 

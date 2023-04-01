@@ -6,15 +6,15 @@ class PaginationButtons extends HTMLElement {
   }
 
   get currentPage() {
-    return parseInt(this.getAttribute("current-page"));
+    return Number.parseInt(this.getAttribute("current-page"));
   }
 
   get resultsLength() {
-    return parseInt(this.getAttribute("results-length"));
+    return Number.parseInt(this.getAttribute("results-length"));
   }
 
   get pageSize() {
-    return parseInt(this.getAttribute("page-size"));
+    return Number.parseInt(this.getAttribute("page-size"));
   }
 
   get totalPages() {
@@ -37,6 +37,7 @@ class PaginationButtons extends HTMLElement {
       prevPageDisabledState,
       totalPages,
       nextPageDisabledState,
+      handlePage,
     } = this;
 
     this.innerHTML = `<div class="pagination ${totalPages < 2 ? "hide" : ""}">
@@ -45,9 +46,9 @@ class PaginationButtons extends HTMLElement {
   <button data-event="next-page" class="btn" id="btn-next" ${nextPageDisabledState}>Next page</button>
 </div>`;
 
-    this.querySelectorAll("[data-event]").forEach((button) =>
-      button.addEventListener("click", this.handlePage)
-    );
+    for (const button of this.querySelectorAll("[data-event]")) {
+      button.addEventListener("click", handlePage);
+    }
   }
 
   handlePage(event: ButtonType) {

@@ -17,9 +17,9 @@ describe("clear-button", () => {
     `);
   });
   it("fires a custom event onclick", () => {
-    const mockFn = jest.fn();
-    clearButton.addEventListener("clear-filter", mockFn);
+    const mockFunction = jest.fn();
+    clearButton.addEventListener("clear-filter", mockFunction);
     clearButton.click();
-    expect(mockFn).toHaveBeenCalled();
+    expect(mockFunction).toHaveBeenCalled();
   });
 });

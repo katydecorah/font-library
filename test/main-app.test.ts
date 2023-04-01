@@ -1,6 +1,6 @@
 import "./components";
 import userEvent from "@testing-library/user-event";
-import { readFileSync } from "fs";
+import { readFileSync } from "node:fs";
 
 // get _site/index.html
 const html = readFileSync("./_site/index.html", "utf8");
@@ -282,7 +282,9 @@ describe("MainApp", () => {
     await user.type(inputSearch, "are you serious");
 
     const searchStatus = document.querySelector("search-status");
-    const resultsLength = parseInt(searchStatus.getAttribute("results-length"));
+    const resultsLength = Number.parseInt(
+      searchStatus.getAttribute("results-length")
+    );
 
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status

@@ -55,7 +55,9 @@ class FontResults extends HTMLElement {
 
     this.innerHTML = `${this.renderSearchStatus()}
 <sort-by sort-by=${this.sortBy}></sort-by>
-<div class="families">${paginatedData.map(this.renderfontItem).join("\n")}</div>
+<div class="families">${paginatedData
+      .map((font) => this.renderfontItem(font))
+      .join("\n")}</div>
 <pagination-buttons results-length="${resultsLength}" page-size="${
       this.pageSize
     }" current-page="${this.curPage}"></pagination-buttons>`;
@@ -71,9 +73,9 @@ class FontResults extends HTMLElement {
       selectedVariable,
       resultsLength,
     } = this;
-    const strSelectedVariable = selectedVariable ? "true" : "";
+    const stringSelectedVariable = selectedVariable ? "true" : "";
 
-    return `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${selectedSearch}" selected-variable="${strSelectedVariable}"></search-status>`;
+    return `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${selectedSearch}" selected-variable="${stringSelectedVariable}"></search-status>`;
   }
 
   renderfontItem(font: GeneratedData[number]) {
