@@ -28,5 +28,6 @@ module.exports = function (eleventyConfig) {
     },
     passthroughFileCopy: true,
     pathPrefix: "/font-library/",
+    templateFormats: ["html", "md", "liquid"],
   };
 };

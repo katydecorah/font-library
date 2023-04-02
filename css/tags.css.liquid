@@ -1,0 +1,7 @@
+---
+permalink: /css/tags.css
+---
+
+{%- for tag in metadata.tags -%}
+@import url("https://fonts.googleapis.com/css2?family={{tag.sample | split: ' ' | join: '+'}}&text={{tag.name | split: ' ' | join: '+'}}&display=swap");
+{%- endfor -%}

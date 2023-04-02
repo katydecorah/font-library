@@ -19,12 +19,7 @@
     <!-- other stuff -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
-    {%- for tag in metadata.tags -%}
-    <link
-      href="https://fonts.googleapis.com/css2?family={{tag.sample | split: ' ' | join: '+'}}&text={{tag.name | split: ' ' | join: '+'}}&display=swap"
-      rel="stylesheet"
-    />
-    {%- endfor -%}
+    <link rel="stylesheet" href="{{ '/css/tags.css' | url }}" />
   </head>
   <body>
     <header>
