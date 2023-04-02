@@ -47,11 +47,11 @@ class FontItem extends HTMLElement {
   }
 
   get id(): string {
-    return this.font.family.toLowerCase().replace(/ /g, "-");
+    return this.font.family.toLowerCase().replaceAll(' ', "-");
   }
 
   get slug(): string {
-    return this.font.family.replace(/ /g, "+");
+    return this.font.family.replaceAll(' ', "+");
   }
 
   connectedCallback() {
@@ -119,30 +119,32 @@ class FontItem extends HTMLElement {
     const linkElement = document.createElement("link");
     linkElement.href = this.fontCall();
     linkElement.rel = "stylesheet";
-    linkElement.setAttribute("data-family", family);
-    document.head.appendChild(linkElement);
+    linkElement.dataset.family = family;
+    document.head.append(linkElement);
   }
 
   fontCall(): string {
     const { variants } = this.font;
-    let fontCallStr = this.slug;
+    let fontCallString = this.slug;
 
     if (this.selectedVariant && this.selectedVariant !== "regular") {
-      fontCallStr += this.fontCallSelectedVariant();
+      fontCallString += this.fontCallSelectedVariant();
     }
     // if font doesn't have regular variant, add subset to font call
     if (!this.selectedVariant && !variants.includes("regular")) {
-      fontCallStr += this.fontCallVariant();
+      fontCallString += this.fontCallVariant();
     }
 
-    fontCallStr += `&text=${encodeURIComponent(this.previewName)}&display=swap`;
+    fontCallString += `&text=${encodeURIComponent(
+      this.previewName
+    )}&display=swap`;
 
-    return `https://fonts.googleapis.com/css2?family=${fontCallStr}`;
+    return `https://fonts.googleapis.com/css2?family=${fontCallString}`;
   }
 
   fontCallVariant(): string {
     const firstVariant = this.font.variants[0];
-    if (firstVariant.match(/\d+/g)) {
+    if (/\d+/g.test(firstVariant)) {
       return `:wght@${firstVariant}`;
     } else if (firstVariant.includes("italic")) {
       return `:ital@1`;

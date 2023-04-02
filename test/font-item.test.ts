@@ -4,7 +4,9 @@ describe("FontItem", () => {
   afterEach(() => {
     document.body.innerHTML = "";
     const fonts = document.querySelectorAll("link[data-family]");
-    fonts.forEach((font) => document.head.removeChild(font));
+    for (const font of fonts) {
+      font.remove();
+    }
   });
 
   test("renders correctly", () => {

@@ -6,6 +6,7 @@
     "plugin:wc/recommended",
     "plugin:jest/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:unicorn/all",
     "prettier"
   ],
   "settings": {
@@ -28,6 +29,7 @@
     "prefer-arrow-callback": "error",
     "prefer-const": "error",
     "prefer-template": "error",
-    "no-var": "error"
+    "no-var": "error",
+    "unicorn/template-indent": "off"
   }
 }

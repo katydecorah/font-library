@@ -3,11 +3,11 @@ import { tags } from "../_data/metadata.json";
 class TagButton extends HTMLButtonElement {
   constructor() {
     super();
-    this.onclick = this.onClick;
+    this.addEventListener("click", this.onClick);
 
     // Get init value from URL param
-    const urlParams = new URLSearchParams(window.location.search);
-    const initialValue = urlParams.get("tag");
+    const urlParameters = new URLSearchParams(window.location.search);
+    const initialValue = urlParameters.get("tag");
     const tag = this.value;
 
     if (initialValue === tag) {
@@ -26,8 +26,8 @@ class TagButton extends HTMLButtonElement {
     }
 
     // Listen for changes from other tag elements
-    window.addEventListener("tag-button-selected", (e: CustomEvent) => {
-      if (this.value === e.detail.value) {
+    window.addEventListener("tag-button-selected", (event: CustomEvent) => {
+      if (this.value === event.detail.value) {
         this.classList.add("active");
       } else {
         this.classList.remove("active");
@@ -51,12 +51,12 @@ class TagButton extends HTMLButtonElement {
   }
 
   setUrlParam() {
-    const urlParams = new URLSearchParams(window.location.search);
-    urlParams.set("tag", this.value);
+    const urlParameters = new URLSearchParams(window.location.search);
+    urlParameters.set("tag", this.value);
     window.history.replaceState(
       {},
       "",
-      `${window.location.pathname}?${urlParams.toString()}`
+      `${window.location.pathname}?${urlParameters.toString()}`
     );
   }
 }

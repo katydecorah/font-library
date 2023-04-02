@@ -69,14 +69,17 @@ class MainApp extends HTMLElement {
 
   removeSingleFilter(filter: string) {
     switch (filter) {
-      case "selectedSearch":
+      case "selectedSearch": {
         this.removeSearch();
         break;
-      case "selectedVariable":
+      }
+      case "selectedVariable": {
         this.removeCheckbox();
         break;
-      default:
+      }
+      default: {
         this.removeSelect(filter);
+      }
     }
   }
 
@@ -121,8 +124,8 @@ class MainApp extends HTMLElement {
   }
 
   handleSearch(event: Event) {
-    this.selectedSearch = (event.target as HTMLInputElement).value.replace(
-      /[^a-zA-Z0-9\- ]/g,
+    this.selectedSearch = (event.target as HTMLInputElement).value.replaceAll(
+      /[^\d A-Za-z-]/g,
       ""
     );
     this.render();

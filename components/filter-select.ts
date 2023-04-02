@@ -1,11 +1,11 @@
 class FilterSelect extends HTMLSelectElement {
   constructor() {
     super();
-    this.onchange = this.onChange;
+    this.addEventListener("change", this.onChange);
 
     // Get initial value from URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const initialValue = urlParams.get(this.dataset.param);
+    const urlParameters = new URLSearchParams(window.location.search);
+    const initialValue = urlParameters.get(this.dataset.param);
     if (initialValue) {
       if (!this.options.namedItem(initialValue)) return;
       this.value = initialValue;
@@ -17,17 +17,17 @@ class FilterSelect extends HTMLSelectElement {
     }
 
     // Listen for events to clear filter
-    window.addEventListener("remove-select", (e: CustomEvent) => {
-      if (e.detail.filter === this.id) {
+    window.addEventListener("remove-select", (event: CustomEvent) => {
+      if (event.detail.filter === this.id) {
         this.value = "";
         this.onChange();
       }
     });
 
     // Listen for changes by other tag elements
-    window.addEventListener("tag-button-selected", (e: CustomEvent) => {
-      if (this.id === "selectedTag" && this.value !== e.detail.value) {
-        this.value = e.detail.value;
+    window.addEventListener("tag-button-selected", (event: CustomEvent) => {
+      if (this.id === "selectedTag" && this.value !== event.detail.value) {
+        this.value = event.detail.value;
       }
     });
   }
@@ -50,16 +50,16 @@ class FilterSelect extends HTMLSelectElement {
 
   setUrlParam() {
     const { param } = this.dataset;
-    const urlParams = new URLSearchParams(window.location.search);
+    const urlParameters = new URLSearchParams(window.location.search);
     if (this.value) {
-      urlParams.set(param, this.value.toString());
+      urlParameters.set(param, this.value.toString());
     } else {
-      urlParams.delete(param);
+      urlParameters.delete(param);
     }
     window.history.replaceState(
       {},
       "",
-      `${window.location.pathname}?${urlParams.toString()}`
+      `${window.location.pathname}?${urlParameters.toString()}`
     );
   }
 }

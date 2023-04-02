@@ -1,11 +1,11 @@
 class FilterCheckbox extends HTMLInputElement {
   constructor() {
     super();
-    this.onchange = this.onChange;
+    this.addEventListener("change", this.onChange);
 
     // Get init value from URL param
-    const urlParams = new URLSearchParams(window.location.search);
-    const initialValue = urlParams.get("variable");
+    const urlParameters = new URLSearchParams(window.location.search);
+    const initialValue = urlParameters.get("variable");
     if (initialValue === "true") {
       this.checked = true;
 
@@ -36,17 +36,17 @@ class FilterCheckbox extends HTMLInputElement {
   }
 
   setUrlParam() {
-    const urlParams = new URLSearchParams(window.location.search);
+    const urlParameters = new URLSearchParams(window.location.search);
     // only set variable if it's true
     if (this.checked === false) {
-      urlParams.delete("variable");
+      urlParameters.delete("variable");
     } else {
-      urlParams.set("variable", "true");
+      urlParameters.set("variable", "true");
     }
     window.history.replaceState(
       {},
       "",
-      `${window.location.pathname}?${urlParams.toString()}`
+      `${window.location.pathname}?${urlParameters.toString()}`
     );
   }
 }

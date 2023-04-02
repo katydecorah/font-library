@@ -21,14 +21,14 @@ class SortBy extends HTMLElement {
         value: "date",
       },
     ]
-      .map(this.button)
+      .map((button) => this.button(button))
       .join("");
 
     this.innerHTML = `<div class="label">Sort by</div><div class="btn-group">${buttons}</div>`;
 
-    this.querySelectorAll("[data-sort]").forEach((button) =>
-      button.addEventListener("click", this.handleSort)
-    );
+    for (const button of this.querySelectorAll("[data-sort]")) {
+      button.addEventListener("click", this.handleSort);
+    }
   }
 
   button({ label, value }: { label: string; value: string }) {

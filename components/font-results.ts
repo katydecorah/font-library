@@ -5,7 +5,7 @@ export type GeneratedData = typeof generatedData;
 class FontResults extends HTMLElement {
   resultsLength: number;
   pageSize: number;
-  curPage: number;
+  currentPage: number;
 
   constructor() {
     super();
@@ -45,7 +45,7 @@ class FontResults extends HTMLElement {
   connectedCallback() {
     this.resultsLength;
     this.pageSize = 10;
-    this.curPage = 1;
+    this.currentPage = 1;
     this.render();
   }
 
@@ -55,10 +55,12 @@ class FontResults extends HTMLElement {
 
     this.innerHTML = `${this.renderSearchStatus()}
 <sort-by sort-by=${this.sortBy}></sort-by>
-<div class="families">${paginatedData.map(this.renderfontItem).join("\n")}</div>
+<div class="families">${paginatedData
+      .map((font) => this.renderfontItem(font))
+      .join("\n")}</div>
 <pagination-buttons results-length="${resultsLength}" page-size="${
       this.pageSize
-    }" current-page="${this.curPage}"></pagination-buttons>`;
+    }" current-page="${this.currentPage}"></pagination-buttons>`;
   }
 
   renderSearchStatus() {
@@ -71,9 +73,9 @@ class FontResults extends HTMLElement {
       selectedVariable,
       resultsLength,
     } = this;
-    const strSelectedVariable = selectedVariable ? "true" : "";
+    const stringSelectedVariable = selectedVariable ? "true" : "";
 
-    return `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${selectedSearch}" selected-variable="${strSelectedVariable}"></search-status>`;
+    return `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${selectedSearch}" selected-variable="${stringSelectedVariable}"></search-status>`;
   }
 
   renderfontItem(font: GeneratedData[number]) {
@@ -86,12 +88,12 @@ class FontResults extends HTMLElement {
   handlePage({ type }: CustomEvent) {
     if (
       type === "next-page" &&
-      this.curPage * this.pageSize < this.resultsLength
+      this.currentPage * this.pageSize < this.resultsLength
     ) {
-      this.curPage++;
+      this.currentPage++;
     }
-    if (type === "previous-page" && this.curPage > 1) {
-      this.curPage--;
+    if (type === "previous-page" && this.currentPage > 1) {
+      this.currentPage--;
     }
     this.render();
     // scroll to #content

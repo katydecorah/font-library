@@ -19,12 +19,12 @@ describe("filter-checkbox", () => {
 
   it("fires a custom event on change", () => {
     expect(window.location.search).toBe("");
-    const mockFn = jest.fn();
-    filterCheckbox.addEventListener("handle-filter", mockFn);
+    const mockFunction = jest.fn();
+    filterCheckbox.addEventListener("handle-filter", mockFunction);
     filterCheckbox.checked = true;
     filterCheckbox.dispatchEvent(new Event("change"));
-    expect(mockFn).toHaveBeenCalled();
-    expect(mockFn.mock.calls[0][0].detail).toMatchInlineSnapshot(`
+    expect(mockFunction).toHaveBeenCalled();
+    expect(mockFunction.mock.calls[0][0].detail).toMatchInlineSnapshot(`
       {
         "id": "selectedVariable",
         "value": true,
@@ -48,10 +48,10 @@ describe("filter-checkbox", () => {
     );
     expect(filterCheckbox.checked).toBe(true);
     // expect the event to fire after the main-app is loaded
-    const mockFn = jest.fn();
-    filterCheckbox.addEventListener("handle-filter", mockFn);
+    const mockFunction = jest.fn();
+    filterCheckbox.addEventListener("handle-filter", mockFunction);
     window.dispatchEvent(new Event("main-app-loaded"));
-    expect(mockFn).toHaveBeenCalled();
+    expect(mockFunction).toHaveBeenCalled();
   });
 
   it("removes variable=false from query string", () => {
