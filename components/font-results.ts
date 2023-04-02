@@ -5,7 +5,7 @@ export type GeneratedData = typeof generatedData;
 class FontResults extends HTMLElement {
   resultsLength: number;
   pageSize: number;
-  curPage: number;
+  currentPage: number;
 
   constructor() {
     super();
@@ -45,7 +45,7 @@ class FontResults extends HTMLElement {
   connectedCallback() {
     this.resultsLength;
     this.pageSize = 10;
-    this.curPage = 1;
+    this.currentPage = 1;
     this.render();
   }
 
@@ -60,7 +60,7 @@ class FontResults extends HTMLElement {
       .join("\n")}</div>
 <pagination-buttons results-length="${resultsLength}" page-size="${
       this.pageSize
-    }" current-page="${this.curPage}"></pagination-buttons>`;
+    }" current-page="${this.currentPage}"></pagination-buttons>`;
   }
 
   renderSearchStatus() {
@@ -88,12 +88,12 @@ class FontResults extends HTMLElement {
   handlePage({ type }: CustomEvent) {
     if (
       type === "next-page" &&
-      this.curPage * this.pageSize < this.resultsLength
+      this.currentPage * this.pageSize < this.resultsLength
     ) {
-      this.curPage++;
+      this.currentPage++;
     }
-    if (type === "previous-page" && this.curPage > 1) {
-      this.curPage--;
+    if (type === "previous-page" && this.currentPage > 1) {
+      this.currentPage--;
     }
     this.render();
     // scroll to #content

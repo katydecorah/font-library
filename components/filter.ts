@@ -9,7 +9,7 @@ export default function filter(
     selectedVariant: string;
     selectedVariable: boolean;
     sortBy: string;
-    curPage: number;
+    currentPage: number;
     pageSize: number;
   },
   generatedData: GeneratedData
@@ -22,7 +22,7 @@ export default function filter(
     selectedVariant,
     selectedVariable,
     sortBy,
-    curPage,
+    currentPage,
     pageSize,
   } = state;
   let filteredData = generatedData;
@@ -73,8 +73,8 @@ export default function filter(
   }
 
   const paginated = filteredData.filter((row, index) => {
-    const start = (curPage - 1) * pageSize;
-    const end = curPage * pageSize;
+    const start = (currentPage - 1) * pageSize;
+    const end = currentPage * pageSize;
     if (index >= start && index < end) return true;
   });
 
