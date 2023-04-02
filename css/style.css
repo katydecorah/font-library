@@ -84,7 +84,7 @@ a:hover {
   padding: 0 1em;
 }
 
-@media screen and (min-width: 800px) {
+@media (width >= 800px) {
   .container {
     display: flex;
     grid-gap: 2em;
@@ -104,7 +104,7 @@ header {
   justify-content: space-between;
 }
 
-@media screen and (min-width: 800px) {
+@media (width >= 800px) {
   header {
     margin-bottom: 0;
     flex-direction: row;
@@ -123,7 +123,7 @@ header {
   display: none;
 }
 
-@media screen and (min-width: 800px) {
+@media (width >= 800px) {
   .sidebar {
     display: block;
     background: var(--background-accent);
@@ -172,7 +172,7 @@ header {
   grid-gap: 0.5em;
 }
 
-@media screen and (min-width: 980px) {
+@media (width >= 980px) {
   .content {
     display: flex;
     grid-gap: 2em;
@@ -196,7 +196,7 @@ header {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media (width >= 800px) {
   .select-tags {
     display: none;
   }
@@ -317,7 +317,7 @@ input[type="text"] {
   position: relative;
 }
 
-@media screen and (min-width: 800px) {
+@media (width >= 800px) {
   .family-link {
     padding: 1em 2em 0.5em;
   }
@@ -345,7 +345,7 @@ input[type="text"] {
   grid-gap: 0.5em;
 }
 
-@media screen and (min-width: 800px) {
+@media (width >= 800px) {
   .family-tags {
     padding: 0.5em 2em;
     flex-direction: row;
@@ -366,7 +366,7 @@ input[type="text"] {
   grid-column-gap: 0.5em;
 }
 
-@media screen and (min-width: 800px) {
+@media (width >= 800px) {
   .family-meta-container {
     flex-direction: row;
   }
@@ -418,7 +418,7 @@ input[type="text"] {
   grid-gap: 1em;
 }
 
-@media screen and (min-width: 800px) {
+@media (width >= 800px) {
   .family-meta-links {
     justify-content: space-between;
   }
@@ -482,7 +482,7 @@ input[type="text"] {
   display: flex;
 }
 
-@media screen and (min-width: 800px) {
+@media (width >= 800px) {
   .mobile {
     display: none;
   }
