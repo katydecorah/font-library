@@ -1,4 +1,5 @@
 import { GeneratedData } from "./font-results";
+import rtlSubsets from "../data/rtl.json";
 
 export default function fontCall({
   variants,
@@ -49,4 +50,25 @@ function fontCallSelectedVariant(selectedVariant: string): string {
     variants.push(`wght@${hasItalic ? "1," : ""}${variantNumber[0]}`);
   }
   return `:${variants.join(",")}`;
+}
+
+export function familyStyle({
+  family,
+  selectedVariant,
+  previewName,
+  subset,
+}: {
+  family: GeneratedData[number]["family"];
+  selectedVariant: string;
+  previewName: string;
+  subset: string;
+}) {
+  let style = `font-family: '${family}';`;
+  if (rtlSubsets.includes(subset) && family !== previewName) {
+    style += "direction: rtl;";
+  }
+  if (selectedVariant.includes("italic")) {
+    style += "font-style: italic;";
+  }
+  return style;
 }

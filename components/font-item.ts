@@ -2,7 +2,7 @@ import sampleSubsets from "../data/samples.json";
 import rtlSubsets from "../data/rtl.json";
 import swaps from "../data/swaps.json";
 import { GeneratedData } from "./font-results";
-import fontCall from "./font-call";
+import fontCall, { familyStyle } from "./font-call";
 
 export type SampleSubsets = typeof sampleSubsets;
 export type RtlSubsets = typeof rtlSubsets;
@@ -56,15 +56,13 @@ class FontItem extends HTMLElement {
   }
 
   get familyStyle(): string {
-    const { family } = this.font;
-    let style = `font-family: '${family}';`;
-    if (rtlSubsets.includes(this.subset) && family !== this.previewName) {
-      style += "direction: rtl;";
-    }
-    if (this.selectedVariant.includes("italic")) {
-      style += "font-style: italic;";
-    }
-    return style;
+    const { font, selectedVariant, previewName, subset } = this;
+    return familyStyle({
+      family: font.family,
+      selectedVariant,
+      previewName,
+      subset,
+    });
   }
 
   connectedCallback() {
