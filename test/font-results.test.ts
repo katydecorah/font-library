@@ -1,3 +1,4 @@
+import customEvent from "../components/custom-event";
 import "./components";
 
 describe("FontResults", () => {
@@ -14,7 +15,7 @@ describe("FontResults", () => {
   test("fires a next-page custom event", () => {
     document.body.innerHTML = `<div id="content"><font-results sort-by="family" selected-category="" selected-subset="" selected-variant="" selected-tag="" selected-search="" selected-variable=""></font-results></div>`;
     const fontResults = document.querySelector("font-results");
-    fontResults.dispatchEvent(new CustomEvent("next-page"));
+    fontResults.dispatchEvent(customEvent("next-page"));
     const pagination = document.querySelector("pagination-buttons");
     expect(pagination.getAttribute("current-page")).toBe("2");
   });
@@ -22,8 +23,8 @@ describe("FontResults", () => {
   test("fires a prev-page custom event", () => {
     document.body.innerHTML = `<div id="content"><font-results sort-by="family" selected-category="" selected-subset="" selected-variant="" selected-tag="" selected-search="" selected-variable=""></font-results></div>`;
     const fontResults = document.querySelector("font-results");
-    fontResults.dispatchEvent(new CustomEvent("next-page"));
-    fontResults.dispatchEvent(new CustomEvent("previous-page"));
+    fontResults.dispatchEvent(customEvent("next-page"));
+    fontResults.dispatchEvent(customEvent("previous-page"));
     const pagination = document.querySelector("pagination-buttons");
     expect(pagination.getAttribute("current-page")).toBe("1");
   });

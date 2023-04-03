@@ -1,3 +1,4 @@
+import customEvent from "./custom-event";
 import { ButtonType } from "./pagination-buttons";
 
 class SortBy extends HTMLElement {
@@ -37,14 +38,8 @@ class SortBy extends HTMLElement {
   }
 
   handleSort(event: ButtonType) {
-    const sortBy = (event.target as HTMLElement).dataset.sort;
-    this.dispatchEvent(
-      new CustomEvent("sort-by", {
-        detail: { sortBy },
-        bubbles: true,
-        composed: true,
-      })
-    );
+    const value = (event.target as HTMLElement).dataset.sort;
+    this.dispatchEvent(customEvent("sort-by", { value }));
   }
 }
 

@@ -1,3 +1,5 @@
+import customEvent from "./custom-event";
+
 class FilterCheckbox extends HTMLInputElement {
   constructor() {
     super();
@@ -13,13 +15,9 @@ class FilterCheckbox extends HTMLInputElement {
 
   onChange() {
     this.dispatchEvent(
-      new CustomEvent("handle-filter", {
-        bubbles: true,
-        composed: true,
-        detail: {
-          value: this.checked,
-          id: this.id,
-        },
+      customEvent("handle-filter", {
+        value: this.checked,
+        id: this.id,
       })
     );
     this.setUrlParam();
