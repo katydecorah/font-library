@@ -2,19 +2,7 @@ class FilterSelect extends HTMLSelectElement {
   constructor() {
     super();
     this.addEventListener("change", this.onChange);
-
-    // Get initial value from URL
-    const urlParameters = new URLSearchParams(window.location.search);
-    const initialValue = urlParameters.get(this.dataset.param);
-    if (initialValue) {
-      if (!this.options.namedItem(initialValue)) return;
-      this.value = initialValue;
-
-      // Wait for main-app to load before dispatching event
-      window.addEventListener("main-app-loaded", () => {
-        this.onChange();
-      });
-    }
+    this.handleInitialValue();
 
     // Listen for events to clear filter
     window.addEventListener("remove-select", (event: CustomEvent) => {
@@ -61,6 +49,20 @@ class FilterSelect extends HTMLSelectElement {
       "",
       `${window.location.pathname}?${urlParameters.toString()}`
     );
+  }
+
+  handleInitialValue() {
+    const urlParameters = new URLSearchParams(window.location.search);
+    const initialValue = urlParameters.get(this.dataset.param);
+    if (initialValue) {
+      if (!this.options.namedItem(initialValue)) return;
+      this.value = initialValue;
+
+      // Wait for main-app to load before dispatching event
+      window.addEventListener("main-app-loaded", () => {
+        this.onChange();
+      });
+    }
   }
 }
 

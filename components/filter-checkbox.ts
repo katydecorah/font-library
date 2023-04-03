@@ -2,18 +2,8 @@ class FilterCheckbox extends HTMLInputElement {
   constructor() {
     super();
     this.addEventListener("change", this.onChange);
+    this.handleInitialValue();
 
-    // Get init value from URL param
-    const urlParameters = new URLSearchParams(window.location.search);
-    const initialValue = urlParameters.get("variable");
-    if (initialValue === "true") {
-      this.checked = true;
-
-      // Wait for main-app to load before dispatching event
-      window.addEventListener("main-app-loaded", () => {
-        this.onChange();
-      });
-    }
     // Listen for events to clear filter
     window.addEventListener("remove-checkbox", () => {
       this.checked = false;
@@ -48,6 +38,19 @@ class FilterCheckbox extends HTMLInputElement {
       "",
       `${window.location.pathname}?${urlParameters.toString()}`
     );
+  }
+
+  handleInitialValue() {
+    const urlParameters = new URLSearchParams(window.location.search);
+    const initialValue = urlParameters.get("variable");
+    if (initialValue === "true") {
+      this.checked = true;
+
+      // Wait for main-app to load before dispatching event
+      window.addEventListener("main-app-loaded", () => {
+        this.onChange();
+      });
+    }
   }
 }
 

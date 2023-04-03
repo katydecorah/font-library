@@ -4,21 +4,13 @@ class TagButton extends HTMLButtonElement {
   constructor() {
     super();
     this.addEventListener("click", this.onClick);
-
-    // Get init value from URL param
-    const urlParameters = new URLSearchParams(window.location.search);
-    const initialValue = urlParameters.get("tag");
-    const tag = this.value;
-
-    if (initialValue === tag) {
-      this.classList.add("active");
-    }
+    this.handleInitialValue();
 
     // find name in tags
-    const tagData = tags.find((t) => t.name === tag);
+    const tagData = tags.find((t) => t.name === this.value);
 
     if (tagData) {
-      if (tag === "icons") {
+      if (this.value === "icons") {
         this.innerHTML = `<i>&hearts;</i> icons`;
       } else {
         this.style.fontFamily = `"${tagData.sample}"`;
@@ -58,6 +50,14 @@ class TagButton extends HTMLButtonElement {
       "",
       `${window.location.pathname}?${urlParameters.toString()}`
     );
+  }
+
+  handleInitialValue() {
+    const urlParameters = new URLSearchParams(window.location.search);
+    const initialValue = urlParameters.get("tag");
+    if (initialValue === this.value) {
+      this.classList.add("active");
+    }
   }
 }
 
