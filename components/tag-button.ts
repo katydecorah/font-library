@@ -1,4 +1,5 @@
 import { tags } from "../_data/metadata.json";
+import customEvent from "./custom-event";
 
 class TagButton extends HTMLButtonElement {
   constructor() {
@@ -29,13 +30,9 @@ class TagButton extends HTMLButtonElement {
 
   onClick() {
     this.dispatchEvent(
-      new CustomEvent("tag-button-selected", {
-        bubbles: true,
-        composed: true,
-        detail: {
-          id: "selectedTag",
-          value: this.value,
-        },
+      customEvent("tag-button-selected", {
+        id: "selectedTag",
+        value: this.value,
       })
     );
 

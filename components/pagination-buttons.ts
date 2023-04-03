@@ -1,3 +1,5 @@
+import customEvent from "./custom-event";
+
 export type ButtonType = MouseEvent & { target: HTMLButtonElement };
 
 class PaginationButtons extends HTMLElement {
@@ -52,12 +54,7 @@ class PaginationButtons extends HTMLElement {
   }
 
   handlePage(event: ButtonType) {
-    this.dispatchEvent(
-      new CustomEvent(event.target.dataset.event, {
-        bubbles: true,
-        composed: true,
-      })
-    );
+    this.dispatchEvent(customEvent(event.target.dataset.event));
   }
 }
 

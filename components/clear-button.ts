@@ -1,3 +1,5 @@
+import customEvent from "./custom-event";
+
 class ClearButton extends HTMLButtonElement {
   constructor() {
     super();
@@ -7,12 +9,8 @@ class ClearButton extends HTMLButtonElement {
 
   onClick() {
     this.dispatchEvent(
-      new CustomEvent("clear-filter", {
-        bubbles: true,
-        composed: true,
-        detail: {
-          filter: this.value,
-        },
+      customEvent("clear-filter", {
+        filter: this.value,
       })
     );
   }

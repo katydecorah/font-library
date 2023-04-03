@@ -1,3 +1,5 @@
+import customEvent from "./custom-event";
+
 type SelectTypes =
   | "selectedCategory"
   | "selectedSubset"
@@ -99,16 +101,14 @@ class MainApp extends HTMLElement {
 
   removeSelect(filter: string) {
     window.dispatchEvent(
-      new CustomEvent("remove-select", {
-        detail: {
-          filter,
-        },
+      customEvent("remove-select", {
+        filter,
       })
     );
   }
 
   removeCheckbox() {
-    window.dispatchEvent(new CustomEvent("remove-checkbox"));
+    window.dispatchEvent(customEvent("remove-checkbox"));
   }
 
   scrollToContent() {

@@ -1,3 +1,5 @@
+import customEvent from "./custom-event";
+
 class FilterSelect extends HTMLSelectElement {
   constructor() {
     super();
@@ -23,12 +25,11 @@ class FilterSelect extends HTMLSelectElement {
   onChange() {
     const { id, value } = this;
     this.dispatchEvent(
-      new CustomEvent(
+      customEvent(
         id === "selectedTag" ? "tag-button-selected" : "handle-filter",
         {
-          bubbles: true,
-          composed: true,
-          detail: { id, value },
+          value,
+          id,
         }
       )
     );
