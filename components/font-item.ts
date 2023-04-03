@@ -2,6 +2,7 @@ import sampleSubsets from "../data/samples.json";
 import rtlSubsets from "../data/rtl.json";
 import swaps from "../data/swaps.json";
 import { GeneratedData } from "./font-results";
+import fontCall from "./font-call";
 
 export type SampleSubsets = typeof sampleSubsets;
 export type RtlSubsets = typeof rtlSubsets;
@@ -54,14 +55,24 @@ class FontItem extends HTMLElement {
     return this.font.family.replaceAll(" ", "+");
   }
 
+  get familyStyle(): string {
+    const { family } = this.font;
+    let style = `font-family: '${family}';`;
+    if (rtlSubsets.includes(this.subset) && family !== this.previewName) {
+      style += "direction: rtl;";
+    }
+    if (this.selectedVariant.includes("italic")) {
+      style += "font-style: italic;";
+    }
+    return style;
+  }
+
   connectedCallback() {
     const { family, category, variants, subsets, lineNumber, tags, variable } =
       this.font;
     this.subset = this.selectedSubset;
 
     this.addFontToHead();
-
-    const familyStyle = this.familyStyle();
 
     const tagButtons = tags
       .map(
@@ -72,7 +83,7 @@ class FontItem extends HTMLElement {
 
     this.innerHTML = `<div id="family-${this.id}" class="family">
     <div class="family-link">
-      <div class="family-title ${this.id}" style="${familyStyle}">
+      <div class="family-title ${this.id}" style="${this.familyStyle}">
         ${this.previewName}
       </div>
       <div class="family-meta-container">
@@ -113,68 +124,19 @@ class FontItem extends HTMLElement {
   }
 
   addFontToHead(): void {
-    const { family } = this.font;
+    const { slug, selectedVariant, previewName, font } = this;
+    const { family, variants } = font;
+
     const linkElement = document.createElement("link");
-    linkElement.href = this.fontCall();
+    linkElement.href = fontCall({
+      variants,
+      slug,
+      selectedVariant,
+      previewName,
+    });
     linkElement.rel = "stylesheet";
     linkElement.dataset.family = family;
     document.head.append(linkElement);
-  }
-
-  fontCall(): string {
-    const { variants } = this.font;
-    let fontCallString = this.slug;
-
-    if (this.selectedVariant && this.selectedVariant !== "regular") {
-      fontCallString += this.fontCallSelectedVariant();
-    }
-    // if font doesn't have regular variant, add subset to font call
-    if (!this.selectedVariant && !variants.includes("regular")) {
-      fontCallString += this.fontCallVariant();
-    }
-
-    fontCallString += `&text=${encodeURIComponent(
-      this.previewName
-    )}&display=swap`;
-
-    return `https://fonts.googleapis.com/css2?family=${fontCallString}`;
-  }
-
-  fontCallVariant(): string {
-    const firstVariant = this.font.variants[0];
-    if (/\d+/g.test(firstVariant)) {
-      return `:wght@${firstVariant}`;
-    } else if (firstVariant.includes("italic")) {
-      return `:ital@1`;
-    }
-  }
-
-  fontCallSelectedVariant() {
-    const hasItalic = this.selectedVariant.includes("italic");
-    const variantNumber = this.selectedVariant.match(/\d+/g); // get number from selectedVariant
-
-    const variants = [];
-    if (this.selectedVariant === "italic") {
-      variants.push("ital@1");
-    } else if (hasItalic) {
-      variants.push("ital");
-    }
-    if (variantNumber && variantNumber[0]) {
-      variants.push(`wght@${hasItalic ? "1," : ""}${variantNumber[0]}`);
-    }
-    return `:${variants.join(",")}`;
-  }
-
-  familyStyle(): string {
-    const { family } = this.font;
-    let style = `font-family: '${family}';`;
-    if (rtlSubsets.includes(this.subset) && family !== this.previewName) {
-      style += "direction: rtl;";
-    }
-    if (this.selectedVariant.includes("italic")) {
-      style += "font-style: italic;";
-    }
-    return style;
   }
 
   disconnectedCallback() {
