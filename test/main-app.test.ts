@@ -273,7 +273,7 @@ describe("MainApp", () => {
         </div>
       </search-status>
     `);
-    expect(document.querySelectorAll("font-item").length).toEqual(10);
+    expect(document.querySelectorAll("li[is='font-item']").length).toEqual(10);
   });
 
   test("filters fonts when search", async () => {
@@ -331,7 +331,7 @@ describe("MainApp", () => {
     `);
 
     // expect there two be resultsLength number of font-items
-    expect(document.querySelectorAll("font-item").length).toEqual(
+    expect(document.querySelectorAll("li[is='font-item']").length).toEqual(
       resultsLength
     );
   });
@@ -363,7 +363,7 @@ describe("MainApp", () => {
         </div>
       </search-status>
     `);
-    expect(document.querySelectorAll("font-item").length).toEqual(10);
+    expect(document.querySelectorAll("li[is='font-item']").length).toEqual(10);
   });
 
   test("removes variable filter", async () => {
@@ -434,7 +434,7 @@ describe("MainApp", () => {
         </div>
       </search-status>
     `);
-    expect(document.querySelectorAll("font-item").length).toEqual(10);
+    expect(document.querySelectorAll("li[is='font-item']").length).toEqual(10);
   });
 
   test("removes category filter", async () => {
@@ -466,7 +466,7 @@ describe("MainApp", () => {
         </div>
       </search-status>
     `);
-    expect(document.querySelectorAll("font-item").length).toEqual(10);
+    expect(document.querySelectorAll("li[is='font-item']").length).toEqual(10);
   });
 
   test("removes subset filter", async () => {
@@ -498,7 +498,7 @@ describe("MainApp", () => {
         </div>
       </search-status>
     `);
-    expect(document.querySelectorAll("font-item").length).toEqual(10);
+    expect(document.querySelectorAll("li[is='font-item']").length).toEqual(10);
   });
 
   test("removes variant filter", async () => {
@@ -530,7 +530,7 @@ describe("MainApp", () => {
         </div>
       </search-status>
     `);
-    expect(document.querySelectorAll("font-item").length).toEqual(10);
+    expect(document.querySelectorAll("li[is='font-item']").length).toEqual(10);
   });
 
   test("adds and removes all filters: tag, variable, search, category, subset, variant", async () => {
@@ -700,7 +700,7 @@ describe("MainApp", () => {
         </div>
       </search-status>
     `);
-    expect(document.querySelectorAll("font-item").length).toEqual(10);
+    expect(document.querySelectorAll("li[is='font-item']").length).toEqual(10);
   });
 
   test('filters based on tag "cute" in search query', async () => {

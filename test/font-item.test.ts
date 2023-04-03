@@ -10,8 +10,8 @@ describe("FontItem", () => {
   });
 
   test("renders correctly", () => {
-    document.body.innerHTML = `<font-item selected-variant="" selected-subset="" font='{"family":"Alef","variants":["regular","700"],"subsets":["hebrew","latin"],"category":"sans-serif","tags":["geometric"],"lineNumber":23}'></font-item>`;
-    const fontItem = document.querySelector("font-item");
+    document.body.innerHTML = `<li is="font-item" selected-variant="" selected-subset="" font='{"family":"Alef","variants":["regular","700"],"subsets":["hebrew","latin"],"category":"sans-serif","tags":["geometric"],"lineNumber":23}'></li>`;
+    const fontItem = document.querySelector("li[is='font-item']");
     expect(fontItem).toMatchSnapshot();
     expect(
       document.querySelector("[data-family='Alef']").getAttribute("href")
@@ -21,8 +21,8 @@ describe("FontItem", () => {
   });
 
   test("no latin subset", () => {
-    document.body.innerHTML = `<font-item selected-variant="" selected-subset="" font='{"family":"GFS Neohellenic","variants":["regular","italic","700","700italic"],"subsets":["greek"],"category":"sans-serif","tags":["round","monolinear","1930s"],"lineNumber":439}'></font-item>`;
-    const fontItem = document.querySelector("font-item");
+    document.body.innerHTML = `<li is="font-item" selected-variant="" selected-subset="" font='{"family":"GFS Neohellenic","variants":["regular","italic","700","700italic"],"subsets":["greek"],"category":"sans-serif","tags":["round","monolinear","1930s"],"lineNumber":439}'></li>`;
+    const fontItem = document.querySelector("li[is='font-item']");
     expect(fontItem).toMatchSnapshot();
     expect(
       document
@@ -34,8 +34,8 @@ describe("FontItem", () => {
   });
 
   test("rtl subset", () => {
-    document.body.innerHTML = `<font-item selected-variant="" selected-subset="" font='{"family":"Almarai","variants":["300","regular","700","800"],"subsets":["arabic"],"category":"sans-serif","tags":["arabic"],"lineNumber":41}'></font-item>`;
-    const fontItem = document.querySelector("font-item");
+    document.body.innerHTML = `<li is="font-item" selected-variant="" selected-subset="" font='{"family":"Almarai","variants":["300","regular","700","800"],"subsets":["arabic"],"category":"sans-serif","tags":["arabic"],"lineNumber":41}'></li>`;
+    const fontItem = document.querySelector("li[is='font-item']");
     expect(fontItem).toMatchSnapshot();
     expect(
       document.querySelector("[data-family='Almarai']").getAttribute("href")
@@ -45,8 +45,8 @@ describe("FontItem", () => {
   });
 
   test("selected variant, 900italic", () => {
-    document.body.innerHTML = `<font-item selected-variant="900italic" selected-subset="" font='{"family":"Anybody","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["eurostile"],"lineNumber":78}'></font-item>`;
-    const fontItem = document.querySelector("font-item");
+    document.body.innerHTML = `<li is="font-item" selected-variant="900italic" selected-subset="" font='{"family":"Anybody","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["eurostile"],"lineNumber":78}'></li>`;
+    const fontItem = document.querySelector("li[is='font-item']");
     expect(fontItem).toMatchSnapshot();
     expect(
       document.querySelector("[data-family='Anybody']").getAttribute("href")
@@ -56,7 +56,7 @@ describe("FontItem", () => {
   });
 
   test("selected variant, italic", () => {
-    document.body.innerHTML = `<font-item selected-variant="italic" selected-subset="" selected-tag="" font='{"family":"Anybody","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["eurostile"],"lineNumber":79,"variable":true}' id="anybody"></font-item>`;
+    document.body.innerHTML = `<li is="font-item" selected-variant="italic" selected-subset="" selected-tag="" font='{"family":"Anybody","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["eurostile"],"lineNumber":79,"variable":true}' id="anybody"></li>`;
     expect(
       document.querySelector("[data-family='Anybody']").getAttribute("href")
     ).toMatchInlineSnapshot(
@@ -65,8 +65,8 @@ describe("FontItem", () => {
   });
 
   test("selected variant, 900", () => {
-    document.body.innerHTML = `<font-item selected-variant="900" selected-subset="" font='{"family":"Anybody","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["eurostile"],"lineNumber":78}'></font-item>`;
-    const fontItem = document.querySelector("font-item");
+    document.body.innerHTML = `<li is="font-item" selected-variant="900" selected-subset="" font='{"family":"Anybody","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["eurostile"],"lineNumber":78}'></li>`;
+    const fontItem = document.querySelector("li[is='font-item']");
     expect(fontItem).toMatchSnapshot();
     expect(
       document.querySelector("[data-family='Anybody']").getAttribute("href")
@@ -76,8 +76,8 @@ describe("FontItem", () => {
   });
 
   test("selected subset", () => {
-    document.body.innerHTML = `<font-item selected-variant="" selected-subset="hebrew" font='{"family":"Alef","variants":["regular","700"],"subsets":["hebrew","latin"],"category":"sans-serif","tags":["geometric"],"lineNumber":23}'></font-item>`;
-    const fontItem = document.querySelector("font-item");
+    document.body.innerHTML = `<li is="font-item" selected-variant="" selected-subset="hebrew" font='{"family":"Alef","variants":["regular","700"],"subsets":["hebrew","latin"],"category":"sans-serif","tags":["geometric"],"lineNumber":23}'></li>`;
+    const fontItem = document.querySelector("li[is='font-item']");
     expect(fontItem).toMatchSnapshot();
     expect(
       document.querySelector("[data-family='Alef']").getAttribute("href")
@@ -87,8 +87,8 @@ describe("FontItem", () => {
   });
 
   test("has family name that exists in swaps.json", () => {
-    document.body.innerHTML = `<font-item selected-variant="" selected-subset="" font='{"family":"Material Symbols Sharp","variants":["100","200","300","regular","500","600","700"],"subsets":["latin"],"category":"monospace","tags":[],"lineNumber":752}'></font-item>`;
-    const fontItem = document.querySelector("font-item");
+    document.body.innerHTML = `<li is="font-item" selected-variant="" selected-subset="" font='{"family":"Material Symbols Sharp","variants":["100","200","300","regular","500","600","700"],"subsets":["latin"],"category":"monospace","tags":[],"lineNumber":752}'></li>`;
+    const fontItem = document.querySelector("li[is='font-item']");
     expect(fontItem).toMatchSnapshot();
     expect(
       document
@@ -100,8 +100,8 @@ describe("FontItem", () => {
   });
 
   test("is variable font", () => {
-    document.body.innerHTML = `<font-item selected-variant="" selected-subset="" font='{"family":"Akshar","variants":["300","regular","500","600","700"],"subsets":["devanagari","latin","latin-ext"],"category":"sans-serif","tags":["condensed","narrow"],"lineNumber":17,"variable":true}'></font-item>`;
-    const fontItem = document.querySelector("font-item");
+    document.body.innerHTML = `<li is="font-item" selected-variant="" selected-subset="" font='{"family":"Akshar","variants":["300","regular","500","600","700"],"subsets":["devanagari","latin","latin-ext"],"category":"sans-serif","tags":["condensed","narrow"],"lineNumber":17,"variable":true}'></li>`;
+    const fontItem = document.querySelector("li[is='font-item']");
     expect(fontItem).toMatchSnapshot();
     expect(
       document.querySelector("[data-family='Akshar']").getAttribute("href")
@@ -111,7 +111,7 @@ describe("FontItem", () => {
   });
 
   test("molle, italic variant only", () => {
-    document.body.innerHTML = `<font-item selected-variant="" selected-subset="" font='{"family":"Molle","variants":["italic"],"subsets":["latin"],"category":"handwriting","tags":[],"lineNumber":578}'></font-item>`;
+    document.body.innerHTML = `<li is="font-item" selected-variant="" selected-subset="" font='{"family":"Molle","variants":["italic"],"subsets":["latin"],"category":"handwriting","tags":[],"lineNumber":578}'></li>`;
     expect(
       document.querySelector("[data-family='Molle']").getAttribute("href")
     ).toMatchInlineSnapshot(
@@ -119,7 +119,7 @@ describe("FontItem", () => {
     );
   });
   test("sunflower, multiple non-regular variants", () => {
-    document.body.innerHTML = `<font-item selected-variant="" selected-subset="" font='{"family":"Sunflower","variants":["300","500","700"],"subsets":["latin"],"category":"sans-serif","tags":[],"lineNumber":1000}'></font-item>`;
+    document.body.innerHTML = `<li is="font-item" selected-variant="" selected-subset="" font='{"family":"Sunflower","variants":["300","500","700"],"subsets":["latin"],"category":"sans-serif","tags":[],"lineNumber":1000}'></li>`;
     expect(
       document.querySelector("[data-family='Sunflower']").getAttribute("href")
     ).toMatchInlineSnapshot(
@@ -127,7 +127,7 @@ describe("FontItem", () => {
     );
   });
   test("unifrakturcook, one non-regular variant", () => {
-    document.body.innerHTML = `<font-item selected-variant="" selected-subset="" font='{"family":"UnifrakturCook","variants":["700"],"subsets":["latin"],"category":"display","tags":[],"lineNumber":1020}'></font-item>`;
+    document.body.innerHTML = `<li is="font-item" selected-variant="" selected-subset="" font='{"family":"UnifrakturCook","variants":["700"],"subsets":["latin"],"category":"display","tags":[],"lineNumber":1020}'></li>`;
     expect(
       document
         .querySelector("[data-family='UnifrakturCook']")

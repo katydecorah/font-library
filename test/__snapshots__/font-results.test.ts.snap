@@ -53,11 +53,12 @@ exports[`FontResults renders correctly 1`] = `
   </sort-by>
   
 
-  <div
+  <ul
     class="families"
   >
-    <font-item
+    <li
       font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false,"lastModified":"2022-09-22"}"
+      is="font-item"
       selected-subset=""
       selected-tag=""
       selected-variant=""
@@ -195,11 +196,12 @@ exports[`FontResults renders correctly 1`] = `
         
   
       </div>
-    </font-item>
+    </li>
     
 
-    <font-item
+    <li
       font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3,"variable":false,"lastModified":"2022-09-22"}"
+      is="font-item"
       selected-subset=""
       selected-tag=""
       selected-variant=""
@@ -328,11 +330,12 @@ exports[`FontResults renders correctly 1`] = `
         
   
       </div>
-    </font-item>
+    </li>
     
 
-    <font-item
+    <li
       font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":4,"variable":false,"lastModified":"2022-09-22"}"
+      is="font-item"
       selected-subset=""
       selected-tag=""
       selected-variant=""
@@ -451,11 +454,12 @@ exports[`FontResults renders correctly 1`] = `
         
   
       </div>
-    </font-item>
+    </li>
     
 
-    <font-item
+    <li
       font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5,"variable":false,"lastModified":"2022-09-22"}"
+      is="font-item"
       selected-subset=""
       selected-tag=""
       selected-variant=""
@@ -584,11 +588,12 @@ exports[`FontResults renders correctly 1`] = `
         
   
       </div>
-    </font-item>
+    </li>
     
 
-    <font-item
+    <li
       font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6,"variable":false,"lastModified":"2022-09-22"}"
+      is="font-item"
       selected-subset=""
       selected-tag=""
       selected-variant=""
@@ -744,11 +749,12 @@ exports[`FontResults renders correctly 1`] = `
         
   
       </div>
-    </font-item>
+    </li>
     
 
-    <font-item
+    <li
       font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false,"lastModified":"2022-12-08"}"
+      is="font-item"
       selected-subset=""
       selected-tag=""
       selected-variant=""
@@ -867,11 +873,12 @@ exports[`FontResults renders correctly 1`] = `
         
   
       </div>
-    </font-item>
+    </li>
     
 
-    <font-item
+    <li
       font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8,"variable":false,"lastModified":"2022-09-22"}"
+      is="font-item"
       selected-subset=""
       selected-tag=""
       selected-variant=""
@@ -1009,11 +1016,12 @@ exports[`FontResults renders correctly 1`] = `
         
   
       </div>
-    </font-item>
+    </li>
     
 
-    <font-item
+    <li
       font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9,"variable":false,"lastModified":"2022-12-08"}"
+      is="font-item"
       selected-subset=""
       selected-tag=""
       selected-variant=""
@@ -1169,11 +1177,12 @@ exports[`FontResults renders correctly 1`] = `
         
   
       </div>
-    </font-item>
+    </li>
     
 
-    <font-item
+    <li
       font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10,"variable":false,"lastModified":"2022-09-22"}"
+      is="font-item"
       selected-subset=""
       selected-tag=""
       selected-variant=""
@@ -1311,11 +1320,12 @@ exports[`FontResults renders correctly 1`] = `
         
   
       </div>
-    </font-item>
+    </li>
     
 
-    <font-item
+    <li
       font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11,"variable":false,"lastModified":"2022-04-20"}"
+      is="font-item"
       selected-subset=""
       selected-tag=""
       selected-variant=""
@@ -1462,8 +1472,8 @@ exports[`FontResults renders correctly 1`] = `
         
   
       </div>
-    </font-item>
-  </div>
+    </li>
+  </ul>
   
 
   <pagination-buttons
