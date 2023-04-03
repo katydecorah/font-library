@@ -19,7 +19,6 @@ exports[`FontItem has family name that exists in swaps.json 1`] = `
       
       <div
         class="family-title material-symbols-sharp"
-        id="family-name"
         style="font-family: 'Material Symbols Sharp';"
       >
         
@@ -32,40 +31,48 @@ exports[`FontItem has family name that exists in swaps.json 1`] = `
         class="family-meta-container"
       >
         
-     
+        
         <span
           class="family-title-small"
         >
           Material Symbols Sharp
         </span>
         
-      
+        
         <div
           class="family-meta"
         >
           
-        
-          <span>
-            monospace
-          </span>
           
-        •
-        
-          <span
-            aria-label="100, 200, 300, regular, 500, 600, 700"
-          >
-            7 variants
-          </span>
+          <ul>
+            
+            
+            <li>
+              monospace
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="100, 200, 300, regular, 500, 600, 700"
+              >
+                7 variants
+              </span>
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="latin"
+              >
+                1 subsets
+              </span>
+            </li>
+            
           
-        •
-        
-          <span
-            aria-label="latin"
-          >
-            1 subsets
-          </span>
+          </ul>
           
-      
+        
         </div>
         
       
@@ -137,7 +144,6 @@ exports[`FontItem is variable font 1`] = `
       
       <div
         class="family-title akshar"
-        id="family-name"
         style="font-family: 'Akshar';"
       >
         
@@ -150,38 +156,46 @@ exports[`FontItem is variable font 1`] = `
         class="family-meta-container"
       >
         
-     
+        
         <span
           class="family-title-small"
         />
         
-      
+        
         <div
           class="family-meta"
         >
           
-        
-          <span>
-            sans-serif
-          </span>
           
-        •
-        
-          <span
-            aria-label="300, regular, 500, 600, 700"
-          >
-            5 variants (variable)
-          </span>
+          <ul>
+            
+            
+            <li>
+              sans-serif
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="300, regular, 500, 600, 700"
+              >
+                5 variants (variable)
+              </span>
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="devanagari, latin, latin-ext"
+              >
+                3 subsets
+              </span>
+            </li>
+            
           
-        •
-        
-          <span
-            aria-label="devanagari, latin, latin-ext"
-          >
-            3 subsets
-          </span>
+          </ul>
           
-      
+        
         </div>
         
       
@@ -272,7 +286,6 @@ exports[`FontItem no latin subset 1`] = `
       
       <div
         class="family-title gfs-neohellenic"
-        id="family-name"
         style="font-family: 'GFS Neohellenic';"
       >
         
@@ -285,40 +298,48 @@ exports[`FontItem no latin subset 1`] = `
         class="family-meta-container"
       >
         
-     
+        
         <span
           class="family-title-small"
         >
           GFS Neohellenic
         </span>
         
-      
+        
         <div
           class="family-meta"
         >
           
-        
-          <span>
-            sans-serif
-          </span>
           
-        •
-        
-          <span
-            aria-label="regular, italic, 700, 700italic"
-          >
-            4 variants
-          </span>
+          <ul>
+            
+            
+            <li>
+              sans-serif
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="regular, italic, 700, 700italic"
+              >
+                4 variants
+              </span>
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="greek"
+              >
+                1 subsets
+              </span>
+            </li>
+            
           
-        •
-        
-          <span
-            aria-label="greek"
-          >
-            1 subsets
-          </span>
+          </ul>
           
-      
+        
         </div>
         
       
@@ -418,7 +439,6 @@ exports[`FontItem renders correctly 1`] = `
       
       <div
         class="family-title alef"
-        id="family-name"
         style="font-family: 'Alef';"
       >
         
@@ -431,38 +451,46 @@ exports[`FontItem renders correctly 1`] = `
         class="family-meta-container"
       >
         
-     
+        
         <span
           class="family-title-small"
         />
         
-      
+        
         <div
           class="family-meta"
         >
           
-        
-          <span>
-            sans-serif
-          </span>
           
-        •
-        
-          <span
-            aria-label="regular, 700"
-          >
-            2 variants
-          </span>
+          <ul>
+            
+            
+            <li>
+              sans-serif
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="regular, 700"
+              >
+                2 variants
+              </span>
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="hebrew, latin"
+              >
+                2 subsets
+              </span>
+            </li>
+            
           
-        •
-        
-          <span
-            aria-label="hebrew, latin"
-          >
-            2 subsets
-          </span>
+          </ul>
           
-      
+        
         </div>
         
       
@@ -544,7 +572,6 @@ exports[`FontItem rtl subset 1`] = `
       
       <div
         class="family-title almarai"
-        id="family-name"
         style="font-family: 'Almarai';direction: rtl;"
       >
         
@@ -557,40 +584,48 @@ exports[`FontItem rtl subset 1`] = `
         class="family-meta-container"
       >
         
-     
+        
         <span
           class="family-title-small"
         >
           Almarai
         </span>
         
-      
+        
         <div
           class="family-meta"
         >
           
-        
-          <span>
-            sans-serif
-          </span>
           
-        •
-        
-          <span
-            aria-label="300, regular, 700, 800"
-          >
-            4 variants
-          </span>
+          <ul>
+            
+            
+            <li>
+              sans-serif
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="300, regular, 700, 800"
+              >
+                4 variants
+              </span>
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="arabic"
+              >
+                1 subsets
+              </span>
+            </li>
+            
           
-        •
-        
-          <span
-            aria-label="arabic"
-          >
-            1 subsets
-          </span>
+          </ul>
           
-      
+        
         </div>
         
       
@@ -672,7 +707,6 @@ exports[`FontItem selected subset 1`] = `
       
       <div
         class="family-title alef"
-        id="family-name"
         style="font-family: 'Alef';direction: rtl;"
       >
         
@@ -685,40 +719,48 @@ exports[`FontItem selected subset 1`] = `
         class="family-meta-container"
       >
         
-     
+        
         <span
           class="family-title-small"
         >
           Alef
         </span>
         
-      
+        
         <div
           class="family-meta"
         >
           
-        
-          <span>
-            sans-serif
-          </span>
           
-        •
-        
-          <span
-            aria-label="regular, 700"
-          >
-            2 variants
-          </span>
+          <ul>
+            
+            
+            <li>
+              sans-serif
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="regular, 700"
+              >
+                2 variants
+              </span>
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="hebrew, latin"
+              >
+                2 subsets
+              </span>
+            </li>
+            
           
-        •
-        
-          <span
-            aria-label="hebrew, latin"
-          >
-            2 subsets
-          </span>
+          </ul>
           
-      
+        
         </div>
         
       
@@ -800,7 +842,6 @@ exports[`FontItem selected variant, 900 1`] = `
       
       <div
         class="family-title anybody"
-        id="family-name"
         style="font-family: 'Anybody';"
       >
         
@@ -813,38 +854,46 @@ exports[`FontItem selected variant, 900 1`] = `
         class="family-meta-container"
       >
         
-     
+        
         <span
           class="family-title-small"
         />
         
-      
+        
         <div
           class="family-meta"
         >
           
-        
-          <span>
-            display
-          </span>
           
-        •
-        
-          <span
-            aria-label="100, 200, 300, regular, 500, 600, 700, 800, 900, 100italic, 200italic, 300italic, italic, 500italic, 600italic, 700italic, 800italic, 900italic"
-          >
-            18 variants
-          </span>
+          <ul>
+            
+            
+            <li>
+              display
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="100, 200, 300, regular, 500, 600, 700, 800, 900, 100italic, 200italic, 300italic, italic, 500italic, 600italic, 700italic, 800italic, 900italic"
+              >
+                18 variants
+              </span>
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="latin, latin-ext, vietnamese"
+              >
+                3 subsets
+              </span>
+            </li>
+            
           
-        •
-        
-          <span
-            aria-label="latin, latin-ext, vietnamese"
-          >
-            3 subsets
-          </span>
+          </ul>
           
-      
+        
         </div>
         
       
@@ -926,7 +975,6 @@ exports[`FontItem selected variant, 900italic 1`] = `
       
       <div
         class="family-title anybody"
-        id="family-name"
         style="font-family: 'Anybody';font-style: italic;"
       >
         
@@ -939,38 +987,46 @@ exports[`FontItem selected variant, 900italic 1`] = `
         class="family-meta-container"
       >
         
-     
+        
         <span
           class="family-title-small"
         />
         
-      
+        
         <div
           class="family-meta"
         >
           
-        
-          <span>
-            display
-          </span>
           
-        •
-        
-          <span
-            aria-label="100, 200, 300, regular, 500, 600, 700, 800, 900, 100italic, 200italic, 300italic, italic, 500italic, 600italic, 700italic, 800italic, 900italic"
-          >
-            18 variants
-          </span>
+          <ul>
+            
+            
+            <li>
+              display
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="100, 200, 300, regular, 500, 600, 700, 800, 900, 100italic, 200italic, 300italic, italic, 500italic, 600italic, 700italic, 800italic, 900italic"
+              >
+                18 variants
+              </span>
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="latin, latin-ext, vietnamese"
+              >
+                3 subsets
+              </span>
+            </li>
+            
           
-        •
-        
-          <span
-            aria-label="latin, latin-ext, vietnamese"
-          >
-            3 subsets
-          </span>
+          </ul>
           
-      
+        
         </div>
         
       

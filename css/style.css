@@ -378,6 +378,26 @@ input[type="text"] {
   }
 }
 
+.family-meta ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 0.25em;
+  margin: 0;
+  padding: 0;
+}
+
+.family-meta li {
+  display: flex;
+  align-items: center;
+  grid-gap: 0.25em;
+}
+
+.family-meta li:not(:first-child)::before {
+  content: "•";
+  color: var(--text-color-accent);
+}
+
 .family-meta span {
   position: relative;
 }

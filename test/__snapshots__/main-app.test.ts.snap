@@ -2467,7 +2467,6 @@ exports[`MainApp renders correctly 1`] = `
       
                 <div
                   class="family-title abeezee"
-                  id="family-name"
                   style="font-family: 'ABeeZee';"
                 >
                   
@@ -2480,38 +2479,46 @@ exports[`MainApp renders correctly 1`] = `
                   class="family-meta-container"
                 >
                   
-     
+        
                   <span
                     class="family-title-small"
                   />
                   
-      
+        
                   <div
                     class="family-meta"
                   >
                     
-        
-                    <span>
-                      sans-serif
-                    </span>
+          
+                    <ul>
+                      
+            
+                      <li>
+                        sans-serif
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="regular, italic"
+                        >
+                          2 variants
+                        </span>
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="latin, latin-ext"
+                        >
+                          2 subsets
+                        </span>
+                      </li>
+                      
+          
+                    </ul>
                     
-        •
         
-                    <span
-                      aria-label="regular, italic"
-                    >
-                      2 variants
-                    </span>
-                    
-        •
-        
-                    <span
-                      aria-label="latin, latin-ext"
-                    >
-                      2 subsets
-                    </span>
-                    
-      
                   </div>
                   
       
@@ -2602,7 +2609,6 @@ exports[`MainApp renders correctly 1`] = `
       
                 <div
                   class="family-title abel"
-                  id="family-name"
                   style="font-family: 'Abel';"
                 >
                   
@@ -2615,38 +2621,46 @@ exports[`MainApp renders correctly 1`] = `
                   class="family-meta-container"
                 >
                   
-     
+        
                   <span
                     class="family-title-small"
                   />
                   
-      
+        
                   <div
                     class="family-meta"
                   >
                     
-        
-                    <span>
-                      sans-serif
-                    </span>
+          
+                    <ul>
+                      
+            
+                      <li>
+                        sans-serif
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="regular"
+                        >
+                          1 variants
+                        </span>
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="latin"
+                        >
+                          1 subsets
+                        </span>
+                      </li>
+                      
+          
+                    </ul>
                     
-        •
         
-                    <span
-                      aria-label="regular"
-                    >
-                      1 variants
-                    </span>
-                    
-        •
-        
-                    <span
-                      aria-label="latin"
-                    >
-                      1 subsets
-                    </span>
-                    
-      
                   </div>
                   
       
@@ -2728,7 +2742,6 @@ exports[`MainApp renders correctly 1`] = `
       
                 <div
                   class="family-title abhaya-libre"
-                  id="family-name"
                   style="font-family: 'Abhaya Libre';"
                 >
                   
@@ -2741,38 +2754,46 @@ exports[`MainApp renders correctly 1`] = `
                   class="family-meta-container"
                 >
                   
-     
+        
                   <span
                     class="family-title-small"
                   />
                   
-      
+        
                   <div
                     class="family-meta"
                   >
                     
-        
-                    <span>
-                      serif
-                    </span>
+          
+                    <ul>
+                      
+            
+                      <li>
+                        serif
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="regular, 500, 600, 700, 800"
+                        >
+                          5 variants
+                        </span>
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="sinhala, latin, latin-ext"
+                        >
+                          3 subsets
+                        </span>
+                      </li>
+                      
+          
+                    </ul>
                     
-        •
         
-                    <span
-                      aria-label="regular, 500, 600, 700, 800"
-                    >
-                      5 variants
-                    </span>
-                    
-        •
-        
-                    <span
-                      aria-label="sinhala, latin, latin-ext"
-                    >
-                      3 subsets
-                    </span>
-                    
-      
                   </div>
                   
       
@@ -2844,7 +2865,6 @@ exports[`MainApp renders correctly 1`] = `
       
                 <div
                   class="family-title aboreto"
-                  id="family-name"
                   style="font-family: 'Aboreto';"
                 >
                   
@@ -2857,38 +2877,46 @@ exports[`MainApp renders correctly 1`] = `
                   class="family-meta-container"
                 >
                   
-     
+        
                   <span
                     class="family-title-small"
                   />
                   
-      
+        
                   <div
                     class="family-meta"
                   >
                     
-        
-                    <span>
-                      display
-                    </span>
+          
+                    <ul>
+                      
+            
+                      <li>
+                        display
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="regular"
+                        >
+                          1 variants
+                        </span>
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="latin, latin-ext"
+                        >
+                          2 subsets
+                        </span>
+                      </li>
+                      
+          
+                    </ul>
                     
-        •
         
-                    <span
-                      aria-label="regular"
-                    >
-                      1 variants
-                    </span>
-                    
-        •
-        
-                    <span
-                      aria-label="latin, latin-ext"
-                    >
-                      2 subsets
-                    </span>
-                    
-      
                   </div>
                   
       
@@ -2970,7 +2998,6 @@ exports[`MainApp renders correctly 1`] = `
       
                 <div
                   class="family-title abril-fatface"
-                  id="family-name"
                   style="font-family: 'Abril Fatface';"
                 >
                   
@@ -2983,38 +3010,46 @@ exports[`MainApp renders correctly 1`] = `
                   class="family-meta-container"
                 >
                   
-     
+        
                   <span
                     class="family-title-small"
                   />
                   
-      
+        
                   <div
                     class="family-meta"
                   >
                     
-        
-                    <span>
-                      display
-                    </span>
+          
+                    <ul>
+                      
+            
+                      <li>
+                        display
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="regular"
+                        >
+                          1 variants
+                        </span>
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="latin, latin-ext"
+                        >
+                          2 subsets
+                        </span>
+                      </li>
+                      
+          
+                    </ul>
                     
-        •
         
-                    <span
-                      aria-label="regular"
-                    >
-                      1 variants
-                    </span>
-                    
-        •
-        
-                    <span
-                      aria-label="latin, latin-ext"
-                    >
-                      2 subsets
-                    </span>
-                    
-      
                   </div>
                   
       
@@ -3123,7 +3158,6 @@ exports[`MainApp renders correctly 1`] = `
       
                 <div
                   class="family-title abyssinica-sil"
-                  id="family-name"
                   style="font-family: 'Abyssinica SIL';"
                 >
                   
@@ -3136,38 +3170,46 @@ exports[`MainApp renders correctly 1`] = `
                   class="family-meta-container"
                 >
                   
-     
+        
                   <span
                     class="family-title-small"
                   />
                   
-      
+        
                   <div
                     class="family-meta"
                   >
                     
-        
-                    <span>
-                      serif
-                    </span>
+          
+                    <ul>
+                      
+            
+                      <li>
+                        serif
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="regular"
+                        >
+                          1 variants
+                        </span>
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="ethiopic, latin, latin-ext"
+                        >
+                          3 subsets
+                        </span>
+                      </li>
+                      
+          
+                    </ul>
                     
-        •
         
-                    <span
-                      aria-label="regular"
-                    >
-                      1 variants
-                    </span>
-                    
-        •
-        
-                    <span
-                      aria-label="ethiopic, latin, latin-ext"
-                    >
-                      3 subsets
-                    </span>
-                    
-      
                   </div>
                   
       
@@ -3239,7 +3281,6 @@ exports[`MainApp renders correctly 1`] = `
       
                 <div
                   class="family-title aclonica"
-                  id="family-name"
                   style="font-family: 'Aclonica';"
                 >
                   
@@ -3252,38 +3293,46 @@ exports[`MainApp renders correctly 1`] = `
                   class="family-meta-container"
                 >
                   
-     
+        
                   <span
                     class="family-title-small"
                   />
                   
-      
+        
                   <div
                     class="family-meta"
                   >
                     
-        
-                    <span>
-                      sans-serif
-                    </span>
+          
+                    <ul>
+                      
+            
+                      <li>
+                        sans-serif
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="regular"
+                        >
+                          1 variants
+                        </span>
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="latin"
+                        >
+                          1 subsets
+                        </span>
+                      </li>
+                      
+          
+                    </ul>
                     
-        •
         
-                    <span
-                      aria-label="regular"
-                    >
-                      1 variants
-                    </span>
-                    
-        •
-        
-                    <span
-                      aria-label="latin"
-                    >
-                      1 subsets
-                    </span>
-                    
-      
                   </div>
                   
       
@@ -3374,7 +3423,6 @@ exports[`MainApp renders correctly 1`] = `
       
                 <div
                   class="family-title acme"
-                  id="family-name"
                   style="font-family: 'Acme';"
                 >
                   
@@ -3387,38 +3435,46 @@ exports[`MainApp renders correctly 1`] = `
                   class="family-meta-container"
                 >
                   
-     
+        
                   <span
                     class="family-title-small"
                   />
                   
-      
+        
                   <div
                     class="family-meta"
                   >
                     
-        
-                    <span>
-                      sans-serif
-                    </span>
+          
+                    <ul>
+                      
+            
+                      <li>
+                        sans-serif
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="regular"
+                        >
+                          1 variants
+                        </span>
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="latin"
+                        >
+                          1 subsets
+                        </span>
+                      </li>
+                      
+          
+                    </ul>
                     
-        •
         
-                    <span
-                      aria-label="regular"
-                    >
-                      1 variants
-                    </span>
-                    
-        •
-        
-                    <span
-                      aria-label="latin"
-                    >
-                      1 subsets
-                    </span>
-                    
-      
                   </div>
                   
       
@@ -3527,7 +3583,6 @@ exports[`MainApp renders correctly 1`] = `
       
                 <div
                   class="family-title actor"
-                  id="family-name"
                   style="font-family: 'Actor';"
                 >
                   
@@ -3540,38 +3595,46 @@ exports[`MainApp renders correctly 1`] = `
                   class="family-meta-container"
                 >
                   
-     
+        
                   <span
                     class="family-title-small"
                   />
                   
-      
+        
                   <div
                     class="family-meta"
                   >
                     
-        
-                    <span>
-                      sans-serif
-                    </span>
+          
+                    <ul>
+                      
+            
+                      <li>
+                        sans-serif
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="regular"
+                        >
+                          1 variants
+                        </span>
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="latin"
+                        >
+                          1 subsets
+                        </span>
+                      </li>
+                      
+          
+                    </ul>
                     
-        •
         
-                    <span
-                      aria-label="regular"
-                    >
-                      1 variants
-                    </span>
-                    
-        •
-        
-                    <span
-                      aria-label="latin"
-                    >
-                      1 subsets
-                    </span>
-                    
-      
                   </div>
                   
       
@@ -3662,7 +3725,6 @@ exports[`MainApp renders correctly 1`] = `
       
                 <div
                   class="family-title adamina"
-                  id="family-name"
                   style="font-family: 'Adamina';"
                 >
                   
@@ -3675,38 +3737,46 @@ exports[`MainApp renders correctly 1`] = `
                   class="family-meta-container"
                 >
                   
-     
+        
                   <span
                     class="family-title-small"
                   />
                   
-      
+        
                   <div
                     class="family-meta"
                   >
                     
-        
-                    <span>
-                      serif
-                    </span>
+          
+                    <ul>
+                      
+            
+                      <li>
+                        serif
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="regular"
+                        >
+                          1 variants
+                        </span>
+                      </li>
+                      
+            
+                      <li>
+                        <span
+                          aria-label="latin"
+                        >
+                          1 subsets
+                        </span>
+                      </li>
+                      
+          
+                    </ul>
                     
-        •
         
-                    <span
-                      aria-label="regular"
-                    >
-                      1 variants
-                    </span>
-                    
-        •
-        
-                    <span
-                      aria-label="latin"
-                    >
-                      1 subsets
-                    </span>
-                    
-      
                   </div>
                   
       

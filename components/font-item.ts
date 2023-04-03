@@ -47,11 +47,11 @@ class FontItem extends HTMLElement {
   }
 
   get id(): string {
-    return this.font.family.toLowerCase().replaceAll(' ', "-");
+    return this.font.family.toLowerCase().replaceAll(" ", "-");
   }
 
   get slug(): string {
-    return this.font.family.replaceAll(' ', "+");
+    return this.font.family.replaceAll(" ", "+");
   }
 
   connectedCallback() {
@@ -72,26 +72,24 @@ class FontItem extends HTMLElement {
 
     this.innerHTML = `<div id="family-${this.id}" class="family">
     <div class="family-link">
-      <div id="family-name" class="family-title ${
-        this.id
-      }" style="${familyStyle}">
+      <div class="family-title ${this.id}" style="${familyStyle}">
         ${this.previewName}
       </div>
       <div class="family-meta-container">
-     <span class="family-title-small">${
-       this.previewName == family ? "" : family
-     }</span>
-      <div class="family-meta">
-        <span>${category}</span>
-        &bull;
-        <span aria-label="${variants.join(", ")}"
-          >${variants.length} variants${variable ? " (variable)" : ""}</span
-        >
-        &bull;
-        <span aria-label="${subsets.join(", ")}">${
+        <span class="family-title-small">${
+          this.previewName == family ? "" : family
+        }</span>
+        <div class="family-meta">
+          <ul>
+            <li>${category}</li>
+            <li><span aria-label="${variants.join(", ")}">${
+      variants.length
+    } variants${variable ? " (variable)" : ""}</span></li>
+            <li><span aria-label="${subsets.join(", ")}">${
       subsets.length
-    } subsets</span>
-      </div>
+    } subsets</span></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="family-tags">
