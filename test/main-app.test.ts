@@ -1,6 +1,7 @@
 import "./components";
 import userEvent from "@testing-library/user-event";
 import { readFileSync } from "node:fs";
+import customEvent from "../components/custom-event";
 
 // get _site/index.html
 const html = readFileSync("./_site/index.html", "utf8");
@@ -193,8 +194,9 @@ describe("MainApp", () => {
 
   test("selects need tags tag", () => {
     mainApp.dispatchEvent(
-      new CustomEvent("tag-button-selected", {
-        detail: { value: "need tags", id: "selectedTag" },
+      customEvent("tag-button-selected", {
+        value: "need tags",
+        id: "selectedTag",
       })
     );
     const searchStatus = document.querySelector("search-status");
@@ -246,14 +248,15 @@ describe("MainApp", () => {
   test("removes tag", () => {
     // add tag first
     mainApp.dispatchEvent(
-      new CustomEvent("tag-button-selected", {
-        detail: { value: "cute", id: "selectedTag" },
+      customEvent("tag-button-selected", {
+        value: "cute",
+        id: "selectedTag",
       })
     );
 
     mainApp.dispatchEvent(
-      new CustomEvent("clear-filter", {
-        detail: { filter: "selectedTag" },
+      customEvent("clear-filter", {
+        value: "selectedTag",
       })
     );
 
@@ -342,8 +345,8 @@ describe("MainApp", () => {
     await user.type(inputSearch, "are you serious");
 
     mainApp.dispatchEvent(
-      new CustomEvent("clear-filter", {
-        detail: { filter: "selectedSearch" },
+      customEvent("clear-filter", {
+        value: "selectedSearch",
       })
     );
     const searchStatus = document.querySelector("search-status");
@@ -413,8 +416,8 @@ describe("MainApp", () => {
     `);
 
     mainApp.dispatchEvent(
-      new CustomEvent("clear-filter", {
-        detail: { filter: "selectedVariable" },
+      customEvent("clear-filter", {
+        value: "selectedVariable",
       })
     );
 
@@ -444,8 +447,8 @@ describe("MainApp", () => {
     );
 
     mainApp.dispatchEvent(
-      new CustomEvent("clear-filter", {
-        detail: { filter: "selectedCategory" },
+      customEvent("clear-filter", {
+        value: "selectedCategory",
       })
     );
 
@@ -476,8 +479,8 @@ describe("MainApp", () => {
     );
 
     mainApp.dispatchEvent(
-      new CustomEvent("clear-filter", {
-        detail: { filter: "selectedSubset" },
+      customEvent("clear-filter", {
+        value: "selectedSubset",
       })
     );
 
@@ -508,8 +511,8 @@ describe("MainApp", () => {
     );
 
     mainApp.dispatchEvent(
-      new CustomEvent("clear-filter", {
-        detail: { filter: "selectedVariant" },
+      customEvent("clear-filter", {
+        value: "selectedVariant",
       })
     );
 
@@ -535,9 +538,7 @@ describe("MainApp", () => {
 
   test("adds and removes all filters: tag, variable, search, category, subset, variant", async () => {
     mainApp.dispatchEvent(
-      new CustomEvent("tag-button-selected", {
-        detail: { value: "modern", id: "selectedTag" },
-      })
+      customEvent("tag-button-selected", { value: "modern", id: "selectedTag" })
     );
     const checkboxVariable: HTMLInputElement =
       document.querySelector("#selectedVariable");
@@ -1010,11 +1011,7 @@ describe("MainApp", () => {
   });
 
   test("sorts fonts when sort-by custom event is fired", async () => {
-    mainApp.dispatchEvent(
-      new CustomEvent("sort-by", {
-        detail: { sortBy: "date" },
-      })
-    );
+    mainApp.dispatchEvent(customEvent("sort-by", { value: "date" }));
 
     const sortBy = document.querySelector("sort-by");
     expect(sortBy).toMatchInlineSnapshot(`

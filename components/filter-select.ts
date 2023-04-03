@@ -8,7 +8,7 @@ class FilterSelect extends HTMLSelectElement {
 
     // Listen for events to clear filter
     window.addEventListener("remove-select", (event: CustomEvent) => {
-      if (event.detail.filter === this.id) {
+      if (event.detail.value === this.id) {
         this.value = "";
         this.onChange();
       }

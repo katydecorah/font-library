@@ -63,8 +63,8 @@ class MainApp extends HTMLElement {
     fontResults.innerHTML = `<font-results sort-by="${sortBy}" selected-category="${selectedCategory}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-tag="${selectedTag}" selected-search="${selectedSearch}" selected-variable="${selectedVariable}"></font-results>`;
   }
 
-  clearFilter({ detail: { filter } }: CustomEvent<{ filter: string }>) {
-    if (filter) this.removeSingleFilter(filter);
+  clearFilter({ detail: { value } }: CustomEvent<{ value: string }>) {
+    if (value) this.removeSingleFilter(value);
     else this.removeAllFilters();
     this.render();
   }
@@ -99,10 +99,10 @@ class MainApp extends HTMLElement {
     (document.querySelector("#selectedSearch") as HTMLInputElement).value = "";
   }
 
-  removeSelect(filter: string) {
+  removeSelect(value: string) {
     window.dispatchEvent(
       customEvent("remove-select", {
-        filter,
+        value,
       })
     );
   }
@@ -133,7 +133,7 @@ class MainApp extends HTMLElement {
   }
 
   handleSortBy(event: CustomEvent) {
-    this.sortBy = event.detail.sortBy;
+    this.sortBy = event.detail.value;
     this.render();
   }
 }

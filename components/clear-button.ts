@@ -10,7 +10,7 @@ class ClearButton extends HTMLButtonElement {
   onClick() {
     this.dispatchEvent(
       customEvent("clear-filter", {
-        filter: this.value,
+        value: this.value,
       })
     );
   }

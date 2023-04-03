@@ -38,8 +38,8 @@ class SortBy extends HTMLElement {
   }
 
   handleSort(event: ButtonType) {
-    const sortBy = (event.target as HTMLElement).dataset.sort;
-    this.dispatchEvent(customEvent("sort-by", { sortBy }));
+    const value = (event.target as HTMLElement).dataset.sort;
+    this.dispatchEvent(customEvent("sort-by", { value }));
   }
 }
 
