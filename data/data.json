@@ -6023,7 +6023,7 @@
     ],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "serif",
-    "tags": ["roman"],
+    "tags": ["roman", "blackletter"],
     "lineNumber": 488,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -6043,7 +6043,7 @@
     ],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": ["roman"],
+    "tags": ["roman", "blackletter"],
     "lineNumber": 489,
     "variable": true,
     "lastModified": "2023-03-21"
@@ -7661,7 +7661,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
-    "tags": ["calligraphic"],
+    "tags": ["calligraphic", "blackletter"],
     "lineNumber": 618,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -10270,7 +10270,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": ["rock", "tattoo"],
+    "tags": ["rock", "tattoo", "blackletter"],
     "lineNumber": 832,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -17283,7 +17283,7 @@
     ],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["blackletter"],
     "lineNumber": 1387,
     "variable": true,
     "lastModified": "2022-09-22"
