@@ -302,6 +302,12 @@ input[type="text"] {
   grid-gap: 0.5em;
 }
 
+.families {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .family {
   /*
   transition: var(--transition);

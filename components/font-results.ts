@@ -11,7 +11,7 @@ class FontResults extends HTMLElement {
     super();
     this.addEventListener("next-page", this.handlePage);
     this.addEventListener("previous-page", this.handlePage);
-    this.renderfontItem = this.renderfontItem.bind(this);
+    this.renderFontItem = this.renderFontItem.bind(this);
   }
 
   get selectedTag() {
@@ -55,9 +55,9 @@ class FontResults extends HTMLElement {
 
     this.innerHTML = `${this.renderSearchStatus()}
 <sort-by sort-by=${this.sortBy}></sort-by>
-<div class="families">${paginatedData
-      .map((font) => this.renderfontItem(font))
-      .join("\n")}</div>
+<ul class="families">${paginatedData
+      .map((font) => this.renderFontItem(font))
+      .join("\n")}</ul>
 <pagination-buttons results-length="${resultsLength}" page-size="${
       this.pageSize
     }" current-page="${this.currentPage}"></pagination-buttons>`;
@@ -78,11 +78,11 @@ class FontResults extends HTMLElement {
     return `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${selectedSearch}" selected-variable="${stringSelectedVariable}"></search-status>`;
   }
 
-  renderfontItem(font: GeneratedData[number]) {
+  renderFontItem(font: GeneratedData[number]) {
     const { selectedVariant, selectedSubset, selectedTag } = this;
-    return `<font-item selected-variant='${selectedVariant}' selected-subset='${selectedSubset}' selected-tag='${selectedTag}' font='${JSON.stringify(
+    return `<li is="font-item" selected-variant='${selectedVariant}' selected-subset='${selectedSubset}' selected-tag='${selectedTag}' font='${JSON.stringify(
       font
-    )}'></font-item>`;
+    )}'></li>`;
   }
 
   handlePage({ type }: CustomEvent) {

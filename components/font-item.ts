@@ -8,7 +8,7 @@ export type SampleSubsets = typeof sampleSubsets;
 export type RtlSubsets = typeof rtlSubsets;
 export type Swaps = typeof swaps;
 
-class FontItem extends HTMLElement {
+class FontItem extends HTMLLIElement {
   subset: string;
 
   constructor() {
@@ -145,4 +145,4 @@ class FontItem extends HTMLElement {
   }
 }
 
-customElements.define("font-item", FontItem);
+customElements.define("font-item", FontItem, { extends: "li" });
