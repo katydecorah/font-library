@@ -82,8 +82,8 @@ class FontResults extends HTMLElement {
       setAttributes(fontItem, {
         is: "font-item",
         font: JSON.stringify(font),
-        variant: this.selectedVariant,
-        subset: this.selectedSubset,
+        "selected-variant": this.selectedVariant,
+        "selected-subset": this.selectedSubset,
       });
       items.push(fontItem.outerHTML);
     }
