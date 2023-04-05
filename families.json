@@ -1227,7 +1227,7 @@
   "Rubik Microbe": [],
   "Rubik Mono One": ["caps", "heavy", "round"],
   "Rubik Moonrocks": [],
-  "Rubik Pixels": [],
+  "Rubik Pixels": ["pixel"],
   "Rubik Puddles": ["outline", "bubbly"],
   "Rubik Spray Paint": ["uneven", "graffiti"],
   "Rubik Storm": ["distressed"],

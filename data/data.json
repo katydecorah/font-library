@@ -15329,7 +15329,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "hebrew", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["pixel"],
     "lineNumber": 1230,
     "variable": false,
     "lastModified": "2023-04-04"
