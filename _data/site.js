@@ -9,8 +9,7 @@ const hash = childProcess.execSync("git rev-parse HEAD").toString().trim();
 // eslint-disable-next-line no-undef
 module.exports = {
   title: "Font Library",
-  url: "https://katydecorah.com",
-  baseurl: "/font-library",
+  url: "https://fontlibrary.dev",
   description: "An open source project to tag and organize Google Fonts.",
   github: "https://github.com/katydecorah/font-library",
   contributing:

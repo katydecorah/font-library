@@ -24,8 +24,8 @@ jobs:
       - name: Scan site
         uses: double-great/accessibility-scan-action@v0.2.0
         with:
-          url: http://localhost:8080/font-library/
-          inputUrls: http://localhost:8080/font-library/?category=sans-serif,http://localhost:8080/font-library/?tag=art+deco,http://localhost:8080/font-library/?variant=600&tag=modern&subset=greek&category=sans-serif
+          url: http://localhost:8080
+          inputUrls: http://localhost:8080?category=sans-serif,http://localhost:8080?tag=art+deco,http://localhost:8080/?variant=600&tag=modern&subset=greek&category=sans-serif
 
       - name: Upload report as artifact
         uses: actions/upload-artifact@v3

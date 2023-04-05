@@ -27,7 +27,6 @@ module.exports = function (eleventyConfig) {
       output: "./_site",
     },
     passthroughFileCopy: true,
-    pathPrefix: "/font-library/",
     templateFormats: ["html", "md", "liquid"],
   };
 };
