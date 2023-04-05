@@ -13,22 +13,22 @@ class SearchStatus extends HTMLElement {
     return [
       {
         label: "category",
-        value: this.getAttribute("selected-category") || "",
+        value: this.getAttribute("selected-category"),
         id: "selectedCategory",
       },
       {
         label: "tag",
-        value: this.getAttribute("selected-tag") || "",
+        value: this.getAttribute("selected-tag"),
         id: "selectedTag",
       },
       {
         label: "subset",
-        value: this.getAttribute("selected-subset") || "",
+        value: this.getAttribute("selected-subset"),
         id: "selectedSubset",
       },
       {
         label: "variant",
-        value: this.getAttribute("selected-variant") || "",
+        value: this.getAttribute("selected-variant"),
         id: "selectedVariant",
       },
       {
@@ -38,7 +38,7 @@ class SearchStatus extends HTMLElement {
       },
       {
         label: "variable",
-        value: this.getAttribute("selected-variable") || "",
+        value: this.getAttribute("selected-variable"),
         id: "selectedVariable",
       },
     ].filter(({ value }) => value && value !== "");
