@@ -197,7 +197,6 @@ exports[`FontItem is variable font 1`] = `
       class="family-tags-container"
     >
       <button
-        class="family-tag"
         is="tag-button"
         style="font-family: "Abel";"
         title="condensed"
@@ -206,7 +205,6 @@ exports[`FontItem is variable font 1`] = `
         condensed
       </button>
       <button
-        class="family-tag"
         is="tag-button"
         style="font-family: "Akshar";"
         title="narrow"
@@ -331,7 +329,6 @@ exports[`FontItem no latin subset 1`] = `
       class="family-tags-container"
     >
       <button
-        class="family-tag"
         is="tag-button"
         style="font-family: "Asap";"
         title="round"
@@ -340,7 +337,6 @@ exports[`FontItem no latin subset 1`] = `
         round
       </button>
       <button
-        class="family-tag"
         is="tag-button"
         style="font-family: "Azeret Mono";"
         title="monolinear"
@@ -349,7 +345,6 @@ exports[`FontItem no latin subset 1`] = `
         monolinear
       </button>
       <button
-        class="family-tag"
         is="tag-button"
         style="font-family: "Englebert";"
         title="1930s"
@@ -472,7 +467,6 @@ exports[`FontItem renders correctly 1`] = `
       class="family-tags-container"
     >
       <button
-        class="family-tag"
         is="tag-button"
         style="font-family: "Alatsi";"
         title="geometric"
@@ -597,7 +591,6 @@ exports[`FontItem rtl subset 1`] = `
       class="family-tags-container"
     >
       <button
-        class="family-tag"
         is="tag-button"
         style="font-family: "Almarai";"
         title="arabic"
@@ -723,7 +716,6 @@ exports[`FontItem selected subset 1`] = `
       class="family-tags-container"
     >
       <button
-        class="family-tag"
         is="tag-button"
         style="font-family: "Alatsi";"
         title="geometric"
@@ -847,7 +839,6 @@ exports[`FontItem selected variant, 900 1`] = `
       class="family-tags-container"
     >
       <button
-        class="family-tag"
         is="tag-button"
         style="font-family: "Anybody";"
         title="eurostile"
@@ -971,7 +962,6 @@ exports[`FontItem selected variant, 900italic 1`] = `
       class="family-tags-container"
     >
       <button
-        class="family-tag"
         is="tag-button"
         style="font-family: "Anybody";"
         title="eurostile"

@@ -137,7 +137,7 @@ header {
   text-decoration: underline;
 }
 
-.family-tag {
+button[is="tag-button"] {
   color: var(--text-color-accent);
   background: transparent;
   font-size: 1em;
@@ -152,9 +152,9 @@ header {
   align-items: center;
 }
 
-.family-tag.active,
-.family-tag:has(:checked),
-.family-tag:hover {
+button[is="tag-button"].active,
+button[is="tag-button"]:has(:checked),
+button[is="tag-button"]:hover {
   background: var(--white);
   border-color: var(--selected-tag);
   color: var(--selected-tag);

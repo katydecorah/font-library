@@ -75,7 +75,7 @@ class FontItem extends HTMLLIElement {
     const tagButtons = tags
       .map(
         (tag: string) =>
-          `<button is="tag-button" class="family-tag" title="${tag}" value="${tag}">${tag}</button>`
+          `<button is="tag-button" title="${tag}" value="${tag}">${tag}</button>`
       )
       .join("");
 

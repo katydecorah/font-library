@@ -124,7 +124,6 @@ exports[`FontResults renders correctly 1`] = `
           class="family-tags-container"
         >
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "ABeeZee";"
             title="literacy"
@@ -133,7 +132,6 @@ exports[`FontResults renders correctly 1`] = `
             literacy
           </button>
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Butterfly Kids";"
             title="kids"
@@ -255,7 +253,6 @@ exports[`FontResults renders correctly 1`] = `
           class="family-tags-container"
         >
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Abel";"
             title="condensed"
@@ -489,7 +486,6 @@ exports[`FontResults renders correctly 1`] = `
           class="family-tags-container"
         >
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Aboreto";"
             title="caps"
@@ -611,7 +607,6 @@ exports[`FontResults renders correctly 1`] = `
           class="family-tags-container"
         >
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Anton";"
             title="heavy"
@@ -620,7 +615,6 @@ exports[`FontResults renders correctly 1`] = `
             heavy
           </button>
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Babylonica";"
             title="elegant"
@@ -629,7 +623,6 @@ exports[`FontResults renders correctly 1`] = `
             elegant
           </button>
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Abril Fatface";"
             title="didone"
@@ -638,7 +631,6 @@ exports[`FontResults renders correctly 1`] = `
             didone
           </button>
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Antic Didone";"
             title="headlines"
@@ -872,7 +864,6 @@ exports[`FontResults renders correctly 1`] = `
           class="family-tags-container"
         >
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Aclonica";"
             title="modern"
@@ -881,7 +872,6 @@ exports[`FontResults renders correctly 1`] = `
             modern
           </button>
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Amaranth";"
             title="friendly"
@@ -1003,7 +993,6 @@ exports[`FontResults renders correctly 1`] = `
           class="family-tags-container"
         >
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Bangers";"
             title="cartoon"
@@ -1012,7 +1001,6 @@ exports[`FontResults renders correctly 1`] = `
             cartoon
           </button>
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Architects Daughter";"
             title="comic"
@@ -1021,7 +1009,6 @@ exports[`FontResults renders correctly 1`] = `
             comic
           </button>
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Acme";"
             title="groovy"
@@ -1030,7 +1017,6 @@ exports[`FontResults renders correctly 1`] = `
             groovy
           </button>
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Antic Didone";"
             title="headlines"
@@ -1152,7 +1138,6 @@ exports[`FontResults renders correctly 1`] = `
           class="family-tags-container"
         >
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Actor";"
             title="thin"
@@ -1161,7 +1146,6 @@ exports[`FontResults renders correctly 1`] = `
             thin
           </button>
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Alike";"
             title="legibility"
@@ -1283,7 +1267,6 @@ exports[`FontResults renders correctly 1`] = `
           class="family-tags-container"
         >
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Adamina";"
             title="compact"
@@ -1292,7 +1275,6 @@ exports[`FontResults renders correctly 1`] = `
             compact
           </button>
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Almendra";"
             title="small sizes"
@@ -1301,7 +1283,6 @@ exports[`FontResults renders correctly 1`] = `
             small sizes
           </button>
           <button
-            class="family-tag"
             is="tag-button"
             style="font-family: "Amethysta";"
             title="transitional"
