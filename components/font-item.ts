@@ -79,8 +79,7 @@ class FontItem extends HTMLLIElement {
       )
       .join("");
 
-    this.innerHTML = `<div id="family-${this.id}" class="family">
-    <div class="family-link">
+    this.innerHTML = `<div class="family-link">
       <div class="family-title ${this.id}" style="${this.familyStyle}">
         ${this.previewName}
       </div>
@@ -117,8 +116,7 @@ class FontItem extends HTMLLIElement {
           >Google Fonts &rarr;</a
         >
       </div>
-    </div>
-  </div>`;
+    </div>`;
   }
 
   addFontToHead(): void {

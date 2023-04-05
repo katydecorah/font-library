@@ -2440,137 +2440,128 @@ exports[`MainApp renders correctly 1`] = `
             is="font-item"
           >
             <div
-              class="family"
-              id="family-abeezee"
+              class="family-link"
             >
               
-    
+      
               <div
-                class="family-link"
+                class="family-title abeezee"
+                style="font-family: 'ABeeZee';"
               >
                 
-      
-                <div
-                  class="family-title abeezee"
-                  style="font-family: 'ABeeZee';"
-                >
-                  
         ABeeZee
       
-                </div>
-                
-      
-                <div
-                  class="family-meta-container"
-                >
-                  
-        
-                  <span
-                    class="family-title-small"
-                  />
-                  
-        
-                  <div
-                    class="family-meta"
-                  >
-                    
-          
-                    <ul>
-                      
-            
-                      <li>
-                        sans-serif
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="regular, italic"
-                        >
-                          2 variants
-                        </span>
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="latin, latin-ext"
-                        >
-                          2 subsets
-                        </span>
-                      </li>
-                      
-          
-                    </ul>
-                    
-        
-                  </div>
-                  
-      
-                </div>
-                
-    
               </div>
               
-    
+      
               <div
-                class="family-tags"
+                class="family-meta-container"
               >
                 
-      
+        
+                <span
+                  class="family-title-small"
+                />
+                
+        
                 <div
-                  class="family-tags-container"
+                  class="family-meta"
                 >
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "ABeeZee";"
-                    title="literacy"
-                    value="literacy"
-                  >
-                    literacy
-                  </button>
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Butterfly Kids";"
-                    title="kids"
-                    value="kids"
-                  >
-                    kids
-                  </button>
+                  
+          
+                  <ul>
+                    
+            
+                    <li>
+                      sans-serif
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="regular, italic"
+                      >
+                        2 variants
+                      </span>
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="latin, latin-ext"
+                      >
+                        2 subsets
+                      </span>
+                    </li>
+                    
+          
+                  </ul>
+                  
+        
                 </div>
                 
       
-                <div
-                  class="family-meta-links"
-                >
-                  
-        
-                  <a
-                    aria-label="Edit tags for ABeeZee"
-                    href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L2"
-                    target="_blank"
-                  >
-                    Edit tags
-                  </a>
-                  
-        
-                  <a
-                    aria-label="Visit ABeeZee on Google Fonts"
-                    href="https://fonts.google.com/specimen/ABeeZee"
-                    target="_blank"
-                  >
-                    Google Fonts →
-                  </a>
-                  
-      
-                </div>
-                
-    
               </div>
               
-  
+    
+            </div>
+            
+    
+            <div
+              class="family-tags"
+            >
+              
+      
+              <div
+                class="family-tags-container"
+              >
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "ABeeZee";"
+                  title="literacy"
+                  value="literacy"
+                >
+                  literacy
+                </button>
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Butterfly Kids";"
+                  title="kids"
+                  value="kids"
+                >
+                  kids
+                </button>
+              </div>
+              
+      
+              <div
+                class="family-meta-links"
+              >
+                
+        
+                <a
+                  aria-label="Edit tags for ABeeZee"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L2"
+                  target="_blank"
+                >
+                  Edit tags
+                </a>
+                
+        
+                <a
+                  aria-label="Visit ABeeZee on Google Fonts"
+                  href="https://fonts.google.com/specimen/ABeeZee"
+                  target="_blank"
+                >
+                  Google Fonts →
+                </a>
+                
+      
+              </div>
+              
+    
             </div>
           </li>
           
@@ -2580,128 +2571,119 @@ exports[`MainApp renders correctly 1`] = `
             is="font-item"
           >
             <div
-              class="family"
-              id="family-abel"
+              class="family-link"
             >
               
-    
+      
               <div
-                class="family-link"
+                class="family-title abel"
+                style="font-family: 'Abel';"
               >
                 
-      
-                <div
-                  class="family-title abel"
-                  style="font-family: 'Abel';"
-                >
-                  
         Abel
       
-                </div>
-                
-      
-                <div
-                  class="family-meta-container"
-                >
-                  
-        
-                  <span
-                    class="family-title-small"
-                  />
-                  
-        
-                  <div
-                    class="family-meta"
-                  >
-                    
-          
-                    <ul>
-                      
-            
-                      <li>
-                        sans-serif
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="regular"
-                        >
-                          1 variants
-                        </span>
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="latin"
-                        >
-                          1 subsets
-                        </span>
-                      </li>
-                      
-          
-                    </ul>
-                    
-        
-                  </div>
-                  
-      
-                </div>
-                
-    
               </div>
               
-    
+      
               <div
-                class="family-tags"
+                class="family-meta-container"
               >
                 
-      
+        
+                <span
+                  class="family-title-small"
+                />
+                
+        
                 <div
-                  class="family-tags-container"
+                  class="family-meta"
                 >
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Abel";"
-                    title="condensed"
-                    value="condensed"
-                  >
-                    condensed
-                  </button>
+                  
+          
+                  <ul>
+                    
+            
+                    <li>
+                      sans-serif
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="regular"
+                      >
+                        1 variants
+                      </span>
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="latin"
+                      >
+                        1 subsets
+                      </span>
+                    </li>
+                    
+          
+                  </ul>
+                  
+        
                 </div>
                 
       
-                <div
-                  class="family-meta-links"
-                >
-                  
-        
-                  <a
-                    aria-label="Edit tags for Abel"
-                    href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L3"
-                    target="_blank"
-                  >
-                    Edit tags
-                  </a>
-                  
-        
-                  <a
-                    aria-label="Visit Abel on Google Fonts"
-                    href="https://fonts.google.com/specimen/Abel"
-                    target="_blank"
-                  >
-                    Google Fonts →
-                  </a>
-                  
-      
-                </div>
-                
-    
               </div>
               
-  
+    
+            </div>
+            
+    
+            <div
+              class="family-tags"
+            >
+              
+      
+              <div
+                class="family-tags-container"
+              >
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Abel";"
+                  title="condensed"
+                  value="condensed"
+                >
+                  condensed
+                </button>
+              </div>
+              
+      
+              <div
+                class="family-meta-links"
+              >
+                
+        
+                <a
+                  aria-label="Edit tags for Abel"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L3"
+                  target="_blank"
+                >
+                  Edit tags
+                </a>
+                
+        
+                <a
+                  aria-label="Visit Abel on Google Fonts"
+                  href="https://fonts.google.com/specimen/Abel"
+                  target="_blank"
+                >
+                  Google Fonts →
+                </a>
+                
+      
+              </div>
+              
+    
             </div>
           </li>
           
@@ -2711,118 +2693,109 @@ exports[`MainApp renders correctly 1`] = `
             is="font-item"
           >
             <div
-              class="family"
-              id="family-abhaya-libre"
+              class="family-link"
             >
               
-    
+      
               <div
-                class="family-link"
+                class="family-title abhaya-libre"
+                style="font-family: 'Abhaya Libre';"
               >
                 
-      
-                <div
-                  class="family-title abhaya-libre"
-                  style="font-family: 'Abhaya Libre';"
-                >
-                  
         Abhaya Libre
       
-                </div>
-                
-      
-                <div
-                  class="family-meta-container"
-                >
-                  
-        
-                  <span
-                    class="family-title-small"
-                  />
-                  
-        
-                  <div
-                    class="family-meta"
-                  >
-                    
-          
-                    <ul>
-                      
-            
-                      <li>
-                        serif
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="regular, 500, 600, 700, 800"
-                        >
-                          5 variants
-                        </span>
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="sinhala, latin, latin-ext"
-                        >
-                          3 subsets
-                        </span>
-                      </li>
-                      
-          
-                    </ul>
-                    
-        
-                  </div>
-                  
-      
-                </div>
-                
-    
               </div>
               
-    
+      
               <div
-                class="family-tags"
+                class="family-meta-container"
               >
                 
-      
-                <div
-                  class="family-tags-container"
+        
+                <span
+                  class="family-title-small"
                 />
                 
-      
+        
                 <div
-                  class="family-meta-links"
+                  class="family-meta"
                 >
                   
-        
-                  <a
-                    aria-label="Edit tags for Abhaya Libre"
-                    href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L4"
-                    target="_blank"
-                  >
-                    Edit tags
-                  </a>
+          
+                  <ul>
+                    
+            
+                    <li>
+                      serif
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="regular, 500, 600, 700, 800"
+                      >
+                        5 variants
+                      </span>
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="sinhala, latin, latin-ext"
+                      >
+                        3 subsets
+                      </span>
+                    </li>
+                    
+          
+                  </ul>
                   
         
-                  <a
-                    aria-label="Visit Abhaya Libre on Google Fonts"
-                    href="https://fonts.google.com/specimen/Abhaya+Libre"
-                    target="_blank"
-                  >
-                    Google Fonts →
-                  </a>
-                  
-      
                 </div>
                 
-    
+      
               </div>
               
-  
+    
+            </div>
+            
+    
+            <div
+              class="family-tags"
+            >
+              
+      
+              <div
+                class="family-tags-container"
+              />
+              
+      
+              <div
+                class="family-meta-links"
+              >
+                
+        
+                <a
+                  aria-label="Edit tags for Abhaya Libre"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L4"
+                  target="_blank"
+                >
+                  Edit tags
+                </a>
+                
+        
+                <a
+                  aria-label="Visit Abhaya Libre on Google Fonts"
+                  href="https://fonts.google.com/specimen/Abhaya+Libre"
+                  target="_blank"
+                >
+                  Google Fonts →
+                </a>
+                
+      
+              </div>
+              
+    
             </div>
           </li>
           
@@ -2832,128 +2805,119 @@ exports[`MainApp renders correctly 1`] = `
             is="font-item"
           >
             <div
-              class="family"
-              id="family-aboreto"
+              class="family-link"
             >
               
-    
+      
               <div
-                class="family-link"
+                class="family-title aboreto"
+                style="font-family: 'Aboreto';"
               >
                 
-      
-                <div
-                  class="family-title aboreto"
-                  style="font-family: 'Aboreto';"
-                >
-                  
         Aboreto
       
-                </div>
-                
-      
-                <div
-                  class="family-meta-container"
-                >
-                  
-        
-                  <span
-                    class="family-title-small"
-                  />
-                  
-        
-                  <div
-                    class="family-meta"
-                  >
-                    
-          
-                    <ul>
-                      
-            
-                      <li>
-                        display
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="regular"
-                        >
-                          1 variants
-                        </span>
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="latin, latin-ext"
-                        >
-                          2 subsets
-                        </span>
-                      </li>
-                      
-          
-                    </ul>
-                    
-        
-                  </div>
-                  
-      
-                </div>
-                
-    
               </div>
               
-    
+      
               <div
-                class="family-tags"
+                class="family-meta-container"
               >
                 
-      
+        
+                <span
+                  class="family-title-small"
+                />
+                
+        
                 <div
-                  class="family-tags-container"
+                  class="family-meta"
                 >
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Aboreto";"
-                    title="caps"
-                    value="caps"
-                  >
-                    caps
-                  </button>
+                  
+          
+                  <ul>
+                    
+            
+                    <li>
+                      display
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="regular"
+                      >
+                        1 variants
+                      </span>
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="latin, latin-ext"
+                      >
+                        2 subsets
+                      </span>
+                    </li>
+                    
+          
+                  </ul>
+                  
+        
                 </div>
                 
       
-                <div
-                  class="family-meta-links"
-                >
-                  
-        
-                  <a
-                    aria-label="Edit tags for Aboreto"
-                    href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L5"
-                    target="_blank"
-                  >
-                    Edit tags
-                  </a>
-                  
-        
-                  <a
-                    aria-label="Visit Aboreto on Google Fonts"
-                    href="https://fonts.google.com/specimen/Aboreto"
-                    target="_blank"
-                  >
-                    Google Fonts →
-                  </a>
-                  
-      
-                </div>
-                
-    
               </div>
               
-  
+    
+            </div>
+            
+    
+            <div
+              class="family-tags"
+            >
+              
+      
+              <div
+                class="family-tags-container"
+              >
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Aboreto";"
+                  title="caps"
+                  value="caps"
+                >
+                  caps
+                </button>
+              </div>
+              
+      
+              <div
+                class="family-meta-links"
+              >
+                
+        
+                <a
+                  aria-label="Edit tags for Aboreto"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L5"
+                  target="_blank"
+                >
+                  Edit tags
+                </a>
+                
+        
+                <a
+                  aria-label="Visit Aboreto on Google Fonts"
+                  href="https://fonts.google.com/specimen/Aboreto"
+                  target="_blank"
+                >
+                  Google Fonts →
+                </a>
+                
+      
+              </div>
+              
+    
             </div>
           </li>
           
@@ -2963,155 +2927,146 @@ exports[`MainApp renders correctly 1`] = `
             is="font-item"
           >
             <div
-              class="family"
-              id="family-abril-fatface"
+              class="family-link"
             >
               
-    
+      
               <div
-                class="family-link"
+                class="family-title abril-fatface"
+                style="font-family: 'Abril Fatface';"
               >
                 
-      
-                <div
-                  class="family-title abril-fatface"
-                  style="font-family: 'Abril Fatface';"
-                >
-                  
         Abril Fatface
       
-                </div>
-                
-      
-                <div
-                  class="family-meta-container"
-                >
-                  
-        
-                  <span
-                    class="family-title-small"
-                  />
-                  
-        
-                  <div
-                    class="family-meta"
-                  >
-                    
-          
-                    <ul>
-                      
-            
-                      <li>
-                        display
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="regular"
-                        >
-                          1 variants
-                        </span>
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="latin, latin-ext"
-                        >
-                          2 subsets
-                        </span>
-                      </li>
-                      
-          
-                    </ul>
-                    
-        
-                  </div>
-                  
-      
-                </div>
-                
-    
               </div>
               
-    
+      
               <div
-                class="family-tags"
+                class="family-meta-container"
               >
                 
-      
+        
+                <span
+                  class="family-title-small"
+                />
+                
+        
                 <div
-                  class="family-tags-container"
+                  class="family-meta"
                 >
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Anton";"
-                    title="heavy"
-                    value="heavy"
-                  >
-                    heavy
-                  </button>
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Babylonica";"
-                    title="elegant"
-                    value="elegant"
-                  >
-                    elegant
-                  </button>
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Abril Fatface";"
-                    title="didone"
-                    value="didone"
-                  >
-                    didone
-                  </button>
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Antic Didone";"
-                    title="headlines"
-                    value="headlines"
-                  >
-                    headlines
-                  </button>
+                  
+          
+                  <ul>
+                    
+            
+                    <li>
+                      display
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="regular"
+                      >
+                        1 variants
+                      </span>
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="latin, latin-ext"
+                      >
+                        2 subsets
+                      </span>
+                    </li>
+                    
+          
+                  </ul>
+                  
+        
                 </div>
                 
       
-                <div
-                  class="family-meta-links"
-                >
-                  
-        
-                  <a
-                    aria-label="Edit tags for Abril Fatface"
-                    href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L6"
-                    target="_blank"
-                  >
-                    Edit tags
-                  </a>
-                  
-        
-                  <a
-                    aria-label="Visit Abril Fatface on Google Fonts"
-                    href="https://fonts.google.com/specimen/Abril+Fatface"
-                    target="_blank"
-                  >
-                    Google Fonts →
-                  </a>
-                  
-      
-                </div>
-                
-    
               </div>
               
-  
+    
+            </div>
+            
+    
+            <div
+              class="family-tags"
+            >
+              
+      
+              <div
+                class="family-tags-container"
+              >
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Anton";"
+                  title="heavy"
+                  value="heavy"
+                >
+                  heavy
+                </button>
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Babylonica";"
+                  title="elegant"
+                  value="elegant"
+                >
+                  elegant
+                </button>
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Abril Fatface";"
+                  title="didone"
+                  value="didone"
+                >
+                  didone
+                </button>
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Antic Didone";"
+                  title="headlines"
+                  value="headlines"
+                >
+                  headlines
+                </button>
+              </div>
+              
+      
+              <div
+                class="family-meta-links"
+              >
+                
+        
+                <a
+                  aria-label="Edit tags for Abril Fatface"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L6"
+                  target="_blank"
+                >
+                  Edit tags
+                </a>
+                
+        
+                <a
+                  aria-label="Visit Abril Fatface on Google Fonts"
+                  href="https://fonts.google.com/specimen/Abril+Fatface"
+                  target="_blank"
+                >
+                  Google Fonts →
+                </a>
+                
+      
+              </div>
+              
+    
             </div>
           </li>
           
@@ -3121,118 +3076,109 @@ exports[`MainApp renders correctly 1`] = `
             is="font-item"
           >
             <div
-              class="family"
-              id="family-abyssinica-sil"
+              class="family-link"
             >
               
-    
+      
               <div
-                class="family-link"
+                class="family-title abyssinica-sil"
+                style="font-family: 'Abyssinica SIL';"
               >
                 
-      
-                <div
-                  class="family-title abyssinica-sil"
-                  style="font-family: 'Abyssinica SIL';"
-                >
-                  
         Abyssinica SIL
       
-                </div>
-                
-      
-                <div
-                  class="family-meta-container"
-                >
-                  
-        
-                  <span
-                    class="family-title-small"
-                  />
-                  
-        
-                  <div
-                    class="family-meta"
-                  >
-                    
-          
-                    <ul>
-                      
-            
-                      <li>
-                        serif
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="regular"
-                        >
-                          1 variants
-                        </span>
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="ethiopic, latin, latin-ext"
-                        >
-                          3 subsets
-                        </span>
-                      </li>
-                      
-          
-                    </ul>
-                    
-        
-                  </div>
-                  
-      
-                </div>
-                
-    
               </div>
               
-    
+      
               <div
-                class="family-tags"
+                class="family-meta-container"
               >
                 
-      
-                <div
-                  class="family-tags-container"
+        
+                <span
+                  class="family-title-small"
                 />
                 
-      
+        
                 <div
-                  class="family-meta-links"
+                  class="family-meta"
                 >
                   
-        
-                  <a
-                    aria-label="Edit tags for Abyssinica SIL"
-                    href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L7"
-                    target="_blank"
-                  >
-                    Edit tags
-                  </a>
+          
+                  <ul>
+                    
+            
+                    <li>
+                      serif
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="regular"
+                      >
+                        1 variants
+                      </span>
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="ethiopic, latin, latin-ext"
+                      >
+                        3 subsets
+                      </span>
+                    </li>
+                    
+          
+                  </ul>
                   
         
-                  <a
-                    aria-label="Visit Abyssinica SIL on Google Fonts"
-                    href="https://fonts.google.com/specimen/Abyssinica+SIL"
-                    target="_blank"
-                  >
-                    Google Fonts →
-                  </a>
-                  
-      
                 </div>
                 
-    
+      
               </div>
               
-  
+    
+            </div>
+            
+    
+            <div
+              class="family-tags"
+            >
+              
+      
+              <div
+                class="family-tags-container"
+              />
+              
+      
+              <div
+                class="family-meta-links"
+              >
+                
+        
+                <a
+                  aria-label="Edit tags for Abyssinica SIL"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L7"
+                  target="_blank"
+                >
+                  Edit tags
+                </a>
+                
+        
+                <a
+                  aria-label="Visit Abyssinica SIL on Google Fonts"
+                  href="https://fonts.google.com/specimen/Abyssinica+SIL"
+                  target="_blank"
+                >
+                  Google Fonts →
+                </a>
+                
+      
+              </div>
+              
+    
             </div>
           </li>
           
@@ -3242,137 +3188,128 @@ exports[`MainApp renders correctly 1`] = `
             is="font-item"
           >
             <div
-              class="family"
-              id="family-aclonica"
+              class="family-link"
             >
               
-    
+      
               <div
-                class="family-link"
+                class="family-title aclonica"
+                style="font-family: 'Aclonica';"
               >
                 
-      
-                <div
-                  class="family-title aclonica"
-                  style="font-family: 'Aclonica';"
-                >
-                  
         Aclonica
       
-                </div>
-                
-      
-                <div
-                  class="family-meta-container"
-                >
-                  
-        
-                  <span
-                    class="family-title-small"
-                  />
-                  
-        
-                  <div
-                    class="family-meta"
-                  >
-                    
-          
-                    <ul>
-                      
-            
-                      <li>
-                        sans-serif
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="regular"
-                        >
-                          1 variants
-                        </span>
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="latin"
-                        >
-                          1 subsets
-                        </span>
-                      </li>
-                      
-          
-                    </ul>
-                    
-        
-                  </div>
-                  
-      
-                </div>
-                
-    
               </div>
               
-    
+      
               <div
-                class="family-tags"
+                class="family-meta-container"
               >
                 
-      
+        
+                <span
+                  class="family-title-small"
+                />
+                
+        
                 <div
-                  class="family-tags-container"
+                  class="family-meta"
                 >
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Aclonica";"
-                    title="modern"
-                    value="modern"
-                  >
-                    modern
-                  </button>
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Amaranth";"
-                    title="friendly"
-                    value="friendly"
-                  >
-                    friendly
-                  </button>
+                  
+          
+                  <ul>
+                    
+            
+                    <li>
+                      sans-serif
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="regular"
+                      >
+                        1 variants
+                      </span>
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="latin"
+                      >
+                        1 subsets
+                      </span>
+                    </li>
+                    
+          
+                  </ul>
+                  
+        
                 </div>
                 
       
-                <div
-                  class="family-meta-links"
-                >
-                  
-        
-                  <a
-                    aria-label="Edit tags for Aclonica"
-                    href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L8"
-                    target="_blank"
-                  >
-                    Edit tags
-                  </a>
-                  
-        
-                  <a
-                    aria-label="Visit Aclonica on Google Fonts"
-                    href="https://fonts.google.com/specimen/Aclonica"
-                    target="_blank"
-                  >
-                    Google Fonts →
-                  </a>
-                  
-      
-                </div>
-                
-    
               </div>
               
-  
+    
+            </div>
+            
+    
+            <div
+              class="family-tags"
+            >
+              
+      
+              <div
+                class="family-tags-container"
+              >
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Aclonica";"
+                  title="modern"
+                  value="modern"
+                >
+                  modern
+                </button>
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Amaranth";"
+                  title="friendly"
+                  value="friendly"
+                >
+                  friendly
+                </button>
+              </div>
+              
+      
+              <div
+                class="family-meta-links"
+              >
+                
+        
+                <a
+                  aria-label="Edit tags for Aclonica"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L8"
+                  target="_blank"
+                >
+                  Edit tags
+                </a>
+                
+        
+                <a
+                  aria-label="Visit Aclonica on Google Fonts"
+                  href="https://fonts.google.com/specimen/Aclonica"
+                  target="_blank"
+                >
+                  Google Fonts →
+                </a>
+                
+      
+              </div>
+              
+    
             </div>
           </li>
           
@@ -3382,155 +3319,146 @@ exports[`MainApp renders correctly 1`] = `
             is="font-item"
           >
             <div
-              class="family"
-              id="family-acme"
+              class="family-link"
             >
               
-    
+      
               <div
-                class="family-link"
+                class="family-title acme"
+                style="font-family: 'Acme';"
               >
                 
-      
-                <div
-                  class="family-title acme"
-                  style="font-family: 'Acme';"
-                >
-                  
         Acme
       
-                </div>
-                
-      
-                <div
-                  class="family-meta-container"
-                >
-                  
-        
-                  <span
-                    class="family-title-small"
-                  />
-                  
-        
-                  <div
-                    class="family-meta"
-                  >
-                    
-          
-                    <ul>
-                      
-            
-                      <li>
-                        sans-serif
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="regular"
-                        >
-                          1 variants
-                        </span>
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="latin"
-                        >
-                          1 subsets
-                        </span>
-                      </li>
-                      
-          
-                    </ul>
-                    
-        
-                  </div>
-                  
-      
-                </div>
-                
-    
               </div>
               
-    
+      
               <div
-                class="family-tags"
+                class="family-meta-container"
               >
                 
-      
+        
+                <span
+                  class="family-title-small"
+                />
+                
+        
                 <div
-                  class="family-tags-container"
+                  class="family-meta"
                 >
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Bangers";"
-                    title="cartoon"
-                    value="cartoon"
-                  >
-                    cartoon
-                  </button>
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Architects Daughter";"
-                    title="comic"
-                    value="comic"
-                  >
-                    comic
-                  </button>
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Acme";"
-                    title="groovy"
-                    value="groovy"
-                  >
-                    groovy
-                  </button>
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Antic Didone";"
-                    title="headlines"
-                    value="headlines"
-                  >
-                    headlines
-                  </button>
+                  
+          
+                  <ul>
+                    
+            
+                    <li>
+                      sans-serif
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="regular"
+                      >
+                        1 variants
+                      </span>
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="latin"
+                      >
+                        1 subsets
+                      </span>
+                    </li>
+                    
+          
+                  </ul>
+                  
+        
                 </div>
                 
       
-                <div
-                  class="family-meta-links"
-                >
-                  
-        
-                  <a
-                    aria-label="Edit tags for Acme"
-                    href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L9"
-                    target="_blank"
-                  >
-                    Edit tags
-                  </a>
-                  
-        
-                  <a
-                    aria-label="Visit Acme on Google Fonts"
-                    href="https://fonts.google.com/specimen/Acme"
-                    target="_blank"
-                  >
-                    Google Fonts →
-                  </a>
-                  
-      
-                </div>
-                
-    
               </div>
               
-  
+    
+            </div>
+            
+    
+            <div
+              class="family-tags"
+            >
+              
+      
+              <div
+                class="family-tags-container"
+              >
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Bangers";"
+                  title="cartoon"
+                  value="cartoon"
+                >
+                  cartoon
+                </button>
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Architects Daughter";"
+                  title="comic"
+                  value="comic"
+                >
+                  comic
+                </button>
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Acme";"
+                  title="groovy"
+                  value="groovy"
+                >
+                  groovy
+                </button>
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Antic Didone";"
+                  title="headlines"
+                  value="headlines"
+                >
+                  headlines
+                </button>
+              </div>
+              
+      
+              <div
+                class="family-meta-links"
+              >
+                
+        
+                <a
+                  aria-label="Edit tags for Acme"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L9"
+                  target="_blank"
+                >
+                  Edit tags
+                </a>
+                
+        
+                <a
+                  aria-label="Visit Acme on Google Fonts"
+                  href="https://fonts.google.com/specimen/Acme"
+                  target="_blank"
+                >
+                  Google Fonts →
+                </a>
+                
+      
+              </div>
+              
+    
             </div>
           </li>
           
@@ -3540,137 +3468,128 @@ exports[`MainApp renders correctly 1`] = `
             is="font-item"
           >
             <div
-              class="family"
-              id="family-actor"
+              class="family-link"
             >
               
-    
+      
               <div
-                class="family-link"
+                class="family-title actor"
+                style="font-family: 'Actor';"
               >
                 
-      
-                <div
-                  class="family-title actor"
-                  style="font-family: 'Actor';"
-                >
-                  
         Actor
       
-                </div>
-                
-      
-                <div
-                  class="family-meta-container"
-                >
-                  
-        
-                  <span
-                    class="family-title-small"
-                  />
-                  
-        
-                  <div
-                    class="family-meta"
-                  >
-                    
-          
-                    <ul>
-                      
-            
-                      <li>
-                        sans-serif
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="regular"
-                        >
-                          1 variants
-                        </span>
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="latin"
-                        >
-                          1 subsets
-                        </span>
-                      </li>
-                      
-          
-                    </ul>
-                    
-        
-                  </div>
-                  
-      
-                </div>
-                
-    
               </div>
               
-    
+      
               <div
-                class="family-tags"
+                class="family-meta-container"
               >
                 
-      
+        
+                <span
+                  class="family-title-small"
+                />
+                
+        
                 <div
-                  class="family-tags-container"
+                  class="family-meta"
                 >
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Actor";"
-                    title="thin"
-                    value="thin"
-                  >
-                    thin
-                  </button>
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Alike";"
-                    title="legibility"
-                    value="legibility"
-                  >
-                    legibility
-                  </button>
+                  
+          
+                  <ul>
+                    
+            
+                    <li>
+                      sans-serif
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="regular"
+                      >
+                        1 variants
+                      </span>
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="latin"
+                      >
+                        1 subsets
+                      </span>
+                    </li>
+                    
+          
+                  </ul>
+                  
+        
                 </div>
                 
       
-                <div
-                  class="family-meta-links"
-                >
-                  
-        
-                  <a
-                    aria-label="Edit tags for Actor"
-                    href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L10"
-                    target="_blank"
-                  >
-                    Edit tags
-                  </a>
-                  
-        
-                  <a
-                    aria-label="Visit Actor on Google Fonts"
-                    href="https://fonts.google.com/specimen/Actor"
-                    target="_blank"
-                  >
-                    Google Fonts →
-                  </a>
-                  
-      
-                </div>
-                
-    
               </div>
               
-  
+    
+            </div>
+            
+    
+            <div
+              class="family-tags"
+            >
+              
+      
+              <div
+                class="family-tags-container"
+              >
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Actor";"
+                  title="thin"
+                  value="thin"
+                >
+                  thin
+                </button>
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Alike";"
+                  title="legibility"
+                  value="legibility"
+                >
+                  legibility
+                </button>
+              </div>
+              
+      
+              <div
+                class="family-meta-links"
+              >
+                
+        
+                <a
+                  aria-label="Edit tags for Actor"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L10"
+                  target="_blank"
+                >
+                  Edit tags
+                </a>
+                
+        
+                <a
+                  aria-label="Visit Actor on Google Fonts"
+                  href="https://fonts.google.com/specimen/Actor"
+                  target="_blank"
+                >
+                  Google Fonts →
+                </a>
+                
+      
+              </div>
+              
+    
             </div>
           </li>
           
@@ -3680,146 +3599,137 @@ exports[`MainApp renders correctly 1`] = `
             is="font-item"
           >
             <div
-              class="family"
-              id="family-adamina"
+              class="family-link"
             >
               
-    
+      
               <div
-                class="family-link"
+                class="family-title adamina"
+                style="font-family: 'Adamina';"
               >
                 
-      
-                <div
-                  class="family-title adamina"
-                  style="font-family: 'Adamina';"
-                >
-                  
         Adamina
       
-                </div>
-                
-      
-                <div
-                  class="family-meta-container"
-                >
-                  
-        
-                  <span
-                    class="family-title-small"
-                  />
-                  
-        
-                  <div
-                    class="family-meta"
-                  >
-                    
-          
-                    <ul>
-                      
-            
-                      <li>
-                        serif
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="regular"
-                        >
-                          1 variants
-                        </span>
-                      </li>
-                      
-            
-                      <li>
-                        <span
-                          aria-label="latin"
-                        >
-                          1 subsets
-                        </span>
-                      </li>
-                      
-          
-                    </ul>
-                    
-        
-                  </div>
-                  
-      
-                </div>
-                
-    
               </div>
               
-    
+      
               <div
-                class="family-tags"
+                class="family-meta-container"
               >
                 
-      
+        
+                <span
+                  class="family-title-small"
+                />
+                
+        
                 <div
-                  class="family-tags-container"
+                  class="family-meta"
                 >
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Adamina";"
-                    title="compact"
-                    value="compact"
-                  >
-                    compact
-                  </button>
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Almendra";"
-                    title="small sizes"
-                    value="small sizes"
-                  >
-                    small sizes
-                  </button>
-                  <button
-                    class="family-tag"
-                    is="tag-button"
-                    style="font-family: "Amethysta";"
-                    title="transitional"
-                    value="transitional"
-                  >
-                    transitional
-                  </button>
+                  
+          
+                  <ul>
+                    
+            
+                    <li>
+                      serif
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="regular"
+                      >
+                        1 variants
+                      </span>
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="latin"
+                      >
+                        1 subsets
+                      </span>
+                    </li>
+                    
+          
+                  </ul>
+                  
+        
                 </div>
                 
       
-                <div
-                  class="family-meta-links"
-                >
-                  
-        
-                  <a
-                    aria-label="Edit tags for Adamina"
-                    href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L11"
-                    target="_blank"
-                  >
-                    Edit tags
-                  </a>
-                  
-        
-                  <a
-                    aria-label="Visit Adamina on Google Fonts"
-                    href="https://fonts.google.com/specimen/Adamina"
-                    target="_blank"
-                  >
-                    Google Fonts →
-                  </a>
-                  
-      
-                </div>
-                
-    
               </div>
               
-  
+    
+            </div>
+            
+    
+            <div
+              class="family-tags"
+            >
+              
+      
+              <div
+                class="family-tags-container"
+              >
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Adamina";"
+                  title="compact"
+                  value="compact"
+                >
+                  compact
+                </button>
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Almendra";"
+                  title="small sizes"
+                  value="small sizes"
+                >
+                  small sizes
+                </button>
+                <button
+                  class="family-tag"
+                  is="tag-button"
+                  style="font-family: "Amethysta";"
+                  title="transitional"
+                  value="transitional"
+                >
+                  transitional
+                </button>
+              </div>
+              
+      
+              <div
+                class="family-meta-links"
+              >
+                
+        
+                <a
+                  aria-label="Edit tags for Adamina"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L11"
+                  target="_blank"
+                >
+                  Edit tags
+                </a>
+                
+        
+                <a
+                  aria-label="Visit Adamina on Google Fonts"
+                  href="https://fonts.google.com/specimen/Adamina"
+                  target="_blank"
+                >
+                  Google Fonts →
+                </a>
+                
+      
+              </div>
+              
+    
             </div>
           </li>
         </ul>

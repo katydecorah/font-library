@@ -308,7 +308,7 @@ search-status .btn-clear {
   margin: 0;
 }
 
-.family {
+.families li {
   /*
   transition: var(--transition);
   animation: fade var(--transition) * 4 forwards; */

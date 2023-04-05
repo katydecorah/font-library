@@ -6,120 +6,111 @@ exports[`FontItem has family name that exists in swaps.json 1`] = `
   is="font-item"
 >
   <div
-    class="family"
-    id="family-material-symbols-sharp"
+    class="family-link"
   >
     
-    
+      
     <div
-      class="family-link"
+      class="family-title material-symbols-sharp"
+      style="font-family: 'Material Symbols Sharp';"
     >
       
-      
-      <div
-        class="family-title material-symbols-sharp"
-        style="font-family: 'Material Symbols Sharp';"
-      >
-        
         favorite add delete settings search
       
-      </div>
-      
-      
-      <div
-        class="family-meta-container"
-      >
-        
-        
-        <span
-          class="family-title-small"
-        >
-          Material Symbols Sharp
-        </span>
-        
-        
-        <div
-          class="family-meta"
-        >
-          
-          
-          <ul>
-            
-            
-            <li>
-              monospace
-            </li>
-            
-            
-            <li>
-              <span
-                aria-label="100, 200, 300, regular, 500, 600, 700"
-              >
-                7 variants
-              </span>
-            </li>
-            
-            
-            <li>
-              <span
-                aria-label="latin"
-              >
-                1 subsets
-              </span>
-            </li>
-            
-          
-          </ul>
-          
-        
-        </div>
-        
-      
-      </div>
-      
-    
     </div>
     
-    
+      
     <div
-      class="family-tags"
+      class="family-meta-container"
     >
       
+        
+      <span
+        class="family-title-small"
+      >
+        Material Symbols Sharp
+      </span>
       
+        
       <div
-        class="family-tags-container"
-      />
-      
-      
-      <div
-        class="family-meta-links"
+        class="family-meta"
       >
         
+          
+        <ul>
+          
+            
+          <li>
+            monospace
+          </li>
+          
+            
+          <li>
+            <span
+              aria-label="100, 200, 300, regular, 500, 600, 700"
+            >
+              7 variants
+            </span>
+          </li>
+          
+            
+          <li>
+            <span
+              aria-label="latin"
+            >
+              1 subsets
+            </span>
+          </li>
+          
+          
+        </ul>
         
-        <a
-          aria-label="Edit tags for Material Symbols Sharp"
-          href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L752"
-          target="_blank"
-        >
-          Edit tags
-        </a>
         
-        
-        <a
-          aria-label="Visit Material Symbols Sharp on Google Fonts"
-          href="https://fonts.google.com/specimen/Material+Symbols+Sharp"
-          target="_blank"
-        >
-          Google Fonts →
-        </a>
-        
-      
       </div>
       
-    
+      
     </div>
     
+    
+  </div>
   
+    
+  <div
+    class="family-tags"
+  >
+    
+      
+    <div
+      class="family-tags-container"
+    />
+    
+      
+    <div
+      class="family-meta-links"
+    >
+      
+        
+      <a
+        aria-label="Edit tags for Material Symbols Sharp"
+        href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L752"
+        target="_blank"
+      >
+        Edit tags
+      </a>
+      
+        
+      <a
+        aria-label="Visit Material Symbols Sharp on Google Fonts"
+        href="https://fonts.google.com/specimen/Material+Symbols+Sharp"
+        target="_blank"
+      >
+        Google Fonts →
+      </a>
+      
+      
+    </div>
+    
+    
   </div>
 </li>
 `;
@@ -130,137 +121,128 @@ exports[`FontItem is variable font 1`] = `
   is="font-item"
 >
   <div
-    class="family"
-    id="family-akshar"
+    class="family-link"
   >
     
-    
+      
     <div
-      class="family-link"
+      class="family-title akshar"
+      style="font-family: 'Akshar';"
     >
       
-      
-      <div
-        class="family-title akshar"
-        style="font-family: 'Akshar';"
-      >
-        
         Akshar
       
-      </div>
-      
-      
-      <div
-        class="family-meta-container"
-      >
-        
-        
-        <span
-          class="family-title-small"
-        />
-        
-        
-        <div
-          class="family-meta"
-        >
-          
-          
-          <ul>
-            
-            
-            <li>
-              sans-serif
-            </li>
-            
-            
-            <li>
-              <span
-                aria-label="300, regular, 500, 600, 700"
-              >
-                5 variants (variable)
-              </span>
-            </li>
-            
-            
-            <li>
-              <span
-                aria-label="devanagari, latin, latin-ext"
-              >
-                3 subsets
-              </span>
-            </li>
-            
-          
-          </ul>
-          
-        
-        </div>
-        
-      
-      </div>
-      
-    
     </div>
     
-    
+      
     <div
-      class="family-tags"
+      class="family-meta-container"
     >
       
+        
+      <span
+        class="family-title-small"
+      />
       
+        
       <div
-        class="family-tags-container"
+        class="family-meta"
       >
-        <button
-          class="family-tag"
-          is="tag-button"
-          style="font-family: "Abel";"
-          title="condensed"
-          value="condensed"
-        >
-          condensed
-        </button>
-        <button
-          class="family-tag"
-          is="tag-button"
-          style="font-family: "Akshar";"
-          title="narrow"
-          value="narrow"
-        >
-          narrow
-        </button>
+        
+          
+        <ul>
+          
+            
+          <li>
+            sans-serif
+          </li>
+          
+            
+          <li>
+            <span
+              aria-label="300, regular, 500, 600, 700"
+            >
+              5 variants (variable)
+            </span>
+          </li>
+          
+            
+          <li>
+            <span
+              aria-label="devanagari, latin, latin-ext"
+            >
+              3 subsets
+            </span>
+          </li>
+          
+          
+        </ul>
+        
+        
       </div>
       
       
-      <div
-        class="family-meta-links"
-      >
-        
-        
-        <a
-          aria-label="Edit tags for Akshar"
-          href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L17"
-          target="_blank"
-        >
-          Edit tags
-        </a>
-        
-        
-        <a
-          aria-label="Visit Akshar on Google Fonts"
-          href="https://fonts.google.com/specimen/Akshar"
-          target="_blank"
-        >
-          Google Fonts →
-        </a>
-        
-      
-      </div>
-      
-    
     </div>
     
+    
+  </div>
   
+    
+  <div
+    class="family-tags"
+  >
+    
+      
+    <div
+      class="family-tags-container"
+    >
+      <button
+        class="family-tag"
+        is="tag-button"
+        style="font-family: "Abel";"
+        title="condensed"
+        value="condensed"
+      >
+        condensed
+      </button>
+      <button
+        class="family-tag"
+        is="tag-button"
+        style="font-family: "Akshar";"
+        title="narrow"
+        value="narrow"
+      >
+        narrow
+      </button>
+    </div>
+    
+      
+    <div
+      class="family-meta-links"
+    >
+      
+        
+      <a
+        aria-label="Edit tags for Akshar"
+        href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L17"
+        target="_blank"
+      >
+        Edit tags
+      </a>
+      
+        
+      <a
+        aria-label="Visit Akshar on Google Fonts"
+        href="https://fonts.google.com/specimen/Akshar"
+        target="_blank"
+      >
+        Google Fonts →
+      </a>
+      
+      
+    </div>
+    
+    
   </div>
 </li>
 `;
@@ -271,148 +253,139 @@ exports[`FontItem no latin subset 1`] = `
   is="font-item"
 >
   <div
-    class="family"
-    id="family-gfs-neohellenic"
+    class="family-link"
   >
     
-    
+      
     <div
-      class="family-link"
+      class="family-title gfs-neohellenic"
+      style="font-family: 'GFS Neohellenic';"
     >
       
-      
-      <div
-        class="family-title gfs-neohellenic"
-        style="font-family: 'GFS Neohellenic';"
-      >
-        
         Γειά σου Κόσμε
       
-      </div>
-      
-      
-      <div
-        class="family-meta-container"
-      >
-        
-        
-        <span
-          class="family-title-small"
-        >
-          GFS Neohellenic
-        </span>
-        
-        
-        <div
-          class="family-meta"
-        >
-          
-          
-          <ul>
-            
-            
-            <li>
-              sans-serif
-            </li>
-            
-            
-            <li>
-              <span
-                aria-label="regular, italic, 700, 700italic"
-              >
-                4 variants
-              </span>
-            </li>
-            
-            
-            <li>
-              <span
-                aria-label="greek"
-              >
-                1 subsets
-              </span>
-            </li>
-            
-          
-          </ul>
-          
-        
-        </div>
-        
-      
-      </div>
-      
-    
     </div>
     
-    
+      
     <div
-      class="family-tags"
+      class="family-meta-container"
     >
       
-      
-      <div
-        class="family-tags-container"
+        
+      <span
+        class="family-title-small"
       >
-        <button
-          class="family-tag"
-          is="tag-button"
-          style="font-family: "Asap";"
-          title="round"
-          value="round"
-        >
-          round
-        </button>
-        <button
-          class="family-tag"
-          is="tag-button"
-          style="font-family: "Azeret Mono";"
-          title="monolinear"
-          value="monolinear"
-        >
-          monolinear
-        </button>
-        <button
-          class="family-tag"
-          is="tag-button"
-          style="font-family: "Englebert";"
-          title="1930s"
-          value="1930s"
-        >
-          1930s
-        </button>
+        GFS Neohellenic
+      </span>
+      
+        
+      <div
+        class="family-meta"
+      >
+        
+          
+        <ul>
+          
+            
+          <li>
+            sans-serif
+          </li>
+          
+            
+          <li>
+            <span
+              aria-label="regular, italic, 700, 700italic"
+            >
+              4 variants
+            </span>
+          </li>
+          
+            
+          <li>
+            <span
+              aria-label="greek"
+            >
+              1 subsets
+            </span>
+          </li>
+          
+          
+        </ul>
+        
+        
       </div>
       
       
-      <div
-        class="family-meta-links"
-      >
-        
-        
-        <a
-          aria-label="Edit tags for GFS Neohellenic"
-          href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L439"
-          target="_blank"
-        >
-          Edit tags
-        </a>
-        
-        
-        <a
-          aria-label="Visit GFS Neohellenic on Google Fonts"
-          href="https://fonts.google.com/specimen/GFS+Neohellenic"
-          target="_blank"
-        >
-          Google Fonts →
-        </a>
-        
-      
-      </div>
-      
-    
     </div>
     
+    
+  </div>
   
+    
+  <div
+    class="family-tags"
+  >
+    
+      
+    <div
+      class="family-tags-container"
+    >
+      <button
+        class="family-tag"
+        is="tag-button"
+        style="font-family: "Asap";"
+        title="round"
+        value="round"
+      >
+        round
+      </button>
+      <button
+        class="family-tag"
+        is="tag-button"
+        style="font-family: "Azeret Mono";"
+        title="monolinear"
+        value="monolinear"
+      >
+        monolinear
+      </button>
+      <button
+        class="family-tag"
+        is="tag-button"
+        style="font-family: "Englebert";"
+        title="1930s"
+        value="1930s"
+      >
+        1930s
+      </button>
+    </div>
+    
+      
+    <div
+      class="family-meta-links"
+    >
+      
+        
+      <a
+        aria-label="Edit tags for GFS Neohellenic"
+        href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L439"
+        target="_blank"
+      >
+        Edit tags
+      </a>
+      
+        
+      <a
+        aria-label="Visit GFS Neohellenic on Google Fonts"
+        href="https://fonts.google.com/specimen/GFS+Neohellenic"
+        target="_blank"
+      >
+        Google Fonts →
+      </a>
+      
+      
+    </div>
+    
+    
   </div>
 </li>
 `;
@@ -423,128 +396,119 @@ exports[`FontItem renders correctly 1`] = `
   is="font-item"
 >
   <div
-    class="family"
-    id="family-alef"
+    class="family-link"
   >
     
-    
+      
     <div
-      class="family-link"
+      class="family-title alef"
+      style="font-family: 'Alef';"
     >
       
-      
-      <div
-        class="family-title alef"
-        style="font-family: 'Alef';"
-      >
-        
         Alef
       
-      </div>
-      
-      
-      <div
-        class="family-meta-container"
-      >
-        
-        
-        <span
-          class="family-title-small"
-        />
-        
-        
-        <div
-          class="family-meta"
-        >
-          
-          
-          <ul>
-            
-            
-            <li>
-              sans-serif
-            </li>
-            
-            
-            <li>
-              <span
-                aria-label="regular, 700"
-              >
-                2 variants
-              </span>
-            </li>
-            
-            
-            <li>
-              <span
-                aria-label="hebrew, latin"
-              >
-                2 subsets
-              </span>
-            </li>
-            
-          
-          </ul>
-          
-        
-        </div>
-        
-      
-      </div>
-      
-    
     </div>
     
-    
+      
     <div
-      class="family-tags"
+      class="family-meta-container"
     >
       
+        
+      <span
+        class="family-title-small"
+      />
       
+        
       <div
-        class="family-tags-container"
+        class="family-meta"
       >
-        <button
-          class="family-tag"
-          is="tag-button"
-          style="font-family: "Alatsi";"
-          title="geometric"
-          value="geometric"
-        >
-          geometric
-        </button>
+        
+          
+        <ul>
+          
+            
+          <li>
+            sans-serif
+          </li>
+          
+            
+          <li>
+            <span
+              aria-label="regular, 700"
+            >
+              2 variants
+            </span>
+          </li>
+          
+            
+          <li>
+            <span
+              aria-label="hebrew, latin"
+            >
+              2 subsets
+            </span>
+          </li>
+          
+          
+        </ul>
+        
+        
       </div>
       
       
-      <div
-        class="family-meta-links"
-      >
-        
-        
-        <a
-          aria-label="Edit tags for Alef"
-          href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L23"
-          target="_blank"
-        >
-          Edit tags
-        </a>
-        
-        
-        <a
-          aria-label="Visit Alef on Google Fonts"
-          href="https://fonts.google.com/specimen/Alef"
-          target="_blank"
-        >
-          Google Fonts →
-        </a>
-        
-      
-      </div>
-      
-    
     </div>
     
+    
+  </div>
   
+    
+  <div
+    class="family-tags"
+  >
+    
+      
+    <div
+      class="family-tags-container"
+    >
+      <button
+        class="family-tag"
+        is="tag-button"
+        style="font-family: "Alatsi";"
+        title="geometric"
+        value="geometric"
+      >
+        geometric
+      </button>
+    </div>
+    
+      
+    <div
+      class="family-meta-links"
+    >
+      
+        
+      <a
+        aria-label="Edit tags for Alef"
+        href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L23"
+        target="_blank"
+      >
+        Edit tags
+      </a>
+      
+        
+      <a
+        aria-label="Visit Alef on Google Fonts"
+        href="https://fonts.google.com/specimen/Alef"
+        target="_blank"
+      >
+        Google Fonts →
+      </a>
+      
+      
+    </div>
+    
+    
   </div>
 </li>
 `;
@@ -555,130 +519,121 @@ exports[`FontItem rtl subset 1`] = `
   is="font-item"
 >
   <div
-    class="family"
-    id="family-almarai"
+    class="family-link"
   >
     
-    
+      
     <div
-      class="family-link"
+      class="family-title almarai"
+      style="font-family: 'Almarai';direction: rtl;"
     >
       
-      
-      <div
-        class="family-title almarai"
-        style="font-family: 'Almarai';direction: rtl;"
-      >
-        
         مرحبا بالعالم
       
-      </div>
-      
-      
-      <div
-        class="family-meta-container"
-      >
-        
-        
-        <span
-          class="family-title-small"
-        >
-          Almarai
-        </span>
-        
-        
-        <div
-          class="family-meta"
-        >
-          
-          
-          <ul>
-            
-            
-            <li>
-              sans-serif
-            </li>
-            
-            
-            <li>
-              <span
-                aria-label="300, regular, 700, 800"
-              >
-                4 variants
-              </span>
-            </li>
-            
-            
-            <li>
-              <span
-                aria-label="arabic"
-              >
-                1 subsets
-              </span>
-            </li>
-            
-          
-          </ul>
-          
-        
-        </div>
-        
-      
-      </div>
-      
-    
     </div>
     
-    
+      
     <div
-      class="family-tags"
+      class="family-meta-container"
     >
       
-      
-      <div
-        class="family-tags-container"
+        
+      <span
+        class="family-title-small"
       >
-        <button
-          class="family-tag"
-          is="tag-button"
-          style="font-family: "Almarai";"
-          title="arabic"
-          value="arabic"
-        >
-          arabic
-        </button>
+        Almarai
+      </span>
+      
+        
+      <div
+        class="family-meta"
+      >
+        
+          
+        <ul>
+          
+            
+          <li>
+            sans-serif
+          </li>
+          
+            
+          <li>
+            <span
+              aria-label="300, regular, 700, 800"
+            >
+              4 variants
+            </span>
+          </li>
+          
+            
+          <li>
+            <span
+              aria-label="arabic"
+            >
+              1 subsets
+            </span>
+          </li>
+          
+          
+        </ul>
+        
+        
       </div>
       
       
-      <div
-        class="family-meta-links"
-      >
-        
-        
-        <a
-          aria-label="Edit tags for Almarai"
-          href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L41"
-          target="_blank"
-        >
-          Edit tags
-        </a>
-        
-        
-        <a
-          aria-label="Visit Almarai on Google Fonts"
-          href="https://fonts.google.com/specimen/Almarai"
-          target="_blank"
-        >
-          Google Fonts →
-        </a>
-        
-      
-      </div>
-      
-    
     </div>
     
+    
+  </div>
   
+    
+  <div
+    class="family-tags"
+  >
+    
+      
+    <div
+      class="family-tags-container"
+    >
+      <button
+        class="family-tag"
+        is="tag-button"
+        style="font-family: "Almarai";"
+        title="arabic"
+        value="arabic"
+      >
+        arabic
+      </button>
+    </div>
+    
+      
+    <div
+      class="family-meta-links"
+    >
+      
+        
+      <a
+        aria-label="Edit tags for Almarai"
+        href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L41"
+        target="_blank"
+      >
+        Edit tags
+      </a>
+      
+        
+      <a
+        aria-label="Visit Almarai on Google Fonts"
+        href="https://fonts.google.com/specimen/Almarai"
+        target="_blank"
+      >
+        Google Fonts →
+      </a>
+      
+      
+    </div>
+    
+    
   </div>
 </li>
 `;
@@ -690,130 +645,121 @@ exports[`FontItem selected subset 1`] = `
   selected-subset="hebrew"
 >
   <div
-    class="family"
-    id="family-alef"
+    class="family-link"
   >
     
-    
+      
     <div
-      class="family-link"
+      class="family-title alef"
+      style="font-family: 'Alef';direction: rtl;"
     >
       
-      
-      <div
-        class="family-title alef"
-        style="font-family: 'Alef';direction: rtl;"
-      >
-        
         שָׁלוֹם עוֹלָם 
       
-      </div>
-      
-      
-      <div
-        class="family-meta-container"
-      >
-        
-        
-        <span
-          class="family-title-small"
-        >
-          Alef
-        </span>
-        
-        
-        <div
-          class="family-meta"
-        >
-          
-          
-          <ul>
-            
-            
-            <li>
-              sans-serif
-            </li>
-            
-            
-            <li>
-              <span
-                aria-label="regular, 700"
-              >
-                2 variants
-              </span>
-            </li>
-            
-            
-            <li>
-              <span
-                aria-label="hebrew, latin"
-              >
-                2 subsets
-              </span>
-            </li>
-            
-          
-          </ul>
-          
-        
-        </div>
-        
-      
-      </div>
-      
-    
     </div>
     
-    
+      
     <div
-      class="family-tags"
+      class="family-meta-container"
     >
       
-      
-      <div
-        class="family-tags-container"
+        
+      <span
+        class="family-title-small"
       >
-        <button
-          class="family-tag"
-          is="tag-button"
-          style="font-family: "Alatsi";"
-          title="geometric"
-          value="geometric"
-        >
-          geometric
-        </button>
+        Alef
+      </span>
+      
+        
+      <div
+        class="family-meta"
+      >
+        
+          
+        <ul>
+          
+            
+          <li>
+            sans-serif
+          </li>
+          
+            
+          <li>
+            <span
+              aria-label="regular, 700"
+            >
+              2 variants
+            </span>
+          </li>
+          
+            
+          <li>
+            <span
+              aria-label="hebrew, latin"
+            >
+              2 subsets
+            </span>
+          </li>
+          
+          
+        </ul>
+        
+        
       </div>
       
       
-      <div
-        class="family-meta-links"
-      >
-        
-        
-        <a
-          aria-label="Edit tags for Alef"
-          href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L23"
-          target="_blank"
-        >
-          Edit tags
-        </a>
-        
-        
-        <a
-          aria-label="Visit Alef on Google Fonts"
-          href="https://fonts.google.com/specimen/Alef"
-          target="_blank"
-        >
-          Google Fonts →
-        </a>
-        
-      
-      </div>
-      
-    
     </div>
     
+    
+  </div>
   
+    
+  <div
+    class="family-tags"
+  >
+    
+      
+    <div
+      class="family-tags-container"
+    >
+      <button
+        class="family-tag"
+        is="tag-button"
+        style="font-family: "Alatsi";"
+        title="geometric"
+        value="geometric"
+      >
+        geometric
+      </button>
+    </div>
+    
+      
+    <div
+      class="family-meta-links"
+    >
+      
+        
+      <a
+        aria-label="Edit tags for Alef"
+        href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L23"
+        target="_blank"
+      >
+        Edit tags
+      </a>
+      
+        
+      <a
+        aria-label="Visit Alef on Google Fonts"
+        href="https://fonts.google.com/specimen/Alef"
+        target="_blank"
+      >
+        Google Fonts →
+      </a>
+      
+      
+    </div>
+    
+    
   </div>
 </li>
 `;
@@ -825,128 +771,119 @@ exports[`FontItem selected variant, 900 1`] = `
   selected-variant="900"
 >
   <div
-    class="family"
-    id="family-anybody"
+    class="family-link"
   >
     
-    
+      
     <div
-      class="family-link"
+      class="family-title anybody"
+      style="font-family: 'Anybody';"
     >
       
-      
-      <div
-        class="family-title anybody"
-        style="font-family: 'Anybody';"
-      >
-        
         Anybody
       
-      </div>
-      
-      
-      <div
-        class="family-meta-container"
-      >
-        
-        
-        <span
-          class="family-title-small"
-        />
-        
-        
-        <div
-          class="family-meta"
-        >
-          
-          
-          <ul>
-            
-            
-            <li>
-              display
-            </li>
-            
-            
-            <li>
-              <span
-                aria-label="100, 200, 300, regular, 500, 600, 700, 800, 900, 100italic, 200italic, 300italic, italic, 500italic, 600italic, 700italic, 800italic, 900italic"
-              >
-                18 variants
-              </span>
-            </li>
-            
-            
-            <li>
-              <span
-                aria-label="latin, latin-ext, vietnamese"
-              >
-                3 subsets
-              </span>
-            </li>
-            
-          
-          </ul>
-          
-        
-        </div>
-        
-      
-      </div>
-      
-    
     </div>
     
-    
+      
     <div
-      class="family-tags"
+      class="family-meta-container"
     >
       
+        
+      <span
+        class="family-title-small"
+      />
       
+        
       <div
-        class="family-tags-container"
+        class="family-meta"
       >
-        <button
-          class="family-tag"
-          is="tag-button"
-          style="font-family: "Anybody";"
-          title="eurostile"
-          value="eurostile"
-        >
-          eurostile
-        </button>
+        
+          
+        <ul>
+          
+            
+          <li>
+            display
+          </li>
+          
+            
+          <li>
+            <span
+              aria-label="100, 200, 300, regular, 500, 600, 700, 800, 900, 100italic, 200italic, 300italic, italic, 500italic, 600italic, 700italic, 800italic, 900italic"
+            >
+              18 variants
+            </span>
+          </li>
+          
+            
+          <li>
+            <span
+              aria-label="latin, latin-ext, vietnamese"
+            >
+              3 subsets
+            </span>
+          </li>
+          
+          
+        </ul>
+        
+        
       </div>
       
       
-      <div
-        class="family-meta-links"
-      >
-        
-        
-        <a
-          aria-label="Edit tags for Anybody"
-          href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L78"
-          target="_blank"
-        >
-          Edit tags
-        </a>
-        
-        
-        <a
-          aria-label="Visit Anybody on Google Fonts"
-          href="https://fonts.google.com/specimen/Anybody"
-          target="_blank"
-        >
-          Google Fonts →
-        </a>
-        
-      
-      </div>
-      
-    
     </div>
     
+    
+  </div>
   
+    
+  <div
+    class="family-tags"
+  >
+    
+      
+    <div
+      class="family-tags-container"
+    >
+      <button
+        class="family-tag"
+        is="tag-button"
+        style="font-family: "Anybody";"
+        title="eurostile"
+        value="eurostile"
+      >
+        eurostile
+      </button>
+    </div>
+    
+      
+    <div
+      class="family-meta-links"
+    >
+      
+        
+      <a
+        aria-label="Edit tags for Anybody"
+        href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L78"
+        target="_blank"
+      >
+        Edit tags
+      </a>
+      
+        
+      <a
+        aria-label="Visit Anybody on Google Fonts"
+        href="https://fonts.google.com/specimen/Anybody"
+        target="_blank"
+      >
+        Google Fonts →
+      </a>
+      
+      
+    </div>
+    
+    
   </div>
 </li>
 `;
@@ -958,128 +895,119 @@ exports[`FontItem selected variant, 900italic 1`] = `
   selected-variant="900italic"
 >
   <div
-    class="family"
-    id="family-anybody"
+    class="family-link"
   >
     
-    
+      
     <div
-      class="family-link"
+      class="family-title anybody"
+      style="font-family: 'Anybody';font-style: italic;"
     >
       
-      
-      <div
-        class="family-title anybody"
-        style="font-family: 'Anybody';font-style: italic;"
-      >
-        
         Anybody
       
-      </div>
-      
-      
-      <div
-        class="family-meta-container"
-      >
-        
-        
-        <span
-          class="family-title-small"
-        />
-        
-        
-        <div
-          class="family-meta"
-        >
-          
-          
-          <ul>
-            
-            
-            <li>
-              display
-            </li>
-            
-            
-            <li>
-              <span
-                aria-label="100, 200, 300, regular, 500, 600, 700, 800, 900, 100italic, 200italic, 300italic, italic, 500italic, 600italic, 700italic, 800italic, 900italic"
-              >
-                18 variants
-              </span>
-            </li>
-            
-            
-            <li>
-              <span
-                aria-label="latin, latin-ext, vietnamese"
-              >
-                3 subsets
-              </span>
-            </li>
-            
-          
-          </ul>
-          
-        
-        </div>
-        
-      
-      </div>
-      
-    
     </div>
     
-    
+      
     <div
-      class="family-tags"
+      class="family-meta-container"
     >
       
+        
+      <span
+        class="family-title-small"
+      />
       
+        
       <div
-        class="family-tags-container"
+        class="family-meta"
       >
-        <button
-          class="family-tag"
-          is="tag-button"
-          style="font-family: "Anybody";"
-          title="eurostile"
-          value="eurostile"
-        >
-          eurostile
-        </button>
+        
+          
+        <ul>
+          
+            
+          <li>
+            display
+          </li>
+          
+            
+          <li>
+            <span
+              aria-label="100, 200, 300, regular, 500, 600, 700, 800, 900, 100italic, 200italic, 300italic, italic, 500italic, 600italic, 700italic, 800italic, 900italic"
+            >
+              18 variants
+            </span>
+          </li>
+          
+            
+          <li>
+            <span
+              aria-label="latin, latin-ext, vietnamese"
+            >
+              3 subsets
+            </span>
+          </li>
+          
+          
+        </ul>
+        
+        
       </div>
       
       
-      <div
-        class="family-meta-links"
-      >
-        
-        
-        <a
-          aria-label="Edit tags for Anybody"
-          href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L78"
-          target="_blank"
-        >
-          Edit tags
-        </a>
-        
-        
-        <a
-          aria-label="Visit Anybody on Google Fonts"
-          href="https://fonts.google.com/specimen/Anybody"
-          target="_blank"
-        >
-          Google Fonts →
-        </a>
-        
-      
-      </div>
-      
-    
     </div>
     
+    
+  </div>
   
+    
+  <div
+    class="family-tags"
+  >
+    
+      
+    <div
+      class="family-tags-container"
+    >
+      <button
+        class="family-tag"
+        is="tag-button"
+        style="font-family: "Anybody";"
+        title="eurostile"
+        value="eurostile"
+      >
+        eurostile
+      </button>
+    </div>
+    
+      
+    <div
+      class="family-meta-links"
+    >
+      
+        
+      <a
+        aria-label="Edit tags for Anybody"
+        href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L78"
+        target="_blank"
+      >
+        Edit tags
+      </a>
+      
+        
+      <a
+        aria-label="Visit Anybody on Google Fonts"
+        href="https://fonts.google.com/specimen/Anybody"
+        target="_blank"
+      >
+        Google Fonts →
+      </a>
+      
+      
+    </div>
+    
+    
   </div>
 </li>
 `;
