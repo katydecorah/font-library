@@ -38,10 +38,10 @@ class SearchStatus extends HTMLElement {
       },
       {
         label: "variable",
-        value: this.getAttribute("selected-variable") === "true",
+        value: this.getAttribute("selected-variable"),
         id: "selectedVariable",
       },
-    ].filter(({ value }) => value);
+    ].filter(({ value }) => value && value !== "");
   }
 
   connectedCallback() {

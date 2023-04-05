@@ -35,14 +35,14 @@
           <h2>Tags</h2>
           <ul class="tags-container">
             {%- for tag in metadata.tags -%}
-            <li><button class="family-tag" is="tag-button" title="{{tag.name}}" value="{{tag.name}}" {%- unless tag.name == 'icons' -%}style="font-family: '{{tag.sample}}'"{%- endunless -%}>{%- if tag.name == 'icons' -%}<i>&hearts;</i>{%- endif -%}{{tag.name}}</button></li>
+            <li><button is="tag-button" title="{{tag.name}}" value="{{tag.name}}" {%- unless tag.name == 'icons' -%}style="font-family: '{{tag.sample}}'"{%- endunless -%}>{%- if tag.name == 'icons' -%}<i>&hearts;</i>{%- endif -%}{{tag.name}}</button></li>
             {%- endfor -%}
           </ul>
         </section>
         <div class="sidebar-group">
           <h3>Want to help the project?</h3>
           <p>
-            Sort by fonts that <button class="family-tag" is="tag-button" value="need tags">need tags</button>. Learn <a href="{{site.contributing}}">how to contribute</a>.
+            Sort by fonts that <button is="tag-button" value="need tags">need tags</button>. Learn <a href="{{site.contributing}}">how to contribute</a>.
           </p>
         </div>
       </aside>

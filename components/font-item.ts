@@ -20,11 +20,11 @@ class FontItem extends HTMLLIElement {
   }
 
   get selectedSubset(): string {
-    return this.getAttribute("selected-subset");
+    return this.getAttribute("selected-subset") || "";
   }
 
   get selectedVariant(): string {
-    return this.getAttribute("selected-variant");
+    return this.getAttribute("selected-variant") || "";
   }
 
   get previewName(): string {
@@ -75,12 +75,11 @@ class FontItem extends HTMLLIElement {
     const tagButtons = tags
       .map(
         (tag: string) =>
-          `<button is="tag-button" class="family-tag" title="${tag}" value="${tag}">${tag}</button>`
+          `<button is="tag-button" title="${tag}" value="${tag}">${tag}</button>`
       )
       .join("");
 
-    this.innerHTML = `<div id="family-${this.id}" class="family">
-    <div class="family-link">
+    this.innerHTML = `<div class="family-link">
       <div class="family-title ${this.id}" style="${this.familyStyle}">
         ${this.previewName}
       </div>
@@ -117,8 +116,7 @@ class FontItem extends HTMLLIElement {
           >Google Fonts &rarr;</a
         >
       </div>
-    </div>
-  </div>`;
+    </div>`;
   }
 
   addFontToHead(): void {

@@ -137,7 +137,7 @@ header {
   text-decoration: underline;
 }
 
-.family-tag {
+button[is="tag-button"] {
   color: var(--text-color-accent);
   background: transparent;
   font-size: 1em;
@@ -152,9 +152,9 @@ header {
   align-items: center;
 }
 
-.family-tag.active,
-.family-tag:has(:checked),
-.family-tag:hover {
+button[is="tag-button"].active,
+button[is="tag-button"]:has(:checked),
+button[is="tag-button"]:hover {
   background: var(--white);
   border-color: var(--selected-tag);
   color: var(--selected-tag);
@@ -247,7 +247,7 @@ input[type="text"] {
   overflow: hidden;
 }
 
-.search-status {
+search-status {
   margin-bottom: 1em;
   margin-top: 1em;
   min-height: 25px;
@@ -257,11 +257,11 @@ input[type="text"] {
   flex-wrap: wrap;
 }
 
-.search-status div {
+search-status div {
   display: inline-flex;
 }
 
-.search-status .search-filter {
+search-status .search-filter {
   align-items: center;
   grid-gap: 0.25em;
   background-color: var(--background-accent);
@@ -292,7 +292,7 @@ input[type="text"] {
   width: 1em;
 }
 
-.search-status .btn-clear {
+search-status .btn-clear {
   padding: 0 1em;
 }
 
@@ -308,7 +308,7 @@ input[type="text"] {
   margin: 0;
 }
 
-.family {
+.families li {
   /*
   transition: var(--transition);
   animation: fade var(--transition) * 4 forwards; */

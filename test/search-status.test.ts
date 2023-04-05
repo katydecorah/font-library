@@ -3,12 +3,8 @@ import "./components";
 describe("search-status", () => {
   it("renders search status", () => {
     const resultsLength = 1200;
-    const selectedCategory = "";
-    const selectedTag = "";
-    const selectedSubset = "";
-    const selectedVariant = "";
-    const search = "";
-    document.body.innerHTML = `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${search}"></search-status>`;
+
+    document.body.innerHTML = `<search-status class="search-status" results-length="${resultsLength}"></search-status>`;
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(
       `"<div>Found 1200 fonts</div>"`
@@ -18,11 +14,7 @@ describe("search-status", () => {
   it("renders search status with category", () => {
     const resultsLength = 1200;
     const selectedCategory = "sans-serif";
-    const selectedTag = "";
-    const selectedSubset = "";
-    const selectedVariant = "";
-    const search = "";
-    document.body.innerHTML = `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${search}"></search-status>`;
+    document.body.innerHTML = `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}"></search-status>`;
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
       "<div>Found 1200 fonts: </div>
@@ -33,12 +25,8 @@ describe("search-status", () => {
 
   it("renders search status with tag", () => {
     const resultsLength = 1200;
-    const selectedCategory = "";
     const selectedTag = "cute";
-    const selectedSubset = "";
-    const selectedVariant = "";
-    const search = "";
-    document.body.innerHTML = `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${search}"></search-status>`;
+    document.body.innerHTML = `<search-status class="search-status" results-length="${resultsLength}" selected-tag="${selectedTag}"></search-status>`;
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
       "<div>Found 1200 fonts: </div>
@@ -49,12 +37,8 @@ describe("search-status", () => {
 
   it("renders search status with tag, need tags", () => {
     const resultsLength = 1200;
-    const selectedCategory = "";
     const selectedTag = "need tags";
-    const selectedSubset = "";
-    const selectedVariant = "";
-    const search = "";
-    document.body.innerHTML = `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${search}"></search-status>`;
+    document.body.innerHTML = `<search-status class="search-status" results-length="${resultsLength}" selected-tag="${selectedTag}"></search-status>`;
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
       "<div>Found 1200 fonts: </div>
@@ -65,12 +49,8 @@ describe("search-status", () => {
 
   it("renders search status with variant", () => {
     const resultsLength = 1200;
-    const selectedCategory = "";
-    const selectedTag = "";
-    const selectedSubset = "";
     const selectedVariant = "italic";
-    const search = "";
-    document.body.innerHTML = `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${search}"></search-status>`;
+    document.body.innerHTML = `<search-status class="search-status" results-length="${resultsLength}" selected-variant="${selectedVariant}"></search-status>`;
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
       "<div>Found 1200 fonts: </div>
@@ -81,12 +61,8 @@ describe("search-status", () => {
 
   it("renders search status with subset", () => {
     const resultsLength = 1200;
-    const selectedCategory = "";
-    const selectedTag = "";
     const selectedSubset = "hebrew";
-    const selectedVariant = "";
-    const search = "";
-    document.body.innerHTML = `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${search}"></search-status>`;
+    document.body.innerHTML = `<search-status class="search-status" results-length="${resultsLength}" selected-subset="${selectedSubset}"></search-status>`;
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
       "<div>Found 1200 fonts: </div>
@@ -97,12 +73,8 @@ describe("search-status", () => {
 
   it("renders search status with search", () => {
     const resultsLength = 1200;
-    const selectedCategory = "";
-    const selectedTag = "";
-    const selectedSubset = "";
-    const selectedVariant = "";
     const search = "modern";
-    document.body.innerHTML = `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${search}"></search-status>`;
+    document.body.innerHTML = `<search-status class="search-status" results-length="${resultsLength}"  selected-search="${search}"></search-status>`;
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
       "<div>Found 1200 fonts: </div>
@@ -113,12 +85,7 @@ describe("search-status", () => {
 
   it("renders search status with variable", () => {
     const resultsLength = 1200;
-    const selectedCategory = "";
-    const selectedTag = "";
-    const selectedSubset = "";
-    const selectedVariant = "";
-    const search = "";
-    document.body.innerHTML = `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-variable="true" selected-search="${search}"></search-status>`;
+    document.body.innerHTML = `<search-status class="search-status" results-length="${resultsLength}" selected-variable="true"></search-status>`;
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(`
       "<div>Found 1200 fonts: </div>

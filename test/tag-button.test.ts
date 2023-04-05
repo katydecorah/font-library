@@ -14,11 +14,10 @@ describe("tag-button", () => {
 
   it("renders", () => {
     const tag = "cute";
-    document.body.innerHTML = `<button is="tag-button" class="family-tag" value="${tag}">${tag}</button>`;
+    document.body.innerHTML = `<button is="tag-button" value="${tag}">${tag}</button>`;
     const tagButton = document.querySelector("button[is=tag-button]");
     expect(tagButton).toMatchInlineSnapshot(`
       <button
-        class="family-tag"
         is="tag-button"
         style="font-family: "Bonbon";"
         value="cute"
@@ -30,7 +29,7 @@ describe("tag-button", () => {
 
   it("renders active when clicked", () => {
     const tag = "cute";
-    document.body.innerHTML = `<button is="tag-button" class="family-tag" value="${tag}">${tag}</button>`;
+    document.body.innerHTML = `<button is="tag-button" value="${tag}">${tag}</button>`;
     const tagButton: HTMLButtonElement = document.querySelector(
       "button[is=tag-button]"
     );
@@ -40,7 +39,7 @@ describe("tag-button", () => {
     expect(mockFunction).toHaveBeenCalled();
     expect(tagButton).toMatchInlineSnapshot(`
       <button
-        class="family-tag active"
+        class="active"
         is="tag-button"
         style="font-family: "Bonbon";"
         value="cute"
@@ -61,13 +60,13 @@ describe("tag-button", () => {
       value: location,
     });
 
-    document.body.innerHTML = `<button is="tag-button" class="family-tag" value="${tag}">${tag}</button>`;
+    document.body.innerHTML = `<button is="tag-button" value="${tag}">${tag}</button>`;
     const tagButton: HTMLButtonElement = document.querySelector(
       "button[is=tag-button]"
     );
     expect(tagButton).toMatchInlineSnapshot(`
       <button
-        class="family-tag active"
+        class="active"
         is="tag-button"
         style="font-family: "Bonbon";"
         value="cute"
