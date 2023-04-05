@@ -308,10 +308,7 @@ search-status .btn-clear {
   margin: 0;
 }
 
-.families li {
-  /*
-  transition: var(--transition);
-  animation: fade var(--transition) * 4 forwards; */
+.families > li {
   margin-bottom: 1em;
 }
 
@@ -330,8 +327,6 @@ search-status .btn-clear {
 }
 
 .family-title {
-  /* transition: var(--transition); */
-
   font-size: 1.75em;
   overflow: hidden;
 }
