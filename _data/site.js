@@ -10,7 +10,7 @@ const hash = childProcess.execSync("git rev-parse HEAD").toString().trim();
 module.exports = {
   title: "Font Library",
   url: "https://fontlibrary.dev",
-  description: "An open source project to tag and organize Google Fonts.",
+  description: "An open source project to tag Google Fonts.",
   github: "https://github.com/katydecorah/font-library",
   contributing:
     "https://github.com/katydecorah/font-library/blob/gh-pages/CONTRIBUTING.md",
