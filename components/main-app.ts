@@ -1,4 +1,5 @@
 import customEvent from "./custom-event";
+import { setAttributes } from "./set-attributes";
 
 type SelectTypes =
   | "selectedCategory"
@@ -51,16 +52,20 @@ class MainApp extends HTMLElement {
 
   render() {
     const fontResults = document.querySelector("#font-results");
-    const {
-      selectedCategory,
-      selectedSubset,
-      selectedVariant,
-      selectedTag,
-      selectedSearch,
-      selectedVariable,
-      sortBy,
-    } = this;
-    fontResults.innerHTML = `<font-results sort-by="${sortBy}" selected-category="${selectedCategory}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-tag="${selectedTag}" selected-search="${selectedSearch}" selected-variable="${selectedVariable}"></font-results>`;
+
+    const fontResultsElm = document.createElement("font-results");
+
+    setAttributes(fontResultsElm, {
+      "sort-by": this.sortBy,
+      "selected-category": this.selectedCategory,
+      "selected-subset": this.selectedSubset,
+      "selected-variant": this.selectedVariant,
+      "selected-tag": this.selectedTag,
+      "selected-search": this.selectedSearch,
+      "selected-variable": this.selectedVariable === true ? "true" : "",
+    });
+
+    fontResults.innerHTML = fontResultsElm.outerHTML;
   }
 
   clearFilter({ detail: { value } }: CustomEvent<{ value: string }>) {

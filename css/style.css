@@ -247,7 +247,7 @@ input[type="text"] {
   overflow: hidden;
 }
 
-.search-status {
+search-status {
   margin-bottom: 1em;
   margin-top: 1em;
   min-height: 25px;
@@ -257,11 +257,11 @@ input[type="text"] {
   flex-wrap: wrap;
 }
 
-.search-status div {
+search-status div {
   display: inline-flex;
 }
 
-.search-status .search-filter {
+search-status .search-filter {
   align-items: center;
   grid-gap: 0.25em;
   background-color: var(--background-accent);
@@ -292,7 +292,7 @@ input[type="text"] {
   width: 1em;
 }
 
-.search-status .btn-clear {
+search-status .btn-clear {
   padding: 0 1em;
 }
 

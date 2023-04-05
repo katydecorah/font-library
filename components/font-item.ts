@@ -20,11 +20,11 @@ class FontItem extends HTMLLIElement {
   }
 
   get selectedSubset(): string {
-    return this.getAttribute("selected-subset");
+    return this.getAttribute("selected-subset") || "";
   }
 
   get selectedVariant(): string {
-    return this.getAttribute("selected-variant");
+    return this.getAttribute("selected-variant") || "";
   }
 
   get previewName(): string {

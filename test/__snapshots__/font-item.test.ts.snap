@@ -4,8 +4,6 @@ exports[`FontItem has family name that exists in swaps.json 1`] = `
 <li
   font="{"family":"Material Symbols Sharp","variants":["100","200","300","regular","500","600","700"],"subsets":["latin"],"category":"monospace","tags":[],"lineNumber":752}"
   is="font-item"
-  selected-subset=""
-  selected-variant=""
 >
   <div
     class="family"
@@ -130,8 +128,6 @@ exports[`FontItem is variable font 1`] = `
 <li
   font="{"family":"Akshar","variants":["300","regular","500","600","700"],"subsets":["devanagari","latin","latin-ext"],"category":"sans-serif","tags":["condensed","narrow"],"lineNumber":17,"variable":true}"
   is="font-item"
-  selected-subset=""
-  selected-variant=""
 >
   <div
     class="family"
@@ -273,8 +269,6 @@ exports[`FontItem no latin subset 1`] = `
 <li
   font="{"family":"GFS Neohellenic","variants":["regular","italic","700","700italic"],"subsets":["greek"],"category":"sans-serif","tags":["round","monolinear","1930s"],"lineNumber":439}"
   is="font-item"
-  selected-subset=""
-  selected-variant=""
 >
   <div
     class="family"
@@ -427,8 +421,6 @@ exports[`FontItem renders correctly 1`] = `
 <li
   font="{"family":"Alef","variants":["regular","700"],"subsets":["hebrew","latin"],"category":"sans-serif","tags":["geometric"],"lineNumber":23}"
   is="font-item"
-  selected-subset=""
-  selected-variant=""
 >
   <div
     class="family"
@@ -561,8 +553,6 @@ exports[`FontItem rtl subset 1`] = `
 <li
   font="{"family":"Almarai","variants":["300","regular","700","800"],"subsets":["arabic"],"category":"sans-serif","tags":["arabic"],"lineNumber":41}"
   is="font-item"
-  selected-subset=""
-  selected-variant=""
 >
   <div
     class="family"
@@ -698,7 +688,6 @@ exports[`FontItem selected subset 1`] = `
   font="{"family":"Alef","variants":["regular","700"],"subsets":["hebrew","latin"],"category":"sans-serif","tags":["geometric"],"lineNumber":23}"
   is="font-item"
   selected-subset="hebrew"
-  selected-variant=""
 >
   <div
     class="family"
@@ -833,7 +822,6 @@ exports[`FontItem selected variant, 900 1`] = `
 <li
   font="{"family":"Anybody","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["eurostile"],"lineNumber":78}"
   is="font-item"
-  selected-subset=""
   selected-variant="900"
 >
   <div
@@ -967,7 +955,6 @@ exports[`FontItem selected variant, 900italic 1`] = `
 <li
   font="{"family":"Anybody","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["eurostile"],"lineNumber":78}"
   is="font-item"
-  selected-subset=""
   selected-variant="900italic"
 >
   <div

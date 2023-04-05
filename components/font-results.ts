@@ -1,5 +1,6 @@
 import generatedData from "../data/data.json";
 import filter from "./filter";
+import { setAttributes } from "./set-attributes";
 export type GeneratedData = typeof generatedData;
 
 class FontResults extends HTMLElement {
@@ -11,7 +12,6 @@ class FontResults extends HTMLElement {
     super();
     this.addEventListener("next-page", this.handlePage);
     this.addEventListener("previous-page", this.handlePage);
-    this.renderFontItem = this.renderFontItem.bind(this);
   }
 
   get selectedTag() {
@@ -55,34 +55,39 @@ class FontResults extends HTMLElement {
 
     this.innerHTML = `${this.renderSearchStatus()}
 <sort-by sort-by=${this.sortBy}></sort-by>
-<ul class="families">${paginatedData
-      .map((font) => this.renderFontItem(font))
-      .join("\n")}</ul>
+<ul class="families">${this.renderFontItems(paginatedData)}</ul>
 <pagination-buttons results-length="${resultsLength}" page-size="${
       this.pageSize
     }" current-page="${this.currentPage}"></pagination-buttons>`;
   }
 
   renderSearchStatus() {
-    const {
-      selectedTag,
-      selectedCategory,
-      selectedSubset,
-      selectedVariant,
-      selectedSearch,
-      selectedVariable,
-      resultsLength,
-    } = this;
-    const stringSelectedVariable = selectedVariable ? "true" : "";
-
-    return `<search-status class="search-status" results-length="${resultsLength}" selected-category="${selectedCategory}" selected-tag="${selectedTag}" selected-subset="${selectedSubset}" selected-variant="${selectedVariant}" selected-search="${selectedSearch}" selected-variable="${stringSelectedVariable}"></search-status>`;
+    const searchStatus = document.createElement("search-status");
+    setAttributes(searchStatus, {
+      "results-length": this.resultsLength.toString(),
+      "selected-category": this.selectedCategory,
+      "selected-subset": this.selectedSubset,
+      "selected-variant": this.selectedVariant,
+      "selected-tag": this.selectedTag,
+      "selected-search": this.selectedSearch,
+      "selected-variable": this.selectedVariable === true ? "true" : "",
+    });
+    return searchStatus.outerHTML;
   }
 
-  renderFontItem(font: GeneratedData[number]) {
-    const { selectedVariant, selectedSubset, selectedTag } = this;
-    return `<li is="font-item" selected-variant='${selectedVariant}' selected-subset='${selectedSubset}' selected-tag='${selectedTag}' font='${JSON.stringify(
-      font
-    )}'></li>`;
+  renderFontItems(paginatedData: GeneratedData) {
+    const items = [];
+    for (const font of paginatedData) {
+      const fontItem = document.createElement("li");
+      setAttributes(fontItem, {
+        is: "font-item",
+        font: JSON.stringify(font),
+        variant: this.selectedVariant,
+        subset: this.selectedSubset,
+      });
+      items.push(fontItem.outerHTML);
+    }
+    return items.join("\n");
   }
 
   handlePage({ type }: CustomEvent) {
