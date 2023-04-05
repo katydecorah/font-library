@@ -4,7 +4,7 @@ Each font family is stored as an object in [families.json](families.json). Each 
 
 You can edit [families.json](families.json) to add, edit, or improve tags. I recommend starting by tagging fonts that you often want to find for yourself &mdash; curate your own tag! It's likely that someone else will dig your collection.
 
-You can also click [**Need tags**](https://katydecorah.com/font-library/?tag=need+tags) to show all fonts that haven't been tagged yet:
+You can also click [**Need tags**](https://fontlibrary.dev/font-library/?tag=need+tags) to show all fonts that haven't been tagged yet:
 
 ## Editing families.json
 
