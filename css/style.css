@@ -140,16 +140,15 @@ header {
 button[is="tag-button"] {
   color: var(--text-color-accent);
   background: transparent;
-  font-size: 1em;
   cursor: pointer;
   border: 1px solid #e9e6d5;
-  padding: 2px 7px;
+  padding: 0 0.5em;
   border-radius: 3px;
   border-left-width: 5px;
   border-bottom-width: 3px;
   border-bottom-color: #d6d2bc;
-  display: inline-flex;
-  align-items: center;
+  font: inherit;
+  vertical-align: middle;
 }
 
 button[is="tag-button"].active,
@@ -452,10 +451,6 @@ search-status .btn-clear {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.tags-container li {
-  display: flex;
 }
 
 .btn {
