@@ -33,6 +33,21 @@ describe("MainApp", () => {
 
   afterEach(() => {
     jest.clearAllMocks();
+
+    // reset attributes from MainApp
+    const attributes = [
+      "selected-category",
+      "selected-subset",
+      "selected-variant",
+      "selected-tag",
+      "selected-search",
+      "selected-variable",
+      "sort-by",
+    ];
+
+    for (const attribute of attributes) {
+      mainApp.removeAttribute(attribute);
+    }
   });
 
   test("renders correctly", () => {

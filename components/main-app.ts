@@ -9,24 +9,64 @@ type SelectTypes =
   | "selectedSearch";
 
 class MainApp extends HTMLElement {
-  selectedTag: string;
-  selectedCategory: string;
-  selectedSubset: string;
-  selectedVariant: string;
-  selectedSearch: string;
-  selectedVariable: boolean;
-  sortBy: string;
+  get selectedCategory() {
+    return this.getAttribute("selected-category") || "";
+  }
+
+  set selectedCategory(value: string) {
+    this.setAttribute("selected-category", value);
+  }
+
+  get selectedSubset() {
+    return this.getAttribute("selected-subset") || "";
+  }
+
+  set selectedSubset(value: string) {
+    this.setAttribute("selected-subset", value);
+  }
+
+  get selectedVariant() {
+    return this.getAttribute("selected-variant") || "";
+  }
+
+  set selectedVariant(value: string) {
+    this.setAttribute("selected-variant", value);
+  }
+
+  get selectedTag() {
+    return this.getAttribute("selected-tag") || "";
+  }
+
+  set selectedTag(value: string) {
+    this.setAttribute("selected-tag", value);
+  }
+
+  get selectedSearch() {
+    return this.getAttribute("selected-search") || "";
+  }
+
+  set selectedSearch(value: string) {
+    this.setAttribute("selected-search", value);
+  }
+
+  get selectedVariable() {
+    return this.getAttribute("selected-variable") === "true";
+  }
+
+  set selectedVariable(value: boolean) {
+    this.setAttribute("selected-variable", value.toString());
+  }
+
+  get sortBy() {
+    return this.getAttribute("sort-by") || "family";
+  }
+
+  set sortBy(value: string) {
+    this.setAttribute("sort-by", value);
+  }
 
   constructor() {
     super();
-
-    this.selectedTag = "";
-    this.selectedCategory = "";
-    this.selectedSubset = "";
-    this.selectedVariant = "";
-    this.selectedSearch = "";
-    this.selectedVariable;
-    this.sortBy = "family";
 
     // Bind methods
     this.handleSearch = this.handleSearch.bind(this);
@@ -71,7 +111,6 @@ class MainApp extends HTMLElement {
   clearFilter({ detail: { value } }: CustomEvent<{ value: string }>) {
     if (value) this.removeSingleFilter(value);
     else this.removeAllFilters();
-    this.render();
   }
 
   removeSingleFilter(filter: string) {
@@ -124,7 +163,6 @@ class MainApp extends HTMLElement {
   handleFilter(event: CustomEvent) {
     const { id, value } = event.detail;
     this[id as SelectTypes] = value;
-    this.render();
     this.scrollToContent();
   }
 
@@ -133,12 +171,31 @@ class MainApp extends HTMLElement {
       /[^\d A-Za-z-]/g,
       ""
     );
-    this.render();
     this.scrollToContent();
   }
 
   handleSortBy(event: CustomEvent) {
     this.sortBy = event.detail.value;
+  }
+
+  static get observedAttributes() {
+    return [
+      "selected-category",
+      "selected-subset",
+      "selected-variant",
+      "selected-tag",
+      "selected-search",
+      "selected-variable",
+      "sort-by",
+    ];
+  }
+
+  attributeChangedCallback(
+    name: string,
+    previousValue: string,
+    nextValue: string
+  ) {
+    if (previousValue === nextValue) return;
     this.render();
   }
 }
