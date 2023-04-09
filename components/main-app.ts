@@ -254,6 +254,7 @@ class MainApp extends HTMLElement {
     nextValue: string
   ) {
     if (previousValue === nextValue) return;
+    this.currentPage = 1;
     this.render();
   }
 }
