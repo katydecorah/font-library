@@ -1,4 +1,4 @@
-import { GeneratedData } from "./font-results";
+import { GeneratedData } from "./main-app";
 
 export default function filter(
   state: {

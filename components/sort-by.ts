@@ -11,7 +11,7 @@ class SortBy extends HTMLElement {
     return this.getAttribute("sort-by");
   }
 
-  connectedCallback() {
+  render() {
     const buttons = [
       {
         label: "Family",
@@ -40,6 +40,21 @@ class SortBy extends HTMLElement {
   handleSort(event: ButtonType) {
     const value = (event.target as HTMLElement).dataset.sort;
     this.dispatchEvent(customEvent("sort-by", { value }));
+  }
+
+  disconnectedCallback() {
+    for (const button of this.querySelectorAll("[data-sort]")) {
+      button.removeEventListener("click", this.handleSort);
+    }
+  }
+
+  static get observedAttributes() {
+    return ["sort-by"];
+  }
+
+  attributeChangedCallback(name: string, oldValue: string, nextValue: string) {
+    if (oldValue === nextValue) return;
+    this.render();
   }
 }
 

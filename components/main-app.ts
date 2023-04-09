@@ -1,5 +1,8 @@
 import customEvent from "./custom-event";
 import { setAttributes } from "./set-attributes";
+import filter from "./filter";
+import generatedData from "../data/data.json";
+export type GeneratedData = typeof generatedData;
 
 type SelectTypes =
   | "selectedCategory"
@@ -9,8 +12,11 @@ type SelectTypes =
   | "selectedSearch";
 
 class MainApp extends HTMLElement {
+  resultsLength: number;
+  pageSize: number;
+  currentPage: number;
   get selectedCategory() {
-    return this.getAttribute("selected-category") || "";
+    return this.getAttribute("selected-category");
   }
 
   set selectedCategory(value: string) {
@@ -18,7 +24,7 @@ class MainApp extends HTMLElement {
   }
 
   get selectedSubset() {
-    return this.getAttribute("selected-subset") || "";
+    return this.getAttribute("selected-subset");
   }
 
   set selectedSubset(value: string) {
@@ -26,7 +32,7 @@ class MainApp extends HTMLElement {
   }
 
   get selectedVariant() {
-    return this.getAttribute("selected-variant") || "";
+    return this.getAttribute("selected-variant");
   }
 
   set selectedVariant(value: string) {
@@ -34,7 +40,7 @@ class MainApp extends HTMLElement {
   }
 
   get selectedTag() {
-    return this.getAttribute("selected-tag") || "";
+    return this.getAttribute("selected-tag");
   }
 
   set selectedTag(value: string) {
@@ -42,7 +48,7 @@ class MainApp extends HTMLElement {
   }
 
   get selectedSearch() {
-    return this.getAttribute("selected-search") || "";
+    return this.getAttribute("selected-search");
   }
 
   set selectedSearch(value: string) {
@@ -81,9 +87,15 @@ class MainApp extends HTMLElement {
       .querySelector("#selectedSearch")
       .addEventListener("input", this.handleSearch);
     this.addEventListener("sort-by", this.handleSortBy);
+    this.addEventListener("next-page", this.handlePage);
+    this.addEventListener("previous-page", this.handlePage);
 
     // Dispatch main-app-loaded
     window.dispatchEvent(new Event("main-app-loaded"));
+
+    this.resultsLength;
+    this.pageSize = 10;
+    this.currentPage = 1;
   }
 
   connectedCallback() {
@@ -91,21 +103,52 @@ class MainApp extends HTMLElement {
   }
 
   render() {
-    const fontResults = document.querySelector("#font-results");
-
-    const fontResultsElm = document.createElement("font-results");
-
-    setAttributes(fontResultsElm, {
-      "sort-by": this.sortBy,
+    const fontResults: HTMLElement = document.querySelector("font-results");
+    setAttributes(fontResults, {
       "selected-category": this.selectedCategory,
       "selected-subset": this.selectedSubset,
       "selected-variant": this.selectedVariant,
       "selected-tag": this.selectedTag,
       "selected-search": this.selectedSearch,
       "selected-variable": this.selectedVariable === true ? "true" : "",
+      "sort-by": this.sortBy,
     });
 
-    fontResults.innerHTML = fontResultsElm.outerHTML;
+    const [resultsLength, paginatedData] = filter(this, generatedData);
+    this.resultsLength = resultsLength;
+
+    const searchStatus: HTMLElement = document.querySelector("search-status");
+
+    setAttributes(searchStatus, {
+      "results-length": this.resultsLength.toString(),
+      "selected-category": this.selectedCategory,
+      "selected-subset": this.selectedSubset,
+      "selected-variant": this.selectedVariant,
+      "selected-tag": this.selectedTag,
+      "selected-search": this.selectedSearch,
+      "selected-variable": this.selectedVariable === true ? "true" : "",
+      "sort-by": this.sortBy,
+    });
+
+    const sortBy: HTMLElement = document.querySelector("sort-by");
+    setAttributes(sortBy, {
+      "sort-by": this.sortBy,
+    });
+
+    const fontList: HTMLElement = document.querySelector("ul[is=font-list]");
+    setAttributes(fontList, {
+      "selected-subset": this.selectedSubset,
+      "selected-variant": this.selectedVariant,
+      fonts: JSON.stringify(paginatedData),
+    });
+
+    const paginationButtons: HTMLElement =
+      document.querySelector("pagination-buttons");
+    setAttributes(paginationButtons, {
+      "current-page": this.currentPage.toString(),
+      "results-length": this.resultsLength.toString(),
+      "page-size": this.pageSize.toString(),
+    });
   }
 
   clearFilter({ detail: { value } }: CustomEvent<{ value: string }>) {
@@ -127,6 +170,21 @@ class MainApp extends HTMLElement {
         this.removeSelect(filter);
       }
     }
+  }
+
+  handlePage({ type }: CustomEvent) {
+    if (
+      type === "next-page" &&
+      this.currentPage * this.pageSize < this.resultsLength
+    ) {
+      this.currentPage++;
+    }
+    if (type === "previous-page" && this.currentPage > 1) {
+      this.currentPage--;
+    }
+    this.render();
+    // scroll to #content
+    document.querySelector("#content").scrollIntoView();
   }
 
   removeAllFilters() {
@@ -200,5 +258,4 @@ class MainApp extends HTMLElement {
   }
 }
 
-// Define the new element
 customElements.define("main-app", MainApp);

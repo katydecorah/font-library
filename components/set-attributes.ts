@@ -6,7 +6,7 @@ export function setAttributes(
 ) {
   for (const key in attributes) {
     if (
-      attributes[key] !== "" &&
+      //      attributes[key] !== "" &&
       attributes[key] !== undefined &&
       attributes[key] !== null
     ) {

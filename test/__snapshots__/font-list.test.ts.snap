@@ -1,0 +1,734 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FontList should render with fonts 1`] = `
+<ul
+  fonts="[{"family":"UnifrakturCook","variants":["700"],"subsets":["latin"],"category":"display","tags":[],"lineNumber":1020},{"family":"Alef","variants":["regular","700"],"subsets":["hebrew","latin"],"category":"sans-serif","tags":["geometric"],"lineNumber":23}]"
+  is="font-list"
+>
+  <li
+    font="{"family":"UnifrakturCook","variants":["700"],"subsets":["latin"],"category":"display","tags":[],"lineNumber":1020}"
+    is="font-item"
+  >
+    <div
+      class="family-link"
+    >
+      
+      
+      <div
+        class="family-title unifrakturcook"
+        style="font-family: 'UnifrakturCook';"
+      >
+        
+        UnifrakturCook
+      
+      </div>
+      
+      
+      <div
+        class="family-meta-container"
+      >
+        
+        
+        <span
+          class="family-title-small"
+        />
+        
+        
+        <div
+          class="family-meta"
+        >
+          
+          
+          <ul>
+            
+            
+            <li>
+              display
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="700"
+              >
+                1 variants
+              </span>
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="latin"
+              >
+                1 subsets
+              </span>
+            </li>
+            
+          
+          </ul>
+          
+        
+        </div>
+        
+      
+      </div>
+      
+    
+    </div>
+    
+    
+    <div
+      class="family-tags"
+    >
+      
+      
+      <div
+        class="family-tags-container"
+      />
+      
+      
+      <div
+        class="family-meta-links"
+      >
+        
+        
+        <a
+          aria-label="Edit tags for UnifrakturCook"
+          href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L1020"
+          target="_blank"
+        >
+          Edit tags
+        </a>
+        
+        
+        <a
+          aria-label="Visit UnifrakturCook on Google Fonts"
+          href="https://fonts.google.com/specimen/UnifrakturCook"
+          target="_blank"
+        >
+          Google Fonts →
+        </a>
+        
+      
+      </div>
+      
+    
+    </div>
+  </li>
+  
+
+  <li
+    font="{"family":"Alef","variants":["regular","700"],"subsets":["hebrew","latin"],"category":"sans-serif","tags":["geometric"],"lineNumber":23}"
+    is="font-item"
+  >
+    <div
+      class="family-link"
+    >
+      
+      
+      <div
+        class="family-title alef"
+        style="font-family: 'Alef';"
+      >
+        
+        Alef
+      
+      </div>
+      
+      
+      <div
+        class="family-meta-container"
+      >
+        
+        
+        <span
+          class="family-title-small"
+        />
+        
+        
+        <div
+          class="family-meta"
+        >
+          
+          
+          <ul>
+            
+            
+            <li>
+              sans-serif
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="regular, 700"
+              >
+                2 variants
+              </span>
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="hebrew, latin"
+              >
+                2 subsets
+              </span>
+            </li>
+            
+          
+          </ul>
+          
+        
+        </div>
+        
+      
+      </div>
+      
+    
+    </div>
+    
+    
+    <div
+      class="family-tags"
+    >
+      
+      
+      <div
+        class="family-tags-container"
+      >
+        <button
+          is="tag-button"
+          style="font-family: "Alatsi";"
+          title="geometric"
+          value="geometric"
+        >
+          geometric
+        </button>
+      </div>
+      
+      
+      <div
+        class="family-meta-links"
+      >
+        
+        
+        <a
+          aria-label="Edit tags for Alef"
+          href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L23"
+          target="_blank"
+        >
+          Edit tags
+        </a>
+        
+        
+        <a
+          aria-label="Visit Alef on Google Fonts"
+          href="https://fonts.google.com/specimen/Alef"
+          target="_blank"
+        >
+          Google Fonts →
+        </a>
+        
+      
+      </div>
+      
+    
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`FontList should render with fonts and selectedSubset 1`] = `
+<ul
+  fonts="[{"family":"UnifrakturCook","variants":["700"],"subsets":["latin"],"category":"display","tags":[],"lineNumber":1020},{"family":"Alef","variants":["regular","700"],"subsets":["hebrew","latin"],"category":"sans-serif","tags":["geometric"],"lineNumber":23}]"
+  is="font-list"
+  selected-subset="hebrew"
+>
+  <li
+    font="{"family":"UnifrakturCook","variants":["700"],"subsets":["latin"],"category":"display","tags":[],"lineNumber":1020}"
+    is="font-item"
+    selected-subset="hebrew"
+  >
+    <div
+      class="family-link"
+    >
+      
+      
+      <div
+        class="family-title unifrakturcook"
+        style="font-family: 'UnifrakturCook';direction: rtl;"
+      >
+        
+        שָׁלוֹם עוֹלָם 
+      
+      </div>
+      
+      
+      <div
+        class="family-meta-container"
+      >
+        
+        
+        <span
+          class="family-title-small"
+        >
+          UnifrakturCook
+        </span>
+        
+        
+        <div
+          class="family-meta"
+        >
+          
+          
+          <ul>
+            
+            
+            <li>
+              display
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="700"
+              >
+                1 variants
+              </span>
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="latin"
+              >
+                1 subsets
+              </span>
+            </li>
+            
+          
+          </ul>
+          
+        
+        </div>
+        
+      
+      </div>
+      
+    
+    </div>
+    
+    
+    <div
+      class="family-tags"
+    >
+      
+      
+      <div
+        class="family-tags-container"
+      />
+      
+      
+      <div
+        class="family-meta-links"
+      >
+        
+        
+        <a
+          aria-label="Edit tags for UnifrakturCook"
+          href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L1020"
+          target="_blank"
+        >
+          Edit tags
+        </a>
+        
+        
+        <a
+          aria-label="Visit UnifrakturCook on Google Fonts"
+          href="https://fonts.google.com/specimen/UnifrakturCook"
+          target="_blank"
+        >
+          Google Fonts →
+        </a>
+        
+      
+      </div>
+      
+    
+    </div>
+  </li>
+  
+
+  <li
+    font="{"family":"Alef","variants":["regular","700"],"subsets":["hebrew","latin"],"category":"sans-serif","tags":["geometric"],"lineNumber":23}"
+    is="font-item"
+    selected-subset="hebrew"
+  >
+    <div
+      class="family-link"
+    >
+      
+      
+      <div
+        class="family-title alef"
+        style="font-family: 'Alef';direction: rtl;"
+      >
+        
+        שָׁלוֹם עוֹלָם 
+      
+      </div>
+      
+      
+      <div
+        class="family-meta-container"
+      >
+        
+        
+        <span
+          class="family-title-small"
+        >
+          Alef
+        </span>
+        
+        
+        <div
+          class="family-meta"
+        >
+          
+          
+          <ul>
+            
+            
+            <li>
+              sans-serif
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="regular, 700"
+              >
+                2 variants
+              </span>
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="hebrew, latin"
+              >
+                2 subsets
+              </span>
+            </li>
+            
+          
+          </ul>
+          
+        
+        </div>
+        
+      
+      </div>
+      
+    
+    </div>
+    
+    
+    <div
+      class="family-tags"
+    >
+      
+      
+      <div
+        class="family-tags-container"
+      >
+        <button
+          is="tag-button"
+          style="font-family: "Alatsi";"
+          title="geometric"
+          value="geometric"
+        >
+          geometric
+        </button>
+      </div>
+      
+      
+      <div
+        class="family-meta-links"
+      >
+        
+        
+        <a
+          aria-label="Edit tags for Alef"
+          href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L23"
+          target="_blank"
+        >
+          Edit tags
+        </a>
+        
+        
+        <a
+          aria-label="Visit Alef on Google Fonts"
+          href="https://fonts.google.com/specimen/Alef"
+          target="_blank"
+        >
+          Google Fonts →
+        </a>
+        
+      
+      </div>
+      
+    
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`FontList should render with fonts and selectedVariant 1`] = `
+<ul
+  fonts="[{"family":"UnifrakturCook","variants":["700"],"subsets":["latin"],"category":"display","tags":[],"lineNumber":1020},{"family":"Alef","variants":["regular","700"],"subsets":["hebrew","latin"],"category":"sans-serif","tags":["geometric"],"lineNumber":23}]"
+  is="font-list"
+  selected-variant="700"
+>
+  <li
+    font="{"family":"UnifrakturCook","variants":["700"],"subsets":["latin"],"category":"display","tags":[],"lineNumber":1020}"
+    is="font-item"
+    selected-variant="700"
+  >
+    <div
+      class="family-link"
+    >
+      
+      
+      <div
+        class="family-title unifrakturcook"
+        style="font-family: 'UnifrakturCook';"
+      >
+        
+        UnifrakturCook
+      
+      </div>
+      
+      
+      <div
+        class="family-meta-container"
+      >
+        
+        
+        <span
+          class="family-title-small"
+        />
+        
+        
+        <div
+          class="family-meta"
+        >
+          
+          
+          <ul>
+            
+            
+            <li>
+              display
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="700"
+              >
+                1 variants
+              </span>
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="latin"
+              >
+                1 subsets
+              </span>
+            </li>
+            
+          
+          </ul>
+          
+        
+        </div>
+        
+      
+      </div>
+      
+    
+    </div>
+    
+    
+    <div
+      class="family-tags"
+    >
+      
+      
+      <div
+        class="family-tags-container"
+      />
+      
+      
+      <div
+        class="family-meta-links"
+      >
+        
+        
+        <a
+          aria-label="Edit tags for UnifrakturCook"
+          href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L1020"
+          target="_blank"
+        >
+          Edit tags
+        </a>
+        
+        
+        <a
+          aria-label="Visit UnifrakturCook on Google Fonts"
+          href="https://fonts.google.com/specimen/UnifrakturCook"
+          target="_blank"
+        >
+          Google Fonts →
+        </a>
+        
+      
+      </div>
+      
+    
+    </div>
+  </li>
+  
+
+  <li
+    font="{"family":"Alef","variants":["regular","700"],"subsets":["hebrew","latin"],"category":"sans-serif","tags":["geometric"],"lineNumber":23}"
+    is="font-item"
+    selected-variant="700"
+  >
+    <div
+      class="family-link"
+    >
+      
+      
+      <div
+        class="family-title alef"
+        style="font-family: 'Alef';"
+      >
+        
+        Alef
+      
+      </div>
+      
+      
+      <div
+        class="family-meta-container"
+      >
+        
+        
+        <span
+          class="family-title-small"
+        />
+        
+        
+        <div
+          class="family-meta"
+        >
+          
+          
+          <ul>
+            
+            
+            <li>
+              sans-serif
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="regular, 700"
+              >
+                2 variants
+              </span>
+            </li>
+            
+            
+            <li>
+              <span
+                aria-label="hebrew, latin"
+              >
+                2 subsets
+              </span>
+            </li>
+            
+          
+          </ul>
+          
+        
+        </div>
+        
+      
+      </div>
+      
+    
+    </div>
+    
+    
+    <div
+      class="family-tags"
+    >
+      
+      
+      <div
+        class="family-tags-container"
+      >
+        <button
+          is="tag-button"
+          style="font-family: "Alatsi";"
+          title="geometric"
+          value="geometric"
+        >
+          geometric
+        </button>
+      </div>
+      
+      
+      <div
+        class="family-meta-links"
+      >
+        
+        
+        <a
+          aria-label="Edit tags for Alef"
+          href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L23"
+          target="_blank"
+        >
+          Edit tags
+        </a>
+        
+        
+        <a
+          aria-label="Visit Alef on Google Fonts"
+          href="https://fonts.google.com/specimen/Alef"
+          target="_blank"
+        >
+          Google Fonts →
+        </a>
+        
+      
+      </div>
+      
+    
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`FontList should return if no fonts 1`] = `
+<ul
+  is="font-list"
+/>
+`;

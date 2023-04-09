@@ -63,7 +63,9 @@ describe("MainApp", () => {
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
         results-length="136"
+        selected-variable=""
         selected-variant="300italic"
+        sort-by="family"
       >
         <div>
           Found 136 fonts: 
@@ -109,6 +111,8 @@ describe("MainApp", () => {
       <search-status
         results-length="42"
         selected-subset="arabic"
+        selected-variable=""
+        sort-by="family"
       >
         <div>
           Found 42 fonts: 
@@ -154,6 +158,8 @@ describe("MainApp", () => {
       <search-status
         results-length="391"
         selected-category="display"
+        selected-variable=""
+        sort-by="family"
       >
         <div>
           Found 391 fonts: 
@@ -201,6 +207,8 @@ describe("MainApp", () => {
       <search-status
         results-length="464"
         selected-tag="need tags"
+        selected-variable=""
+        sort-by="family"
       >
         <div>
           Found 464 fonts: 
@@ -254,6 +262,9 @@ describe("MainApp", () => {
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
         results-length="1498"
+        selected-tag=""
+        selected-variable=""
+        sort-by="family"
       >
         <div>
           Found 1498 fonts
@@ -277,6 +288,8 @@ describe("MainApp", () => {
       <search-status
         results-length="1"
         selected-search="are you serious"
+        selected-variable=""
+        sort-by="family"
       >
         <div>
           Found 1 fonts: 
@@ -331,6 +344,9 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         results-length="1498"
+        selected-search=""
+        selected-variable=""
+        sort-by="family"
       >
         <div>
           Found 1498 fonts
@@ -349,6 +365,7 @@ describe("MainApp", () => {
       <search-status
         results-length="293"
         selected-variable="true"
+        sort-by="family"
       >
         <div>
           Found 293 fonts: 
@@ -389,6 +406,9 @@ describe("MainApp", () => {
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
         results-length="1498"
+        selected-tag=""
+        selected-variable=""
+        sort-by="family"
       >
         <div>
           Found 1498 fonts
@@ -414,6 +434,10 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         results-length="1498"
+        selected-category=""
+        selected-tag=""
+        selected-variable=""
+        sort-by="family"
       >
         <div>
           Found 1498 fonts
@@ -439,6 +463,11 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         results-length="1498"
+        selected-category=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable=""
+        sort-by="family"
       >
         <div>
           Found 1498 fonts
@@ -464,6 +493,12 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         results-length="1498"
+        selected-category=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable=""
+        selected-variant=""
+        sort-by="family"
       >
         <div>
           Found 1498 fonts
@@ -507,6 +542,7 @@ describe("MainApp", () => {
         selected-tag="modern"
         selected-variable="true"
         selected-variant="100italic"
+        sort-by="family"
       >
         <div>
           Found 0 fonts: 
@@ -624,6 +660,13 @@ describe("MainApp", () => {
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
         results-length="1498"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag=""
+        selected-variable=""
+        selected-variant=""
+        sort-by="family"
       >
         <div>
           Found 1498 fonts
@@ -650,7 +693,12 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         results-length="18"
+        selected-category=""
+        selected-subset=""
         selected-tag="cute"
+        selected-variable=""
+        selected-variant=""
+        sort-by="family"
       >
         <div>
           Found 18 fonts: 
@@ -706,6 +754,8 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         results-length="1498"
+        selected-variable=""
+        sort-by="family"
       >
         <div>
           Found 1498 fonts
@@ -723,7 +773,12 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         results-length="24"
+        selected-category=""
+        selected-subset=""
         selected-tag="outline"
+        selected-variable=""
+        selected-variant=""
+        sort-by="family"
       >
         <div>
           Found 24 fonts: 
@@ -769,6 +824,7 @@ describe("MainApp", () => {
       <search-status
         results-length="293"
         selected-variable="true"
+        sort-by="family"
       >
         <div>
           Found 293 fonts: 
@@ -806,6 +862,8 @@ describe("MainApp", () => {
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
         results-length="1498"
+        selected-variable=""
+        sort-by="family"
       >
         <div>
           Found 1498 fonts
@@ -832,6 +890,7 @@ describe("MainApp", () => {
       <search-status
         results-length="293"
         selected-variable="true"
+        sort-by="family"
       >
         <div>
           Found 293 fonts: 
@@ -883,6 +942,8 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         results-length="1498"
+        selected-variable=""
+        sort-by="family"
       >
         <div>
           Found 1498 fonts
@@ -925,5 +986,18 @@ describe("MainApp", () => {
         </div>
       </sort-by>
     `);
+  });
+
+  test("fires a next-page custom event", () => {
+    mainApp.dispatchEvent(customEvent("next-page"));
+    const pagination = mainApp.querySelector("pagination-buttons");
+    expect(pagination.getAttribute("current-page")).toBe("2");
+  });
+
+  test("fires a prev-page custom event", () => {
+    mainApp.dispatchEvent(customEvent("next-page"));
+    mainApp.dispatchEvent(customEvent("previous-page"));
+    const pagination = mainApp.querySelector("pagination-buttons");
+    expect(pagination.getAttribute("current-page")).toBe("1");
   });
 });

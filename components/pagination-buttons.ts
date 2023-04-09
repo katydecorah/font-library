@@ -33,7 +33,7 @@ class PaginationButtons extends HTMLElement {
     return this.currentPage === 1 ? "disabled" : "";
   }
 
-  connectedCallback() {
+  render() {
     const {
       currentPage,
       prevPageDisabledState,
@@ -55,6 +55,21 @@ class PaginationButtons extends HTMLElement {
 
   handlePage(event: ButtonType) {
     this.dispatchEvent(customEvent(event.target.dataset.event));
+  }
+
+  disconnectedCallback() {
+    for (const button of this.querySelectorAll("[data-event]")) {
+      button.removeEventListener("click", this.handlePage);
+    }
+  }
+
+  static get observedAttributes() {
+    return ["current-page", "results-length", "page-size"];
+  }
+
+  attributeChangedCallback(name: string, oldValue: string, nextValue: string) {
+    if (oldValue === nextValue) return;
+    this.render();
   }
 }
 

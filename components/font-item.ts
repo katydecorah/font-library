@@ -1,12 +1,10 @@
 import sampleSubsets from "../data/samples.json";
-import rtlSubsets from "../data/rtl.json";
 import swaps from "../data/swaps.json";
-import { GeneratedData } from "./font-results";
 import fontCall, { familyStyle } from "./font-call";
+import { GeneratedData } from "./main-app";
 
-export type SampleSubsets = typeof sampleSubsets;
-export type RtlSubsets = typeof rtlSubsets;
-export type Swaps = typeof swaps;
+type SampleSubsets = typeof sampleSubsets;
+type Swaps = typeof swaps;
 
 class FontItem extends HTMLLIElement {
   subset: string;
