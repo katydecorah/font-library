@@ -1,14 +1,21 @@
-import customEvent from "./custom-event";
 import { ButtonType } from "./pagination-buttons";
 
 class SortBy extends HTMLElement {
+  mainApp = document.querySelector("main-app");
+
   constructor() {
     super();
     this.button = this.button.bind(this);
+    this.handleSort = this.handleSort.bind(this);
   }
 
   get sortBy() {
     return this.getAttribute("sort-by");
+  }
+
+  set sortBy(value: string) {
+    this.setAttribute("sort-by", value);
+    if (this.mainApp) this.mainApp.setAttribute("sort-by", value);
   }
 
   render() {
@@ -39,7 +46,7 @@ class SortBy extends HTMLElement {
 
   handleSort(event: ButtonType) {
     const value = (event.target as HTMLElement).dataset.sort;
-    this.dispatchEvent(customEvent("sort-by", { value }));
+    this.sortBy = value;
   }
 
   disconnectedCallback() {

@@ -12,15 +12,44 @@ type SelectTypes =
   | "selectedSearch";
 
 class MainApp extends HTMLElement {
-  resultsLength: number;
-  pageSize: number;
-  currentPage: number;
+  paginationButtons: HTMLElement = document.querySelector("pagination-buttons");
+  searchStatus: HTMLElement = document.querySelector("search-status");
+  sortByElm: HTMLElement = document.querySelector("sort-by");
+  fontList: HTMLUListElement = document.querySelector("ul[is=font-list]");
+  content: HTMLElement = document.querySelector("#content");
+  selectedSearchElm = document.querySelector("#selectedSearch");
+
+  get pageSize() {
+    return 10;
+  }
+
+  get currentPage() {
+    return Number.parseInt(this.getAttribute("current-page")) || 1;
+  }
+
+  set currentPage(value: number) {
+    const elements = [this, this.paginationButtons];
+    for (const element of elements) {
+      element.setAttribute("current-page", value.toString());
+    }
+  }
+
+  set resultsLength(value: string) {
+    const elements = [this, this.paginationButtons, this.searchStatus];
+    for (const element of elements) {
+      element.setAttribute("results-length", value);
+    }
+  }
+
   get selectedCategory() {
     return this.getAttribute("selected-category");
   }
 
   set selectedCategory(value: string) {
-    this.setAttribute("selected-category", value);
+    const elements = [this, this.searchStatus];
+    for (const element of elements) {
+      element.setAttribute("selected-category", value);
+    }
   }
 
   get selectedSubset() {
@@ -28,7 +57,10 @@ class MainApp extends HTMLElement {
   }
 
   set selectedSubset(value: string) {
-    this.setAttribute("selected-subset", value);
+    const elements = [this, this.searchStatus, this.fontList];
+    for (const element of elements) {
+      element.setAttribute("selected-subset", value);
+    }
   }
 
   get selectedVariant() {
@@ -36,7 +68,10 @@ class MainApp extends HTMLElement {
   }
 
   set selectedVariant(value: string) {
-    this.setAttribute("selected-variant", value);
+    const elements = [this, this.searchStatus, this.fontList];
+    for (const element of elements) {
+      element.setAttribute("selected-variant", value);
+    }
   }
 
   get selectedTag() {
@@ -44,7 +79,10 @@ class MainApp extends HTMLElement {
   }
 
   set selectedTag(value: string) {
-    this.setAttribute("selected-tag", value);
+    const elements = [this, this.searchStatus];
+    for (const element of elements) {
+      element.setAttribute("selected-tag", value);
+    }
   }
 
   get selectedSearch() {
@@ -52,7 +90,10 @@ class MainApp extends HTMLElement {
   }
 
   set selectedSearch(value: string) {
-    this.setAttribute("selected-search", value);
+    const elements = [this, this.searchStatus];
+    for (const element of elements) {
+      element.setAttribute("selected-search", value);
+    }
   }
 
   get selectedVariable() {
@@ -60,15 +101,15 @@ class MainApp extends HTMLElement {
   }
 
   set selectedVariable(value: boolean) {
-    this.setAttribute("selected-variable", value.toString());
+    const elements = [this, this.searchStatus];
+    for (const element of elements) {
+      if (value === true) element.setAttribute("selected-variable", "true");
+      else element.removeAttribute("selected-variable");
+    }
   }
 
   get sortBy() {
     return this.getAttribute("sort-by") || "family";
-  }
-
-  set sortBy(value: string) {
-    this.setAttribute("sort-by", value);
   }
 
   constructor() {
@@ -86,16 +127,9 @@ class MainApp extends HTMLElement {
     document
       .querySelector("#selectedSearch")
       .addEventListener("input", this.handleSearch);
-    this.addEventListener("sort-by", this.handleSortBy);
-    this.addEventListener("next-page", this.handlePage);
-    this.addEventListener("previous-page", this.handlePage);
 
     // Dispatch main-app-loaded
     window.dispatchEvent(new Event("main-app-loaded"));
-
-    this.resultsLength;
-    this.pageSize = 10;
-    this.currentPage = 1;
   }
 
   connectedCallback() {
@@ -103,51 +137,12 @@ class MainApp extends HTMLElement {
   }
 
   render() {
-    const fontResults: HTMLElement = document.querySelector("font-results");
-    setAttributes(fontResults, {
-      "selected-category": this.selectedCategory,
-      "selected-subset": this.selectedSubset,
-      "selected-variant": this.selectedVariant,
-      "selected-tag": this.selectedTag,
-      "selected-search": this.selectedSearch,
-      "selected-variable": this.selectedVariable === true ? "true" : "",
-      "sort-by": this.sortBy,
-    });
-
     const [resultsLength, paginatedData] = filter(this, generatedData);
-    this.resultsLength = resultsLength;
 
-    const searchStatus: HTMLElement = document.querySelector("search-status");
+    this.resultsLength = resultsLength.toString();
 
-    setAttributes(searchStatus, {
-      "results-length": this.resultsLength.toString(),
-      "selected-category": this.selectedCategory,
-      "selected-subset": this.selectedSubset,
-      "selected-variant": this.selectedVariant,
-      "selected-tag": this.selectedTag,
-      "selected-search": this.selectedSearch,
-      "selected-variable": this.selectedVariable === true ? "true" : "",
-      "sort-by": this.sortBy,
-    });
-
-    const sortBy: HTMLElement = document.querySelector("sort-by");
-    setAttributes(sortBy, {
-      "sort-by": this.sortBy,
-    });
-
-    const fontList: HTMLElement = document.querySelector("ul[is=font-list]");
-    setAttributes(fontList, {
-      "selected-subset": this.selectedSubset,
-      "selected-variant": this.selectedVariant,
+    setAttributes(this.fontList, {
       fonts: JSON.stringify(paginatedData),
-    });
-
-    const paginationButtons: HTMLElement =
-      document.querySelector("pagination-buttons");
-    setAttributes(paginationButtons, {
-      "current-page": this.currentPage.toString(),
-      "results-length": this.resultsLength.toString(),
-      "page-size": this.pageSize.toString(),
     });
   }
 
@@ -172,21 +167,6 @@ class MainApp extends HTMLElement {
     }
   }
 
-  handlePage({ type }: CustomEvent) {
-    if (
-      type === "next-page" &&
-      this.currentPage * this.pageSize < this.resultsLength
-    ) {
-      this.currentPage++;
-    }
-    if (type === "previous-page" && this.currentPage > 1) {
-      this.currentPage--;
-    }
-    this.render();
-    // scroll to #content
-    document.querySelector("#content").scrollIntoView();
-  }
-
   removeAllFilters() {
     if (this.selectedCategory) this.removeSelect("selectedCategory");
     if (this.selectedSubset) this.removeSelect("selectedSubset");
@@ -198,7 +178,7 @@ class MainApp extends HTMLElement {
 
   removeSearch() {
     this.selectedSearch = "";
-    (document.querySelector("#selectedSearch") as HTMLInputElement).value = "";
+    (this.selectedSearchElm as HTMLInputElement).value = "";
   }
 
   removeSelect(value: string) {
@@ -214,8 +194,7 @@ class MainApp extends HTMLElement {
   }
 
   scrollToContent() {
-    const contentElement = document.querySelector("#content");
-    contentElement.scrollIntoView();
+    this.content.scrollIntoView();
   }
 
   handleFilter(event: CustomEvent) {
@@ -232,10 +211,6 @@ class MainApp extends HTMLElement {
     this.scrollToContent();
   }
 
-  handleSortBy(event: CustomEvent) {
-    this.sortBy = event.detail.value;
-  }
-
   static get observedAttributes() {
     return [
       "selected-category",
@@ -245,6 +220,8 @@ class MainApp extends HTMLElement {
       "selected-search",
       "selected-variable",
       "sort-by",
+      "current-page",
+      "results-length",
     ];
   }
 
@@ -254,7 +231,7 @@ class MainApp extends HTMLElement {
     nextValue: string
   ) {
     if (previousValue === nextValue) return;
-    this.currentPage = 1;
+    if (name !== "current-page") this.currentPage = 1;
     this.render();
   }
 }
