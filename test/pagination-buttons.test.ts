@@ -7,11 +7,9 @@ describe("pagination-buttons", () => {
     const paginationButtons =
       document.querySelector("pagination-buttons").innerHTML;
     expect(paginationButtons).toMatchInlineSnapshot(`
-      "<div class="pagination">
-        <button data-event="previous-page" class="btn" id="btn-prev" disabled="">Previous page</button>
-        <div class="page-count" id="page-count">1 of 120</div>
-        <button data-event="next-page" class="btn" id="btn-next">Next page</button>
-      </div>"
+      "<button data-event="previous-page" class="btn" id="btn-prev" disabled="">Previous page</button>
+      <div class="page-count" id="page-count">1 of 120</div>
+      <button data-event="next-page" class="btn" id="btn-next">Next page</button>"
     `);
   });
 
@@ -23,11 +21,9 @@ describe("pagination-buttons", () => {
     const paginationButtons =
       document.querySelector("pagination-buttons").innerHTML;
     expect(paginationButtons).toMatchInlineSnapshot(`
-      "<div class="pagination">
-        <button data-event="previous-page" class="btn" id="btn-prev" disabled="">Previous page</button>
-        <div class="page-count" id="page-count">1 of 120</div>
-        <button data-event="next-page" class="btn" id="btn-next">Next page</button>
-      </div>"
+      "<button data-event="previous-page" class="btn" id="btn-prev" disabled="">Previous page</button>
+      <div class="page-count" id="page-count">1 of 120</div>
+      <button data-event="next-page" class="btn" id="btn-next">Next page</button>"
     `);
   });
 
@@ -39,11 +35,9 @@ describe("pagination-buttons", () => {
     const paginationButtons =
       document.querySelector("pagination-buttons").innerHTML;
     expect(paginationButtons).toMatchInlineSnapshot(`
-      "<div class="pagination">
-        <button data-event="previous-page" class="btn" id="btn-prev">Previous page</button>
-        <div class="page-count" id="page-count">2 of 120</div>
-        <button data-event="next-page" class="btn" id="btn-next">Next page</button>
-      </div>"
+      "<button data-event="previous-page" class="btn" id="btn-prev">Previous page</button>
+      <div class="page-count" id="page-count">2 of 120</div>
+      <button data-event="next-page" class="btn" id="btn-next">Next page</button>"
     `);
   });
 
@@ -55,11 +49,9 @@ describe("pagination-buttons", () => {
     const paginationButtons =
       document.querySelector("pagination-buttons").innerHTML;
     expect(paginationButtons).toMatchInlineSnapshot(`
-      "<div class="pagination">
-        <button data-event="previous-page" class="btn" id="btn-prev">Previous page</button>
-        <div class="page-count" id="page-count">120 of 120</div>
-        <button data-event="next-page" class="btn" id="btn-next" disabled="">Next page</button>
-      </div>"
+      "<button data-event="previous-page" class="btn" id="btn-prev">Previous page</button>
+      <div class="page-count" id="page-count">120 of 120</div>
+      <button data-event="next-page" class="btn" id="btn-next" disabled="">Next page</button>"
     `);
   });
 

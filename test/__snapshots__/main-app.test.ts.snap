@@ -3718,39 +3718,31 @@ exports[`MainApp renders correctly 1`] = `
       current-page="1"
       results-length="1498"
     >
-      <div
-        class="pagination"
+      <button
+        class="btn"
+        data-event="previous-page"
+        disabled=""
+        id="btn-prev"
       >
-        
-  
-        <button
-          class="btn"
-          data-event="previous-page"
-          disabled=""
-          id="btn-prev"
-        >
-          Previous page
-        </button>
-        
-  
-        <div
-          class="page-count"
-          id="page-count"
-        >
-          1 of 150
-        </div>
-        
-  
-        <button
-          class="btn"
-          data-event="next-page"
-          id="btn-next"
-        >
-          Next page
-        </button>
-        
+        Previous page
+      </button>
+      
 
+      <div
+        class="page-count"
+        id="page-count"
+      >
+        1 of 150
       </div>
+      
+
+      <button
+        class="btn"
+        data-event="next-page"
+        id="btn-next"
+      >
+        Next page
+      </button>
     </pagination-buttons>
     
         
