@@ -33,6 +33,21 @@ describe("MainApp", () => {
 
   afterEach(() => {
     jest.clearAllMocks();
+
+    // reset attributes from MainApp
+    const attributes = [
+      "selected-category",
+      "selected-subset",
+      "selected-variant",
+      "selected-tag",
+      "selected-search",
+      "selected-variable",
+      "sort-by",
+    ];
+
+    for (const attribute of attributes) {
+      mainApp.removeAttribute(attribute);
+    }
   });
 
   test("renders correctly", () => {
@@ -239,6 +254,7 @@ describe("MainApp", () => {
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
         results-length="1498"
+        selected-tag=""
       >
         <div>
           Found 1498 fonts
@@ -316,6 +332,7 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         results-length="1498"
+        selected-search=""
       >
         <div>
           Found 1498 fonts
@@ -399,6 +416,7 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         results-length="1498"
+        selected-category=""
       >
         <div>
           Found 1498 fonts
@@ -424,6 +442,7 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         results-length="1498"
+        selected-subset=""
       >
         <div>
           Found 1498 fonts
@@ -449,6 +468,7 @@ describe("MainApp", () => {
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
         results-length="1498"
+        selected-variant=""
       >
         <div>
           Found 1498 fonts
@@ -609,6 +629,11 @@ describe("MainApp", () => {
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
         results-length="1498"
+        selected-category=""
+        selected-search=""
+        selected-subset=""
+        selected-tag=""
+        selected-variant=""
       >
         <div>
           Found 1498 fonts
@@ -879,8 +904,11 @@ describe("MainApp", () => {
     ).toBe(false);
   });
 
-  test("sorts fonts when sort-by custom event is fired", async () => {
-    mainApp.dispatchEvent(customEvent("sort-by", { value: "date" }));
+  test("sorts fonts when sort-by button is clicked", async () => {
+    const sortByButton: HTMLButtonElement = document.querySelector(
+      "sort-by button[data-sort='date']"
+    );
+    sortByButton.click();
 
     const sortBy = document.querySelector("sort-by");
     expect(sortBy).toMatchInlineSnapshot(`
@@ -910,5 +938,36 @@ describe("MainApp", () => {
         </div>
       </sort-by>
     `);
+  });
+
+  it("current page changes on click", () => {
+    document.body.innerHTML = body;
+    const nextButton: HTMLButtonElement = document.querySelector(
+      "pagination-buttons #btn-next"
+    );
+    nextButton.click();
+    const mainApp = document.querySelector("main-app");
+    expect(mainApp.getAttribute("current-page")).toBe("2");
+    const paginationButtons = document.querySelector("pagination-buttons");
+    expect(paginationButtons.getAttribute("current-page")).toBe("2");
+  });
+
+  it("current page changes on click, next then back", () => {
+    document.body.innerHTML = body;
+    const nextButton: HTMLButtonElement = document.querySelector(
+      "pagination-buttons #btn-next"
+    );
+    nextButton.click();
+    const mainApp = document.querySelector("main-app");
+    expect(mainApp.getAttribute("current-page")).toBe("2");
+    const paginationButtons = document.querySelector("pagination-buttons");
+    expect(paginationButtons.getAttribute("current-page")).toBe("2");
+
+    const backButton: HTMLButtonElement = document.querySelector(
+      "pagination-buttons #btn-prev"
+    );
+    backButton.click();
+    expect(mainApp.getAttribute("current-page")).toBe("1");
+    expect(paginationButtons.getAttribute("current-page")).toBe("1");
   });
 });

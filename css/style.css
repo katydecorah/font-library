@@ -295,7 +295,7 @@ search-status .btn-clear {
   padding: 0 1em;
 }
 
-.pagination {
+pagination-buttons {
   margin-bottom: 1em;
   display: flex;
   grid-gap: 0.5em;

@@ -1,6 +1,18 @@
 import "./components";
 
 describe("pagination-buttons", () => {
+  it("renders", () => {
+    const resultsLength = 1200;
+    document.body.innerHTML = `<pagination-buttons results-length="${resultsLength}"></pagination-buttons>`;
+    const paginationButtons =
+      document.querySelector("pagination-buttons").innerHTML;
+    expect(paginationButtons).toMatchInlineSnapshot(`
+      "<button data-event="previous-page" class="btn" id="btn-prev" disabled="">Previous page</button>
+      <div class="page-count" id="page-count">1 of 120</div>
+      <button data-event="next-page" class="btn" id="btn-next">Next page</button>"
+    `);
+  });
+
   it("renders first page", () => {
     const resultsLength = 1200;
     const pageSize = 10;
@@ -9,11 +21,9 @@ describe("pagination-buttons", () => {
     const paginationButtons =
       document.querySelector("pagination-buttons").innerHTML;
     expect(paginationButtons).toMatchInlineSnapshot(`
-      "<div class="pagination ">
-        <button data-event="previous-page" class="btn" id="btn-prev" disabled="">Previous page</button>
-        <div class="page-count" id="page-count">1 of 120</div>
-        <button data-event="next-page" class="btn" id="btn-next">Next page</button>
-      </div>"
+      "<button data-event="previous-page" class="btn" id="btn-prev" disabled="">Previous page</button>
+      <div class="page-count" id="page-count">1 of 120</div>
+      <button data-event="next-page" class="btn" id="btn-next">Next page</button>"
     `);
   });
 
@@ -25,11 +35,9 @@ describe("pagination-buttons", () => {
     const paginationButtons =
       document.querySelector("pagination-buttons").innerHTML;
     expect(paginationButtons).toMatchInlineSnapshot(`
-      "<div class="pagination ">
-        <button data-event="previous-page" class="btn" id="btn-prev">Previous page</button>
-        <div class="page-count" id="page-count">2 of 120</div>
-        <button data-event="next-page" class="btn" id="btn-next">Next page</button>
-      </div>"
+      "<button data-event="previous-page" class="btn" id="btn-prev">Previous page</button>
+      <div class="page-count" id="page-count">2 of 120</div>
+      <button data-event="next-page" class="btn" id="btn-next">Next page</button>"
     `);
   });
 
@@ -41,11 +49,9 @@ describe("pagination-buttons", () => {
     const paginationButtons =
       document.querySelector("pagination-buttons").innerHTML;
     expect(paginationButtons).toMatchInlineSnapshot(`
-      "<div class="pagination ">
-        <button data-event="previous-page" class="btn" id="btn-prev">Previous page</button>
-        <div class="page-count" id="page-count">120 of 120</div>
-        <button data-event="next-page" class="btn" id="btn-next" disabled="">Next page</button>
-      </div>"
+      "<button data-event="previous-page" class="btn" id="btn-prev">Previous page</button>
+      <div class="page-count" id="page-count">120 of 120</div>
+      <button data-event="next-page" class="btn" id="btn-next" disabled="">Next page</button>"
     `);
   });
 
@@ -56,31 +62,6 @@ describe("pagination-buttons", () => {
     document.body.innerHTML = `<pagination-buttons results-length="${resultsLength}" page-size="${pageSize}" current-page="${currentPage}"></pagination-buttons>`;
     const paginationButtons =
       document.querySelector("pagination-buttons").innerHTML;
-    expect(paginationButtons).toMatchInlineSnapshot(`
-      "<div class="pagination hide">
-        <button data-event="previous-page" class="btn" id="btn-prev" disabled="">Previous page</button>
-        <div class="page-count" id="page-count">1 of 1</div>
-        <button data-event="next-page" class="btn" id="btn-next" disabled="">Next page</button>
-      </div>"
-    `);
-  });
-
-  it("fires a custom event when clicked", () => {
-    const resultsLength = 1200;
-    const pageSize = 10;
-    const currentPage = 1;
-    document.body.innerHTML = `<pagination-buttons results-length="${resultsLength}" page-size="${pageSize}" current-page="${currentPage}"></pagination-buttons>`;
-    const paginationButtons = document.querySelector(
-      "pagination-buttons #btn-next"
-    );
-    const clickEvent = new MouseEvent("click", {
-      bubbles: true,
-      cancelable: true,
-      view: window,
-    });
-    const clickHandler = jest.fn();
-    paginationButtons.addEventListener("click", clickHandler);
-    paginationButtons.dispatchEvent(clickEvent);
-    expect(clickHandler).toHaveBeenCalled();
+    expect(paginationButtons).toMatchInlineSnapshot(`""`);
   });
 });

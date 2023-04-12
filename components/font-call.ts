@@ -1,4 +1,4 @@
-import { GeneratedData } from "./font-results";
+import { GeneratedData } from "./main-app";
 import rtlSubsets from "../data/rtl.json";
 
 export default function fontCall({

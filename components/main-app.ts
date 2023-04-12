@@ -1,5 +1,8 @@
 import customEvent from "./custom-event";
 import { setAttributes } from "./set-attributes";
+import filter from "./filter";
+import generatedData from "../data/data.json";
+export type GeneratedData = typeof generatedData;
 
 type SelectTypes =
   | "selectedCategory"
@@ -9,24 +12,108 @@ type SelectTypes =
   | "selectedSearch";
 
 class MainApp extends HTMLElement {
-  selectedTag: string;
-  selectedCategory: string;
-  selectedSubset: string;
-  selectedVariant: string;
-  selectedSearch: string;
-  selectedVariable: boolean;
-  sortBy: string;
+  paginationButtons: HTMLElement = document.querySelector("pagination-buttons");
+  searchStatus: HTMLElement = document.querySelector("search-status");
+  sortByElm: HTMLElement = document.querySelector("sort-by");
+  fontList: HTMLUListElement = document.querySelector("ul[is=font-list]");
+  content: HTMLElement = document.querySelector("#content");
+  selectedSearchElm = document.querySelector("#selectedSearch");
+
+  get pageSize() {
+    return 10;
+  }
+
+  get currentPage() {
+    return Number.parseInt(this.getAttribute("current-page")) || 1;
+  }
+
+  set currentPage(value: number) {
+    const elements = [this, this.paginationButtons];
+    for (const element of elements) {
+      element.setAttribute("current-page", value.toString());
+    }
+  }
+
+  set resultsLength(value: string) {
+    const elements = [this, this.paginationButtons, this.searchStatus];
+    for (const element of elements) {
+      element.setAttribute("results-length", value);
+    }
+  }
+
+  get selectedCategory() {
+    return this.getAttribute("selected-category");
+  }
+
+  set selectedCategory(value: string) {
+    const elements = [this, this.searchStatus];
+    for (const element of elements) {
+      element.setAttribute("selected-category", value);
+    }
+  }
+
+  get selectedSubset() {
+    return this.getAttribute("selected-subset");
+  }
+
+  set selectedSubset(value: string) {
+    const elements = [this, this.searchStatus, this.fontList];
+    for (const element of elements) {
+      element.setAttribute("selected-subset", value);
+    }
+  }
+
+  get selectedVariant() {
+    return this.getAttribute("selected-variant");
+  }
+
+  set selectedVariant(value: string) {
+    const elements = [this, this.searchStatus, this.fontList];
+    for (const element of elements) {
+      element.setAttribute("selected-variant", value);
+    }
+  }
+
+  get selectedTag() {
+    return this.getAttribute("selected-tag");
+  }
+
+  set selectedTag(value: string) {
+    const elements = [this, this.searchStatus];
+    for (const element of elements) {
+      element.setAttribute("selected-tag", value);
+    }
+  }
+
+  get selectedSearch() {
+    return this.getAttribute("selected-search");
+  }
+
+  set selectedSearch(value: string) {
+    const elements = [this, this.searchStatus];
+    for (const element of elements) {
+      element.setAttribute("selected-search", value);
+    }
+  }
+
+  get selectedVariable() {
+    return this.getAttribute("selected-variable") === "true";
+  }
+
+  set selectedVariable(value: boolean) {
+    const elements = [this, this.searchStatus];
+    for (const element of elements) {
+      if (value === true) element.setAttribute("selected-variable", "true");
+      else element.removeAttribute("selected-variable");
+    }
+  }
+
+  get sortBy() {
+    return this.getAttribute("sort-by") || "family";
+  }
 
   constructor() {
     super();
-
-    this.selectedTag = "";
-    this.selectedCategory = "";
-    this.selectedSubset = "";
-    this.selectedVariant = "";
-    this.selectedSearch = "";
-    this.selectedVariable;
-    this.sortBy = "family";
 
     // Bind methods
     this.handleSearch = this.handleSearch.bind(this);
@@ -40,7 +127,6 @@ class MainApp extends HTMLElement {
     document
       .querySelector("#selectedSearch")
       .addEventListener("input", this.handleSearch);
-    this.addEventListener("sort-by", this.handleSortBy);
 
     // Dispatch main-app-loaded
     window.dispatchEvent(new Event("main-app-loaded"));
@@ -51,27 +137,18 @@ class MainApp extends HTMLElement {
   }
 
   render() {
-    const fontResults = document.querySelector("#font-results");
+    const [resultsLength, paginatedData] = filter(this, generatedData);
 
-    const fontResultsElm = document.createElement("font-results");
+    this.resultsLength = resultsLength.toString();
 
-    setAttributes(fontResultsElm, {
-      "sort-by": this.sortBy,
-      "selected-category": this.selectedCategory,
-      "selected-subset": this.selectedSubset,
-      "selected-variant": this.selectedVariant,
-      "selected-tag": this.selectedTag,
-      "selected-search": this.selectedSearch,
-      "selected-variable": this.selectedVariable === true ? "true" : "",
+    setAttributes(this.fontList, {
+      fonts: JSON.stringify(paginatedData),
     });
-
-    fontResults.innerHTML = fontResultsElm.outerHTML;
   }
 
   clearFilter({ detail: { value } }: CustomEvent<{ value: string }>) {
     if (value) this.removeSingleFilter(value);
     else this.removeAllFilters();
-    this.render();
   }
 
   removeSingleFilter(filter: string) {
@@ -101,7 +178,7 @@ class MainApp extends HTMLElement {
 
   removeSearch() {
     this.selectedSearch = "";
-    (document.querySelector("#selectedSearch") as HTMLInputElement).value = "";
+    (this.selectedSearchElm as HTMLInputElement).value = "";
   }
 
   removeSelect(value: string) {
@@ -117,14 +194,12 @@ class MainApp extends HTMLElement {
   }
 
   scrollToContent() {
-    const contentElement = document.querySelector("#content");
-    contentElement.scrollIntoView();
+    this.content.scrollIntoView();
   }
 
   handleFilter(event: CustomEvent) {
     const { id, value } = event.detail;
     this[id as SelectTypes] = value;
-    this.render();
     this.scrollToContent();
   }
 
@@ -133,15 +208,32 @@ class MainApp extends HTMLElement {
       /[^\d A-Za-z-]/g,
       ""
     );
-    this.render();
     this.scrollToContent();
   }
 
-  handleSortBy(event: CustomEvent) {
-    this.sortBy = event.detail.value;
+  static get observedAttributes() {
+    return [
+      "selected-category",
+      "selected-subset",
+      "selected-variant",
+      "selected-tag",
+      "selected-search",
+      "selected-variable",
+      "sort-by",
+      "current-page",
+      "results-length",
+    ];
+  }
+
+  attributeChangedCallback(
+    name: string,
+    previousValue: string,
+    nextValue: string
+  ) {
+    if (previousValue === nextValue) return;
+    if (name !== "current-page") this.currentPage = 1;
     this.render();
   }
 }
 
-// Define the new element
 customElements.define("main-app", MainApp);

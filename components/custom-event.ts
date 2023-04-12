@@ -1,7 +1,7 @@
 export default function customEvent(
   eventName: string,
   detail?: {
-    value?: string | boolean;
+    value?: string | boolean | number;
     id?: string;
   }
 ): CustomEvent {

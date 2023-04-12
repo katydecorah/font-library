@@ -5,11 +5,7 @@ export function setAttributes(
   }
 ) {
   for (const key in attributes) {
-    if (
-      attributes[key] !== "" &&
-      attributes[key] !== undefined &&
-      attributes[key] !== null
-    ) {
+    if (attributes[key] !== undefined && attributes[key] !== null) {
       element.setAttribute(key, attributes[key]);
     }
   }

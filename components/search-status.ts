@@ -44,7 +44,7 @@ class SearchStatus extends HTMLElement {
     ].filter(({ value }) => value && value !== "");
   }
 
-  connectedCallback() {
+  render() {
     const hasSelectedFilters = this.selectedFilters.length > 0;
 
     const elm = [
@@ -78,6 +78,23 @@ class SearchStatus extends HTMLElement {
       label === "variable" ? "" : `: <strong>${value}</strong>`;
 
     return `<div class="search-filter">${label}${filterValue}<button is="clear-button" aria-label="remove ${label}" value="${id}">${iconClose}</button></div>`;
+  }
+
+  static get observedAttributes() {
+    return [
+      "selected-category",
+      "selected-subset",
+      "selected-variant",
+      "selected-tag",
+      "selected-search",
+      "selected-variable",
+      "results-length",
+    ];
+  }
+
+  attributeChangedCallback(name: string, oldValue: string, nextValue: string) {
+    if (oldValue === nextValue) return;
+    this.render();
   }
 }
 
