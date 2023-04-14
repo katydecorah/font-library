@@ -11200,13 +11200,23 @@
   },
   {
     "family": "Noto Sans JP",
-    "variants": ["100", "300", "regular", "500", "700", "900"],
-    "subsets": ["japanese", "latin"],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "subsets": ["cyrillic", "japanese", "vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": [],
     "lineNumber": 903,
     "variable": false,
-    "lastModified": "2022-09-27"
+    "lastModified": "2023-04-13"
   },
   {
     "family": "Noto Sans Javanese",
