@@ -19,7 +19,6 @@ class FontList extends HTMLUListElement {
   }
 
   render() {
-    if (!this.fonts) return;
     const items = [];
     for (const font of this.fonts) {
       const fontItem = document.createElement("li");
@@ -32,10 +31,6 @@ class FontList extends HTMLUListElement {
       items.push(fontItem.outerHTML);
     }
     this.innerHTML = items.join("\n");
-  }
-
-  connectedCallback() {
-    this.render();
   }
 
   attributeChangedCallback(name: string, oldValue: string, nextValue: string) {
