@@ -185,6 +185,7 @@ function combineLibraries(remoteFonts, local) {
       categories: getUnique(combineLibrary, "category"),
       subsets: getUnique(combineLibrary, "subsets"),
       variants: getUnique(combineLibrary, "variants"),
+      totalFamilies: combineLibrary.length,
     },
     generatedFamilies: `${JSON.stringify(
       combineLibrary.sort((a, b) => (a.family > b.family ? 1 : -1))

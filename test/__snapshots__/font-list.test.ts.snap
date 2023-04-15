@@ -726,9 +726,3 @@ exports[`FontList should render with fonts and selectedVariant 1`] = `
   </li>
 </ul>
 `;
-
-exports[`FontList should return if no fonts 1`] = `
-<ul
-  is="font-list"
-/>
-`;

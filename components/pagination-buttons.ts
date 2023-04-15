@@ -8,7 +8,7 @@ class PaginationButtons extends HTMLElement {
   }
 
   get currentPage() {
-    return Number.parseInt(this.getAttribute("current-page")) || 1;
+    return Number.parseInt(this.getAttribute("current-page"));
   }
 
   set currentPage(value: number) {

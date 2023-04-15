@@ -24,7 +24,7 @@ class MainApp extends HTMLElement {
   }
 
   get currentPage() {
-    return Number.parseInt(this.getAttribute("current-page")) || 1;
+    return Number.parseInt(this.getAttribute("current-page"));
   }
 
   set currentPage(value: number) {
@@ -34,11 +34,15 @@ class MainApp extends HTMLElement {
     }
   }
 
-  set resultsLength(value: string) {
+  set resultsLength(value: number) {
     const elements = [this, this.paginationButtons, this.searchStatus];
     for (const element of elements) {
-      element.setAttribute("results-length", value);
+      element.setAttribute("results-length", value.toString());
     }
+  }
+
+  get resultsLength() {
+    return Number.parseInt(this.getAttribute("results-length"));
   }
 
   get selectedCategory() {
@@ -132,14 +136,12 @@ class MainApp extends HTMLElement {
     window.dispatchEvent(new Event("main-app-loaded"));
   }
 
-  connectedCallback() {
-    this.render();
-  }
-
   render() {
     const [resultsLength, paginatedData] = filter(this, generatedData);
 
-    this.resultsLength = resultsLength.toString();
+    if (this.resultsLength !== resultsLength) {
+      this.resultsLength = resultsLength;
+    }
 
     setAttributes(this.fontList, {
       fonts: JSON.stringify(paginatedData),
@@ -231,7 +233,9 @@ class MainApp extends HTMLElement {
     nextValue: string
   ) {
     if (previousValue === nextValue) return;
-    if (name !== "current-page") this.currentPage = 1;
+    if (name !== "current-page" && this.currentPage !== 1) {
+      this.currentPage = 1;
+    }
     this.render();
   }
 }

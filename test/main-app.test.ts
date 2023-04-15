@@ -970,4 +970,22 @@ describe("MainApp", () => {
     expect(mainApp.getAttribute("current-page")).toBe("1");
     expect(paginationButtons.getAttribute("current-page")).toBe("1");
   });
+
+  it("current page changes when a different filter is changed", () => {
+    document.body.innerHTML = body;
+    const nextButton: HTMLButtonElement = document.querySelector(
+      "pagination-buttons #btn-next"
+    );
+    nextButton.click();
+    const mainApp = document.querySelector("main-app");
+    expect(mainApp.getAttribute("current-page")).toBe("2");
+    const paginationButtons = document.querySelector("pagination-buttons");
+    expect(paginationButtons.getAttribute("current-page")).toBe("2");
+
+    const checkboxVariable: HTMLInputElement =
+      document.querySelector("#selectedVariable");
+    checkboxVariable.click();
+
+    expect(mainApp.getAttribute("current-page")).toBe("1");
+  });
 });
