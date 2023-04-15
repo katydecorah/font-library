@@ -35,7 +35,7 @@
           </p>
         </div>
       </aside>
-      <main-app class="content" id="content">
+      <main-app class="content" id="content" current-page="1" results-length="{{metadata.totalFamilies}}">
         <section class="selects">
           <h2>Filters</h2>
           <div class="select-group-container">
@@ -106,10 +106,10 @@
           </div>
         </section>
         <section class="results">
-          <search-status></search-status>
+          <search-status results-length="{{metadata.totalFamilies}}"></search-status>
           <sort-by sort-by="family"></sort-by>
           <ul class="families" is="font-list"></ul>
-          <pagination-buttons></pagination-buttons>
+          <pagination-buttons current-page="1" results-length="{{metadata.totalFamilies}}"></pagination-buttons>
         </section>
       </main-app>
     </div>

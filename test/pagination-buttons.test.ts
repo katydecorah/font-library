@@ -3,7 +3,7 @@ import "./components";
 describe("pagination-buttons", () => {
   it("renders", () => {
     const resultsLength = 1200;
-    document.body.innerHTML = `<pagination-buttons results-length="${resultsLength}"></pagination-buttons>`;
+    document.body.innerHTML = `<pagination-buttons results-length="${resultsLength}" current-page="1"></pagination-buttons>`;
     const paginationButtons =
       document.querySelector("pagination-buttons").innerHTML;
     expect(paginationButtons).toMatchInlineSnapshot(`
@@ -25,6 +25,17 @@ describe("pagination-buttons", () => {
       <div class="page-count" id="page-count">1 of 120</div>
       <button data-event="next-page" class="btn" id="btn-next">Next page</button>"
     `);
+  });
+
+  it("does not re-render when attribute value does not change", () => {
+    const resultsLength = 1200;
+    const pageSize = 10;
+    const currentPage = 1;
+    document.body.innerHTML = `<pagination-buttons results-length="${resultsLength}" page-size="${pageSize}" current-page="${currentPage}"></pagination-buttons>`;
+    const paginationButtons = document.querySelector("pagination-buttons");
+    const initialHTML = paginationButtons.innerHTML;
+    paginationButtons.setAttribute("current-page", "1");
+    expect(paginationButtons.innerHTML).toEqual(initialHTML);
   });
 
   it("renders next page", () => {
