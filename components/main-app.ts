@@ -1,5 +1,4 @@
 import customEvent from "./custom-event";
-import { setAttributes } from "./set-attributes";
 import filter from "./filter";
 import generatedData from "../data/data.json";
 export type GeneratedData = typeof generatedData;
@@ -12,12 +11,12 @@ type SelectTypes =
   | "selectedSearch";
 
 class MainApp extends HTMLElement {
-  paginationButtons: HTMLElement = document.querySelector("pagination-buttons");
-  searchStatus: HTMLElement = document.querySelector("search-status");
-  sortByElm: HTMLElement = document.querySelector("sort-by");
-  fontList: HTMLUListElement = document.querySelector("ul[is=font-list]");
-  content: HTMLElement = document.querySelector("#content");
-  selectedSearchElm = document.querySelector("#selectedSearch");
+  paginationButtons: HTMLElement = this.querySelector("pagination-buttons");
+  searchStatus: HTMLElement = this.querySelector("search-status");
+  sortByElm: HTMLElement = this.querySelector("sort-by");
+  fontList: HTMLUListElement = this.querySelector("ul[is=font-list]");
+  content: HTMLElement = this.querySelector("#content");
+  selectedSearchElm: HTMLInputElement = this.querySelector("#selectedSearch");
 
   get pageSize() {
     return 10;
@@ -126,11 +125,8 @@ class MainApp extends HTMLElement {
     // Event listeners
     this.addEventListener("clear-filter", this.clearFilter);
     this.addEventListener("tag-button-selected", this.handleFilter);
-    document.addEventListener("tag-button-selected", this.handleFilter);
     this.addEventListener("handle-filter", this.handleFilter);
-    document
-      .querySelector("#selectedSearch")
-      .addEventListener("input", this.handleSearch);
+    this.selectedSearchElm.addEventListener("input", this.handleSearch);
 
     // Dispatch main-app-loaded
     window.dispatchEvent(new Event("main-app-loaded"));
@@ -143,9 +139,7 @@ class MainApp extends HTMLElement {
       this.resultsLength = resultsLength;
     }
 
-    setAttributes(this.fontList, {
-      fonts: JSON.stringify(paginatedData),
-    });
+    this.fontList.setAttribute("fonts", JSON.stringify(paginatedData));
   }
 
   clearFilter({ detail: { value } }: CustomEvent<{ value: string }>) {

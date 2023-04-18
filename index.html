@@ -18,101 +18,118 @@
       </div>
       <a href="{{site.contributing}}" class="btn">Contribute on GitHub</a>
     </header>
-    <div class="container">
-      <aside class="sidebar">
-        <section class="sidebar-group">
-          <h2>Tags</h2>
-          <ul class="tags-container">
-            {%- for tag in metadata.tags -%}
-            <li><button is="tag-button" title="{{tag.name}}" value="{{tag.name}}" {%- unless tag.name == 'icons' -%}style="font-family: '{{tag.sample}}'"{%- endunless -%}>{%- if tag.name == 'icons' -%}<i>&hearts;</i>{%- endif -%}{{tag.name}}</button></li>
-            {%- endfor -%}
-          </ul>
-        </section>
-        <div class="sidebar-group">
-          <h3>Want to help the project?</h3>
-          <p>
-            Sort by fonts that <button is="tag-button" value="need tags">need tags</button>. Learn <a href="{{site.contributing}}">how to contribute</a>.
-          </p>
-        </div>
-      </aside>
-      <main-app class="content" id="content" current-page="1" results-length="{{metadata.totalFamilies}}">
-        <section class="selects">
-          <h2>Filters</h2>
-          <div class="select-group-container">
-            <div class="select-group">
-              <label for="selectedSearch">Filter fonts</label>
-              <input type="text" id="selectedSearch" value="" />
-            </div>
-            <div class="select-group">
-              <label for="selectedTag">Tags</label>
-              <select data-param="tag" is="filter-select" id="selectedTag">
-                <option value="">All tags</option>
-                <option id="need tags" value="need tags">need tags</option>
-                {%- for option in metadata.tags -%}
-                <option id="{{option.name}}" value="{{option.name}}">
-                  {{option.name}}
-                </option>
-                {%- endfor -%}
-              </select>
-            </div>
-            <div class="select-group">
-              <label for="selectedCategory">Categories</label>
-              <select
-                data-param="category"
-                is="filter-select"
-                id="selectedCategory"
-              >
-                <option value="">All categories</option>
-                {%- for option in metadata.categories -%}
-                <option id="{{option}}" value="{{option}}">{{option}}</option>
-                {%- endfor -%}
-              </select>
-            </div>
-            <div class="select-group">
-              <label for="selectedSubset">Subsets</label>
-              <select
-                data-param="subset"
-                is="filter-select"
-                id="selectedSubset"
-              >
-                <option value="">All subsets</option>
-                {%- for option in metadata.subsets -%}
-                <option id="{{option}}" value="{{option}}">{{option}}</option>
-                {%- endfor -%}
-              </select>
-            </div>
-            <div class="select-group">
-              <label for="selectedVariant">Variants</label>
-              <select
-                data-param="variant"
-                is="filter-select"
-                id="selectedVariant"
-              >
-                <option value="">All variants</option>
-                {%- for option in metadata.variants -%}
-                <option id="{{option}}" value="{{option}}">{{option}}</option>
-                {%- endfor -%}
-              </select>
-            </div>
-            <div class="select-group">
-              <label for="selectedVariable"
-                >Variable font
-                <input
-                  is="filter-checkbox"
-                  type="checkbox"
-                  id="selectedVariable"
-              /></label>
-            </div>
+    <main-app current-page="1" results-length="{{metadata.totalFamilies}}">
+      <div class="container">
+        <aside class="sidebar">
+          <section class="sidebar-group">
+            <h2>Tags</h2>
+            <ul class="tags-container">
+              {% for tag in metadata.tags %}
+              <li>
+                <button
+                  is="tag-button"
+                  title="{{tag.name}}"
+                  value="{{tag.name}}"
+                >
+                  {{tag.name}}
+                </button>
+              </li>
+              {% endfor %}
+            </ul>
+          </section>
+          <div class="sidebar-group">
+            <h3>Want to help the project?</h3>
+            <p>
+              Sort by fonts that
+              <button is="tag-button" value="need tags">need tags</button>.
+              Learn <a href="{{site.contributing}}">how to contribute</a>.
+            </p>
           </div>
-        </section>
-        <section class="results">
-          <search-status results-length="{{metadata.totalFamilies}}"></search-status>
-          <sort-by sort-by="family"></sort-by>
-          <ul class="families" is="font-list"></ul>
-          <pagination-buttons current-page="1" results-length="{{metadata.totalFamilies}}"></pagination-buttons>
-        </section>
-      </main-app>
-    </div>
+        </aside>
+        <div class="content" id="content">
+          <section class="selects">
+            <h2>Filters</h2>
+            <div class="select-group-container">
+              <div class="select-group">
+                <label for="selectedSearch">Filter fonts</label>
+                <input type="text" id="selectedSearch" value="" />
+              </div>
+              <div class="select-group">
+                <label for="selectedTag">Tags</label>
+                <select data-param="tag" is="filter-select" id="selectedTag">
+                  <option value="">All tags</option>
+                  <option id="need tags" value="need tags">need tags</option>
+                  {%- for option in metadata.tags -%}
+                  <option id="{{option.name}}" value="{{option.name}}">
+                    {{option.name}}
+                  </option>
+                  {%- endfor -%}
+                </select>
+              </div>
+              <div class="select-group">
+                <label for="selectedCategory">Categories</label>
+                <select
+                  data-param="category"
+                  is="filter-select"
+                  id="selectedCategory"
+                >
+                  <option value="">All categories</option>
+                  {%- for option in metadata.categories -%}
+                  <option id="{{option}}" value="{{option}}">{{option}}</option>
+                  {%- endfor -%}
+                </select>
+              </div>
+              <div class="select-group">
+                <label for="selectedSubset">Subsets</label>
+                <select
+                  data-param="subset"
+                  is="filter-select"
+                  id="selectedSubset"
+                >
+                  <option value="">All subsets</option>
+                  {%- for option in metadata.subsets -%}
+                  <option id="{{option}}" value="{{option}}">{{option}}</option>
+                  {%- endfor -%}
+                </select>
+              </div>
+              <div class="select-group">
+                <label for="selectedVariant">Variants</label>
+                <select
+                  data-param="variant"
+                  is="filter-select"
+                  id="selectedVariant"
+                >
+                  <option value="">All variants</option>
+                  {%- for option in metadata.variants -%}
+                  <option id="{{option}}" value="{{option}}">{{option}}</option>
+                  {%- endfor -%}
+                </select>
+              </div>
+              <div class="select-group">
+                <label for="selectedVariable"
+                  >Variable font
+                  <input
+                    is="filter-checkbox"
+                    type="checkbox"
+                    id="selectedVariable"
+                /></label>
+              </div>
+            </div>
+          </section>
+          <section class="results">
+            <search-status
+              results-length="{{metadata.totalFamilies}}"
+            ></search-status>
+            <sort-by sort-by="family"></sort-by>
+            <ul class="families" is="font-list"></ul>
+            <pagination-buttons
+              current-page="1"
+              results-length="{{metadata.totalFamilies}}"
+            ></pagination-buttons>
+          </section>
+        </div>
+      </div>
+    </main-app>
     {% if site.env == 'production' %}
     <script
       src="https://browser.sentry-cdn.com/7.41.0/bundle.tracing.min.js"
