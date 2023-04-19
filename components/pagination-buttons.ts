@@ -5,6 +5,7 @@ class PaginationButtons extends HTMLElement {
   constructor() {
     super();
     this.handlePage = this.handlePage.bind(this);
+    this.handleInitialValue();
   }
 
   get currentPage() {
@@ -13,6 +14,7 @@ class PaginationButtons extends HTMLElement {
 
   set currentPage(value: number) {
     this.setAttribute("current-page", value.toString());
+    this.setUrlParam();
     if (this.mainApp) {
       this.mainApp.setAttribute("current-page", value.toString());
     }
@@ -81,6 +83,20 @@ class PaginationButtons extends HTMLElement {
     }
   }
 
+  setUrlParam() {
+    const urlParameters = new URLSearchParams(window.location.search);
+    if (this.currentPage === 1) {
+      urlParameters.delete("page");
+    } else {
+      urlParameters.set("page", this.currentPage.toString());
+    }
+    window.history.replaceState(
+      {},
+      "",
+      `${window.location.pathname}?${urlParameters.toString()}`
+    );
+  }
+
   disconnectedCallback() {
     for (const button of this.querySelectorAll("[data-event]")) {
       button.removeEventListener("click", this.handlePage);
@@ -94,6 +110,24 @@ class PaginationButtons extends HTMLElement {
   attributeChangedCallback(name: string, oldValue: string, nextValue: string) {
     if (oldValue === nextValue) return;
     this.render();
+    this.setUrlParam();
+  }
+
+  handleInitialValue() {
+    const urlParameters = new URLSearchParams(window.location.search);
+    const initialValue = urlParameters.get("page");
+    if (initialValue) {
+      const parsedValue = Number.parseInt(initialValue);
+      if (Number.isNaN(parsedValue)) {
+        this.currentPage = 1;
+        return;
+      }
+      if (parsedValue > this.totalPages) {
+        this.currentPage = this.totalPages;
+        return;
+      }
+      this.currentPage = parsedValue;
+    }
   }
 }
 
