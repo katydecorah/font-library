@@ -109,4 +109,18 @@ describe("pagination-buttons", () => {
       <button data-event="next-page" class="btn" id="btn-next" disabled="">Next page</button>"
     `);
   });
+
+  it("handles initial query string param that is NaN", () => {
+    const resultsLength = 100;
+    const currentPage = "pizza";
+    window.location.search = `?page=${currentPage}`;
+    document.body.innerHTML = `<pagination-buttons results-length="${resultsLength}"></pagination-buttons>`;
+    const paginationButtons =
+      document.querySelector("pagination-buttons").innerHTML;
+    expect(paginationButtons).toMatchInlineSnapshot(`
+      "<button data-event="previous-page" class="btn" id="btn-prev" disabled="">Previous page</button>
+      <div class="page-count" id="page-count">1 of 10</div>
+      <button data-event="next-page" class="btn" id="btn-next">Next page</button>"
+    `);
+  });
 });
