@@ -18,7 +18,15 @@ class SortBy extends HTMLElement {
     if (this.mainApp) this.mainApp.setAttribute("sort-by", value);
   }
 
+  get resultsLength() {
+    return Number.parseInt(this.getAttribute("results-length"));
+  }
+
   render() {
+    if (this.resultsLength === 0) {
+      this.innerHTML = "";
+      return;
+    }
     const buttons = [
       {
         label: "Family",
@@ -56,7 +64,7 @@ class SortBy extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["sort-by"];
+    return ["sort-by", "results-length"];
   }
 
   attributeChangedCallback(name: string, oldValue: string, nextValue: string) {

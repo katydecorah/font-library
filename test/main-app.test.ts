@@ -913,6 +913,7 @@ describe("MainApp", () => {
     const sortBy = document.querySelector("sort-by");
     expect(sortBy).toMatchInlineSnapshot(`
       <sort-by
+        results-length="1498"
         sort-by="date"
       >
         <div
