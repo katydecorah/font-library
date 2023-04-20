@@ -5060,6 +5060,7 @@ exports[`MainApp renders correctly 1`] = `
         
             
         <sort-by
+          results-length="1498"
           sort-by="family"
         >
           <div
