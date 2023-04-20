@@ -769,7 +769,7 @@ exports[`FontItem selected variant, 900 1`] = `
       
     <div
       class="family-title anybody"
-      style="font-family: 'Anybody';"
+      style="font-family: 'Anybody';font-weight: 900;"
     >
       
         Anybody
@@ -892,7 +892,7 @@ exports[`FontItem selected variant, 900italic 1`] = `
       
     <div
       class="family-title anybody"
-      style="font-family: 'Anybody';font-style: italic;"
+      style="font-family: 'Anybody';font-style: italic;font-weight: 900;"
     >
       
         Anybody

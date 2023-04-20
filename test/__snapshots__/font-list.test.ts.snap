@@ -503,7 +503,7 @@ exports[`FontList should render with fonts and selectedVariant 1`] = `
       
       <div
         class="family-title unifrakturcook"
-        style="font-family: 'UnifrakturCook';"
+        style="font-family: 'UnifrakturCook';font-weight: 700;"
       >
         
         UnifrakturCook
@@ -616,7 +616,7 @@ exports[`FontList should render with fonts and selectedVariant 1`] = `
       
       <div
         class="family-title alef"
-        style="font-family: 'Alef';"
+        style="font-family: 'Alef';font-weight: 700;"
       >
         
         Alef
@@ -725,4 +725,10 @@ exports[`FontList should render with fonts and selectedVariant 1`] = `
     </div>
   </li>
 </ul>
+`;
+
+exports[`FontList should return if no fonts 1`] = `
+<ul
+  is="font-list"
+/>
 `;
