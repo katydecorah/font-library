@@ -22,4 +22,10 @@ describe("FontList", () => {
     const fontList = document.querySelector("ul[is='font-list']");
     expect(fontList).toMatchSnapshot();
   });
+
+  it("should return if no fonts", () => {
+    document.body.innerHTML = `<ul is="font-list"></ul>`;
+    const fontList = document.querySelector("ul[is='font-list']");
+    expect(fontList).toMatchSnapshot();
+  });
 });

@@ -70,5 +70,10 @@ export function familyStyle({
   if (selectedVariant.includes("italic")) {
     style += "font-style: italic;";
   }
+  // get variant number from selectedVariant
+  const variantNumber = selectedVariant.match(/\d+/g);
+  if (variantNumber && variantNumber[0]) {
+    style += `font-weight: ${variantNumber[0]};`;
+  }
   return style;
 }
