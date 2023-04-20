@@ -34,7 +34,12 @@ class MainApp extends HTMLElement {
   }
 
   set resultsLength(value: number) {
-    const elements = [this, this.paginationButtons, this.searchStatus];
+    const elements = [
+      this,
+      this.paginationButtons,
+      this.searchStatus,
+      this.sortByElm,
+    ];
     for (const element of elements) {
       element.setAttribute("results-length", value.toString());
     }

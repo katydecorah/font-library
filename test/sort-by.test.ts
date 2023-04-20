@@ -3,10 +3,11 @@ import "./components";
 describe("sort-by", () => {
   it("renders", () => {
     const sortBy = "family";
-    document.body.innerHTML = `<sort-by sort-by="${sortBy}"></sort-by>`;
+    document.body.innerHTML = `<sort-by results-length="100" sort-by="${sortBy}"></sort-by>`;
     const sortByElement = document.querySelector("sort-by");
     expect(sortByElement).toMatchInlineSnapshot(`
       <sort-by
+        results-length="100"
         sort-by="family"
       >
         <div
@@ -35,11 +36,12 @@ describe("sort-by", () => {
   });
 
   it("renders after attribute change", () => {
-    document.body.innerHTML = `<sort-by sort-by="family"></sort-by>`;
+    document.body.innerHTML = `<sort-by results-length="100" sort-by="family"></sort-by>`;
     const sortByElement = document.querySelector("sort-by");
     sortByElement.setAttribute("sort-by", "date");
     expect(sortByElement).toMatchInlineSnapshot(`
       <sort-by
+        results-length="100"
         sort-by="date"
       >
         <div
@@ -68,11 +70,12 @@ describe("sort-by", () => {
   });
 
   it("does not re-render when attribute is the same", () => {
-    document.body.innerHTML = `<sort-by sort-by="family"></sort-by>`;
+    document.body.innerHTML = `<sort-by results-length="100" sort-by="family"></sort-by>`;
     const sortByElement = document.querySelector("sort-by");
     sortByElement.setAttribute("sort-by", "family");
     expect(sortByElement).toMatchInlineSnapshot(`
       <sort-by
+        results-length="100"
         sort-by="family"
       >
         <div
@@ -97,6 +100,17 @@ describe("sort-by", () => {
           </button>
         </div>
       </sort-by>
+    `);
+  });
+
+  it("do not show sort-by when results-length is 0", () => {
+    document.body.innerHTML = `<sort-by results-length="0" sort-by="family"></sort-by>`;
+    const sortByElement = document.querySelector("sort-by");
+    expect(sortByElement).toMatchInlineSnapshot(`
+      <sort-by
+        results-length="0"
+        sort-by="family"
+      />
     `);
   });
 });
