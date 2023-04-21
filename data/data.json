@@ -2548,7 +2548,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["small caps"],
     "lineNumber": 207,
     "variable": false,
     "lastModified": "2023-04-20"
