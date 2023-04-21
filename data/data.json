@@ -2538,7 +2538,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["techno", "geometric"],
     "lineNumber": 206,
     "variable": false,
     "lastModified": "2023-04-20"
@@ -2548,7 +2548,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": ["small caps"],
+    "tags": ["small caps", "techno", "geometric"],
     "lineNumber": 207,
     "variable": false,
     "lastModified": "2023-04-20"
@@ -2981,7 +2981,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["caps"],
     "lineNumber": 247,
     "variable": false,
     "lastModified": "2023-04-20"
