@@ -4784,7 +4784,7 @@
     ],
     "subsets": ["thai", "vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["high contrast"],
     "lineNumber": 395,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -13739,7 +13739,7 @@
     ],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["grotesque"],
     "lineNumber": 1104,
     "variable": false,
     "lastModified": "2023-04-20"
@@ -16232,7 +16232,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["heavy", "pulp"],
     "lineNumber": 1304,
     "variable": false,
     "lastModified": "2023-04-20"
