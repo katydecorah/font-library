@@ -4039,7 +4039,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["handwritten"],
     "lineNumber": 336,
     "variable": false,
     "lastModified": "2023-04-27"
@@ -7131,7 +7131,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["brush"],
     "lineNumber": 577,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -11081,7 +11081,7 @@
     "variants": ["regular"],
     "subsets": ["egyptian-hieroglyphs"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["egyptian"],
     "lineNumber": 893,
     "variable": false,
     "lastModified": "2022-05-10"
@@ -14589,7 +14589,7 @@
     "variants": ["regular", "700"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["brush"],
     "lineNumber": 1170,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -16151,7 +16151,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["script", "condensed"],
     "lineNumber": 1294,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -17056,7 +17056,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["handwritten"],
     "lineNumber": 1359,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -18677,7 +18677,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "japanese", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["swirl"],
     "lineNumber": 1495,
     "variable": false,
     "lastModified": "2022-09-27"
