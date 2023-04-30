@@ -199,11 +199,11 @@ describe("MainApp", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="473"
+        results-length="463"
         selected-tag="need tags"
       >
         <div>
-          Found 473 fonts: 
+          Found 463 fonts: 
         </div>
         
 
@@ -349,11 +349,11 @@ describe("MainApp", () => {
 
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
-        results-length="293"
+        results-length="294"
         selected-variable="true"
       >
         <div>
-          Found 293 fonts: 
+          Found 294 fonts: 
         </div>
         
 
@@ -777,11 +777,11 @@ describe("MainApp", () => {
     expect(checkboxVariable.checked).toBeTruthy();
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
-        results-length="293"
+        results-length="294"
         selected-variable="true"
       >
         <div>
-          Found 293 fonts: 
+          Found 294 fonts: 
         </div>
         
 
@@ -840,11 +840,11 @@ describe("MainApp", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="293"
+        results-length="294"
         selected-variable="true"
       >
         <div>
-          Found 293 fonts: 
+          Found 294 fonts: 
         </div>
         
 

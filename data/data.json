@@ -3479,7 +3479,7 @@
     "category": "sans-serif",
     "tags": [],
     "lineNumber": 289,
-    "variable": false,
+    "variable": true,
     "lastModified": "2023-04-27"
   },
   {
@@ -3972,7 +3972,7 @@
     "variants": ["regular"],
     "subsets": ["japanese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["handwritten"],
     "lineNumber": 330,
     "variable": false,
     "lastModified": "2023-04-27"
@@ -5285,7 +5285,7 @@
     ],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["color"],
     "lineNumber": 429,
     "variable": false,
     "lastModified": "2023-04-27"
@@ -7915,7 +7915,7 @@
     "variants": ["regular"],
     "subsets": ["khmer", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["brush", "decorative"],
     "lineNumber": 638,
     "variable": false,
     "lastModified": "2023-04-27"

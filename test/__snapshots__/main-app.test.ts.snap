@@ -1292,7 +1292,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "Edu NSW ACT Foundation";"
+              style="font-family: "Darumadrop One";"
               title="handwritten"
               value="handwritten"
             >
