@@ -17,5 +17,3 @@ jobs:
       - uses: actions/setup-node@v3
       - run: npm ci
       - run: npm test -- families
-        env:
-          CI: true
