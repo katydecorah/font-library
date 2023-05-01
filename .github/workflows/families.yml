@@ -1,6 +1,9 @@
 name: Validate families.json
 
 on:
+  pull_request:
+    branches:
+      - gh-pages
   push:
     paths:
       - "families.json"
