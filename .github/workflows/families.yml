@@ -3,10 +3,11 @@ name: Validate families.json
 on:
   push:
     paths:
-       - "families.json"
+      - "families.json"
 
 jobs:
   build:
+    name: Validate families.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
