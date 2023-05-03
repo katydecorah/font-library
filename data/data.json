@@ -17594,7 +17594,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["geometric", "round"],
     "lineNumber": 1409,
     "variable": true,
     "lastModified": "2023-05-02"
@@ -17604,7 +17604,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["geometric", "outline"],
     "lineNumber": 1410,
     "variable": true,
     "lastModified": "2023-05-02"
@@ -17614,7 +17614,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["geometric"],
     "lineNumber": 1411,
     "variable": true,
     "lastModified": "2023-05-02"
