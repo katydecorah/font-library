@@ -4166,7 +4166,7 @@
     "variants": ["regular"],
     "subsets": ["korean", "latin"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["uneven"],
     "lineNumber": 348,
     "variable": false,
     "lastModified": "2022-09-27"
@@ -4325,7 +4325,7 @@
     "variants": ["regular"],
     "subsets": ["korean", "latin"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["uneven"],
     "lineNumber": 362,
     "variable": false,
     "lastModified": "2022-09-27"
@@ -8660,7 +8660,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["playful"],
     "lineNumber": 693,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -17564,7 +17564,7 @@
     "variants": ["regular", "700"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["script"],
     "lineNumber": 1406,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -18361,7 +18361,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["script"],
     "lineNumber": 1469,
     "variable": false,
     "lastModified": "2022-09-22"
