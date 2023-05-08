@@ -1368,7 +1368,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "Karantina";"
+              style="font-family: "IBM Plex Sans Hebrew";"
               title="hebrew"
               value="hebrew"
             >
