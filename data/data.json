@@ -6702,7 +6702,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700"],
     "subsets": ["cyrillic-ext", "hebrew", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["hebrew"],
     "lineNumber": 542,
     "variable": false,
     "lastModified": "2023-04-27"
@@ -7046,7 +7046,7 @@
     "variants": ["regular", "italic"],
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["condensed"],
     "lineNumber": 573,
     "variable": false,
     "lastModified": "2023-05-02"
@@ -16474,7 +16474,7 @@
     ],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["square", "techno"],
     "lineNumber": 1324,
     "variable": true,
     "lastModified": "2023-05-02"
@@ -17086,7 +17086,7 @@
     "variants": ["regular", "700"],
     "subsets": ["thai", "vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["slanted"],
     "lineNumber": 1362,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -18311,7 +18311,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["heavy", "signage"],
     "lineNumber": 1466,
     "variable": false,
     "lastModified": "2023-04-20"
