@@ -30,6 +30,7 @@
     "prefer-const": "error",
     "prefer-template": "error",
     "no-var": "error",
-    "unicorn/template-indent": "off"
+    "unicorn/template-indent": "off",
+    "unicorn/prefer-string-replace-all": "off"
   }
 }

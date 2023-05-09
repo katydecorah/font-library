@@ -46,11 +46,11 @@ class FontItem extends HTMLLIElement {
   }
 
   get id(): string {
-    return this.font.family.toLowerCase().replaceAll(" ", "-");
+    return this.font.family.toLowerCase().replace(/ /g, "-");
   }
 
   get slug(): string {
-    return this.font.family.replaceAll(" ", "+");
+    return this.font.family.replace(/ /g, "+");
   }
 
   get familyStyle(): string {
