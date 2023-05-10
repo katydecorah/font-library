@@ -642,6 +642,8 @@
     "music",
     "myanmar",
     "nabataean",
+    "nag-mundari",
+    "nandinagari",
     "new-tai-lue",
     "newa",
     "nko",
@@ -728,5 +730,5 @@
     "italic",
     "regular"
   ],
-  "totalFamilies": 1516
+  "totalFamilies": 1521
 }
