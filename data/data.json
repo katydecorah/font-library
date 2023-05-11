@@ -8774,7 +8774,7 @@
     "variants": ["regular"],
     "subsets": ["chinese-simplified", "latin"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["scrawl", "handwritten"],
     "lineNumber": 701,
     "variable": false,
     "lastModified": "2022-09-27"
@@ -8871,7 +8871,7 @@
     "variants": ["regular"],
     "subsets": ["chinese-simplified", "latin"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["handwritten"],
     "lineNumber": 709,
     "variable": false,
     "lastModified": "2022-09-27"
@@ -10397,7 +10397,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "handwriting",
-    "tags": ["marker"],
+    "tags": ["marker", "friendly"],
     "lineNumber": 841,
     "variable": false,
     "lastModified": "2023-05-02"
@@ -18797,7 +18797,7 @@
     "variants": ["regular"],
     "subsets": ["japanese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["marker"],
     "lineNumber": 1505,
     "variable": false,
     "lastModified": "2023-05-02"
@@ -18887,7 +18887,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "greek", "japanese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["japanese", "handwritten"],
     "lineNumber": 1514,
     "variable": false,
     "lastModified": "2023-05-02"
