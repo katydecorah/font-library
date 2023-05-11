@@ -7055,9 +7055,9 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["grotesque", "legibility"],
     "lineNumber": 573,
-    "variable": false,
+    "variable": true,
     "lastModified": "2023-05-09"
   },
   {
@@ -18550,7 +18550,7 @@
     "variants": ["regular", "500", "600", "700", "800"],
     "subsets": ["cyrillic", "cyrillic-ext", "vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["compact"],
     "lineNumber": 1487,
     "variable": false,
     "lastModified": "2023-05-09"
@@ -18571,7 +18571,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["compact"],
     "lineNumber": 1488,
     "variable": false,
     "lastModified": "2023-05-09"
