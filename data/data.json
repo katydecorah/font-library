@@ -478,7 +478,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["bengali", "devanagari", "oriya", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["slanted"],
     "lineNumber": 36,
     "variable": false,
     "lastModified": "2023-03-21"
@@ -1113,7 +1113,7 @@
       "latin-ext"
     ],
     "category": "display",
-    "tags": [],
+    "tags": ["low contrast"],
     "lineNumber": 91,
     "variable": true,
     "lastModified": "2023-04-04"
@@ -5786,7 +5786,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["roman"],
     "lineNumber": 469,
     "variable": false,
     "lastModified": "2023-05-02"
@@ -6400,7 +6400,7 @@
     "variants": ["regular", "700"],
     "subsets": ["arabic", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["arabic"],
     "lineNumber": 519,
     "variable": false,
     "lastModified": "2022-11-09"
@@ -8970,7 +8970,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["roman"],
     "lineNumber": 718,
     "variable": false,
     "lastModified": "2023-05-02"
@@ -11300,7 +11300,7 @@
     ],
     "subsets": ["hebrew", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["hebrew"],
     "lineNumber": 909,
     "variable": true,
     "lastModified": "2023-05-02"
