@@ -571,6 +571,7 @@
     "chinese-hongkong",
     "chinese-simplified",
     "chinese-traditional",
+    "chorasmian",
     "coptic",
     "cuneiform",
     "cypriot",
@@ -730,5 +731,5 @@
     "italic",
     "regular"
   ],
-  "totalFamilies": 1521
+  "totalFamilies": 1529
 }
