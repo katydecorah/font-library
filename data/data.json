@@ -468,7 +468,7 @@
     "variants": ["regular"],
     "subsets": ["arabic", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["arabic"],
     "lineNumber": 35,
     "variable": false,
     "lastModified": "2023-05-02"
@@ -3262,7 +3262,7 @@
     "variants": ["regular"],
     "subsets": ["malayalam", "latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["handwritten", "kids"],
     "lineNumber": 273,
     "variable": false,
     "lastModified": "2023-05-02"
@@ -3843,7 +3843,7 @@
     "variants": ["regular", "italic", "600", "600italic", "700", "700italic"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["old style"],
     "lineNumber": 318,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -6687,7 +6687,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700"],
     "subsets": ["arabic", "cyrillic-ext", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["arabic"],
     "lineNumber": 542,
     "variable": false,
     "lastModified": "2023-05-02"
@@ -14734,7 +14734,7 @@
     ],
     "subsets": ["canadian-aboriginal", "vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["legibility", "humanist"],
     "lineNumber": 1181,
     "variable": true,
     "lastModified": "2023-05-09"
@@ -16112,7 +16112,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["arabic", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["arabic"],
     "lineNumber": 1289,
     "variable": false,
     "lastModified": "2023-05-23"
@@ -18715,7 +18715,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700"],
     "subsets": ["sinhala", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["narrow"],
     "lineNumber": 1499,
     "variable": true,
     "lastModified": "2023-03-21"
