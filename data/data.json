@@ -18056,7 +18056,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["japanese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["round"],
     "lineNumber": 1444,
     "variable": false,
     "lastModified": "2023-05-23"
