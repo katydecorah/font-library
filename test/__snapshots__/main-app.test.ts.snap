@@ -3,7 +3,7 @@
 exports[`MainApp renders correctly 1`] = `
 <main-app
   current-page="1"
-  results-length="1521"
+  results-length="1529"
 >
   
       
@@ -247,7 +247,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "Almarai";"
+              style="font-family: "Alkalami";"
               title="arabic"
               value="arabic"
             >
@@ -1292,7 +1292,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "Darumadrop One";"
+              style="font-family: "Chilanka";"
               title="handwritten"
               value="handwritten"
             >
@@ -1463,7 +1463,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "Hina Mincho";"
+              style="font-family: "Aoboshi One";"
               title="japanese"
               value="japanese"
             >
@@ -2020,6 +2020,24 @@ exports[`MainApp renders correctly 1`] = `
             >
               
                   round
+                
+            </button>
+            
+              
+          </li>
+          
+              
+              
+          <li>
+            
+                
+            <button
+              is="tag-button"
+              title="rounded"
+              value="rounded"
+            >
+              
+                  rounded
                 
             </button>
             
@@ -3577,6 +3595,14 @@ exports[`MainApp renders correctly 1`] = `
                   
               </option>
               <option
+                id="rounded"
+                value="rounded"
+              >
+                
+                    rounded
+                  
+              </option>
+              <option
                 id="scrawl"
                 value="scrawl"
               >
@@ -4057,6 +4083,12 @@ exports[`MainApp renders correctly 1`] = `
                 value="chinese-traditional"
               >
                 chinese-traditional
+              </option>
+              <option
+                id="chorasmian"
+                value="chorasmian"
+              >
+                chorasmian
               </option>
               <option
                 id="coptic"
@@ -5063,16 +5095,16 @@ exports[`MainApp renders correctly 1`] = `
         
             
         <search-status
-          results-length="1521"
+          results-length="1529"
         >
           <div>
-            Found 1521 fonts
+            Found 1529 fonts
           </div>
         </search-status>
         
             
         <sort-by
-          results-length="1521"
+          results-length="1529"
           sort-by="family"
         >
           <div
@@ -6387,7 +6419,7 @@ exports[`MainApp renders correctly 1`] = `
             
         <pagination-buttons
           current-page="1"
-          results-length="1521"
+          results-length="1529"
         >
           <button
             class="btn"

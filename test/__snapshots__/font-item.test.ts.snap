@@ -592,7 +592,7 @@ exports[`FontItem rtl subset 1`] = `
     >
       <button
         is="tag-button"
-        style="font-family: "Almarai";"
+        style="font-family: "Alkalami";"
         title="arabic"
         value="arabic"
       >

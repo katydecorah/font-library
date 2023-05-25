@@ -977,7 +977,7 @@
     "variants": ["regular"],
     "subsets": ["japanese", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["japanese"],
     "lineNumber": 81,
     "variable": false,
     "lastModified": "2023-05-23"
@@ -3212,7 +3212,7 @@
     "variants": ["regular"],
     "subsets": ["japanese", "vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["heavy", "cute", "japanese", "round"],
     "lineNumber": 268,
     "variable": false,
     "lastModified": "2023-05-23"
@@ -3330,7 +3330,7 @@
     "variants": ["regular"],
     "subsets": ["japanese", "vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["japanese", "funky"],
     "lineNumber": 276,
     "variable": false,
     "lastModified": "2023-05-23"
@@ -9946,7 +9946,7 @@
     "variants": ["regular"],
     "subsets": ["japanese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["round", "heavy", "japanese"],
     "lineNumber": 805,
     "variable": false,
     "lastModified": "2023-05-23"
@@ -16558,7 +16558,7 @@
     "variants": ["regular"],
     "subsets": ["japanese", "latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["japanese"],
     "lineNumber": 1331,
     "variable": false,
     "lastModified": "2023-05-23"
@@ -18056,7 +18056,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["japanese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": ["round"],
+    "tags": ["round", "japanese"],
     "lineNumber": 1444,
     "variable": false,
     "lastModified": "2023-05-23"
