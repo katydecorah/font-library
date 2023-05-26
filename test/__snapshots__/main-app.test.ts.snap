@@ -2033,24 +2033,6 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              title="rounded"
-              value="rounded"
-            >
-              
-                  rounded
-                
-            </button>
-            
-              
-          </li>
-          
-              
-              
-          <li>
-            
-                
-            <button
-              is="tag-button"
               style="font-family: "Amatic SC";"
               title="scrawl"
               value="scrawl"
@@ -3592,14 +3574,6 @@ exports[`MainApp renders correctly 1`] = `
               >
                 
                     round
-                  
-              </option>
-              <option
-                id="rounded"
-                value="rounded"
-              >
-                
-                    rounded
                   
               </option>
               <option
