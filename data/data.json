@@ -2584,7 +2584,7 @@
       "latin-ext"
     ],
     "category": "serif",
-    "tags": [],
+    "tags": ["1900s"],
     "lineNumber": 209,
     "variable": true,
     "lastModified": "2023-01-06"
@@ -5774,7 +5774,7 @@
       "latin-ext"
     ],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["humanist"],
     "lineNumber": 468,
     "variable": false,
     "lastModified": "2023-05-31"
@@ -8297,7 +8297,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["arabic", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["arabic"],
     "lineNumber": 667,
     "variable": false,
     "lastModified": "2023-05-23"
@@ -8687,7 +8687,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["1950s"],
     "lineNumber": 695,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -8697,7 +8697,7 @@
     "variants": ["regular", "italic", "700"],
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["1950s"],
     "lineNumber": 696,
     "variable": false,
     "lastModified": "2023-05-02"
@@ -8726,7 +8726,7 @@
     ],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["1900s"],
     "lineNumber": 697,
     "variable": true,
     "lastModified": "2022-09-22"
@@ -8786,7 +8786,7 @@
     "variants": ["regular", "italic"],
     "subsets": ["latin"],
     "category": "serif",
-    "tags": [],
+    "tags": ["1920s"],
     "lineNumber": 703,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -8858,7 +8858,7 @@
     ],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["friendly"],
     "lineNumber": 706,
     "variable": false,
     "lastModified": "2023-05-02"
@@ -9832,7 +9832,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["arabic", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["arabic"],
     "lineNumber": 793,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -10121,7 +10121,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["slanted", "calligraphic", "handwritten"],
     "lineNumber": 817,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -18928,7 +18928,7 @@
       "latin-ext"
     ],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["elegant"],
     "lineNumber": 1513,
     "variable": false,
     "lastModified": "2023-04-20"
