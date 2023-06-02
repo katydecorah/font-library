@@ -13867,7 +13867,7 @@
     "variants": ["regular"],
     "subsets": ["japanese", "latin"],
     "category": "display",
-    "tags": [],
+    "tags": ["fun"],
     "lineNumber": 1111,
     "variable": false,
     "lastModified": "2023-05-31"
@@ -15402,7 +15402,7 @@
     "variants": ["regular"],
     "subsets": ["japanese", "latin"],
     "category": "display",
-    "tags": [],
+    "tags": ["outline"],
     "lineNumber": 1228,
     "variable": false,
     "lastModified": "2023-05-31"
@@ -16444,7 +16444,7 @@
     "variants": ["regular"],
     "subsets": ["japanese", "latin"],
     "category": "display",
-    "tags": [],
+    "tags": ["outline", "handwritten"],
     "lineNumber": 1316,
     "variable": false,
     "lastModified": "2023-05-31"
