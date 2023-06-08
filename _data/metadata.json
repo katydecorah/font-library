@@ -186,7 +186,7 @@
     },
     {
       "name": "fat",
-      "sample": "Erica One"
+      "sample": "Bagel Fat One"
     },
     {
       "name": "fat face",
@@ -314,7 +314,7 @@
     },
     {
       "name": "korean",
-      "sample": "Gaegu"
+      "sample": "Do Hyeon"
     },
     {
       "name": "large sizes",
@@ -731,5 +731,5 @@
     "italic",
     "regular"
   ],
-  "totalFamilies": 1538
+  "totalFamilies": 1539
 }
