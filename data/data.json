@@ -967,7 +967,7 @@
     ],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": ["eurostile"],
+    "tags": ["eurostile", "1990s"],
     "lineNumber": 80,
     "variable": true,
     "lastModified": "2023-04-04"
@@ -1759,7 +1759,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": ["comic", "slanted", "cartoon"],
+    "tags": ["comic", "slanted", "cartoon", "caps"],
     "lineNumber": 147,
     "variable": false,
     "lastModified": "2023-05-02"
@@ -7616,7 +7616,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["1990s", "cartoon", "fun", "caps"],
     "lineNumber": 613,
     "variable": false,
     "lastModified": "2023-06-08"

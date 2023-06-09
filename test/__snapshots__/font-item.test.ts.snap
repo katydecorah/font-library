@@ -840,7 +840,7 @@ exports[`FontItem selected variant, 900 1`] = `
     >
       <button
         is="tag-button"
-        style="font-family: "Anybody";"
+        style="font-family: "Iceland";"
         title="eurostile"
         value="eurostile"
       >
@@ -963,7 +963,7 @@ exports[`FontItem selected variant, 900italic 1`] = `
     >
       <button
         is="tag-button"
-        style="font-family: "Anybody";"
+        style="font-family: "Iceland";"
         title="eurostile"
         value="eurostile"
       >

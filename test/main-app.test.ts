@@ -62,11 +62,11 @@ describe("MainApp", () => {
     expect(selectVariant.value).toBe("300italic");
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
-        results-length="140"
+        results-length="138"
         selected-variant="300italic"
       >
         <div>
-          Found 140 fonts: 
+          Found 138 fonts: 
         </div>
         
 
@@ -152,11 +152,11 @@ describe("MainApp", () => {
     expect(selectedCategory.value).toBe("display");
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
-        results-length="403"
+        results-length="406"
         selected-category="display"
       >
         <div>
-          Found 403 fonts: 
+          Found 406 fonts: 
         </div>
         
 
@@ -199,11 +199,11 @@ describe("MainApp", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="432"
+        results-length="427"
         selected-tag="need tags"
       >
         <div>
-          Found 432 fonts: 
+          Found 427 fonts: 
         </div>
         
 
@@ -253,11 +253,11 @@ describe("MainApp", () => {
 
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
-        results-length="1535"
+        results-length="1539"
         selected-tag=""
       >
         <div>
-          Found 1535 fonts
+          Found 1539 fonts
         </div>
       </search-status>
     `);
@@ -331,11 +331,11 @@ describe("MainApp", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="1535"
+        results-length="1539"
         selected-search=""
       >
         <div>
-          Found 1535 fonts
+          Found 1539 fonts
         </div>
       </search-status>
     `);
@@ -390,10 +390,10 @@ describe("MainApp", () => {
 
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
-        results-length="1535"
+        results-length="1539"
       >
         <div>
-          Found 1535 fonts
+          Found 1539 fonts
         </div>
       </search-status>
     `);
@@ -415,11 +415,11 @@ describe("MainApp", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="1535"
+        results-length="1539"
         selected-category=""
       >
         <div>
-          Found 1535 fonts
+          Found 1539 fonts
         </div>
       </search-status>
     `);
@@ -441,11 +441,11 @@ describe("MainApp", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="1535"
+        results-length="1539"
         selected-subset=""
       >
         <div>
-          Found 1535 fonts
+          Found 1539 fonts
         </div>
       </search-status>
     `);
@@ -467,11 +467,11 @@ describe("MainApp", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="1535"
+        results-length="1539"
         selected-variant=""
       >
         <div>
-          Found 1535 fonts
+          Found 1539 fonts
         </div>
       </search-status>
     `);
@@ -628,7 +628,7 @@ describe("MainApp", () => {
 
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
-        results-length="1535"
+        results-length="1539"
         selected-category=""
         selected-search=""
         selected-subset=""
@@ -636,7 +636,7 @@ describe("MainApp", () => {
         selected-variant=""
       >
         <div>
-          Found 1535 fonts
+          Found 1539 fonts
         </div>
       </search-status>
     `);
@@ -659,11 +659,11 @@ describe("MainApp", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="19"
+        results-length="20"
         selected-tag="cute"
       >
         <div>
-          Found 19 fonts: 
+          Found 20 fonts: 
         </div>
         
 
@@ -715,10 +715,10 @@ describe("MainApp", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="1535"
+        results-length="1539"
       >
         <div>
-          Found 1535 fonts
+          Found 1539 fonts
         </div>
       </search-status>
     `);
@@ -815,10 +815,10 @@ describe("MainApp", () => {
     expect(checkboxVariable.checked).toBeFalsy();
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
-        results-length="1535"
+        results-length="1539"
       >
         <div>
-          Found 1535 fonts
+          Found 1539 fonts
         </div>
       </search-status>
     `);
@@ -892,10 +892,10 @@ describe("MainApp", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="1535"
+        results-length="1539"
       >
         <div>
-          Found 1535 fonts
+          Found 1539 fonts
         </div>
       </search-status>
     `);
@@ -913,7 +913,7 @@ describe("MainApp", () => {
     const sortBy = document.querySelector("sort-by");
     expect(sortBy).toMatchInlineSnapshot(`
       <sort-by
-        results-length="1535"
+        results-length="1539"
         sort-by="date"
       >
         <div

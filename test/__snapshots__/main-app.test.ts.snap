@@ -3,7 +3,7 @@
 exports[`MainApp renders correctly 1`] = `
 <main-app
   current-page="1"
-  results-length="1535"
+  results-length="1539"
 >
   
       
@@ -196,6 +196,25 @@ exports[`MainApp renders correctly 1`] = `
             >
               
                   1980s
+                
+            </button>
+            
+              
+          </li>
+          
+              
+              
+          <li>
+            
+                
+            <button
+              is="tag-button"
+              style="font-family: "Anybody";"
+              title="1990s"
+              value="1990s"
+            >
+              
+                  1990s
                 
             </button>
             
@@ -874,7 +893,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "Anybody";"
+              style="font-family: "Iceland";"
               title="eurostile"
               value="eurostile"
             >
@@ -912,7 +931,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "Erica One";"
+              style="font-family: "Bagel Fat One";"
               title="fat"
               value="fat"
             >
@@ -1520,7 +1539,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "Gaegu";"
+              style="font-family: "Do Hyeon";"
               title="korean"
               value="korean"
             >
@@ -2806,6 +2825,14 @@ exports[`MainApp renders correctly 1`] = `
               >
                 
                     1980s
+                  
+              </option>
+              <option
+                id="1990s"
+                value="1990s"
+              >
+                
+                    1990s
                   
               </option>
               <option
@@ -5069,16 +5096,16 @@ exports[`MainApp renders correctly 1`] = `
         
             
         <search-status
-          results-length="1535"
+          results-length="1539"
         >
           <div>
-            Found 1535 fonts
+            Found 1539 fonts
           </div>
         </search-status>
         
             
         <sort-by
-          results-length="1535"
+          results-length="1539"
           sort-by="family"
         >
           <div
@@ -6393,7 +6420,7 @@ exports[`MainApp renders correctly 1`] = `
             
         <pagination-buttons
           current-page="1"
-          results-length="1535"
+          results-length="1539"
         >
           <button
             class="btn"
