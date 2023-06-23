@@ -667,6 +667,7 @@
     "oriya",
     "osage",
     "osmanya",
+    "ottoman-siyaq-numbers",
     "pahawh-hmong",
     "palmyrene",
     "pau-cin-hau",
@@ -735,5 +736,5 @@
     "italic",
     "regular"
   ],
-  "totalFamilies": 1539
+  "totalFamilies": 1548
 }
