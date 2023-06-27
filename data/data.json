@@ -4235,7 +4235,7 @@
     "variants": ["regular"],
     "subsets": ["korean", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["korean", "brush"],
     "lineNumber": 353,
     "variable": false,
     "lastModified": "2023-06-07"
@@ -5722,7 +5722,7 @@
     "variants": ["regular"],
     "subsets": ["korean", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["korean", "fat"],
     "lineNumber": 467,
     "variable": false,
     "lastModified": "2023-06-07"
@@ -5732,7 +5732,7 @@
     "variants": ["100", "regular", "700"],
     "subsets": ["malayalam", "latin"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["modern"],
     "lineNumber": 468,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -6169,7 +6169,7 @@
     "variants": ["regular"],
     "subsets": ["korean", "vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["korean"],
     "lineNumber": 500,
     "variable": false,
     "lastModified": "2022-09-27"
@@ -6199,7 +6199,7 @@
     "variants": ["regular"],
     "subsets": ["korean", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["korean", "connected"],
     "lineNumber": 503,
     "variable": false,
     "lastModified": "2023-06-07"
@@ -10042,7 +10042,7 @@
     "variants": ["regular"],
     "subsets": ["korean", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["korean", "outline"],
     "lineNumber": 811,
     "variable": false,
     "lastModified": "2023-06-07"
@@ -10072,7 +10072,7 @@
     "variants": ["regular", "700"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["techno"],
     "lineNumber": 814,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -13697,7 +13697,7 @@
     "variants": ["regular"],
     "subsets": ["korean", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["korean", "futuristic"],
     "lineNumber": 1095,
     "variable": false,
     "lastModified": "2023-06-07"
@@ -14026,7 +14026,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["slanted"],
     "lineNumber": 1125,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -16071,7 +16071,7 @@
     ],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["futuristic", "techno"],
     "lineNumber": 1285,
     "variable": true,
     "lastModified": "2022-09-22"
@@ -17019,7 +17019,7 @@
     "variants": ["regular"],
     "subsets": ["korean", "latin"],
     "category": "serif",
-    "tags": [],
+    "tags": ["korean"],
     "lineNumber": 1363,
     "variable": false,
     "lastModified": "2022-09-27"
@@ -18549,7 +18549,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["whimsical"],
     "lineNumber": 1486,
     "variable": false,
     "lastModified": "2023-06-07"
@@ -18559,7 +18559,7 @@
     "variants": ["regular"],
     "subsets": ["arabic", "latin"],
     "category": "display",
-    "tags": [],
+    "tags": ["round"],
     "lineNumber": 1487,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -19125,7 +19125,7 @@
     "variants": ["regular"],
     "subsets": ["japanese", "latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["japanese", "calligraphic", "handwritten", "caps"],
     "lineNumber": 1528,
     "variable": false,
     "lastModified": "2023-05-31"
@@ -19135,7 +19135,7 @@
     "variants": ["regular"],
     "subsets": ["japanese", "latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["japanese", "calligraphic", "caps"],
     "lineNumber": 1529,
     "variable": false,
     "lastModified": "2023-05-31"
