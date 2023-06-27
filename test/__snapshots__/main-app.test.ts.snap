@@ -3,7 +3,7 @@
 exports[`MainApp renders correctly 1`] = `
 <main-app
   current-page="1"
-  results-length="1539"
+  results-length="1548"
 >
   
       
@@ -646,7 +646,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "Montserrat Subrayada";"
+              style="font-family: "Grandiflora One";"
               title="connected"
               value="connected"
             >
@@ -1539,7 +1539,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "Do Hyeon";"
+              style="font-family: "Diphylleia";"
               title="korean"
               value="korean"
             >
@@ -2261,7 +2261,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "Chakra Petch";"
+              style="font-family: "Aldrich";"
               title="square"
               value="square"
             >
@@ -2413,7 +2413,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "Aldrich";"
+              style="font-family: "Bruno Ace";"
               title="techno"
               value="techno"
             >
@@ -5096,16 +5096,16 @@ exports[`MainApp renders correctly 1`] = `
         
             
         <search-status
-          results-length="1539"
+          results-length="1548"
         >
           <div>
-            Found 1539 fonts
+            Found 1548 fonts
           </div>
         </search-status>
         
             
         <sort-by
-          results-length="1539"
+          results-length="1548"
           sort-by="family"
         >
           <div
@@ -6420,7 +6420,7 @@ exports[`MainApp renders correctly 1`] = `
             
         <pagination-buttons
           current-page="1"
-          results-length="1539"
+          results-length="1548"
         >
           <button
             class="btn"
@@ -6436,7 +6436,7 @@ exports[`MainApp renders correctly 1`] = `
             class="page-count"
             id="page-count"
           >
-            1 of 154
+            1 of 155
           </div>
           
 
