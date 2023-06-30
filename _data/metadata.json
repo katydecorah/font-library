@@ -628,6 +628,7 @@
     "lycian",
     "lydian",
     "mahajani",
+    "makasar",
     "malayalam",
     "mandaic",
     "manichaean",
@@ -736,5 +737,5 @@
     "italic",
     "regular"
   ],
-  "totalFamilies": 1548
+  "totalFamilies": 1550
 }
