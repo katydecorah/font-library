@@ -18,7 +18,7 @@ class FilterCheckbox extends HTMLInputElement {
       customEvent("handle-filter", {
         value: this.checked,
         id: this.id,
-      })
+      }),
     );
     this.setUrlParam();
   }
@@ -34,7 +34,7 @@ class FilterCheckbox extends HTMLInputElement {
     window.history.replaceState(
       {},
       "",
-      `${window.location.pathname}?${urlParameters.toString()}`
+      `${window.location.pathname}?${urlParameters.toString()}`,
     );
   }
 

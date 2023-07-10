@@ -3,7 +3,7 @@ export default function customEvent(
   detail?: {
     value?: string | boolean | number;
     id?: string;
-  }
+  },
 ): CustomEvent {
   return new CustomEvent(eventName, {
     bubbles: true,
