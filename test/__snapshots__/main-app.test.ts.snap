@@ -3,7 +3,7 @@
 exports[`MainApp renders correctly 1`] = `
 <main-app
   current-page="1"
-  results-length="1548"
+  results-length="1550"
 >
   
       
@@ -4404,6 +4404,12 @@ exports[`MainApp renders correctly 1`] = `
                 mahajani
               </option>
               <option
+                id="makasar"
+                value="makasar"
+              >
+                makasar
+              </option>
+              <option
                 id="malayalam"
                 value="malayalam"
               >
@@ -4636,6 +4642,12 @@ exports[`MainApp renders correctly 1`] = `
                 value="osmanya"
               >
                 osmanya
+              </option>
+              <option
+                id="ottoman-siyaq-numbers"
+                value="ottoman-siyaq-numbers"
+              >
+                ottoman-siyaq-numbers
               </option>
               <option
                 id="pahawh-hmong"
@@ -5096,16 +5108,16 @@ exports[`MainApp renders correctly 1`] = `
         
             
         <search-status
-          results-length="1548"
+          results-length="1550"
         >
           <div>
-            Found 1548 fonts
+            Found 1550 fonts
           </div>
         </search-status>
         
             
         <sort-by
-          results-length="1548"
+          results-length="1550"
           sort-by="family"
         >
           <div
@@ -6420,7 +6432,7 @@ exports[`MainApp renders correctly 1`] = `
             
         <pagination-buttons
           current-page="1"
-          results-length="1548"
+          results-length="1550"
         >
           <button
             class="btn"

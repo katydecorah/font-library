@@ -1,4 +1,4 @@
-import families from "../families.json";
+import families from "./fixtures/families.json";
 
 type Families = typeof families;
 
