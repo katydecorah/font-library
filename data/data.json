@@ -133,7 +133,7 @@
     "variants": ["regular", "700"],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["techno"],
     "lineNumber": 13,
     "variable": false,
     "lastModified": "2023-06-22"
@@ -736,7 +736,7 @@
     "variants": ["regular"],
     "subsets": ["arabic", "latin"],
     "category": "serif",
-    "tags": [],
+    "tags": ["arabic"],
     "lineNumber": 58,
     "variable": false,
     "lastModified": "2022-09-14"
@@ -7305,7 +7305,7 @@
       "latin-ext"
     ],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["friendly"],
     "lineNumber": 588,
     "variable": true,
     "lastModified": "2023-05-02"
@@ -8245,7 +8245,7 @@
     ],
     "subsets": ["arabic", "vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["modern", "arabic"],
     "lineNumber": 662,
     "variable": true,
     "lastModified": "2022-09-22"
@@ -9135,7 +9135,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["slanted", "formal"],
     "lineNumber": 729,
     "variable": false,
     "lastModified": "2023-07-13"
@@ -10611,7 +10611,7 @@
     "variants": ["regular", "700", "800"],
     "subsets": ["korean", "latin"],
     "category": "serif",
-    "tags": [],
+    "tags": ["korean"],
     "lineNumber": 856,
     "variable": false,
     "lastModified": "2022-09-27"
