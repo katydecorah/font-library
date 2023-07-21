@@ -31,7 +31,7 @@ describe("tag-button", () => {
     const tag = "cute";
     document.body.innerHTML = `<button is="tag-button" value="${tag}">${tag}</button>`;
     const tagButton: HTMLButtonElement = document.querySelector(
-      "button[is=tag-button]",
+      "button[is=tag-button]"
     );
     const mockFunction = jest.fn();
     tagButton.addEventListener("tag-button-selected", mockFunction);
@@ -62,7 +62,7 @@ describe("tag-button", () => {
 
     document.body.innerHTML = `<button is="tag-button" value="${tag}">${tag}</button>`;
     const tagButton: HTMLButtonElement = document.querySelector(
-      "button[is=tag-button]",
+      "button[is=tag-button]"
     );
     expect(tagButton).toMatchInlineSnapshot(`
       <button

@@ -73,7 +73,7 @@ class FontItem extends HTMLLIElement {
     const tagButtons = tags
       .map(
         (tag: string) =>
-          `<button is="tag-button" title="${tag}" value="${tag}">${tag}</button>`,
+          `<button is="tag-button" title="${tag}" value="${tag}">${tag}</button>`
       )
       .join("");
 
@@ -89,11 +89,11 @@ class FontItem extends HTMLLIElement {
           <ul>
             <li>${category}</li>
             <li><span aria-label="${variants.join(", ")}">${
-              variants.length
-            } variants${variable ? " (variable)" : ""}</span></li>
+      variants.length
+    } variants${variable ? " (variable)" : ""}</span></li>
             <li><span aria-label="${subsets.join(", ")}">${
-              subsets.length
-            } subsets</span></li>
+      subsets.length
+    } subsets</span></li>
           </ul>
         </div>
       </div>
@@ -135,7 +135,7 @@ class FontItem extends HTMLLIElement {
 
   disconnectedCallback() {
     const linkElement = document.querySelector(
-      `link[data-family="${this.font.family}"]`,
+      `link[data-family="${this.font.family}"]`
     );
     if (linkElement) linkElement.remove();
   }

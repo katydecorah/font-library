@@ -12,7 +12,7 @@ export default function filter(
     currentPage: number;
     pageSize: number;
   },
-  generatedData: GeneratedData,
+  generatedData: GeneratedData
 ): [number, GeneratedData] {
   const {
     selectedSearch,
@@ -29,7 +29,7 @@ export default function filter(
 
   if (selectedSearch) {
     filteredData = filteredData.filter((row) =>
-      row.family.toLowerCase().includes(selectedSearch.toLowerCase()),
+      row.family.toLowerCase().includes(selectedSearch.toLowerCase())
     );
   }
 
@@ -41,17 +41,17 @@ export default function filter(
   }
   if (selectedCategory) {
     filteredData = filteredData.filter(
-      (row) => row.category === selectedCategory,
+      (row) => row.category === selectedCategory
     );
   }
   if (selectedSubset) {
     filteredData = filteredData.filter((row) =>
-      row.subsets.includes(selectedSubset),
+      row.subsets.includes(selectedSubset)
     );
   }
   if (selectedVariant) {
     filteredData = filteredData.filter((row) =>
-      row.variants.includes(selectedVariant),
+      row.variants.includes(selectedVariant)
     );
   }
 
@@ -62,13 +62,13 @@ export default function filter(
   if (sortBy === "date") {
     filteredData = filteredData.sort(
       (a, b) =>
-        new Date(b.lastModified).getTime() - new Date(a.lastModified).getTime(),
+        new Date(b.lastModified).getTime() - new Date(a.lastModified).getTime()
     );
   }
 
   if (sortBy === "family") {
     filteredData = filteredData.sort((a, b) =>
-      a.family.localeCompare(b.family),
+      a.family.localeCompare(b.family)
     );
   }
 

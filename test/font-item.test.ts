@@ -14,9 +14,9 @@ describe("FontItem", () => {
     const fontItem = document.querySelector("li[is='font-item']");
     expect(fontItem).toMatchSnapshot();
     expect(
-      document.querySelector("[data-family='Alef']").getAttribute("href"),
+      document.querySelector("[data-family='Alef']").getAttribute("href")
     ).toMatchInlineSnapshot(
-      `"https://fonts.googleapis.com/css2?family=Alef&text=Alef&display=swap"`,
+      `"https://fonts.googleapis.com/css2?family=Alef&text=Alef&display=swap"`
     );
   });
 
@@ -27,9 +27,9 @@ describe("FontItem", () => {
     expect(
       document
         .querySelector("[data-family='GFS Neohellenic']")
-        .getAttribute("href"),
+        .getAttribute("href")
     ).toMatchInlineSnapshot(
-      `"https://fonts.googleapis.com/css2?family=GFS+Neohellenic&text=%CE%93%CE%B5%CE%B9%CE%AC%20%CF%83%CE%BF%CF%85%20%CE%9A%CF%8C%CF%83%CE%BC%CE%B5&display=swap"`,
+      `"https://fonts.googleapis.com/css2?family=GFS+Neohellenic&text=%CE%93%CE%B5%CE%B9%CE%AC%20%CF%83%CE%BF%CF%85%20%CE%9A%CF%8C%CF%83%CE%BC%CE%B5&display=swap"`
     );
   });
 
@@ -38,9 +38,9 @@ describe("FontItem", () => {
     const fontItem = document.querySelector("li[is='font-item']");
     expect(fontItem).toMatchSnapshot();
     expect(
-      document.querySelector("[data-family='Almarai']").getAttribute("href"),
+      document.querySelector("[data-family='Almarai']").getAttribute("href")
     ).toMatchInlineSnapshot(
-      `"https://fonts.googleapis.com/css2?family=Almarai&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A8%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85&display=swap"`,
+      `"https://fonts.googleapis.com/css2?family=Almarai&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A8%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85&display=swap"`
     );
   });
 
@@ -49,18 +49,18 @@ describe("FontItem", () => {
     const fontItem = document.querySelector("li[is='font-item']");
     expect(fontItem).toMatchSnapshot();
     expect(
-      document.querySelector("[data-family='Anybody']").getAttribute("href"),
+      document.querySelector("[data-family='Anybody']").getAttribute("href")
     ).toMatchInlineSnapshot(
-      `"https://fonts.googleapis.com/css2?family=Anybody:ital,wght@1,900&text=Anybody&display=swap"`,
+      `"https://fonts.googleapis.com/css2?family=Anybody:ital,wght@1,900&text=Anybody&display=swap"`
     );
   });
 
   test("selected variant, italic", () => {
     document.body.innerHTML = `<li is="font-item" selected-variant="italic" font='{"family":"Anybody","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"subsets":["latin","latin-ext","vietnamese"],"category":"display","tags":["eurostile"],"lineNumber":79,"variable":true}' id="anybody"></li>`;
     expect(
-      document.querySelector("[data-family='Anybody']").getAttribute("href"),
+      document.querySelector("[data-family='Anybody']").getAttribute("href")
     ).toMatchInlineSnapshot(
-      `"https://fonts.googleapis.com/css2?family=Anybody:ital@1&text=Anybody&display=swap"`,
+      `"https://fonts.googleapis.com/css2?family=Anybody:ital@1&text=Anybody&display=swap"`
     );
   });
 
@@ -69,9 +69,9 @@ describe("FontItem", () => {
     const fontItem = document.querySelector("li[is='font-item']");
     expect(fontItem).toMatchSnapshot();
     expect(
-      document.querySelector("[data-family='Anybody']").getAttribute("href"),
+      document.querySelector("[data-family='Anybody']").getAttribute("href")
     ).toMatchInlineSnapshot(
-      `"https://fonts.googleapis.com/css2?family=Anybody:wght@900&text=Anybody&display=swap"`,
+      `"https://fonts.googleapis.com/css2?family=Anybody:wght@900&text=Anybody&display=swap"`
     );
   });
 
@@ -80,9 +80,9 @@ describe("FontItem", () => {
     const fontItem = document.querySelector("li[is='font-item']");
     expect(fontItem).toMatchSnapshot();
     expect(
-      document.querySelector("[data-family='Alef']").getAttribute("href"),
+      document.querySelector("[data-family='Alef']").getAttribute("href")
     ).toMatchInlineSnapshot(
-      `"https://fonts.googleapis.com/css2?family=Alef&text=%D7%A9%D6%B8%D7%81%D7%9C%D7%95%D6%B9%D7%9D%20%D7%A2%D7%95%D6%B9%D7%9C%D6%B8%D7%9D%20&display=swap"`,
+      `"https://fonts.googleapis.com/css2?family=Alef&text=%D7%A9%D6%B8%D7%81%D7%9C%D7%95%D6%B9%D7%9D%20%D7%A2%D7%95%D6%B9%D7%9C%D6%B8%D7%9D%20&display=swap"`
     );
   });
 
@@ -93,9 +93,9 @@ describe("FontItem", () => {
     expect(
       document
         .querySelector("[data-family='Material Symbols Sharp']")
-        .getAttribute("href"),
+        .getAttribute("href")
     ).toMatchInlineSnapshot(
-      `"https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp&text=favorite%20add%20delete%20settings%20search&display=swap"`,
+      `"https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp&text=favorite%20add%20delete%20settings%20search&display=swap"`
     );
   });
 
@@ -104,26 +104,26 @@ describe("FontItem", () => {
     const fontItem = document.querySelector("li[is='font-item']");
     expect(fontItem).toMatchSnapshot();
     expect(
-      document.querySelector("[data-family='Akshar']").getAttribute("href"),
+      document.querySelector("[data-family='Akshar']").getAttribute("href")
     ).toMatchInlineSnapshot(
-      `"https://fonts.googleapis.com/css2?family=Akshar&text=Akshar&display=swap"`,
+      `"https://fonts.googleapis.com/css2?family=Akshar&text=Akshar&display=swap"`
     );
   });
 
   test("molle, italic variant only", () => {
     document.body.innerHTML = `<li is="font-item" font='{"family":"Molle","variants":["italic"],"subsets":["latin"],"category":"handwriting","tags":[],"lineNumber":578}'></li>`;
     expect(
-      document.querySelector("[data-family='Molle']").getAttribute("href"),
+      document.querySelector("[data-family='Molle']").getAttribute("href")
     ).toMatchInlineSnapshot(
-      `"https://fonts.googleapis.com/css2?family=Molle:ital@1&text=Molle&display=swap"`,
+      `"https://fonts.googleapis.com/css2?family=Molle:ital@1&text=Molle&display=swap"`
     );
   });
   test("sunflower, multiple non-regular variants", () => {
     document.body.innerHTML = `<li is="font-item" font='{"family":"Sunflower","variants":["300","500","700"],"subsets":["latin"],"category":"sans-serif","tags":[],"lineNumber":1000}'></li>`;
     expect(
-      document.querySelector("[data-family='Sunflower']").getAttribute("href"),
+      document.querySelector("[data-family='Sunflower']").getAttribute("href")
     ).toMatchInlineSnapshot(
-      `"https://fonts.googleapis.com/css2?family=Sunflower:wght@300&text=Sunflower&display=swap"`,
+      `"https://fonts.googleapis.com/css2?family=Sunflower:wght@300&text=Sunflower&display=swap"`
     );
   });
   test("unifrakturcook, one non-regular variant", () => {
@@ -131,9 +131,9 @@ describe("FontItem", () => {
     expect(
       document
         .querySelector("[data-family='UnifrakturCook']")
-        .getAttribute("href"),
+        .getAttribute("href")
     ).toMatchInlineSnapshot(
-      `"https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&text=UnifrakturCook&display=swap"`,
+      `"https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&text=UnifrakturCook&display=swap"`
     );
   });
 });
