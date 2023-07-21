@@ -33,7 +33,7 @@ class TagButton extends HTMLButtonElement {
       customEvent("tag-button-selected", {
         id: "selectedTag",
         value: this.value,
-      }),
+      })
     );
 
     this.setUrlParam();
@@ -45,7 +45,7 @@ class TagButton extends HTMLButtonElement {
     window.history.replaceState(
       {},
       "",
-      `${window.location.pathname}?${urlParameters.toString()}`,
+      `${window.location.pathname}?${urlParameters.toString()}`
     );
   }
 

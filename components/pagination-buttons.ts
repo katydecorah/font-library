@@ -93,7 +93,7 @@ class PaginationButtons extends HTMLElement {
     window.history.replaceState(
       {},
       "",
-      `${window.location.pathname}?${urlParameters.toString()}`,
+      `${window.location.pathname}?${urlParameters.toString()}`
     );
   }
 

@@ -30,8 +30,8 @@ class FilterSelect extends HTMLSelectElement {
         {
           value,
           id,
-        },
-      ),
+        }
+      )
     );
 
     this.setUrlParam();
@@ -48,7 +48,7 @@ class FilterSelect extends HTMLSelectElement {
     window.history.replaceState(
       {},
       "",
-      `${window.location.pathname}?${urlParameters.toString()}`,
+      `${window.location.pathname}?${urlParameters.toString()}`
     );
   }
 

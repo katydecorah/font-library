@@ -3,7 +3,7 @@
 exports[`MainApp renders correctly 1`] = `
 <main-app
   current-page="1"
-  results-length="1550"
+  results-length="1558"
 >
   
       
@@ -2413,7 +2413,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "Bruno Ace";"
+              style="font-family: "Agdasima";"
               title="techno"
               value="techno"
             >
@@ -5108,16 +5108,16 @@ exports[`MainApp renders correctly 1`] = `
         
             
         <search-status
-          results-length="1550"
+          results-length="1558"
         >
           <div>
-            Found 1550 fonts
+            Found 1558 fonts
           </div>
         </search-status>
         
             
         <sort-by
-          results-length="1550"
+          results-length="1558"
           sort-by="family"
         >
           <div
@@ -6432,7 +6432,7 @@ exports[`MainApp renders correctly 1`] = `
             
         <pagination-buttons
           current-page="1"
-          results-length="1550"
+          results-length="1558"
         >
           <button
             class="btn"
@@ -6448,7 +6448,7 @@ exports[`MainApp renders correctly 1`] = `
             class="page-count"
             id="page-count"
           >
-            1 of 155
+            1 of 156
           </div>
           
 
