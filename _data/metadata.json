@@ -713,6 +713,7 @@
     "ugaritic",
     "vai",
     "vietnamese",
+    "vithkuqi",
     "wancho",
     "warang-citi",
     "yezidi",
@@ -739,5 +740,5 @@
     "italic",
     "regular"
   ],
-  "totalFamilies": 1558
+  "totalFamilies": 1565
 }
