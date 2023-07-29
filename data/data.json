@@ -6497,7 +6497,7 @@
     ],
     "subsets": ["korean", "vietnamese", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["korean"],
     "lineNumber": 524,
     "variable": true,
     "lastModified": "2023-03-21"
@@ -6666,7 +6666,7 @@
     ],
     "subsets": ["hebrew", "latin"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["hebrew"],
     "lineNumber": 536,
     "variable": true,
     "lastModified": "2022-09-22"
@@ -7053,7 +7053,7 @@
     "variants": ["regular", "italic"],
     "subsets": ["latin"],
     "category": "serif",
-    "tags": [],
+    "tags": ["typewriter"],
     "lineNumber": 567,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -7063,7 +7063,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "serif",
-    "tags": ["small caps"],
+    "tags": ["small caps", "typewriter"],
     "lineNumber": 568,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -8150,7 +8150,7 @@
     ],
     "subsets": ["thai", "vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["kids"],
     "lineNumber": 652,
     "variable": false,
     "lastModified": "2023-05-02"
@@ -17796,7 +17796,7 @@
     "variants": ["300", "500", "700"],
     "subsets": ["korean", "latin"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["geometric", "korean"],
     "lineNumber": 1418,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -18022,7 +18022,7 @@
       "latin-ext"
     ],
     "category": "display",
-    "tags": [],
+    "tags": ["techno", "futuristic"],
     "lineNumber": 1438,
     "variable": false,
     "lastModified": "2023-07-13"
@@ -18101,7 +18101,7 @@
     "variants": ["regular", "italic", "700", "700italic"],
     "subsets": ["thai", "vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["humanist", "round", "light"],
     "lineNumber": 1444,
     "variable": false,
     "lastModified": "2022-09-22"
