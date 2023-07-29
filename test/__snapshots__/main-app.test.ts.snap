@@ -3,7 +3,7 @@
 exports[`MainApp renders correctly 1`] = `
 <main-app
   current-page="1"
-  results-length="1558"
+  results-length="1565"
 >
   
       
@@ -1387,7 +1387,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "IBM Plex Sans Hebrew";"
+              style="font-family: "Heebo";"
               title="hebrew"
               value="hebrew"
             >
@@ -4914,6 +4914,12 @@ exports[`MainApp renders correctly 1`] = `
                 vietnamese
               </option>
               <option
+                id="vithkuqi"
+                value="vithkuqi"
+              >
+                vithkuqi
+              </option>
+              <option
                 id="wancho"
                 value="wancho"
               >
@@ -5120,16 +5126,16 @@ exports[`MainApp renders correctly 1`] = `
         
             
         <search-status
-          results-length="1558"
+          results-length="1565"
         >
           <div>
-            Found 1558 fonts
+            Found 1565 fonts
           </div>
         </search-status>
         
             
         <sort-by
-          results-length="1558"
+          results-length="1565"
           sort-by="family"
         >
           <div
@@ -6444,7 +6450,7 @@ exports[`MainApp renders correctly 1`] = `
             
         <pagination-buttons
           current-page="1"
-          results-length="1558"
+          results-length="1565"
         >
           <button
             class="btn"
@@ -6460,7 +6466,7 @@ exports[`MainApp renders correctly 1`] = `
             class="page-count"
             id="page-count"
           >
-            1 of 156
+            1 of 157
           </div>
           
 
