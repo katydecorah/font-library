@@ -1007,6 +1007,25 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
+              style="font-family: "Borel";"
+              title="french"
+              value="french"
+            >
+              
+                  french
+                
+            </button>
+            
+              
+          </li>
+          
+              
+              
+          <li>
+            
+                
+            <button
+              is="tag-button"
               style="font-family: "Amaranth";"
               title="friendly"
               value="friendly"
@@ -3161,6 +3180,14 @@ exports[`MainApp renders correctly 1`] = `
               >
                 
                     fraktur
+                  
+              </option>
+              <option
+                id="french"
+                value="french"
+              >
+                
+                    french
                   
               </option>
               <option

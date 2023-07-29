@@ -2567,7 +2567,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["french", "cursive", "connected"],
     "lineNumber": 207,
     "variable": false,
     "lastModified": "2023-07-24"
@@ -3932,7 +3932,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["french"],
     "lineNumber": 325,
     "variable": false,
     "lastModified": "2023-05-02"
@@ -6567,7 +6567,7 @@
       "latin-ext"
     ],
     "category": "display",
-    "tags": [],
+    "tags": ["pixel"],
     "lineNumber": 529,
     "variable": false,
     "lastModified": "2023-07-24"
@@ -8466,7 +8466,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": ["swash"],
+    "tags": ["swash", "french"],
     "lineNumber": 677,
     "variable": false,
     "lastModified": "2023-05-02"
@@ -14262,7 +14262,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "handwriting",
-    "tags": ["1960s", "cursive"],
+    "tags": ["1960s", "cursive", "french"],
     "lineNumber": 1140,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -15153,7 +15153,7 @@
     ],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["low contrast"],
     "lineNumber": 1208,
     "variable": false,
     "lastModified": "2023-07-24"
