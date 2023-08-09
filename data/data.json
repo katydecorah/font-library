@@ -2972,7 +2972,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["heavy"],
     "lineNumber": 245,
     "variable": false,
     "lastModified": "2023-06-22"
@@ -6032,7 +6032,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "handwriting",
-    "tags": ["scrawl"],
+    "tags": ["scrawl", "handwritten"],
     "lineNumber": 487,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -6099,7 +6099,7 @@
     ],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["modern"],
     "lineNumber": 492,
     "variable": true,
     "lastModified": "2023-03-21"
@@ -7262,7 +7262,7 @@
     "variants": ["300", "300italic", "regular", "italic", "700", "700italic"],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["humanist", "modern"],
     "lineNumber": 586,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -16078,7 +16078,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "hebrew", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["fat"],
     "lineNumber": 1278,
     "variable": false,
     "lastModified": "2023-05-02"
@@ -16088,7 +16088,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "cyrillic-ext", "hebrew", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["fat"],
     "lineNumber": 1279,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -19373,7 +19373,7 @@
       "latin-ext"
     ],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["light", "low contrast"],
     "lineNumber": 1543,
     "variable": false,
     "lastModified": "2023-06-22"
@@ -19409,7 +19409,7 @@
       "latin-ext"
     ],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["light", "low contrast"],
     "lineNumber": 1544,
     "variable": false,
     "lastModified": "2023-06-22"
@@ -19486,7 +19486,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "japanese", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["typewriter"],
     "lineNumber": 1550,
     "variable": false,
     "lastModified": "2022-09-27"
