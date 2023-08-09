@@ -15,4 +15,6 @@ module.exports = {
   transform: {
     "^.+\\.svg$": "<rootDir>/.jest/file-transformer.js",
   },
+  // https://stackoverflow.com/a/76818962/2887392
+  prettierPath: require.resolve("prettier-2"),
 };
