@@ -3,6 +3,8 @@ import fetch from "node-fetch";
 import { readFileSync, writeFileSync } from "fs";
 import { execSync } from "child_process";
 
+const excludeFonts = ["Pushster"];
+
 async function library() {
   try {
     if (!process.env.GoogleToken) {
@@ -11,11 +13,14 @@ async function library() {
     }
     let commitMessage = [];
     const response = await fetch(
-      `https://www.googleapis.com/webfonts/v1/webfonts?key=${process.env.GoogleToken}`
+      `https://www.googleapis.com/webfonts/v1/webfonts?key=${process.env.GoogleToken}`,
     );
     const libraryApi = await response.json();
+    const remoteLibrary = libraryApi.items.filter(
+      (font) => !excludeFonts.includes(font.family),
+    );
     // build list of family names in Google Fonts API
-    const fontsApi = libraryApi.items.map(({ family }) => family);
+    const fontsApi = remoteLibrary.map(({ family }) => family);
 
     // get list of families in font library
     let libraryLocal = JSON.parse(readFileSync("families.json", "utf-8"));
@@ -33,8 +38,8 @@ async function library() {
     const familiesToRemove = fontsLocal.filter((x) => !fontsApi.includes(x));
 
     const { generatedMetadata, generatedFamilies } = combineLibraries(
-      libraryApi.items,
-      libraryLocal
+      remoteLibrary,
+      libraryLocal,
     );
     const localGeneratedData = readFileSync("data/data.json", "utf-8");
 
@@ -42,7 +47,7 @@ async function library() {
     const hasFamiliesToRemove = familiesToRemove.length > 0;
     const hasGeneratedDataToUpdate = !arraysEqual(
       generatedFamilies,
-      localGeneratedData
+      localGeneratedData,
     );
 
     if (
@@ -77,7 +82,7 @@ async function library() {
       writeFileSync(
         "_data/metadata.json",
         JSON.stringify(generatedMetadata, null, 2),
-        "utf-8"
+        "utf-8",
       );
       const updated = "📝 Updated generated data";
       commitMessage.push(updated);
@@ -90,7 +95,7 @@ async function library() {
       writeFileSync(
         "families.json",
         JSON.stringify(orderObject(libraryLocal)),
-        "utf-8"
+        "utf-8",
       );
       // run prettier CLI on families.json
       execSync("npx prettier --write families.json");
@@ -120,7 +125,7 @@ function arraysEqual(a1, a2) {
 
 function combineLibraries(remoteFonts, local) {
   const variableFonts = JSON.parse(
-    readFileSync("./data/variable-fonts.json", "utf-8")
+    readFileSync("./data/variable-fonts.json", "utf-8"),
   );
   const combineLibrary = [];
   for (const [
@@ -188,7 +193,7 @@ function combineLibraries(remoteFonts, local) {
       totalFamilies: combineLibrary.length,
     },
     generatedFamilies: `${JSON.stringify(
-      combineLibrary.sort((a, b) => (a.family > b.family ? 1 : -1))
+      combineLibrary.sort((a, b) => (a.family > b.family ? 1 : -1)),
     )}`,
   };
 }

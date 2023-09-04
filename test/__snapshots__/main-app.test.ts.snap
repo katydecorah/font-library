@@ -3,7 +3,7 @@
 exports[`MainApp renders correctly 1`] = `
 <main-app
   current-page="1"
-  results-length="1567"
+  results-length="1569"
 >
   
       
@@ -5153,16 +5153,16 @@ exports[`MainApp renders correctly 1`] = `
         
             
         <search-status
-          results-length="1567"
+          results-length="1569"
         >
           <div>
-            Found 1567 fonts
+            Found 1569 fonts
           </div>
         </search-status>
         
             
         <sort-by
-          results-length="1567"
+          results-length="1569"
           sort-by="family"
         >
           <div
@@ -5191,7 +5191,7 @@ exports[`MainApp renders correctly 1`] = `
             
         <ul
           class="families"
-          fonts="[{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false,"lastModified":"2022-09-22"},{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3,"variable":false,"lastModified":"2022-09-22"},{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":4,"variable":false,"lastModified":"2023-05-02"},{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5,"variable":false,"lastModified":"2022-09-22"},{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6,"variable":false,"lastModified":"2022-09-22"},{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false,"lastModified":"2022-12-08"},{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8,"variable":false,"lastModified":"2022-09-22"},{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9,"variable":false,"lastModified":"2022-12-08"},{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10,"variable":false,"lastModified":"2022-09-22"},{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11,"variable":false,"lastModified":"2022-04-20"}]"
+          fonts="[{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false,"lastModified":"2022-09-22"},{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":4,"variable":false,"lastModified":"2022-09-22"},{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":5,"variable":false,"lastModified":"2023-05-02"},{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":6,"variable":false,"lastModified":"2022-09-22"},{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":7,"variable":false,"lastModified":"2023-08-25"},{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":8,"variable":false,"lastModified":"2022-12-08"},{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":9,"variable":false,"lastModified":"2023-08-25"},{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":10,"variable":false,"lastModified":"2023-08-25"},{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":11,"variable":false,"lastModified":"2022-09-22"},{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":12,"variable":false,"lastModified":"2022-04-20"}]"
           is="font-list"
         >
           <li
@@ -5324,7 +5324,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":3,"variable":false,"lastModified":"2022-09-22"}"
+            font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":4,"variable":false,"lastModified":"2022-09-22"}"
             is="font-item"
           >
             <div
@@ -5421,7 +5421,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for Abel"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L3"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L4"
                   target="_blank"
                 >
                   Edit tags
@@ -5445,7 +5445,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":4,"variable":false,"lastModified":"2023-05-02"}"
+            font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":5,"variable":false,"lastModified":"2023-05-02"}"
             is="font-item"
           >
             <div
@@ -5533,7 +5533,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for Abhaya Libre"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L4"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L5"
                   target="_blank"
                 >
                   Edit tags
@@ -5557,7 +5557,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":5,"variable":false,"lastModified":"2022-09-22"}"
+            font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":6,"variable":false,"lastModified":"2022-09-22"}"
             is="font-item"
           >
             <div
@@ -5654,7 +5654,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for Aboreto"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L5"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L6"
                   target="_blank"
                 >
                   Edit tags
@@ -5678,7 +5678,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":6,"variable":false,"lastModified":"2022-09-22"}"
+            font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":7,"variable":false,"lastModified":"2023-08-25"}"
             is="font-item"
           >
             <div
@@ -5799,7 +5799,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for Abril Fatface"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L6"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L7"
                   target="_blank"
                 >
                   Edit tags
@@ -5823,7 +5823,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false,"lastModified":"2022-12-08"}"
+            font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":8,"variable":false,"lastModified":"2022-12-08"}"
             is="font-item"
           >
             <div
@@ -5911,7 +5911,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for Abyssinica SIL"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L7"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L8"
                   target="_blank"
                 >
                   Edit tags
@@ -5935,7 +5935,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":8,"variable":false,"lastModified":"2022-09-22"}"
+            font="{"family":"Aclonica","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":9,"variable":false,"lastModified":"2023-08-25"}"
             is="font-item"
           >
             <div
@@ -6040,7 +6040,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for Aclonica"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L8"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L9"
                   target="_blank"
                 >
                   Edit tags
@@ -6064,7 +6064,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":9,"variable":false,"lastModified":"2022-12-08"}"
+            font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":10,"variable":false,"lastModified":"2023-08-25"}"
             is="font-item"
           >
             <div
@@ -6185,7 +6185,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for Acme"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L9"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L10"
                   target="_blank"
                 >
                   Edit tags
@@ -6209,7 +6209,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":10,"variable":false,"lastModified":"2022-09-22"}"
+            font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":11,"variable":false,"lastModified":"2022-09-22"}"
             is="font-item"
           >
             <div
@@ -6314,7 +6314,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for Actor"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L10"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L11"
                   target="_blank"
                 >
                   Edit tags
@@ -6338,7 +6338,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":11,"variable":false,"lastModified":"2022-04-20"}"
+            font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":12,"variable":false,"lastModified":"2022-04-20"}"
             is="font-item"
           >
             <div
@@ -6451,7 +6451,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for Adamina"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L11"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L12"
                   target="_blank"
                 >
                   Edit tags
@@ -6477,7 +6477,7 @@ exports[`MainApp renders correctly 1`] = `
             
         <pagination-buttons
           current-page="1"
-          results-length="1567"
+          results-length="1569"
         >
           <button
             class="btn"
