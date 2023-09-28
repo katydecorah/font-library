@@ -568,6 +568,7 @@
     "bengali",
     "bhaiksuki",
     "brahmi",
+    "braille",
     "buginese",
     "buhid",
     "canadian-aboriginal",
@@ -744,5 +745,5 @@
     "italic",
     "regular"
   ],
-  "totalFamilies": 1571
+  "totalFamilies": 1577
 }
