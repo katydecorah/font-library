@@ -5693,7 +5693,7 @@
     "variants": ["regular", "500", "600", "700", "800", "900"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["geometric"],
     "lineNumber": 463,
     "variable": false,
     "lastModified": "2023-09-27"
@@ -9322,7 +9322,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "serif",
-    "tags": [],
+    "tags": ["round"],
     "lineNumber": 742,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -14009,7 +14009,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["humanist", "geometric"],
     "lineNumber": 1113,
     "variable": false,
     "lastModified": "2023-09-27"
@@ -14529,7 +14529,7 @@
     "variants": ["regular"],
     "subsets": ["tamil", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["light"],
     "lineNumber": 1158,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -14715,7 +14715,7 @@
     "variants": ["regular", "500", "600", "700"],
     "subsets": ["cyrillic", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["pixel"],
     "lineNumber": 1172,
     "variable": false,
     "lastModified": "2023-09-27"
