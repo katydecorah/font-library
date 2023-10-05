@@ -1857,7 +1857,7 @@
     ],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["low contrast"],
     "lineNumber": 153,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -3942,7 +3942,7 @@
     ],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["old style"],
     "lineNumber": 326,
     "variable": true,
     "lastModified": "2023-09-14"
@@ -6998,7 +6998,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700"],
     "subsets": ["korean", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["korean"],
     "lineNumber": 563,
     "variable": false,
     "lastModified": "2023-04-27"
@@ -7073,7 +7073,7 @@
     "variants": ["regular", "italic"],
     "subsets": ["latin"],
     "category": "serif",
-    "tags": [],
+    "tags": ["high contrast"],
     "lineNumber": 569,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -7113,7 +7113,7 @@
     "variants": ["regular", "italic"],
     "subsets": ["latin"],
     "category": "serif",
-    "tags": [],
+    "tags": ["high contrast"],
     "lineNumber": 573,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -7133,7 +7133,7 @@
     "variants": ["regular", "italic"],
     "subsets": ["latin"],
     "category": "serif",
-    "tags": [],
+    "tags": ["high contrast"],
     "lineNumber": 575,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -7232,7 +7232,7 @@
     "variants": ["regular", "italic"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["friendly"],
     "lineNumber": 583,
     "variable": false,
     "lastModified": "2023-09-13"
@@ -7825,7 +7825,7 @@
     "variants": ["regular", "700"],
     "subsets": ["devanagari", "latin"],
     "category": "serif",
-    "tags": [],
+    "tags": ["humanist"],
     "lineNumber": 627,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -11118,7 +11118,7 @@
     "tags": ["hinted"],
     "lineNumber": 894,
     "variable": false,
-    "lastModified": "2023-07-28"
+    "lastModified": "2023-10-05"
   },
   {
     "family": "Noto Sans Adlam",
