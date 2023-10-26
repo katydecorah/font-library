@@ -617,6 +617,7 @@
     "javanese",
     "kaithi",
     "kannada",
+    "kawi",
     "kayah-li",
     "kharoshthi",
     "khitan-small-script",
@@ -672,6 +673,7 @@
     "old-sogdian",
     "old-south-arabian",
     "old-turkic",
+    "old-uyghur",
     "oriya",
     "osage",
     "osmanya",
@@ -745,5 +747,5 @@
     "italic",
     "regular"
   ],
-  "totalFamilies": 1579
+  "totalFamilies": 1584
 }
