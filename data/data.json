@@ -2595,12 +2595,12 @@
   {
     "family": "Borel",
     "variants": ["regular"],
-    "subsets": ["latin", "latin-ext"],
+    "subsets": ["math", "symbols", "vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
     "tags": ["french", "cursive", "connected"],
     "lineNumber": 210,
     "variable": false,
-    "lastModified": "2023-07-24"
+    "lastModified": "2023-11-09"
   },
   {
     "family": "Bowlby One",
@@ -5706,7 +5706,7 @@
     "tags": ["geometric"],
     "lineNumber": 464,
     "variable": false,
-    "lastModified": "2023-10-25"
+    "lastModified": "2023-11-09"
   },
   {
     "family": "Gabriela",
@@ -9878,7 +9878,7 @@
     "tags": ["outline", "icons"],
     "lineNumber": 789,
     "variable": false,
-    "lastModified": "2023-10-25"
+    "lastModified": "2023-11-09"
   },
   {
     "family": "Material Symbols Rounded",
@@ -9888,7 +9888,7 @@
     "tags": ["round", "icons"],
     "lineNumber": 790,
     "variable": false,
-    "lastModified": "2023-10-25"
+    "lastModified": "2023-11-09"
   },
   {
     "family": "Material Symbols Sharp",
@@ -9898,7 +9898,7 @@
     "tags": ["icons"],
     "lineNumber": 791,
     "variable": false,
-    "lastModified": "2023-10-25"
+    "lastModified": "2023-11-09"
   },
   {
     "family": "Maven Pro",
@@ -11228,7 +11228,7 @@
     "tags": [],
     "lineNumber": 902,
     "variable": true,
-    "lastModified": "2023-03-21"
+    "lastModified": "2023-11-09"
   },
   {
     "family": "Noto Sans Avestan",
@@ -11463,12 +11463,12 @@
   {
     "family": "Noto Sans Cypriot",
     "variants": ["regular"],
-    "subsets": ["cypriot"],
+    "subsets": ["cypriot", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": [],
     "lineNumber": 922,
     "variable": false,
-    "lastModified": "2022-05-10"
+    "lastModified": "2023-11-09"
   },
   {
     "family": "Noto Sans Cypro Minoan",
@@ -11751,7 +11751,7 @@
     "tags": [],
     "lineNumber": 941,
     "variable": false,
-    "lastModified": "2023-09-13"
+    "lastModified": "2023-11-09"
   },
   {
     "family": "Noto Sans Hatran",
@@ -12216,12 +12216,18 @@
   {
     "family": "Noto Sans Meroitic",
     "variants": ["regular"],
-    "subsets": ["meroitic", "latin", "latin-ext"],
+    "subsets": [
+      "meroitic",
+      "meroitic-cursive",
+      "meroitic-hieroglyphs",
+      "latin",
+      "latin-ext"
+    ],
     "category": "sans-serif",
     "tags": [],
     "lineNumber": 979,
     "variable": false,
-    "lastModified": "2023-06-22"
+    "lastModified": "2023-11-09"
   },
   {
     "family": "Noto Sans Miao",
@@ -12800,12 +12806,19 @@
   {
     "family": "Noto Sans Symbols 2",
     "variants": ["regular"],
-    "subsets": ["braille", "mayan-numerals", "symbols", "latin", "latin-ext"],
+    "subsets": [
+      "braille",
+      "math",
+      "mayan-numerals",
+      "symbols",
+      "latin",
+      "latin-ext"
+    ],
     "category": "sans-serif",
     "tags": ["icons"],
     "lineNumber": 1030,
     "variable": false,
-    "lastModified": "2023-09-27"
+    "lastModified": "2023-11-09"
   },
   {
     "family": "Noto Sans Syriac",
@@ -13011,7 +13024,7 @@
     "tags": [],
     "lineNumber": 1044,
     "variable": true,
-    "lastModified": "2023-03-09"
+    "lastModified": "2023-11-09"
   },
   {
     "family": "Noto Sans Thai",
@@ -13188,7 +13201,7 @@
     "tags": [],
     "lineNumber": 1057,
     "variable": false,
-    "lastModified": "2023-04-27"
+    "lastModified": "2023-11-09"
   },
   {
     "family": "Noto Serif Armenian",
@@ -13208,7 +13221,7 @@
     "tags": [],
     "lineNumber": 1058,
     "variable": true,
-    "lastModified": "2023-05-02"
+    "lastModified": "2023-11-09"
   },
   {
     "family": "Noto Serif Balinese",
@@ -13305,7 +13318,7 @@
     "tags": [],
     "lineNumber": 1063,
     "variable": false,
-    "lastModified": "2023-09-13"
+    "lastModified": "2023-11-09"
   },
   {
     "family": "Noto Serif Ethiopic",
@@ -14072,7 +14085,7 @@
     "tags": ["humanist", "geometric"],
     "lineNumber": 1118,
     "variable": false,
-    "lastModified": "2023-09-27"
+    "lastModified": "2023-11-09"
   },
   {
     "family": "Oooh Baby",
