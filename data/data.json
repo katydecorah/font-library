@@ -9127,7 +9127,7 @@
       "latin-ext"
     ],
     "category": "serif",
-    "tags": [],
+    "tags": ["high contrast"],
     "lineNumber": 725,
     "variable": true,
     "lastModified": "2023-06-07"
@@ -10268,7 +10268,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["narrow"],
     "lineNumber": 825,
     "variable": true,
     "lastModified": "2023-09-14"
@@ -10967,7 +10967,7 @@
     "variants": ["regular", "italic", "500", "500italic", "700", "700italic"],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["legibility"],
     "lineNumber": 883,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -15255,7 +15255,7 @@
     "variants": ["regular", "italic", "700", "700italic"],
     "subsets": ["latin"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["round"],
     "lineNumber": 1211,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -16759,7 +16759,7 @@
     ],
     "subsets": ["thai", "vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["round"],
     "lineNumber": 1326,
     "variable": false,
     "lastModified": "2023-08-25"
@@ -16829,7 +16829,7 @@
     "variants": ["regular"],
     "subsets": ["japanese", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["japanese"],
     "lineNumber": 1333,
     "variable": false,
     "lastModified": "2022-09-27"
@@ -17085,7 +17085,7 @@
     "variants": ["regular"],
     "subsets": ["japanese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["japanese"],
     "lineNumber": 1356,
     "variable": false,
     "lastModified": "2022-09-27"
@@ -17105,7 +17105,7 @@
     "variants": ["regular", "500", "600", "700", "800"],
     "subsets": ["japanese", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["japanese", "light"],
     "lineNumber": 1358,
     "variable": false,
     "lastModified": "2023-09-14"
@@ -17724,7 +17724,7 @@
     "variants": ["300", "regular", "500", "600", "700"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["geometric"],
     "lineNumber": 1403,
     "variable": true,
     "lastModified": "2023-09-14"
@@ -19169,7 +19169,7 @@
       "latin-ext"
     ],
     "category": "monospace",
-    "tags": [],
+    "tags": ["code"],
     "lineNumber": 1522,
     "variable": false,
     "lastModified": "2023-08-25"
@@ -19579,7 +19579,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["heavy"],
     "lineNumber": 1557,
     "variable": false,
     "lastModified": "2023-09-27"
@@ -19835,7 +19835,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "greek", "japanese", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["japanese"],
     "lineNumber": 1572,
     "variable": false,
     "lastModified": "2023-01-06"
@@ -19845,7 +19845,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "greek", "japanese", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["japanese"],
     "lineNumber": 1573,
     "variable": false,
     "lastModified": "2023-01-06"
@@ -19865,7 +19865,7 @@
     "variants": ["300", "regular", "500", "700", "900"],
     "subsets": ["cyrillic", "japanese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["japanese"],
     "lineNumber": 1575,
     "variable": false,
     "lastModified": "2023-08-25"
@@ -19875,7 +19875,7 @@
     "variants": ["300", "regular", "500", "700", "900"],
     "subsets": ["cyrillic", "japanese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["japanese"],
     "lineNumber": 1576,
     "variable": false,
     "lastModified": "2023-08-25"
