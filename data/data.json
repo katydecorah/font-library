@@ -11146,22 +11146,22 @@
     "family": "Noto Sans",
     "variants": [
       "100",
-      "100italic",
       "200",
-      "200italic",
       "300",
-      "300italic",
       "regular",
-      "italic",
       "500",
-      "500italic",
       "600",
-      "600italic",
       "700",
-      "700italic",
       "800",
-      "800italic",
       "900",
+      "100italic",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
       "900italic"
     ],
     "subsets": [
@@ -11178,7 +11178,7 @@
     "tags": ["hinted"],
     "lineNumber": 899,
     "variable": false,
-    "lastModified": "2023-11-14"
+    "lastModified": "2023-11-30"
   },
   {
     "family": "Noto Sans Adlam",
