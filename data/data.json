@@ -14911,12 +14911,12 @@
   {
     "family": "Playpen Sans",
     "variants": ["100", "200", "300", "regular", "500", "600", "700", "800"],
-    "subsets": ["math", "symbols", "vietnamese", "latin", "latin-ext"],
+    "subsets": ["emoji", "math", "vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
     "tags": ["kids", "playful", "handwritten"],
     "lineNumber": 1186,
     "variable": false,
-    "lastModified": "2023-10-19"
+    "lastModified": "2023-12-04"
   },
   {
     "family": "Plus Jakarta Sans",
