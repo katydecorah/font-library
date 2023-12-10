@@ -4197,7 +4197,7 @@
     "variants": ["regular", "500", "700"],
     "subsets": ["hebrew", "vietnamese", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["hebrew"],
     "lineNumber": 346,
     "variable": false,
     "lastModified": "2023-05-02"
@@ -6255,7 +6255,7 @@
     ],
     "subsets": ["korean", "latin"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["korean"],
     "lineNumber": 504,
     "variable": false,
     "lastModified": "2022-09-27"
@@ -7941,7 +7941,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700"],
     "subsets": ["math", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["high contrast"],
     "lineNumber": 637,
     "variable": false,
     "lastModified": "2023-12-07"
@@ -13507,7 +13507,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700", "900"],
     "subsets": ["japanese", "latin"],
     "category": "serif",
-    "tags": [],
+    "tags": ["japanese"],
     "lineNumber": 1075,
     "variable": false,
     "lastModified": "2022-09-27"
@@ -13886,7 +13886,7 @@
     "variants": ["regular"],
     "subsets": ["latin"],
     "category": "display",
-    "tags": [],
+    "tags": ["techno", "futuristic"],
     "lineNumber": 1102,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -14678,7 +14678,7 @@
     "variants": ["regular"],
     "subsets": ["telugu", "latin"],
     "category": "serif",
-    "tags": [],
+    "tags": ["condensed"],
     "lineNumber": 1169,
     "variable": false,
     "lastModified": "2022-09-22"
@@ -17677,7 +17677,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["round", "friendly"],
     "lineNumber": 1403,
     "variable": true,
     "lastModified": "2023-09-14"
@@ -17791,7 +17791,7 @@
       "latin-ext"
     ],
     "category": "serif",
-    "tags": [],
+    "tags": ["transitional"],
     "lineNumber": 1407,
     "variable": true,
     "lastModified": "2023-09-14"
