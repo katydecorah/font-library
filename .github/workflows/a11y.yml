@@ -28,7 +28,7 @@ jobs:
           inputUrls: http://localhost:8080?category=sans-serif,http://localhost:8080?tag=art+deco,http://localhost:8080/?variant=600&tag=modern&subset=greek&category=sans-serif
 
       - name: Upload report as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: success() || failure()
         with:
           name: "Accessibility report"
