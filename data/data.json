@@ -27,7 +27,7 @@
     "tags": [],
     "lineNumber": 4,
     "variable": false,
-    "lastModified": "2023-11-27"
+    "lastModified": "2023-11-28"
   },
   {
     "family": "Abel",
@@ -172,7 +172,7 @@
     "tags": [],
     "lineNumber": 15,
     "variable": false,
-    "lastModified": "2023-12-06"
+    "lastModified": "2023-12-07"
   },
   {
     "family": "Agbalumo",
@@ -182,7 +182,7 @@
     "tags": ["brush", "slanted"],
     "lineNumber": 16,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Agdasima",
@@ -795,7 +795,7 @@
     "tags": ["arabic"],
     "lineNumber": 62,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Amita",
@@ -1847,7 +1847,7 @@
     "tags": ["round", "friendly", "wireframe"],
     "lineNumber": 152,
     "variable": false,
-    "lastModified": "2023-10-18"
+    "lastModified": "2023-10-19"
   },
   {
     "family": "Balthazar",
@@ -2396,7 +2396,7 @@
     "tags": ["slab"],
     "lineNumber": 192,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "BioRhyme Expanded",
@@ -2505,7 +2505,7 @@
     "tags": ["gothic", "arabic"],
     "lineNumber": 201,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Blaka Hollow",
@@ -2515,7 +2515,7 @@
     "tags": ["gothic", "arabic", "outline"],
     "lineNumber": 202,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Blaka Ink",
@@ -2525,7 +2525,7 @@
     "tags": ["arabic", "color"],
     "lineNumber": 203,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Blinker",
@@ -2686,7 +2686,7 @@
     "tags": [],
     "lineNumber": 217,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Bruno Ace",
@@ -5732,7 +5732,7 @@
     "tags": ["geometric"],
     "lineNumber": 465,
     "variable": false,
-    "lastModified": "2023-11-27"
+    "lastModified": "2023-11-28"
   },
   {
     "family": "Gabriela",
@@ -6268,7 +6268,7 @@
     "tags": [],
     "lineNumber": 505,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Goudy Bookletter 1911",
@@ -7291,7 +7291,7 @@
     "tags": ["friendly"],
     "lineNumber": 587,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Inconsolata",
@@ -7944,7 +7944,7 @@
     "tags": ["high contrast"],
     "lineNumber": 637,
     "variable": false,
-    "lastModified": "2023-12-06"
+    "lastModified": "2023-12-07"
   },
   {
     "family": "Kameron",
@@ -8103,7 +8103,7 @@
     "tags": [],
     "lineNumber": 648,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Kdam Thmor Pro",
@@ -8496,7 +8496,7 @@
     "tags": ["geometric"],
     "lineNumber": 680,
     "variable": true,
-    "lastModified": "2023-10-18"
+    "lastModified": "2023-10-19"
   },
   {
     "family": "Kurale",
@@ -8615,7 +8615,7 @@
     "tags": ["arabic"],
     "lineNumber": 690,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Lato",
@@ -9631,7 +9631,7 @@
     "tags": [],
     "lineNumber": 766,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Mali",
@@ -9934,7 +9934,7 @@
     "tags": ["outline", "icons"],
     "lineNumber": 793,
     "variable": false,
-    "lastModified": "2024-01-03"
+    "lastModified": "2024-01-04"
   },
   {
     "family": "Material Symbols Rounded",
@@ -9944,7 +9944,7 @@
     "tags": ["round", "icons"],
     "lineNumber": 794,
     "variable": false,
-    "lastModified": "2024-01-11"
+    "lastModified": "2024-01-12"
   },
   {
     "family": "Material Symbols Sharp",
@@ -9954,7 +9954,7 @@
     "tags": ["icons"],
     "lineNumber": 795,
     "variable": false,
-    "lastModified": "2024-01-03"
+    "lastModified": "2024-01-04"
   },
   {
     "family": "Maven Pro",
@@ -10206,7 +10206,7 @@
     "tags": [],
     "lineNumber": 818,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Miniver",
@@ -10535,7 +10535,7 @@
     "tags": [],
     "lineNumber": 846,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Moon Dance",
@@ -10878,7 +10878,7 @@
     "tags": [],
     "lineNumber": 875,
     "variable": false,
-    "lastModified": "2023-11-27"
+    "lastModified": "2023-11-28"
   },
   {
     "family": "Neonderthaw",
@@ -11046,7 +11046,7 @@
     "tags": ["cursive"],
     "lineNumber": 889,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Nosifer",
@@ -11096,7 +11096,7 @@
     "tags": ["color", "icons"],
     "lineNumber": 894,
     "variable": false,
-    "lastModified": "2023-12-06"
+    "lastModified": "2023-12-07"
   },
   {
     "family": "Noto Emoji",
@@ -11214,7 +11214,7 @@
     "tags": ["hinted"],
     "lineNumber": 901,
     "variable": false,
-    "lastModified": "2023-11-29"
+    "lastModified": "2023-11-30"
   },
   {
     "family": "Noto Sans Adlam",
@@ -11294,7 +11294,7 @@
     "tags": [],
     "lineNumber": 907,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Noto Sans Balinese",
@@ -11334,7 +11334,7 @@
     "tags": [],
     "lineNumber": 911,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Noto Sans Bengali",
@@ -11394,7 +11394,7 @@
     "tags": [],
     "lineNumber": 916,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Noto Sans Canadian Aboriginal",
@@ -11434,7 +11434,7 @@
     "tags": [],
     "lineNumber": 919,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Sans Chakma",
@@ -11464,7 +11464,7 @@
     "tags": [],
     "lineNumber": 921,
     "variable": true,
-    "lastModified": "2023-11-27"
+    "lastModified": "2023-11-28"
   },
   {
     "family": "Noto Sans Cherokee",
@@ -11641,7 +11641,7 @@
     "tags": [],
     "lineNumber": 934,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Sans Ethiopic",
@@ -11661,7 +11661,7 @@
     "tags": [],
     "lineNumber": 935,
     "variable": true,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Noto Sans Georgian",
@@ -11731,7 +11731,7 @@
     "tags": [],
     "lineNumber": 940,
     "variable": true,
-    "lastModified": "2023-11-27"
+    "lastModified": "2023-11-28"
   },
   {
     "family": "Noto Sans Gunjala Gondi",
@@ -11937,7 +11937,7 @@
     "tags": [],
     "lineNumber": 955,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Noto Sans Kannada",
@@ -11957,7 +11957,7 @@
     "tags": [],
     "lineNumber": 956,
     "variable": true,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Sans Kawi",
@@ -11967,7 +11967,7 @@
     "tags": [],
     "lineNumber": 957,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Sans Kayah Li",
@@ -12007,7 +12007,7 @@
     "tags": [],
     "lineNumber": 960,
     "variable": true,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Sans Khojki",
@@ -12017,7 +12017,7 @@
     "tags": [],
     "lineNumber": 961,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Noto Sans Khudawadi",
@@ -12077,7 +12077,7 @@
     "tags": [],
     "lineNumber": 965,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Noto Sans Limbu",
@@ -12147,7 +12147,7 @@
     "tags": [],
     "lineNumber": 972,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Noto Sans Malayalam",
@@ -12187,7 +12187,7 @@
     "tags": [],
     "lineNumber": 975,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Sans Marchen",
@@ -12341,7 +12341,7 @@
     "tags": [],
     "lineNumber": 987,
     "variable": true,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Sans Mro",
@@ -12431,7 +12431,7 @@
     "tags": [],
     "lineNumber": 995,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Sans New Tai Lue",
@@ -12491,7 +12491,7 @@
     "tags": [],
     "lineNumber": 1001,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Noto Sans Old Italic",
@@ -12561,7 +12561,7 @@
     "tags": [],
     "lineNumber": 1008,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Noto Sans Oriya",
@@ -12727,7 +12727,7 @@
     "tags": [],
     "lineNumber": 1022,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Noto Sans Sharada",
@@ -13000,7 +13000,7 @@
     "tags": [],
     "lineNumber": 1043,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Sans Tamil",
@@ -13040,7 +13040,7 @@
     "tags": [],
     "lineNumber": 1046,
     "variable": true,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Sans Telugu",
@@ -13060,7 +13060,7 @@
     "tags": [],
     "lineNumber": 1047,
     "variable": true,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Sans Thaana",
@@ -13100,7 +13100,7 @@
     "tags": [],
     "lineNumber": 1049,
     "variable": true,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Sans Thai Looped",
@@ -13247,7 +13247,7 @@
     "tags": ["hinted"],
     "lineNumber": 1060,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Serif Ahom",
@@ -13374,7 +13374,7 @@
     "tags": [],
     "lineNumber": 1067,
     "variable": false,
-    "lastModified": "2023-11-27"
+    "lastModified": "2023-11-28"
   },
   {
     "family": "Noto Serif Ethiopic",
@@ -13414,7 +13414,7 @@
     "tags": [],
     "lineNumber": 1069,
     "variable": true,
-    "lastModified": "2023-11-27"
+    "lastModified": "2023-11-28"
   },
   {
     "family": "Noto Serif Grantha",
@@ -13444,7 +13444,7 @@
     "tags": [],
     "lineNumber": 1071,
     "variable": true,
-    "lastModified": "2023-11-27"
+    "lastModified": "2023-11-28"
   },
   {
     "family": "Noto Serif Gurmukhi",
@@ -13540,7 +13540,7 @@
     "tags": [],
     "lineNumber": 1077,
     "variable": true,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Serif Khitan Small Script",
@@ -13570,7 +13570,7 @@
     "tags": ["khmer"],
     "lineNumber": 1079,
     "variable": true,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Serif Khojki",
@@ -13580,7 +13580,7 @@
     "tags": [],
     "lineNumber": 1080,
     "variable": true,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Noto Serif Lao",
@@ -13670,7 +13670,7 @@
     "tags": [],
     "lineNumber": 1086,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Serif Oriya",
@@ -13690,7 +13690,7 @@
     "tags": [],
     "lineNumber": 1088,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Noto Serif SC",
@@ -13789,7 +13789,7 @@
     "tags": [],
     "lineNumber": 1094,
     "variable": true,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Serif Thai",
@@ -13809,7 +13809,7 @@
     "tags": [],
     "lineNumber": 1095,
     "variable": true,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Noto Serif Tibetan",
@@ -14141,7 +14141,7 @@
     "tags": ["humanist", "geometric"],
     "lineNumber": 1122,
     "variable": false,
-    "lastModified": "2023-11-27"
+    "lastModified": "2023-11-28"
   },
   {
     "family": "Oooh Baby",
@@ -15773,7 +15773,7 @@
     "tags": ["signage"],
     "lineNumber": 1251,
     "variable": true,
-    "lastModified": "2023-10-18"
+    "lastModified": "2023-10-19"
   },
   {
     "family": "Redacted",
@@ -15874,7 +15874,7 @@
     "tags": [],
     "lineNumber": 1260,
     "variable": false,
-    "lastModified": "2023-12-06"
+    "lastModified": "2023-12-07"
   },
   {
     "family": "Revalia",
@@ -16012,7 +16012,7 @@
     "tags": ["condensed"],
     "lineNumber": 1269,
     "variable": false,
-    "lastModified": "2023-10-18"
+    "lastModified": "2023-10-19"
   },
   {
     "family": "Roboto Flex",
@@ -16118,7 +16118,7 @@
     "tags": ["slab", "geometric"],
     "lineNumber": 1273,
     "variable": true,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Rochester",
@@ -16668,7 +16668,7 @@
     "tags": ["wide", "decorative", "heavy"],
     "lineNumber": 1318,
     "variable": false,
-    "lastModified": "2023-11-27"
+    "lastModified": "2023-11-28"
   },
   {
     "family": "Russo One",
@@ -17162,7 +17162,7 @@
     "tags": ["heavy", "wide"],
     "lineNumber": 1357,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Shadows Into Light",
@@ -17225,7 +17225,7 @@
     "tags": [],
     "lineNumber": 1362,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Share",
@@ -17750,7 +17750,7 @@
     "tags": ["code"],
     "lineNumber": 1405,
     "variable": false,
-    "lastModified": "2023-10-18"
+    "lastModified": "2023-10-19"
   },
   {
     "family": "Song Myung",
@@ -17870,7 +17870,7 @@
     "tags": [],
     "lineNumber": 1412,
     "variable": true,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Source Serif 4",
@@ -19609,7 +19609,7 @@
     "tags": ["compact"],
     "lineNumber": 1555,
     "variable": false,
-    "lastModified": "2023-09-12"
+    "lastModified": "2023-09-13"
   },
   {
     "family": "Wix Madefor Text",
@@ -19630,7 +19630,7 @@
     "tags": ["compact"],
     "lineNumber": 1556,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Work Sans",
@@ -19759,7 +19759,7 @@
     "tags": ["thin"],
     "lineNumber": 1567,
     "variable": false,
-    "lastModified": "2023-10-24"
+    "lastModified": "2023-10-25"
   },
   {
     "family": "Young Serif",
