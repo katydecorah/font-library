@@ -186,7 +186,7 @@ class MainApp extends HTMLElement {
     window.dispatchEvent(
       customEvent("remove-select", {
         value,
-      })
+      }),
     );
   }
 
@@ -207,7 +207,7 @@ class MainApp extends HTMLElement {
   handleSearch(event: Event) {
     this.selectedSearch = (event.target as HTMLInputElement).value.replaceAll(
       /[^\d A-Za-z-]/g,
-      ""
+      "",
     );
     this.scrollToContent();
   }
@@ -229,7 +229,7 @@ class MainApp extends HTMLElement {
   attributeChangedCallback(
     name: string,
     previousValue: string,
-    nextValue: string
+    nextValue: string,
   ) {
     if (previousValue === nextValue) return;
     if (name !== "current-page" && this.currentPage !== 1) {

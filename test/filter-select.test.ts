@@ -7,7 +7,7 @@ describe("filter-select", () => {
     <option value="tag2">Tag 2</option>
   </select>`;
   const filterSelect: HTMLSelectElement = document.querySelector(
-    "select[is=filter-select]"
+    "select[is=filter-select]",
   );
 
   it("fires a custom event on change", () => {

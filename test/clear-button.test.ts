@@ -3,7 +3,7 @@ import "./components";
 describe("clear-button", () => {
   document.body.innerHTML = `<button is="clear-button" aria-label="remove all filters" class="btn btn-clear">Clear</button>`;
   const clearButton: HTMLButtonElement = document.querySelector(
-    "button[is=clear-button]"
+    "button[is=clear-button]",
   );
   it("renders", () => {
     expect(clearButton).toMatchInlineSnapshot(`
@@ -16,6 +16,7 @@ describe("clear-button", () => {
       </button>
     `);
   });
+
   it("fires a custom event onclick", () => {
     const mockFunction = jest.fn();
     clearButton.addEventListener("clear-filter", mockFunction);

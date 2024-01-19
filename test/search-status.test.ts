@@ -7,7 +7,7 @@ describe("search-status", () => {
     document.body.innerHTML = `<search-status class="search-status" results-length="${resultsLength}"></search-status>`;
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus.innerHTML).toMatchInlineSnapshot(
-      `"<div>Found 1200 fonts</div>"`
+      `"<div>Found 1200 fonts</div>"`,
     );
   });
 

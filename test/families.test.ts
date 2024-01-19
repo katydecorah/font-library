@@ -50,16 +50,19 @@ describe("families.json", () => {
 
   // sort tags by number of families
   // eslint-disable-next-line unicorn/no-array-reduce
-  const tags = Object.values(families).reduce((accumulator, tags) => {
-    for (const tag of tags) {
-      if (accumulator[tag]) {
-        accumulator[tag]++;
-      } else {
-        accumulator[tag] = 1;
+  const tags = Object.values(families).reduce(
+    (accumulator, tags) => {
+      for (const tag of tags) {
+        if (accumulator[tag]) {
+          accumulator[tag]++;
+        } else {
+          accumulator[tag] = 1;
+        }
       }
-    }
-    return accumulator;
-  }, {} as Record<string, number>);
+      return accumulator;
+    },
+    {} as Record<string, number>,
+  );
   const sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a]);
 
   describe("tags", () => {

@@ -14,7 +14,7 @@ describe("filter-checkbox", () => {
 
   document.body.innerHTML = `<input type="checkbox" is="filter-checkbox" id="selectedVariable" class="filter-checkbox"  />`;
   const filterCheckbox: HTMLInputElement = document.querySelector(
-    "input[is=filter-checkbox]"
+    "input[is=filter-checkbox]",
   );
 
   it("fires a custom event on change", () => {
@@ -44,7 +44,7 @@ describe("filter-checkbox", () => {
 
     document.body.innerHTML = `<input type="checkbox" is="filter-checkbox" id="selectedVariable" class="filter-checkbox"  />`;
     const filterCheckbox: HTMLInputElement = document.querySelector(
-      "input[is=filter-checkbox]"
+      "input[is=filter-checkbox]",
     );
     expect(filterCheckbox.checked).toBe(true);
     // expect the event to fire after the main-app is loaded
