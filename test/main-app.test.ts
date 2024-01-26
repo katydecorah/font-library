@@ -152,11 +152,11 @@ describe("MainApp", () => {
     expect(selectedCategory.value).toBe("display");
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
-        results-length="404"
+        results-length="406"
         selected-category="display"
       >
         <div>
-          Found 404 fonts: 
+          Found 406 fonts: 
         </div>
         
 
@@ -194,16 +194,16 @@ describe("MainApp", () => {
       customEvent("tag-button-selected", {
         value: "need tags",
         id: "selectedTag",
-      }),
+      })
     );
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="383"
+        results-length="384"
         selected-tag="need tags"
       >
         <div>
-          Found 383 fonts: 
+          Found 384 fonts: 
         </div>
         
 
@@ -242,22 +242,22 @@ describe("MainApp", () => {
       customEvent("tag-button-selected", {
         value: "cute",
         id: "selectedTag",
-      }),
+      })
     );
 
     mainApp.dispatchEvent(
       customEvent("clear-filter", {
         value: "selectedTag",
-      }),
+      })
     );
 
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
-        results-length="1595"
+        results-length="1599"
         selected-tag=""
       >
         <div>
-          Found 1595 fonts
+          Found 1599 fonts
         </div>
       </search-status>
     `);
@@ -271,7 +271,7 @@ describe("MainApp", () => {
 
     const searchStatus = document.querySelector("search-status");
     const resultsLength = Number.parseInt(
-      searchStatus.getAttribute("results-length"),
+      searchStatus.getAttribute("results-length")
     );
 
     expect(searchStatus).toMatchInlineSnapshot(`
@@ -314,7 +314,7 @@ describe("MainApp", () => {
 
     // expect there two be resultsLength number of font-items
     expect(document.querySelectorAll("li[is='font-item']").length).toEqual(
-      resultsLength,
+      resultsLength
     );
   });
 
@@ -326,16 +326,16 @@ describe("MainApp", () => {
     mainApp.dispatchEvent(
       customEvent("clear-filter", {
         value: "selectedSearch",
-      }),
+      })
     );
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="1595"
+        results-length="1599"
         selected-search=""
       >
         <div>
-          Found 1595 fonts
+          Found 1599 fonts
         </div>
       </search-status>
     `);
@@ -385,15 +385,15 @@ describe("MainApp", () => {
     mainApp.dispatchEvent(
       customEvent("clear-filter", {
         value: "selectedVariable",
-      }),
+      })
     );
 
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
-        results-length="1595"
+        results-length="1599"
       >
         <div>
-          Found 1595 fonts
+          Found 1599 fonts
         </div>
       </search-status>
     `);
@@ -403,23 +403,23 @@ describe("MainApp", () => {
   test("removes category filter", async () => {
     await user.selectOptions(
       document.querySelector("#selectedCategory"),
-      "display",
+      "display"
     );
 
     mainApp.dispatchEvent(
       customEvent("clear-filter", {
         value: "selectedCategory",
-      }),
+      })
     );
 
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="1595"
+        results-length="1599"
         selected-category=""
       >
         <div>
-          Found 1595 fonts
+          Found 1599 fonts
         </div>
       </search-status>
     `);
@@ -429,23 +429,23 @@ describe("MainApp", () => {
   test("removes subset filter", async () => {
     await user.selectOptions(
       document.querySelector("#selectedSubset"),
-      "hebrew",
+      "hebrew"
     );
 
     mainApp.dispatchEvent(
       customEvent("clear-filter", {
         value: "selectedSubset",
-      }),
+      })
     );
 
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="1595"
+        results-length="1599"
         selected-subset=""
       >
         <div>
-          Found 1595 fonts
+          Found 1599 fonts
         </div>
       </search-status>
     `);
@@ -455,23 +455,23 @@ describe("MainApp", () => {
   test("removes variant filter", async () => {
     await user.selectOptions(
       document.querySelector("#selectedVariant"),
-      "100italic",
+      "100italic"
     );
 
     mainApp.dispatchEvent(
       customEvent("clear-filter", {
         value: "selectedVariant",
-      }),
+      })
     );
 
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="1595"
+        results-length="1599"
         selected-variant=""
       >
         <div>
-          Found 1595 fonts
+          Found 1599 fonts
         </div>
       </search-status>
     `);
@@ -483,7 +483,7 @@ describe("MainApp", () => {
       customEvent("tag-button-selected", {
         value: "modern",
         id: "selectedTag",
-      }),
+      })
     );
     const checkboxVariable: HTMLInputElement =
       document.querySelector("#selectedVariable");
@@ -493,17 +493,17 @@ describe("MainApp", () => {
 
     await user.selectOptions(
       document.querySelector("#selectedCategory"),
-      "display",
+      "display"
     );
 
     await user.selectOptions(
       document.querySelector("#selectedSubset"),
-      "hebrew",
+      "hebrew"
     );
 
     await user.selectOptions(
       document.querySelector("#selectedVariant"),
-      "100italic",
+      "100italic"
     );
 
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
@@ -631,7 +631,7 @@ describe("MainApp", () => {
 
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
-        results-length="1595"
+        results-length="1599"
         selected-category=""
         selected-search=""
         selected-subset=""
@@ -639,7 +639,7 @@ describe("MainApp", () => {
         selected-variant=""
       >
         <div>
-          Found 1595 fonts
+          Found 1599 fonts
         </div>
       </search-status>
     `);
@@ -700,7 +700,7 @@ describe("MainApp", () => {
 
     // expect tag to be selected
     expect(
-      (document.querySelector("#selectedTag") as HTMLSelectElement).value,
+      (document.querySelector("#selectedTag") as HTMLSelectElement).value
     ).toBe("cute");
   });
 
@@ -718,10 +718,10 @@ describe("MainApp", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="1595"
+        results-length="1599"
       >
         <div>
-          Found 1595 fonts
+          Found 1599 fonts
         </div>
       </search-status>
     `);
@@ -818,10 +818,10 @@ describe("MainApp", () => {
     expect(checkboxVariable.checked).toBeFalsy();
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
-        results-length="1595"
+        results-length="1599"
       >
         <div>
-          Found 1595 fonts
+          Found 1599 fonts
         </div>
       </search-status>
     `);
@@ -877,7 +877,7 @@ describe("MainApp", () => {
     `);
     // expect variable to be checked
     expect(
-      (document.querySelector("#selectedVariable") as HTMLInputElement).checked,
+      (document.querySelector("#selectedVariable") as HTMLInputElement).checked
     ).toBe(true);
   });
 
@@ -895,28 +895,28 @@ describe("MainApp", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="1595"
+        results-length="1599"
       >
         <div>
-          Found 1595 fonts
+          Found 1599 fonts
         </div>
       </search-status>
     `);
     expect(
-      (document.querySelector("#selectedVariable") as HTMLInputElement).checked,
+      (document.querySelector("#selectedVariable") as HTMLInputElement).checked
     ).toBe(false);
   });
 
   test("sorts fonts when sort-by button is clicked", async () => {
     const sortByButton: HTMLButtonElement = document.querySelector(
-      "sort-by button[data-sort='date']",
+      "sort-by button[data-sort='date']"
     );
     sortByButton.click();
 
     const sortBy = document.querySelector("sort-by");
     expect(sortBy).toMatchInlineSnapshot(`
       <sort-by
-        results-length="1595"
+        results-length="1599"
         sort-by="date"
       >
         <div
@@ -947,7 +947,7 @@ describe("MainApp", () => {
   it("current page changes on click", () => {
     document.body.innerHTML = body;
     const nextButton: HTMLButtonElement = document.querySelector(
-      "pagination-buttons #btn-next",
+      "pagination-buttons #btn-next"
     );
     nextButton.click();
     const mainApp = document.querySelector("main-app");
@@ -959,7 +959,7 @@ describe("MainApp", () => {
   it("current page changes on click, next then back", () => {
     document.body.innerHTML = body;
     const nextButton: HTMLButtonElement = document.querySelector(
-      "pagination-buttons #btn-next",
+      "pagination-buttons #btn-next"
     );
     nextButton.click();
     const mainApp = document.querySelector("main-app");
@@ -968,7 +968,7 @@ describe("MainApp", () => {
     expect(paginationButtons.getAttribute("current-page")).toBe("2");
 
     const backButton: HTMLButtonElement = document.querySelector(
-      "pagination-buttons #btn-prev",
+      "pagination-buttons #btn-prev"
     );
     backButton.click();
     expect(mainApp.getAttribute("current-page")).toBe("1");
@@ -978,7 +978,7 @@ describe("MainApp", () => {
   it("current page changes when a different filter is changed", () => {
     document.body.innerHTML = body;
     const nextButton: HTMLButtonElement = document.querySelector(
-      "pagination-buttons #btn-next",
+      "pagination-buttons #btn-next"
     );
     nextButton.click();
     const mainApp = document.querySelector("main-app");

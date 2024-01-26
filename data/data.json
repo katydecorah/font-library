@@ -6912,7 +6912,7 @@
     "variants": ["regular"],
     "subsets": ["math", "symbols", "vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["color", "shadow"],
     "lineNumber": 558,
     "variable": false,
     "lastModified": "2024-01-26"
@@ -17487,7 +17487,7 @@
     "variants": ["regular"],
     "subsets": ["math", "symbols", "latin", "latin-ext"],
     "category": "monospace",
-    "tags": [],
+    "tags": ["pixel", "retro"],
     "lineNumber": 1387,
     "variable": false,
     "lastModified": "2024-01-26"
@@ -19711,7 +19711,7 @@
     "variants": ["regular"],
     "subsets": ["math", "symbols", "latin"],
     "category": "monospace",
-    "tags": [],
+    "tags": ["pixel", "retro"],
     "lineNumber": 1561,
     "variable": false,
     "lastModified": "2024-01-26"

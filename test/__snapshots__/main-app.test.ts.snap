@@ -3,7 +3,7 @@
 exports[`MainApp renders correctly 1`] = `
 <main-app
   current-page="1"
-  results-length="1595"
+  results-length="1599"
 >
   
       
@@ -1121,7 +1121,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "Nabla";"
+              style="font-family: "DotGothic16";"
               title="game"
               value="game"
             >
@@ -1919,7 +1919,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "DotGothic16";"
+              style="font-family: "Handjet";"
               title="pixel"
               value="pixel"
             >
@@ -5183,16 +5183,16 @@ exports[`MainApp renders correctly 1`] = `
         
             
         <search-status
-          results-length="1595"
+          results-length="1599"
         >
           <div>
-            Found 1595 fonts
+            Found 1599 fonts
           </div>
         </search-status>
         
             
         <sort-by
-          results-length="1595"
+          results-length="1599"
           sort-by="family"
         >
           <div
@@ -6507,7 +6507,7 @@ exports[`MainApp renders correctly 1`] = `
             
         <pagination-buttons
           current-page="1"
-          results-length="1595"
+          results-length="1599"
         >
           <button
             class="btn"
