@@ -24,6 +24,11 @@
         tracesSampleRate: 0.8,
       });
     </script>
+    <script
+      defer
+      data-domain="fontlibrary.dev"
+      src="https://plausible.io/js/script.js"
+    ></script>
     {% endif %}
   </head>
   <body>
@@ -149,20 +154,6 @@
         </div>
       </div>
     </main-app>
-    {% if site.env == 'production' %}
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-7KLW06M68M"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-7KLW06M68M");
-    </script>
-    {% endif %}
     <script src="//unpkg.com/@ungap/custom-elements/es.js"></script>
     <script src="{{ '/js/bundle.js' | url }}"></script>
   </body>
