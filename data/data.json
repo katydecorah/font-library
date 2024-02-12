@@ -15278,7 +15278,7 @@
     "variants": ["regular"],
     "subsets": ["math", "symbols", "vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["signage", "stencil"],
     "lineNumber": 1213,
     "variable": false,
     "lastModified": "2024-02-02"
@@ -15288,7 +15288,7 @@
     "variants": ["regular"],
     "subsets": ["math", "symbols", "vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["signage", "brush"],
     "lineNumber": 1214,
     "variable": false,
     "lastModified": "2024-02-02"
@@ -15298,7 +15298,7 @@
     "variants": ["regular"],
     "subsets": ["math", "symbols", "vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["signage", "marker"],
     "lineNumber": 1215,
     "variable": false,
     "lastModified": "2024-02-02"
@@ -15308,7 +15308,7 @@
     "variants": ["regular"],
     "subsets": ["math", "symbols", "vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["signage"],
     "lineNumber": 1216,
     "variable": false,
     "lastModified": "2024-02-02"
@@ -16514,7 +16514,7 @@
       "latin-ext"
     ],
     "category": "display",
-    "tags": [],
+    "tags": ["fat", "glitch", "distressed"],
     "lineNumber": 1303,
     "variable": false,
     "lastModified": "2024-01-26"
