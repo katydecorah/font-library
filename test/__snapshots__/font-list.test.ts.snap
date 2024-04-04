@@ -199,7 +199,7 @@ exports[`FontList should render with fonts 1`] = `
       >
         <button
           is="tag-button"
-          style="font-family: "Alatsi";"
+          style="font-family: "Alata";"
           title="geometric"
           value="geometric"
         >
@@ -445,7 +445,7 @@ exports[`FontList should render with fonts and selectedSubset 1`] = `
       >
         <button
           is="tag-button"
-          style="font-family: "Alatsi";"
+          style="font-family: "Alata";"
           title="geometric"
           value="geometric"
         >
@@ -687,7 +687,7 @@ exports[`FontList should render with fonts and selectedVariant 1`] = `
       >
         <button
           is="tag-button"
-          style="font-family: "Alatsi";"
+          style="font-family: "Alata";"
           title="geometric"
           value="geometric"
         >

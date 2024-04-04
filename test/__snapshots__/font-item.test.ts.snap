@@ -468,7 +468,7 @@ exports[`FontItem renders correctly 1`] = `
     >
       <button
         is="tag-button"
-        style="font-family: "Alatsi";"
+        style="font-family: "Alata";"
         title="geometric"
         value="geometric"
       >
@@ -717,7 +717,7 @@ exports[`FontItem selected subset 1`] = `
     >
       <button
         is="tag-button"
-        style="font-family: "Alatsi";"
+        style="font-family: "Alata";"
         title="geometric"
         value="geometric"
       >
