@@ -83,7 +83,7 @@ class FontItem extends HTMLLIElement {
       </div>
       <div class="family-meta-container">
         <span class="family-title-small">${
-          this.previewName == family ? "" : family
+          this.previewName === family ? "" : family
         }</span>
         <div class="family-meta">
           <ul>
