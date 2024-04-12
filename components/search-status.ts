@@ -1,15 +1,19 @@
 import iconClose from "../svg/close.svg";
 
 class SearchStatus extends HTMLElement {
-  constructor() {
+  public constructor() {
     super();
   }
 
-  get resultsLength() {
+  private get resultsLength(): string {
     return this.getAttribute("results-length");
   }
 
-  get selectedFilters() {
+  private get selectedFilters(): {
+    label: string;
+    value: string;
+    id: string;
+  }[] {
     return [
       {
         label: "category",
@@ -44,7 +48,7 @@ class SearchStatus extends HTMLElement {
     ].filter(({ value }) => value && value !== "");
   }
 
-  render() {
+  private render(): void {
     const hasSelectedFilters = this.selectedFilters.length > 0;
 
     const elm = [
@@ -65,7 +69,7 @@ class SearchStatus extends HTMLElement {
     this.innerHTML = `${elm.join("\n")}`;
   }
 
-  renderFilter({
+  private renderFilter({
     label,
     value,
     id,
@@ -73,14 +77,14 @@ class SearchStatus extends HTMLElement {
     label: string;
     value: string | boolean;
     id: string;
-  }) {
+  }): string {
     const filterValue =
       label === "variable" ? "" : `: <strong>${value}</strong>`;
 
     return `<div class="search-filter">${label}${filterValue}<button is="clear-button" aria-label="remove ${label}" value="${id}">${iconClose}</button></div>`;
   }
 
-  static get observedAttributes() {
+  public static get observedAttributes(): string[] {
     return [
       "selected-category",
       "selected-subset",
@@ -92,7 +96,11 @@ class SearchStatus extends HTMLElement {
     ];
   }
 
-  attributeChangedCallback(name: string, oldValue: string, nextValue: string) {
+  public attributeChangedCallback(
+    name: string,
+    oldValue: string,
+    nextValue: string,
+  ): void {
     if (oldValue === nextValue) return;
     this.render();
   }

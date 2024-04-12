@@ -2,7 +2,7 @@ import { tags } from "../_data/metadata.json";
 import customEvent from "./custom-event";
 
 class TagButton extends HTMLButtonElement {
-  constructor() {
+  public constructor() {
     super();
     this.addEventListener("click", this.onClick);
     this.handleInitialValue();
@@ -28,7 +28,7 @@ class TagButton extends HTMLButtonElement {
     });
   }
 
-  onClick() {
+  private onClick(): void {
     this.dispatchEvent(
       customEvent("tag-button-selected", {
         id: "selectedTag",
@@ -39,7 +39,7 @@ class TagButton extends HTMLButtonElement {
     this.setUrlParam();
   }
 
-  setUrlParam() {
+  private setUrlParam(): void {
     const urlParameters = new URLSearchParams(window.location.search);
     urlParameters.set("tag", this.value);
     window.history.replaceState(
@@ -49,7 +49,7 @@ class TagButton extends HTMLButtonElement {
     );
   }
 
-  handleInitialValue() {
+  private handleInitialValue(): void {
     const urlParameters = new URLSearchParams(window.location.search);
     const initialValue = urlParameters.get("tag");
     if (initialValue === this.value) {

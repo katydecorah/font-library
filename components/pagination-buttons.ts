@@ -1,18 +1,19 @@
 export type ButtonType = MouseEvent & { target: HTMLButtonElement };
 
 class PaginationButtons extends HTMLElement {
-  mainApp = document.querySelector("main-app");
-  constructor() {
+  private mainApp = document.querySelector("main-app");
+
+  public constructor() {
     super();
     this.handlePage = this.handlePage.bind(this);
     this.handleInitialValue();
   }
 
-  get currentPage() {
+  public get currentPage(): number {
     return Number.parseInt(this.getAttribute("current-page"));
   }
 
-  set currentPage(value: number) {
+  private set currentPage(value: number) {
     this.setAttribute("current-page", value.toString());
     this.setUrlParam();
     if (this.mainApp) {
@@ -20,29 +21,29 @@ class PaginationButtons extends HTMLElement {
     }
   }
 
-  get resultsLength() {
+  private get resultsLength(): number {
     return Number.parseInt(this.getAttribute("results-length"));
   }
 
-  get pageSize() {
+  private get pageSize(): number {
     return 10;
   }
 
-  get totalPages() {
+  private get totalPages(): number {
     return Math.ceil(this.resultsLength / this.pageSize);
   }
 
-  get nextPageDisabledState() {
+  private get nextPageDisabledState(): string {
     return this.currentPage * this.pageSize >= this.resultsLength
       ? "disabled"
       : "";
   }
 
-  get prevPageDisabledState() {
+  private get prevPageDisabledState(): string {
     return this.currentPage === 1 ? "disabled" : "";
   }
 
-  render() {
+  public render(): void {
     const {
       currentPage,
       prevPageDisabledState,
@@ -65,11 +66,11 @@ class PaginationButtons extends HTMLElement {
     }
   }
 
-  handlePage({
+  private handlePage({
     target: {
       dataset: { event },
     },
-  }: ButtonType) {
+  }: ButtonType): void {
     if (
       event === "next-page" &&
       this.currentPage * this.pageSize < this.resultsLength
@@ -83,7 +84,7 @@ class PaginationButtons extends HTMLElement {
     }
   }
 
-  setUrlParam() {
+  private setUrlParam(): void {
     const urlParameters = new URLSearchParams(window.location.search);
     if (this.currentPage === 1) {
       urlParameters.delete("page");
@@ -97,23 +98,27 @@ class PaginationButtons extends HTMLElement {
     );
   }
 
-  disconnectedCallback() {
+  public disconnectedCallback(): void {
     for (const button of this.querySelectorAll("[data-event]")) {
       button.removeEventListener("click", this.handlePage);
     }
   }
 
-  static get observedAttributes() {
+  public static get observedAttributes(): string[] {
     return ["current-page", "results-length"];
   }
 
-  attributeChangedCallback(name: string, oldValue: string, nextValue: string) {
+  public attributeChangedCallback(
+    name: string,
+    oldValue: string,
+    nextValue: string,
+  ): void {
     if (oldValue === nextValue) return;
     this.render();
     this.setUrlParam();
   }
 
-  handleInitialValue() {
+  private handleInitialValue(): void {
     const urlParameters = new URLSearchParams(window.location.search);
     const initialValue = urlParameters.get("page");
     if (initialValue) {

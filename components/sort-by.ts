@@ -1,28 +1,28 @@
 import { ButtonType } from "./pagination-buttons";
 
 class SortBy extends HTMLElement {
-  mainApp = document.querySelector("main-app");
+  private mainApp = document.querySelector("main-app");
 
-  constructor() {
+  public constructor() {
     super();
     this.button = this.button.bind(this);
     this.handleSort = this.handleSort.bind(this);
   }
 
-  get sortBy() {
+  private get sortBy(): string {
     return this.getAttribute("sort-by");
   }
 
-  set sortBy(value: string) {
+  private set sortBy(value: string) {
     this.setAttribute("sort-by", value);
     if (this.mainApp) this.mainApp.setAttribute("sort-by", value);
   }
 
-  get resultsLength() {
+  private get resultsLength(): number {
     return Number.parseInt(this.getAttribute("results-length"));
   }
 
-  render() {
+  public render(): void {
     if (this.resultsLength === 0) {
       this.innerHTML = "";
       return;
@@ -47,27 +47,25 @@ class SortBy extends HTMLElement {
     }
   }
 
-  button({ label, value }: { label: string; value: string }) {
+  private button({ label, value }: { label: string; value: string }): string {
     const active = this.sortBy === value ? "active" : "";
     return `<button class="${active}" data-sort="${value}">${label}</button>`;
   }
 
-  handleSort(event: ButtonType) {
+  private handleSort(event: ButtonType): void {
     const value = (event.target as HTMLElement).dataset.sort;
     this.sortBy = value;
   }
 
-  disconnectedCallback() {
-    for (const button of this.querySelectorAll("[data-sort]")) {
-      button.removeEventListener("click", this.handleSort);
-    }
-  }
-
-  static get observedAttributes() {
+  private static get observedAttributes(): string[] {
     return ["sort-by", "results-length"];
   }
 
-  attributeChangedCallback(name: string, oldValue: string, nextValue: string) {
+  public attributeChangedCallback(
+    name: string,
+    oldValue: string,
+    nextValue: string,
+  ): void {
     if (oldValue === nextValue) return;
     this.render();
   }

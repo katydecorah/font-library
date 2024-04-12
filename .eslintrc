@@ -31,6 +31,9 @@
     "prefer-template": "error",
     "no-var": "error",
     "unicorn/template-indent": "off",
-    "unicorn/prefer-string-replace-all": "off"
+    "unicorn/prefer-string-replace-all": "off",
+    "@typescript-eslint/explicit-member-accessibility": "error",
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/no-non-null-assertion": "error"
   }
 }
