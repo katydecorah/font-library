@@ -9,12 +9,8 @@ type Swaps = typeof swaps;
 class FontItem extends HTMLLIElement {
   private subset: string;
 
-  public constructor() {
-    super();
-  }
-
   public get font(): GeneratedData[number] {
-    return JSON.parse(this.getAttribute("font"));
+    return JSON.parse(this.getAttribute("font")) as GeneratedData[number];
   }
 
   public get selectedSubset(): string {

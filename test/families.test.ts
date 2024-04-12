@@ -32,7 +32,7 @@ describe("families.json", () => {
         for (const tag of tags) {
           describe(`${tag}`, () => {
             test("is lowercase", () => {
-              expect(tag).toBe(tag.toLowerCase());
+              expect(tag).toBe((tag as string).toLowerCase());
             });
 
             test("contains letters, numbers, dashes, and spaces only", () => {

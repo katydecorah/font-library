@@ -13,8 +13,8 @@ class FontList extends HTMLUListElement {
     return this.getAttribute("selected-subset");
   }
 
-  public get fonts(): string {
-    return JSON.parse(this.getAttribute("fonts"));
+  public get fonts(): string[] {
+    return JSON.parse(this.getAttribute("fonts")) as string[];
   }
 
   public connectedCallback(): void {
