@@ -1,7 +1,7 @@
 import customEvent from "./custom-event";
 
 class FilterCheckbox extends HTMLInputElement {
-  constructor() {
+  public constructor() {
     super();
     this.addEventListener("change", this.onChange);
     this.handleInitialValue();
@@ -13,7 +13,7 @@ class FilterCheckbox extends HTMLInputElement {
     });
   }
 
-  onChange() {
+  private onChange(): void {
     this.dispatchEvent(
       customEvent("handle-filter", {
         value: this.checked,
@@ -23,7 +23,7 @@ class FilterCheckbox extends HTMLInputElement {
     this.setUrlParam();
   }
 
-  setUrlParam() {
+  private setUrlParam(): void {
     const urlParameters = new URLSearchParams(window.location.search);
     // only set variable if it's true
     if (this.checked === false) {
@@ -38,7 +38,7 @@ class FilterCheckbox extends HTMLInputElement {
     );
   }
 
-  handleInitialValue() {
+  private handleInitialValue(): void {
     const urlParameters = new URLSearchParams(window.location.search);
     const initialValue = urlParameters.get("variable");
     if (initialValue === "true") {

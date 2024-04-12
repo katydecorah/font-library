@@ -11,29 +11,31 @@ type SelectTypes =
   | "selectedSearch";
 
 class MainApp extends HTMLElement {
-  paginationButtons: HTMLElement = this.querySelector("pagination-buttons");
-  searchStatus: HTMLElement = this.querySelector("search-status");
-  sortByElm: HTMLElement = this.querySelector("sort-by");
-  fontList: HTMLUListElement = this.querySelector("ul[is=font-list]");
-  content: HTMLElement = this.querySelector("#content");
-  selectedSearchElm: HTMLInputElement = this.querySelector("#selectedSearch");
+  private paginationButtons: HTMLElement =
+    this.querySelector("pagination-buttons");
+  private searchStatus: HTMLElement = this.querySelector("search-status");
+  private sortByElm: HTMLElement = this.querySelector("sort-by");
+  private fontList: HTMLUListElement = this.querySelector("ul[is=font-list]");
+  private content: HTMLElement = this.querySelector("#content");
+  private selectedSearchElm: HTMLInputElement =
+    this.querySelector("#selectedSearch");
 
-  get pageSize() {
+  public get pageSize(): number {
     return 10;
   }
 
-  get currentPage() {
+  public get currentPage(): number {
     return Number.parseInt(this.getAttribute("current-page"));
   }
 
-  set currentPage(value: number) {
+  private set currentPage(value: number) {
     const elements = [this, this.paginationButtons];
     for (const element of elements) {
       element.setAttribute("current-page", value.toString());
     }
   }
 
-  set resultsLength(value: number) {
+  private set resultsLength(value: number) {
     const elements = [
       this,
       this.paginationButtons,
@@ -45,70 +47,70 @@ class MainApp extends HTMLElement {
     }
   }
 
-  get resultsLength() {
+  private get resultsLength(): number {
     return Number.parseInt(this.getAttribute("results-length"));
   }
 
-  get selectedCategory() {
+  public get selectedCategory(): string {
     return this.getAttribute("selected-category");
   }
 
-  set selectedCategory(value: string) {
+  private set selectedCategory(value: string) {
     const elements = [this, this.searchStatus];
     for (const element of elements) {
       element.setAttribute("selected-category", value);
     }
   }
 
-  get selectedSubset() {
+  public get selectedSubset(): string {
     return this.getAttribute("selected-subset");
   }
 
-  set selectedSubset(value: string) {
+  private set selectedSubset(value: string) {
     const elements = [this, this.searchStatus, this.fontList];
     for (const element of elements) {
       element.setAttribute("selected-subset", value);
     }
   }
 
-  get selectedVariant() {
+  public get selectedVariant(): string {
     return this.getAttribute("selected-variant");
   }
 
-  set selectedVariant(value: string) {
+  private set selectedVariant(value: string) {
     const elements = [this, this.searchStatus, this.fontList];
     for (const element of elements) {
       element.setAttribute("selected-variant", value);
     }
   }
 
-  get selectedTag() {
+  public get selectedTag(): string {
     return this.getAttribute("selected-tag");
   }
 
-  set selectedTag(value: string) {
+  private set selectedTag(value: string) {
     const elements = [this, this.searchStatus];
     for (const element of elements) {
       element.setAttribute("selected-tag", value);
     }
   }
 
-  get selectedSearch() {
+  public get selectedSearch(): string {
     return this.getAttribute("selected-search");
   }
 
-  set selectedSearch(value: string) {
+  private set selectedSearch(value: string) {
     const elements = [this, this.searchStatus];
     for (const element of elements) {
       element.setAttribute("selected-search", value);
     }
   }
 
-  get selectedVariable() {
+  public get selectedVariable(): boolean {
     return this.getAttribute("selected-variable") === "true";
   }
 
-  set selectedVariable(value: boolean) {
+  private set selectedVariable(value: boolean) {
     const elements = [this, this.searchStatus];
     for (const element of elements) {
       if (value === true) element.setAttribute("selected-variable", "true");
@@ -116,11 +118,11 @@ class MainApp extends HTMLElement {
     }
   }
 
-  get sortBy() {
+  public get sortBy(): string {
     return this.getAttribute("sort-by") || "family";
   }
 
-  constructor() {
+  public constructor() {
     super();
 
     // Bind methods
@@ -137,7 +139,7 @@ class MainApp extends HTMLElement {
     window.dispatchEvent(new Event("main-app-loaded"));
   }
 
-  render() {
+  private render(): void {
     const [resultsLength, paginatedData] = filter(this, generatedData);
 
     if (this.resultsLength !== resultsLength) {
@@ -147,12 +149,14 @@ class MainApp extends HTMLElement {
     this.fontList.setAttribute("fonts", JSON.stringify(paginatedData));
   }
 
-  clearFilter({ detail: { value } }: CustomEvent<{ value: string }>) {
+  private clearFilter({
+    detail: { value },
+  }: CustomEvent<{ value: string }>): void {
     if (value) this.removeSingleFilter(value);
     else this.removeAllFilters();
   }
 
-  removeSingleFilter(filter: string) {
+  private removeSingleFilter(filter: string): void {
     switch (filter) {
       case "selectedSearch": {
         this.removeSearch();
@@ -168,7 +172,7 @@ class MainApp extends HTMLElement {
     }
   }
 
-  removeAllFilters() {
+  private removeAllFilters(): void {
     if (this.selectedCategory) this.removeSelect("selectedCategory");
     if (this.selectedSubset) this.removeSelect("selectedSubset");
     if (this.selectedVariant) this.removeSelect("selectedVariant");
@@ -177,12 +181,12 @@ class MainApp extends HTMLElement {
     if (this.selectedSearch) this.removeSearch();
   }
 
-  removeSearch() {
+  private removeSearch(): void {
     this.selectedSearch = "";
     (this.selectedSearchElm as HTMLInputElement).value = "";
   }
 
-  removeSelect(value: string) {
+  private removeSelect(value: string): void {
     window.dispatchEvent(
       customEvent("remove-select", {
         value,
@@ -190,21 +194,21 @@ class MainApp extends HTMLElement {
     );
   }
 
-  removeCheckbox() {
+  private removeCheckbox(): void {
     window.dispatchEvent(customEvent("remove-checkbox"));
   }
 
-  scrollToContent() {
+  private scrollToContent(): void {
     this.content.scrollIntoView();
   }
 
-  handleFilter(event: CustomEvent) {
+  private handleFilter(event: CustomEvent): void {
     const { id, value } = event.detail;
     this[id as SelectTypes] = value;
     this.scrollToContent();
   }
 
-  handleSearch(event: Event) {
+  private handleSearch(event: Event): void {
     this.selectedSearch = (event.target as HTMLInputElement).value.replaceAll(
       /[^\d A-Za-z-]/g,
       "",
@@ -212,7 +216,7 @@ class MainApp extends HTMLElement {
     this.scrollToContent();
   }
 
-  static get observedAttributes() {
+  public static get observedAttributes(): string[] {
     return [
       "selected-category",
       "selected-subset",
@@ -226,11 +230,11 @@ class MainApp extends HTMLElement {
     ];
   }
 
-  attributeChangedCallback(
+  public attributeChangedCallback(
     name: string,
     previousValue: string,
     nextValue: string,
-  ) {
+  ): void {
     if (previousValue === nextValue) return;
     if (name !== "current-page" && this.currentPage !== 1) {
       this.currentPage = 1;

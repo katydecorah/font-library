@@ -1,23 +1,23 @@
 import { setAttributes } from "./set-attributes";
 
 class FontList extends HTMLUListElement {
-  constructor() {
+  public constructor() {
     super();
   }
 
-  get selectedVariant() {
+  public get selectedVariant(): string {
     return this.getAttribute("selected-variant");
   }
 
-  get selectedSubset() {
+  public get selectedSubset(): string {
     return this.getAttribute("selected-subset");
   }
 
-  get fonts() {
+  public get fonts(): string {
     return JSON.parse(this.getAttribute("fonts"));
   }
 
-  connectedCallback() {
+  public connectedCallback(): void {
     if (!this.fonts) return;
     const items = [];
     for (const font of this.fonts) {
@@ -33,12 +33,16 @@ class FontList extends HTMLUListElement {
     this.innerHTML = items.join("\n");
   }
 
-  attributeChangedCallback(name: string, oldValue: string, nextValue: string) {
+  public attributeChangedCallback(
+    name: string,
+    oldValue: string,
+    nextValue: string,
+  ): void {
     if (oldValue === nextValue) return;
     this.connectedCallback();
   }
 
-  static get observedAttributes() {
+  public static get observedAttributes(): string[] {
     return ["selected-variant", "selected-subset", "fonts"];
   }
 }

@@ -1,7 +1,7 @@
 import customEvent from "./custom-event";
 
 class FilterSelect extends HTMLSelectElement {
-  constructor() {
+  public constructor() {
     super();
     this.addEventListener("change", this.onChange);
     this.handleInitialValue();
@@ -22,7 +22,7 @@ class FilterSelect extends HTMLSelectElement {
     });
   }
 
-  onChange() {
+  private onChange(): void {
     const { id, value } = this;
     this.dispatchEvent(
       customEvent(
@@ -37,7 +37,7 @@ class FilterSelect extends HTMLSelectElement {
     this.setUrlParam();
   }
 
-  setUrlParam() {
+  private setUrlParam(): void {
     const { param } = this.dataset;
     const urlParameters = new URLSearchParams(window.location.search);
     if (this.value) {
@@ -52,7 +52,7 @@ class FilterSelect extends HTMLSelectElement {
     );
   }
 
-  handleInitialValue() {
+  private handleInitialValue(): string {
     const urlParameters = new URLSearchParams(window.location.search);
     const initialValue = urlParameters.get(this.dataset.param);
     if (initialValue) {

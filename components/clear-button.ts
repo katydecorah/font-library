@@ -1,13 +1,13 @@
 import customEvent from "./custom-event";
 
 class ClearButton extends HTMLButtonElement {
-  constructor() {
+  public constructor() {
     super();
     this.addEventListener("click", this.onClick);
     this.classList.add("clear-button");
   }
 
-  onClick() {
+  private onClick(): void {
     this.dispatchEvent(
       customEvent("clear-filter", {
         value: this.value,

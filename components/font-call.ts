@@ -62,7 +62,7 @@ export function familyStyle({
   selectedVariant: string;
   previewName: string;
   subset: string;
-}) {
+}): string {
   let style = `font-family: '${family}';`;
   if (rtlSubsets.includes(subset) && family !== previewName) {
     style += "direction: rtl;";
