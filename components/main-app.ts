@@ -1,6 +1,7 @@
 import customEvent from "./custom-event";
 import filter from "./filter";
 import generatedData from "../data/data.json";
+
 export type GeneratedData = typeof generatedData;
 
 type SelectTypes =
@@ -13,10 +14,15 @@ type SelectTypes =
 class MainApp extends HTMLElement {
   private paginationButtons: HTMLElement =
     this.querySelector("pagination-buttons");
+
   private searchStatus: HTMLElement = this.querySelector("search-status");
+
   private sortByElm: HTMLElement = this.querySelector("sort-by");
+
   private fontList: HTMLUListElement = this.querySelector("ul[is=font-list]");
+
   private content: HTMLElement = this.querySelector("#content");
+
   private selectedSearchElm: HTMLInputElement =
     this.querySelector("#selectedSearch");
 
@@ -25,7 +31,7 @@ class MainApp extends HTMLElement {
   }
 
   public get currentPage(): number {
-    return Number.parseInt(this.getAttribute("current-page"));
+    return Number.parseInt(this.getAttribute("current-page"), 10);
   }
 
   private set currentPage(value: number) {

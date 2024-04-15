@@ -1,10 +1,6 @@
 import { setAttributes } from "./set-attributes";
 
 class FontList extends HTMLUListElement {
-  public constructor() {
-    super();
-  }
-
   public get selectedVariant(): string {
     return this.getAttribute("selected-variant");
   }

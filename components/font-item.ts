@@ -35,7 +35,8 @@ class FontItem extends HTMLLIElement {
       (!subsets.includes("latin") || family.startsWith("Noto")) &&
       sampleSubsets[subsets[0] as keyof SampleSubsets]
     ) {
-      this.subset = subsets[0];
+      const [subset] = subsets;
+      this.subset = subset;
       return sampleSubsets[subsets[0] as keyof SampleSubsets];
     }
     return family;

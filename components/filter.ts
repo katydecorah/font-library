@@ -76,6 +76,7 @@ export default function filter(
     const start = (currentPage - 1) * pageSize;
     const end = currentPage * pageSize;
     if (index >= start && index < end) return true;
+    return false;
   });
 
   return [filteredData.length, paginated];

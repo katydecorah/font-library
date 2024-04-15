@@ -4,7 +4,7 @@ export function setAttributes(
     [x: string]: string;
   },
 ): void {
-  for (const key in attributes) {
+  for (const key of Object.keys(attributes)) {
     if (attributes[key] !== undefined && attributes[key] !== null) {
       element.setAttribute(key, attributes[key]);
     }

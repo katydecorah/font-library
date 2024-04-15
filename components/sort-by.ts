@@ -19,7 +19,7 @@ class SortBy extends HTMLElement {
   }
 
   private get resultsLength(): number {
-    return Number.parseInt(this.getAttribute("results-length"));
+    return Number.parseInt(this.getAttribute("results-length"), 10);
   }
 
   public render(): void {

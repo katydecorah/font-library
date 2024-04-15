@@ -10,7 +10,7 @@ class PaginationButtons extends HTMLElement {
   }
 
   public get currentPage(): number {
-    return Number.parseInt(this.getAttribute("current-page"));
+    return Number.parseInt(this.getAttribute("current-page"), 10);
   }
 
   private set currentPage(value: number) {
@@ -22,10 +22,10 @@ class PaginationButtons extends HTMLElement {
   }
 
   private get resultsLength(): number {
-    return Number.parseInt(this.getAttribute("results-length"));
+    return Number.parseInt(this.getAttribute("results-length"), 10);
   }
 
-  private get pageSize(): number {
+  public get pageSize(): number {
     return 10;
   }
 
@@ -75,12 +75,11 @@ class PaginationButtons extends HTMLElement {
       event === "next-page" &&
       this.currentPage * this.pageSize < this.resultsLength
     ) {
-      this.currentPage++;
+      this.currentPage += 1;
       return;
     }
     if (event === "previous-page" && this.currentPage > 1) {
-      this.currentPage--;
-      return;
+      this.currentPage -= 1;
     }
   }
 
@@ -122,7 +121,7 @@ class PaginationButtons extends HTMLElement {
     const urlParameters = new URLSearchParams(window.location.search);
     const initialValue = urlParameters.get("page");
     if (initialValue) {
-      const parsedValue = Number.parseInt(initialValue);
+      const parsedValue = Number.parseInt(initialValue, 10);
       if (Number.isNaN(parsedValue)) {
         this.currentPage = 1;
         return;

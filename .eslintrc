@@ -7,6 +7,7 @@
     "plugin:jest/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:unicorn/all",
+    "@open-wc/eslint-config",
     "prettier",
   ],
   "settings": {
@@ -35,6 +36,7 @@
     "no-eval": "error",
     "no-console": "error",
     "no-unused-vars": "error",
+    "import/extensions": "off",
     "unicorn/template-indent": "off",
     "unicorn/prefer-string-replace-all": "off",
     "@typescript-eslint/explicit-member-accessibility": "error",

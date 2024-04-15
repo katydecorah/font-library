@@ -1,10 +1,6 @@
 import iconClose from "../svg/close.svg";
 
 class SearchStatus extends HTMLElement {
-  public constructor() {
-    super();
-  }
-
   private get resultsLength(): string {
     return this.getAttribute("results-length");
   }
