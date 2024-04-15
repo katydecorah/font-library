@@ -13,7 +13,7 @@ describe("filter-checkbox", () => {
   });
 
   document.body.innerHTML = `<input type="checkbox" is="filter-checkbox" id="selectedVariable" class="filter-checkbox"  />`;
-  const filterCheckbox: HTMLInputElement = document.querySelector(
+  let filterCheckbox: HTMLInputElement = document.querySelector(
     "input[is=filter-checkbox]",
   );
 
@@ -43,9 +43,7 @@ describe("filter-checkbox", () => {
     });
 
     document.body.innerHTML = `<input type="checkbox" is="filter-checkbox" id="selectedVariable" class="filter-checkbox"  />`;
-    const filterCheckbox: HTMLInputElement = document.querySelector(
-      "input[is=filter-checkbox]",
-    );
+    filterCheckbox = document.querySelector("input[is=filter-checkbox]");
     expect(filterCheckbox.checked).toBe(true);
     // expect the event to fire after the main-app is loaded
     const mockFunction = jest.fn();

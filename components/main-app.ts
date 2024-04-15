@@ -54,7 +54,7 @@ class MainApp extends HTMLElement {
   }
 
   private get resultsLength(): number {
-    return Number.parseInt(this.getAttribute("results-length"));
+    return Number.parseInt(this.getAttribute("results-length"), 10);
   }
 
   public get selectedCategory(): string {
@@ -162,8 +162,8 @@ class MainApp extends HTMLElement {
     else this.removeAllFilters();
   }
 
-  private removeSingleFilter(filter: string): void {
-    switch (filter) {
+  private removeSingleFilter(currentFilter: string): void {
+    switch (currentFilter) {
       case "selectedSearch": {
         this.removeSearch();
         break;
@@ -173,7 +173,7 @@ class MainApp extends HTMLElement {
         break;
       }
       default: {
-        this.removeSelect(filter);
+        this.removeSelect(currentFilter);
       }
     }
   }
