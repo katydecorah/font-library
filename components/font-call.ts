@@ -1,7 +1,9 @@
 import { GeneratedData } from "./main-app";
 import rtlSubsets from "../data/rtl.json";
 
-function fontCallVariant(variants: GeneratedData[number]["variants"]): string {
+export function fontCallVariant(
+  variants: GeneratedData[number]["variants"],
+): string {
   const [firstVariant] = variants;
   if (/\d+/g.test(firstVariant)) {
     return `:wght@${firstVariant}`;
