@@ -1,32 +1,6 @@
 import { GeneratedData } from "./main-app";
 import rtlSubsets from "../data/rtl.json";
 
-export default function fontCall({
-  variants,
-  slug,
-  selectedVariant,
-  previewName,
-}: {
-  variants: GeneratedData[number]["variants"];
-  slug: string;
-  selectedVariant: string;
-  previewName: string;
-}): string {
-  let fontCallString = slug;
-
-  if (selectedVariant && selectedVariant !== "regular") {
-    fontCallString += fontCallSelectedVariant(selectedVariant);
-  }
-  // if font doesn't have regular variant, add subset to font call
-  if (!selectedVariant && !variants.includes("regular")) {
-    fontCallString += fontCallVariant(variants);
-  }
-
-  fontCallString += `&text=${encodeURIComponent(previewName)}&display=swap`;
-
-  return `https://fonts.googleapis.com/css2?family=${fontCallString}`;
-}
-
 export function fontCallVariant(
   variants: GeneratedData[number]["variants"],
 ): string {
@@ -54,6 +28,32 @@ export function fontCallSelectedVariant(selectedVariant: string): string {
     variants.push(`wght@${hasItalic ? "1," : ""}${variantNumber[0]}`);
   }
   return `:${variants.join(",")}`;
+}
+
+export default function fontCall({
+  variants,
+  slug,
+  selectedVariant,
+  previewName,
+}: {
+  variants: GeneratedData[number]["variants"];
+  slug: string;
+  selectedVariant: string;
+  previewName: string;
+}): string {
+  let fontCallString = slug;
+
+  if (selectedVariant && selectedVariant !== "regular") {
+    fontCallString += fontCallSelectedVariant(selectedVariant);
+  }
+  // if font doesn't have regular variant, add subset to font call
+  if (!selectedVariant && !variants.includes("regular")) {
+    fontCallString += fontCallVariant(variants);
+  }
+
+  fontCallString += `&text=${encodeURIComponent(previewName)}&display=swap`;
+
+  return `https://fonts.googleapis.com/css2?family=${fontCallString}`;
 }
 
 export function familyStyle({
