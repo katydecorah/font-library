@@ -70,17 +70,17 @@ export function familyStyle({
   previewName: string;
   subset: string;
 }): string {
-  let style = `font-family: '${family}';`;
+  const styleParts = [`font-family: '${family}'`];
   if (rtlSubsets.includes(subset) && family !== previewName) {
-    style += "direction: rtl;";
+    styleParts.push("direction: rtl");
   }
   if (selectedVariant.includes("italic")) {
-    style += "font-style: italic;";
+    styleParts.push("font-style: italic");
   }
   // get variant number from selectedVariant
   const variantNumber = selectedVariant.match(/\d+/g);
   if (variantNumber && variantNumber[0]) {
-    style += `font-weight: ${variantNumber[0]};`;
+    styleParts.push(`font-weight: ${variantNumber[0]}`);
   }
-  return style;
+  return `${styleParts.join(";")};`;
 }
