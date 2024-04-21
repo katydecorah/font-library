@@ -56,7 +56,7 @@ class SearchStatus extends HTMLElement {
     if (hasSelectedFilters) {
       elm.push(
         this.selectedFilters
-          .map((filter) => this.renderFilter(filter))
+          .map((filter): string => SearchStatus.renderFilter(filter))
           .join(""),
         `<button is="clear-button" aria-label="remove all filters" class="btn btn-clear">Clear</button>`,
       );
@@ -65,7 +65,7 @@ class SearchStatus extends HTMLElement {
     this.innerHTML = `${elm.join("\n")}`;
   }
 
-  private renderFilter({
+  private static renderFilter({
     label,
     value,
     id,

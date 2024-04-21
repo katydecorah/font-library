@@ -3,6 +3,8 @@ export type ButtonType = MouseEvent & { target: HTMLButtonElement };
 class PaginationButtons extends HTMLElement {
   private mainApp = document.querySelector("main-app");
 
+  private pageSize = 10;
+
   public constructor() {
     super();
     this.handlePage = this.handlePage.bind(this);
@@ -23,10 +25,6 @@ class PaginationButtons extends HTMLElement {
 
   private get resultsLength(): number {
     return Number.parseInt(this.getAttribute("results-length"), 10);
-  }
-
-  public get pageSize(): number {
-    return 10;
   }
 
   private get totalPages(): number {

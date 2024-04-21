@@ -37,6 +37,7 @@
     "no-console": "error",
     "no-unused-vars": "error",
     "import/extensions": "off",
+    "import/no-cycle": "off",
     "unicorn/template-indent": "off",
     "unicorn/prefer-string-replace-all": "off",
     "@typescript-eslint/explicit-member-accessibility": "error",
