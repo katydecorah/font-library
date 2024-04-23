@@ -61,12 +61,19 @@ class FontItem extends HTMLLIElement {
   }
 
   public connectedCallback(): void {
+    this.subset = this.selectedSubset;
+    this.addFontToHead();
+    this.render();
+  }
+
+  public disconnectedCallback(): void {
+    this.removeFontFromHead();
+  }
+
+  private render(): void {
     const { family, category, variants, subsets, lineNumber, tags, variable } =
       this.font;
     this.subset = this.selectedSubset;
-
-    this.addFontToHead();
-
     const tagButtons = tags
       .map(
         (tag: string) =>
@@ -130,7 +137,7 @@ class FontItem extends HTMLLIElement {
     document.head.append(linkElement);
   }
 
-  public disconnectedCallback(): void {
+  public removeFontFromHead(): void {
     const linkElement = document.querySelector(
       `link[data-family="${this.font.family}"]`,
     );

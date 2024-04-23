@@ -1,37 +1,49 @@
 import customEvent from "./custom-event";
 
+const HANDLE_FILTER = "handle-filter";
+const TAG_BUTTON_SELECTED = "tag-button-selected";
+
 class FilterSelect extends HTMLSelectElement {
   public constructor() {
     super();
     this.addEventListener("change", this.onChange);
+  }
+
+  public connectedCallback(): void {
     this.handleInitialValue();
 
     // Listen for events to clear filter
-    window.addEventListener("remove-select", (event: CustomEvent) => {
-      if (event.detail.value === this.id) {
-        this.value = "";
-        this.onChange();
-      }
-    });
+    window.addEventListener("remove-select", this.removeSelect);
 
     // Listen for changes by other tag elements
-    window.addEventListener("tag-button-selected", (event: CustomEvent) => {
-      if (this.id === "selectedTag" && this.value !== event.detail.value) {
-        this.value = event.detail.value;
-      }
-    });
+    window.addEventListener(TAG_BUTTON_SELECTED, this.tagButtonSelected);
   }
+
+  public disconnectedCallback(): void {
+    window.removeEventListener("remove-select", this.removeSelect);
+    window.removeEventListener(TAG_BUTTON_SELECTED, this.tagButtonSelected);
+  }
+
+  private removeSelect = (event: CustomEvent): void => {
+    if (event.detail.value === this.id) {
+      this.value = "";
+      this.onChange();
+    }
+  };
+
+  private tagButtonSelected = (event: CustomEvent): void => {
+    if (this.id === "selectedTag" && this.value !== event.detail.value) {
+      this.value = event.detail.value;
+    }
+  };
 
   private onChange(): void {
     const { id, value } = this;
     this.dispatchEvent(
-      customEvent(
-        id === "selectedTag" ? "tag-button-selected" : "handle-filter",
-        {
-          value,
-          id,
-        },
-      ),
+      customEvent(id === "selectedTag" ? TAG_BUTTON_SELECTED : HANDLE_FILTER, {
+        value,
+        id,
+      }),
     );
 
     this.setUrlParam();
@@ -60,11 +72,14 @@ class FilterSelect extends HTMLSelectElement {
       this.value = initialValue;
 
       // Wait for main-app to load before dispatching event
-      window.addEventListener("main-app-loaded", () => {
-        this.onChange();
-      });
+      window.addEventListener("main-app-loaded", this.mainAppLoaded);
     }
   }
+
+  private mainAppLoaded = (): void => {
+    this.onChange();
+    window.removeEventListener("main-app-loaded", this.mainAppLoaded);
+  };
 }
 
 customElements.define("filter-select", FilterSelect, { extends: "select" });

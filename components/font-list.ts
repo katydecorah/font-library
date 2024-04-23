@@ -1,32 +1,24 @@
 import { setAttributes } from "./set-attributes";
 
+const SELECTED_VARIANT = "selected-variant";
+const SELECTED_SUBSET = "selected-subset";
+const FONTS = "fonts";
+
 class FontList extends HTMLUListElement {
   public get selectedVariant(): string {
-    return this.getAttribute("selected-variant");
+    return this.getAttribute(SELECTED_VARIANT);
   }
 
   public get selectedSubset(): string {
-    return this.getAttribute("selected-subset");
+    return this.getAttribute(SELECTED_SUBSET);
   }
 
   public get fonts(): string[] {
-    return JSON.parse(this.getAttribute("fonts")) as string[];
+    return JSON.parse(this.getAttribute(FONTS)) as string[];
   }
 
   public connectedCallback(): void {
-    if (!this.fonts) return;
-    const items = [];
-    for (const font of this.fonts) {
-      const fontItem = document.createElement("li");
-      setAttributes(fontItem, {
-        is: "font-item",
-        font: JSON.stringify(font),
-        "selected-variant": this.selectedVariant,
-        "selected-subset": this.selectedSubset,
-      });
-      items.push(fontItem.outerHTML);
-    }
-    this.innerHTML = items.join("\n");
+    this.render();
   }
 
   public attributeChangedCallback(
@@ -35,11 +27,27 @@ class FontList extends HTMLUListElement {
     nextValue: string,
   ): void {
     if (oldValue === nextValue) return;
-    this.connectedCallback();
+    this.render();
   }
 
   public static get observedAttributes(): string[] {
-    return ["selected-variant", "selected-subset", "fonts"];
+    return [SELECTED_VARIANT, SELECTED_SUBSET, FONTS];
+  }
+
+  private render(): void {
+    if (!this.fonts) return;
+    const items = [];
+    for (const font of this.fonts) {
+      const fontItem = document.createElement("li");
+      setAttributes(fontItem, {
+        is: "font-item",
+        font: JSON.stringify(font),
+        [SELECTED_VARIANT]: this.selectedVariant,
+        [SELECTED_SUBSET]: this.selectedSubset,
+      });
+      items.push(fontItem.outerHTML);
+    }
+    this.innerHTML = items.join("\n");
   }
 }
 

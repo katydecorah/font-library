@@ -1,5 +1,12 @@
 import iconClose from "../svg/close.svg";
 
+const SELECTED_CATEGORY = "selected-category";
+const SELECTED_TAG = "selected-tag";
+const SELECTED_SUBSET = "selected-subset";
+const SELECTED_VARIANT = "selected-variant";
+const SELECTED_SEARCH = "selected-search";
+const SELECTED_VARIABLE = "selected-variable";
+
 class SearchStatus extends HTMLElement {
   private get resultsLength(): string {
     return this.getAttribute("results-length");
@@ -13,32 +20,32 @@ class SearchStatus extends HTMLElement {
     return [
       {
         label: "category",
-        value: this.getAttribute("selected-category"),
+        value: this.getAttribute(SELECTED_CATEGORY),
         id: "selectedCategory",
       },
       {
         label: "tag",
-        value: this.getAttribute("selected-tag"),
+        value: this.getAttribute(SELECTED_TAG),
         id: "selectedTag",
       },
       {
         label: "subset",
-        value: this.getAttribute("selected-subset"),
+        value: this.getAttribute(SELECTED_SUBSET),
         id: "selectedSubset",
       },
       {
         label: "variant",
-        value: this.getAttribute("selected-variant"),
+        value: this.getAttribute(SELECTED_VARIANT),
         id: "selectedVariant",
       },
       {
         label: "search",
-        value: this.getAttribute("selected-search"),
+        value: this.getAttribute(SELECTED_SEARCH),
         id: "selectedSearch",
       },
       {
         label: "variable",
-        value: this.getAttribute("selected-variable"),
+        value: this.getAttribute(SELECTED_VARIABLE),
         id: "selectedVariable",
       },
     ].filter(({ value }) => value && value !== "");
@@ -82,12 +89,12 @@ class SearchStatus extends HTMLElement {
 
   public static get observedAttributes(): string[] {
     return [
-      "selected-category",
-      "selected-subset",
-      "selected-variant",
-      "selected-tag",
-      "selected-search",
-      "selected-variable",
+      SELECTED_CATEGORY,
+      SELECTED_SUBSET,
+      SELECTED_VARIANT,
+      SELECTED_TAG,
+      SELECTED_SEARCH,
+      SELECTED_VARIABLE,
       "results-length",
     ];
   }
@@ -98,6 +105,10 @@ class SearchStatus extends HTMLElement {
     nextValue: string,
   ): void {
     if (oldValue === nextValue) return;
+    this.render();
+  }
+
+  public connectedCallback(): void {
     this.render();
   }
 }

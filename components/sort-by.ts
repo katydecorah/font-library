@@ -1,5 +1,8 @@
 import { ButtonType } from "./pagination-buttons";
 
+const SORT_BY = "sort-by";
+const RESULTS_LENGTH = "results-length";
+
 class SortBy extends HTMLElement {
   private mainApp = document.querySelector("main-app");
 
@@ -10,16 +13,16 @@ class SortBy extends HTMLElement {
   }
 
   private get sortBy(): string {
-    return this.getAttribute("sort-by");
+    return this.getAttribute(SORT_BY);
   }
 
   private set sortBy(value: string) {
-    this.setAttribute("sort-by", value);
-    if (this.mainApp) this.mainApp.setAttribute("sort-by", value);
+    this.setAttribute(SORT_BY, value);
+    if (this.mainApp) this.mainApp.setAttribute(SORT_BY, value);
   }
 
   private get resultsLength(): number {
-    return Number.parseInt(this.getAttribute("results-length"), 10);
+    return Number.parseInt(this.getAttribute(RESULTS_LENGTH), 10);
   }
 
   public render(): void {
@@ -58,7 +61,7 @@ class SortBy extends HTMLElement {
   }
 
   private static get observedAttributes(): string[] {
-    return ["sort-by", "results-length"];
+    return [SORT_BY, RESULTS_LENGTH];
   }
 
   public attributeChangedCallback(
@@ -67,6 +70,10 @@ class SortBy extends HTMLElement {
     nextValue: string,
   ): void {
     if (oldValue === nextValue) return;
+    this.render();
+  }
+
+  public connectedCallback(): void {
     this.render();
   }
 }

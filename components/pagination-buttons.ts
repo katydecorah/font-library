@@ -1,5 +1,8 @@
 export type ButtonType = MouseEvent & { target: HTMLButtonElement };
 
+const NEXT_PAGE = "next-page";
+const PREVIOUS_PAGE = "previous-page";
+
 class PaginationButtons extends HTMLElement {
   private mainApp = document.querySelector("main-app");
 
@@ -8,6 +11,9 @@ class PaginationButtons extends HTMLElement {
   public constructor() {
     super();
     this.handlePage = this.handlePage.bind(this);
+  }
+
+  public connectedCallback(): void {
     this.handleInitialValue();
   }
 
@@ -55,9 +61,9 @@ class PaginationButtons extends HTMLElement {
       return;
     }
 
-    this.innerHTML = `<button data-event="previous-page" class="btn" id="btn-prev" ${prevPageDisabledState}>Previous page</button>
+    this.innerHTML = `<button data-event="${PREVIOUS_PAGE}" class="btn" id="btn-prev" ${prevPageDisabledState}>Previous page</button>
 <div class="page-count" id="page-count">${currentPage} of ${totalPages}</div>
-<button data-event="next-page" class="btn" id="btn-next" ${nextPageDisabledState}>Next page</button>`;
+<button data-event="${NEXT_PAGE}" class="btn" id="btn-next" ${nextPageDisabledState}>Next page</button>`;
 
     for (const button of this.querySelectorAll("[data-event]")) {
       button.addEventListener("click", handlePage);
@@ -70,13 +76,13 @@ class PaginationButtons extends HTMLElement {
     },
   }: ButtonType): void {
     if (
-      event === "next-page" &&
+      event === NEXT_PAGE &&
       this.currentPage * this.pageSize < this.resultsLength
     ) {
       this.currentPage += 1;
       return;
     }
-    if (event === "previous-page" && this.currentPage > 1) {
+    if (event === PREVIOUS_PAGE && this.currentPage > 1) {
       this.currentPage -= 1;
     }
   }
