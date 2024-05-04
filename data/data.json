@@ -16262,7 +16262,7 @@
     "variants": ["200", "300", "regular", "500", "600", "700", "800", "900"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["condensed"],
     "lineNumber": 1291,
     "variable": false,
     "lastModified": "2024-05-02"
@@ -17609,7 +17609,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["small caps"],
     "lineNumber": 1392,
     "variable": false,
     "lastModified": "2024-05-02"
