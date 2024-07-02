@@ -1043,7 +1043,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["small caps"],
     "lineNumber": 86,
     "variable": false,
     "lastModified": "2024-07-01"
@@ -1316,7 +1316,7 @@
     "variants": ["regular", "italic", "700", "700italic"],
     "subsets": ["cyrillic", "cyrillic-ext", "vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["small caps"],
     "lineNumber": 106,
     "variable": false,
     "lastModified": "2024-07-01"
@@ -2041,7 +2041,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["small caps"],
     "lineNumber": 166,
     "variable": false,
     "lastModified": "2024-07-01"
@@ -2638,7 +2638,7 @@
     ],
     "subsets": ["math", "symbols", "latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["small caps"],
     "lineNumber": 212,
     "variable": false,
     "lastModified": "2024-07-01"
@@ -2684,7 +2684,7 @@
       "latin-ext"
     ],
     "category": "serif",
-    "tags": [],
+    "tags": ["small caps"],
     "lineNumber": 215,
     "variable": false,
     "lastModified": "2024-07-01"
