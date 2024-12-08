@@ -228,6 +228,25 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
+              style="font-family: "Parkinsans";"
+              title="accessible"
+              value="accessible"
+            >
+              
+                  accessible
+                
+            </button>
+            
+              
+          </li>
+          
+              
+              
+          <li>
+            
+                
+            <button
+              is="tag-button"
               style="font-family: "Caesar Dressing";"
               title="ancient"
               value="ancient"
@@ -1672,6 +1691,25 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
+              style="font-family: "Parkinsans";"
+              title="legible"
+              value="legible"
+            >
+              
+                  legible
+                
+            </button>
+            
+              
+          </li>
+          
+              
+              
+          <li>
+            
+                
+            <button
+              is="tag-button"
               style="font-family: "Alumni Sans";"
               title="light"
               value="light"
@@ -2950,6 +2988,14 @@ exports[`MainApp renders correctly 1`] = `
                   
               </option>
               <option
+                id="accessible"
+                value="accessible"
+              >
+                
+                    accessible
+                  
+              </option>
+              <option
                 id="ancient"
                 value="ancient"
               >
@@ -3555,6 +3601,14 @@ exports[`MainApp renders correctly 1`] = `
               >
                 
                     legibility
+                  
+              </option>
+              <option
+                id="legible"
+                value="legible"
+              >
+                
+                    legible
                   
               </option>
               <option

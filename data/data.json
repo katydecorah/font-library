@@ -6042,7 +6042,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["marker", "caps", "heavy", "handwritten"],
     "lineNumber": 489,
     "variable": false,
     "lastModified": "2024-09-04"
@@ -10597,7 +10597,7 @@
     "variants": ["regular", "italic"],
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["vintage"],
     "lineNumber": 842,
     "variable": false,
     "lastModified": "2024-09-04"
@@ -11344,7 +11344,7 @@
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["connected"],
     "lineNumber": 906,
     "variable": false,
     "lastModified": "2024-12-04"
@@ -15451,7 +15451,7 @@
     "variants": ["300", "regular", "500", "600", "700", "800"],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["friendly", "legible", "accessible"],
     "lineNumber": 1224,
     "variable": false,
     "lastModified": "2024-11-20"
@@ -18534,7 +18534,7 @@
     "variants": ["regular"],
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["square", "geometric"],
     "lineNumber": 1467,
     "variable": false,
     "lastModified": "2024-09-04"
@@ -20262,7 +20262,7 @@
     "variants": ["regular"],
     "subsets": ["telugu", "latin"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["small sizes"],
     "lineNumber": 1608,
     "variable": false,
     "lastModified": "2024-08-12"

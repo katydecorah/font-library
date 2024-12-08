@@ -41,6 +41,10 @@
       "sample": "Anybody"
     },
     {
+      "name": "accessible",
+      "sample": "Parkinsans"
+    },
+    {
       "name": "ancient",
       "sample": "Caesar Dressing"
     },
@@ -343,6 +347,10 @@
     {
       "name": "legibility",
       "sample": "Alike"
+    },
+    {
+      "name": "legible",
+      "sample": "Parkinsans"
     },
     {
       "name": "light",
