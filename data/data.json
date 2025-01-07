@@ -1754,7 +1754,7 @@
     "tags": ["korean", "fat", "cute", "round"],
     "lineNumber": 143,
     "variable": false,
-    "lastModified": "2024-08-12"
+    "lastModified": "2025-01-06"
   },
   {
     "family": "Bahiana",
@@ -4554,7 +4554,7 @@
     "tags": ["korean", "brush"],
     "lineNumber": 375,
     "variable": false,
-    "lastModified": "2024-09-04"
+    "lastModified": "2025-01-06"
   },
   {
     "family": "Diplomata",
@@ -5882,7 +5882,7 @@
     "tags": [],
     "lineNumber": 474,
     "variable": true,
-    "lastModified": "2024-09-04"
+    "lastModified": "2025-01-06"
   },
   {
     "family": "Freckle Face",
@@ -10021,7 +10021,7 @@
     "tags": ["handwritten"],
     "lineNumber": 794,
     "variable": false,
-    "lastModified": "2024-08-12"
+    "lastModified": "2025-01-06"
   },
   {
     "family": "Lora",
@@ -10287,7 +10287,7 @@
     "tags": ["heavy"],
     "lineNumber": 814,
     "variable": false,
-    "lastModified": "2024-08-12"
+    "lastModified": "2025-01-06"
   },
   {
     "family": "Macondo",
@@ -18165,7 +18165,7 @@
     "tags": [],
     "lineNumber": 1453,
     "variable": true,
-    "lastModified": "2024-09-04"
+    "lastModified": "2025-01-06"
   },
   {
     "family": "Roboto Mono",
@@ -19969,12 +19969,12 @@
   {
     "family": "Song Myung",
     "variants": ["regular"],
-    "subsets": ["korean", "latin"],
+    "subsets": ["korean"],
     "category": "serif",
     "tags": ["korean"],
     "lineNumber": 1596,
     "variable": false,
-    "lastModified": "2024-08-12"
+    "lastModified": "2025-01-06"
   },
   {
     "family": "Sono",
@@ -20463,12 +20463,12 @@
   {
     "family": "Stylish",
     "variants": ["regular"],
-    "subsets": ["korean", "latin"],
+    "subsets": ["korean"],
     "category": "sans-serif",
     "tags": ["korean", "uneven"],
     "lineNumber": 1632,
     "variable": false,
-    "lastModified": "2024-08-12"
+    "lastModified": "2025-01-06"
   },
   {
     "family": "Sue Ellen Francisco",
@@ -22587,7 +22587,7 @@
     "tags": ["calligraphic"],
     "lineNumber": 1797,
     "variable": false,
-    "lastModified": "2024-08-12"
+    "lastModified": "2025-01-06"
   },
   {
     "family": "Zilla Slab",
