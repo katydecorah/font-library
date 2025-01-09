@@ -5753,7 +5753,7 @@
     "tags": ["wireframe"],
     "lineNumber": 464,
     "variable": false,
-    "lastModified": "2024-09-04"
+    "lastModified": "2025-01-08"
   },
   {
     "family": "Flow Circular",
@@ -5763,7 +5763,7 @@
     "tags": ["wireframe"],
     "lineNumber": 465,
     "variable": false,
-    "lastModified": "2024-09-04"
+    "lastModified": "2025-01-08"
   },
   {
     "family": "Flow Rounded",
@@ -5773,7 +5773,7 @@
     "tags": ["wireframe", "round"],
     "lineNumber": 466,
     "variable": false,
-    "lastModified": "2024-09-04"
+    "lastModified": "2025-01-08"
   },
   {
     "family": "Foldit",
@@ -8841,7 +8841,7 @@
     "tags": ["cambodian", "khmer"],
     "lineNumber": 707,
     "variable": false,
-    "lastModified": "2024-11-20"
+    "lastModified": "2025-01-08"
   },
   {
     "family": "Khula",
@@ -9634,7 +9634,7 @@
     "tags": ["barcode"],
     "lineNumber": 765,
     "variable": false,
-    "lastModified": "2024-08-12"
+    "lastModified": "2025-01-08"
   },
   {
     "family": "Libre Barcode 128 Text",
@@ -9644,7 +9644,7 @@
     "tags": ["barcode"],
     "lineNumber": 766,
     "variable": false,
-    "lastModified": "2024-08-12"
+    "lastModified": "2025-01-08"
   },
   {
     "family": "Libre Barcode 39",
@@ -9654,7 +9654,7 @@
     "tags": ["barcode"],
     "lineNumber": 767,
     "variable": false,
-    "lastModified": "2024-08-12"
+    "lastModified": "2025-01-08"
   },
   {
     "family": "Libre Barcode 39 Extended",
@@ -9664,7 +9664,7 @@
     "tags": ["barcode"],
     "lineNumber": 768,
     "variable": false,
-    "lastModified": "2024-08-12"
+    "lastModified": "2025-01-08"
   },
   {
     "family": "Libre Barcode 39 Extended Text",
@@ -9674,7 +9674,7 @@
     "tags": ["barcode"],
     "lineNumber": 769,
     "variable": false,
-    "lastModified": "2024-08-12"
+    "lastModified": "2025-01-08"
   },
   {
     "family": "Libre Barcode 39 Text",
@@ -9684,7 +9684,7 @@
     "tags": ["barcode"],
     "lineNumber": 770,
     "variable": false,
-    "lastModified": "2024-08-12"
+    "lastModified": "2025-01-08"
   },
   {
     "family": "Libre Barcode EAN13 Text",
@@ -9694,7 +9694,7 @@
     "tags": ["barcode"],
     "lineNumber": 771,
     "variable": false,
-    "lastModified": "2024-08-12"
+    "lastModified": "2025-01-08"
   },
   {
     "family": "Libre Baskerville",
@@ -10650,7 +10650,7 @@
     "tags": ["icons"],
     "lineNumber": 847,
     "variable": false,
-    "lastModified": "2024-08-12"
+    "lastModified": "2025-01-08"
   },
   {
     "family": "Material Icons Outlined",
@@ -18086,16 +18086,22 @@
     "family": "Roboto",
     "variants": [
       "100",
-      "100italic",
+      "200",
       "300",
-      "300italic",
       "regular",
-      "italic",
       "500",
-      "500italic",
+      "600",
       "700",
-      "700italic",
+      "800",
       "900",
+      "100italic",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
       "900italic"
     ],
     "subsets": [
@@ -18103,6 +18109,8 @@
       "cyrillic-ext",
       "greek",
       "greek-ext",
+      "math",
+      "symbols",
       "vietnamese",
       "latin",
       "latin-ext"
@@ -18111,7 +18119,7 @@
     "tags": ["legibility"],
     "lineNumber": 1451,
     "variable": false,
-    "lastModified": "2024-09-04"
+    "lastModified": "2025-01-08"
   },
   {
     "family": "Roboto Condensed",
@@ -19539,7 +19547,7 @@
     "tags": ["modern"],
     "lineNumber": 1562,
     "variable": false,
-    "lastModified": "2023-08-25"
+    "lastModified": "2025-01-08"
   },
   {
     "family": "Sigmar",
