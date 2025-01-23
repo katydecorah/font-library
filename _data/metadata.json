@@ -746,6 +746,7 @@
     "tibetan",
     "tifinagh",
     "tirhuta",
+    "todhri",
     "toto",
     "ugaritic",
     "vai",
@@ -778,5 +779,5 @@
     "italic",
     "regular"
   ],
-  "totalFamilies": 1798
+  "totalFamilies": 1799
 }
