@@ -644,6 +644,7 @@
     "japanese",
     "javanese",
     "kaithi",
+    "kana-extended",
     "kannada",
     "kawi",
     "kayah-li",
@@ -779,5 +780,5 @@
     "italic",
     "regular"
   ],
-  "totalFamilies": 1799
+  "totalFamilies": 1804
 }
