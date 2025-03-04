@@ -3,7 +3,7 @@
 exports[`MainApp renders correctly 1`] = `
 <main-app
   current-page="1"
-  results-length="1806"
+  results-length="1810"
 >
   
       
@@ -5390,16 +5390,16 @@ exports[`MainApp renders correctly 1`] = `
         
             
         <search-status
-          results-length="1806"
+          results-length="1810"
         >
           <div>
-            Found 1806 fonts
+            Found 1810 fonts
           </div>
         </search-status>
         
             
         <sort-by
-          results-length="1806"
+          results-length="1810"
           sort-by="family"
         >
           <div
@@ -6689,7 +6689,7 @@ exports[`MainApp renders correctly 1`] = `
             
         <pagination-buttons
           current-page="1"
-          results-length="1806"
+          results-length="1810"
         >
           <button
             class="btn"
