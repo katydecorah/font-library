@@ -3,7 +3,7 @@
 exports[`MainApp renders correctly 1`] = `
 <main-app
   current-page="1"
-  results-length="1810"
+  results-length="1805"
 >
   
       
@@ -5040,6 +5040,12 @@ exports[`MainApp renders correctly 1`] = `
                 symbols
               </option>
               <option
+                id="symbols2"
+                value="symbols2"
+              >
+                symbols2
+              </option>
+              <option
                 id="syriac"
                 value="syriac"
               >
@@ -5390,16 +5396,16 @@ exports[`MainApp renders correctly 1`] = `
         
             
         <search-status
-          results-length="1810"
+          results-length="1805"
         >
           <div>
-            Found 1810 fonts
+            Found 1805 fonts
           </div>
         </search-status>
         
             
         <sort-by
-          results-length="1810"
+          results-length="1805"
           sort-by="family"
         >
           <div
@@ -6689,7 +6695,7 @@ exports[`MainApp renders correctly 1`] = `
             
         <pagination-buttons
           current-page="1"
-          results-length="1810"
+          results-length="1805"
         >
           <button
             class="btn"

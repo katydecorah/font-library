@@ -730,6 +730,7 @@
     "sundanese",
     "syloti-nagri",
     "symbols",
+    "symbols2",
     "syriac",
     "tagalog",
     "tagbanwa",
@@ -780,5 +781,5 @@
     "italic",
     "regular"
   ],
-  "totalFamilies": 1810
+  "totalFamilies": 1805
 }
