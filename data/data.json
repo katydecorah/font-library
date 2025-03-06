@@ -2857,13 +2857,13 @@
   },
   {
     "family": "Buenard",
-    "variants": ["regular", "700"],
+    "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
     "tags": ["transitional"],
     "lineNumber": 233,
     "variable": false,
-    "lastModified": "2024-09-04"
+    "lastModified": "2025-03-05"
   },
   {
     "family": "Bungee",
@@ -3932,14 +3932,14 @@
     "family": "Cormorant Garamond",
     "variants": [
       "300",
-      "300italic",
       "regular",
-      "italic",
       "500",
-      "500italic",
       "600",
-      "600italic",
       "700",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
       "700italic"
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "vietnamese", "latin", "latin-ext"],
@@ -3947,20 +3947,20 @@
     "tags": [],
     "lineNumber": 327,
     "variable": false,
-    "lastModified": "2024-09-04"
+    "lastModified": "2025-03-05"
   },
   {
     "family": "Cormorant Infant",
     "variants": [
       "300",
-      "300italic",
       "regular",
-      "italic",
       "500",
-      "500italic",
       "600",
-      "600italic",
       "700",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
       "700italic"
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "vietnamese", "latin", "latin-ext"],
@@ -3968,7 +3968,7 @@
     "tags": ["celtic"],
     "lineNumber": 328,
     "variable": false,
-    "lastModified": "2024-09-04"
+    "lastModified": "2025-03-05"
   },
   {
     "family": "Cormorant SC",
@@ -10817,12 +10817,18 @@
     "family": "Merriweather",
     "variants": [
       "300",
-      "300italic",
       "regular",
-      "italic",
+      "500",
+      "600",
       "700",
-      "700italic",
+      "800",
       "900",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
       "900italic"
     ],
     "subsets": ["cyrillic", "cyrillic-ext", "vietnamese", "latin", "latin-ext"],
@@ -10830,7 +10836,7 @@
     "tags": [],
     "lineNumber": 866,
     "variable": false,
-    "lastModified": "2024-09-04"
+    "lastModified": "2025-03-05"
   },
   {
     "family": "Merriweather Sans",
