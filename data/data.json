@@ -4,7 +4,7 @@
     "variants": ["300", "regular", "500", "600", "700", "800"],
     "subsets": ["korean", "latin"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["korean"],
     "lineNumber": 2,
     "variable": false,
     "lastModified": "2025-03-21"
@@ -2698,7 +2698,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["modern"],
     "lineNumber": 217,
     "variable": false,
     "lastModified": "2025-03-18"
@@ -3020,7 +3020,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["pixel", "game", "small sizes"],
     "lineNumber": 246,
     "variable": false,
     "lastModified": "2025-03-18"
@@ -6471,7 +6471,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "greek", "vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["humanist"],
     "lineNumber": 520,
     "variable": false,
     "lastModified": "2025-03-18"
@@ -9937,7 +9937,7 @@
     "variants": ["regular"],
     "subsets": ["cyrillic", "latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["low contrast"],
     "lineNumber": 789,
     "variable": false,
     "lastModified": "2025-03-03"
@@ -22100,7 +22100,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["round", "friendly"],
     "lineNumber": 1762,
     "variable": false,
     "lastModified": "2025-03-18"

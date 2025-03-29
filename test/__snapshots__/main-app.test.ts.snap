@@ -1178,7 +1178,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "DotGothic16";"
+              style="font-family: "Bytesized";"
               title="game"
               value="game"
             >
@@ -1634,7 +1634,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "Diphylleia";"
+              style="font-family: "42dot Sans";"
               title="korean"
               value="korean"
             >
@@ -2033,7 +2033,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "Handjet";"
+              style="font-family: "DotGothic16";"
               title="pixel"
               value="pixel"
             >
@@ -5434,11 +5434,11 @@ exports[`MainApp renders correctly 1`] = `
             
         <ul
           class="families"
-          fonts="[{"family":"42dot Sans","variants":["300","regular","500","600","700","800"],"subsets":["korean","latin"],"category":"sans-serif","tags":[],"lineNumber":2,"variable":false,"lastModified":"2025-03-21"},{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":3,"variable":false,"lastModified":"2024-09-04"},{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":6,"variable":false,"lastModified":"2024-09-04"},{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false,"lastModified":"2024-09-04"},{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":8,"variable":false,"lastModified":"2024-09-04"},{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":9,"variable":false,"lastModified":"2024-09-04"},{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":10,"variable":false,"lastModified":"2024-11-20"},{"family":"Aclonica","variants":["regular"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":11,"variable":false,"lastModified":"2024-11-20"},{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":12,"variable":false,"lastModified":"2024-09-04"},{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":13,"variable":false,"lastModified":"2024-09-04"}]"
+          fonts="[{"family":"42dot Sans","variants":["300","regular","500","600","700","800"],"subsets":["korean","latin"],"category":"sans-serif","tags":["korean"],"lineNumber":2,"variable":false,"lastModified":"2025-03-21"},{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":3,"variable":false,"lastModified":"2024-09-04"},{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":6,"variable":false,"lastModified":"2024-09-04"},{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false,"lastModified":"2024-09-04"},{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":8,"variable":false,"lastModified":"2024-09-04"},{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":9,"variable":false,"lastModified":"2024-09-04"},{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":10,"variable":false,"lastModified":"2024-11-20"},{"family":"Aclonica","variants":["regular"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":11,"variable":false,"lastModified":"2024-11-20"},{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":12,"variable":false,"lastModified":"2024-09-04"},{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":13,"variable":false,"lastModified":"2024-09-04"}]"
           is="font-list"
         >
           <li
-            font="{"family":"42dot Sans","variants":["300","regular","500","600","700","800"],"subsets":["korean","latin"],"category":"sans-serif","tags":[],"lineNumber":2,"variable":false,"lastModified":"2025-03-21"}"
+            font="{"family":"42dot Sans","variants":["300","regular","500","600","700","800"],"subsets":["korean","latin"],"category":"sans-serif","tags":["korean"],"lineNumber":2,"variable":false,"lastModified":"2025-03-21"}"
             is="font-item"
           >
             <div
@@ -5516,7 +5516,16 @@ exports[`MainApp renders correctly 1`] = `
       
               <div
                 class="family-tags-container"
-              />
+              >
+                <button
+                  is="tag-button"
+                  style="font-family: "42dot Sans";"
+                  title="korean"
+                  value="korean"
+                >
+                  korean
+                </button>
+              </div>
               
       
               <div

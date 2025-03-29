@@ -242,7 +242,7 @@
     },
     {
       "name": "game",
-      "sample": "DotGothic16"
+      "sample": "Bytesized"
     },
     {
       "name": "geometric",
@@ -338,7 +338,7 @@
     },
     {
       "name": "korean",
-      "sample": "Diphylleia"
+      "sample": "42dot Sans"
     },
     {
       "name": "large sizes",
@@ -422,7 +422,7 @@
     },
     {
       "name": "pixel",
-      "sample": "Handjet"
+      "sample": "DotGothic16"
     },
     {
       "name": "playful",
