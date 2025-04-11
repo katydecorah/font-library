@@ -20339,7 +20339,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["condensed"],
     "lineNumber": 1621,
     "variable": false,
     "lastModified": "2025-04-09"
@@ -20349,7 +20349,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["expanded"],
     "lineNumber": 1622,
     "variable": false,
     "lastModified": "2025-04-09"
