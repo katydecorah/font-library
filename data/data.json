@@ -10771,7 +10771,7 @@
     "tags": ["outline", "icons"],
     "lineNumber": 858,
     "variable": false,
-    "lastModified": "2025-04-09"
+    "lastModified": "2025-04-11"
   },
   {
     "family": "Material Symbols Rounded",
@@ -10781,7 +10781,7 @@
     "tags": ["round", "icons"],
     "lineNumber": 859,
     "variable": false,
-    "lastModified": "2025-04-09"
+    "lastModified": "2025-04-11"
   },
   {
     "family": "Material Symbols Sharp",
@@ -10791,7 +10791,7 @@
     "tags": ["icons"],
     "lineNumber": 860,
     "variable": false,
-    "lastModified": "2025-04-09"
+    "lastModified": "2025-04-11"
   },
   {
     "family": "Maven Pro",
@@ -20339,7 +20339,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["condensed"],
     "lineNumber": 1621,
     "variable": false,
     "lastModified": "2025-04-09"
@@ -20349,7 +20349,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["expanded"],
     "lineNumber": 1622,
     "variable": false,
     "lastModified": "2025-04-09"
