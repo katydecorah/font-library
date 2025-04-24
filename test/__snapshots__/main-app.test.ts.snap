@@ -3,7 +3,7 @@
 exports[`MainApp renders correctly 1`] = `
 <main-app
   current-page="1"
-  results-length="1816"
+  results-length="1825"
 >
   
       
@@ -4578,6 +4578,12 @@ exports[`MainApp renders correctly 1`] = `
                 khudawadi
               </option>
               <option
+                id="kirat-rai"
+                value="kirat-rai"
+              >
+                kirat-rai
+              </option>
+              <option
                 id="korean"
                 value="korean"
               >
@@ -5396,16 +5402,16 @@ exports[`MainApp renders correctly 1`] = `
         
             
         <search-status
-          results-length="1816"
+          results-length="1825"
         >
           <div>
-            Found 1816 fonts
+            Found 1825 fonts
           </div>
         </search-status>
         
             
         <sort-by
-          results-length="1816"
+          results-length="1825"
           sort-by="family"
         >
           <div
@@ -6704,7 +6710,7 @@ exports[`MainApp renders correctly 1`] = `
             
         <pagination-buttons
           current-page="1"
-          results-length="1816"
+          results-length="1825"
         >
           <button
             class="btn"
@@ -6720,7 +6726,7 @@ exports[`MainApp renders correctly 1`] = `
             class="page-count"
             id="page-count"
           >
-            1 of 182
+            1 of 183
           </div>
           
 
