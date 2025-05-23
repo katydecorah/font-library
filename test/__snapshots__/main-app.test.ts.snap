@@ -3,7 +3,7 @@
 exports[`MainApp renders correctly 1`] = `
 <main-app
   current-page="1"
-  results-length="1832"
+  results-length="1835"
 >
   
       
@@ -4362,6 +4362,12 @@ exports[`MainApp renders correctly 1`] = `
                 devanagari
               </option>
               <option
+                id="dives-akuru"
+                value="dives-akuru"
+              >
+                dives-akuru
+              </option>
+              <option
                 id="dogra"
                 value="dogra"
               >
@@ -5402,16 +5408,16 @@ exports[`MainApp renders correctly 1`] = `
         
             
         <search-status
-          results-length="1832"
+          results-length="1835"
         >
           <div>
-            Found 1832 fonts
+            Found 1835 fonts
           </div>
         </search-status>
         
             
         <sort-by
-          results-length="1832"
+          results-length="1835"
           sort-by="family"
         >
           <div
@@ -6710,7 +6716,7 @@ exports[`MainApp renders correctly 1`] = `
             
         <pagination-buttons
           current-page="1"
-          results-length="1832"
+          results-length="1835"
         >
           <button
             class="btn"
