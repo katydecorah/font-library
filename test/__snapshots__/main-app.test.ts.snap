@@ -3,7 +3,7 @@
 exports[`MainApp renders correctly 1`] = `
 <main-app
   current-page="1"
-  results-length="1835"
+  results-length="1843"
 >
   
       
@@ -5408,16 +5408,16 @@ exports[`MainApp renders correctly 1`] = `
         
             
         <search-status
-          results-length="1835"
+          results-length="1843"
         >
           <div>
-            Found 1835 fonts
+            Found 1843 fonts
           </div>
         </search-status>
         
             
         <sort-by
-          results-length="1835"
+          results-length="1843"
           sort-by="family"
         >
           <div
@@ -5446,11 +5446,11 @@ exports[`MainApp renders correctly 1`] = `
             
         <ul
           class="families"
-          fonts="[{"family":"42dot Sans","variants":["300","regular","500","600","700","800"],"subsets":["korean","latin"],"category":"sans-serif","tags":["korean"],"lineNumber":2,"variable":false,"lastModified":"2025-03-21"},{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":3,"variable":false,"lastModified":"2024-09-04"},{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":6,"variable":false,"lastModified":"2024-09-04"},{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false,"lastModified":"2024-09-04"},{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":8,"variable":false,"lastModified":"2024-09-04"},{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":9,"variable":false,"lastModified":"2024-09-04"},{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":10,"variable":false,"lastModified":"2024-11-20"},{"family":"Aclonica","variants":["regular"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":11,"variable":false,"lastModified":"2024-11-20"},{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":12,"variable":false,"lastModified":"2024-09-04"},{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":13,"variable":false,"lastModified":"2024-09-04"}]"
+          fonts="[{"family":"42dot Sans","variants":["300","regular","500","600","700","800"],"subsets":["korean","latin"],"category":"sans-serif","tags":["korean"],"lineNumber":2,"variable":false,"lastModified":"2025-06-02"},{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":3,"variable":false,"lastModified":"2025-05-30"},{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":6,"variable":false,"lastModified":"2025-05-30"},{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false,"lastModified":"2025-05-30"},{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":8,"variable":false,"lastModified":"2025-05-30"},{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":9,"variable":false,"lastModified":"2025-06-02"},{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":10,"variable":false,"lastModified":"2025-05-30"},{"family":"Aclonica","variants":["regular"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":11,"variable":false,"lastModified":"2025-06-02"},{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":12,"variable":false,"lastModified":"2025-06-02"},{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":13,"variable":false,"lastModified":"2025-05-30"}]"
           is="font-list"
         >
           <li
-            font="{"family":"42dot Sans","variants":["300","regular","500","600","700","800"],"subsets":["korean","latin"],"category":"sans-serif","tags":["korean"],"lineNumber":2,"variable":false,"lastModified":"2025-03-21"}"
+            font="{"family":"42dot Sans","variants":["300","regular","500","600","700","800"],"subsets":["korean","latin"],"category":"sans-serif","tags":["korean"],"lineNumber":2,"variable":false,"lastModified":"2025-06-02"}"
             is="font-item"
           >
             <div
@@ -5571,7 +5571,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":3,"variable":false,"lastModified":"2024-09-04"}"
+            font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":3,"variable":false,"lastModified":"2025-05-30"}"
             is="font-item"
           >
             <div
@@ -5700,7 +5700,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":6,"variable":false,"lastModified":"2024-09-04"}"
+            font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":6,"variable":false,"lastModified":"2025-05-30"}"
             is="font-item"
           >
             <div
@@ -5821,7 +5821,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false,"lastModified":"2024-09-04"}"
+            font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false,"lastModified":"2025-05-30"}"
             is="font-item"
           >
             <div
@@ -5933,7 +5933,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":8,"variable":false,"lastModified":"2024-09-04"}"
+            font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":8,"variable":false,"lastModified":"2025-05-30"}"
             is="font-item"
           >
             <div
@@ -6054,7 +6054,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":9,"variable":false,"lastModified":"2024-09-04"}"
+            font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":9,"variable":false,"lastModified":"2025-06-02"}"
             is="font-item"
           >
             <div
@@ -6199,7 +6199,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":10,"variable":false,"lastModified":"2024-11-20"}"
+            font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":10,"variable":false,"lastModified":"2025-05-30"}"
             is="font-item"
           >
             <div
@@ -6311,7 +6311,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Aclonica","variants":["regular"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":11,"variable":false,"lastModified":"2024-11-20"}"
+            font="{"family":"Aclonica","variants":["regular"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":11,"variable":false,"lastModified":"2025-06-02"}"
             is="font-item"
           >
             <div
@@ -6440,7 +6440,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":12,"variable":false,"lastModified":"2024-09-04"}"
+            font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":12,"variable":false,"lastModified":"2025-06-02"}"
             is="font-item"
           >
             <div
@@ -6585,7 +6585,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":13,"variable":false,"lastModified":"2024-09-04"}"
+            font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":13,"variable":false,"lastModified":"2025-05-30"}"
             is="font-item"
           >
             <div
@@ -6716,7 +6716,7 @@ exports[`MainApp renders correctly 1`] = `
             
         <pagination-buttons
           current-page="1"
-          results-length="1835"
+          results-length="1843"
         >
           <button
             class="btn"
@@ -6732,7 +6732,7 @@ exports[`MainApp renders correctly 1`] = `
             class="page-count"
             id="page-count"
           >
-            1 of 184
+            1 of 185
           </div>
           
 
