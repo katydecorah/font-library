@@ -56,7 +56,7 @@
   "Alumni Sans Collegiate One": ["outline", "collegiate"],
   "Alumni Sans Inline One": ["block", "heavy"],
   "Alumni Sans Pinstripe": ["light", "thin"],
-  "Alumni Sans SC": [],
+  "Alumni Sans SC": ["small caps"],
   "Amarante": ["art nouveau"],
   "Amaranth": ["friendly"],
   "Amatic SC": ["small caps", "scrawl"],
