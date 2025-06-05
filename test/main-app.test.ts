@@ -199,11 +199,11 @@ describe("MainApp", () => {
     const searchStatus = document.querySelector("search-status");
     expect(searchStatus).toMatchInlineSnapshot(`
       <search-status
-        results-length="530"
+        results-length="529"
         selected-tag="need tags"
       >
         <div>
-          Found 530 fonts: 
+          Found 529 fonts: 
         </div>
         
 
