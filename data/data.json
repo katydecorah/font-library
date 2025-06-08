@@ -3468,7 +3468,7 @@
       "latin-ext"
     ],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["code"],
     "lineNumber": 279,
     "variable": false,
     "lastModified": "2025-06-02"
@@ -4031,7 +4031,7 @@
     "variants": ["regular", "700"],
     "subsets": ["cyrillic", "greek", "latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["cute", "kids", "friendly"],
     "lineNumber": 325,
     "variable": false,
     "lastModified": "2025-04-23"
@@ -4168,7 +4168,7 @@
     "variants": ["regular"],
     "subsets": ["latin", "latin-ext"],
     "category": "display",
-    "tags": [],
+    "tags": ["pixel", "game"],
     "lineNumber": 336,
     "variable": false,
     "lastModified": "2025-04-23"
@@ -16374,7 +16374,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["arabic", "emoji", "math", "latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["arabic"],
     "lineNumber": 1288,
     "variable": false,
     "lastModified": "2025-06-02"
@@ -16394,7 +16394,7 @@
     "variants": ["100", "200", "300", "regular", "500", "600", "700", "800"],
     "subsets": ["emoji", "hebrew", "math", "latin", "latin-ext"],
     "category": "handwriting",
-    "tags": [],
+    "tags": ["hebrew"],
     "lineNumber": 1290,
     "variable": false,
     "lastModified": "2025-06-02"
@@ -21882,7 +21882,7 @@
       "latin-ext"
     ],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["grotesque"],
     "lineNumber": 1739,
     "variable": false,
     "lastModified": "2025-04-23"
@@ -22604,7 +22604,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["uneven", "marker"],
     "lineNumber": 1794,
     "variable": false,
     "lastModified": "2025-06-02"

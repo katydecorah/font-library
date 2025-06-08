@@ -2033,7 +2033,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "DotGothic16";"
+              style="font-family: "Coral Pixels";"
               title="pixel"
               value="pixel"
             >
