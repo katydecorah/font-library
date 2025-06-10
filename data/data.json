@@ -2240,13 +2240,13 @@
   },
   {
     "family": "Baskervville SC",
-    "variants": ["regular"],
+    "variants": ["regular", "500", "600", "700"],
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
     "tags": ["small caps"],
     "lineNumber": 176,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-06-09"
   },
   {
     "family": "Battambang",
@@ -3170,7 +3170,7 @@
     "family": "Cactus Classical Serif",
     "variants": ["regular"],
     "subsets": [
-      "chinese-hongkong",
+      "chinese-traditional",
       "cyrillic",
       "vietnamese",
       "latin",
@@ -3180,7 +3180,7 @@
     "tags": [],
     "lineNumber": 254,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-06-09"
   },
   {
     "family": "Caesar Dressing",
@@ -3230,7 +3230,7 @@
     "tags": [],
     "lineNumber": 259,
     "variable": false,
-    "lastModified": "2025-04-23"
+    "lastModified": "2025-06-09"
   },
   {
     "family": "Caladea",
@@ -3867,7 +3867,7 @@
     "family": "Chocolate Classical Sans",
     "variants": ["regular"],
     "subsets": [
-      "chinese-hongkong",
+      "chinese-traditional",
       "cyrillic",
       "vietnamese",
       "latin",
@@ -3877,7 +3877,7 @@
     "tags": [],
     "lineNumber": 310,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-06-09"
   },
   {
     "family": "Chokokutai",
@@ -9530,7 +9530,7 @@
     "tags": ["outline"],
     "lineNumber": 755,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-06-09"
   },
   {
     "family": "Kumbh Sans",
@@ -9566,7 +9566,7 @@
     "family": "LXGW WenKai Mono TC",
     "variants": ["300", "regular", "700"],
     "subsets": [
-      "chinese-hongkong",
+      "chinese-traditional",
       "cyrillic",
       "cyrillic-ext",
       "greek",
@@ -9580,13 +9580,13 @@
     "tags": [],
     "lineNumber": 758,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-06-09"
   },
   {
     "family": "LXGW WenKai TC",
     "variants": ["300", "regular", "700"],
     "subsets": [
-      "chinese-hongkong",
+      "chinese-traditional",
       "cyrillic",
       "cyrillic-ext",
       "greek",
@@ -9600,7 +9600,7 @@
     "tags": [],
     "lineNumber": 759,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-06-09"
   },
   {
     "family": "La Belle Aurore",
@@ -9890,7 +9890,7 @@
     "tags": ["legibility"],
     "lineNumber": 781,
     "variable": true,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-06-09"
   },
   {
     "family": "Lexend Giga",
@@ -10020,7 +10020,7 @@
     "tags": ["barcode"],
     "lineNumber": 789,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-06-09"
   },
   {
     "family": "Libre Barcode 39 Extended",
@@ -10653,7 +10653,7 @@
     "tags": ["round"],
     "lineNumber": 836,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-06-09"
   },
   {
     "family": "Ma Shan Zheng",
@@ -11086,7 +11086,7 @@
     "tags": ["outline", "icons"],
     "lineNumber": 876,
     "variable": false,
-    "lastModified": "2025-06-05"
+    "lastModified": "2025-06-09"
   },
   {
     "family": "Material Symbols Rounded",
@@ -11096,7 +11096,7 @@
     "tags": ["round", "icons"],
     "lineNumber": 877,
     "variable": false,
-    "lastModified": "2025-06-05"
+    "lastModified": "2025-06-09"
   },
   {
     "family": "Material Symbols Sharp",
@@ -11106,7 +11106,7 @@
     "tags": ["icons"],
     "lineNumber": 878,
     "variable": false,
-    "lastModified": "2025-06-05"
+    "lastModified": "2025-06-09"
   },
   {
     "family": "Maven Pro",
@@ -12312,13 +12312,23 @@
   },
   {
     "family": "Nokora",
-    "variants": ["100", "300", "regular", "700", "900"],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
     "subsets": ["khmer", "latin"],
     "category": "sans-serif",
     "tags": ["modern", "legibility"],
     "lineNumber": 979,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-06-09"
   },
   {
     "family": "Norican",
@@ -15219,7 +15229,7 @@
     "tags": ["color"],
     "lineNumber": 1195,
     "variable": false,
-    "lastModified": "2025-05-12"
+    "lastModified": "2025-06-09"
   },
   {
     "family": "Nova Cut",
@@ -19738,7 +19748,7 @@
     "tags": ["japanese"],
     "lineNumber": 1565,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-06-09"
   },
   {
     "family": "Sawarabi Mincho",
@@ -21529,7 +21539,7 @@
     "tags": ["geometric"],
     "lineNumber": 1713,
     "variable": true,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-06-09"
   },
   {
     "family": "Timmana",
