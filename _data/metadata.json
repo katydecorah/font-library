@@ -338,7 +338,7 @@
     },
     {
       "name": "korean",
-      "sample": "42dot Sans"
+      "sample": "Diphylleia"
     },
     {
       "name": "large sizes",
@@ -783,5 +783,5 @@
     "italic",
     "regular"
   ],
-  "totalFamilies": 1844
+  "totalFamilies": 1849
 }

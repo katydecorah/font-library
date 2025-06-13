@@ -3,7 +3,7 @@
 exports[`MainApp renders correctly 1`] = `
 <main-app
   current-page="1"
-  results-length="1844"
+  results-length="1849"
 >
   
       
@@ -1634,7 +1634,7 @@ exports[`MainApp renders correctly 1`] = `
                 
             <button
               is="tag-button"
-              style="font-family: "42dot Sans";"
+              style="font-family: "Diphylleia";"
               title="korean"
               value="korean"
             >
@@ -5408,16 +5408,16 @@ exports[`MainApp renders correctly 1`] = `
         
             
         <search-status
-          results-length="1844"
+          results-length="1849"
         >
           <div>
-            Found 1844 fonts
+            Found 1849 fonts
           </div>
         </search-status>
         
             
         <sort-by
-          results-length="1844"
+          results-length="1849"
           sort-by="family"
         >
           <div
@@ -5446,132 +5446,11 @@ exports[`MainApp renders correctly 1`] = `
             
         <ul
           class="families"
-          fonts="[{"family":"42dot Sans","variants":["300","regular","500","600","700","800"],"subsets":["korean","latin"],"category":"sans-serif","tags":["korean"],"lineNumber":2,"variable":false,"lastModified":"2025-06-02"},{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":3,"variable":false,"lastModified":"2025-05-30"},{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":6,"variable":false,"lastModified":"2025-05-30"},{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false,"lastModified":"2025-05-30"},{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":8,"variable":false,"lastModified":"2025-05-30"},{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":9,"variable":false,"lastModified":"2025-06-02"},{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":10,"variable":false,"lastModified":"2025-05-30"},{"family":"Aclonica","variants":["regular"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":11,"variable":false,"lastModified":"2025-06-02"},{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":12,"variable":false,"lastModified":"2025-06-02"},{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":13,"variable":false,"lastModified":"2025-05-30"}]"
+          fonts="[{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false,"lastModified":"2025-05-30"},{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":5,"variable":false,"lastModified":"2025-05-30"},{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":6,"variable":false,"lastModified":"2025-05-30"},{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":7,"variable":false,"lastModified":"2025-05-30"},{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":8,"variable":false,"lastModified":"2025-06-02"},{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":9,"variable":false,"lastModified":"2025-05-30"},{"family":"Aclonica","variants":["regular"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":10,"variable":false,"lastModified":"2025-06-02"},{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":11,"variable":false,"lastModified":"2025-06-02"},{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":12,"variable":false,"lastModified":"2025-05-30"},{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":13,"variable":false,"lastModified":"2025-05-30"}]"
           is="font-list"
         >
           <li
-            font="{"family":"42dot Sans","variants":["300","regular","500","600","700","800"],"subsets":["korean","latin"],"category":"sans-serif","tags":["korean"],"lineNumber":2,"variable":false,"lastModified":"2025-06-02"}"
-            is="font-item"
-          >
-            <div
-              class="family-link"
-            >
-              
-      
-              <div
-                class="family-title 42dot-sans"
-                style="font-family: '42dot Sans';"
-              >
-                
-        42dot Sans
-      
-              </div>
-              
-      
-              <div
-                class="family-meta-container"
-              >
-                
-        
-                <span
-                  class="family-title-small"
-                />
-                
-        
-                <div
-                  class="family-meta"
-                >
-                  
-          
-                  <ul>
-                    
-            
-                    <li>
-                      sans-serif
-                    </li>
-                    
-            
-                    <li>
-                      <span
-                        aria-label="300, regular, 500, 600, 700, 800"
-                      >
-                        6 variants
-                      </span>
-                    </li>
-                    
-            
-                    <li>
-                      <span
-                        aria-label="korean, latin"
-                      >
-                        2 subsets
-                      </span>
-                    </li>
-                    
-          
-                  </ul>
-                  
-        
-                </div>
-                
-      
-              </div>
-              
-    
-            </div>
-            
-    
-            <div
-              class="family-tags"
-            >
-              
-      
-              <div
-                class="family-tags-container"
-              >
-                <button
-                  is="tag-button"
-                  style="font-family: "42dot Sans";"
-                  title="korean"
-                  value="korean"
-                >
-                  korean
-                </button>
-              </div>
-              
-      
-              <div
-                class="family-meta-links"
-              >
-                
-        
-                <a
-                  aria-label="Edit tags for 42dot Sans"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L2"
-                  target="_blank"
-                >
-                  Edit tags
-                </a>
-                
-        
-                <a
-                  aria-label="Visit 42dot Sans on Google Fonts"
-                  href="https://fonts.google.com/specimen/42dot+Sans"
-                  target="_blank"
-                >
-                  Google Fonts →
-                </a>
-                
-      
-              </div>
-              
-    
-            </div>
-          </li>
-          
-
-          <li
-            font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":3,"variable":false,"lastModified":"2025-05-30"}"
+            font="{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false,"lastModified":"2025-05-30"}"
             is="font-item"
           >
             <div
@@ -5676,7 +5555,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for ABeeZee"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L3"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L2"
                   target="_blank"
                 >
                   Edit tags
@@ -5700,7 +5579,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":6,"variable":false,"lastModified":"2025-05-30"}"
+            font="{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":5,"variable":false,"lastModified":"2025-05-30"}"
             is="font-item"
           >
             <div
@@ -5797,7 +5676,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for Abel"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L6"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L5"
                   target="_blank"
                 >
                   Edit tags
@@ -5821,7 +5700,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":7,"variable":false,"lastModified":"2025-05-30"}"
+            font="{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":6,"variable":false,"lastModified":"2025-05-30"}"
             is="font-item"
           >
             <div
@@ -5909,7 +5788,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for Abhaya Libre"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L7"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L6"
                   target="_blank"
                 >
                   Edit tags
@@ -5933,7 +5812,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":8,"variable":false,"lastModified":"2025-05-30"}"
+            font="{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":7,"variable":false,"lastModified":"2025-05-30"}"
             is="font-item"
           >
             <div
@@ -6030,7 +5909,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for Aboreto"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L8"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L7"
                   target="_blank"
                 >
                   Edit tags
@@ -6054,7 +5933,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":9,"variable":false,"lastModified":"2025-06-02"}"
+            font="{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":8,"variable":false,"lastModified":"2025-06-02"}"
             is="font-item"
           >
             <div
@@ -6175,7 +6054,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for Abril Fatface"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L9"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L8"
                   target="_blank"
                 >
                   Edit tags
@@ -6199,7 +6078,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":10,"variable":false,"lastModified":"2025-05-30"}"
+            font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":9,"variable":false,"lastModified":"2025-05-30"}"
             is="font-item"
           >
             <div
@@ -6287,7 +6166,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for Abyssinica SIL"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L10"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L9"
                   target="_blank"
                 >
                   Edit tags
@@ -6311,7 +6190,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Aclonica","variants":["regular"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":11,"variable":false,"lastModified":"2025-06-02"}"
+            font="{"family":"Aclonica","variants":["regular"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":10,"variable":false,"lastModified":"2025-06-02"}"
             is="font-item"
           >
             <div
@@ -6416,7 +6295,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for Aclonica"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L11"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L10"
                   target="_blank"
                 >
                   Edit tags
@@ -6440,7 +6319,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":12,"variable":false,"lastModified":"2025-06-02"}"
+            font="{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":11,"variable":false,"lastModified":"2025-06-02"}"
             is="font-item"
           >
             <div
@@ -6561,7 +6440,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for Acme"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L12"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L11"
                   target="_blank"
                 >
                   Edit tags
@@ -6585,7 +6464,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":13,"variable":false,"lastModified":"2025-05-30"}"
+            font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":12,"variable":false,"lastModified":"2025-05-30"}"
             is="font-item"
           >
             <div
@@ -6690,7 +6569,7 @@ exports[`MainApp renders correctly 1`] = `
         
                 <a
                   aria-label="Edit tags for Actor"
-                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L13"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L12"
                   target="_blank"
                 >
                   Edit tags
@@ -6711,12 +6590,149 @@ exports[`MainApp renders correctly 1`] = `
     
             </div>
           </li>
+          
+
+          <li
+            font="{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":13,"variable":false,"lastModified":"2025-05-30"}"
+            is="font-item"
+          >
+            <div
+              class="family-link"
+            >
+              
+      
+              <div
+                class="family-title adamina"
+                style="font-family: 'Adamina';"
+              >
+                
+        Adamina
+      
+              </div>
+              
+      
+              <div
+                class="family-meta-container"
+              >
+                
+        
+                <span
+                  class="family-title-small"
+                />
+                
+        
+                <div
+                  class="family-meta"
+                >
+                  
+          
+                  <ul>
+                    
+            
+                    <li>
+                      serif
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="regular"
+                      >
+                        1 variants
+                      </span>
+                    </li>
+                    
+            
+                    <li>
+                      <span
+                        aria-label="latin"
+                      >
+                        1 subsets
+                      </span>
+                    </li>
+                    
+          
+                  </ul>
+                  
+        
+                </div>
+                
+      
+              </div>
+              
+    
+            </div>
+            
+    
+            <div
+              class="family-tags"
+            >
+              
+      
+              <div
+                class="family-tags-container"
+              >
+                <button
+                  is="tag-button"
+                  style="font-family: "Adamina";"
+                  title="compact"
+                  value="compact"
+                >
+                  compact
+                </button>
+                <button
+                  is="tag-button"
+                  style="font-family: "Almendra";"
+                  title="small sizes"
+                  value="small sizes"
+                >
+                  small sizes
+                </button>
+                <button
+                  is="tag-button"
+                  style="font-family: "Amethysta";"
+                  title="transitional"
+                  value="transitional"
+                >
+                  transitional
+                </button>
+              </div>
+              
+      
+              <div
+                class="family-meta-links"
+              >
+                
+        
+                <a
+                  aria-label="Edit tags for Adamina"
+                  href="https://github.com/katydecorah/font-library/blob/gh-pages/families.json#L13"
+                  target="_blank"
+                >
+                  Edit tags
+                </a>
+                
+        
+                <a
+                  aria-label="Visit Adamina on Google Fonts"
+                  href="https://fonts.google.com/specimen/Adamina"
+                  target="_blank"
+                >
+                  Google Fonts →
+                </a>
+                
+      
+              </div>
+              
+    
+            </div>
+          </li>
         </ul>
         
             
         <pagination-buttons
           current-page="1"
-          results-length="1844"
+          results-length="1849"
         >
           <button
             class="btn"
