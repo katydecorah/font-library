@@ -1783,7 +1783,7 @@
   "Voltaire": ["geometric", "condensed", "low contrast"],
   "Vujahday Script": ["script"],
   "WDXL Lubrifont JP N": [],
-  "WDXL Lubrifont SC": [],
+  "WDXL Lubrifont SC": ["small caps"],
   "WDXL Lubrifont TC": [],
   "Waiting for the Sunrise": ["scrawl"],
   "Wallpoet": ["stencil"],
