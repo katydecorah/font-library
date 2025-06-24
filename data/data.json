@@ -10131,7 +10131,7 @@
     "tags": ["barcode"],
     "lineNumber": 795,
     "variable": false,
-    "lastModified": "2025-01-08"
+    "lastModified": "2025-06-23"
   },
   {
     "family": "Libre Baskerville",
@@ -11167,7 +11167,7 @@
     "tags": ["outline", "icons"],
     "lineNumber": 879,
     "variable": false,
-    "lastModified": "2025-06-17"
+    "lastModified": "2025-06-23"
   },
   {
     "family": "Material Symbols Rounded",
@@ -11177,7 +11177,7 @@
     "tags": ["round", "icons"],
     "lineNumber": 880,
     "variable": false,
-    "lastModified": "2025-06-17"
+    "lastModified": "2025-06-23"
   },
   {
     "family": "Material Symbols Sharp",
@@ -11187,7 +11187,7 @@
     "tags": ["icons"],
     "lineNumber": 881,
     "variable": false,
-    "lastModified": "2025-06-17"
+    "lastModified": "2025-06-23"
   },
   {
     "family": "Maven Pro",
@@ -14759,11 +14759,11 @@
     "family": "Noto Serif Dives Akuru",
     "variants": ["regular"],
     "subsets": ["dives-akuru", "latin", "latin-ext"],
-    "category": "sans-serif",
+    "category": "serif",
     "tags": [],
     "lineNumber": 1161,
     "variable": false,
-    "lastModified": "2025-05-23"
+    "lastModified": "2025-06-23"
   },
   {
     "family": "Noto Serif Dogra",
