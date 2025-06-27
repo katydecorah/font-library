@@ -3,7 +3,7 @@
 exports[`MainApp renders correctly 1`] = `
 <main-app
   current-page="1"
-  results-length="1857"
+  results-length="1858"
 >
   
       
@@ -5040,6 +5040,12 @@ exports[`MainApp renders correctly 1`] = `
                 sundanese
               </option>
               <option
+                id="sunuwar"
+                value="sunuwar"
+              >
+                sunuwar
+              </option>
+              <option
                 id="syloti-nagri"
                 value="syloti-nagri"
               >
@@ -5408,16 +5414,16 @@ exports[`MainApp renders correctly 1`] = `
         
             
         <search-status
-          results-length="1857"
+          results-length="1858"
         >
           <div>
-            Found 1857 fonts
+            Found 1858 fonts
           </div>
         </search-status>
         
             
         <sort-by
-          results-length="1857"
+          results-length="1858"
           sort-by="family"
         >
           <div
@@ -6732,7 +6738,7 @@ exports[`MainApp renders correctly 1`] = `
             
         <pagination-buttons
           current-page="1"
-          results-length="1857"
+          results-length="1858"
         >
           <button
             class="btn"
