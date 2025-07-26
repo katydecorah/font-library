@@ -21865,12 +21865,29 @@
     "lastModified": "2025-05-30"
   },
   {
+    "family": "TikTok Sans",
+    "variants": ["300", "regular", "500", "600", "700", "800", "900"],
+    "subsets": [
+      "cyrillic",
+      "cyrillic-ext",
+      "greek",
+      "vietnamese",
+      "latin",
+      "latin-ext"
+    ],
+    "category": "sans-serif",
+    "tags": [],
+    "lineNumber": 1728,
+    "variable": false,
+    "lastModified": "2025-07-25"
+  },
+  {
     "family": "Tillana",
     "variants": ["regular", "500", "600", "700", "800"],
     "subsets": ["devanagari", "latin", "latin-ext"],
     "category": "display",
     "tags": ["slanted"],
-    "lineNumber": 1728,
+    "lineNumber": 1729,
     "variable": false,
     "lastModified": "2025-04-23"
   },
@@ -21880,7 +21897,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
     "tags": ["geometric", "round"],
-    "lineNumber": 1729,
+    "lineNumber": 1730,
     "variable": true,
     "lastModified": "2025-05-30"
   },
@@ -21890,7 +21907,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
     "tags": ["geometric", "outline"],
-    "lineNumber": 1730,
+    "lineNumber": 1731,
     "variable": true,
     "lastModified": "2025-06-02"
   },
@@ -21900,7 +21917,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
     "tags": ["geometric"],
-    "lineNumber": 1731,
+    "lineNumber": 1732,
     "variable": true,
     "lastModified": "2025-06-09"
   },
@@ -21910,7 +21927,7 @@
     "subsets": ["telugu", "latin"],
     "category": "sans-serif",
     "tags": ["slanted"],
-    "lineNumber": 1732,
+    "lineNumber": 1733,
     "variable": false,
     "lastModified": "2025-04-23"
   },
@@ -21929,7 +21946,7 @@
     ],
     "category": "serif",
     "tags": [],
-    "lineNumber": 1733,
+    "lineNumber": 1734,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -21939,7 +21956,7 @@
     "subsets": ["cyrillic", "cyrillic-ext", "greek", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["game", "pixel", "retro"],
-    "lineNumber": 1734,
+    "lineNumber": 1735,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -21949,7 +21966,7 @@
     "subsets": ["bengali", "latin", "latin-ext"],
     "category": "serif",
     "tags": [],
-    "lineNumber": 1735,
+    "lineNumber": 1736,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -21959,7 +21976,7 @@
     "subsets": ["devanagari", "latin", "latin-ext"],
     "category": "serif",
     "tags": [],
-    "lineNumber": 1736,
+    "lineNumber": 1737,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -21969,7 +21986,7 @@
     "subsets": ["devanagari", "latin", "latin-ext"],
     "category": "serif",
     "tags": [],
-    "lineNumber": 1737,
+    "lineNumber": 1738,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -21979,7 +21996,7 @@
     "subsets": ["devanagari", "latin", "latin-ext"],
     "category": "serif",
     "tags": [],
-    "lineNumber": 1738,
+    "lineNumber": 1739,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -21989,7 +22006,7 @@
     "subsets": ["gurmukhi", "latin", "latin-ext"],
     "category": "serif",
     "tags": [],
-    "lineNumber": 1739,
+    "lineNumber": 1740,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -21999,7 +22016,7 @@
     "subsets": ["kannada", "latin", "latin-ext"],
     "category": "serif",
     "tags": [],
-    "lineNumber": 1740,
+    "lineNumber": 1741,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22009,7 +22026,7 @@
     "subsets": ["tamil", "latin", "latin-ext"],
     "category": "serif",
     "tags": [],
-    "lineNumber": 1741,
+    "lineNumber": 1742,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22019,7 +22036,7 @@
     "subsets": ["telugu", "latin", "latin-ext"],
     "category": "serif",
     "tags": [],
-    "lineNumber": 1742,
+    "lineNumber": 1743,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22029,7 +22046,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "display",
     "tags": ["brush", "fat"],
-    "lineNumber": 1743,
+    "lineNumber": 1744,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22051,7 +22068,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["modern"],
-    "lineNumber": 1744,
+    "lineNumber": 1745,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22080,7 +22097,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["geometric"],
-    "lineNumber": 1745,
+    "lineNumber": 1746,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22109,7 +22126,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
     "tags": ["outline", "collegiate"],
-    "lineNumber": 1746,
+    "lineNumber": 1747,
     "variable": true,
     "lastModified": "2025-06-02"
   },
@@ -22119,7 +22136,7 @@
     "subsets": ["latin"],
     "category": "display",
     "tags": ["caps", "grunge"],
-    "lineNumber": 1747,
+    "lineNumber": 1748,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22129,7 +22146,7 @@
     "subsets": ["cyrillic", "japanese", "latin", "latin-ext"],
     "category": "display",
     "tags": ["lines", "outline"],
-    "lineNumber": 1748,
+    "lineNumber": 1749,
     "variable": false,
     "lastModified": "2025-05-23"
   },
@@ -22139,7 +22156,7 @@
     "subsets": ["cyrillic", "cyrillic-ext", "latin"],
     "category": "display",
     "tags": [],
-    "lineNumber": 1749,
+    "lineNumber": 1750,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22168,7 +22185,7 @@
     "subsets": ["thai", "vietnamese", "latin", "latin-ext"],
     "category": "serif",
     "tags": ["looped", "high contrast", "legibility"],
-    "lineNumber": 1750,
+    "lineNumber": 1751,
     "variable": false,
     "lastModified": "2025-04-23"
   },
@@ -22178,7 +22195,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["wide"],
-    "lineNumber": 1751,
+    "lineNumber": 1752,
     "variable": true,
     "lastModified": "2025-05-30"
   },
@@ -22188,7 +22205,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
     "tags": ["slab"],
-    "lineNumber": 1752,
+    "lineNumber": 1753,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22198,7 +22215,7 @@
     "subsets": ["latin"],
     "category": "display",
     "tags": ["fun", "geometric"],
-    "lineNumber": 1753,
+    "lineNumber": 1754,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22218,7 +22235,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["narrow", "condensed"],
-    "lineNumber": 1754,
+    "lineNumber": 1755,
     "variable": true,
     "lastModified": "2025-05-29"
   },
@@ -22228,7 +22245,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
     "tags": ["old style", "high contrast"],
-    "lineNumber": 1755,
+    "lineNumber": 1756,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22238,7 +22255,7 @@
     "subsets": ["japanese", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["round", "japanese"],
-    "lineNumber": 1756,
+    "lineNumber": 1757,
     "variable": false,
     "lastModified": "2025-06-11"
   },
@@ -22256,7 +22273,7 @@
     ],
     "category": "sans-serif",
     "tags": ["grotesque"],
-    "lineNumber": 1757,
+    "lineNumber": 1758,
     "variable": false,
     "lastModified": "2025-04-23"
   },
@@ -22266,7 +22283,7 @@
     "subsets": ["latin"],
     "category": "display",
     "tags": ["tall", "condensed"],
-    "lineNumber": 1758,
+    "lineNumber": 1759,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22276,7 +22293,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "display",
     "tags": ["low contrast", "geometric", "futuristic"],
-    "lineNumber": 1759,
+    "lineNumber": 1760,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22286,7 +22303,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
     "tags": ["cute", "kids", "playful", "swirl"],
-    "lineNumber": 1760,
+    "lineNumber": 1761,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22312,7 +22329,7 @@
     ],
     "category": "sans-serif",
     "tags": ["modern"],
-    "lineNumber": 1761,
+    "lineNumber": 1762,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22329,7 +22346,7 @@
     ],
     "category": "sans-serif",
     "tags": ["condensed"],
-    "lineNumber": 1762,
+    "lineNumber": 1763,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22346,7 +22363,7 @@
     ],
     "category": "monospace",
     "tags": ["code"],
-    "lineNumber": 1763,
+    "lineNumber": 1764,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22380,7 +22397,7 @@
     ],
     "category": "sans-serif",
     "tags": ["modern"],
-    "lineNumber": 1764,
+    "lineNumber": 1765,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22406,7 +22423,7 @@
     ],
     "category": "monospace",
     "tags": [],
-    "lineNumber": 1765,
+    "lineNumber": 1766,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22416,7 +22433,7 @@
     "subsets": ["tibetan", "latin"],
     "category": "serif",
     "tags": [],
-    "lineNumber": 1766,
+    "lineNumber": 1767,
     "variable": false,
     "lastModified": "2025-04-23"
   },
@@ -22426,7 +22443,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
     "tags": ["heavy", "headlines"],
-    "lineNumber": 1767,
+    "lineNumber": 1768,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22436,7 +22453,7 @@
     "subsets": ["cyrillic", "cyrillic-ext", "vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["round", "round"],
-    "lineNumber": 1768,
+    "lineNumber": 1769,
     "variable": true,
     "lastModified": "2025-06-02"
   },
@@ -22446,7 +22463,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "display",
     "tags": ["ancient", "antiqua"],
-    "lineNumber": 1769,
+    "lineNumber": 1770,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22456,7 +22473,7 @@
     "subsets": ["cyrillic", "latin", "latin-ext"],
     "category": "display",
     "tags": ["cartoon", "kids", "headlines"],
-    "lineNumber": 1770,
+    "lineNumber": 1771,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22466,7 +22483,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
     "tags": ["futuristic", "headlines", "unicase"],
-    "lineNumber": 1771,
+    "lineNumber": 1772,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22476,7 +22493,7 @@
     "subsets": ["latin"],
     "category": "display",
     "tags": ["german", "fraktur", "blackletter"],
-    "lineNumber": 1772,
+    "lineNumber": 1773,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22486,7 +22503,7 @@
     "subsets": ["latin"],
     "category": "display",
     "tags": ["german", "fraktur", "blackletter"],
-    "lineNumber": 1773,
+    "lineNumber": 1774,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22496,7 +22513,7 @@
     "subsets": ["latin"],
     "category": "display",
     "tags": ["kids", "fun", "cartoon"],
-    "lineNumber": 1774,
+    "lineNumber": 1775,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22506,7 +22523,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "display",
     "tags": ["geometric", "headlines"],
-    "lineNumber": 1775,
+    "lineNumber": 1776,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22516,7 +22533,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
     "tags": ["neoclassical"],
-    "lineNumber": 1776,
+    "lineNumber": 1777,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22526,7 +22543,7 @@
     "subsets": ["chinese-traditional", "cyrillic", "symbols2", "latin"],
     "category": "serif",
     "tags": [],
-    "lineNumber": 1777,
+    "lineNumber": 1778,
     "variable": false,
     "lastModified": "2025-06-25"
   },
@@ -22536,7 +22553,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
     "tags": ["formal", "script"],
-    "lineNumber": 1778,
+    "lineNumber": 1779,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22565,7 +22582,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["low contrast", "modern", "geometric"],
-    "lineNumber": 1779,
+    "lineNumber": 1780,
     "variable": true,
     "lastModified": "2025-05-29"
   },
@@ -22575,7 +22592,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "monospace",
     "tags": ["code", "pixel", "game"],
-    "lineNumber": 1780,
+    "lineNumber": 1781,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22585,7 +22602,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "display",
     "tags": ["cursive", "monolinear", "low contrast"],
-    "lineNumber": 1781,
+    "lineNumber": 1782,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22595,7 +22612,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["modern"],
-    "lineNumber": 1782,
+    "lineNumber": 1783,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22605,7 +22622,7 @@
     "subsets": ["hebrew", "vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["round"],
-    "lineNumber": 1783,
+    "lineNumber": 1784,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22615,7 +22632,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": [],
-    "lineNumber": 1784,
+    "lineNumber": 1785,
     "variable": true,
     "lastModified": "2025-06-02"
   },
@@ -22625,7 +22642,7 @@
     "subsets": ["latin"],
     "category": "serif",
     "tags": ["shadow"],
-    "lineNumber": 1785,
+    "lineNumber": 1786,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22645,7 +22662,7 @@
     "subsets": ["arabic", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": [],
-    "lineNumber": 1786,
+    "lineNumber": 1787,
     "variable": true,
     "lastModified": "2025-04-23"
   },
@@ -22655,7 +22672,7 @@
     "subsets": ["devanagari", "latin", "latin-ext"],
     "category": "serif",
     "tags": [],
-    "lineNumber": 1787,
+    "lineNumber": 1788,
     "variable": false,
     "lastModified": "2025-04-23"
   },
@@ -22665,7 +22682,7 @@
     "subsets": ["cyrillic", "cyrillic-ext", "vietnamese", "latin", "latin-ext"],
     "category": "display",
     "tags": ["whimsical"],
-    "lineNumber": 1788,
+    "lineNumber": 1789,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22675,7 +22692,7 @@
     "subsets": ["arabic", "latin"],
     "category": "display",
     "tags": ["round"],
-    "lineNumber": 1789,
+    "lineNumber": 1790,
     "variable": false,
     "lastModified": "2025-04-23"
   },
@@ -22685,7 +22702,7 @@
     "subsets": ["latin"],
     "category": "handwriting",
     "tags": ["cursive"],
-    "lineNumber": 1790,
+    "lineNumber": 1791,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22717,7 +22734,7 @@
     ],
     "category": "monospace",
     "tags": ["code"],
-    "lineNumber": 1791,
+    "lineNumber": 1792,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22727,7 +22744,7 @@
     "subsets": ["latin"],
     "category": "serif",
     "tags": ["didone", "high contrast", "headlines"],
-    "lineNumber": 1792,
+    "lineNumber": 1793,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22737,7 +22754,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["heavy"],
-    "lineNumber": 1793,
+    "lineNumber": 1794,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22747,7 +22764,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "display",
     "tags": ["heavy", "signage"],
-    "lineNumber": 1794,
+    "lineNumber": 1795,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22757,7 +22774,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["modern"],
-    "lineNumber": 1795,
+    "lineNumber": 1796,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22767,7 +22784,7 @@
     "subsets": ["latin"],
     "category": "serif",
     "tags": ["low contrast"],
-    "lineNumber": 1796,
+    "lineNumber": 1797,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22797,7 +22814,7 @@
     ],
     "category": "serif",
     "tags": ["old style"],
-    "lineNumber": 1797,
+    "lineNumber": 1798,
     "variable": true,
     "lastModified": "2025-05-30"
   },
@@ -22807,7 +22824,7 @@
     "subsets": ["cyrillic", "cyrillic-ext", "vietnamese", "latin", "latin-ext"],
     "category": "serif",
     "tags": ["small caps"],
-    "lineNumber": 1798,
+    "lineNumber": 1799,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -22817,7 +22834,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["geometric", "condensed", "low contrast"],
-    "lineNumber": 1799,
+    "lineNumber": 1800,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22827,7 +22844,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
     "tags": ["script"],
-    "lineNumber": 1800,
+    "lineNumber": 1801,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22837,7 +22854,7 @@
     "subsets": ["cyrillic", "japanese", "symbols2", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": [],
-    "lineNumber": 1801,
+    "lineNumber": 1802,
     "variable": false,
     "lastModified": "2025-06-12"
   },
@@ -22853,7 +22870,7 @@
     ],
     "category": "sans-serif",
     "tags": ["small caps"],
-    "lineNumber": 1802,
+    "lineNumber": 1803,
     "variable": false,
     "lastModified": "2025-06-12"
   },
@@ -22869,7 +22886,7 @@
     ],
     "category": "sans-serif",
     "tags": [],
-    "lineNumber": 1803,
+    "lineNumber": 1804,
     "variable": false,
     "lastModified": "2025-06-18"
   },
@@ -22879,7 +22896,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "handwriting",
     "tags": ["scrawl"],
-    "lineNumber": 1804,
+    "lineNumber": 1805,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22889,7 +22906,7 @@
     "subsets": ["latin"],
     "category": "display",
     "tags": ["stencil"],
-    "lineNumber": 1805,
+    "lineNumber": 1806,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22899,7 +22916,7 @@
     "subsets": ["latin"],
     "category": "handwriting",
     "tags": ["caps"],
-    "lineNumber": 1806,
+    "lineNumber": 1807,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22909,7 +22926,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "display",
     "tags": ["vintage", "connected"],
-    "lineNumber": 1807,
+    "lineNumber": 1808,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22919,7 +22936,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
     "tags": ["brush"],
-    "lineNumber": 1808,
+    "lineNumber": 1809,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22929,7 +22946,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
     "tags": ["elegant", "cursive", "calligraphic"],
-    "lineNumber": 1809,
+    "lineNumber": 1810,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22949,7 +22966,7 @@
     "subsets": ["latin"],
     "category": "display",
     "tags": ["diagram"],
-    "lineNumber": 1810,
+    "lineNumber": 1811,
     "variable": false,
     "lastModified": "2025-05-29"
   },
@@ -22959,7 +22976,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
     "tags": ["fun", "slab", "low contrast"],
-    "lineNumber": 1811,
+    "lineNumber": 1812,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22969,7 +22986,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["heavy"],
-    "lineNumber": 1812,
+    "lineNumber": 1813,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22979,7 +22996,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
     "tags": ["calligraphic"],
-    "lineNumber": 1813,
+    "lineNumber": 1814,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -22989,7 +23006,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
     "tags": ["cursive"],
-    "lineNumber": 1814,
+    "lineNumber": 1815,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -23014,7 +23031,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["uneven", "marker"],
-    "lineNumber": 1815,
+    "lineNumber": 1816,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -23039,7 +23056,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["round", "friendly"],
-    "lineNumber": 1816,
+    "lineNumber": 1817,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -23049,7 +23066,7 @@
     "subsets": ["latin"],
     "category": "sans-serif",
     "tags": ["thin", "art nouveau", "condensed"],
-    "lineNumber": 1817,
+    "lineNumber": 1818,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -23072,7 +23089,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
     "tags": [],
-    "lineNumber": 1818,
+    "lineNumber": 1819,
     "variable": false,
     "lastModified": "2025-05-29"
   },
@@ -23082,7 +23099,7 @@
     "subsets": ["cyrillic", "cyrillic-ext", "vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["compact"],
-    "lineNumber": 1819,
+    "lineNumber": 1820,
     "variable": false,
     "lastModified": "2025-05-29"
   },
@@ -23103,7 +23120,7 @@
     "subsets": ["cyrillic", "cyrillic-ext", "vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["compact"],
-    "lineNumber": 1820,
+    "lineNumber": 1821,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -23132,7 +23149,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["grotesque"],
-    "lineNumber": 1821,
+    "lineNumber": 1822,
     "variable": true,
     "lastModified": "2025-06-02"
   },
@@ -23142,7 +23159,7 @@
     "subsets": ["math", "symbols", "latin"],
     "category": "monospace",
     "tags": ["pixel", "retro"],
-    "lineNumber": 1822,
+    "lineNumber": 1823,
     "variable": false,
     "lastModified": "2025-05-29"
   },
@@ -23152,7 +23169,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "monospace",
     "tags": ["compact"],
-    "lineNumber": 1823,
+    "lineNumber": 1824,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23162,7 +23179,7 @@
     "subsets": ["sinhala", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["narrow"],
-    "lineNumber": 1824,
+    "lineNumber": 1825,
     "variable": true,
     "lastModified": "2025-06-02"
   },
@@ -23180,7 +23197,7 @@
     ],
     "category": "sans-serif",
     "tags": ["1920s"],
-    "lineNumber": 1825,
+    "lineNumber": 1826,
     "variable": true,
     "lastModified": "2025-05-29"
   },
@@ -23190,7 +23207,7 @@
     "subsets": ["devanagari", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": [],
-    "lineNumber": 1826,
+    "lineNumber": 1827,
     "variable": false,
     "lastModified": "2025-04-23"
   },
@@ -23200,7 +23217,7 @@
     "subsets": ["math", "symbols", "latin"],
     "category": "display",
     "tags": ["dingbat", "knit"],
-    "lineNumber": 1827,
+    "lineNumber": 1828,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23210,7 +23227,7 @@
     "subsets": ["math", "symbols", "latin"],
     "category": "display",
     "tags": ["dingbat", "knit"],
-    "lineNumber": 1828,
+    "lineNumber": 1829,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23220,7 +23237,7 @@
     "subsets": ["math", "symbols", "latin"],
     "category": "display",
     "tags": ["dingbat", "knit"],
-    "lineNumber": 1829,
+    "lineNumber": 1830,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23230,7 +23247,7 @@
     "subsets": ["math", "symbols", "latin"],
     "category": "display",
     "tags": ["dingbat", "knit"],
-    "lineNumber": 1830,
+    "lineNumber": 1831,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23240,7 +23257,7 @@
     "subsets": ["devanagari", "latin", "latin-ext"],
     "category": "display",
     "tags": ["brush"],
-    "lineNumber": 1831,
+    "lineNumber": 1832,
     "variable": false,
     "lastModified": "2025-04-23"
   },
@@ -23250,7 +23267,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "handwriting",
     "tags": ["cursive", "1930s", "brush"],
-    "lineNumber": 1832,
+    "lineNumber": 1833,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -23260,7 +23277,7 @@
     "subsets": ["korean", "latin"],
     "category": "display",
     "tags": ["korean"],
-    "lineNumber": 1833,
+    "lineNumber": 1834,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23270,7 +23287,7 @@
     "subsets": ["cyrillic", "cyrillic-ext", "vietnamese", "latin", "latin-ext"],
     "category": "display",
     "tags": ["didone"],
-    "lineNumber": 1834,
+    "lineNumber": 1835,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -23280,7 +23297,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "handwriting",
     "tags": ["cursive", "1940s"],
-    "lineNumber": 1835,
+    "lineNumber": 1836,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -23290,7 +23307,7 @@
     "subsets": ["cyrillic", "japanese", "vietnamese", "latin", "latin-ext"],
     "category": "handwriting",
     "tags": ["thin"],
-    "lineNumber": 1836,
+    "lineNumber": 1837,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23300,7 +23317,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
     "tags": ["heavy"],
-    "lineNumber": 1837,
+    "lineNumber": 1838,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23321,7 +23338,7 @@
     "subsets": ["vietnamese", "latin", "latin-ext"],
     "category": "serif",
     "tags": [],
-    "lineNumber": 1838,
+    "lineNumber": 1839,
     "variable": true,
     "lastModified": "2025-06-02"
   },
@@ -23359,7 +23376,7 @@
     ],
     "category": "sans-serif",
     "tags": ["elegant"],
-    "lineNumber": 1839,
+    "lineNumber": 1840,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -23397,7 +23414,7 @@
     ],
     "category": "sans-serif",
     "tags": ["light", "low contrast"],
-    "lineNumber": 1840,
+    "lineNumber": 1841,
     "variable": false,
     "lastModified": "2025-05-29"
   },
@@ -23435,7 +23452,7 @@
     ],
     "category": "sans-serif",
     "tags": ["light", "low contrast"],
-    "lineNumber": 1841,
+    "lineNumber": 1842,
     "variable": false,
     "lastModified": "2025-05-29"
   },
@@ -23464,7 +23481,7 @@
     ],
     "category": "sans-serif",
     "tags": ["small caps"],
-    "lineNumber": 1842,
+    "lineNumber": 1843,
     "variable": false,
     "lastModified": "2025-05-29"
   },
@@ -23474,7 +23491,7 @@
     "subsets": ["cyrillic", "japanese", "latin", "latin-ext"],
     "category": "serif",
     "tags": ["handwritten", "playful"],
-    "lineNumber": 1843,
+    "lineNumber": 1844,
     "variable": false,
     "lastModified": "2025-05-23"
   },
@@ -23484,7 +23501,7 @@
     "subsets": ["japanese", "latin", "latin-ext"],
     "category": "handwriting",
     "tags": ["japanese", "calligraphic", "handwritten", "caps"],
-    "lineNumber": 1844,
+    "lineNumber": 1845,
     "variable": false,
     "lastModified": "2025-06-11"
   },
@@ -23494,7 +23511,7 @@
     "subsets": ["japanese", "latin", "latin-ext"],
     "category": "handwriting",
     "tags": ["japanese", "calligraphic", "caps"],
-    "lineNumber": 1845,
+    "lineNumber": 1846,
     "variable": false,
     "lastModified": "2025-06-11"
   },
@@ -23504,7 +23521,7 @@
     "subsets": ["cyrillic", "japanese", "latin", "latin-ext"],
     "category": "serif",
     "tags": ["swirl"],
-    "lineNumber": 1846,
+    "lineNumber": 1847,
     "variable": false,
     "lastModified": "2025-05-23"
   },
@@ -23514,7 +23531,7 @@
     "subsets": ["cyrillic", "japanese", "latin", "latin-ext"],
     "category": "serif",
     "tags": ["typewriter"],
-    "lineNumber": 1847,
+    "lineNumber": 1848,
     "variable": false,
     "lastModified": "2025-05-23"
   },
@@ -23524,7 +23541,7 @@
     "subsets": ["japanese", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["marker"],
-    "lineNumber": 1848,
+    "lineNumber": 1849,
     "variable": false,
     "lastModified": "2025-04-23"
   },
@@ -23534,7 +23551,7 @@
     "subsets": ["chinese-simplified", "latin"],
     "category": "sans-serif",
     "tags": ["uneven"],
-    "lineNumber": 1849,
+    "lineNumber": 1850,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23544,7 +23561,7 @@
     "subsets": ["chinese-simplified", "latin"],
     "category": "sans-serif",
     "tags": [],
-    "lineNumber": 1850,
+    "lineNumber": 1851,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23554,7 +23571,7 @@
     "subsets": ["chinese-simplified", "latin"],
     "category": "sans-serif",
     "tags": [],
-    "lineNumber": 1851,
+    "lineNumber": 1852,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23573,7 +23590,7 @@
     "subsets": ["arabic", "latin"],
     "category": "sans-serif",
     "tags": [],
-    "lineNumber": 1852,
+    "lineNumber": 1853,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23583,7 +23600,7 @@
     "subsets": ["cyrillic", "greek", "japanese", "latin", "latin-ext"],
     "category": "serif",
     "tags": ["japanese"],
-    "lineNumber": 1853,
+    "lineNumber": 1854,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23593,7 +23610,7 @@
     "subsets": ["cyrillic", "greek", "japanese", "latin", "latin-ext"],
     "category": "serif",
     "tags": ["japanese"],
-    "lineNumber": 1854,
+    "lineNumber": 1855,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23603,7 +23620,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "display",
     "tags": ["futuristic", "techno"],
-    "lineNumber": 1855,
+    "lineNumber": 1856,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -23613,7 +23630,7 @@
     "subsets": ["cyrillic", "japanese", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["japanese"],
-    "lineNumber": 1856,
+    "lineNumber": 1857,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -23623,7 +23640,7 @@
     "subsets": ["cyrillic", "japanese", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["japanese"],
-    "lineNumber": 1857,
+    "lineNumber": 1858,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -23633,7 +23650,7 @@
     "subsets": ["cyrillic", "greek", "japanese", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["japanese", "handwritten"],
-    "lineNumber": 1858,
+    "lineNumber": 1859,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -23643,7 +23660,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "display",
     "tags": ["light"],
-    "lineNumber": 1859,
+    "lineNumber": 1860,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -23653,7 +23670,7 @@
     "subsets": ["cyrillic", "greek", "japanese", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": ["round", "cute"],
-    "lineNumber": 1860,
+    "lineNumber": 1861,
     "variable": false,
     "lastModified": "2025-06-25"
   },
@@ -23663,7 +23680,7 @@
     "subsets": ["cyrillic", "greek", "japanese", "latin", "latin-ext"],
     "category": "serif",
     "tags": [],
-    "lineNumber": 1861,
+    "lineNumber": 1862,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23673,7 +23690,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "display",
     "tags": ["lines", "outline"],
-    "lineNumber": 1862,
+    "lineNumber": 1863,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23683,7 +23700,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "handwriting",
     "tags": ["scrawl"],
-    "lineNumber": 1863,
+    "lineNumber": 1864,
     "variable": false,
     "lastModified": "2025-06-02"
   },
@@ -23693,7 +23710,7 @@
     "subsets": ["chinese-simplified", "latin"],
     "category": "handwriting",
     "tags": ["calligraphic"],
-    "lineNumber": 1864,
+    "lineNumber": 1865,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23714,7 +23731,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
     "tags": ["slab"],
-    "lineNumber": 1865,
+    "lineNumber": 1866,
     "variable": false,
     "lastModified": "2025-05-30"
   },
@@ -23724,7 +23741,7 @@
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
     "tags": ["slab"],
-    "lineNumber": 1866,
+    "lineNumber": 1867,
     "variable": false,
     "lastModified": "2025-06-02"
   }
