@@ -172,7 +172,7 @@
     "tags": [],
     "lineNumber": 15,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Afacad Flux",
@@ -222,7 +222,7 @@
     "tags": [],
     "lineNumber": 19,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Aguafina Script",
@@ -302,7 +302,7 @@
     "tags": ["geometric", "low contrast"],
     "lineNumber": 27,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Alatsi",
@@ -361,7 +361,7 @@
     "tags": ["geometric"],
     "lineNumber": 31,
     "variable": false,
-    "lastModified": "2025-05-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Alegreya",
@@ -421,7 +421,7 @@
     "tags": ["small caps", "literature"],
     "lineNumber": 33,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Alegreya Sans",
@@ -546,7 +546,7 @@
     "tags": [],
     "lineNumber": 38,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Alfa Slab One",
@@ -556,7 +556,7 @@
     "tags": ["slab", "heavy", "egyptian"],
     "lineNumber": 39,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Alice",
@@ -576,7 +576,7 @@
     "tags": ["legibility", "slab"],
     "lineNumber": 41,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Alike Angular",
@@ -586,7 +586,7 @@
     "tags": ["legibility", "slab"],
     "lineNumber": 42,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Alkalami",
@@ -626,7 +626,7 @@
     "tags": ["legibility"],
     "lineNumber": 46,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Allerta Stencil",
@@ -676,7 +676,7 @@
     "tags": ["whimsical", "small sizes"],
     "lineNumber": 51,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Almendra Display",
@@ -686,7 +686,7 @@
     "tags": ["whimsical", "literature"],
     "lineNumber": 52,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Almendra SC",
@@ -745,7 +745,7 @@
     "tags": ["block", "heavy"],
     "lineNumber": 56,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Alumni Sans Pinstripe",
@@ -804,7 +804,7 @@
     "tags": ["friendly"],
     "lineNumber": 60,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Amatic SC",
@@ -874,7 +874,7 @@
     "tags": ["code"],
     "lineNumber": 67,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Ancizar Sans",
@@ -999,7 +999,7 @@
     "tags": [],
     "lineNumber": 75,
     "variable": true,
-    "lastModified": "2025-04-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Anek Kannada",
@@ -1119,7 +1119,7 @@
     "tags": ["thin", "friendly"],
     "lineNumber": 87,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Antic Didone",
@@ -1129,7 +1129,7 @@
     "tags": ["didone", "headlines"],
     "lineNumber": 88,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Antic Slab",
@@ -1169,7 +1169,7 @@
     "tags": ["narrow", "futuristic", "tall", "modern", "techno"],
     "lineNumber": 92,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Anuphan",
@@ -1491,7 +1491,7 @@
     "tags": ["round"],
     "lineNumber": 115,
     "variable": true,
-    "lastModified": "2025-06-25"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Asap Condensed",
@@ -1528,7 +1528,7 @@
     "tags": ["round"],
     "lineNumber": 117,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Asimovian",
@@ -1598,7 +1598,7 @@
     "tags": ["loopless", "friendly", "humanist"],
     "lineNumber": 124,
     "variable": false,
-    "lastModified": "2025-04-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Atkinson Hyperlegible",
@@ -1608,7 +1608,7 @@
     "tags": ["literacy"],
     "lineNumber": 125,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Atkinson Hyperlegible Mono",
@@ -1658,7 +1658,7 @@
     "tags": [],
     "lineNumber": 127,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Atma",
@@ -1718,7 +1718,7 @@
     "tags": ["literature"],
     "lineNumber": 133,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Average Sans",
@@ -1797,7 +1797,7 @@
     "tags": ["monolinear"],
     "lineNumber": 139,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "B612",
@@ -2256,7 +2256,7 @@
     "tags": ["tall"],
     "lineNumber": 177,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Baumans",
@@ -2355,7 +2355,7 @@
     "tags": ["slab"],
     "lineNumber": 185,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Bellefair",
@@ -2375,7 +2375,7 @@
     "tags": ["humanist"],
     "lineNumber": 187,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Bellota",
@@ -2395,7 +2395,7 @@
     "tags": ["large sizes", "wide"],
     "lineNumber": 189,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "BenchNine",
@@ -2528,7 +2528,7 @@
     "tags": [],
     "lineNumber": 199,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Big Shoulders Stencil",
@@ -2548,7 +2548,7 @@
     "tags": [],
     "lineNumber": 200,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Bigelow Rules",
@@ -2618,7 +2618,7 @@
     "tags": ["cursive", "elegant", "small sizes", "formal"],
     "lineNumber": 207,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Birthstone Bounce",
@@ -2628,7 +2628,7 @@
     "tags": ["cursive", "elegant", "formal", "playful"],
     "lineNumber": 208,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Biryani",
@@ -2638,7 +2638,7 @@
     "tags": ["monolinear", "geometric"],
     "lineNumber": 209,
     "variable": false,
-    "lastModified": "2025-04-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Bitcount",
@@ -2787,7 +2787,7 @@
     "tags": ["slab"],
     "lineNumber": 216,
     "variable": true,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Black And White Picture",
@@ -2857,7 +2857,7 @@
     "tags": ["futuristic", "square"],
     "lineNumber": 223,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Bodoni Moda",
@@ -3049,7 +3049,7 @@
     "tags": ["friendly"],
     "lineNumber": 238,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Bricolage Grotesque",
@@ -3420,7 +3420,7 @@
     "tags": ["humanist"],
     "lineNumber": 272,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Cantata One",
@@ -3682,7 +3682,7 @@
     "tags": [],
     "lineNumber": 290,
     "variable": false,
-    "lastModified": "2025-04-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Caveat",
@@ -3692,7 +3692,7 @@
     "tags": ["scrawl"],
     "lineNumber": 291,
     "variable": true,
-    "lastModified": "2025-05-29"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Caveat Brush",
@@ -3702,7 +3702,7 @@
     "tags": ["brush"],
     "lineNumber": 292,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Cedarville Cursive",
@@ -3773,7 +3773,7 @@
     "tags": ["heavy"],
     "lineNumber": 298,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Charis SIL",
@@ -3833,7 +3833,7 @@
     "tags": ["brush"],
     "lineNumber": 304,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Chelsea Market",
@@ -4107,7 +4107,7 @@
     "tags": ["wide", "high contrast"],
     "lineNumber": 321,
     "variable": false,
-    "lastModified": "2025-04-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Cinzel",
@@ -4224,7 +4224,7 @@
     "tags": ["brush", "cursive", "elegant"],
     "lineNumber": 332,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Comic Neue",
@@ -4401,7 +4401,7 @@
     "tags": ["cursive", "elegant", "romantic"],
     "lineNumber": 347,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Cormorant",
@@ -4422,7 +4422,7 @@
     "tags": ["light"],
     "lineNumber": 348,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Cormorant Garamond",
@@ -4464,7 +4464,7 @@
     "tags": ["celtic"],
     "lineNumber": 350,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Cormorant SC",
@@ -4689,7 +4689,7 @@
     "tags": ["round"],
     "lineNumber": 369,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Cutive",
@@ -4819,7 +4819,7 @@
     "tags": ["groovy"],
     "lineNumber": 379,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Dangrek",
@@ -4943,7 +4943,7 @@
     "tags": ["cute", "swash", "round"],
     "lineNumber": 390,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Delius Unicase",
@@ -4973,7 +4973,7 @@
     "tags": ["tapered"],
     "lineNumber": 393,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Devonshire",
@@ -5040,7 +5040,7 @@
     "tags": ["small caps", "wide", "headlines"],
     "lineNumber": 399,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Do Hyeon",
@@ -5160,7 +5160,7 @@
     "tags": ["cursive"],
     "lineNumber": 410,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Duru Sans",
@@ -5180,7 +5180,7 @@
     "tags": ["playful"],
     "lineNumber": 412,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Dynalight",
@@ -5259,7 +5259,7 @@
     "tags": ["condensed"],
     "lineNumber": 418,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Eczar",
@@ -5329,7 +5329,7 @@
     "tags": [],
     "lineNumber": 425,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Edu NSW ACT Foundation",
@@ -5459,7 +5459,7 @@
     "tags": ["swirl"],
     "lineNumber": 438,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Elsie Swash Caps",
@@ -5509,7 +5509,7 @@
     "tags": ["round", "humanist", "geometric"],
     "lineNumber": 442,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Encode Sans Condensed",
@@ -5678,7 +5678,7 @@
     "tags": [],
     "lineNumber": 452,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Epunda Sans",
@@ -5703,7 +5703,7 @@
     "tags": [],
     "lineNumber": 453,
     "variable": false,
-    "lastModified": "2025-08-26"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Epunda Slab",
@@ -5768,7 +5768,7 @@
     "tags": ["brush", "copperplate", "script"],
     "lineNumber": 458,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Ewert",
@@ -5875,7 +5875,7 @@
     "tags": ["light", "slanted"],
     "lineNumber": 464,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Faculty Glyphic",
@@ -6030,7 +6030,7 @@
     "tags": [],
     "lineNumber": 476,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Federant",
@@ -6341,7 +6341,7 @@
     "tags": ["wireframe"],
     "lineNumber": 495,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Flow Circular",
@@ -6361,7 +6361,7 @@
     "tags": ["wireframe", "round"],
     "lineNumber": 497,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Foldit",
@@ -6391,7 +6391,7 @@
     "tags": ["calligraphic"],
     "lineNumber": 499,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Fontdiner Swanky",
@@ -6411,7 +6411,7 @@
     "tags": ["roman"],
     "lineNumber": 501,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Fragment Mono",
@@ -6550,7 +6550,7 @@
     "tags": ["fraktur", "large sizes", "blackletter"],
     "lineNumber": 513,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Fugaz One",
@@ -6663,7 +6663,7 @@
     "tags": ["geometric"],
     "lineNumber": 523,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Gabriela",
@@ -6703,7 +6703,7 @@
     "tags": ["heavy", "futuristic", "techno", "square"],
     "lineNumber": 527,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Galada",
@@ -6733,7 +6733,7 @@
     "tags": ["fun"],
     "lineNumber": 530,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Gamja Flower",
@@ -6792,7 +6792,7 @@
     "tags": ["modern"],
     "lineNumber": 534,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Geist",
@@ -6851,7 +6851,7 @@
     "tags": [],
     "lineNumber": 537,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Gemunu Libre",
@@ -7022,7 +7022,7 @@
     "tags": ["fraktur", "geometric"],
     "lineNumber": 547,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Gideon Roman",
@@ -7032,7 +7032,7 @@
     "tags": ["roman"],
     "lineNumber": 548,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Gidole",
@@ -7072,7 +7072,7 @@
     "tags": ["caps"],
     "lineNumber": 552,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Give You Glory",
@@ -7082,7 +7082,7 @@
     "tags": ["scrawl", "handwritten"],
     "lineNumber": 553,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Glass Antiqua",
@@ -7169,7 +7169,7 @@
     "tags": ["round", "fun"],
     "lineNumber": 559,
     "variable": true,
-    "lastModified": "2025-05-29"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Goblin One",
@@ -7419,7 +7419,7 @@
     "tags": ["cursive", "elegant"],
     "lineNumber": 577,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Grechen Fuemen",
@@ -7538,7 +7538,7 @@
     "tags": [],
     "lineNumber": 586,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Gupter",
@@ -7837,7 +7837,7 @@
     "tags": ["slab"],
     "lineNumber": 608,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Herr Von Muellerhoff",
@@ -7857,7 +7857,7 @@
     "tags": ["cute", "korean"],
     "lineNumber": 610,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Hina Mincho",
@@ -7877,7 +7877,7 @@
     "tags": ["humanist", "monolinear"],
     "lineNumber": 612,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Hind Guntur",
@@ -7957,7 +7957,7 @@
     "tags": ["condensed", "grotesque"],
     "lineNumber": 620,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Honk",
@@ -7967,7 +7967,7 @@
     "tags": ["color", "shadow"],
     "lineNumber": 621,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Host Grotesk",
@@ -7990,7 +7990,7 @@
     "tags": [],
     "lineNumber": 622,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Hubballi",
@@ -8027,7 +8027,7 @@
     "tags": [],
     "lineNumber": 624,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Huninn",
@@ -8165,7 +8165,7 @@
     "tags": ["hebrew"],
     "lineNumber": 632,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "IBM Plex Sans JP",
@@ -8359,7 +8359,7 @@
     "tags": [],
     "lineNumber": 649,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Iceberg",
@@ -8369,7 +8369,7 @@
     "tags": ["code", "techno", "monolinear", "large sizes"],
     "lineNumber": 650,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Iceland",
@@ -8450,7 +8450,7 @@
     "tags": ["code"],
     "lineNumber": 656,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Inder",
@@ -8460,7 +8460,7 @@
     "tags": ["art nouveau", "low contrast"],
     "lineNumber": 657,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Indie Flower",
@@ -8480,7 +8480,7 @@
     "tags": ["cursive", "cute", "playful", "swirl", "whimsical"],
     "lineNumber": 659,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Inika",
@@ -8490,7 +8490,7 @@
     "tags": [],
     "lineNumber": 660,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Inknut Antiqua",
@@ -8500,7 +8500,7 @@
     "tags": ["literature", "antiqua"],
     "lineNumber": 661,
     "variable": false,
-    "lastModified": "2025-04-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Inria Sans",
@@ -8510,7 +8510,7 @@
     "tags": ["humanist", "modern"],
     "lineNumber": 662,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Inria Serif",
@@ -8549,7 +8549,7 @@
     "tags": ["grotesque", "legibility"],
     "lineNumber": 665,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Instrument Serif",
@@ -8559,7 +8559,7 @@
     "tags": ["condensed"],
     "lineNumber": 666,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Intel One Mono",
@@ -8704,7 +8704,7 @@
     "tags": ["calligraphic", "formal"],
     "lineNumber": 674,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Itim",
@@ -8794,7 +8794,7 @@
     "tags": ["outline", "shadow", "1700s", "large sizes"],
     "lineNumber": 683,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Jaini",
@@ -8968,7 +8968,7 @@
     "tags": [],
     "lineNumber": 698,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Jockey One",
@@ -9033,7 +9033,7 @@
     "tags": ["thin", "geometric"],
     "lineNumber": 703,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Josefin Slab",
@@ -9107,7 +9107,7 @@
     "tags": ["korean", "round"],
     "lineNumber": 707,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Judson",
@@ -9186,7 +9186,7 @@
     "tags": ["scrawl"],
     "lineNumber": 714,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "K2D",
@@ -9280,7 +9280,7 @@
     "tags": [],
     "lineNumber": 721,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Kalam",
@@ -9320,7 +9320,7 @@
     "tags": ["slab", "egyptian"],
     "lineNumber": 725,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Kanchenjunga",
@@ -9384,7 +9384,7 @@
     "tags": [],
     "lineNumber": 728,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Kapakana",
@@ -9499,7 +9499,7 @@
     "tags": ["brush"],
     "lineNumber": 738,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Kay Pho Du",
@@ -9559,7 +9559,7 @@
     "tags": ["monolinear"],
     "lineNumber": 744,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Khmer",
@@ -9755,7 +9755,7 @@
     "tags": ["slanted", "geometric", "modern"],
     "lineNumber": 761,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Koulen",
@@ -9805,7 +9805,7 @@
     "tags": ["wide"],
     "lineNumber": 766,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Krub",
@@ -9991,7 +9991,7 @@
     "tags": ["cursive", "love"],
     "lineNumber": 777,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Labrada",
@@ -10121,7 +10121,7 @@
     "tags": ["cursive", "romantic"],
     "lineNumber": 787,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "League Gothic",
@@ -10201,7 +10201,7 @@
     "tags": ["disco", "brush"],
     "lineNumber": 794,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Lemonada",
@@ -10351,7 +10351,7 @@
     "tags": ["wide", "legibility"],
     "lineNumber": 802,
     "variable": true,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Lexend Zetta",
@@ -10495,7 +10495,7 @@
     "tags": ["barcode"],
     "lineNumber": 812,
     "variable": false,
-    "lastModified": "2025-06-09"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Libre Barcode 39 Extended",
@@ -10515,7 +10515,7 @@
     "tags": ["barcode"],
     "lineNumber": 814,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Libre Barcode 39 Text",
@@ -10525,7 +10525,7 @@
     "tags": ["barcode"],
     "lineNumber": 815,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Libre Barcode EAN13 Text",
@@ -10775,7 +10775,7 @@
     "tags": ["scrawl", "handwritten"],
     "lineNumber": 832,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Livvic",
@@ -10909,7 +10909,7 @@
     "tags": ["romantic", "hearts"],
     "lineNumber": 842,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Love Ya Like A Sister",
@@ -10919,7 +10919,7 @@
     "tags": ["kids"],
     "lineNumber": 843,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Loved by the King",
@@ -10929,7 +10929,7 @@
     "tags": ["scrawl"],
     "lineNumber": 844,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Lovers Quarrel",
@@ -11058,7 +11058,7 @@
     "tags": ["code", "japanese"],
     "lineNumber": 855,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "M PLUS 1p",
@@ -11168,7 +11168,7 @@
     "tags": ["low contrast"],
     "lineNumber": 863,
     "variable": false,
-    "lastModified": "2025-05-29"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Madimi One",
@@ -11308,7 +11308,7 @@
     "tags": ["round"],
     "lineNumber": 875,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Mansalva",
@@ -11411,7 +11411,7 @@
     "tags": [],
     "lineNumber": 884,
     "variable": true,
-    "lastModified": "2025-04-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Marko One",
@@ -11441,7 +11441,7 @@
     "tags": [],
     "lineNumber": 887,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Martel Sans",
@@ -11451,7 +11451,7 @@
     "tags": ["low contrast"],
     "lineNumber": 888,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Martian Mono",
@@ -11501,7 +11501,7 @@
     "tags": ["small caps"],
     "lineNumber": 893,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Matemasie",
@@ -11641,7 +11641,7 @@
     "tags": ["cursive", "1700s"],
     "lineNumber": 907,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "MedievalSharp",
@@ -11671,7 +11671,7 @@
     "tags": [],
     "lineNumber": 910,
     "variable": false,
-    "lastModified": "2025-04-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Megrim",
@@ -11819,7 +11819,7 @@
     "tags": ["futuristic", "eurostile"],
     "lineNumber": 922,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Micro 5",
@@ -11889,7 +11889,7 @@
     "tags": [],
     "lineNumber": 929,
     "variable": false,
-    "lastModified": "2025-06-11"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Miniver",
@@ -11909,7 +11909,7 @@
     "tags": ["monolinear"],
     "lineNumber": 931,
     "variable": false,
-    "lastModified": "2025-05-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Mirza",
@@ -11929,7 +11929,7 @@
     "tags": ["cursive", "whimsical", "love"],
     "lineNumber": 933,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Mitr",
@@ -12020,7 +12020,7 @@
     "tags": ["narrow"],
     "lineNumber": 941,
     "variable": true,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Moirai One",
@@ -12050,7 +12050,7 @@
     "tags": ["cursive", "heavy"],
     "lineNumber": 944,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Mona Sans",
@@ -12077,7 +12077,7 @@
     "tags": [],
     "lineNumber": 945,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Monda",
@@ -12147,7 +12147,7 @@
     "tags": ["old style"],
     "lineNumber": 952,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Montagu Slab",
@@ -12157,7 +12157,7 @@
     "tags": ["slab"],
     "lineNumber": 953,
     "variable": true,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "MonteCarlo",
@@ -12206,7 +12206,7 @@
     "tags": ["signage", "urban", "vintage"],
     "lineNumber": 956,
     "variable": true,
-    "lastModified": "2025-05-29"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Montserrat Alternates",
@@ -12235,7 +12235,7 @@
     "tags": ["signage", "urban", "vintage"],
     "lineNumber": 957,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Montserrat Underline",
@@ -12264,7 +12264,7 @@
     "tags": ["connected"],
     "lineNumber": 958,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Moo Lah Lah",
@@ -12434,7 +12434,7 @@
     "tags": [],
     "lineNumber": 975,
     "variable": false,
-    "lastModified": "2025-04-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Mukta Malar",
@@ -12547,7 +12547,7 @@
     "tags": ["calligraphic"],
     "lineNumber": 981,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Mynerve",
@@ -12557,7 +12557,7 @@
     "tags": ["handwritten"],
     "lineNumber": 982,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Mystery Quest",
@@ -12833,7 +12833,7 @@
     "tags": [],
     "lineNumber": 1005,
     "variable": false,
-    "lastModified": "2025-04-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Nixie One",
@@ -12973,7 +12973,7 @@
     "tags": ["icons"],
     "lineNumber": 1017,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Naskh Arabic",
@@ -13061,7 +13061,7 @@
     "tags": [],
     "lineNumber": 1022,
     "variable": true,
-    "lastModified": "2025-03-11"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Adlam Unjoined",
@@ -13101,7 +13101,7 @@
     "tags": ["arabic"],
     "lineNumber": 1025,
     "variable": true,
-    "lastModified": "2025-03-11"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Armenian",
@@ -13191,7 +13191,7 @@
     "tags": [],
     "lineNumber": 1032,
     "variable": true,
-    "lastModified": "2025-08-26"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Bhaiksuki",
@@ -13261,7 +13261,7 @@
     "tags": [],
     "lineNumber": 1038,
     "variable": false,
-    "lastModified": "2023-07-24"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Caucasian Albanian",
@@ -13281,7 +13281,7 @@
     "tags": [],
     "lineNumber": 1040,
     "variable": false,
-    "lastModified": "2022-11-09"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Cham",
@@ -13321,7 +13321,7 @@
     "tags": [],
     "lineNumber": 1042,
     "variable": true,
-    "lastModified": "2025-05-29"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Chorasmian",
@@ -13341,7 +13341,7 @@
     "tags": [],
     "lineNumber": 1044,
     "variable": false,
-    "lastModified": "2023-12-14"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Cuneiform",
@@ -13361,7 +13361,7 @@
     "tags": [],
     "lineNumber": 1046,
     "variable": false,
-    "lastModified": "2023-11-09"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Cypro Minoan",
@@ -13401,7 +13401,7 @@
     "tags": [],
     "lineNumber": 1049,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Display",
@@ -13526,7 +13526,7 @@
     "tags": [],
     "lineNumber": 1056,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Glagolitic",
@@ -13543,7 +13543,7 @@
     "tags": [],
     "lineNumber": 1057,
     "variable": false,
-    "lastModified": "2024-01-26"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Gothic",
@@ -13613,7 +13613,7 @@
     "tags": [],
     "lineNumber": 1062,
     "variable": true,
-    "lastModified": "2025-03-11"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans HK",
@@ -13639,7 +13639,7 @@
     "tags": [],
     "lineNumber": 1063,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Hanifi Rohingya",
@@ -13689,7 +13689,7 @@
     "tags": ["hebrew"],
     "lineNumber": 1067,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Imperial Aramaic",
@@ -13699,7 +13699,7 @@
     "tags": [],
     "lineNumber": 1068,
     "variable": false,
-    "lastModified": "2024-07-01"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Indic Siyaq Numbers",
@@ -13709,7 +13709,7 @@
     "tags": [],
     "lineNumber": 1069,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Inscriptional Pahlavi",
@@ -13719,7 +13719,7 @@
     "tags": [],
     "lineNumber": 1070,
     "variable": false,
-    "lastModified": "2024-07-01"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Inscriptional Parthian",
@@ -13729,7 +13729,7 @@
     "tags": [],
     "lineNumber": 1071,
     "variable": false,
-    "lastModified": "2024-07-01"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans JP",
@@ -13749,7 +13749,7 @@
     "tags": [],
     "lineNumber": 1072,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Javanese",
@@ -13779,7 +13779,7 @@
     "tags": [],
     "lineNumber": 1074,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Kaithi",
@@ -13839,7 +13839,7 @@
     "tags": [],
     "lineNumber": 1079,
     "variable": false,
-    "lastModified": "2023-04-27"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Khmer",
@@ -13939,7 +13939,7 @@
     "tags": [],
     "lineNumber": 1086,
     "variable": false,
-    "lastModified": "2024-07-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Linear A",
@@ -13989,7 +13989,7 @@
     "tags": [],
     "lineNumber": 1091,
     "variable": false,
-    "lastModified": "2023-12-14"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Mahajani",
@@ -14135,7 +14135,7 @@
     "tags": [],
     "lineNumber": 1103,
     "variable": false,
-    "lastModified": "2023-11-09"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Miao",
@@ -14323,7 +14323,7 @@
     "tags": [],
     "lineNumber": 1119,
     "variable": false,
-    "lastModified": "2023-07-24"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Ol Chiki",
@@ -14483,7 +14483,7 @@
     "tags": [],
     "lineNumber": 1134,
     "variable": false,
-    "lastModified": "2023-05-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans PhagsPa",
@@ -14589,7 +14589,7 @@
     "tags": [],
     "lineNumber": 1143,
     "variable": false,
-    "lastModified": "2022-11-18"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Shavian",
@@ -14699,7 +14699,7 @@
     "tags": [],
     "lineNumber": 1153,
     "variable": false,
-    "lastModified": "2025-03-11"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Symbols",
@@ -14736,7 +14736,7 @@
     "tags": ["icons", "dingbat"],
     "lineNumber": 1155,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Syriac",
@@ -14756,7 +14756,7 @@
     "tags": [],
     "lineNumber": 1156,
     "variable": false,
-    "lastModified": "2025-05-29"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Syriac Eastern",
@@ -14802,7 +14802,7 @@
     "tags": [],
     "lineNumber": 1158,
     "variable": false,
-    "lastModified": "2025-05-29"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Tagalog",
@@ -14862,7 +14862,7 @@
     "tags": [],
     "lineNumber": 1164,
     "variable": false,
-    "lastModified": "2023-10-25"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Tamil",
@@ -14942,7 +14942,7 @@
     "tags": [],
     "lineNumber": 1169,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Thai",
@@ -14962,7 +14962,7 @@
     "tags": [],
     "lineNumber": 1170,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Thai Looped",
@@ -14982,7 +14982,7 @@
     "tags": [],
     "lineNumber": 1171,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Tifinagh",
@@ -15002,7 +15002,7 @@
     "tags": [],
     "lineNumber": 1173,
     "variable": false,
-    "lastModified": "2023-07-24"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Ugaritic",
@@ -15052,7 +15052,7 @@
     "tags": [],
     "lineNumber": 1178,
     "variable": false,
-    "lastModified": "2022-09-28"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Yi",
@@ -15062,7 +15062,7 @@
     "tags": [],
     "lineNumber": 1179,
     "variable": false,
-    "lastModified": "2023-05-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Sans Zanabazar Square",
@@ -15110,7 +15110,7 @@
     "tags": ["hinted"],
     "lineNumber": 1181,
     "variable": false,
-    "lastModified": "2025-04-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Serif Ahom",
@@ -15140,7 +15140,7 @@
     "tags": [],
     "lineNumber": 1183,
     "variable": true,
-    "lastModified": "2025-05-29"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Serif Balinese",
@@ -15170,7 +15170,7 @@
     "tags": [],
     "lineNumber": 1185,
     "variable": true,
-    "lastModified": "2025-08-26"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Serif Devanagari",
@@ -15227,7 +15227,7 @@
     "tags": [],
     "lineNumber": 1187,
     "variable": true,
-    "lastModified": "2025-03-11"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Serif Dives Akuru",
@@ -15383,7 +15383,7 @@
     "tags": [],
     "lineNumber": 1197,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Serif JP",
@@ -15589,7 +15589,7 @@
     "tags": ["small caps"],
     "lineNumber": 1212,
     "variable": false,
-    "lastModified": "2025-05-29"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Serif Sinhala",
@@ -15724,7 +15724,7 @@
     "tags": [],
     "lineNumber": 1219,
     "variable": true,
-    "lastModified": "2025-05-29"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Serif Todhri",
@@ -15764,7 +15764,7 @@
     "tags": [],
     "lineNumber": 1223,
     "variable": true,
-    "lastModified": "2025-05-29"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Noto Traditional Nushu",
@@ -15804,7 +15804,7 @@
     "tags": ["techno", "futuristic"],
     "lineNumber": 1227,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Nova Mono",
@@ -15938,7 +15938,7 @@
     "tags": [],
     "lineNumber": 1237,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Odibee Sans",
@@ -15968,7 +15968,7 @@
     "tags": ["monolinear", "futuristic", "headlines"],
     "lineNumber": 1240,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Oi",
@@ -15987,7 +15987,7 @@
     "tags": ["fat"],
     "lineNumber": 1241,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Ojuju",
@@ -16141,7 +16141,7 @@
     "tags": ["geometric", "futuristic", "square", "techno"],
     "lineNumber": 1253,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Oregano",
@@ -16181,7 +16181,7 @@
     "tags": ["fun", "surf"],
     "lineNumber": 1257,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Oswald",
@@ -16211,7 +16211,7 @@
     "tags": ["geometric"],
     "lineNumber": 1259,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Over the Rainbow",
@@ -16231,7 +16231,7 @@
     "tags": ["friendly"],
     "lineNumber": 1261,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Overlock SC",
@@ -16310,7 +16310,7 @@
     "tags": [],
     "lineNumber": 1267,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Oxygen Mono",
@@ -16340,7 +16340,7 @@
     "tags": ["small sizes"],
     "lineNumber": 1270,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "PT Sans Caption",
@@ -16350,7 +16350,7 @@
     "tags": [],
     "lineNumber": 1271,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "PT Sans Narrow",
@@ -16360,7 +16360,7 @@
     "tags": ["condensed"],
     "lineNumber": 1272,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "PT Serif",
@@ -16370,7 +16370,7 @@
     "tags": ["transitional"],
     "lineNumber": 1273,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "PT Serif Caption",
@@ -16450,7 +16450,7 @@
     "tags": ["handwritten", "kids", "friendly"],
     "lineNumber": 1281,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Paprika",
@@ -16480,7 +16480,7 @@
     "tags": ["1960s", "cursive", "french"],
     "lineNumber": 1284,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Parkinsans",
@@ -16520,7 +16520,7 @@
     "tags": ["elegant", "romantic"],
     "lineNumber": 1288,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Pathway Extreme",
@@ -16599,7 +16599,7 @@
     "tags": ["low contrast"],
     "lineNumber": 1294,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Pavanam",
@@ -16659,7 +16659,7 @@
     "tags": ["brush"],
     "lineNumber": 1300,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Petit Formal Script",
@@ -16775,7 +16775,7 @@
     "tags": ["cartoon"],
     "lineNumber": 1307,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Pinyon Script",
@@ -16838,7 +16838,7 @@
     "tags": [],
     "lineNumber": 1312,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Play",
@@ -17281,7 +17281,7 @@
     "tags": ["cursive", "connected", "slanted"],
     "lineNumber": 1351,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Playwrite CZ Guides",
@@ -17321,7 +17321,7 @@
     "tags": ["cursive", "connected", "slanted"],
     "lineNumber": 1355,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Playwrite DE LA Guides",
@@ -17361,7 +17361,7 @@
     "tags": ["cursive", "connected", "slanted"],
     "lineNumber": 1359,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Playwrite DE VA Guides",
@@ -17599,7 +17599,7 @@
     "tags": [],
     "lineNumber": 1381,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Playwrite HU Guides",
@@ -17619,7 +17619,7 @@
     "tags": [],
     "lineNumber": 1383,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Playwrite ID Guides",
@@ -17799,7 +17799,7 @@
     "tags": [],
     "lineNumber": 1401,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Playwrite NO Guides",
@@ -17839,7 +17839,7 @@
     "tags": [],
     "lineNumber": 1405,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Playwrite PE Guides",
@@ -17859,7 +17859,7 @@
     "tags": [],
     "lineNumber": 1407,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Playwrite PL Guides",
@@ -17979,7 +17979,7 @@
     "tags": [],
     "lineNumber": 1419,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Playwrite US Trad Guides",
@@ -18143,7 +18143,7 @@
     "tags": ["tall", "large sizes", "low contrast"],
     "lineNumber": 1433,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Ponnala",
@@ -18222,7 +18222,7 @@
     "tags": ["round", "friendly", "groovy"],
     "lineNumber": 1439,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Port Lligat Slab",
@@ -18521,7 +18521,7 @@
     "tags": ["low contrast"],
     "lineNumber": 1464,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Quattrocento Sans",
@@ -18641,7 +18641,7 @@
     "tags": ["legibility", "humanist"],
     "lineNumber": 1473,
     "variable": true,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Radio Canada Big",
@@ -18779,7 +18779,7 @@
     "tags": ["comic", "shadow"],
     "lineNumber": 1484,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Ranchers",
@@ -18830,7 +18830,7 @@
     "tags": [],
     "lineNumber": 1488,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Rationale",
@@ -18870,7 +18870,7 @@
     "tags": ["code"],
     "lineNumber": 1492,
     "variable": true,
-    "lastModified": "2025-05-29"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Red Hat Display",
@@ -18937,7 +18937,7 @@
     "tags": ["geometric"],
     "lineNumber": 1495,
     "variable": true,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Red Rose",
@@ -18977,7 +18977,7 @@
     "tags": ["humanist"],
     "lineNumber": 1499,
     "variable": false,
-    "lastModified": "2025-05-29"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Reddit Sans",
@@ -19034,7 +19034,7 @@
     "tags": ["1900s"],
     "lineNumber": 1503,
     "variable": true,
-    "lastModified": "2025-08-26"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Reem Kufi Fun",
@@ -19095,7 +19095,7 @@
     "tags": [],
     "lineNumber": 1508,
     "variable": false,
-    "lastModified": "2025-05-29"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Revalia",
@@ -19165,7 +19165,7 @@
     "tags": ["grunge"],
     "lineNumber": 1515,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Roboto",
@@ -19258,7 +19258,7 @@
     "tags": [],
     "lineNumber": 1518,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Roboto Mono",
@@ -19436,7 +19436,7 @@
     "tags": ["humanist"],
     "lineNumber": 1528,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Rosario",
@@ -19487,7 +19487,7 @@
     "tags": ["block", "groovy"],
     "lineNumber": 1532,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Rozha One",
@@ -19549,7 +19549,7 @@
     "tags": ["grunge"],
     "lineNumber": 1536,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Rubik Broken Fax",
@@ -19865,7 +19865,7 @@
     "tags": ["techno"],
     "lineNumber": 1562,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Rufina",
@@ -19981,7 +19981,7 @@
     "tags": [],
     "lineNumber": 1572,
     "variable": true,
-    "lastModified": "2025-05-29"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "SUSE",
@@ -20011,7 +20011,7 @@
     "tags": [],
     "lineNumber": 1575,
     "variable": false,
-    "lastModified": "2025-04-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Sail",
@@ -20050,7 +20050,7 @@
     "tags": ["futuristic", "techno"],
     "lineNumber": 1577,
     "variable": true,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Saira Condensed",
@@ -20199,7 +20199,7 @@
     "tags": ["swash"],
     "lineNumber": 1588,
     "variable": true,
-    "lastModified": "2025-05-29"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Sarabun",
@@ -20236,7 +20236,7 @@
     "tags": ["low contrast"],
     "lineNumber": 1590,
     "variable": false,
-    "lastModified": "2025-04-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Sarina",
@@ -20366,7 +20366,7 @@
     "tags": [],
     "lineNumber": 1600,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Schoolbell",
@@ -20599,7 +20599,7 @@
     "tags": ["manga"],
     "lineNumber": 1622,
     "variable": false,
-    "lastModified": "2025-05-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Shippori Antique B1",
@@ -20609,7 +20609,7 @@
     "tags": ["japanese"],
     "lineNumber": 1623,
     "variable": false,
-    "lastModified": "2025-05-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Shippori Mincho",
@@ -20619,7 +20619,7 @@
     "tags": ["japanese"],
     "lineNumber": 1624,
     "variable": false,
-    "lastModified": "2025-05-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Shippori Mincho B1",
@@ -20699,7 +20699,7 @@
     "tags": ["heavy", "caps", "pulp"],
     "lineNumber": 1632,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Signika",
@@ -20769,7 +20769,7 @@
     "tags": ["stencil", "brush", "large sizes"],
     "lineNumber": 1639,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Sirivennela",
@@ -20799,7 +20799,7 @@
     "tags": ["pixel", "retro"],
     "lineNumber": 1642,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Sixtyfour Convergence",
@@ -20959,7 +20959,7 @@
     "tags": ["friendly"],
     "lineNumber": 1657,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Sofia Sans",
@@ -20988,7 +20988,7 @@
     "tags": [],
     "lineNumber": 1658,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Sofia Sans Condensed",
@@ -21164,7 +21164,7 @@
     "tags": ["old style"],
     "lineNumber": 1669,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Sour Gummy",
@@ -21263,7 +21263,7 @@
     "tags": ["legibility"],
     "lineNumber": 1672,
     "variable": true,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Source Serif 4",
@@ -21307,7 +21307,7 @@
     "tags": ["geometric"],
     "lineNumber": 1674,
     "variable": true,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Space Mono",
@@ -21427,7 +21427,7 @@
     "tags": ["fun"],
     "lineNumber": 1683,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Spirax",
@@ -21498,7 +21498,7 @@
     "tags": ["handwritten"],
     "lineNumber": 1689,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Sree Krushnadevaraya",
@@ -21538,7 +21538,7 @@
     "tags": ["caps", "block", "condensed"],
     "lineNumber": 1693,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Stalemate",
@@ -21947,7 +21947,7 @@
     "tags": ["looped", "high contrast"],
     "lineNumber": 1732,
     "variable": false,
-    "lastModified": "2025-04-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Teachers",
@@ -22104,7 +22104,7 @@
     "tags": ["friendly", "legibility"],
     "lineNumber": 1744,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "TikTok Sans",
@@ -22141,7 +22141,7 @@
     "tags": ["geometric", "round"],
     "lineNumber": 1747,
     "variable": true,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Tilt Prism",
@@ -22161,7 +22161,7 @@
     "tags": ["geometric"],
     "lineNumber": 1749,
     "variable": true,
-    "lastModified": "2025-06-09"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Timmana",
@@ -22400,7 +22400,7 @@
     "tags": ["lines", "outline"],
     "lineNumber": 1767,
     "variable": false,
-    "lastModified": "2025-05-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Triodion",
@@ -22747,7 +22747,7 @@
     "tags": ["german", "fraktur", "blackletter"],
     "lineNumber": 1791,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "UnifrakturMaguntia",
@@ -22856,7 +22856,7 @@
     "tags": ["cursive", "monolinear", "low contrast"],
     "lineNumber": 1800,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Varela",
@@ -22947,7 +22947,7 @@
     "tags": [],
     "lineNumber": 1807,
     "variable": false,
-    "lastModified": "2025-04-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Viaoda Libre",
@@ -23009,7 +23009,7 @@
     "tags": ["code"],
     "lineNumber": 1811,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Vidaloka",
@@ -23039,7 +23039,7 @@
     "tags": ["heavy", "signage"],
     "lineNumber": 1814,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Voces",
@@ -23119,7 +23119,7 @@
     "tags": ["script"],
     "lineNumber": 1820,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "WDXL Lubrifont JP N",
@@ -23221,7 +23221,7 @@
     "tags": ["elegant", "cursive", "calligraphic"],
     "lineNumber": 1829,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Wavefont",
@@ -23261,7 +23261,7 @@
     "tags": ["heavy"],
     "lineNumber": 1832,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Whisper",
@@ -23532,7 +23532,7 @@
     "tags": ["brush"],
     "lineNumber": 1851,
     "variable": false,
-    "lastModified": "2025-04-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Yellowtail",
@@ -23552,7 +23552,7 @@
     "tags": ["korean"],
     "lineNumber": 1853,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Yeseva One",
@@ -23766,7 +23766,7 @@
     "tags": ["handwritten", "playful"],
     "lineNumber": 1863,
     "variable": false,
-    "lastModified": "2025-05-23"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Yuji Hentaigana Akari",
@@ -23846,7 +23846,7 @@
     "tags": [],
     "lineNumber": 1871,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Zain",
@@ -23895,7 +23895,7 @@
     "tags": ["futuristic", "techno"],
     "lineNumber": 1875,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Zen Kaku Gothic Antique",
@@ -23905,7 +23905,7 @@
     "tags": ["japanese"],
     "lineNumber": 1876,
     "variable": false,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Zen Kaku Gothic New",
@@ -24006,7 +24006,7 @@
     "tags": ["slab"],
     "lineNumber": 1885,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-05"
   },
   {
     "family": "Zilla Slab Highlight",
