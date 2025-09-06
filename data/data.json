@@ -12933,7 +12933,7 @@
     "tags": ["color", "icons"],
     "lineNumber": 1014,
     "variable": false,
-    "lastModified": "2025-06-17"
+    "lastModified": "2025-09-06"
   },
   {
     "family": "Noto Emoji",
@@ -12943,7 +12943,7 @@
     "tags": ["icons"],
     "lineNumber": 1015,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-06"
   },
   {
     "family": "Noto Kufi Arabic",
@@ -12963,7 +12963,7 @@
     "tags": ["arabic"],
     "lineNumber": 1016,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-06"
   },
   {
     "family": "Noto Music",
@@ -12983,7 +12983,7 @@
     "tags": ["arabic"],
     "lineNumber": 1018,
     "variable": true,
-    "lastModified": "2025-06-02"
+    "lastModified": "2025-09-06"
   },
   {
     "family": "Noto Nastaliq Urdu",
@@ -13051,7 +13051,7 @@
     "tags": ["hinted"],
     "lineNumber": 1021,
     "variable": false,
-    "lastModified": "2025-03-11"
+    "lastModified": "2025-09-06"
   },
   {
     "family": "Noto Sans Adlam",
@@ -13101,7 +13101,7 @@
     "tags": ["arabic"],
     "lineNumber": 1025,
     "variable": true,
-    "lastModified": "2025-09-05"
+    "lastModified": "2025-09-06"
   },
   {
     "family": "Noto Sans Armenian",
@@ -13438,7 +13438,7 @@
     "tags": [],
     "lineNumber": 1050,
     "variable": true,
-    "lastModified": "2025-03-11"
+    "lastModified": "2025-09-06"
   },
   {
     "family": "Noto Sans Duployan",
@@ -14193,7 +14193,7 @@
     "tags": [],
     "lineNumber": 1107,
     "variable": true,
-    "lastModified": "2025-03-11"
+    "lastModified": "2025-09-06"
   },
   {
     "family": "Noto Sans Mro",
@@ -15110,7 +15110,7 @@
     "tags": ["hinted"],
     "lineNumber": 1181,
     "variable": false,
-    "lastModified": "2025-09-05"
+    "lastModified": "2025-09-06"
   },
   {
     "family": "Noto Serif Ahom",
@@ -15227,7 +15227,7 @@
     "tags": [],
     "lineNumber": 1187,
     "variable": true,
-    "lastModified": "2025-09-05"
+    "lastModified": "2025-09-06"
   },
   {
     "family": "Noto Serif Dives Akuru",
