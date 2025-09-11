@@ -5452,7 +5452,7 @@ exports[`MainApp renders correctly 1`] = `
             
         <ul
           class="families"
-          fonts="[{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false,"lastModified":"2025-09-08"},{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":5,"variable":false,"lastModified":"2025-05-30"},{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":6,"variable":false,"lastModified":"2025-05-30"},{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":7,"variable":false,"lastModified":"2025-05-30"},{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":8,"variable":false,"lastModified":"2025-06-02"},{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":9,"variable":false,"lastModified":"2025-05-30"},{"family":"Aclonica","variants":["regular"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":10,"variable":false,"lastModified":"2025-09-08"},{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":11,"variable":false,"lastModified":"2025-06-02"},{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":12,"variable":false,"lastModified":"2025-05-30"},{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":13,"variable":false,"lastModified":"2025-05-30"}]"
+          fonts="[{"family":"ABeeZee","variants":["regular","italic"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["literacy","kids"],"lineNumber":2,"variable":false,"lastModified":"2025-09-08"},{"family":"Abel","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["condensed"],"lineNumber":5,"variable":false,"lastModified":"2025-05-30"},{"family":"Abhaya Libre","variants":["regular","500","600","700","800"],"subsets":["sinhala","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":6,"variable":false,"lastModified":"2025-05-30"},{"family":"Aboreto","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["caps"],"lineNumber":7,"variable":false,"lastModified":"2025-05-30"},{"family":"Abril Fatface","variants":["regular"],"subsets":["latin","latin-ext"],"category":"display","tags":["heavy","elegant","didone","headlines"],"lineNumber":8,"variable":false,"lastModified":"2025-06-02"},{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":9,"variable":false,"lastModified":"2025-09-10"},{"family":"Aclonica","variants":["regular"],"subsets":["latin","latin-ext"],"category":"sans-serif","tags":["modern","friendly"],"lineNumber":10,"variable":false,"lastModified":"2025-09-08"},{"family":"Acme","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["cartoon","comic","groovy","headlines"],"lineNumber":11,"variable":false,"lastModified":"2025-06-02"},{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":12,"variable":false,"lastModified":"2025-09-10"},{"family":"Adamina","variants":["regular"],"subsets":["latin"],"category":"serif","tags":["compact","small sizes","transitional"],"lineNumber":13,"variable":false,"lastModified":"2025-05-30"}]"
           is="font-list"
         >
           <li
@@ -6084,7 +6084,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":9,"variable":false,"lastModified":"2025-05-30"}"
+            font="{"family":"Abyssinica SIL","variants":["regular"],"subsets":["ethiopic","latin","latin-ext"],"category":"serif","tags":[],"lineNumber":9,"variable":false,"lastModified":"2025-09-10"}"
             is="font-item"
           >
             <div
@@ -6470,7 +6470,7 @@ exports[`MainApp renders correctly 1`] = `
           
 
           <li
-            font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":12,"variable":false,"lastModified":"2025-05-30"}"
+            font="{"family":"Actor","variants":["regular"],"subsets":["latin"],"category":"sans-serif","tags":["thin","legibility"],"lineNumber":12,"variable":false,"lastModified":"2025-09-10"}"
             is="font-item"
           >
             <div
