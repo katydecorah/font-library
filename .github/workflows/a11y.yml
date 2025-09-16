@@ -14,7 +14,7 @@ jobs:
       - name: Checkout branch
         uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
 
       - name: Build site
         run: npm ci && npm start &
