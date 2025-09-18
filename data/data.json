@@ -6461,7 +6461,7 @@
     "tags": ["wireframe"],
     "lineNumber": 501,
     "variable": false,
-    "lastModified": "2025-09-05"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Flow Circular",
@@ -6471,7 +6471,7 @@
     "tags": ["wireframe"],
     "lineNumber": 502,
     "variable": false,
-    "lastModified": "2025-09-10"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Flow Rounded",
@@ -6481,7 +6481,7 @@
     "tags": ["wireframe", "round"],
     "lineNumber": 503,
     "variable": false,
-    "lastModified": "2025-09-05"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Foldit",
@@ -8844,7 +8844,7 @@
     "tags": ["knit"],
     "lineNumber": 682,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Jacquard 12 Charted",
@@ -8854,7 +8854,7 @@
     "tags": ["knit"],
     "lineNumber": 683,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Jacquard 24",
@@ -8864,7 +8864,7 @@
     "tags": ["knit"],
     "lineNumber": 684,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Jacquard 24 Charted",
@@ -8874,7 +8874,7 @@
     "tags": ["knit"],
     "lineNumber": 685,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Jacquarda Bastarda 9",
@@ -8884,7 +8884,7 @@
     "tags": ["needlepoint", "pixel"],
     "lineNumber": 686,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Jacquarda Bastarda 9 Charted",
@@ -8894,7 +8894,7 @@
     "tags": ["needlepoint"],
     "lineNumber": 687,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Jacques Francois",
@@ -8964,7 +8964,7 @@
     "tags": ["knit", "sport"],
     "lineNumber": 694,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Jersey 10 Charted",
@@ -8974,7 +8974,7 @@
     "tags": ["knit", "sport"],
     "lineNumber": 695,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Jersey 15",
@@ -8984,7 +8984,7 @@
     "tags": ["knit", "sport"],
     "lineNumber": 696,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Jersey 15 Charted",
@@ -8994,7 +8994,7 @@
     "tags": ["knit", "sport"],
     "lineNumber": 697,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Jersey 20",
@@ -9004,7 +9004,7 @@
     "tags": ["knit", "sport"],
     "lineNumber": 698,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Jersey 20 Charted",
@@ -9014,7 +9014,7 @@
     "tags": ["knit", "sport"],
     "lineNumber": 699,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Jersey 25",
@@ -9024,7 +9024,7 @@
     "tags": ["knit", "sport"],
     "lineNumber": 700,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Jersey 25 Charted",
@@ -9034,7 +9034,7 @@
     "tags": ["knit", "sport"],
     "lineNumber": 701,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "JetBrains Mono",
@@ -9689,7 +9689,7 @@
     "tags": ["cambodian", "khmer"],
     "lineNumber": 751,
     "variable": false,
-    "lastModified": "2025-09-08"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Khula",
@@ -10595,7 +10595,7 @@
     "tags": ["barcode"],
     "lineNumber": 816,
     "variable": false,
-    "lastModified": "2025-09-16"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Libre Barcode 128 Text",
@@ -10605,7 +10605,7 @@
     "tags": ["barcode"],
     "lineNumber": 817,
     "variable": false,
-    "lastModified": "2025-09-16"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Libre Barcode 39",
@@ -10615,7 +10615,7 @@
     "tags": ["barcode"],
     "lineNumber": 818,
     "variable": false,
-    "lastModified": "2025-09-05"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Libre Barcode 39 Extended",
@@ -10625,7 +10625,7 @@
     "tags": ["barcode"],
     "lineNumber": 819,
     "variable": false,
-    "lastModified": "2025-09-10"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Libre Barcode 39 Extended Text",
@@ -10635,7 +10635,7 @@
     "tags": ["barcode"],
     "lineNumber": 820,
     "variable": false,
-    "lastModified": "2025-09-05"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Libre Barcode 39 Text",
@@ -10645,7 +10645,7 @@
     "tags": ["barcode"],
     "lineNumber": 821,
     "variable": false,
-    "lastModified": "2025-09-05"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Libre Barcode EAN13 Text",
@@ -10655,7 +10655,7 @@
     "tags": ["barcode"],
     "lineNumber": 822,
     "variable": false,
-    "lastModified": "2025-09-10"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Libre Baskerville",
@@ -10813,7 +10813,7 @@
     "tags": ["lines", "diagram"],
     "lineNumber": 834,
     "variable": false,
-    "lastModified": "2025-09-08"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Lisu Bosa",
@@ -11641,7 +11641,7 @@
     "tags": ["icons"],
     "lineNumber": 901,
     "variable": false,
-    "lastModified": "2025-09-08"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Material Icons Outlined",
@@ -13063,7 +13063,7 @@
     "tags": ["icons"],
     "lineNumber": 1021,
     "variable": true,
-    "lastModified": "2025-09-11"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Noto Kufi Arabic",
@@ -13221,7 +13221,7 @@
     "tags": ["arabic"],
     "lineNumber": 1031,
     "variable": true,
-    "lastModified": "2025-09-06"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Noto Sans Armenian",
@@ -13311,7 +13311,7 @@
     "tags": [],
     "lineNumber": 1038,
     "variable": true,
-    "lastModified": "2025-09-05"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Noto Sans Bhaiksuki",
@@ -14759,7 +14759,7 @@
     "tags": [],
     "lineNumber": 1153,
     "variable": true,
-    "lastModified": "2025-09-10"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Noto Sans Sogdian",
@@ -15012,7 +15012,7 @@
     "tags": [],
     "lineNumber": 1172,
     "variable": false,
-    "lastModified": "2025-09-08"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Noto Sans Tangsa",
@@ -15290,7 +15290,7 @@
     "tags": [],
     "lineNumber": 1191,
     "variable": true,
-    "lastModified": "2025-09-05"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Noto Serif Devanagari",
@@ -16828,7 +16828,7 @@
     "tags": [],
     "lineNumber": 1309,
     "variable": false,
-    "lastModified": "2025-05-23"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Philosopher",
@@ -18273,7 +18273,7 @@
     "tags": [],
     "lineNumber": 1440,
     "variable": false,
-    "lastModified": "2024-11-20"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Ponomar",
@@ -19077,7 +19077,7 @@
     "tags": ["wireframe"],
     "lineNumber": 1503,
     "variable": false,
-    "lastModified": "2025-09-16"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Redacted Script",
@@ -19087,7 +19087,7 @@
     "tags": ["wireframe"],
     "lineNumber": 1504,
     "variable": false,
-    "lastModified": "2025-09-16"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Reddit Mono",
@@ -20799,7 +20799,7 @@
     "tags": ["modern"],
     "lineNumber": 1636,
     "variable": false,
-    "lastModified": "2025-01-08"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Sigmar",
@@ -23361,7 +23361,7 @@
     "tags": ["diagram"],
     "lineNumber": 1836,
     "variable": false,
-    "lastModified": "2025-09-11"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Wellfleet",
@@ -23612,7 +23612,7 @@
     "tags": ["dingbat", "knit"],
     "lineNumber": 1853,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Yarndings 12 Charted",
@@ -23622,7 +23622,7 @@
     "tags": ["dingbat", "knit"],
     "lineNumber": 1854,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Yarndings 20",
@@ -23632,7 +23632,7 @@
     "tags": ["dingbat", "knit"],
     "lineNumber": 1855,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Yarndings 20 Charted",
@@ -23642,7 +23642,7 @@
     "tags": ["dingbat", "knit"],
     "lineNumber": 1856,
     "variable": false,
-    "lastModified": "2025-05-30"
+    "lastModified": "2025-09-17"
   },
   {
     "family": "Yatra One",
@@ -24036,7 +24036,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["expanded"],
     "lineNumber": 1880,
     "variable": false,
     "lastModified": "2025-09-16"
@@ -24063,7 +24063,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "sans-serif",
-    "tags": [],
+    "tags": ["expanded"],
     "lineNumber": 1881,
     "variable": false,
     "lastModified": "2025-09-16"
