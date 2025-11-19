@@ -11781,7 +11781,7 @@
     "tags": [],
     "lineNumber": 912,
     "variable": false,
-    "lastModified": "2025-11-13"
+    "lastModified": "2025-11-18"
   },
   {
     "family": "Material Symbols Outlined",
@@ -11791,7 +11791,7 @@
     "tags": ["outline", "icons"],
     "lineNumber": 913,
     "variable": false,
-    "lastModified": "2025-11-13"
+    "lastModified": "2025-11-18"
   },
   {
     "family": "Material Symbols Rounded",
@@ -11801,7 +11801,7 @@
     "tags": ["round", "icons"],
     "lineNumber": 914,
     "variable": false,
-    "lastModified": "2025-11-13"
+    "lastModified": "2025-11-18"
   },
   {
     "family": "Material Symbols Sharp",
@@ -11811,7 +11811,7 @@
     "tags": ["icons"],
     "lineNumber": 915,
     "variable": false,
-    "lastModified": "2025-11-13"
+    "lastModified": "2025-11-18"
   },
   {
     "family": "Maven Pro",
@@ -19464,7 +19464,7 @@
     "tags": ["legibility"],
     "lineNumber": 1532,
     "variable": false,
-    "lastModified": "2025-09-08"
+    "lastModified": "2025-11-18"
   },
   {
     "family": "Roboto Condensed",
@@ -20356,7 +20356,7 @@
     "tags": ["futuristic", "techno"],
     "lineNumber": 1594,
     "variable": true,
-    "lastModified": "2025-09-05"
+    "lastModified": "2025-11-18"
   },
   {
     "family": "Saira Condensed",
