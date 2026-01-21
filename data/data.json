@@ -3887,7 +3887,7 @@
     "tags": [],
     "lineNumber": 302,
     "variable": false,
-    "lastModified": "2025-12-10"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Caveat",
@@ -13638,7 +13638,7 @@
     "tags": [],
     "lineNumber": 1056,
     "variable": false,
-    "lastModified": "2025-09-16"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Buhid",
@@ -13698,7 +13698,7 @@
     "tags": [],
     "lineNumber": 1061,
     "variable": false,
-    "lastModified": "2025-09-05"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Cham",
@@ -14476,7 +14476,7 @@
     "tags": [],
     "lineNumber": 1118,
     "variable": false,
-    "lastModified": "2025-09-02"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Math",
@@ -14536,7 +14536,7 @@
     "tags": [],
     "lineNumber": 1123,
     "variable": false,
-    "lastModified": "2025-09-16"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Meroitic",
@@ -14562,7 +14562,7 @@
     "tags": [],
     "lineNumber": 1125,
     "variable": false,
-    "lastModified": "2025-09-16"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Modi",
@@ -14620,7 +14620,7 @@
     "tags": [],
     "lineNumber": 1129,
     "variable": false,
-    "lastModified": "2025-09-10"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Multani",
@@ -14630,7 +14630,7 @@
     "tags": [],
     "lineNumber": 1130,
     "variable": false,
-    "lastModified": "2025-09-11"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Myanmar",
@@ -14645,12 +14645,12 @@
       "800",
       "900"
     ],
-    "subsets": ["myanmar"],
+    "subsets": ["myanmar", "latin", "latin-ext"],
     "category": "sans-serif",
     "tags": [],
     "lineNumber": 1131,
     "variable": false,
-    "lastModified": "2025-09-16"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans NKo",
@@ -14720,7 +14720,7 @@
     "tags": [],
     "lineNumber": 1138,
     "variable": false,
-    "lastModified": "2025-09-08"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Nushu",
@@ -14860,7 +14860,7 @@
     "tags": [],
     "lineNumber": 1151,
     "variable": false,
-    "lastModified": "2025-09-11"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Osmanya",
@@ -14870,7 +14870,7 @@
     "tags": [],
     "lineNumber": 1152,
     "variable": false,
-    "lastModified": "2025-09-11"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Pahawh Hmong",
@@ -14880,7 +14880,7 @@
     "tags": [],
     "lineNumber": 1153,
     "variable": false,
-    "lastModified": "2025-09-10"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Palmyrene",
@@ -15006,7 +15006,7 @@
     "tags": [],
     "lineNumber": 1164,
     "variable": false,
-    "lastModified": "2025-09-05"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Shavian",
@@ -15259,7 +15259,7 @@
     "tags": [],
     "lineNumber": 1182,
     "variable": false,
-    "lastModified": "2025-09-11"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Tai Le",
@@ -15269,7 +15269,7 @@
     "tags": [],
     "lineNumber": 1183,
     "variable": false,
-    "lastModified": "2025-09-11"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Tai Tham",
@@ -15459,7 +15459,7 @@
     "tags": [],
     "lineNumber": 1197,
     "variable": false,
-    "lastModified": "2025-09-16"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Vithkuqi",
@@ -15479,7 +15479,7 @@
     "tags": [],
     "lineNumber": 1199,
     "variable": false,
-    "lastModified": "2025-09-11"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Warang Citi",
@@ -15489,7 +15489,7 @@
     "tags": [],
     "lineNumber": 1200,
     "variable": false,
-    "lastModified": "2025-09-05"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Yi",
@@ -15499,7 +15499,7 @@
     "tags": [],
     "lineNumber": 1201,
     "variable": false,
-    "lastModified": "2025-09-05"
+    "lastModified": "2026-01-20"
   },
   {
     "family": "Noto Sans Zanabazar Square",
