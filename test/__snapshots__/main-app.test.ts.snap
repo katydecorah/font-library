@@ -4224,6 +4224,12 @@ exports[`MainApp renders correctly 1`] = `
                 bengali
               </option>
               <option
+                id="beria-erfe"
+                value="beria-erfe"
+              >
+                beria-erfe
+              </option>
+              <option
                 id="bhaiksuki"
                 value="bhaiksuki"
               >

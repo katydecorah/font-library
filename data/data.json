@@ -9869,12 +9869,12 @@
   {
     "family": "Kedebideri",
     "variants": ["regular", "500", "600", "700", "800", "900"],
-    "subsets": ["latin"],
+    "subsets": ["beria-erfe", "latin"],
     "category": "sans-serif",
     "tags": [],
     "lineNumber": 758,
     "variable": false,
-    "lastModified": "2025-11-20"
+    "lastModified": "2026-01-29"
   },
   {
     "family": "Kelly Slab",
