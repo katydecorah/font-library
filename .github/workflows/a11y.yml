@@ -20,7 +20,7 @@ jobs:
         run: npm ci && npm start &
 
       - name: Scan site
-        uses: double-great/accessibility-scan-action@v0.5.0
+        uses: double-great/accessibility-scan-action@v0.5.1
         with:
           url: http://localhost:8080
           inputUrls: http://localhost:8080?category=sans-serif,http://localhost:8080?tag=art+deco,http://localhost:8080/?variant=600&tag=modern&subset=greek&category=sans-serif
