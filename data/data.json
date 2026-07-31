@@ -7841,7 +7841,7 @@
     "tags": [],
     "lineNumber": 597,
     "variable": false,
-    "lastModified": "2026-05-21"
+    "lastModified": "2026-07-30"
   },
   {
     "family": "Gorditas",
@@ -12335,7 +12335,7 @@
     "tags": [],
     "lineNumber": 942,
     "variable": false,
-    "lastModified": "2026-07-23"
+    "lastModified": "2026-07-30"
   },
   {
     "family": "Material Symbols Outlined",
@@ -12345,7 +12345,7 @@
     "tags": ["outline", "icons"],
     "lineNumber": 943,
     "variable": false,
-    "lastModified": "2026-07-23"
+    "lastModified": "2026-07-30"
   },
   {
     "family": "Material Symbols Rounded",
@@ -12355,7 +12355,7 @@
     "tags": ["round", "icons"],
     "lineNumber": 944,
     "variable": false,
-    "lastModified": "2026-07-23"
+    "lastModified": "2026-07-30"
   },
   {
     "family": "Material Symbols Sharp",
@@ -12365,7 +12365,7 @@
     "tags": ["icons"],
     "lineNumber": 945,
     "variable": false,
-    "lastModified": "2026-07-23"
+    "lastModified": "2026-07-30"
   },
   {
     "family": "Maven Pro",
