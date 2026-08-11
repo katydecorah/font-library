@@ -10130,7 +10130,7 @@
     "tags": [],
     "lineNumber": 770,
     "variable": false,
-    "lastModified": "2024-10-29"
+    "lastModified": "2026-08-10"
   },
   {
     "family": "Karla Tamil Upright",
@@ -10140,7 +10140,7 @@
     "tags": [],
     "lineNumber": 771,
     "variable": false,
-    "lastModified": "2024-10-29"
+    "lastModified": "2026-08-10"
   },
   {
     "family": "Karma",
@@ -13756,7 +13756,7 @@
     "tags": ["color", "icons"],
     "lineNumber": 1061,
     "variable": false,
-    "lastModified": "2026-02-17"
+    "lastModified": "2026-08-10"
   },
   {
     "family": "Noto Emoji",
@@ -21785,12 +21785,12 @@
   {
     "family": "Single Day",
     "variants": ["regular"],
-    "subsets": ["korean"],
+    "subsets": ["korean", "latin"],
     "category": "display",
     "tags": ["korean"],
     "lineNumber": 1694,
     "variable": false,
-    "lastModified": "2025-09-08"
+    "lastModified": "2026-08-10"
   },
   {
     "family": "Sintony",
@@ -22160,12 +22160,12 @@
   {
     "family": "Song Myung",
     "variants": ["regular"],
-    "subsets": ["korean"],
+    "subsets": ["korean", "latin"],
     "category": "serif",
     "tags": ["korean"],
     "lineNumber": 1722,
     "variable": false,
-    "lastModified": "2025-09-08"
+    "lastModified": "2026-08-10"
   },
   {
     "family": "Sono",
@@ -22734,12 +22734,12 @@
   {
     "family": "Stylish",
     "variants": ["regular"],
-    "subsets": ["korean"],
+    "subsets": ["korean", "latin"],
     "category": "sans-serif",
     "tags": ["korean", "uneven"],
     "lineNumber": 1766,
     "variable": false,
-    "lastModified": "2025-06-25"
+    "lastModified": "2026-08-10"
   },
   {
     "family": "Sue Ellen Francisco",
@@ -22784,12 +22784,12 @@
   {
     "family": "Sunflower",
     "variants": ["300", "500", "700"],
-    "subsets": ["korean"],
+    "subsets": ["korean", "latin"],
     "category": "sans-serif",
     "tags": ["geometric", "korean"],
     "lineNumber": 1771,
     "variable": false,
-    "lastModified": "2025-09-16"
+    "lastModified": "2026-08-10"
   },
   {
     "family": "Sunshiney",
