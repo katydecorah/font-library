@@ -861,7 +861,7 @@
   "Libre Barcode EAN13 Text": ["barcode"],
   "Libre Baskerville": ["transitional"],
   "Libre Bodoni": [],
-  "Libre Caslon Condensed": [],
+  "Libre Caslon Condensed": ["condensed"],
   "Libre Caslon Display": ["1950s"],
   "Libre Caslon Text": ["1950s"],
   "Libre Franklin": ["1900s"],

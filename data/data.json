@@ -11389,7 +11389,7 @@
     ],
     "subsets": ["latin", "latin-ext"],
     "category": "serif",
-    "tags": [],
+    "tags": ["condensed"],
     "lineNumber": 864,
     "variable": false,
     "lastModified": "2026-09-29"
