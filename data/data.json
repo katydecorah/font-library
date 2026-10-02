@@ -282,7 +282,7 @@
     "tags": ["condensed", "narrow"],
     "lineNumber": 25,
     "variable": true,
-    "lastModified": "2026-09-29"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Akt",
@@ -3351,7 +3351,7 @@
     "tags": [],
     "lineNumber": 257,
     "variable": false,
-    "lastModified": "2026-03-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Bpmf Iansui",
@@ -3361,7 +3361,7 @@
     "tags": [],
     "lineNumber": 258,
     "variable": false,
-    "lastModified": "2026-03-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Bpmf Zihi Kai Std",
@@ -3371,7 +3371,7 @@
     "tags": [],
     "lineNumber": 259,
     "variable": false,
-    "lastModified": "2026-03-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Braah One",
@@ -3662,7 +3662,7 @@
     "tags": [],
     "lineNumber": 285,
     "variable": false,
-    "lastModified": "2026-03-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Caesar Dressing",
@@ -4322,7 +4322,7 @@
     "tags": ["round"],
     "lineNumber": 340,
     "variable": false,
-    "lastModified": "2026-03-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Chiron Hei HK",
@@ -4359,7 +4359,7 @@
     "tags": [],
     "lineNumber": 341,
     "variable": false,
-    "lastModified": "2026-07-23"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Chiron Sung HK",
@@ -4469,7 +4469,7 @@
     "tags": [],
     "lineNumber": 345,
     "variable": false,
-    "lastModified": "2026-03-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Chokokutai",
@@ -4538,7 +4538,7 @@
     "tags": [],
     "lineNumber": 350,
     "variable": false,
-    "lastModified": "2026-09-29"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Clicker Script",
@@ -5561,7 +5561,7 @@
     "tags": ["pixel", "game"],
     "lineNumber": 436,
     "variable": false,
-    "lastModified": "2025-09-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Doto",
@@ -7843,7 +7843,7 @@
     "tags": [],
     "lineNumber": 598,
     "variable": false,
-    "lastModified": "2026-07-23"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Google Sans Code",
@@ -7878,7 +7878,7 @@
     "tags": [],
     "lineNumber": 599,
     "variable": false,
-    "lastModified": "2026-09-29"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Google Sans Flex",
@@ -7909,7 +7909,7 @@
     "tags": [],
     "lineNumber": 600,
     "variable": false,
-    "lastModified": "2026-07-30"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Gorditas",
@@ -8452,7 +8452,7 @@
     "tags": [],
     "lineNumber": 641,
     "variable": false,
-    "lastModified": "2026-09-29"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Hedvig Letters Serif",
@@ -8462,7 +8462,7 @@
     "tags": [],
     "lineNumber": 642,
     "variable": false,
-    "lastModified": "2026-09-29"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Heebo",
@@ -8728,7 +8728,7 @@
     "tags": [],
     "lineNumber": 663,
     "variable": false,
-    "lastModified": "2026-03-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Hurricane",
@@ -8860,7 +8860,7 @@
     "tags": [],
     "lineNumber": 671,
     "variable": false,
-    "lastModified": "2025-09-10"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "IBM Plex Sans KR",
@@ -9025,7 +9025,7 @@
     "tags": [],
     "lineNumber": 686,
     "variable": false,
-    "lastModified": "2026-03-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Ibarra Real Nova",
@@ -9443,7 +9443,7 @@
     "tags": [],
     "lineNumber": 713,
     "variable": false,
-    "lastModified": "2026-09-29"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Istok Web",
@@ -10019,7 +10019,7 @@
     "tags": [],
     "lineNumber": 760,
     "variable": false,
-    "lastModified": "2025-09-16"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Kaisei HarunoUmi",
@@ -10029,7 +10029,7 @@
     "tags": [],
     "lineNumber": 761,
     "variable": false,
-    "lastModified": "2025-09-16"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Kaisei Opti",
@@ -10039,7 +10039,7 @@
     "tags": ["japanese"],
     "lineNumber": 762,
     "variable": false,
-    "lastModified": "2025-09-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Kaisei Tokumin",
@@ -10049,7 +10049,7 @@
     "tags": [],
     "lineNumber": 763,
     "variable": false,
-    "lastModified": "2025-09-05"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Kalam",
@@ -10398,7 +10398,7 @@
     "tags": ["cute"],
     "lineNumber": 793,
     "variable": false,
-    "lastModified": "2025-09-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Klee One",
@@ -10408,7 +10408,7 @@
     "tags": ["friendly", "round"],
     "lineNumber": 794,
     "variable": false,
-    "lastModified": "2025-09-08"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Knewave",
@@ -10584,7 +10584,7 @@
     "tags": [],
     "lineNumber": 808,
     "variable": false,
-    "lastModified": "2026-09-29"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Kristi",
@@ -10731,7 +10731,7 @@
     "tags": [],
     "lineNumber": 818,
     "variable": false,
-    "lastModified": "2026-08-25"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "LXGW Marker Gothic",
@@ -10750,7 +10750,7 @@
     "tags": [],
     "lineNumber": 819,
     "variable": false,
-    "lastModified": "2026-03-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "LXGW WenKai Mono TC",
@@ -10770,7 +10770,7 @@
     "tags": [],
     "lineNumber": 820,
     "variable": false,
-    "lastModified": "2026-03-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "LXGW WenKai TC",
@@ -10790,7 +10790,7 @@
     "tags": [],
     "lineNumber": 821,
     "variable": false,
-    "lastModified": "2026-03-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "La Belle Aurore",
@@ -11392,7 +11392,7 @@
     "tags": ["condensed"],
     "lineNumber": 864,
     "variable": false,
-    "lastModified": "2026-09-29"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Libre Caslon Display",
@@ -11554,7 +11554,7 @@
     "tags": ["lines", "diagram"],
     "lineNumber": 875,
     "variable": false,
-    "lastModified": "2025-09-17"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Lisu Bosa",
@@ -11909,7 +11909,7 @@
     "tags": ["japanese"],
     "lineNumber": 901,
     "variable": true,
-    "lastModified": "2026-05-13"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "M PLUS 1 Code",
@@ -11919,7 +11919,7 @@
     "tags": ["code", "japanese"],
     "lineNumber": 902,
     "variable": true,
-    "lastModified": "2026-05-13"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "M PLUS 1p",
@@ -11959,7 +11959,7 @@
     "tags": ["japanese"],
     "lineNumber": 904,
     "variable": true,
-    "lastModified": "2026-05-13"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "M PLUS Code Latin",
@@ -12009,7 +12009,7 @@
     "tags": [],
     "lineNumber": 907,
     "variable": false,
-    "lastModified": "2026-05-13"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Ma Shan Zheng",
@@ -12452,7 +12452,7 @@
     "tags": [],
     "lineNumber": 948,
     "variable": false,
-    "lastModified": "2026-09-22"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Material Symbols Outlined",
@@ -12462,7 +12462,7 @@
     "tags": ["outline", "icons"],
     "lineNumber": 949,
     "variable": false,
-    "lastModified": "2026-09-22"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Material Symbols Rounded",
@@ -12472,7 +12472,7 @@
     "tags": ["round", "icons"],
     "lineNumber": 950,
     "variable": false,
-    "lastModified": "2026-09-22"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Material Symbols Sharp",
@@ -12482,7 +12482,7 @@
     "tags": ["icons"],
     "lineNumber": 951,
     "variable": false,
-    "lastModified": "2026-09-22"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Maven Pro",
@@ -14579,7 +14579,7 @@
     "tags": [],
     "lineNumber": 1116,
     "variable": false,
-    "lastModified": "2026-01-07"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Noto Sans Hanifi Rohingya",
@@ -14689,7 +14689,7 @@
     "tags": [],
     "lineNumber": 1125,
     "variable": false,
-    "lastModified": "2026-01-07"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Noto Sans Javanese",
@@ -14719,7 +14719,7 @@
     "tags": [],
     "lineNumber": 1127,
     "variable": false,
-    "lastModified": "2026-01-07"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Noto Sans Kaithi",
@@ -15499,7 +15499,7 @@
     "tags": ["small caps"],
     "lineNumber": 1193,
     "variable": false,
-    "lastModified": "2026-01-07"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Noto Sans Samaritan",
@@ -15762,7 +15762,7 @@
     "tags": [],
     "lineNumber": 1212,
     "variable": false,
-    "lastModified": "2026-01-07"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Noto Sans Tagalog",
@@ -16313,7 +16313,7 @@
     "tags": [],
     "lineNumber": 1249,
     "variable": true,
-    "lastModified": "2026-01-07"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Noto Serif Hebrew",
@@ -16353,7 +16353,7 @@
     "tags": ["japanese"],
     "lineNumber": 1252,
     "variable": false,
-    "lastModified": "2026-01-07"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Noto Serif KR",
@@ -16363,7 +16363,7 @@
     "tags": [],
     "lineNumber": 1253,
     "variable": false,
-    "lastModified": "2026-01-07"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Noto Serif Kannada",
@@ -16549,7 +16549,7 @@
     "tags": ["small caps"],
     "lineNumber": 1266,
     "variable": false,
-    "lastModified": "2026-01-07"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Noto Serif Sinhala",
@@ -16585,7 +16585,7 @@
     "tags": [],
     "lineNumber": 1268,
     "variable": false,
-    "lastModified": "2026-03-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Noto Serif Tamil",
@@ -16704,7 +16704,7 @@
     "tags": [],
     "lineNumber": 1275,
     "variable": true,
-    "lastModified": "2026-09-29"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Noto Serif Vithkuqi",
@@ -19803,7 +19803,7 @@
     "tags": ["comic", "shadow"],
     "lineNumber": 1541,
     "variable": false,
-    "lastModified": "2025-09-05"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Ramsina",
@@ -19864,7 +19864,7 @@
     "tags": [],
     "lineNumber": 1546,
     "variable": true,
-    "lastModified": "2025-09-05"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Rationale",
@@ -20108,7 +20108,7 @@
     "tags": ["japanese"],
     "lineNumber": 1565,
     "variable": false,
-    "lastModified": "2025-09-10"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Rethink Sans",
@@ -20421,7 +20421,7 @@
     "tags": ["rock", "groovy"],
     "lineNumber": 1583,
     "variable": false,
-    "lastModified": "2025-09-10"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Rokkitt",
@@ -22419,7 +22419,7 @@
     "tags": ["typewriter", "code"],
     "lineNumber": 1735,
     "variable": true,
-    "lastModified": "2025-09-08"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Source Sans 3",
@@ -22454,7 +22454,7 @@
     "tags": ["legibility"],
     "lineNumber": 1736,
     "variable": true,
-    "lastModified": "2025-09-05"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Source Serif 4",
@@ -22488,7 +22488,7 @@
     "tags": ["transitional"],
     "lineNumber": 1737,
     "variable": true,
-    "lastModified": "2025-09-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Space Grotesk",
@@ -22799,7 +22799,7 @@
     "tags": ["square"],
     "lineNumber": 1764,
     "variable": false,
-    "lastModified": "2025-09-10"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Stick No Bills",
@@ -23631,7 +23631,7 @@
     "tags": ["lines", "outline"],
     "lineNumber": 1835,
     "variable": false,
-    "lastModified": "2025-09-05"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Triodion",
@@ -24028,7 +24028,7 @@
     "tags": [],
     "lineNumber": 1864,
     "variable": false,
-    "lastModified": "2026-03-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Updock",
@@ -24389,7 +24389,7 @@
     "tags": [],
     "lineNumber": 1890,
     "variable": false,
-    "lastModified": "2026-01-07"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "WDXL Lubrifont SC",
@@ -24405,7 +24405,7 @@
     "tags": ["small caps"],
     "lineNumber": 1891,
     "variable": false,
-    "lastModified": "2026-01-07"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "WDXL Lubrifont TC",
@@ -24421,7 +24421,7 @@
     "tags": [],
     "lineNumber": 1892,
     "variable": false,
-    "lastModified": "2026-03-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Waiting for the Sunrise",
@@ -24501,7 +24501,7 @@
     "tags": ["diagram"],
     "lineNumber": 1899,
     "variable": false,
-    "lastModified": "2025-09-17"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Wellfleet",
@@ -25026,7 +25026,7 @@
     "tags": ["handwritten", "playful"],
     "lineNumber": 1932,
     "variable": false,
-    "lastModified": "2025-09-05"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Yuji Hentaigana Akari",
@@ -25036,7 +25036,7 @@
     "tags": ["japanese", "calligraphic", "handwritten", "caps"],
     "lineNumber": 1933,
     "variable": false,
-    "lastModified": "2025-09-11"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Yuji Hentaigana Akebono",
@@ -25046,7 +25046,7 @@
     "tags": ["japanese", "calligraphic", "caps"],
     "lineNumber": 1934,
     "variable": false,
-    "lastModified": "2025-09-16"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Yuji Mai",
@@ -25056,7 +25056,7 @@
     "tags": ["swirl"],
     "lineNumber": 1935,
     "variable": false,
-    "lastModified": "2025-09-16"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Yuji Syuku",
@@ -25066,7 +25066,7 @@
     "tags": ["typewriter"],
     "lineNumber": 1936,
     "variable": false,
-    "lastModified": "2025-09-16"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Yusei Magic",
@@ -25236,7 +25236,7 @@
     "tags": ["japanese"],
     "lineNumber": 1947,
     "variable": false,
-    "lastModified": "2025-09-08"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Zen Antique Soft",
@@ -25246,7 +25246,7 @@
     "tags": ["japanese"],
     "lineNumber": 1948,
     "variable": false,
-    "lastModified": "2025-09-10"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Zen Dots",
@@ -25266,7 +25266,7 @@
     "tags": ["japanese"],
     "lineNumber": 1950,
     "variable": false,
-    "lastModified": "2025-09-05"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Zen Kaku Gothic New",
@@ -25276,7 +25276,7 @@
     "tags": ["japanese"],
     "lineNumber": 1951,
     "variable": false,
-    "lastModified": "2025-09-16"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Zen Kurenaido",
@@ -25286,7 +25286,7 @@
     "tags": ["japanese", "handwritten"],
     "lineNumber": 1952,
     "variable": false,
-    "lastModified": "2025-09-10"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Zen Loop",
@@ -25306,7 +25306,7 @@
     "tags": ["round", "cute"],
     "lineNumber": 1954,
     "variable": false,
-    "lastModified": "2025-06-25"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Zen Old Mincho",
@@ -25316,7 +25316,7 @@
     "tags": [],
     "lineNumber": 1955,
     "variable": false,
-    "lastModified": "2025-09-02"
+    "lastModified": "2026-10-01"
   },
   {
     "family": "Zen Tokyo Zoo",
