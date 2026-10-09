@@ -8353,7 +8353,7 @@
     "tags": ["pixel"],
     "lineNumber": 634,
     "variable": false,
-    "lastModified": "2025-09-16"
+    "lastModified": "2026-10-08"
   },
   {
     "family": "Handlee",
@@ -12452,7 +12452,7 @@
     "tags": [],
     "lineNumber": 948,
     "variable": false,
-    "lastModified": "2026-10-01"
+    "lastModified": "2026-10-08"
   },
   {
     "family": "Material Symbols Outlined",
@@ -12462,7 +12462,7 @@
     "tags": ["outline", "icons"],
     "lineNumber": 949,
     "variable": false,
-    "lastModified": "2026-10-01"
+    "lastModified": "2026-10-08"
   },
   {
     "family": "Material Symbols Rounded",
@@ -12472,7 +12472,7 @@
     "tags": ["round", "icons"],
     "lineNumber": 950,
     "variable": false,
-    "lastModified": "2026-10-01"
+    "lastModified": "2026-10-08"
   },
   {
     "family": "Material Symbols Sharp",
@@ -12482,7 +12482,7 @@
     "tags": ["icons"],
     "lineNumber": 951,
     "variable": false,
-    "lastModified": "2026-10-01"
+    "lastModified": "2026-10-08"
   },
   {
     "family": "Maven Pro",
