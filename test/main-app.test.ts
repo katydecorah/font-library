@@ -107,11 +107,11 @@ describe("MainApp", () => {
     expect(selectedSubset.value).toBe("arabic");
     expect(document.querySelector("search-status")).toMatchInlineSnapshot(`
       <search-status
-        results-length="57"
+        results-length="58"
         selected-subset="arabic"
       >
         <div>
-          Found 57 fonts: 
+          Found 58 fonts: 
         </div>
         
 

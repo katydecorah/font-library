@@ -7822,6 +7822,7 @@
       "700italic"
     ],
     "subsets": [
+      "arabic",
       "armenian",
       "bengali",
       "canadian-aboriginal",
@@ -7835,6 +7836,7 @@
       "gujarati",
       "gurmukhi",
       "hebrew",
+      "kannada",
       "khmer",
       "lao",
       "malayalam",
@@ -7852,7 +7854,7 @@
     "tags": [],
     "lineNumber": 598,
     "variable": false,
-    "lastModified": "2026-10-01"
+    "lastModified": "2026-10-29"
   },
   {
     "family": "Google Sans Code",
@@ -13882,7 +13884,7 @@
     "tags": ["color", "icons"],
     "lineNumber": 1067,
     "variable": false,
-    "lastModified": "2026-09-16"
+    "lastModified": "2026-10-29"
   },
   {
     "family": "Noto Emoji",
